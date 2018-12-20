@@ -13,10 +13,10 @@
 				<walk ground="20" />
 				<run ground="50" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -26,8 +26,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
@@ -55,7 +55,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -65,8 +65,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="5" />
@@ -92,11 +92,11 @@
 				<walk ground="40" />
 				<run ground="110" />
 			</speed>
-			<hit_time>320</hit_time>
+			<hitTime>320</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -106,14 +106,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>GOBLIN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="112" min="1" max="1" chance="13.57" /> <!-- Apprentice's Earring -->
 				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
@@ -132,7 +132,7 @@
 				<item id="116" min="1" max="1" chance="11.41" /> <!-- Magic Ring -->
 				<item id="1786" min="1" max="1" chance="0.3" /> <!-- Recipe: Broadsword -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="16.5" />
@@ -156,11 +156,11 @@
 				<walk ground="60" />
 				<run ground="80" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -172,14 +172,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>DEMONIC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="1122" min="1" max="1" chance="0.75" /> <!-- Cotton Shoes -->
 				<item id="1129" min="1" max="1" chance="0.75" /> <!-- Crude Leather Shoes -->
@@ -199,7 +199,7 @@
 				<item id="2005" min="1" max="1" chance="0.3" /> <!-- Broadsword Blade -->
 				<item id="2006" min="1" max="1" chance="0.3" /> <!-- Willow Staff Head -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -223,11 +223,11 @@
 				<walk ground="60" />
 				<run ground="80" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -239,14 +239,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>DEMONIC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="19" min="1" max="1" chance="1.511" /> <!-- Small Shield -->
 				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
@@ -265,7 +265,7 @@
 			<spoil>
 				<item id="1060" min="1" max="1" chance="2.183" /> <!-- Healing Potion -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -292,11 +292,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -306,14 +306,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -325,7 +325,7 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -350,11 +350,11 @@
 				<walk ground="43" />
 				<run ground="130" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -364,14 +364,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="36516" min="1" max="1" chance="3.978" /> <!-- Worn Leather -->
@@ -391,10 +391,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.077" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -421,11 +421,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -435,14 +435,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="1831" min="1" max="1" chance="5.285" /> <!-- Antidote -->
@@ -462,10 +462,10 @@
 			<spoil>
 				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="21" />
@@ -490,11 +490,11 @@
 				<walk ground="43" />
 				<run ground="130" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -504,14 +504,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="1833" min="1" max="1" chance="8.152" /> <!-- Bandage -->
@@ -530,10 +530,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.297" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -560,11 +560,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -574,14 +574,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="36521" min="1" max="1" chance="2.43" /> <!-- Iron Ore -->
@@ -590,10 +590,10 @@
 			<spoil>
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -617,11 +617,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -631,15 +631,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>WEREWOLF</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
@@ -660,10 +660,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.446" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -687,11 +687,11 @@
 				<walk ground="40" />
 				<run ground="110" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -703,14 +703,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
 				<item id="36526" min="1" max="1" chance="11.86" /> <!-- Fiber -->
@@ -728,10 +728,10 @@
 			<spoil>
 				<item id="36526" min="1" max="1" chance="13.48" /> <!-- Fiber -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -756,11 +756,11 @@
 				<walk ground="52" />
 				<run ground="130" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -770,15 +770,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="36521" min="1" max="1" chance="1.626" /> <!-- Iron Ore -->
@@ -798,10 +798,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.566" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -829,11 +829,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -843,15 +843,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="39" min="1" max="1" chance="0.75" /> <!-- Boots (item) -->
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
@@ -871,10 +871,10 @@
 				<item id="36531" min="1" max="1" chance="3.378" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
@@ -898,11 +898,11 @@
 				<walk ground="70" />
 				<run ground="110" />
 			</speed>
-			<hit_time>410</hit_time>
+			<hitTime>410</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -914,12 +914,12 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
@@ -944,11 +944,11 @@
 				<walk ground="40" />
 				<run ground="110" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -960,14 +960,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="36536" min="1" max="1" chance="2.908" /> <!-- Worn Leather Braid -->
@@ -985,10 +985,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.113" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -1012,11 +1012,11 @@
 				<walk ground="40" />
 				<run ground="110" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1026,14 +1026,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="1060" min="1" max="1" chance="6.496" /> <!-- Healing Potion -->
@@ -1052,10 +1052,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.073" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -1079,11 +1079,11 @@
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<hit_time>240</hit_time>
+			<hitTime>240</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1093,14 +1093,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="1831" min="1" max="1" chance="4.075" /> <!-- Antidote -->
@@ -1111,10 +1111,10 @@
 			<spoil>
 				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
@@ -1139,11 +1139,11 @@
 				<walk ground="52" />
 				<run ground="130" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1153,15 +1153,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
@@ -1181,10 +1181,10 @@
 			<spoil>
 				<item id="36516" min="1" max="1" chance="14.37" /> <!-- Worn Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -1209,11 +1209,11 @@
 				<walk ground="15" />
 				<run ground="15" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4249" level="1" /> <!-- Decrease Speed -->
 			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
@@ -1226,14 +1226,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="604" min="1" max="1" chance="0.75" /> <!-- Quality Leather Gloves -->
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
@@ -1254,10 +1254,10 @@
 				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
@@ -1282,11 +1282,11 @@
 				<walk ground="43" />
 				<run ground="130" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1296,15 +1296,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
@@ -1323,10 +1323,10 @@
 			<spoil>
 				<item id="36521" min="1" max="1" chance="5.022" /> <!-- Iron Ore -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -1350,11 +1350,11 @@
 				<walk ground="72" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1364,15 +1364,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="36526" min="1" max="1" chance="4.587" /> <!-- Fiber -->
@@ -1392,10 +1392,10 @@
 			<spoil>
 				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
@@ -1420,11 +1420,11 @@
 				<walk ground="15" />
 				<run ground="15" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4247" level="1" /> <!-- NPC Windstrike - Slow -->
 			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
@@ -1437,15 +1437,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="45" min="1" max="1" chance="0.3" /> <!-- Bone Helmet -->
 				<item id="5285" min="1" max="1" chance="0.03" /> <!-- Heavy Sword -->
@@ -1467,10 +1467,10 @@
 				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
@@ -1495,11 +1495,11 @@
 				<walk ground="43" />
 				<run ground="130" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1509,14 +1509,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="120" min="1" max="1" chance="0.075" /> <!-- Sword of Reflection -->
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
@@ -1537,10 +1537,10 @@
 				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -1564,11 +1564,11 @@
 				<walk ground="72" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1579,15 +1579,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="36516" min="1" max="1" chance="4.382" /> <!-- Worn Leather -->
@@ -1607,10 +1607,10 @@
 			<spoil>
 				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
@@ -1635,11 +1635,11 @@
 				<walk ground="100" />
 				<run ground="100" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="1" /> <!-- Decrease Speed -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1652,15 +1652,15 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
 				<item id="36521" min="1" max="1" chance="2.141" /> <!-- Iron Ore -->
@@ -1669,10 +1669,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="3.866" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
@@ -1696,11 +1696,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1711,15 +1711,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SKELETON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="313" min="1" max="1" chance="0.03" /> <!-- Temptation of Abyss -->
 				<item id="57" min="8" max="17" chance="70" /> <!-- Adena -->
@@ -1739,10 +1739,10 @@
 				<item id="36531" min="1" max="1" chance="4.08" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" grown="13" />
 			<height normal="25" grown="31" />
@@ -1767,11 +1767,11 @@
 				<walk ground="60" />
 				<run ground="60" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="1" /> <!-- Decrease Speed -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1784,15 +1784,15 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4011" level="5" /> <!-- Wind Resistance -->
 			<skill id="4282" level="1" /> <!-- Earth Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL2</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="36541" min="1" max="1" chance="1.196" /> <!-- Steel Wire -->
@@ -1811,10 +1811,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.84" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -1839,11 +1839,11 @@
 				<walk ground="90" />
 				<run ground="90" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4039" level="1" /> <!-- NPC MP Drain -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1854,14 +1854,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -1887,11 +1887,11 @@
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
-			<hit_time>650</hit_time>
+			<hitTime>650</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="1" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1903,15 +1903,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="908" min="1" max="1" chance="0.75" /> <!-- Necklace of Wisdom -->
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
@@ -1933,10 +1933,10 @@
 				<item id="36531" min="1" max="1" chance="2.634" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -1961,11 +1961,11 @@
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1975,15 +1975,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>WERERAT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
@@ -2004,10 +2004,10 @@
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2032,11 +2032,11 @@
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -2046,15 +2046,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>WERERAT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
 				<item id="5158" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
@@ -2062,10 +2062,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="3.958" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2090,11 +2090,11 @@
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
-			<hit_time>650</hit_time>
+			<hitTime>650</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="1" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2106,15 +2106,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="907" min="1" max="1" chance="1.701" /> <!-- Necklace of Anguish -->
 				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
@@ -2136,10 +2136,10 @@
 				<item id="36531" min="1" max="1" chance="2.664" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -2165,11 +2165,11 @@
 				<walk ground="60" />
 				<run ground="60" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="1" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="1" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2183,15 +2183,15 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4011" level="5" /> <!-- Wind Resistance -->
 			<skill id="4282" level="1" /> <!-- Earth Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="11" chance="70" /> <!-- Adena -->
 				<item id="36526" min="1" max="1" chance="3.856" /> <!-- Fiber -->
@@ -2212,10 +2212,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="5.013" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -2239,11 +2239,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2254,15 +2254,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SKELETON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="273" min="1" max="1" chance="0.075" /> <!-- Compound Bow -->
 				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
@@ -2281,10 +2281,10 @@
 				<item id="36531" min="1" max="1" chance="4.439" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
@@ -2309,11 +2309,11 @@
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -2323,15 +2323,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>WERERAT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="36526" min="1" max="1" chance="3.245" /> <!-- Fiber -->
@@ -2342,10 +2342,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="4.083" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2369,11 +2369,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -2383,15 +2383,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>WEREWOLF</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
@@ -2411,10 +2411,10 @@
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -2439,11 +2439,11 @@
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
-			<hit_time>650</hit_time>
+			<hitTime>650</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="2" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2455,15 +2455,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
 				<item id="1831" min="1" max="1" chance="3.736" /> <!-- Antidote -->
@@ -2484,10 +2484,10 @@
 			<spoil>
 				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -2511,11 +2511,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2526,15 +2526,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SKELETON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="276" min="1" max="1" chance="0.03" /> <!-- Elven Bow -->
 				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
@@ -2553,10 +2553,10 @@
 				<item id="36531" min="1" max="1" chance="4.355" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
@@ -2586,11 +2586,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>930</hit_time>
+			<hitTime>930</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2600,15 +2600,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
@@ -2627,10 +2627,10 @@
 			<spoil>
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2660,11 +2660,11 @@
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2675,15 +2675,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SKELETON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="123" min="1" max="1" chance="0.03" /> <!-- Saber -->
 				<item id="7885" min="1" max="1" chance="0.03" /> <!-- Priest Sword -->
@@ -2703,10 +2703,10 @@
 				<item id="36531" min="1" max="1" chance="5.47" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -2737,11 +2737,11 @@
 				<walk ground="90" />
 				<run ground="159" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="2" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -2755,15 +2755,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="272" min="1" max="1" chance="0.075" /> <!-- Forest Bow -->
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
@@ -2783,10 +2783,10 @@
 				<item id="36531" min="1" max="1" chance="3.227" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -2816,11 +2816,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -2830,15 +2830,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
@@ -2857,10 +2857,10 @@
 			<spoil>
 				<item id="36561" min="1" max="1" chance="0.75" /> <!-- Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -2891,11 +2891,11 @@
 				<walk ground="90" />
 				<run ground="159" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4152" level="2" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -2909,15 +2909,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="273" min="1" max="1" chance="0.03" /> <!-- Compound Bow -->
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
@@ -2938,10 +2938,10 @@
 				<item id="36547" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -2971,11 +2971,11 @@
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2986,15 +2986,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SKELETON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="219" min="1" max="1" chance="0.03" /> <!-- Sword Breaker -->
 				<item id="221" min="1" max="1" chance="0.03" /> <!-- Assassin Knife -->
@@ -3016,10 +3016,10 @@
 				<item id="36531" min="1" max="1" chance="5.469" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -3049,11 +3049,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3063,15 +3063,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="7" max="15" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
@@ -3090,10 +3090,10 @@
 			<spoil>
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -3123,11 +3123,11 @@
 				<walk ground="55" />
 				<run ground="130" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -3137,15 +3137,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>BUGBEAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="87" min="1" max="1" chance="0.03" /> <!-- Iron Hammer -->
 				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
@@ -3166,10 +3166,10 @@
 				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
@@ -3199,11 +3199,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>930</hit_time>
+			<hitTime>930</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3213,15 +3213,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
@@ -3240,10 +3240,10 @@
 			<spoil>
 				<item id="36561" min="1" max="1" chance="0.75" /> <!-- Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -3273,11 +3273,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -3287,13 +3287,13 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13.5" />
@@ -3325,11 +3325,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4031" level="2" /> <!-- NPC Clan Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3340,15 +3340,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="16" max="37" chance="70" /> <!-- Adena -->
 				<item id="36526" min="1" max="3" chance="26.9" /> <!-- Fiber -->
@@ -3366,10 +3366,10 @@
 			<spoil>
 				<item id="36531" min="1" max="1" chance="17.4" /> <!-- Thread -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -3401,11 +3401,11 @@
 				<walk ground="90" />
 				<run ground="159" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="2" /> <!-- Decrease Speed -->
 			<skill id="4158" level="2" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
@@ -3419,15 +3419,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="849" min="1" max="1" chance="0.3" /> <!-- Tiger's Eye -->
 				<item id="57" min="13" max="31" chance="70" /> <!-- Adena -->
@@ -3446,10 +3446,10 @@
 				<item id="36531" min="1" max="1" chance="7.433" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -3481,11 +3481,11 @@
 				<walk ground="90" />
 				<run ground="159" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="2" /> <!-- Decrease Speed -->
 			<skill id="4157" level="2" /> <!-- NPC Blaze - Magic -->
 			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
@@ -3500,15 +3500,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="184" min="1" max="1" chance="0.03" /> <!-- Conjuror's Staff -->
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
@@ -3529,10 +3529,10 @@
 				<item id="36531" min="1" max="1" chance="4.248" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -3561,11 +3561,11 @@
 				<walk ground="35" />
 				<run ground="131" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -3575,11 +3575,11 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="395" min="1" max="1" chance="0.075" /> <!-- Manticore Skin Shirt -->
 				<item id="417" min="1" max="1" chance="0.075" /> <!-- Manticore Skin Gaiters -->
@@ -3600,10 +3600,10 @@
 				<item id="36531" min="1" max="1" chance="7.916" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -3632,11 +3632,11 @@
 				<walk ground="35" />
 				<run ground="131" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -3646,11 +3646,11 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="470" min="1" max="1" chance="0.3" /> <!-- Mithril Stockings -->
 				<item id="437" min="1" max="1" chance="0.075" /> <!-- Mithril Tunic -->
@@ -3670,10 +3670,10 @@
 				<item id="36531" min="1" max="1" chance="7.989" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -3703,11 +3703,11 @@
 				<walk ground="40" />
 				<run ground="60" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="2" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3719,15 +3719,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
 				<item id="1831" min="1" max="1" chance="10.67" /> <!-- Antidote -->
@@ -3749,10 +3749,10 @@
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -3783,11 +3783,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="2" /> <!-- NPC Clan Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3798,15 +3798,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
@@ -3825,10 +3825,10 @@
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -3858,11 +3858,11 @@
 				<walk ground="60" />
 				<run ground="60" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4046" level="3" /> <!-- Sleep -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3875,15 +3875,15 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4011" level="5" /> <!-- Wind Resistance -->
 			<skill id="4282" level="1" /> <!-- Earth Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL2</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
 				<item id="36556" min="1" max="1" chance="1.679" /> <!-- Accessory Gem (Low-grade) -->
@@ -3902,10 +3902,10 @@
 			<spoil>
 				<item id="36556" min="1" max="1" chance="3.385" /> <!-- Accessory Gem (Low-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="48" />
@@ -3934,11 +3934,11 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -3949,15 +3949,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
@@ -3966,10 +3966,10 @@
 				<item id="36531" min="1" max="1" chance="4.911" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -3998,11 +3998,11 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -4013,15 +4013,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
 				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
@@ -4031,10 +4031,10 @@
 				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -4064,11 +4064,11 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="2" /> <!-- NPC Clan Might -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4080,16 +4080,16 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
 				<item id="1061" min="1" max="1" chance="7.632" /> <!-- Major Healing Potion -->
@@ -4110,10 +4110,10 @@
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -4143,11 +4143,11 @@
 				<walk ground="80" />
 				<run ground="130" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="3" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4159,15 +4159,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
 				<item id="1832" min="1" max="1" chance="8.491" /> <!-- Greater Antidote -->
@@ -4188,10 +4188,10 @@
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -4222,11 +4222,11 @@
 				<walk ground="80" />
 				<run ground="130" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="3" /> <!-- NPC Mortal Blow -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4238,15 +4238,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
@@ -4266,10 +4266,10 @@
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -4301,11 +4301,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4317,15 +4317,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
@@ -4345,10 +4345,10 @@
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -4378,11 +4378,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="3" /> <!-- Poison -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4394,16 +4394,16 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="19" max="43" chance="70" /> <!-- Adena -->
 				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
@@ -4424,10 +4424,10 @@
 				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -4458,11 +4458,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4474,16 +4474,16 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
 				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
@@ -4503,10 +4503,10 @@
 				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.075" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -4535,11 +4535,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4550,15 +4550,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
@@ -4578,10 +4578,10 @@
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />
@@ -4611,11 +4611,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4627,16 +4627,16 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="24" max="57" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
@@ -4656,10 +4656,10 @@
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />
@@ -4683,11 +4683,11 @@
 				<walk ground="18" />
 				<run ground="110" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4697,8 +4697,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="9.5" />
@@ -4727,11 +4727,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4741,14 +4741,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4760,7 +4760,7 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
@@ -4786,11 +4786,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -4800,12 +4800,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -4832,11 +4832,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -4846,14 +4846,14 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4865,7 +4865,7 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />

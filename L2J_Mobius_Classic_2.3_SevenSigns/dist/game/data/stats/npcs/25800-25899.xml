@@ -23,7 +23,7 @@
 			<radius normal="24.0" />
 			<height normal="52.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="7" /> <!-- 74 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4441" level="5" />
@@ -36,11 +36,11 @@
 			<skill id="4415" level="3" />
 			<skill id="4494" level="1" />
 			<skill id="14765" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25801" level="76" type="L2Monster" name="Dorak" title="Kabed's Rival">
@@ -66,7 +66,7 @@
 			<radius normal="30.0" />
 			<height normal="46.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="8" /> <!-- 76 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6268" level="1" />
@@ -77,11 +77,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25802" level="78" type="L2Monster" name="Turan" title="Leo Tracker">
@@ -107,18 +107,18 @@
 			<radius normal="24.0" />
 			<height normal="46.2" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="9" /> <!-- 78 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4415" level="12" />
 			<skill id="5463" level="1" />
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25803" level="80" type="L2Monster" name="Varkan" title="Varka's Gatekeeper">
@@ -144,18 +144,18 @@
 			<radius normal="19.2" />
 			<height normal="46.2" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="10" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5464" level="1" />
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25804" level="80" type="L2Monster" name="Ketran" title="Ketra's Gatekeeper">
@@ -181,7 +181,7 @@
 			<radius normal="18.0" />
 			<height normal="37.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="11" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk.: -->
@@ -192,11 +192,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25805" level="80" type="L2Monster" name="Death Lord Likan" title="Hallate's Follower">
@@ -222,7 +222,7 @@
 			<radius normal="21.0" />
 			<height normal="40.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="12" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk.: -->
@@ -233,11 +233,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25806" level="80" type="L2Monster" name="Anbarad" title="Barda's Nemesis">
@@ -262,7 +262,7 @@
 			<radius normal="18.4" />
 			<height normal="48.2" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="13" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk.: -->
@@ -273,11 +273,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25807" level="80" type="L2Monster" name="Baranos" title="Mos' Escort Captain">
@@ -303,7 +303,7 @@
 			<radius normal="20.0" />
 			<height normal="49.2" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="14" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="4" /> <!-- HP High: -->
@@ -315,11 +315,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25808" level="80" type="L2Monster" name="Takuran" title="Tayr's Escort Captain">
@@ -345,7 +345,7 @@
 			<radius normal="14.0" />
 			<height normal="28.8" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="15" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="5" /> <!-- HP High: -->
@@ -357,11 +357,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="2" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25809" level="80" type="L2Monster" name="Nast" title="Ipos' Agent">
@@ -386,7 +386,7 @@
 			<radius normal="18.0" />
 			<height normal="39.6" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="16" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="6" /> <!-- HP Very High: -->
@@ -397,11 +397,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25810" level="80" type="L2Monster" name="Keltar" title="Shuriel's Paladin">
@@ -427,7 +427,7 @@
 			<radius normal="15.6" />
 			<height normal="39.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="17" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="7" /> <!-- HP Very High: -->
@@ -437,11 +437,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
 			<skill id="4415" level="3" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25811" level="80" type="L2Monster" name="Satur" title="Shadith' Escort Captain">
@@ -467,7 +467,7 @@
 			<radius normal="22.0" />
 			<height normal="51.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="18" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x): -->
@@ -478,11 +478,11 @@
 			<skill id="4415" level="3" />
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25812" level="80" type="L2Monster" name="Kosnak" title="Hekaton's Escort Captain">
@@ -508,7 +508,7 @@
 			<radius normal="11.0" />
 			<height normal="38.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="19" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x): -->
@@ -518,11 +518,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
 			<skill id="4415" level="3" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25813" level="80" type="L2Monster" name="Garaki" title="Shax's Shadow">
@@ -547,7 +547,7 @@
 			<radius normal="25.0" />
 			<height normal="47.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x): -->
@@ -559,11 +559,11 @@
 			<skill id="4414" level="3" />
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25814" level="80" type="L2Npc" name="Kutis' Pawn" title="Raid Fighter">

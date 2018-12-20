@@ -15,9 +15,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -38,9 +38,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -61,9 +61,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -84,9 +84,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="16" />
@@ -107,9 +107,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="38.5" />
@@ -130,9 +130,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -153,9 +153,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="27" />
@@ -176,9 +176,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="28" />
@@ -199,9 +199,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
@@ -222,9 +222,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -245,9 +245,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -268,9 +268,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -290,9 +290,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />
@@ -312,14 +312,14 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="32.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
@@ -337,7 +337,7 @@
 				<item id="948" min="1" max="1" chance="2.453" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23834" level="60" type="L2Monster" name="Blood Queen" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -353,14 +353,14 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
 				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
@@ -381,7 +381,7 @@
 				<item id="4937" min="1" max="1" chance="16.79" /> <!-- Recipe: Adamantite Earring (70%) -->
 				<item id="4939" min="1" max="1" chance="12.43" /> <!-- Recipe: Adamantite Necklace (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23835" level="99" type="L2Npc" name="Tanta Elite Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -397,9 +397,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
@@ -419,9 +419,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -441,9 +441,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="32.5" />
@@ -463,9 +463,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -485,9 +485,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="33.5" />
@@ -507,9 +507,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
@@ -529,9 +529,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="66" />
@@ -551,9 +551,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
@@ -573,9 +573,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="39" />
@@ -595,9 +595,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
@@ -617,9 +617,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="50" />
@@ -639,9 +639,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="47" />
@@ -661,9 +661,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
@@ -683,9 +683,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
@@ -705,9 +705,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="463.765" />
@@ -727,9 +727,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
@@ -749,9 +749,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="34" />
@@ -771,9 +771,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -793,9 +793,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -815,9 +815,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -837,9 +837,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
@@ -859,9 +859,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="38.5" />
@@ -882,9 +882,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="80" />
@@ -905,9 +905,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
@@ -927,9 +927,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />
@@ -949,14 +949,14 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="135" min="1" max="1" chance="0.0075" /> <!-- Samurai Long Sword -->
 				<item id="286" min="1" max="1" chance="0.0075" /> <!-- Eminence Bow -->
@@ -973,7 +973,7 @@
 				<item id="1877" min="1" max="1" chance="25.25" /> <!-- Adamantite Nugget -->
 				<item id="1894" min="1" max="1" chance="23.35" /> <!-- Crafted Leather -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23861" level="99" type="L2Npc" name="Mutated Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -989,9 +989,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="48" />
 			<height normal="53.5" />
@@ -1011,9 +1011,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="100" />
 			<height normal="40" />
@@ -1033,9 +1033,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="35" />
@@ -1055,9 +1055,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="112" />
 			<height normal="60" />
@@ -1077,9 +1077,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
@@ -1099,9 +1099,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="37.2" />
@@ -1121,9 +1121,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="43.7" />
@@ -1143,9 +1143,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="32" />
 			<height normal="44.2" />
@@ -1165,9 +1165,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="89.7" />
@@ -1187,9 +1187,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="27.5" />
 			<height normal="38.25" />
@@ -1209,9 +1209,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="39" />
 			<height normal="61.5" />
@@ -1231,9 +1231,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="23" />
@@ -1253,9 +1253,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
@@ -1275,9 +1275,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
@@ -1297,9 +1297,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="45" />
@@ -1319,9 +1319,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="21.5" />
@@ -1341,9 +1341,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="30" />
@@ -1364,9 +1364,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -1387,9 +1387,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -1410,9 +1410,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -1433,9 +1433,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="16" />
@@ -1456,9 +1456,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="38.5" />
@@ -1479,9 +1479,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -1502,9 +1502,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="27" />
@@ -1525,9 +1525,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="28" />
@@ -1548,9 +1548,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
@@ -1571,9 +1571,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -1594,9 +1594,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -1617,9 +1617,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -1639,9 +1639,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />
@@ -1661,14 +1661,14 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="32.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
@@ -1686,7 +1686,7 @@
 				<item id="948" min="1" max="1" chance="2.453" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23892" level="60" type="L2Monster" name="Blood Queen" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1702,14 +1702,14 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
 				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
@@ -1730,7 +1730,7 @@
 				<item id="4937" min="1" max="1" chance="16.79" /> <!-- Recipe: Adamantite Earring (70%) -->
 				<item id="4939" min="1" max="1" chance="12.43" /> <!-- Recipe: Adamantite Necklace (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23893" level="99" type="L2Npc" name="Tanta Elite Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1746,9 +1746,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
@@ -1768,9 +1768,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -1790,9 +1790,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="32.5" />
@@ -1812,9 +1812,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -1834,9 +1834,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="33.5" />
@@ -1856,9 +1856,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
@@ -1878,9 +1878,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="66" />

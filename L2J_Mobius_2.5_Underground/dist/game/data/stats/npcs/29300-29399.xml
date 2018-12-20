@@ -12,12 +12,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16510" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="38" />
 			<height normal="100" />
@@ -35,10 +35,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -56,10 +56,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />

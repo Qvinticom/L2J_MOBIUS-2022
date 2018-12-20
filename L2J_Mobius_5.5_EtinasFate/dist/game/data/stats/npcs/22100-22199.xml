@@ -28,11 +28,11 @@
 				<walk ground="70" />
 				<run ground="130" />
 			</speed>
-			<hit_time>410</hit_time>
+			<hitTime>410</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
@@ -48,16 +48,16 @@
 			<skill id="4417" level="11" /> <!-- Magic Creatures -->
 			<skill id="4483" level="6" /> <!-- Hold -->
 			<skill id="4578" level="1" /> <!-- Petrify -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="700" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ICE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="205" max="477" chance="70" /> <!-- Adena -->
 				<item id="36516" min="3" max="9" chance="16.88" /> <!-- Worn Leather -->
@@ -72,10 +72,10 @@
 				<item id="36532" min="1" max="1" chance="1.608" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -105,11 +105,11 @@
 				<walk ground="140" />
 				<run ground="168" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
@@ -122,16 +122,16 @@
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4417" level="5" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="700" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ICE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
 				<item id="36546" min="1" max="1" chance="4.77" /> <!-- Weapon Fragment (Low-grade) -->
@@ -146,10 +146,10 @@
 				<item id="36532" min="1" max="1" chance="1.413" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="50" />
@@ -179,11 +179,11 @@
 				<walk ground="140" />
 				<run ground="140" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -195,20 +195,20 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4417" level="5" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="700" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ICE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
 				<item id="36546" min="1" max="1" chance="4.77" /> <!-- Weapon Fragment (Low-grade) -->
@@ -223,10 +223,10 @@
 				<item id="36532" min="1" max="1" chance="1.413" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22103" level="57" type="L2Monster" name="Freya's White Bear">
 		<!-- Confirmed CT2.5 -->
@@ -252,11 +252,11 @@
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="5" /> <!-- NPC Heal -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
@@ -271,16 +271,16 @@
 			<skill id="4417" level="1" /> <!-- Animals -->
 			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="700" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ICE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="181" max="421" chance="70" /> <!-- Adena -->
 				<item id="36551" min="1" max="1" chance="5.049" /> <!-- Armor Fragment (Low-grade) -->
@@ -294,10 +294,10 @@
 				<item id="36532" min="1" max="1" chance="1.485" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -330,11 +330,11 @@
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -349,16 +349,16 @@
 			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
 			<skill id="5044" level="2" /> <!-- NPC Ultimate Defense -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="700" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ICE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="189" max="440" chance="70" /> <!-- Adena -->
 				<item id="36526" min="3" max="9" chance="20.28" /> <!-- Fiber -->
@@ -372,10 +372,10 @@
 				<item id="36532" min="1" max="1" chance="1.525" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -402,11 +402,11 @@
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -422,13 +422,13 @@
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -455,11 +455,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -474,13 +474,13 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
@@ -510,11 +510,11 @@
 				<walk ground="61" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -532,13 +532,13 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
@@ -567,11 +567,11 @@
 				<walk ground="61" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -588,13 +588,13 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
@@ -624,11 +624,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -646,13 +646,13 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -681,11 +681,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -702,13 +702,13 @@
 			<skill id="5021" level="9" /> <!-- Inspiration of Einhasad -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -734,11 +734,11 @@
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -755,12 +755,12 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
@@ -793,7 +793,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -811,13 +811,13 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -844,11 +844,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="6" /> <!-- NPC Heal -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -863,13 +863,13 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" grown="9" />
@@ -900,11 +900,11 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4029" level="3" /> <!-- NPC Shield -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
@@ -923,13 +923,13 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
@@ -956,11 +956,11 @@
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -976,19 +976,19 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6327" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Earring -->
 				<item id="57" min="61" max="143" chance="70" /> <!-- Adena -->
@@ -998,10 +998,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22133" level="78" type="L2Monster" name="Guardian of the Grail">
 		<!-- Confirmed CT2.5 -->
@@ -1025,11 +1025,11 @@
 				<walk ground="25" />
 				<run ground="140" />
 			</speed>
-			<hit_time>100</hit_time>
+			<hitTime>100</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1049,12 +1049,12 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
@@ -1083,11 +1083,11 @@
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1104,13 +1104,13 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -1137,11 +1137,11 @@
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1156,13 +1156,13 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="4423" level="3" /> <!-- Holy Attack -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SOLINA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
@@ -1195,11 +1195,11 @@
 				<walk ground="33" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="16" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1217,21 +1217,21 @@
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
 			<skill id="15467" level="1" /> <!-- Triol's P. Def. Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="30.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22137" level="99" type="L2Monster" name="Anteroom Gatekeeper">
 		<!-- Confirmed CT2.5 -->
@@ -1259,11 +1259,11 @@
 				<walk ground="33" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4253" level="9" /> <!-- NPC Blaze - Slow -->
 			<skill id="4408" level="16" /> <!-- HP Increase (1/2x) -->
@@ -1283,21 +1283,21 @@
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
 			<skill id="15467" level="1" /> <!-- Triol's P. Def. Increase -->
 			<skill id="4001" level="1" /> <!-- Gust -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="200" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="30.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22138" level="99" type="L2Monster" name="Chapel Gatekeeper">
 		<!-- Confirmed CT2.5 -->
@@ -1325,11 +1325,11 @@
 				<walk ground="33" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4253" level="9" /> <!-- NPC Blaze - Slow -->
 			<skill id="4408" level="13" /> <!-- HP Increase (1/2x) -->
@@ -1349,21 +1349,21 @@
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
 			<skill id="15467" level="1" /> <!-- Triol's P. Def. Increase -->
 			<skill id="4001" level="1" /> <!-- Gust -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="200" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="30.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22139" level="98" type="L2Monster" name="Old Aristocrat's Soldier">
 		<!-- Confirmed CT2.5 -->
@@ -1392,11 +1392,11 @@
 				<walk ground="38" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1414,15 +1414,15 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="2.499" /> <!-- Adamantite -->
@@ -1433,17 +1433,17 @@
 				<item id="40207" min="1" max="1" chance="7.431" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22140" level="98" type="L2Monster" name="Resurrected Worker">
 		<!-- Confirmed CT2.5 -->
@@ -1472,11 +1472,11 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1493,15 +1493,15 @@
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="2.637" /> <!-- Adamantite -->
@@ -1512,17 +1512,17 @@
 				<item id="40207" min="1" max="1" chance="7.34" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="24.6" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22141" level="98" type="L2Monster" name="Forgotten Victim">
 		<!-- Confirmed CT2.5 -->
@@ -1551,11 +1551,11 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4088" level="9" /> <!-- Bleed -->
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1572,15 +1572,15 @@
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet -->
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
@@ -1594,17 +1594,17 @@
 				<item id="40207" min="1" max="1" chance="7.439" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="24.6" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22142" level="98" type="L2Monster" name="Triol's Layperson">
 		<!-- Confirmed CT2.5 -->
@@ -1644,11 +1644,11 @@
 				<walk ground="58" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
@@ -1666,15 +1666,15 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets -->
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
@@ -1689,17 +1689,17 @@
 				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
 				<item id="19447" min="1" max="1" chance="9" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22143" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -1740,11 +1740,11 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1763,15 +1763,15 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -1782,17 +1782,17 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22144" level="98" type="L2Monster" name="Resurrected Temple Knight">
 		<!-- Confirmed CT2.5 -->
@@ -1820,11 +1820,11 @@
 				<walk ground="38" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4152" level="9" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
@@ -1841,15 +1841,15 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
@@ -1863,17 +1863,17 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22145" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -1902,11 +1902,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1922,15 +1922,15 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -1944,17 +1944,17 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22146" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -1994,11 +1994,11 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
@@ -2017,15 +2017,15 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -2037,17 +2037,17 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22147" level="99" type="L2Monster" name="Ritual Offering">
 		<!-- Confirmed CT2.5 -->
@@ -2075,11 +2075,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
@@ -2097,15 +2097,15 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -2117,17 +2117,17 @@
 				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22148" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -2157,11 +2157,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4088" level="9" /> <!-- Bleed -->
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2180,22 +2180,22 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -2206,10 +2206,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22149" level="99" type="L2Monster" name="Ritual Offering">
 		<!-- Confirmed CT2.5 -->
@@ -2238,11 +2238,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2260,15 +2260,15 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -2280,17 +2280,17 @@
 				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22150" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -2321,11 +2321,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4088" level="9" /> <!-- Bleed -->
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2345,22 +2345,22 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -2371,10 +2371,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22151" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2415,11 +2415,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4408" level="18" /> <!-- HP Increase (5x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2439,22 +2439,22 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -2466,10 +2466,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22152" level="99" type="L2Monster" name="Temple Guard">
 		<!-- Confirmed CT2.5 -->
@@ -2498,11 +2498,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
@@ -2520,15 +2520,15 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
@@ -2540,17 +2540,17 @@
 				<item id="40207" min="1" max="1" chance="6.907" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22153" level="99" type="L2Monster" name="Temple Guard Captain">
 		<!-- Confirmed CT2.5 -->
@@ -2580,11 +2580,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
@@ -2603,15 +2603,15 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Helios Slasher Fragment -->
@@ -2623,17 +2623,17 @@
 				<item id="40207" min="1" max="1" chance="6.903" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22154" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -2662,11 +2662,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
@@ -2683,22 +2683,22 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -2712,10 +2712,10 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22155" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2751,11 +2751,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -2774,15 +2774,15 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
@@ -2795,21 +2795,21 @@
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22156" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2837,11 +2837,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2857,26 +2857,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -2888,10 +2888,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22157" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2919,11 +2919,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -2939,26 +2939,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -2970,10 +2970,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22158" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -3003,11 +3003,11 @@
 				<walk ground="58" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -3025,26 +3025,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -3055,10 +3055,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22159" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3094,11 +3094,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -3117,26 +3117,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
@@ -3149,10 +3149,10 @@
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22160" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3180,11 +3180,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3200,26 +3200,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -3231,10 +3231,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22161" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -3262,11 +3262,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3283,26 +3283,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -3316,10 +3316,10 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22162" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -3349,11 +3349,11 @@
 				<walk ground="58" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -3371,26 +3371,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -3401,10 +3401,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22163" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3443,11 +3443,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4088" level="9" /> <!-- Bleed -->
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -3468,26 +3468,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
@@ -3500,10 +3500,10 @@
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22164" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -3531,11 +3531,11 @@
 				<walk ground="58" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -3551,26 +3551,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -3581,10 +3581,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22165" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3614,11 +3614,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -3636,26 +3636,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -3667,10 +3667,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22166" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -3699,11 +3699,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -3720,26 +3720,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -3750,10 +3750,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22167" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3789,11 +3789,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -3812,26 +3812,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
@@ -3844,10 +3844,10 @@
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22168" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3877,11 +3877,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -3899,26 +3899,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -3930,10 +3930,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22169" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -3961,11 +3961,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3982,26 +3982,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -4015,10 +4015,10 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22170" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
@@ -4046,11 +4046,11 @@
 				<walk ground="58" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4066,26 +4066,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
@@ -4096,10 +4096,10 @@
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22171" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -4138,11 +4138,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="9" /> <!-- NPC Heal -->
 			<skill id="4088" level="10" /> <!-- Bleed -->
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -4163,26 +4163,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="19.1" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
@@ -4195,10 +4195,10 @@
 				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22172" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -4226,11 +4226,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4247,26 +4247,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -4280,10 +4280,10 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22173" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -4313,11 +4313,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4088" level="10" /> <!-- Bleed -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4335,26 +4335,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -4366,10 +4366,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22174" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -4399,11 +4399,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Average P. Atk. -->
@@ -4421,26 +4421,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
@@ -4452,10 +4452,10 @@
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22175" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
@@ -4496,11 +4496,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="9" /> <!-- Hold -->
 			<skill id="4408" level="10" /> <!-- HP Increase (1/4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4518,15 +4518,15 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
@@ -4539,21 +4539,21 @@
 				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22176" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
@@ -4582,11 +4582,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (1/4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4603,15 +4603,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
@@ -4623,21 +4623,21 @@
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22188" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
@@ -4670,11 +4670,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4691,15 +4691,15 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
@@ -4712,21 +4712,21 @@
 				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="23.2" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22189" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
@@ -4754,11 +4754,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4774,15 +4774,15 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
@@ -4794,21 +4794,21 @@
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="34" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22190" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -4836,11 +4836,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4857,26 +4857,26 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -4890,10 +4890,10 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22191" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
@@ -4923,11 +4923,11 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4946,15 +4946,15 @@
 			<skill id="4065" level="1" /> <!-- Heal -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
@@ -4967,21 +4967,21 @@
 				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="23.2" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22192" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
@@ -5011,11 +5011,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -5033,14 +5033,14 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
@@ -5052,21 +5052,21 @@
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="34" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22193" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
@@ -5095,11 +5095,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -5116,14 +5116,14 @@
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
@@ -5135,21 +5135,21 @@
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="34" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22194" level="99" type="L2Monster" name="Anteroom Gatekeeper">
 		<!-- Confirmed CT2.5 -->
@@ -5175,11 +5175,11 @@
 				<walk ground="33" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4253" level="9" /> <!-- NPC Blaze - Slow -->
 			<skill id="4408" level="10" /> <!-- HP Increase (1/2x) -->
@@ -5197,25 +5197,25 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="4001" level="1" /> <!-- Gust -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="200" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="22" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="22195" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
@@ -5244,11 +5244,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="18" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
@@ -5264,26 +5264,26 @@
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ANDREAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
-		<drop_lists>
+		</extendDrop>
+		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
@@ -5297,10 +5297,10 @@
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="22196" level="80" type="L2Monster" name="Velociraptor">
 		<!-- Confirmed CT2.5 -->
@@ -5334,11 +5334,11 @@
 				<walk ground="33" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
@@ -5359,14 +5359,14 @@
 			<skill id="5081" level="2" /> <!-- Silence -->
 			<skill id="5082" level="2" /> <!-- Spinning Slasher -->
 			<skill id="5079" level="1" /> <!-- Haste Focus -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VELOCIRAPTOR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
 				<item id="36527" min="1" max="1" chance="2.98399999999998" /> <!-- Synthetic Fiber -->
@@ -5382,10 +5382,10 @@
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
@@ -5414,11 +5414,11 @@
 				<walk ground="33" />
 				<run ground="210" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="10" /> <!-- Stun -->
 			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
@@ -5437,14 +5437,14 @@
 			<skill id="4445" level="1" /> <!-- Greater Resist Spear Weapons -->
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VELOCIRAPTOR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
 				<item id="36528" min="1" max="1" chance="0.750000000000008" /> <!-- Metallic Fiber -->
@@ -5460,10 +5460,10 @@
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
@@ -5501,11 +5501,11 @@
 				<walk ground="33" />
 				<run ground="170" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
@@ -5527,14 +5527,14 @@
 			<skill id="5082" level="2" /> <!-- Spinning Slasher -->
 			<skill id="5106" level="1" /> <!-- Capture A State -->
 			<skill id="5079" level="1" /> <!-- Haste Focus -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VELOCIRAPTOR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
 				<item id="36537" min="1" max="1" chance="0.750000000000008" /> <!-- Leather Braid -->
@@ -5550,10 +5550,10 @@
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="47.2" />
@@ -5590,11 +5590,11 @@
 				<walk ground="54" />
 				<run ground="210" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4084" level="9" /> <!-- Resist Physical Attack -->
 			<skill id="4244" level="10" /> <!-- NPC Wild Sweep -->
@@ -5619,14 +5619,14 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
 				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
@@ -5640,10 +5640,10 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="43.7" />

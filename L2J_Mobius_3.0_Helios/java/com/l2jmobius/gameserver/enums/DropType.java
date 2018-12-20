@@ -23,5 +23,5 @@ public enum DropType
 {
 	DROP,
 	SPOIL,
-	LUCKY_DROP;
+	LUCKY;
 }

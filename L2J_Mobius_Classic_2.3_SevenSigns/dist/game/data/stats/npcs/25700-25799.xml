@@ -14,9 +14,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>		<collision>
+		</skillList>		<collision>
 			<radius normal="77" />
 			<height normal="120" />
 		</collision>
@@ -35,9 +35,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>		<collision>
+		</skillList>		<collision>
 			<radius normal="77" />
 			<height normal="120" />
 		</collision>
@@ -56,9 +56,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>		<collision>
+		</skillList>		<collision>
 			<radius normal="77" />
 			<height normal="120" />
 		</collision>
@@ -77,17 +77,17 @@
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7122" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="12" /> <!-- Bug -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="77.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6323" min="1" max="1" chance="24.39" /> <!-- Sealed Phoenix Necklace -->
 				<item id="6324" min="1" max="1" chance="24.27" /> <!-- Sealed Phoenix Earring -->
@@ -122,7 +122,7 @@
 				<item id="6660" min="1" max="1" chance="0.03" /> <!-- Queen Ant's Ring -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25739" level="75" type="L2RaidBoss" name="Angel Priest of Baium" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -139,17 +139,17 @@
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7123" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="8" /> <!-- Angel -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="120" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="23.86" /> <!-- Sealed Phoenix Ring -->
 				<item id="6324" min="1" max="1" chance="22.52" /> <!-- Sealed Phoenix Earring -->
@@ -184,7 +184,7 @@
 				<item id="49580" min="1" max="1" chance="0.03" /> <!-- Baium's Ring -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25740" level="80" type="L2Npc" name="Angel Blade" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -241,17 +241,17 @@
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7124" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="90" />
 			<height normal="81.6" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6323" min="1" max="1" chance="24.28" /> <!-- Sealed Phoenix Necklace -->
 				<item id="6324" min="1" max="1" chance="24.27" /> <!-- Sealed Phoenix Earring -->
@@ -286,7 +286,7 @@
 				<item id="6662" min="1" max="1" chance="0.03" /> <!-- Ring of Core -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25743" level="75" type="L2RaidBoss" name="Priest Orfen Lord Ipos" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -302,17 +302,17 @@
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="7125" level="1" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="56" />
 			<height normal="76.1" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="23.36" /> <!-- Sealed Phoenix Ring -->
 				<item id="6323" min="1" max="1" chance="22.75" /> <!-- Sealed Phoenix Necklace -->
@@ -347,7 +347,7 @@
 				<item id="6661" min="1" max="1" chance="0.03" /> <!-- Orfen's Earring -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25744" level="55" type="L2RaidBoss" name="Zombie Lord Dorkhon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -363,17 +363,17 @@
 			<defence physical="679" magical="337.7142857142857" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="1" /> <!-- Raid Boss (Lv. 55) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="26.1" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2502" min="1" max="1" chance="2.986" /> <!-- Dwarven War Hammer -->
 				<item id="285" min="1" max="1" chance="2.981" /> <!-- Noble Elven Bow -->
@@ -391,7 +391,7 @@
 				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25745" level="55" type="L2RaidBoss" name="Orc Timak Darphen" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -408,17 +408,17 @@
 			<defence physical="679" magical="337.7142857142857" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="2" /> <!-- Raid Boss (Lv. 55) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="17" />
 			<height normal="46.2" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2502" min="1" max="1" chance="2.95" /> <!-- Dwarven War Hammer -->
 				<item id="74" min="1" max="1" chance="2.94" /> <!-- Katana -->
@@ -436,7 +436,7 @@
 				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.3" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25746" level="60" type="L2RaidBoss" name="Evil Magikus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -452,17 +452,17 @@
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="3" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="55.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="857" min="1" max="1" chance="5.614" /> <!-- Holy Earring -->
 				<item id="917" min="1" max="1" chance="5.553" /> <!-- Necklace of Mermaid -->
@@ -501,7 +501,7 @@
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="30.4" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25747" level="60" type="L2RaidBoss" name="Rael Mahum Radium" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -517,17 +517,17 @@
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="4" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="72.75" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="886" min="1" max="1" chance="5.62" /> <!-- Ring of Seal -->
 				<item id="855" min="1" max="1" chance="5.602" /> <!-- Nassen's Earring -->
@@ -566,7 +566,7 @@
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.42" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25748" level="60" type="L2RaidBoss" name="Rael Mahum Supercium" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -582,17 +582,17 @@
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="5" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="50.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="857" min="1" max="1" chance="5.607" /> <!-- Holy Earring -->
 				<item id="886" min="1" max="1" chance="5.579" /> <!-- Ring of Seal -->
@@ -631,7 +631,7 @@
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="30.95" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25749" level="60" type="L2RaidBoss" name="Tayga Feron King" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -647,17 +647,17 @@
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="6" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="55.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="917" min="1" max="1" chance="5.612" /> <!-- Necklace of Mermaid -->
 				<item id="857" min="1" max="1" chance="5.587" /> <!-- Holy Earring -->
@@ -696,7 +696,7 @@
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.27" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25750" level="60" type="L2RaidBoss" name="Tayga Marga Shaman" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -713,17 +713,17 @@
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="7" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="55.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="888" min="1" max="1" chance="5.587" /> <!-- Blessed Ring -->
 				<item id="854" min="1" max="1" chance="5.587" /> <!-- Earring of Seal -->
@@ -762,7 +762,7 @@
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.19" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25751" level="60" type="L2RaidBoss" name="Tayga Septon Champion" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -779,17 +779,17 @@
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="8" /> <!-- Raid Boss (Lv. 60) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="885" min="1" max="1" chance="5.625" /> <!-- Ring of Ages -->
 				<item id="119" min="1" max="1" chance="5.59" /> <!-- Necklace of Seal -->
@@ -828,7 +828,7 @@
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="28.6" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25752" level="80" type="L2Npc" name="Tayga Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -884,17 +884,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="9" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="30.49" /> <!-- Adamantite Earring -->
 				<item id="918" min="1" max="1" chance="29.86" /> <!-- Adamantite Necklace -->
@@ -911,7 +911,7 @@
 				<item id="947" min="1" max="1" chance="50.34" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.43" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25755" level="65" type="L2RaidBoss" name="Gross Salamander" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -928,17 +928,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="10" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="3" chance="31.21" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="31.08" /> <!-- Adamantite Necklace -->
@@ -955,7 +955,7 @@
 				<item id="947" min="1" max="1" chance="49.94" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.34" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25756" level="65" type="L2RaidBoss" name="Gross Dre Vanul" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -971,17 +971,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="11" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="43.15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="29.22" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="28.67" /> <!-- Adamantite Earring -->
@@ -998,7 +998,7 @@
 				<item id="948" min="1" max="1" chance="50.83" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="49.96" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25757" level="65" type="L2RaidBoss" name="Gross Ifrit" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1014,17 +1014,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="12" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="33.6" />
 			<height normal="58.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="30.41" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="30.37" /> <!-- Adamantite Earring -->
@@ -1041,7 +1041,7 @@
 				<item id="947" min="1" max="1" chance="50.1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="48.96" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25758" level="65" type="L2RaidBoss" name="Fiend Goblier" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1057,17 +1057,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="13" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.5" />
 			<height normal="61.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="30.89" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="30.27" /> <!-- Adamantite Earring -->
@@ -1084,7 +1084,7 @@
 				<item id="947" min="1" max="1" chance="50.68" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="50.24" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25759" level="65" type="L2RaidBoss" name="Fiend Cherkia" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1100,17 +1100,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="14" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25.2" />
 			<height normal="52.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="31.49" /> <!-- Adamantite Earring -->
 				<item id="918" min="1" max="1" chance="30.76" /> <!-- Adamantite Necklace -->
@@ -1127,7 +1127,7 @@
 				<item id="947" min="1" max="1" chance="51.15" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.29" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25760" level="65" type="L2RaidBoss" name="Fiend Harthemon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1143,17 +1143,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="15" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="54" />
 			<height normal="59.1" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="3" chance="29.67" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="28.94" /> <!-- Adamantite Necklace -->
@@ -1170,7 +1170,7 @@
 				<item id="947" min="1" max="1" chance="51.04" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.09" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25761" level="65" type="L2RaidBoss" name="Fiend Sarboth" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1186,17 +1186,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="16" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="68" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="31.21" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="31.19" /> <!-- Adamantite Earring -->
@@ -1213,7 +1213,7 @@
 				<item id="947" min="1" max="1" chance="49.65" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.32" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25762" level="65" type="L2RaidBoss" name="Demon Bedukel" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1230,17 +1230,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="17" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="56" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="31.43" /> <!-- Adamantite Earring -->
 				<item id="887" min="1" max="3" chance="29.12" /> <!-- Adamantite Ring -->
@@ -1257,7 +1257,7 @@
 				<item id="948" min="1" max="1" chance="50.96" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="49.18" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25763" level="65" type="L2RaidBoss" name="Bloody Witch Rumilla" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1273,17 +1273,17 @@
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="18" /> <!-- Raid Boss (Lv. 65) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="80" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="29.43" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="28.94" /> <!-- Adamantite Earring -->
@@ -1300,7 +1300,7 @@
 				<item id="947" min="1" max="1" chance="50.07" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="48.95" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25764" level="80" type="L2Npc" name="Demon Collector" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1356,17 +1356,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="19" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="75.75" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="27.65" /> <!-- Adamantite Earring -->
 				<item id="887" min="1" max="1" chance="27.22" /> <!-- Adamantite Ring -->
@@ -1415,7 +1415,7 @@
 				<item id="948" min="1" max="1" chance="78.7" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.82" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25767" level="70" type="L2RaidBoss" name="Monster Bulleroth" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1431,17 +1431,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="20" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="48" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="26.67" /> <!-- Adamantite Ring -->
 				<item id="856" min="1" max="1" chance="26.4" /> <!-- Adamantite Earring -->
@@ -1490,7 +1490,7 @@
 				<item id="948" min="1" max="1" chance="79.63" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.18" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25768" level="70" type="L2RaidBoss" name="Dorcaus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1506,17 +1506,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="21" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="60.75" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="26.51" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="26.4" /> <!-- Adamantite Necklace -->
@@ -1565,7 +1565,7 @@
 				<item id="948" min="1" max="1" chance="81.57" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.5" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25769" level="70" type="L2RaidBoss" name="Kerfaus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1581,17 +1581,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="22" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="57" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="856" min="1" max="1" chance="27.31" /> <!-- Adamantite Earring -->
 				<item id="887" min="1" max="1" chance="26.82" /> <!-- Adamantite Ring -->
@@ -1640,7 +1640,7 @@
 				<item id="948" min="1" max="1" chance="78.48" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.22" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25770" level="70" type="L2RaidBoss" name="Milinaus" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1657,17 +1657,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="23" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="46.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="27.61" /> <!-- Adamantite Necklace -->
 				<item id="887" min="1" max="1" chance="27.46" /> <!-- Adamantite Ring -->
@@ -1716,7 +1716,7 @@
 				<item id="948" min="1" max="1" chance="78.74" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.91" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25771" level="80" type="L2Npc" name="Centaur Thrower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1752,17 +1752,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="24" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="40.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="27.58" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="27.14" /> <!-- Adamantite Earring -->
@@ -1811,7 +1811,7 @@
 				<item id="948" min="1" max="1" chance="81.16" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.25" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25773" level="70" type="L2RaidBoss" name="Evil Orc Tabris" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1827,17 +1827,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="25" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="54.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="27.79" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="27.13" /> <!-- Adamantite Earring -->
@@ -1886,7 +1886,7 @@
 				<item id="948" min="1" max="1" chance="79.42" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.21" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25774" level="70" type="L2RaidBoss" name="Evil Orc Ravolas" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1902,17 +1902,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="26" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="27.22" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="26.68" /> <!-- Adamantite Necklace -->
@@ -1961,7 +1961,7 @@
 				<item id="948" min="1" max="1" chance="81.54" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.26" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25775" level="70" type="L2RaidBoss" name="Evil Orc Dephracor" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -1977,17 +1977,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="27" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="47.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="27.39" /> <!-- Adamantite Ring -->
 				<item id="856" min="1" max="1" chance="27.3" /> <!-- Adamantite Earring -->
@@ -2036,7 +2036,7 @@
 				<item id="948" min="1" max="1" chance="78.82" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.53" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25776" level="70" type="L2RaidBoss" name="Amden Orc Turahot" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2052,17 +2052,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="28" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="56.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="918" min="1" max="1" chance="26.15" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="25.94" /> <!-- Adamantite Earring -->
@@ -2111,7 +2111,7 @@
 				<item id="948" min="1" max="1" chance="78.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.09" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25777" level="70" type="L2RaidBoss" name="Amden Orc Turation" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2128,17 +2128,17 @@
 			<defence physical="864" magical="430" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="29" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="51" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="26.51" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="26.4" /> <!-- Adamantite Necklace -->
@@ -2187,7 +2187,7 @@
 				<item id="948" min="1" max="1" chance="80.5" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.85" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25778" level="80" type="L2Npc" name="Puppet Orc Archer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2223,17 +2223,17 @@
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="30" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="63" />
 			<height normal="69" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6324" min="1" max="1" chance="24.74" /> <!-- Sealed Phoenix Earring -->
 				<item id="6323" min="1" max="1" chance="24.67" /> <!-- Sealed Phoenix Necklace -->
@@ -2267,7 +2267,7 @@
 				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25780" level="75" type="L2RaidBoss" name="Varbasion" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2284,17 +2284,17 @@
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="31" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="68.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="25.8" /> <!-- Sealed Phoenix Ring -->
 				<item id="6323" min="1" max="1" chance="25.47" /> <!-- Sealed Phoenix Necklace -->
@@ -2328,7 +2328,7 @@
 				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25781" level="75" type="L2RaidBoss" name="Varmoni" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2344,17 +2344,17 @@
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="32" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6323" min="1" max="1" chance="25.18" /> <!-- Sealed Phoenix Necklace -->
 				<item id="6324" min="1" max="1" chance="24.99" /> <!-- Sealed Phoenix Earring -->
@@ -2388,7 +2388,7 @@
 				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25782" level="75" type="L2RaidBoss" name="Overlord Muscel" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2404,17 +2404,17 @@
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="33" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="48" />
 			<height normal="77.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6324" min="1" max="1" chance="25.13" /> <!-- Sealed Phoenix Earring -->
 				<item id="6325" min="1" max="1" chance="24.43" /> <!-- Sealed Phoenix Ring -->
@@ -2448,7 +2448,7 @@
 				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25783" level="75" type="L2RaidBoss" name="Bathus Elbogen" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2464,17 +2464,17 @@
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="34" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="70.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6325" min="1" max="1" chance="24.78" /> <!-- Sealed Phoenix Ring -->
 				<item id="6323" min="1" max="1" chance="24.75" /> <!-- Sealed Phoenix Necklace -->
@@ -2508,7 +2508,7 @@
 				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25784" level="75" type="L2RaidBoss" name="Daumen Kshana" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -2524,17 +2524,17 @@
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="50009" level="35" /> <!-- Raid Boss (Lv. 75) -->
 			<skill id="4416" level="11" /> <!-- Giant -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="72.75" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6323" min="1" max="1" chance="24.84" /> <!-- Sealed Phoenix Necklace -->
 				<item id="6324" min="1" max="1" chance="24.77" /> <!-- Sealed Phoenix Earring -->
@@ -2568,7 +2568,7 @@
 				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
 				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25785" level="80" type="L2Npc" name="Lesser Giant Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2766,18 +2766,18 @@
 			<radius normal="21.0" />
 			<height normal="43.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="1" /> <!-- 62 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5464" level="1" />
 			<skill id="4415" level="3" />
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25795" level="64" type="L2Monster" name="Garan" title="Korim's Messenger">
@@ -2803,7 +2803,7 @@
 			<radius normal="15.6" />
 			<height normal="37.8" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="2" /> <!-- 64 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5464" level="1" />
@@ -2811,11 +2811,11 @@
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
 			<skill id="4416" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25796" level="66" type="L2Monster" name="Batur" title="Kelbar's Leader">
@@ -2841,7 +2841,7 @@
 			<radius normal="24.0" />
 			<height normal="47.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4437" level="3" />
@@ -2855,11 +2855,11 @@
 			<skill id="4415" level="3" />
 			<skill id="4494" level="1" />
 			<skill id="14765" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25797" level="68" type="L2Monster" name="Venir" title="Kraven's Best Friend">
@@ -2885,7 +2885,7 @@
 			<radius normal="18.0" />
 			<height normal="47.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="4" /> <!-- 68 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4441" level="5" />
@@ -2898,11 +2898,11 @@
 			<skill id="4494" level="1" />
 			<skill id="14765" level="4" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25798" level="70" type="L2Monster" name="Oel" title="Blue Flag Captain">
@@ -2928,7 +2928,7 @@
 			<radius normal="24.0" />
 			<height normal="45.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="5" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5462" level="1" />
@@ -2937,11 +2937,11 @@
 			<skill id="14765" level="4" />
 			<skill id="4045" level="1" />
 			<skill id="4084" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 	<npc id="25799" level="72" type="L2Monster" name="Taranka" title="Kandra's Follower">
@@ -2967,7 +2967,7 @@
 			<radius normal="15.6" />
 			<height normal="38.4" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="50028" level="6" /> <!-- 72 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4441" level="5" />
@@ -2979,11 +2979,11 @@
 			<skill id="5467" level="1" />
 			<skill id="4415" level="3" />
 			<skill id="4494" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CLAN_ARENA</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 	</npc>
 </list>

@@ -15,12 +15,12 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="39.5" />
@@ -41,12 +41,12 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="40" />
@@ -67,12 +67,12 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
@@ -93,12 +93,12 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="17" />
 			<height normal="37" />
@@ -119,12 +119,12 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="36" />
@@ -148,14 +148,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="29" />
@@ -180,17 +180,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="29" />
@@ -214,14 +214,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -245,17 +245,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -280,16 +280,16 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -314,16 +314,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -348,17 +348,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -383,17 +383,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -417,17 +417,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -451,17 +451,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -485,17 +485,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -519,17 +519,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -554,17 +554,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -588,17 +588,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -618,10 +618,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -643,15 +643,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -674,15 +674,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -705,15 +705,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -736,15 +736,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -767,15 +767,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -798,15 +798,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -830,15 +830,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -861,14 +861,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -891,14 +891,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attacks -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -921,15 +921,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -952,15 +952,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -983,15 +983,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1014,15 +1014,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1045,15 +1045,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1076,15 +1076,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1107,15 +1107,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1138,14 +1138,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1168,14 +1168,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1198,16 +1198,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1230,16 +1230,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1258,10 +1258,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1283,10 +1283,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1304,10 +1304,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1325,10 +1325,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1346,10 +1346,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1367,10 +1367,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1388,10 +1388,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1409,10 +1409,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1430,7 +1430,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -1439,7 +1439,7 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1457,10 +1457,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1478,7 +1478,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -1487,7 +1487,7 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1505,10 +1505,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1526,7 +1526,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -1535,7 +1535,7 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1553,14 +1553,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> 
 			<skill id="4411" level="12" /> 
 			<skill id="4412" level="12" /> 
 			<skill id="4413" level="12" /> 
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1578,10 +1578,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1599,10 +1599,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1620,10 +1620,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1641,10 +1641,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1662,10 +1662,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1683,10 +1683,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1704,10 +1704,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1725,10 +1725,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1746,10 +1746,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1767,10 +1767,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1788,10 +1788,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1813,14 +1813,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1843,10 +1843,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1868,10 +1868,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1894,14 +1894,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1920,13 +1920,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -1944,13 +1944,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -1968,13 +1968,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -1992,13 +1992,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -2016,13 +2016,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -2046,14 +2046,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="29" />
@@ -2078,17 +2078,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="4412" level="14" />
 			<skill id="4413" level="14" />
 			<skill id="4440" level="5" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="29" />
@@ -2112,14 +2112,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2143,17 +2143,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2178,16 +2178,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->

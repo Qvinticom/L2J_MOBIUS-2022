@@ -25,10 +25,10 @@
 				<walk ground="60" />
 				<run ground="210" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -39,14 +39,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5303" level="4" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5597" max="11465" chance="70" /> <!-- Adena -->
 				<item id="5312" min="1" max="1" chance="0.00675592341613769" /> <!-- Sealed Helm of Nightmare -->
@@ -67,7 +67,7 @@
 				<item id="1808" min="1" max="1" chance="0.3716" /> <!-- Recipe: Soulshot (S-Grade) -->
 				<item id="5534" min="1" max="1" chance="2.2952" /> <!-- Soul Bow Stave -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="34" />
 			<height normal="35" />
@@ -97,10 +97,10 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -114,14 +114,14 @@
 			<skill id="5283" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Water -->
 			<skill id="5317" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Water -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="700">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="29719" max="60872" chance="70" /> <!-- Adena -->
 				<item id="81" min="1" max="1" chance="0.00351435634875298" /> <!-- Dragon Slayer -->
@@ -143,7 +143,7 @@
 				<item id="4040" min="1" max="1" chance="88.7802" /> <!-- Mold Lubricant -->
 				<item id="5537" min="1" max="1" chance="12.1784" /> <!-- Soul Separator Head -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="50.4" />
@@ -183,10 +183,10 @@
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<hit_time>720</hit_time>
+			<hitTime>720</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -200,14 +200,14 @@
 			<skill id="5360" level="2" /> <!-- NPC(party) - Physical Range Close Range Attack - Dark -->
 			<skill id="5390" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Holy -->
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="17859" max="36581" chance="70" /> <!-- Adena -->
 				<item id="164" min="1" max="1" chance="0.00158389558696747" /> <!-- Elysian -->
@@ -229,7 +229,7 @@
 				<item id="5538" min="1" max="1" chance="7.3171" /> <!-- Dragon Grinder Edge -->
 				<item id="3957" min="1" max="1" chance="1.1856" /> <!-- Recipe: Blessed Spiritshot S -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="54" />
@@ -261,10 +261,10 @@
 				<walk ground="30" />
 				<run ground="250" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -277,14 +277,14 @@
 			<skill id="5359" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Dark -->
 			<skill id="5365" level="4" /> <!-- Paralysis -->
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="18630" max="38159" chance="70" /> <!-- Adena -->
 				<item id="270" min="1" max="1" chance="0.00660911021959782" /> <!-- Dragon Grinder -->
@@ -301,7 +301,7 @@
 				<item id="5550" min="1" max="1" chance="37.1029" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="92.7572" /> <!-- Asofe -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="35.6" />
@@ -333,10 +333,10 @@
 				<walk ground="35" />
 				<run ground="200" />
 			</speed>
-			<hit_time>710</hit_time>
+			<hitTime>710</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -349,14 +349,14 @@
 			<skill id="5362" level="4" /> <!-- Stun -->
 			<skill id="5393" level="4" /> <!-- NPC MP Burn -->
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="18705" max="38313" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.00663565003871918" /> <!-- Soul Bow -->
@@ -377,7 +377,7 @@
 				<item id="5157" min="1" max="1" chance="1.2418" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
 				<item id="5545" min="1" max="1" chance="7.6652" /> <!-- Dark Legion's Edge Blade -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -412,10 +412,10 @@
 				<walk ground="70" />
 				<run ground="150" />
 			</speed>
-			<hit_time>410</hit_time>
+			<hitTime>410</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -427,14 +427,14 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5273" level="3" /> <!-- NPC(party) - Physical Single Close Range Attack -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="4339" max="8887" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.00153929997980595" /> <!-- Soul Bow -->
@@ -451,7 +451,7 @@
 				<item id="5546" min="1" max="1" chance="1.9529" /> <!-- Sword of Miracles Edge -->
 				<item id="1895" min="1" max="3" chance="92.5777" /> <!-- Metallic Fiber -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="36" />
@@ -495,10 +495,10 @@
 				<walk ground="13" />
 				<run ground="60" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -511,15 +511,15 @@
 			<skill id="5312" level="4" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
 			<skill id="5314" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="9969" max="20420" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.00353666970849037" /> <!-- Soul Separator -->
@@ -536,7 +536,7 @@
 				<item id="6342" min="1" max="1" chance="50.5968" /> <!-- Sealed Majestic Earring Gemstone -->
 				<item id="5167" min="1" max="1" chance="0.9927" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
@@ -577,7 +577,7 @@
 			</speed>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -590,15 +590,15 @@
 			<skill id="4444" level="1" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="5340" level="3" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="24123" max="49411" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.00855783766317368" /> <!-- Soul Separator -->
@@ -620,7 +620,7 @@
 				<item id="5272" min="1" max="1" chance="1.6014" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
 				<item id="6346" min="1" max="3" chance="58.6559" /> <!-- Sealed Majestic Ring Gemstone -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="46.3765" />
@@ -657,10 +657,10 @@
 				<walk ground="90" />
 				<run ground="110" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -672,15 +672,15 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4614" level="10" /> <!-- NPC Death Bomb -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="3967" max="8126" chance="70" /> <!-- Adena -->
 				<item id="5320" min="1" max="1" chance="0.00221030875396729" /> <!-- Sealed Leather Armor of Nightmare -->
@@ -698,7 +698,7 @@
 			<spoil>
 				<item id="8342" min="1" max="1" chance="4.8761" /> <!-- Flaming Dragon Skull Piece -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -733,10 +733,10 @@
 				<walk ground="25" />
 				<run ground="170" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -750,15 +750,15 @@
 			<skill id="4572" level="10" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="5301" level="3" /> <!-- Stun -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5443" max="11149" chance="70" /> <!-- Adena -->
 				<item id="5320" min="1" max="1" chance="0.00303288959264755" /> <!-- Sealed Leather Armor of Nightmare -->
@@ -777,7 +777,7 @@
 				<item id="8349" min="1" max="1" chance="2.2297" /> <!-- Doom Crusher Head -->
 				<item id="5282" min="1" max="1" chance="0.3614" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
@@ -817,10 +817,10 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4157" level="10" /> <!-- NPC Blaze - Magic -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -836,15 +836,15 @@
 			<skill id="4444" level="1" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4561" level="10" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5119" max="10485" chance="70" /> <!-- Adena -->
 				<item id="5326" min="1" max="1" chance="0.00285187768411636" /> <!-- Sealed Robe of Nightmare -->
@@ -864,7 +864,7 @@
 				<item id="1876" min="1" max="3" chance="76.4565" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="5" chance="72.8157" /> <!-- Metallic Fiber -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="52" />
@@ -906,10 +906,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -922,15 +922,15 @@
 			<skill id="5317" level="4" /> <!-- NPC(party) -Magic Range Long Range DD - Water -->
 			<skill id="5318" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Water -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="15512" max="31115" chance="70" /> <!-- Adena -->
 				<item id="6326" min="1" max="1" chance="0.0217859182891846" /> <!-- Sealed Majestic Necklace -->
@@ -956,7 +956,7 @@
 				<item id="6901" min="1" max="1" chance="2.6509" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6689" min="1" max="1" chance="5.6218" /> <!-- Basalt Battlehammer Head -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
@@ -991,10 +991,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1007,14 +1007,14 @@
 			<skill id="5282" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Water -->
 			<skill id="5283" level="4" /> <!-- NPC(party) - Physical Range Close Range Attack - Water -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="19156" max="38424" chance="70" /> <!-- Adena -->
 				<item id="5313" min="1" max="1" chance="0.0297528268146515" /> <!-- Sealed Gauntlets of Nightmare -->
@@ -1037,7 +1037,7 @@
 				<item id="6690" min="1" max="1" chance="7.0893" /> <!-- Imperial Staff Head -->
 				<item id="960" min="1" max="1" chance="1.3094" /> <!-- Scroll: Enchant Armor (S-Grade) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
@@ -1076,10 +1076,10 @@
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4072" level="10" /> <!-- Stun -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -1093,15 +1093,15 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5282" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Water -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5245" max="10520" chance="70" /> <!-- Adena -->
 				<item id="5312" min="1" max="1" chance="0.00724289259338379" /> <!-- Sealed Helm of Nightmare -->
@@ -1124,7 +1124,7 @@
 				<item id="1876" min="1" max="3" chance="89.6287" /> <!-- Mithril Ore -->
 				<item id="6691" min="1" max="1" chance="1.9373" /> <!-- Angel Slayer Blade -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
@@ -1159,10 +1159,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1175,15 +1175,15 @@
 			<skill id="5310" level="4" /> <!-- NPC(party) - Magic Close Range DD - less powerful -->
 			<skill id="5333" level="4" /> <!-- Poison -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="5131" max="10293" chance="70" /> <!-- Adena -->
 				<item id="164" min="1" max="1" chance="0.000520694390058517" /> <!-- Elysian -->
@@ -1206,7 +1206,7 @@
 				<item id="6693" min="1" max="1" chance="1.9298" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="6901" min="1" max="1" chance="0.8769" /> <!-- Recipe: Shining Arrow (100%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="41" />
@@ -1240,10 +1240,10 @@
 				<walk ground="35" />
 				<run ground="160" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1256,14 +1256,14 @@
 			<skill id="5273" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
 			<skill id="5309" level="4" /> <!-- Bleed -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="3052" max="6121" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.00123864994943142" /> <!-- Soul Bow -->
@@ -1285,7 +1285,7 @@
 				<item id="959" min="1" max="1" chance="0.0209" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
 				<item id="4040" min="1" max="1" chance="10.4299" /> <!-- Mold Lubricant -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="44" />
@@ -1321,7 +1321,7 @@
 			</speed>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1334,14 +1334,14 @@
 			<skill id="4463" level="3" /> <!-- Surrender To Water -->
 			<skill id="5273" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="8835" max="17721" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.00358569791221619" /> <!-- Soul Separator -->
@@ -1358,7 +1358,7 @@
 				<item id="6695" min="1" max="1" chance="3.2019" /> <!-- Demon Splinter Blade -->
 				<item id="6901" min="1" max="1" chance="1.5098" /> <!-- Recipe: Shining Arrow (100%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
@@ -1407,10 +1407,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1424,15 +1424,15 @@
 			<skill id="5282" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Water -->
 			<skill id="5318" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Water -->
 			<skill id="5463" level="1" /> <!-- Water Attacks -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>ORACLE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1260" max="2528" chance="70" /> <!-- Adena -->
 				<item id="5312" min="1" max="1" chance="0.00174021120071411" /> <!-- Sealed Helm of Nightmare -->
@@ -1459,7 +1459,7 @@
 				<item id="6901" min="1" max="1" chance="0.2154" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6697" min="1" max="1" chance="0.4567" /> <!-- Arcana Mace Head -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="27.5" />

@@ -27,7 +27,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -35,8 +35,8 @@
 			<skill id="16249" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37982" min="1" max="1" chance="2.34299999999999" /> <!-- Apocalypse Cutter Crafting Pack -->
 				<item id="37984" min="1" max="1" chance="2.3345" /> <!-- Apocalypse Avenger Crafting Pack -->
@@ -82,10 +82,10 @@
 				<item id="17684" min="3" max="3" chance="3.1914660635466" /> <!-- Lv. 4 Giant MEN Dye MEN + 5 / INT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.82962190185893" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="56" />
@@ -118,15 +118,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16250" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37985" min="1" max="1" chance="2.30599999999999" /> <!-- Apocalypse Fighter Crafting Pack -->
 				<item id="37989" min="1" max="1" chance="2.304" /> <!-- Apocalypse Buster Crafting Pack -->
@@ -172,10 +172,10 @@
 				<item id="17683" min="3" max="3" chance="3.1717830548086" /> <!-- Lv. 4 Giant WIT Dye WIT + 5 / MEN - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81222289129091" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="52" />
@@ -208,15 +208,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16251" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37982" min="1" max="1" chance="2.334" /> <!-- Apocalypse Cutter Crafting Pack -->
 				<item id="37987" min="1" max="1" chance="2.323" /> <!-- Apocalypse Thrower Crafting Pack -->
@@ -262,10 +262,10 @@
 				<item id="17679" min="3" max="3" chance="3.1687550441306" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38573" min="1" max="1" chance="0.82669210131291" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="44" />
@@ -298,15 +298,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16252" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37982" min="1" max="1" chance="2.336" /> <!-- Apocalypse Cutter Crafting Pack -->
 				<item id="37981" min="1" max="1" chance="2.312" /> <!-- Apocalypse Shaper Crafting Pack -->
@@ -352,10 +352,10 @@
 				<item id="17680" min="3" max="3" chance="3.1656965125896" /> <!-- Lv. 4 Giant DEX Dye DEX + 5 / CON - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81477113992774" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="42" />
@@ -388,15 +388,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16253" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37990" min="1" max="1" chance="2.33200000000001" /> <!-- Apocalypse Caster Crafting Pack -->
 				<item id="37983" min="1" max="1" chance="2.32399999999999" /> <!-- Apocalypse Slasher Crafting Pack -->
@@ -442,10 +442,10 @@
 				<item id="17680" min="3" max="3" chance="3.1852974007335" /> <!-- Lv. 4 Giant DEX Dye DEX + 5 / CON - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81725402647106" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="45" />
@@ -478,7 +478,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -486,8 +486,8 @@
 			<skill id="16254" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37987" min="1" max="1" chance="2.32200000000001" /> <!-- Apocalypse Thrower Crafting Pack -->
 				<item id="37990" min="1" max="1" chance="2.318" /> <!-- Apocalypse Caster Crafting Pack -->
@@ -533,10 +533,10 @@
 				<item id="17679" min="3" max="3" chance="3.2065837092856" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81007386842497" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
@@ -560,13 +560,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
@@ -590,13 +590,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="26.5" />
@@ -620,12 +620,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -649,11 +649,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="32" />
@@ -677,12 +677,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -715,7 +715,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -723,8 +723,8 @@
 			<skill id="16242" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="11.4000000000002" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37951" min="1" max="1" chance="3.69099999999999" /> <!-- Requiem Cutter Crafting Pack -->
@@ -773,10 +773,10 @@
 				<item id="17680" min="3" max="3" chance="3.1206165581806" /> <!-- Lv. 4 Giant DEX Dye DEX + 5 / CON - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6375356585604" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="80" />
 			<height normal="60" />
@@ -809,15 +809,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16243" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="11.6499999999998" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37957" min="1" max="1" chance="3.67399999999998" /> <!-- Requiem Shooter Crafting Pack -->
@@ -866,10 +866,10 @@
 				<item id="17682" min="3" max="3" chance="3.16015798821" /> <!-- Lv. 4 Giant INT Dye INT + 5 / WIT - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6432821538692" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="33" grown="39.6" />
 			<height normal="49" grown="60.5" />
@@ -902,15 +902,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16244" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.1499999999998" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37953" min="1" max="1" chance="3.68699999999999" /> <!-- Requiem Avenger Crafting Pack -->
@@ -959,10 +959,10 @@
 				<item id="17681" min="3" max="3" chance="3.1687749426039" /> <!-- Lv. 4 Giant CON Dye CON + 5 / STR - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6309698330277" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.5985" />
@@ -995,15 +995,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16245" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.55" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37951" min="1" max="1" chance="3.68800000000002" /> <!-- Requiem Cutter Crafting Pack -->
@@ -1052,10 +1052,10 @@
 				<item id="17682" min="3" max="3" chance="3.135733004622" /> <!-- Lv. 4 Giant INT Dye INT + 5 / WIT - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6441464023607" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="56" />
@@ -1088,15 +1088,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16246" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.5899999999999" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37959" min="1" max="1" chance="3.69499999999999" /> <!-- Requiem Caster Crafting Pack -->
@@ -1145,10 +1145,10 @@
 				<item id="17680" min="3" max="3" chance="3.1633494334639" /> <!-- Lv. 4 Giant DEX Dye DEX + 5 / CON - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6415806466282" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="80" />
@@ -1181,7 +1181,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1189,8 +1189,8 @@
 			<skill id="16247" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.15" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37958" min="1" max="1" chance="3.69500000000001" /> <!-- Requiem Buster Crafting Pack -->
@@ -1239,10 +1239,10 @@
 				<item id="17679" min="3" max="3" chance="3.1047951401847" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6157049096405" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="98" />
@@ -1266,13 +1266,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="23" />
@@ -1296,13 +1296,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -1326,12 +1326,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="55" />
@@ -1355,11 +1355,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -1383,12 +1383,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -1421,7 +1421,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1429,8 +1429,8 @@
 			<skill id="16304" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -1476,10 +1476,10 @@
 				<item id="17690" min="3" max="3" chance="3.2181483516263" /> <!-- Lv. 4 Ancient MEN Dye MEN + 5 / INT - 2 / Holy Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.4519443230259" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" />
 			<height normal="75" />
@@ -1512,7 +1512,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1520,8 +1520,8 @@
 			<skill id="16305" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -1567,10 +1567,10 @@
 				<item id="17688" min="3" max="3" chance="3.1937465999948" /> <!-- Lv. 4 Ancient INT Dye INT + 5 / WIT - 2 / Water Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.45386933140089" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="54" />
@@ -1603,7 +1603,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1611,8 +1611,8 @@
 			<skill id="16306" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -1658,10 +1658,10 @@
 				<item id="17686" min="3" max="3" chance="3.2088845363473" /> <!-- Lv. 4 Ancient DEX Dye DEX + 5 / CON - 2 / Earth Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.45434112509633" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="50" />
@@ -1694,7 +1694,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1702,8 +1702,8 @@
 			<skill id="16307" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -1749,10 +1749,10 @@
 				<item id="17687" min="3" max="3" chance="3.2182568739612" /> <!-- Lv. 4 Ancient CON Dye CON + 5 / STR - 2 / Dark Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.46148965588793" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="54" />
@@ -1785,7 +1785,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1793,8 +1793,8 @@
 			<skill id="16308" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -1840,10 +1840,10 @@
 				<item id="17688" min="3" max="3" chance="3.1991220737442" /> <!-- Lv. 4 Ancient INT Dye INT + 5 / WIT - 2 / Water Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.44688665005368" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="50" />
@@ -1876,7 +1876,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1884,8 +1884,8 @@
 			<skill id="16309" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -1931,10 +1931,10 @@
 				<item id="17685" min="3" max="3" chance="3.1953810216404" /> <!-- Lv. 4 Ancient STR Dye STR + 5 / DEX - 2 / Fire Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.47439888772693" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="54" />
@@ -1958,12 +1958,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -1987,12 +1987,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="23.5" />
@@ -2016,11 +2016,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="23.5" />
@@ -2044,11 +2044,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="25.4" />
@@ -2072,12 +2072,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -2101,7 +2101,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2109,8 +2109,8 @@
 			<skill id="16292" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -2156,10 +2156,10 @@
 				<item id="17687" min="3" max="3" chance="3.2546802221872" /> <!-- Lv. 4 Ancient CON Dye CON + 5 / STR - 2 / Dark Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.46817169883146" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="120" />
@@ -2184,7 +2184,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2192,8 +2192,8 @@
 			<skill id="16293" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -2239,10 +2239,10 @@
 				<item id="17690" min="3" max="3" chance="3.2091800067289" /> <!-- Lv. 4 Ancient MEN Dye MEN + 5 / INT - 2 / Holy Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.46564963000862" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="62" />
@@ -2267,7 +2267,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2275,8 +2275,8 @@
 			<skill id="16294" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -2322,10 +2322,10 @@
 				<item id="17690" min="3" max="3" chance="3.2150033489618" /> <!-- Lv. 4 Ancient MEN Dye MEN + 5 / INT - 2 / Holy Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.45086023332767" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="60" />
@@ -2350,7 +2350,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2358,8 +2358,8 @@
 			<skill id="16295" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -2405,10 +2405,10 @@
 				<item id="17687" min="3" max="3" chance="3.175669364727" /> <!-- Lv. 4 Ancient CON Dye CON + 5 / STR - 2 / Dark Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.46522165099036" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="66" />
@@ -2433,7 +2433,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2441,8 +2441,8 @@
 			<skill id="16296" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -2488,10 +2488,10 @@
 				<item id="17690" min="3" max="3" chance="3.1698221743742" /> <!-- Lv. 4 Ancient MEN Dye MEN + 5 / INT - 2 / Holy Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.46718425115698" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="68" />
@@ -2515,7 +2515,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2523,8 +2523,8 @@
 			<skill id="16297" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
@@ -2570,10 +2570,10 @@
 				<item id="17686" min="3" max="3" chance="3.2009041605764" /> <!-- Lv. 4 Ancient DEX Dye DEX + 5 / CON - 2 / Earth Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.458470115576" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="54" />
@@ -2597,12 +2597,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
@@ -2626,12 +2626,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
@@ -2655,11 +2655,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="33" />
@@ -2683,11 +2683,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="38" />
@@ -2710,12 +2710,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />
@@ -2748,7 +2748,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2756,8 +2756,8 @@
 			<skill id="16280" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.750000000000019" /> <!-- Seraph Shield Heavy Armor -->
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
@@ -2806,10 +2806,10 @@
 				<item id="17685" min="3" max="3" chance="3.1536634459746" /> <!-- Lv. 4 Ancient STR Dye STR + 5 / DEX - 2 / Fire Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.45055179155559" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="55.5" />
@@ -2842,7 +2842,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2850,8 +2850,8 @@
 			<skill id="16281" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.750000000000019" /> <!-- Seraph Shield Heavy Armor -->
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
@@ -2900,10 +2900,10 @@
 				<item id="17690" min="3" max="3" chance="3.2226506301433" /> <!-- Lv. 4 Ancient MEN Dye MEN + 5 / INT - 2 / Holy Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.46295836946578" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="33" />
 			<height normal="57" />
@@ -2936,7 +2936,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2944,8 +2944,8 @@
 			<skill id="16282" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.750000000000019" /> <!-- Seraph Shield Heavy Armor -->
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
@@ -2994,10 +2994,10 @@
 				<item id="17687" min="3" max="3" chance="3.1873113891532" /> <!-- Lv. 4 Ancient CON Dye CON + 5 / STR - 2 / Dark Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.44738044091806" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="47" />
@@ -3030,7 +3030,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3038,8 +3038,8 @@
 			<skill id="16283" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.750000000000019" /> <!-- Seraph Shield Heavy Armor -->
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
@@ -3088,10 +3088,10 @@
 				<item id="17686" min="3" max="3" chance="3.153522359446" /> <!-- Lv. 4 Ancient DEX Dye DEX + 5 / CON - 2 / Earth Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.45665544047106" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="33" />
 			<height normal="57" />
@@ -3124,7 +3124,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3132,8 +3132,8 @@
 			<skill id="16284" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.750000000000019" /> <!-- Seraph Shield Heavy Armor -->
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
@@ -3182,10 +3182,10 @@
 				<item id="17685" min="3" max="3" chance="3.2057532425667" /> <!-- Lv. 4 Ancient STR Dye STR + 5 / DEX - 2 / Fire Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.45051678095412" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="47" />
@@ -3218,7 +3218,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3226,8 +3226,8 @@
 			<skill id="16285" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.750000000000019" /> <!-- Seraph Shield Heavy Armor -->
 				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
@@ -3276,10 +3276,10 @@
 				<item id="17687" min="3" max="3" chance="3.1499332641258" /> <!-- Lv. 4 Ancient CON Dye CON + 5 / STR - 2 / Dark Resistance + 20 -->
 				<item id="38574" min="1" max="1" chance="0.44193978941124" /> <!-- Apparition Stone (Lv. 98) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="58" />
 			<height normal="52.5" />
@@ -3303,12 +3303,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="39.5" />
@@ -3332,12 +3332,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="34.5" />
@@ -3361,11 +3361,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -3389,11 +3389,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -3417,12 +3417,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -3447,7 +3447,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3455,8 +3455,8 @@
 			<skill id="16255" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17343" min="1" max="1" chance="6.06599999999998" /> <!-- Twilight Shield Heavy Armor -->
 				<item id="37989" min="1" max="1" chance="2.782" /> <!-- Apocalypse Buster Crafting Pack -->
@@ -3505,10 +3505,10 @@
 				<item id="17682" min="3" max="3" chance="3.1812457234657" /> <!-- Lv. 4 Giant INT Dye INT + 5 / WIT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.8240695748753" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="80" />
 			<height normal="91" />
@@ -3533,15 +3533,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16256" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17343" min="1" max="1" chance="5.96300000000004" /> <!-- Twilight Shield Heavy Armor -->
 				<item id="37990" min="1" max="1" chance="2.78899999999998" /> <!-- Apocalypse Caster Crafting Pack -->
@@ -3590,10 +3590,10 @@
 				<item id="17679" min="3" max="3" chance="3.2064861725257" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38573" min="1" max="1" chance="0.82370094543603" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="78" />
@@ -3618,15 +3618,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16257" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17343" min="1" max="1" chance="6.04400000000002" /> <!-- Twilight Shield Heavy Armor -->
 				<item id="37991" min="1" max="1" chance="2.79499999999999" /> <!-- Apocalypse Retributer Crafting Pack -->
@@ -3675,10 +3675,10 @@
 				<item id="17684" min="3" max="3" chance="3.1748826173676" /> <!-- Lv. 4 Giant MEN Dye MEN + 5 / INT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.8084247420783" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="77" />
@@ -3703,15 +3703,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16258" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17343" min="1" max="1" chance="5.94799999999994" /> <!-- Twilight Shield Heavy Armor -->
 				<item id="37990" min="1" max="1" chance="2.79299999999999" /> <!-- Apocalypse Caster Crafting Pack -->
@@ -3760,10 +3760,10 @@
 				<item id="17684" min="3" max="3" chance="3.1681878997455" /> <!-- Lv. 4 Giant MEN Dye MEN + 5 / INT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81150076028569" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="78" />
@@ -3788,15 +3788,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16259" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17343" min="1" max="1" chance="6.05599999999986" /> <!-- Twilight Shield Heavy Armor -->
 				<item id="37988" min="1" max="1" chance="2.759" /> <!-- Apocalypse Shooter Crafting Pack -->
@@ -3845,10 +3845,10 @@
 				<item id="17679" min="3" max="3" chance="3.1880871477114" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38573" min="1" max="1" chance="0.80751549070558" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" />
 			<height normal="59" />
@@ -3873,7 +3873,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3881,8 +3881,8 @@
 			<skill id="16260" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17343" min="1" max="1" chance="6.05699999999987" /> <!-- Twilight Shield Heavy Armor -->
 				<item id="37988" min="1" max="1" chance="2.76199999999999" /> <!-- Apocalypse Shooter Crafting Pack -->
@@ -3931,10 +3931,10 @@
 				<item id="17680" min="3" max="3" chance="3.2542655669584" /> <!-- Lv. 4 Giant DEX Dye DEX + 5 / CON - 2 -->
 				<item id="38573" min="1" max="1" chance="0.80195806837499" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" />
 			<height normal="86" />
@@ -3958,13 +3958,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="51" />
@@ -3988,13 +3988,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="54" />
@@ -4018,12 +4018,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="36.5" />
@@ -4047,11 +4047,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="56" />
@@ -4075,12 +4075,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="67" />
@@ -4113,7 +4113,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -4121,8 +4121,8 @@
 			<skill id="16268" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37991" min="1" max="1" chance="2.786" /> <!-- Apocalypse Retributer Crafting Pack -->
 				<item id="37981" min="1" max="1" chance="2.78199999999999" /> <!-- Apocalypse Shaper Crafting Pack -->
@@ -4168,10 +4168,10 @@
 				<item id="17682" min="3" max="3" chance="3.2135090289493" /> <!-- Lv. 4 Giant INT Dye INT + 5 / WIT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81537092141077" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="50" />
 			<height normal="71" />
@@ -4204,15 +4204,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16269" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37985" min="1" max="1" chance="2.78899999999999" /> <!-- Apocalypse Fighter Crafting Pack -->
 				<item id="37982" min="1" max="1" chance="2.782" /> <!-- Apocalypse Cutter Crafting Pack -->
@@ -4258,10 +4258,10 @@
 				<item id="17679" min="3" max="3" chance="3.143322024236" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38573" min="1" max="1" chance="0.80126999711004" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="56" />
@@ -4294,15 +4294,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16270" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37990" min="1" max="1" chance="2.79500000000001" /> <!-- Apocalypse Caster Crafting Pack -->
 				<item id="37989" min="1" max="1" chance="2.74599999999999" /> <!-- Apocalypse Buster Crafting Pack -->
@@ -4348,10 +4348,10 @@
 				<item id="17684" min="3" max="3" chance="3.1723861541911" /> <!-- Lv. 4 Giant MEN Dye MEN + 5 / INT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81283715282807" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -4384,15 +4384,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16271" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37984" min="1" max="1" chance="2.788" /> <!-- Apocalypse Avenger Crafting Pack -->
 				<item id="37981" min="1" max="1" chance="2.78299999999999" /> <!-- Apocalypse Shaper Crafting Pack -->
@@ -4438,10 +4438,10 @@
 				<item id="17683" min="3" max="3" chance="3.1903566206853" /> <!-- Lv. 4 Giant WIT Dye WIT + 5 / MEN - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81685843239463" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="32" />
 			<height normal="55" />
@@ -4474,15 +4474,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16272" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37986" min="1" max="1" chance="2.797" /> <!-- Apocalypse Stormer Crafting Pack -->
 				<item id="37991" min="1" max="1" chance="2.791" /> <!-- Apocalypse Retributer Crafting Pack -->
@@ -4528,10 +4528,10 @@
 				<item id="17684" min="3" max="3" chance="3.1708623033637" /> <!-- Lv. 4 Giant MEN Dye MEN + 5 / INT - 2 -->
 				<item id="38573" min="1" max="1" chance="0.80953527858006" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -4564,7 +4564,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -4572,8 +4572,8 @@
 			<skill id="16273" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="37983" min="1" max="1" chance="2.77100000000001" /> <!-- Apocalypse Slasher Crafting Pack -->
 				<item id="37981" min="1" max="1" chance="2.76200000000001" /> <!-- Apocalypse Shaper Crafting Pack -->
@@ -4619,10 +4619,10 @@
 				<item id="17679" min="3" max="3" chance="3.1565305197542" /> <!-- Lv. 4 Giant STR Dye STR + 5 / DEX - 2 -->
 				<item id="38573" min="1" max="1" chance="0.81179286162947" /> <!-- Apparition Stone (Lv. 93) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="44" />
 			<height normal="51" />
@@ -4646,13 +4646,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
@@ -4676,13 +4676,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="34" />
@@ -4706,12 +4706,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -4735,11 +4735,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -4763,13 +4763,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -4802,7 +4802,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -4810,8 +4810,8 @@
 			<skill id="16236" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.0000000000001" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37956" min="1" max="1" chance="3.703" /> <!-- Requiem Thrower Crafting Pack -->
@@ -4860,10 +4860,10 @@
 				<item id="17683" min="3" max="3" chance="3.0921604180071" /> <!-- Lv. 4 Giant WIT Dye WIT + 5 / MEN - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6143183014564" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
@@ -4896,15 +4896,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16237" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.1800000000002" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37954" min="1" max="1" chance="3.69699999999998" /> <!-- Requiem Fighter Crafting Pack -->
@@ -4953,10 +4953,10 @@
 				<item id="17684" min="3" max="3" chance="3.1437181809402" /> <!-- Lv. 4 Giant MEN Dye MEN + 5 / INT - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6302001927622" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="75" />
@@ -4989,15 +4989,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16238" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="11.4600000000002" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37954" min="1" max="1" chance="3.68999999999999" /> <!-- Requiem Fighter Crafting Pack -->
@@ -5046,10 +5046,10 @@
 				<item id="17682" min="3" max="3" chance="3.2576180344258" /> <!-- Lv. 4 Giant INT Dye INT + 5 / WIT - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6266399010883" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="66" />
@@ -5082,15 +5082,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16239" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.5499999999997" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37955" min="1" max="1" chance="3.67699999999999" /> <!-- Requiem Stormer Crafting Pack -->
@@ -5139,10 +5139,10 @@
 				<item id="17683" min="3" max="3" chance="3.1546978332775" /> <!-- Lv. 4 Giant WIT Dye WIT + 5 / MEN - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6161699341023" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="75" />
@@ -5175,15 +5175,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16240" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="11.9999999999999" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37956" min="1" max="1" chance="3.70400000000001" /> <!-- Requiem Thrower Crafting Pack -->
@@ -5232,10 +5232,10 @@
 				<item id="17682" min="3" max="3" chance="3.1456849022922" /> <!-- Lv. 4 Giant INT Dye INT + 5 / WIT - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6287262444511" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="66" />
@@ -5268,7 +5268,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -5276,8 +5276,8 @@
 			<skill id="16241" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="11.4199999999999" /> <!-- Immortal Shield Heavy Armor -->
 				<item id="37950" min="1" max="1" chance="3.693" /> <!-- Requiem Shaper Crafting Pack -->
@@ -5326,10 +5326,10 @@
 				<item id="17681" min="3" max="3" chance="3.112089903084" /> <!-- Lv. 4 Giant CON Dye CON + 5 / STR - 2 -->
 				<item id="38572" min="1" max="1" chance="1.6235972166905" /> <!-- Apparition Stone (Lv. 88) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="38" />
 			<height normal="60" />
@@ -5353,13 +5353,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -5383,13 +5383,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="22" />
@@ -5413,12 +5413,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="43" />
@@ -5442,11 +5442,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="43" />
@@ -5470,13 +5470,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="34.5" />
@@ -5496,9 +5496,9 @@
 			<defence physical="156.58914728682" magical="115.05309417379" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="70" />
@@ -5518,9 +5518,9 @@
 			<defence physical="156.58914728682" magical="115.05309417379" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="94" />
@@ -5545,14 +5545,14 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="68" />
@@ -5572,9 +5572,9 @@
 			<defence physical="156.58914728682" magical="115.05309417379" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="94" />
@@ -5594,9 +5594,9 @@
 			<defence physical="3680.3191489362" magical="2133.5047930793" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="77" />
 			<height normal="120" />
@@ -5620,12 +5620,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="49.5" />
@@ -5649,12 +5649,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="34" />
@@ -5678,12 +5678,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
@@ -5706,12 +5706,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="49" />
@@ -5734,12 +5734,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />
@@ -5762,12 +5762,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
@@ -5791,12 +5791,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="35.6" />

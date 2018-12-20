@@ -28,11 +28,11 @@
 				<walk ground="30" />
 				<run ground="155" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4158" level="7" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -47,16 +47,16 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4613" level="7" /> <!-- NPC Clan Heal -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="400" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
@@ -65,10 +65,10 @@
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="50.5" />
@@ -105,11 +105,11 @@
 				<walk ground="70" />
 				<run ground="195" />
 			</speed>
-			<hit_time>410</hit_time>
+			<hitTime>410</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
@@ -126,16 +126,16 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="400" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="73" max="169" chance="70" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
@@ -145,10 +145,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -184,11 +184,11 @@
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4046" level="7" /> <!-- Sleep -->
 			<skill id="4094" level="7" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="7" /> <!-- Silence -->
@@ -206,16 +206,16 @@
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4657" level="7" /> <!-- Hold -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
 				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
@@ -224,10 +224,10 @@
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="63" />
@@ -259,11 +259,11 @@
 				<walk ground="30" />
 				<run ground="185" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -277,16 +277,16 @@
 			<skill id="4561" level="7" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4563" level="7" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="99" max="229" chance="70" /> <!-- Adena -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
@@ -295,10 +295,10 @@
 				<item id="36522" min="1" max="1" chance="1.434" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -334,11 +334,11 @@
 				<walk ground="36" />
 				<run ground="140" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4089" level="1" /> <!-- NPC Bear Spirit Totem -->
 			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
@@ -353,16 +353,16 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
@@ -373,10 +373,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" grown="18" />
 			<height normal="39" grown="47.5" />
@@ -410,11 +410,11 @@
 				<walk ground="30" />
 				<run ground="165" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4158" level="7" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -429,16 +429,16 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4613" level="7" /> <!-- NPC Clan Heal -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="400" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="104" max="242" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
@@ -448,10 +448,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="50.5" />
@@ -483,11 +483,11 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
@@ -501,16 +501,16 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DIVINE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="114" max="265" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="0.075" /> <!-- Orichalcum -->
@@ -521,10 +521,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
@@ -557,11 +557,11 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4257" level="8" /> <!-- NPC Hydroblast - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -576,16 +576,16 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="400" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="99" max="229" chance="70" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
@@ -595,10 +595,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="32.5" />
@@ -633,11 +633,11 @@
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
@@ -653,16 +653,16 @@
 			<skill id="4599" level="8" /> <!-- Decrease Speed -->
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DIVINE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="116" max="272" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
@@ -675,10 +675,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
@@ -712,11 +712,11 @@
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="8" /> <!-- NPC Burn -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -732,20 +732,20 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4580" level="8" /> <!-- Decrease P. Atk. -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DIVINE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="116" max="272" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
@@ -758,10 +758,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="21310" level="78" type="L2Monster" name="Disciples of Authority">
 		<!-- Confirmed CT2.5 -->
@@ -789,11 +789,11 @@
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
@@ -808,16 +808,16 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4599" level="8" /> <!-- Decrease Speed -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DIVINE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="113" max="262" chance="70" /> <!-- Adena -->
 				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
@@ -830,10 +830,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
@@ -864,11 +864,11 @@
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (5x) -->
@@ -881,20 +881,20 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="600" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DIVINE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="113" max="262" chance="70" /> <!-- Adena -->
 				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
@@ -907,10 +907,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="21312" level="74" type="L2Monster" name="Eye of Ruler">
 		<!-- Confirmed CT2.5 -->
@@ -944,11 +944,11 @@
 				<walk ground="30" />
 				<run ground="160" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
 			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
@@ -966,16 +966,16 @@
 			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="400" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>EYE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
 				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
@@ -985,10 +985,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="63" />
@@ -1020,11 +1020,11 @@
 				<walk ground="30" />
 				<run ground="185" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1036,16 +1036,16 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4579" level="7" /> <!-- Bleed -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="151" max="351" chance="70" /> <!-- Adena -->
 				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
@@ -1055,10 +1055,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -1092,11 +1092,11 @@
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="7" /> <!-- NPC HP Drain -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
@@ -1116,16 +1116,16 @@
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
 			<skill id="4551" level="1" /> <!-- Hot Springs Rheumatism -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
 				<item id="57" min="120" max="280" chance="70" /> <!-- Adena -->
@@ -1145,10 +1145,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -1180,11 +1180,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4072" level="7" /> <!-- Stun -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1202,16 +1202,16 @@
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8679" min="1" max="1" chance="0.003" /> <!-- Sword of Ipos -->
 				<item id="57" min="125" max="292" chance="70" /> <!-- Adena -->
@@ -1231,10 +1231,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
@@ -1267,11 +1267,11 @@
 				<walk ground="30" />
 				<run ground="165" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1292,16 +1292,16 @@
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4552" level="1" /> <!-- Hot Springs Cholera -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8680" min="1" max="1" chance="0.003" /> <!-- Barakiel's Axe -->
 				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
@@ -1321,10 +1321,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="34" />
@@ -1358,11 +1358,11 @@
 				<walk ground="105" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="7" /> <!-- NPC HP Drain -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
@@ -1382,16 +1382,16 @@
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
 			<skill id="4553" level="1" /> <!-- Hot Springs Flu -->
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8681" min="1" max="1" chance="0.003" /> <!-- Behemoth' Tuning Fork -->
 				<item id="57" min="124" max="288" chance="70" /> <!-- Adena -->
@@ -1411,10 +1411,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" grown="50" />
 			<height normal="39" grown="46" />
@@ -1446,11 +1446,11 @@
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="7" /> <!-- NPC Burn -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="7" /> <!-- Stun -->
@@ -1468,16 +1468,16 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8682" min="1" max="1" chance="0.003" /> <!-- Naga Storm -->
 				<item id="57" min="130" max="301" chance="70" /> <!-- Adena -->
@@ -1497,10 +1497,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
@@ -1534,11 +1534,11 @@
 				<walk ground="48" />
 				<run ground="170" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
@@ -1560,16 +1560,16 @@
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 			<skill id="4552" level="1" /> <!-- Hot Springs Cholera -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8683" min="1" max="1" chance="0.003" /> <!-- Tiphon's Spear -->
 				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
@@ -1589,10 +1589,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="43.5" />
@@ -1624,11 +1624,11 @@
 				<walk ground="16" />
 				<run ground="170" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1646,16 +1646,16 @@
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8685" min="1" max="1" chance="0.003" /> <!-- Sobekk's Hurricane -->
 				<item id="57" min="133" max="309" chance="70" /> <!-- Adena -->
@@ -1675,10 +1675,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="32" />
@@ -1707,11 +1707,11 @@
 				<walk ground="105" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
@@ -1731,15 +1731,15 @@
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
 			<skill id="4551" level="1" /> <!-- Hot Springs Rheumatism -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8686" min="1" max="1" chance="0.003" /> <!-- Themis' Tongue -->
 				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
@@ -1760,10 +1760,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" grown="50" />
 			<height normal="39" grown="46" />
@@ -1792,11 +1792,11 @@
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
@@ -1816,15 +1816,15 @@
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
 			<skill id="4553" level="1" /> <!-- Hot Springs Flu -->
 			<skill id="4554" level="1" /> <!-- Hot Spring Malaria -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8687" min="1" max="1" chance="0.003" /> <!-- Cabrio's Hand -->
 				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
@@ -1845,10 +1845,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -1875,11 +1875,11 @@
 				<walk ground="36" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="8" /> <!-- NPC Burn -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1897,15 +1897,15 @@
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4555" level="1" /> <!-- NPC Resist Mutant -->
 			<skill id="4789" level="4" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8688" min="1" max="1" chance="0.003" /> <!-- Daimon Crystal -->
 				<item id="57" min="114" max="266" chance="70" /> <!-- Adena -->
@@ -1926,10 +1926,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" grown="18" />
 			<height normal="39" grown="47.5" />
@@ -1965,11 +1965,11 @@
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -1983,16 +1983,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6364" min="1" max="1" chance="0.0009" /> <!-- Forgotten Blade -->
 				<item id="57" min="92" max="214" chance="70" /> <!-- Adena -->
@@ -2013,10 +2013,10 @@
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -2047,11 +2047,11 @@
 				<walk ground="30" />
 				<run ground="185" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2063,15 +2063,15 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6726" min="1" max="1" chance="0.0075" /> <!-- Sealed Tateossian Necklace -->
 				<item id="57" min="87" max="204" chance="70" /> <!-- Adena -->
@@ -2093,10 +2093,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -2126,11 +2126,11 @@
 				<walk ground="23" />
 				<run ground="190" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2142,15 +2142,15 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6725" min="1" max="1" chance="0.03" /> <!-- Sealed Tateossian Ring -->
 				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
@@ -2172,10 +2172,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="26.4" />
@@ -2213,11 +2213,11 @@
 				<walk ground="36" />
 				<run ground="175" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -2234,16 +2234,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6678" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Shield -->
 				<item id="10121" min="1" max="1" chance="0.0075" /> <!-- Sealed Arcana Sigil -->
@@ -2267,10 +2267,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />
@@ -2304,11 +2304,11 @@
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<hit_time>910</hit_time>
+			<hitTime>910</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2320,16 +2320,16 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="7575" min="1" max="1" chance="0.0009" /> <!-- Draconic Bow -->
 				<item id="57" min="92" max="213" chance="70" /> <!-- Adena -->
@@ -2349,10 +2349,10 @@
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -2392,11 +2392,11 @@
 				<walk ground="10" />
 				<run ground="150" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4035" level="8" /> <!-- Poison -->
@@ -2412,17 +2412,17 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.0009" /> <!-- Sealed Draconic Leather Armor -->
@@ -2447,10 +2447,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -2480,11 +2480,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2496,15 +2496,15 @@
 			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -2526,10 +2526,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
@@ -2565,11 +2565,11 @@
 				<walk ground="36" />
 				<run ground="175" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="9" /> <!-- NPC Flamestrike -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -2583,16 +2583,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4596" level="9" /> <!-- Bleed -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6679" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Helmet -->
 				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
@@ -2613,10 +2613,10 @@
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />
@@ -2654,11 +2654,11 @@
 				<walk ground="24" />
 				<run ground="175" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -2675,16 +2675,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
 				<item id="57" min="92" max="214" chance="70" /> <!-- Adena -->
@@ -2706,10 +2706,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="16" />
 			<height normal="38.5" grown="46.2" />
@@ -2739,11 +2739,11 @@
 				<walk ground="35" />
 				<run ground="170" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="9" /> <!-- NPC Mortal Blow -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2755,15 +2755,15 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36528" min="1" max="1" chance="1.125" /> <!-- Metallic Fiber -->
@@ -2785,10 +2785,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="27" />
@@ -2829,11 +2829,11 @@
 				<walk ground="10" />
 				<run ground="150" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -2850,17 +2850,17 @@
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6681" min="1" max="1" chance="0.03" /> <!-- Sealed Draconic Leather Gloves -->
 				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
@@ -2880,10 +2880,10 @@
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -2919,11 +2919,11 @@
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2937,16 +2937,16 @@
 			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6676" min="1" max="1" chance="0.03" /> <!-- Sealed Imperial Crusader Gauntlets -->
 				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
@@ -2969,10 +2969,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -3010,11 +3010,11 @@
 				<walk ground="33" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -3031,16 +3031,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="95" max="222" chance="70" /> <!-- Adena -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
@@ -3062,10 +3062,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="28.8" />
@@ -3095,11 +3095,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3111,15 +3111,15 @@
 			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -3138,10 +3138,10 @@
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
@@ -3181,11 +3181,11 @@
 				<walk ground="10" />
 				<run ground="160" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -3201,17 +3201,17 @@
 			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6680" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Robe -->
@@ -3235,10 +3235,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -3276,11 +3276,11 @@
 				<walk ground="24" />
 				<run ground="175" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -3297,16 +3297,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
 				<item id="57" min="90" max="210" chance="70" /> <!-- Adena -->
@@ -3326,10 +3326,10 @@
 				<item id="36522" min="1" max="1" chance="2.115" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="46.2" />
@@ -3367,11 +3367,11 @@
 				<walk ground="27" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -3388,16 +3388,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="60" spiritChance="60" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6678" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Shield -->
 				<item id="6370" min="1" max="1" chance="0.0009" /> <!-- Saint Spear -->
@@ -3420,10 +3420,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -3453,11 +3453,11 @@
 				<walk ground="23" />
 				<run ground="190" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
@@ -3469,15 +3469,15 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
@@ -3497,10 +3497,10 @@
 				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="26.4" />
@@ -3541,11 +3541,11 @@
 				<walk ground="10" />
 				<run ground="160" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -3562,17 +3562,17 @@
 			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6680" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Robe -->
@@ -3597,10 +3597,10 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -3639,11 +3639,11 @@
 				<walk ground="27" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -3659,16 +3659,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6678" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Shield -->
 				<item id="6367" min="1" max="1" chance="0.0009" /> <!-- Angel Slayer -->
@@ -3678,10 +3678,10 @@
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -3715,11 +3715,11 @@
 				<walk ground="33" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -3731,16 +3731,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="82" max="190" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -3751,10 +3751,10 @@
 				<item id="36522" min="1" max="1" chance="1.987" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
@@ -3793,11 +3793,11 @@
 				<walk ground="10" />
 				<run ground="175" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4100" level="9" /> <!-- NPC Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3809,17 +3809,17 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.0009" /> <!-- Sealed Draconic Leather Armor -->
@@ -3832,10 +3832,10 @@
 				<item id="36517" min="1" max="1" chance="5.047" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -3869,11 +3869,11 @@
 				<walk ground="24" />
 				<run ground="175" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
@@ -3885,16 +3885,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
 				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
@@ -3904,10 +3904,10 @@
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="16" />
 			<height normal="38.5" grown="46.2" />
@@ -3951,11 +3951,11 @@
 				<walk ground="10" />
 				<run ground="175" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -3971,17 +3971,17 @@
 			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6680" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Robe -->
@@ -3995,10 +3995,10 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -4032,11 +4032,11 @@
 				<walk ground="24" />
 				<run ground="180" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4048,16 +4048,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
 				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
@@ -4067,10 +4067,10 @@
 				<item id="36517" min="1" max="1" chance="5.38" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="1.039" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="16" />
 			<height normal="38.5" grown="46.2" />
@@ -4107,11 +4107,11 @@
 				<walk ground="10" />
 				<run ground="180" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4100" level="9" /> <!-- NPC Prominence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -4124,17 +4124,17 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.0009" /> <!-- Sealed Draconic Leather Armor -->
@@ -4148,10 +4148,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -4188,11 +4188,11 @@
 				<walk ground="44" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
@@ -4207,16 +4207,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="9529" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Shield -->
 				<item id="10120" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Sigil -->
@@ -4240,10 +4240,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
@@ -4278,11 +4278,11 @@
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -4295,16 +4295,16 @@
 			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6683" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6724" min="1" max="1" chance="0.003" /> <!-- Sealed Tateossian Earring -->
@@ -4329,10 +4329,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
@@ -4364,11 +4364,11 @@
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="8" /> <!-- NPC Mortal Blow -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4381,14 +4381,14 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
@@ -4410,10 +4410,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
@@ -4451,11 +4451,11 @@
 				<walk ground="44" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -4473,16 +4473,16 @@
 			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6683" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6724" min="1" max="1" chance="0.003" /> <!-- Sealed Tateossian Earring -->
@@ -4506,10 +4506,10 @@
 				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
@@ -4544,11 +4544,11 @@
 				<walk ground="30" />
 				<run ground="175" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4561,16 +4561,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6685" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Gloves -->
 				<item id="9527" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Gloves -->
@@ -4595,10 +4595,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="37.5" />
@@ -4637,11 +4637,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4098" level="8" /> <!-- Silence -->
@@ -4658,17 +4658,17 @@
 			<skill id="4563" level="8" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6687" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Circlet -->
 				<item id="9526" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Circlet -->
@@ -4693,10 +4693,10 @@
 				<item id="36517" min="1" max="1" chance="5.454" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="1.094" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
@@ -4728,11 +4728,11 @@
 				<walk ground="48" />
 				<run ground="150" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4747,14 +4747,14 @@
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
@@ -4776,10 +4776,10 @@
 				<item id="36517" min="1" max="1" chance="3.002" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="43.5" />
@@ -4816,11 +4816,11 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4835,16 +4835,16 @@
 			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5312" min="1" max="1" chance="0.003" /> <!-- Sealed Helm of Nightmare -->
 				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
@@ -4874,10 +4874,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="41.5" />
@@ -4915,11 +4915,11 @@
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -4937,16 +4937,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="9517" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Gauntlets -->
 				<item id="9442" min="1" max="1" chance="0.0009" /> <!-- Dynasty Sword -->
@@ -4967,10 +4967,10 @@
 				<item id="36522" min="1" max="1" chance="2.306" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
@@ -5002,11 +5002,11 @@
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -5019,14 +5019,14 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
 				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
@@ -5051,10 +5051,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -5094,11 +5094,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="9" /> <!-- NPC Burn -->
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
@@ -5116,17 +5116,17 @@
 			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="9453" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Necklace -->
 				<item id="57" min="128" max="298" chance="70" /> <!-- Adena -->
@@ -5148,10 +5148,10 @@
 				<item id="36557" min="1" max="1" chance="1.189" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
@@ -5188,11 +5188,11 @@
 				<walk ground="36" />
 				<run ground="175" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -5207,16 +5207,16 @@
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
@@ -5244,10 +5244,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="11" />
 			<height normal="55.2" />
@@ -5285,11 +5285,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -5307,16 +5307,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5326" min="1" max="1" chance="0.003" /> <!-- Sealed Robe of Nightmare -->
 				<item id="5329" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Robe -->
@@ -5343,10 +5343,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="42.5" />
@@ -5378,11 +5378,11 @@
 				<walk ground="30" />
 				<run ground="165" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -5397,15 +5397,15 @@
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
 				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
@@ -5438,10 +5438,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="34" />
@@ -5480,11 +5480,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
@@ -5501,16 +5501,16 @@
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5312" min="1" max="1" chance="0.003" /> <!-- Sealed Helm of Nightmare -->
 				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
@@ -5540,10 +5540,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
@@ -5581,11 +5581,11 @@
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -5604,16 +5604,16 @@
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4033" level="1" /> <!-- Aura Burn -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5320" min="1" max="1" chance="0.003" /> <!-- Sealed Leather Armor of Nightmare -->
 				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
@@ -5641,10 +5641,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="49.2" />
@@ -5682,11 +5682,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
@@ -5704,16 +5704,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="60" spiritChance="60" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5311" min="1" max="1" chance="0.0009" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5316" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Plate Armor -->
@@ -5741,10 +5741,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="42.5" />
@@ -5776,11 +5776,11 @@
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
@@ -5793,14 +5793,14 @@
 			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="289" min="1" max="1" chance="0.0009" /> <!-- Soul Bow -->
 				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
@@ -5826,10 +5826,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
@@ -5869,11 +5869,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="9" /> <!-- NPC Burn -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
@@ -5891,17 +5891,17 @@
 			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="236" min="1" max="1" chance="0.003" /> <!-- Soul Separator -->
 				<item id="57" min="123" max="287" chance="70" /> <!-- Adena -->
@@ -5929,10 +5929,10 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
@@ -5972,11 +5972,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -5993,14 +5993,14 @@
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" />
@@ -6035,11 +6035,11 @@
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -6052,14 +6052,14 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" />
@@ -6098,11 +6098,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -6115,15 +6115,15 @@
 			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -6158,11 +6158,11 @@
 				<walk ground="44" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
@@ -6175,15 +6175,15 @@
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5326" min="1" max="1" chance="0.0009" /> <!-- Sealed Robe of Nightmare -->
 				<item id="5329" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Robe -->
@@ -6203,10 +6203,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
@@ -6248,11 +6248,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -6268,15 +6268,15 @@
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="10" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -6311,11 +6311,11 @@
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -6328,15 +6328,15 @@
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="305" min="1" max="1" chance="0.0009" /> <!-- Tallum Glaive -->
 				<item id="57" min="44" max="102" chance="70" /> <!-- Adena -->
@@ -6354,10 +6354,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
@@ -6392,11 +6392,11 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4066" level="9" /> <!-- NPC Twister -->
 			<skill id="4098" level="9" /> <!-- Silence -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -6410,15 +6410,15 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="9" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5320" min="1" max="1" chance="0.0009" /> <!-- Sealed Leather Armor of Nightmare -->
 				<item id="5323" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Leather Armor -->
@@ -6436,10 +6436,10 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="41.5" />
@@ -6472,11 +6472,11 @@
 				<walk ground="38" />
 				<run ground="150" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4229" level="9" /> <!-- NPC Double Wind Fist -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -6490,20 +6490,20 @@
 			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
 			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>FIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="292" max="679" chance="70" /> <!-- Adena -->
 				<item id="1808" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (S-grade) -->
@@ -6515,10 +6515,10 @@
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="21395" level="78" type="L2Monster" name="Elder Lavasaurus">
 		<!-- Confirmed CT2.5 -->
@@ -6540,11 +6540,11 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4389" level="4" /> <!-- Resist Mental Attacks -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
@@ -6560,14 +6560,14 @@
 			<skill id="4789" level="8" /> <!-- NPC High Level -->
 			<skill id="4009" level="3" /> <!-- Fire Resistance -->
 			<skill id="4280" level="1" /> <!-- Water Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>6</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>FIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />

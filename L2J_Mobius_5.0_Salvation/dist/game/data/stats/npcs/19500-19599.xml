@@ -94,12 +94,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
@@ -123,7 +123,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
@@ -131,21 +131,21 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="30.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="39503" max="92199" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
 				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="19543" level="99" type="L2Npc" name="Invisible Kekropus NPC">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -180,9 +180,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" targetable="false" talkable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -202,9 +202,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -224,11 +224,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
@@ -248,9 +248,9 @@
 			<defence physical="50.537634408602" magical="36.627161656594" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
@@ -365,11 +365,11 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="40046" min="1" max="1" chance="6.29" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40048" min="1" max="1" chance="6.273" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -380,7 +380,7 @@
 				<item id="40043" min="1" max="1" chance="6.201" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40042" min="1" max="1" chance="6.186" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="16.5" />
@@ -401,11 +401,11 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="40063" min="1" max="2" chance="100" /> <!-- Secret Ancient Tome Fragment -->
 				<item id="40042" min="1" max="1" chance="13.11" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -417,7 +417,7 @@
 				<item id="40045" min="1" max="1" chance="12.18" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40046" min="1" max="1" chance="11.96" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -438,11 +438,11 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="40063" min="2" max="4" chance="100" /> <!-- Secret Ancient Tome Fragment -->
 				<item id="40048" min="1" max="2" chance="12.82" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -454,7 +454,7 @@
 				<item id="40045" min="1" max="2" chance="12.28" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40046" min="1" max="2" chance="11.92" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
@@ -664,9 +664,9 @@
 			<defence physical="324.24242424242" magical="237.22372237224" />
 		</stats>
 		<status attackable="false" randomWalk="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5.5" grown="6.5" />
 			<height normal="28" grown="34.5" />
@@ -686,9 +686,9 @@
 			<defence physical="324.24242424242" magical="237.22372237224" />
 		</stats>
 		<status attackable="false" randomWalk="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="23.5" grown="29" />
@@ -708,9 +708,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="40.5" />
@@ -730,9 +730,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" grown="14.4" />
 			<height normal="43" grown="51.6" />
@@ -752,9 +752,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
@@ -774,9 +774,9 @@
 			<defence physical="36100" magical="26400.364174348" />
 		</stats>
 		<status attackable="false" targetable="false" talkable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="68" />
@@ -796,9 +796,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="37" />
@@ -818,9 +818,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="36.5" />
@@ -844,21 +844,21 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<spoil>
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19575" level="99" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1154,9 +1154,9 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -1175,9 +1175,9 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="24" />
@@ -1196,9 +1196,9 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" /> <!-- Humans -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="24" />

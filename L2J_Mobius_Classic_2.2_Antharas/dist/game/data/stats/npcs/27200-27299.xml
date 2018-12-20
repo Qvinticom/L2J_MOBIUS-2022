@@ -17,11 +17,11 @@
 				<walk ground="43" />
 				<run ground="130" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -31,12 +31,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
@@ -65,11 +65,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -79,8 +79,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 		</ai>
 		<collision>
@@ -104,11 +104,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -118,12 +118,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -146,11 +146,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -160,12 +160,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -188,11 +188,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -202,12 +202,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -230,11 +230,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -244,12 +244,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -272,11 +272,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -286,12 +286,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -314,11 +314,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -328,12 +328,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ELEMENTAL1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -357,11 +357,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -371,12 +371,12 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GUARD_OF_SECRETS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" grown="9" />
@@ -400,11 +400,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -414,12 +414,12 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GUARD_OF_SECRETS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" grown="9" />
@@ -443,11 +443,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -457,12 +457,12 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GUARD_OF_SECRETS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" grown="9" />
@@ -486,11 +486,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -500,8 +500,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -525,11 +525,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -539,8 +539,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -564,11 +564,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -578,8 +578,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -603,11 +603,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -617,8 +617,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -642,11 +642,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -656,8 +656,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -681,11 +681,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -695,8 +695,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -720,11 +720,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -734,8 +734,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -759,11 +759,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -773,8 +773,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -798,11 +798,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -812,8 +812,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -837,11 +837,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -851,8 +851,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -876,11 +876,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -890,8 +890,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -915,11 +915,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -929,8 +929,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -954,11 +954,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -968,8 +968,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -993,11 +993,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1007,8 +1007,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1032,11 +1032,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1046,8 +1046,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1071,11 +1071,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1085,8 +1085,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1110,11 +1110,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1124,8 +1124,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1149,11 +1149,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1163,8 +1163,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1188,11 +1188,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1202,8 +1202,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1227,11 +1227,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1241,8 +1241,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1266,11 +1266,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1280,8 +1280,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1305,11 +1305,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1319,8 +1319,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1344,11 +1344,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1358,8 +1358,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1383,11 +1383,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1397,8 +1397,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1422,11 +1422,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1436,8 +1436,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1461,11 +1461,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1475,8 +1475,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1500,11 +1500,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1514,8 +1514,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1539,11 +1539,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1553,8 +1553,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1578,11 +1578,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1592,8 +1592,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1617,11 +1617,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1631,8 +1631,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1656,11 +1656,11 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1670,8 +1670,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1698,11 +1698,11 @@
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1716,9 +1716,9 @@
 			<skill id="4526" level="1" /> <!-- Quest - BOSS Summon -->
 			<skill id="4527" level="1" /> <!-- Quest - BOSS Inc HP to Summoned -->
 			<skill id="4528" level="1" /> <!-- Quest - BOSS Movement to Summoned -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="25" grown="30" />
@@ -1745,11 +1745,11 @@
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1763,9 +1763,9 @@
 			<skill id="4526" level="1" /> <!-- Quest - BOSS Summon -->
 			<skill id="4527" level="1" /> <!-- Quest - BOSS Inc HP to Summoned -->
 			<skill id="4528" level="1" /> <!-- Quest - BOSS Movement to Summoned -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="25" grown="30" />
@@ -1792,11 +1792,11 @@
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1810,9 +1810,9 @@
 			<skill id="4526" level="1" /> <!-- Quest - BOSS Summon -->
 			<skill id="4527" level="1" /> <!-- Quest - BOSS Inc HP to Summoned -->
 			<skill id="4528" level="1" /> <!-- Quest - BOSS Movement to Summoned -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="25" grown="30" />
@@ -1838,11 +1838,11 @@
 				<walk ground="25" />
 				<run ground="170" />
 			</speed>
-			<hit_time>100</hit_time>
+			<hitTime>100</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1855,9 +1855,9 @@
 			<skill id="4529" level="1" /> <!-- Quest - Summoned Explosion -->
 			<skill id="4530" level="1" /> <!-- Quest - Summoned HP Heal -->
 			<skill id="4531" level="1" /> <!-- Quest - Summoned MP Heal -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -1880,11 +1880,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1894,9 +1894,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="17" />
@@ -1919,11 +1919,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1933,9 +1933,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="17" />
@@ -1958,11 +1958,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1972,9 +1972,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="17" />
@@ -2002,11 +2002,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2020,8 +2020,8 @@
 			<skill id="4526" level="1" /> <!-- Quest - BOSS Summon -->
 			<skill id="4527" level="1" /> <!-- Quest - BOSS Inc HP to Summoned -->
 			<skill id="4528" level="1" /> <!-- Quest - BOSS Movement to Summoned -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" grown="13" />
@@ -2050,11 +2050,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2069,8 +2069,8 @@
 			<skill id="4517" level="1" /> <!-- Quest - BOSS Defend -->
 			<skill id="4518" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" grown="13" />
@@ -2097,11 +2097,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2111,8 +2111,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" grown="13" />
@@ -2139,11 +2139,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2153,8 +2153,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" grown="13" />
@@ -2177,11 +2177,11 @@
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
-			<hit_time>100</hit_time>
+			<hitTime>100</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2192,8 +2192,8 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4542" level="1" /> <!-- Quest - Henchman 90% Sleep & Stun Weakness -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -2217,11 +2217,11 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2231,9 +2231,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -2257,11 +2257,11 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2271,9 +2271,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -2297,11 +2297,11 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2311,9 +2311,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -2337,11 +2337,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2351,9 +2351,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -2379,11 +2379,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2393,9 +2393,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="20" />
@@ -2421,11 +2421,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2435,9 +2435,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="20" />
@@ -2460,11 +2460,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2475,8 +2475,8 @@
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4542" level="1" /> <!-- Quest - Henchman 90% Sleep & Stun Weakness -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="14" />
@@ -2503,11 +2503,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2520,8 +2520,8 @@
 			<skill id="4539" level="1" /> <!-- Curse of Vague -->
 			<skill id="4540" level="1" /> <!-- Curse of Weakness -->
 			<skill id="4541" level="1" /> <!-- Curse of Nihil -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
@@ -2548,11 +2548,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2565,8 +2565,8 @@
 			<skill id="4539" level="1" /> <!-- Curse of Vague -->
 			<skill id="4540" level="1" /> <!-- Curse of Weakness -->
 			<skill id="4541" level="1" /> <!-- Curse of Nihil -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
@@ -2594,11 +2594,11 @@
 				<walk ground="13" />
 				<run ground="180" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2613,8 +2613,8 @@
 			<skill id="4517" level="1" /> <!-- Quest - BOSS Defend -->
 			<skill id="4518" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="38" />
@@ -2641,11 +2641,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2658,8 +2658,8 @@
 			<skill id="4533" level="1" /> <!-- Dance of Resistance -->
 			<skill id="4534" level="1" /> <!-- Dance of Nihil -->
 			<skill id="4535" level="1" /> <!-- Dance of Weakness -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
@@ -2683,11 +2683,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2697,9 +2697,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -2723,11 +2723,11 @@
 				<walk ground="43" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2737,9 +2737,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="23" />
@@ -2763,11 +2763,11 @@
 				<walk ground="43" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2777,9 +2777,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="23" />
@@ -2803,11 +2803,11 @@
 				<walk ground="43" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2817,9 +2817,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="23" />
@@ -2843,11 +2843,11 @@
 				<walk ground="43" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2857,9 +2857,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="23" />
@@ -2883,11 +2883,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2897,9 +2897,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -2922,11 +2922,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2936,9 +2936,9 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="20" />
@@ -2961,11 +2961,11 @@
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2975,9 +2975,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="25" grown="30" />
@@ -3000,11 +3000,11 @@
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3014,9 +3014,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="25" grown="30" />
@@ -3040,11 +3040,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3054,9 +3054,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="15" />
@@ -3079,11 +3079,11 @@
 				<walk ground="78" />
 				<run ground="180" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3093,9 +3093,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="45" />
@@ -3118,11 +3118,11 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3132,9 +3132,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -3158,11 +3158,11 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3172,9 +3172,9 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>9</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>9</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="17" />
@@ -3206,7 +3206,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3221,8 +3221,8 @@
 			<skill id="4517" level="1" /> <!-- Quest - BOSS Defend -->
 			<skill id="4518" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="8" />
@@ -3254,7 +3254,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3269,8 +3269,8 @@
 			<skill id="4517" level="1" /> <!-- Quest - BOSS Defend -->
 			<skill id="4518" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="8" />
@@ -3300,7 +3300,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3313,8 +3313,8 @@
 			<skill id="4536" level="1" /> <!-- Song of Seduce -->
 			<skill id="4537" level="1" /> <!-- Song of Sweet Whisper -->
 			<skill id="4538" level="1" /> <!-- Song of Temptation -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="8" />
@@ -3344,11 +3344,11 @@
 				<walk ground="56" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="1" level="37" /> <!-- Triple Slash -->
 			<skill id="260" level="37" /> <!-- Hammer Crush -->
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
@@ -3364,8 +3364,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4545" level="1" /> <!-- Quest - BOSS Reflect -->
 			<skill id="4579" level="8" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -3392,11 +3392,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3406,8 +3406,8 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -3431,11 +3431,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3446,8 +3446,8 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4542" level="1" /> <!-- Quest - Henchman 90% Sleep & Stun Weakness -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="8" grown="9" />
@@ -3477,11 +3477,11 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="190" level="37" /> <!-- Fatal Strike -->
 			<skill id="260" level="37" /> <!-- Hammer Crush -->
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
@@ -3497,8 +3497,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4545" level="1" /> <!-- Quest - BOSS Reflect -->
 			<skill id="4579" level="8" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="12" grown="14" />
@@ -3527,11 +3527,11 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="280" level="37" /> <!-- Burning Fist -->
 			<skill id="281" level="37" /> <!-- Soul Breaker -->
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
@@ -3547,8 +3547,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4545" level="1" /> <!-- Quest - BOSS Reflect -->
 			<skill id="4579" level="8" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="12" grown="14" />
@@ -3580,11 +3580,11 @@
 				<walk ground="24" />
 				<run ground="180" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -3600,9 +3600,9 @@
 			<skill id="4544" level="1" /> <!-- Quest - BOSS Weakness -->
 			<skill id="4692" level="1" /> <!-- Quest BOSS Big Body -->
 			<skill id="4693" level="1" /> <!-- Quest BOSS Dispel Big Body -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" grown="16" />
@@ -3634,11 +3634,11 @@
 				<walk ground="24" />
 				<run ground="180" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4073" level="8" /> <!-- Stun -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -3654,9 +3654,9 @@
 			<skill id="4544" level="1" /> <!-- Quest - BOSS Weakness -->
 			<skill id="4692" level="1" /> <!-- Quest BOSS Big Body -->
 			<skill id="4693" level="1" /> <!-- Quest BOSS Dispel Big Body -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" grown="16" />
@@ -3687,11 +3687,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="19" level="37" /> <!-- Double Shot -->
 			<skill id="101" level="40" /> <!-- Stun Shot -->
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
@@ -3709,8 +3709,8 @@
 			<skill id="4520" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4521" level="1" /> <!-- Quest - BOSS Resist non Bow Weapon -->
 			<skill id="4579" level="8" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -3741,11 +3741,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="19" level="37" /> <!-- Double Shot -->
 			<skill id="101" level="40" /> <!-- Stun Shot -->
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
@@ -3763,8 +3763,8 @@
 			<skill id="4520" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4521" level="1" /> <!-- Quest - BOSS Resist non Bow Weapon -->
 			<skill id="4579" level="8" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -3795,11 +3795,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="19" level="37" /> <!-- Double Shot -->
 			<skill id="101" level="40" /> <!-- Stun Shot -->
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
@@ -3817,8 +3817,8 @@
 			<skill id="4520" level="1" /> <!-- Quest - BOSS Rampage -->
 			<skill id="4521" level="1" /> <!-- Quest - BOSS Resist non Bow Weapon -->
 			<skill id="4579" level="8" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -3848,11 +3848,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4072" level="7" /> <!-- Stun -->
 			<skill id="4101" level="8" /> <!-- NPC Spinning Slash -->
@@ -3868,8 +3868,8 @@
 			<skill id="4522" level="1" /> <!-- Eye of Assassin -->
 			<skill id="4523" level="1" /> <!-- Quest - BOSS Evasion -->
 			<skill id="4524" level="1" /> <!-- Quest - BOSS Bluff -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" />

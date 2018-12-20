@@ -287,9 +287,9 @@ public class NpcData implements IGameXmlReader
 												}
 												break;
 											}
-											case "hit_time":
+											case "hitTime":
 											{
-												set.set("hit_time", npc_node.getTextContent()); // TODO: Implement me default 600 (value in ms)
+												set.set("hitTime", npc_node.getTextContent()); // TODO: Implement me default 600 (value in ms)
 												break;
 											}
 										}
@@ -317,7 +317,7 @@ public class NpcData implements IGameXmlReader
 									set.set("fakePlayerTalkable", parseBoolean(attrs, "fakePlayerTalkable"));
 									break;
 								}
-								case "skill_list":
+								case "skillList":
 								{
 									skills = new HashMap<>();
 									for (Node skill_list_node = npc_node.getFirstChild(); skill_list_node != null; skill_list_node = skill_list_node.getNextSibling())
@@ -348,19 +348,19 @@ public class NpcData implements IGameXmlReader
 									set.set("spiritShotChance", parseInteger(attrs, "spiritChance"));
 									break;
 								}
-								case "corpse_time":
+								case "corpseTime":
 								{
 									set.set("corpseTime", npc_node.getTextContent());
 									break;
 								}
-								case "ex_crt_effect":
+								case "exCrtEffect":
 								{
-									set.set("ex_crt_effect", npc_node.getTextContent()); // TODO: Implement me default ? type boolean
+									set.set("exCrtEffect", npc_node.getTextContent()); // TODO: Implement me default ? type boolean
 									break;
 								}
-								case "s_npc_prop_hp_rate":
+								case "sNpcPropHpRate":
 								{
-									set.set("s_npc_prop_hp_rate", npc_node.getTextContent()); // TODO: Implement me default 1 type double
+									set.set("sNpcPropHpRate", npc_node.getTextContent()); // TODO: Implement me default 1 type double
 									break;
 								}
 								case "ai":
@@ -387,7 +387,7 @@ public class NpcData implements IGameXmlReader
 												set.set("longRangeSkillChance", parseInteger(attrs, "longRangeChance"));
 												break;
 											}
-											case "clan_list":
+											case "clanList":
 											{
 												for (Node clan_list_node = ai_node.getFirstChild(); clan_list_node != null; clan_list_node = clan_list_node.getNextSibling())
 												{
@@ -403,7 +403,7 @@ public class NpcData implements IGameXmlReader
 															clans.add(getOrCreateClanId(clan_list_node.getTextContent()));
 															break;
 														}
-														case "ignore_npc_id":
+														case "ignoreNpcId":
 														{
 															if (ignoreClanNpcIds == null)
 															{
@@ -420,7 +420,7 @@ public class NpcData implements IGameXmlReader
 									}
 									break;
 								}
-								case "drop_lists":
+								case "dropLists":
 								{
 									for (Node drop_lists_node = npc_node.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling())
 									{
@@ -461,14 +461,14 @@ public class NpcData implements IGameXmlReader
 									}
 									break;
 								}
-								case "extend_drop":
+								case "extendDrop":
 								{
 									final List<Integer> extendDrop = new ArrayList<>();
 									forEach(npc_node, "id", idNode ->
 									{
 										extendDrop.add(Integer.parseInt(idNode.getTextContent()));
 									});
-									set.set("extend_drop", extendDrop);
+									set.set("extendDrop", extendDrop);
 									break;
 								}
 								case "collision":
@@ -629,7 +629,7 @@ public class NpcData implements IGameXmlReader
 								switch (dropHolder.getDropType())
 								{
 									case DROP:
-									case LUCKY_DROP: // Lucky drops are added to normal drops and calculated later
+									case LUCKY: // Lucky drops are added to normal drops and calculated later
 									{
 										template.addDrop(dropHolder);
 										break;

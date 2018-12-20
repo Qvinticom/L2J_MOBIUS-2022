@@ -168,7 +168,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_passableDoor = set.getBoolean("passableDoor", false);
 		_hasSummoner = set.getBoolean("hasSummoner", false);
 		_canBeSown = set.getBoolean("canBeSown", false);
-		_canBeCrt = set.getBoolean("ex_crt_effect", true);
+		_canBeCrt = set.getBoolean("exCrtEffect", true);
 		_isDeathPenalty = set.getBoolean("isDeathPenalty", false);
 		
 		_corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
@@ -188,8 +188,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_minSkillChance = set.getInt("minSkillChance", 7);
 		_maxSkillChance = set.getInt("maxSkillChance", 15);
 		
-		_hitTimeFactor = set.getInt("hit_time", 100) / 100d;
-		_hitTimeFactorSkill = set.getInt("hit_time_skill", 100) / 100d;
+		_hitTimeFactor = set.getInt("hitTime", 100) / 100d;
+		_hitTimeFactorSkill = set.getInt("hitTimeSkill", 100) / 100d;
 		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
@@ -199,7 +199,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_mpRewardTicks = set.getInt("mpRewardTicks", 0);
 		_mpRewardAffectType = set.getEnum("mpRewardAffectType", MpRewardAffectType.class, MpRewardAffectType.SOLO);
 		
-		_extendDrop = set.getList("extend_drop", Integer.class);
+		_extendDrop = set.getList("extendDrop", Integer.class);
 		
 		if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
 		{
@@ -682,7 +682,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		switch (dropType)
 		{
 			case DROP:
-			case LUCKY_DROP: // never happens
+			case LUCKY: // never happens
 			{
 				return _dropListDeath;
 			}
@@ -866,7 +866,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 				}
 				break;
 			}
-			case LUCKY_DROP:
+			case LUCKY:
 			{
 				// try chance before luck
 				if (((Rnd.nextDouble() * 100) < dropItem.getChance()) && (killer.getActingPlayer() != null) && killer.getActingPlayer().tryLuck())

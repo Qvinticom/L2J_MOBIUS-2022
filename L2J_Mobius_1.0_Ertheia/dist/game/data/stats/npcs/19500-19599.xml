@@ -75,11 +75,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1932" max="4501" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
@@ -89,10 +89,10 @@
 				<item id="40050" min="1" max="1" chance="1.092" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
@@ -117,11 +117,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="7209" max="16790" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Demonic Tome -->
@@ -132,10 +132,10 @@
 				<item id="40050" min="1" max="1" chance="4.181" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="60" />
@@ -160,11 +160,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="7209" max="16790" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Demonic Tome -->
@@ -175,10 +175,10 @@
 				<item id="40050" min="1" max="1" chance="4.181" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="60" />
@@ -203,10 +203,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="21" />
@@ -231,11 +231,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="46" />
@@ -260,10 +260,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="46" />
@@ -288,11 +288,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="34" />
@@ -317,10 +317,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="52" />
@@ -345,11 +345,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4287" level="2" /> <!-- Hold Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="52" />
@@ -374,14 +374,14 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="7209" max="16790" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Demonic Tome -->
@@ -392,10 +392,10 @@
 				<item id="40050" min="1" max="1" chance="4.181" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
@@ -420,12 +420,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="38746" max="90257" chance="50" /> <!-- Adena -->
 				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shooter -->
@@ -438,10 +438,10 @@
 				<item id="40050" min="1" max="1" chance="21.74" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="2.199" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
@@ -466,11 +466,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="31002" max="72216" chance="50" /> <!-- Adena -->
 				<item id="37786" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
@@ -483,10 +483,10 @@
 				<item id="40050" min="1" max="1" chance="18.55" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="1.79" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.5985" />
@@ -510,10 +510,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
@@ -538,12 +538,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="38746" max="90257" chance="50" /> <!-- Adena -->
 				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shooter -->
@@ -556,10 +556,10 @@
 				<item id="40050" min="1" max="1" chance="23.11" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="2.229" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
@@ -584,11 +584,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="31002" max="72216" chance="50" /> <!-- Adena -->
 				<item id="37786" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
@@ -601,10 +601,10 @@
 				<item id="40050" min="1" max="1" chance="17.15" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="1.754" /> <!-- Scroll: 100,000 SP -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.5985" />
@@ -666,11 +666,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
@@ -694,14 +694,14 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="30.5" />
@@ -740,9 +740,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" targetable="false" talkable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -762,9 +762,9 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -784,11 +784,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
@@ -808,9 +808,9 @@
 			<defence physical="50.537634408602" magical="36.627161656594" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
@@ -925,11 +925,11 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="40043" min="1" max="1" chance="4.16849999999983" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40042" min="1" max="1" chance="4.15350000000001" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -940,7 +940,7 @@
 				<item id="40047" min="1" max="1" chance="4.09450000000016" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40048" min="1" max="1" chance="4.06699999999994" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="16.5" />
@@ -961,11 +961,11 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="40063" min="1" max="4" chance="49.18" /> <!-- Secret Ancient Tome Fragment -->
 				<item id="40043" min="1" max="1" chance="13.003372346757" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -977,7 +977,7 @@
 				<item id="40048" min="1" max="1" chance="12.219797659195" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40044" min="1" max="1" chance="11.932156318191" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -998,11 +998,11 @@
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="40063" min="4" max="8" chance="48.78" /> <!-- Secret Ancient Tome Fragment -->
 				<item id="40045" min="1" max="2" chance="12.8899999999999" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -1014,7 +1014,7 @@
 				<item id="40043" min="1" max="2" chance="12.1300000000005" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40041" min="1" max="2" chance="11.9300000000002" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
@@ -1224,9 +1224,9 @@
 			<defence physical="324.24242424242" magical="237.22372237224" />
 		</stats>
 		<status attackable="false" randomWalk="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5.5" grown="6.5" />
 			<height normal="28" grown="34.5" />
@@ -1246,9 +1246,9 @@
 			<defence physical="324.24242424242" magical="237.22372237224" />
 		</stats>
 		<status attackable="false" randomWalk="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="23.5" grown="29" />
@@ -1268,9 +1268,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="40.5" />
@@ -1290,9 +1290,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" grown="14.4" />
 			<height normal="43" grown="51.6" />
@@ -1312,9 +1312,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
@@ -1334,9 +1334,9 @@
 			<defence physical="36100" magical="26400.364174348" />
 		</stats>
 		<status attackable="false" targetable="false" talkable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="68" />
@@ -1356,9 +1356,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="37" />
@@ -1378,9 +1378,9 @@
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="36.5" />
@@ -1404,12 +1404,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />

@@ -27,24 +27,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="17.5" />
 			<height normal="52.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23201" level="95" type="L2Monster" name="Nagdu the Deformed Merman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -73,24 +73,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23202" level="96" type="L2Monster" name="Hakal the Butchered">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -118,24 +118,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="27" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23203" level="95" type="L2Monster" name="Centa the Standing Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -164,24 +164,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="40" />
 			<height normal="45" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23204" level="95" type="L2Monster" name="Adidaiu of the Killer Fangs">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -210,24 +210,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
 			<height normal="32.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23205" level="97" type="L2Monster" name="Haskal the Floating Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -256,24 +256,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="50" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23206" level="97" type="L2Monster" name="Samita the Ex-Torture Expert">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -302,24 +302,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="46" />
 			<height normal="71.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23207" level="96" type="L2Monster" name="Gazem" title="Fortress Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -349,24 +349,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="9" /> <!-- Bows -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23208" level="96" type="L2Monster" name="Rosenia's Divine Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -394,24 +394,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="24" />
 			<height normal="38" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23209" level="97" type="L2Monster" name="Kelbara the Dualsword Slaughterer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -440,24 +440,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23210" level="95" type="L2Monster" name="Mandragora of Joy and Sorrow">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -481,25 +481,25 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="14" />
 			<height normal="17.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23211" level="95" type="L2Monster" name="Mandragora of Prayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -523,25 +523,25 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="26" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23212" level="97" type="L2Monster" name="Scaldisect the Furious">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -569,25 +569,25 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23213" level="97" type="L2Monster" name="Beggar Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -616,30 +616,30 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23214" level="97" type="L2Monster" name="Beggar Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -668,30 +668,30 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" grown="1.2" />
 			<height normal="36" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23215" level="98" type="L2Monster" name="Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -720,7 +720,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
@@ -730,23 +730,23 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23216" level="98" type="L2Monster" name="Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -775,7 +775,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
@@ -784,23 +784,23 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" grown="1.2" />
 			<height normal="37" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23217" level="97" type="L2Monster" name="Young Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -826,7 +826,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
@@ -834,23 +834,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23218" level="97" type="L2Monster" name="Young Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -876,7 +876,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
@@ -884,23 +884,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" grown="1.2" />
 			<height normal="36" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23219" level="98" type="L2Monster" name="Engineer Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -930,7 +930,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="13" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
@@ -940,23 +940,23 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23220" level="99" type="L2Monster" name="Kunda Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -985,7 +985,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
@@ -995,23 +995,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="46" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23221" level="98" type="L2Monster" name="Adac the Engineer" title="Chief Engineer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1043,7 +1043,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1053,19 +1053,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23222" level="98" type="L2Monster" name="Borok the Engineer" title="Chief Engineer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1097,7 +1097,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1107,19 +1107,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23223" level="98" type="L2Monster" name="Koja the Engineer" title="Chief Engineer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1151,7 +1151,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1161,19 +1161,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23224" level="99" type="L2Monster" name="Kunda Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1203,7 +1203,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1213,19 +1213,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="46" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23225" level="99" type="L2Monster" name="Kunda Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1254,7 +1254,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1264,19 +1264,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="46" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23226" level="99" type="L2Monster" name="Kunda Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1305,7 +1305,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1315,19 +1315,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="12" /> <!-- Spear -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="46" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23227" level="97" type="L2Monster" name="Beggar Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1356,7 +1356,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1364,19 +1364,19 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23228" level="97" type="L2Monster" name="Beggar Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1405,7 +1405,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1413,19 +1413,19 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="16" grown="1.2" />
 			<height normal="36" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23229" level="98" type="L2Monster" name="Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1454,7 +1454,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1463,19 +1463,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="20" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23230" level="98" type="L2Monster" name="Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1504,7 +1504,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1512,19 +1512,19 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="14" grown="1.2" />
 			<height normal="37" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23231" level="97" type="L2Monster" name="Young Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1550,7 +1550,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1558,19 +1558,19 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23232" level="97" type="L2Monster" name="Young Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1596,7 +1596,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1604,19 +1604,19 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="16" grown="1.2" />
 			<height normal="36" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23233" level="98" type="L2Monster" name="Engineer Zofan" title="Northern Device Supervisor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1646,7 +1646,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="13" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
@@ -1656,23 +1656,23 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23234" level="98" type="L2Monster" name="Engineer Zofan" title="Southern Device Supervisor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1703,7 +1703,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1712,19 +1712,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23235" level="99" type="L2Monster" name="Kunda">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1753,7 +1753,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1762,23 +1762,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="46" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23236" level="99" type="L2Monster" name="Kunda">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1809,7 +1809,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1818,23 +1818,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>HELLFIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="46" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23237" level="98" type="L2Monster" name="Engineer Zofan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1864,7 +1864,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1873,19 +1873,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="22" grown="1.2" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23238" level="97" type="L2Monster" name="Kurklin the Shredder">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1910,24 +1910,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23239" level="97" type="L2Monster" name="Heidmann">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1951,24 +1951,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="64" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23240" level="95" type="L2Monster" name="Mandragora">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1989,24 +1989,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="13" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23241" level="95" type="L2Monster" name="Mandragora">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2027,24 +2027,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="26" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23242" level="97" type="L2Monster" name="Pafuron">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2069,24 +2069,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23243" level="97" type="L2Monster" name="Krutati">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2110,24 +2110,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="64" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23244" level="97" type="L2Monster" name="Alluring Irene">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2151,24 +2151,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="49" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23245" level="96" type="L2Monster" name="Isaad" title="Watchman of the Eye of Infinity">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2196,24 +2196,24 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" randomWalk="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="9" /> <!-- Bows -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23246" level="93" type="L2Monster" name="Spicula 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2238,7 +2238,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2248,19 +2248,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23247" level="93" type="L2Monster" name="Spicula 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2286,7 +2286,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2296,19 +2296,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23248" level="95" type="L2Monster" name="Spicula 3">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2336,7 +2336,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -2346,19 +2346,19 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23249" level="95" type="L2Monster" name="Spicula 4">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2386,7 +2386,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -2396,19 +2396,19 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23250" level="94" type="L2Monster" name="Spicula 5">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2435,7 +2435,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -2445,19 +2445,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23251" level="94" type="L2Monster" name="Spicula 6">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2482,7 +2482,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -2492,19 +2492,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23252" level="93" type="L2Monster" name="Yin Spicula 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2530,7 +2530,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2540,19 +2540,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23253" level="93" type="L2Monster" name="Yin Spicula 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2578,7 +2578,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2588,19 +2588,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23254" level="93" type="L2Monster" name="Yin Spicula">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2625,7 +2625,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2635,19 +2635,19 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23255" level="94" type="L2Monster" name="Light Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2673,7 +2673,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2683,19 +2683,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="47" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23256" level="95" type="L2Monster" name="Draw Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2721,7 +2721,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2731,19 +2731,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="21" />
 			<height normal="23" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23257" level="95" type="L2Monster" name="Twosword Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2769,7 +2769,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2779,19 +2779,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="16" />
 			<height normal="30" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23258" level="94" type="L2Monster" name="Crane Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2817,7 +2817,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2827,19 +2827,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23259" level="96" type="L2Monster" name="Broken-bodied Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2865,7 +2865,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2875,19 +2875,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="30" />
 			<height normal="36" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23260" level="94" type="L2Monster" name="Summoned Golem Body">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2913,7 +2913,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2923,19 +2923,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="10" />
 			<height normal="15" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23261" level="96" type="L2Monster" name="Broken Berserk Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2962,7 +2962,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -2972,19 +2972,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23262" level="95" type="L2Monster" name="Spicula Elite Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3006,7 +3006,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3016,7 +3016,7 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
@@ -3046,7 +3046,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -3056,19 +3056,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23264" level="94" type="L2Monster" name="Broken Drill Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3094,7 +3094,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -3104,19 +3104,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23265" level="93" type="L2Monster" name="Broken Excavator Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3141,7 +3141,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -3151,19 +3151,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23266" level="95" type="L2Monster" name="Broken Pincer Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3189,7 +3189,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -3199,19 +3199,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="21" />
 			<height normal="23" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23267" level="94" type="L2Monster" name="Screw Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3239,7 +3239,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -3249,19 +3249,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23268" level="93" type="L2Monster" name="Spicula Scout Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3287,7 +3287,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
@@ -3297,23 +3297,23 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="350" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="43.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23269" level="94" type="L2Monster" name="Battle Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3339,7 +3339,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
@@ -3349,23 +3349,23 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="41.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23270" level="93" type="L2Monster" name="Patrol Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3392,7 +3392,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -3402,23 +3402,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23271" level="94" type="L2Monster" name="Patrol Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3446,7 +3446,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -3456,23 +3456,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4415" level="9" /> <!-- Bows -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23272" level="95" type="L2Monster" name="Spicula Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3499,7 +3499,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -3509,23 +3509,23 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="350" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23273" level="94" type="L2Monster" name="Spicula Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3553,7 +3553,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -3563,23 +3563,23 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="350" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23274" level="95" type="L2Monster" name="Spicula Elite Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3606,7 +3606,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -3616,23 +3616,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="15" /> <!-- HP Increase (7x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="26" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23275" level="96" type="L2Monster" name="Spicula Captain" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3659,7 +3659,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -3669,23 +3669,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="15" /> <!-- HP Increase (7x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="350" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23276" level="95" type="L2Monster" name="Chief Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3712,7 +3712,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -3722,23 +3722,23 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="350">
-			<clan_list>
+			<clanList>
 				<clan>NORNIL_METUCELLAR</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="39" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23277" level="98" type="L2Monster" name="Ritual Offering">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3762,7 +3762,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -3774,19 +3774,19 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23278" level="98" type="L2Monster" name="Triol's Layperson">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3815,7 +3815,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -3827,19 +3827,19 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23279" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3879,7 +3879,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -3890,23 +3890,23 @@
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23280" level="99" type="L2Monster" name="Temple Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3934,7 +3934,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -3945,23 +3945,23 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23281" level="99" type="L2Monster" name="Temple Guard Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3990,7 +3990,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4001,23 +4001,23 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23282" level="99" type="L2Monster" name="Ritual Offering">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4044,7 +4044,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4055,23 +4055,23 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23283" level="99" type="L2Monster" name="Triol's Believer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4101,7 +4101,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4112,23 +4112,23 @@
 			<skill id="4417" level="26" /> <!-- Humanoids -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7.7" />
 			<height normal="28.4" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23284" level="99" type="L2Monster" name="Ritual Sacrifice">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4156,7 +4156,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4167,23 +4167,23 @@
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23285" level="97" type="L2Monster" name="Triol's Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4209,7 +4209,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -4221,19 +4221,19 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="24.6" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23286" level="97" type="L2Monster" name="Triol's Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4259,7 +4259,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -4271,19 +4271,19 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="22.3" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23287" level="97" type="L2Monster" name="Triol's Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4309,7 +4309,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -4321,19 +4321,19 @@
 			<skill id="4417" level="35" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="24.6" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23288" level="99" type="L2Monster" name="Triol's Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4358,7 +4358,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -4369,19 +4369,19 @@
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
 			<skill id="15466" level="1" /> <!-- Triol's CON Increase -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="30.5" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23289" level="99" type="L2Monster" name="Triol's Trooper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4405,7 +4405,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4416,23 +4416,23 @@
 			<skill id="4417" level="36" /> <!-- Undead -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="15455" level="1" /> <!-- Sensitive Skin -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TRIOLL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="25.8" />
 		</collision>
-		<extend_drop>
+		<extendDrop>
 			<id>1</id>
 			<id>2</id>
 			<id>3</id>
 			<id>4</id>
 			<id>5</id>
-		</extend_drop>
+		</extendDrop>
 	</npc>
 	<npc id="23290" level="97" type="L2Monster" name="Royal Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4449,7 +4449,7 @@
 			<defence physical="1083.7796321667" magical="607.0216529293" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4458,7 +4458,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="33" />
 			<height normal="58.5" />
@@ -4479,7 +4479,7 @@
 			<defence physical="903.18429028106" magical="607.0216529293" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4487,7 +4487,7 @@
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="19" />
 			<height normal="44" />
@@ -4508,7 +4508,7 @@
 			<defence physical="1083.7796321667" magical="607.0216529293" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4517,7 +4517,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" grown="13.2" />
 			<height normal="39" grown="46.8" />
@@ -4538,7 +4538,7 @@
 			<defence physical="1123.3878255155" magical="621.50671954094" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4547,7 +4547,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="32.4" />
@@ -4568,7 +4568,7 @@
 			<defence physical="722.5889483954" magical="607.0216529293" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4577,7 +4577,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -4598,7 +4598,7 @@
 			<defence physical="1103.7928684988" magical="613.99328787368" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4607,7 +4607,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="33" />
 			<height normal="58.5" />
@@ -4628,7 +4628,7 @@
 			<defence physical="1083.7796321667" magical="607.0216529293" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4637,7 +4637,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="32.4" />
@@ -4658,7 +4658,7 @@
 			<defence physical="735.8619123325" magical="614.30291635975" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4667,7 +4667,7 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="20.5" />
@@ -4688,7 +4688,7 @@
 			<defence physical="1103.7928684988" magical="614.30291635975" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4697,7 +4697,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" grown="24" />
 			<height normal="31" grown="38" />
@@ -4718,7 +4718,7 @@
 			<defence physical="1123.3878255155" magical="621.35272877792" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -4727,7 +4727,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />

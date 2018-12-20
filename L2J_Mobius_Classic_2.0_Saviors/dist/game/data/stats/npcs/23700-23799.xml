@@ -63,10 +63,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -84,10 +84,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -105,10 +105,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="57.75" grown="69" />
@@ -177,10 +177,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
@@ -334,10 +334,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="37.4" />
@@ -355,10 +355,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -376,10 +376,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
@@ -397,10 +397,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
@@ -418,10 +418,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="34.7" />
@@ -439,10 +439,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -460,10 +460,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
@@ -481,10 +481,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -502,10 +502,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="47.5" />
@@ -523,14 +523,14 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -548,13 +548,13 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -572,14 +572,14 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -597,14 +597,14 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -622,13 +622,13 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -644,14 +644,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -669,10 +669,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -703,10 +703,10 @@
 				<walk ground="15" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="6" /> <!-- NPC Heal -->
 			<skill id="4156" level="6" /> <!-- NPC Curve Beam Cannon - Magic -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
@@ -719,20 +719,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>GIANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="44" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
 				<item id="57" min="5301" max="12380" chance="70" /> <!-- Adena -->
@@ -751,7 +751,7 @@
 				<item id="5382" min="1" max="1" chance="4.221" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
 				<item id="5406" min="1" max="1" chance="4.221" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23735" level="100" type="L2Monster" name="Captive Familiar Spirit">
 		<race>DEMONIC</race>
@@ -765,10 +765,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -786,10 +786,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -807,10 +807,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -828,10 +828,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -849,10 +849,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -870,10 +870,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -891,10 +891,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -912,10 +912,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -949,10 +949,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -970,10 +970,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -991,10 +991,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1012,10 +1012,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1033,10 +1033,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1054,10 +1054,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1075,13 +1075,13 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1099,13 +1099,13 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1123,10 +1123,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1144,10 +1144,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1165,10 +1165,10 @@
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
 			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1184,10 +1184,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1203,10 +1203,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1222,10 +1222,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1241,10 +1241,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1260,10 +1260,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1279,14 +1279,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1302,13 +1302,13 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1324,14 +1324,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1347,14 +1347,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1370,13 +1370,13 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1392,14 +1392,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1415,14 +1415,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1438,13 +1438,13 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1460,14 +1460,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1483,14 +1483,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1506,10 +1506,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1525,13 +1525,13 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1547,10 +1547,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1566,10 +1566,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1585,10 +1585,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1604,10 +1604,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1623,10 +1623,10 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1778,14 +1778,14 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1801,13 +1801,13 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->

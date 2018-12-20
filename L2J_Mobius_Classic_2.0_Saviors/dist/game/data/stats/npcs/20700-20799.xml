@@ -27,10 +27,10 @@
 				<walk ground="47" />
 				<run ground="110" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="1" /> <!--Stun -->
 			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -41,13 +41,13 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="5" /> <!--Blunt Weapons -->
 			<skill id="4416" level="6" /> <!--Humanoids -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="500" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>PARTISAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
@@ -72,10 +72,10 @@
 				<walk ground="24" />
 				<run ground="110" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!--HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
@@ -85,13 +85,13 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="5" /> <!--Blunt Weapons -->
 			<skill id="4416" level="4" /> <!--Animals -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>PARTISAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
@@ -120,11 +120,11 @@
 				<walk ground="90" />
 				<run ground="90" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -134,13 +134,13 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>PARTISAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
@@ -169,11 +169,11 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -183,13 +183,13 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>PARTISAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
@@ -218,11 +218,11 @@
 				<walk ground="60" />
 				<run ground="80" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -234,13 +234,13 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>PARTISAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
@@ -273,11 +273,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="3" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -288,19 +288,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="415" min="1" max="1" chance="0.075" /> <!-- Mithril Banded Gaiters -->
 				<item id="416" min="1" max="1" chance="0.075" /> <!-- Reinforced Leather Gaiters -->
@@ -319,7 +319,7 @@
 				<item id="1832" min="1" max="5" chance="75.89" /> <!-- Greater Antidote -->
 				<item id="848" min="1" max="1" chance="0.75" /> <!-- Earring of Magic -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20746" level="33" type="L2Monster" name="Young Gigantiops">
 		<parameters>
@@ -344,11 +344,11 @@
 				<walk ground="40" />
 				<run ground="139" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -359,19 +359,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="433" min="1" max="1" chance="0.03" /> <!-- Elven Tunic -->
 				<item id="434" min="1" max="1" chance="0.03" /> <!-- White Tunic -->
@@ -391,7 +391,7 @@
 				<item id="2250" min="1" max="1" chance="29.87" /> <!-- Recipe: Bone Arrow -->
 				<item id="1900" min="1" max="1" chance="13.43" /> <!-- Necklace Chain of Magic -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20747" level="32" type="L2Monster" name="Roxide">
 		<parameters>
@@ -419,11 +419,11 @@
 				<walk ground="60" />
 				<run ground="159" />
 			</speed>
-			<hit_time>840</hit_time>
+			<hitTime>840</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -436,20 +436,20 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DEMONIC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="627" min="1" max="1" chance="3.083" /> <!-- Aspis -->
 				<item id="46" min="1" max="1" chance="2.189" /> <!-- Bronze Helmet -->
@@ -461,7 +461,7 @@
 				<item id="2203" min="1" max="5" chance="92.39" /> <!-- Recipe: Reinforced Mithril Boots -->
 				<item id="2024" min="1" max="1" chance="18.1" /> <!-- Elven Bow Shaft -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20748" level="29" type="L2Monster" name="Roxide's Follower">
 		<parameters>
@@ -488,11 +488,11 @@
 				<walk ground="60" />
 				<run ground="159" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="2" /> <!-- Poison -->
 			<skill id="4065" level="2" /> <!-- NPC Heal -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -506,20 +506,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>DEMONIC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="69" min="1" max="1" chance="0.0075" /> <!-- Bastard Sword -->
 				<item id="125" min="1" max="1" chance="0.0075" /> <!-- Spinebone Sword -->
@@ -536,7 +536,7 @@
 				<item id="2153" min="1" max="1" chance="21.63" /> <!-- Recipe: Tiger's Eye -->
 				<item id="1933" min="1" max="1" chance="16.21" /> <!-- Dark Stocking Fabric -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20749" level="32" type="L2Monster" name="Death Fire">
 		<parameters>
@@ -564,11 +564,11 @@
 				<walk ground="80" />
 				<run ground="159" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4087" level="3" /> <!-- NPC Blaze -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -581,20 +581,20 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DEMONIC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="627" min="1" max="1" chance="3.031" /> <!-- Aspis -->
 				<item id="46" min="1" max="1" chance="2.206" /> <!-- Bronze Helmet -->
@@ -607,7 +607,7 @@
 			<spoil>
 				<item id="2025" min="1" max="1" chance="35.86" /> <!-- Dwarven Trident Edge -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20750" level="29" type="L2Monster" name="Fire Archer">
 		<parameters>
@@ -633,11 +633,11 @@
 				<walk ground="40" />
 				<run ground="159" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4120" level="2" /> <!-- Stun -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -650,20 +650,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>DEMONIC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="392" min="1" max="1" chance="0.3" /> <!-- Lion Skin Shirt -->
 				<item id="414" min="1" max="1" chance="0.3" /> <!-- Lion Skin Gaiters -->
@@ -677,7 +677,7 @@
 				<item id="1878" min="1" max="1" chance="53.92" /> <!-- Durable Braid -->
 				<item id="1877" min="1" max="1" chance="5.442" /> <!-- Adamantite Nugget -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20751" level="44" type="L2Monster" name="Snipe">
 		<parameters>
@@ -715,11 +715,11 @@
 				<walk ground="30" />
 				<run ground="174" />
 			</speed>
-			<hit_time>240</hit_time>
+			<hitTime>240</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -735,16 +735,16 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4579" level="4" /> <!-- Bleed -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="14.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="1716" max="3517" chance="70" /> <!-- Adena -->
 				<item id="62" min="1" max="1" chance="0.05" /> <!-- Reinforced Mithril Boots -->
@@ -775,7 +775,7 @@
 				<item id="1949" min="1" max="1" chance="48.6561" /> <!-- Mithril Gloves Design -->
 				<item id="1894" min="1" max="1" chance="15.2968" /> <!-- Crafted Leather -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20752" level="42" type="L2Monster" name="Snipe's Subordinate">
 		<parameters>
@@ -802,11 +802,11 @@
 				<walk ground="30" />
 				<run ground="174" />
 			</speed>
-			<hit_time>240</hit_time>
+			<hitTime>240</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -817,16 +817,16 @@
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="14" />
 			<height normal="14.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="225" min="1" max="1" chance="0.03" /> <!-- Mithril Dagger -->
 				<item id="57" min="618" max="1447" chance="70" /> <!-- Adena -->
@@ -843,7 +843,7 @@
 				<item id="2234" min="1" max="1" chance="6.583" /> <!-- Recipe: Divine Stockings -->
 				<item id="2091" min="1" max="1" chance="2.449" /> <!-- Tsurugi Blade -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20753" level="50" type="L2Monster" name="Dark Lord">
 		<parameters>
@@ -884,11 +884,11 @@
 				<walk ground="100" />
 				<run ground="174" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
 			<skill id="4225" level="1" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -903,20 +903,20 @@
 			<skill id="4571" level="5" /> <!-- NPC Blazing Circle -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="75" min="1" max="1" chance="0.03" /> <!-- Caliburs -->
 				<item id="76" min="1" max="1" chance="0.03" /> <!-- Sword of Delusion -->
@@ -954,7 +954,7 @@
 				<item id="1875" min="1" max="7" chance="82.49" /> <!-- Stone of Purity -->
 				<item id="1978" min="1" max="7" chance="80.29" /> <!-- Tower Shield Fragment -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20754" level="48" type="L2Monster" name="Dark Knight">
 		<parameters>
@@ -983,11 +983,11 @@
 				<walk ground="27" />
 				<run ground="174" />
 			</speed>
-			<hit_time>710</hit_time>
+			<hitTime>710</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4077" level="4" /> <!-- NPC Aura Burn -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1000,20 +1000,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="418" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gaiters -->
 				<item id="325" min="1" max="1" chance="0.0075" /> <!-- Horn of Glory -->
@@ -1037,7 +1037,7 @@
 				<item id="2951" min="1" max="1" chance="51.31" /> <!-- Rind Leather Glove Design -->
 				<item id="848" min="1" max="1" chance="2.818" /> <!-- Earring of Magic -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20755" level="32" type="L2Monster" name="Talakin Commander">
 		<parameters>
@@ -1067,11 +1067,11 @@
 				<walk ground="50" />
 				<run ground="133" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1082,19 +1082,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="222" min="1" max="1" chance="0.03" /> <!-- Poniard Dagger -->
 				<item id="57" min="253" max="592" chance="70" /> <!-- Adena -->
@@ -1111,7 +1111,7 @@
 				<item id="1900" min="1" max="1" chance="17.17" /> <!-- Necklace Chain of Magic -->
 				<item id="2184" min="1" max="1" chance="15.48" /> <!-- Recipe: Mithril Banded Gaiters -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20756" level="28" type="L2Monster" name="Talakin Archer">
 		<parameters>
@@ -1137,11 +1137,11 @@
 				<walk ground="50" />
 				<run ground="133" />
 			</speed>
-			<hit_time>930</hit_time>
+			<hitTime>930</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4120" level="2" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1152,19 +1152,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 					<item id="57" min="333" max="651" chance="70" /> <!-- Adena -->
 					<item id="274" min="1" max="1" chance="0.03" /> <!-- Reinforced Bow -->
@@ -1179,7 +1179,7 @@
 				<item id="2262" min="1" max="1" chance="1.2047" /> <!-- Recipe: Elven Bow -->
 				<item id="1899" min="1" max="1" chance="12.1223" /> <!-- Necklace of Devotion Chain -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20757" level="31" type="L2Monster" name="Talakin Raider">
 		<parameters>
@@ -1205,11 +1205,11 @@
 				<walk ground="50" />
 				<run ground="133" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4096" level="2" /> <!-- NPC Hawkeye -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1220,19 +1220,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="274" min="1" max="1" chance="0.075" /> <!-- Reinforced Bow -->
 				<item id="57" min="239" max="556" chance="70" /> <!-- Adena -->
@@ -1245,7 +1245,7 @@
 				<item id="1868" min="1" max="7" chance="73.58" /> <!-- Thread -->
 				<item id="847" min="1" max="1" chance="1.075" /> <!-- Red Crescent -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20758" level="49" type="L2Monster" name="Dragon Bearer Captain">
 		<parameters>
@@ -1271,10 +1271,10 @@
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1285,19 +1285,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>CAVE_SERVANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="853" min="1" max="1" chance="0.75" /> <!-- Earring of Protection -->
 				<item id="884" min="1" max="1" chance="0.75" /> <!-- Ring of Protection -->
@@ -1315,7 +1315,7 @@
 				<item id="2167" min="1" max="5" chance="87.8" /> <!-- Recipe: Ring of Ages -->
 				<item id="2946" min="1" max="7" chance="72.17" /> <!-- Plated Leather Glove Design -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20759" level="48" type="L2Monster" name="Dragon Bearer Warrior">
 		<parameters>
@@ -1341,10 +1341,10 @@
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="4" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1355,19 +1355,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CAVE_SERVANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="398" min="1" max="1" chance="0.03" /> <!-- Plated Leather Armor -->
 				<item id="227" min="1" max="1" chance="0.003" /> <!-- Stiletto -->
@@ -1384,7 +1384,7 @@
 				<item id="1967" min="1" max="1" chance="21.09" /> <!-- Plated Leather Gaiters Material -->
 				<item id="2343" min="1" max="1" chance="0.75" /> <!-- Recipe: Mace of Underworld -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20760" level="48" type="L2Monster" name="Dragon Bearer Archer">
 		<parameters>
@@ -1409,10 +1409,10 @@
 				<walk ground="40" />
 				<run ground="174" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4120" level="4" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1423,19 +1423,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>CAVE_SERVANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="355" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Mail Shirt -->
 				<item id="382" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Gaiters -->
@@ -1453,7 +1453,7 @@
 				<item id="1966" min="1" max="1" chance="14.82" /> <!-- Plated Leather Armor Fragment -->
 				<item id="2341" min="1" max="1" chance="0.75" /> <!-- Recipe: Sage's Staff -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>	
 	<npc id="20761" level="68" type="L2Monster" name="Pytan">
 		<parameters>
@@ -1481,10 +1481,10 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1496,20 +1496,20 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="500" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>MALRUK</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="64" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="358" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate -->
 				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
@@ -1535,7 +1535,7 @@
 				<item id="4960" min="1" max="1" chance="47.08" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
 				<item id="4941" min="1" max="1" chance="18.45" /> <!-- Recipe: Zubei's Gaiters (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20762" level="68" type="L2Monster" name="Pytan Knight">
 		<parameters>
@@ -1561,10 +1561,10 @@
 				<walk ground="100" />
 				<run ground="174" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4097" level="6" /> <!-- NPC Chant of Life -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1575,20 +1575,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>MALRUK</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2391" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Leather Armor -->
 				<item id="234" min="1" max="1" chance="0.0075" /> <!-- Demon's Dagger -->
@@ -1610,7 +1610,7 @@
 				<item id="4947" min="1" max="1" chance="16.8" /> <!-- Recipe: Zubei's Leather Gaiters (60%) -->
 				<item id="4946" min="1" max="1" chance="10.07" /> <!-- Recipe: Zubei's Leather Shirt (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20763" level="40" type="L2Monster" name="Lord of the Plains">
 		<!-- L2wiki: https://l2wiki.com/classic/Lord_of_the_Plains -->
@@ -1635,12 +1635,12 @@
 				<walk ground="53" />
 				<run ground="174" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<attack physical="140.2869761" magical="120.43155" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="172.205385" magical="114.55675" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!--NPC Strike -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1651,19 +1651,19 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="7" /> <!--Daggers -->
 			<skill id="4416" level="6" /> <!--Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="129" min="1" max="1" chance="0.03" /> <!-- Sword of Revolution -->
 				<item id="57" min="407" max="953" chance="70" /> <!-- Adena -->
@@ -1683,7 +1683,7 @@
 				<item id="1873" min="1" max="3" chance="50.23" /> <!-- Silver Nugget -->
 				<item id="1941" min="1" max="1" chance="9.82" /> <!-- Brigandine Temper -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20764" level="39" type="L2Monster" name="Wizard of the Plains">
 		<!-- L2wiki: https://l2wiki.com/classic/Wizard_of_the_Plains -->
@@ -1709,12 +1709,12 @@
 				<walk ground="43" />
 				<run ground="174" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<attack physical="150.9679636" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="167.714272" magical="111.56912" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4065" level="3" /> <!--NPC Heal -->
 			<skill id="4066" level="3" /> <!--NPC Twister -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
@@ -1725,19 +1725,19 @@
 			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="417" min="1" max="1" chance="0.075" /> <!-- Manticore Skin Gaiters -->
 				<item id="395" min="1" max="1" chance="0.03" /> <!-- Manticore Skin Shirt -->
@@ -1756,7 +1756,7 @@
 				<item id="1903" min="1" max="1" chance="39.68" /> <!-- Elven Ring Piece -->
 				<item id="2194" min="1" max="1" chance="24.79" /> <!-- Recipe: Mithril Gloves -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20765" level="38" type="L2Monster" name="Warrior of the Plains">
 		<!-- L2wiki: https://l2wiki.com/classic/Warrior_of_the_Plains -->
@@ -1781,12 +1781,12 @@
 				<walk ground="40" />
 				<run ground="174" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<attack physical="171.845003" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="134.9480636" magical="108.62405" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="2" /> <!--NPC Clan Might -->
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -1797,19 +1797,19 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="3" /> <!--One-handed Sword -->
 			<skill id="4416" level="6" /> <!--Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="470" min="1" max="1" chance="0.075" /> <!-- Mithril Stockings -->
 				<item id="437" min="1" max="1" chance="0.03" /> <!-- Mithril Tunic -->
@@ -1826,7 +1826,7 @@
 				<item id="1902" min="1" max="1" chance="21.84" /> <!-- Elven Earring Beads -->
 				<item id="2285" min="1" max="1" chance="1.279" /> <!-- Recipe: Claymore -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20766" level="36" type="L2Monster" name="Scout of the Plains">
 		<!-- L2wiki: https://l2wiki.com/classic/Scout_of_the_Plains -->
@@ -1849,12 +1849,12 @@
 				<walk ground="37" />
 				<run ground="174" />
 			</speed>
-			<hit_time>930</hit_time>
+			<hitTime>930</hitTime>
 			<attack physical="278.4866334" magical="94.1437" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="154.630058" magical="102.86506" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
@@ -1864,13 +1864,13 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="9" /> <!--Bows -->
 			<skill id="4416" level="6" /> <!--Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -1908,11 +1908,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1923,19 +1923,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="24" grown="28.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="281" min="1" max="1" chance="0.03" /> <!-- Crystallized Ice Bow -->
 				<item id="57" min="476" max="1111" chance="70" /> <!-- Adena -->
@@ -1952,7 +1952,7 @@
 				<item id="2220" min="1" max="1" chance="6.987" /> <!-- Recipe: Rind Leather Armor -->
 				<item id="2076" min="1" max="1" chance="2.589" /> <!-- Body Slasher Blade -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20768" level="44" type="L2Monster" name="Timak Orc Troop Shaman">
 		<parameters>
@@ -1979,11 +1979,11 @@
 				<walk ground="50" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4036" level="4" /> <!-- Poison -->
 			<skill id="4065" level="4" /> <!-- NPC Heal -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1995,19 +1995,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="16" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2387" min="1" max="1" chance="0.075" /> <!-- Reinforced Mithril Gaiters -->
 				<item id="397" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Shirt -->
@@ -2026,7 +2026,7 @@
 				<item id="1909" min="1" max="1" chance="44.01" /> <!-- Aquastone Ring Wire -->
 				<item id="2215" min="1" max="1" chance="4.115" /> <!-- Recipe: Robe of Seal -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20769" level="43" type="L2Monster" name="Timak Orc Troop Warrior">
 		<parameters>
@@ -2052,11 +2052,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2067,19 +2067,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="396" min="1" max="1" chance="0.03" /> <!-- Salamander Skin Mail -->
 				<item id="262" min="1" max="1" chance="0.0075" /> <!-- Scallop Jamadhr -->
@@ -2096,7 +2096,7 @@
 				<item id="1950" min="1" max="1" chance="9.096" /> <!-- Half Plate Temper -->
 				<item id="2307" min="1" max="1" chance="1.181" /> <!-- Recipe: Heavy Doom Axe -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20770" level="41" type="L2Monster" name="Timak Orc Troop Archer">
 		<parameters>
@@ -2122,11 +2122,11 @@
 				<walk ground="45" />
 				<run ground="174" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4120" level="4" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2137,19 +2137,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
 		</collision>
-		<drop_lists> <!-- CT.2.5 -->
+		<dropLists> <!-- CT.2.5 -->
 			<drop>
 				<item id="189" min="1" max="1" chance="0.03" /> <!-- Staff of Life -->
 				<item id="188" min="1" max="1" chance="0.03" /> <!-- Ghost Staff -->
@@ -2175,7 +2175,7 @@
 				<item id="1805" min="1" max="1" chance="0.5726" /> <!-- Recipe: Soulshot (C-Grade) -->
 				<item id="1906" min="1" max="1" chance="23.6124" /> <!-- Mithril Ring Wire -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20771" level="77" type="L2Monster" name="Barif">
 		<!-- L2wiki: https://l2wiki.com/classic/Barif -->
@@ -2203,12 +2203,12 @@
 				<walk ground="15" />
 				<run ground="180" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<attack physical="946.44055895414" magical="603.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="382.4501" magical="296.777" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4066" level="6" /> <!--NPC Twister -->
 			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -2219,20 +2219,20 @@
 			<skill id="4414" level="2" /> <!--Standard Type -->
 			<skill id="4415" level="5" /> <!--Blunt Weapons -->
 			<skill id="4416" level="11" /> <!--Giants -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="500" clanHelpRange="400">
-			<clan_list>
+			<clanList>
 				<clan>GIANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="50" />
 			<height normal="44" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
 				<item id="57" min="6547" max="15290" chance="70" /> <!-- Adena -->
@@ -2252,7 +2252,7 @@
 				<item id="5404" min="1" max="1" chance="5.249" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
 				<item id="5380" min="1" max="1" chance="5.239" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20772" level="76" type="L2Monster" name="Barif's Pet">
 		<parameters>
@@ -2277,10 +2277,10 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>720</hit_time>
+			<hitTime>720</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2291,20 +2291,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>GIANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
 				<item id="57" min="4066" max="9485" chance="70" /> <!-- Adena -->
@@ -2324,7 +2324,7 @@
 				<item id="5380" min="1" max="1" chance="3.224" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 				<item id="5406" min="1" max="1" chance="3.217" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20773" level="70" type="L2Monster" name="Conjurer Bat Lord">
 		<!-- L2wiki: https://l2wiki.com/classic/Conjurer_Bat_Lord -->
@@ -2348,12 +2348,12 @@
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<attack physical="665.0227818" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="335.895417" magical="223.44881" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -2362,19 +2362,19 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4276" level="1" /> <!-- Bow / Crossbow Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GIANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="229" min="1" max="1" chance="0.003" /> <!-- Kris -->
 				<item id="243" min="1" max="1" chance="0.003" /> <!-- Twilight Knife -->
@@ -2398,7 +2398,7 @@
 				<item id="4043" min="1" max="1" chance="6.307" /> <!-- Asofe -->
 				<item id="4040" min="1" max="1" chance="3.812" /> <!-- Mold Lubricant -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20774" level="70" type="L2Monster" name="Conjurer Bat">
 		<!-- L2wiki: https://l2wiki.com/classic/Conjurer_Bat -->
@@ -2422,12 +2422,12 @@
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<attack physical="626.2397545" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="325.507567" magical="216.53847" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -2437,19 +2437,19 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
 			<skill id="4276" level="1" /> <!-- Bow / Crossbow Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>GIANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="0.075" /> <!-- Adamantite Ring -->
 				<item id="57" min="802" max="1871" chance="70" /> <!-- Adena -->
@@ -2467,7 +2467,7 @@
 				<item id="1881" min="1" max="1" chance="39.32" /> <!-- Coarse Bone Powder -->
 				<item id="4043" min="1" max="1" chance="9.494" /> <!-- Asofe -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20775" level="17" type="L2Monster" name="Bugbear Raider">
 		<parameters>
@@ -2486,11 +2486,11 @@
 				<walk ground="55" />
 				<run ground="130" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -2500,15 +2500,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="15" min="1" max="1" chance="0.075" /> <!-- Short Spear -->
 				<item id="57" min="40" max="94" chance="70" /> <!-- Adena -->
@@ -2522,7 +2522,7 @@
 				<item id="1897" min="1" max="1" chance="9.18" /> <!-- Necklace of Wisdom Chain -->
 				<item id="2253" min="1" max="1" chance="1.603" /> <!-- Recipe: Sword Breaker -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20776" level="20" type="L2Monster" name="Dark Succubus">
 		<parameters>
@@ -2542,10 +2542,10 @@
 				<walk ground="60" />
 				<run ground="100" />
 			</speed>
-			<hit_time>840</hit_time>
+			<hitTime>840</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="2" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2556,19 +2556,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="1104" min="1" max="1" chance="0.75" /> <!-- Stockings of Devotion -->
 				<item id="1101" min="1" max="1" chance="0.3" /> <!-- Tunic of Devotion -->
@@ -2585,7 +2585,7 @@
 				<item id="1865" min="1" max="1" chance="44.81" /> <!-- Varnish -->
 				<item id="1869" min="1" max="1" chance="43.88" /> <!-- Iron Ore -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20777" level="14" type="L2Monster" name="Hunter Bear">
 		<parameters>
@@ -2604,11 +2604,11 @@
 				<walk ground="40" />
 				<run ground="110" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -2618,18 +2618,18 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="49" min="1" max="1" chance="2.197" /> <!-- Gloves (item) -->
 				<item id="37" min="1" max="1" chance="2.172" /> <!-- Leather Shoes -->
@@ -2646,7 +2646,7 @@
 				<item id="1831" min="1" max="3" chance="54.04" /> <!-- Antidote -->
 				<item id="1896" min="1" max="1" chance="16.43" /> <!-- Necklace of Anguish Chain -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20778" level="39" type="L2Monster" name="Ragna Orc Prefect">
 		<parameters>
@@ -2672,11 +2672,11 @@
 				<walk ground="45" />
 				<run ground="174" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2687,19 +2687,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="23" grown="27.6" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="352" min="1" max="1" chance="0.03" /> <!-- Brigandine -->
 				<item id="2377" min="1" max="1" chance="0.03" /> <!-- Mithril Scale Gaiters -->
@@ -2717,7 +2717,7 @@
 				<item id="1903" min="1" max="1" chance="20.92" /> <!-- Elven Ring Piece -->
 				<item id="2290" min="1" max="1" chance="0.75" /> <!-- Recipe: Mithril Dagger -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20779" level="39" type="L2Monster" name="Ragna Orc Priest">
 		<parameters>
@@ -2742,11 +2742,11 @@
 				<walk ground="45" />
 				<run ground="174" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -2756,19 +2756,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" />
 			<height normal="22" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="318" min="1" max="1" chance="0.0075" /> <!-- Crucifix of Blood -->
 				<item id="57" min="202" max="474" chance="70" /> <!-- Adena -->
@@ -2783,7 +2783,7 @@
 				<item id="2158" min="1" max="1" chance="15.26" /> <!-- Recipe: Mithril Ring -->
 				<item id="1904" min="1" max="1" chance="11.12" /> <!-- Elven Necklace Beads -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20780" level="35" type="L2Monster" name="Bloody Axe's Escort">
 		<parameters>
@@ -2808,11 +2808,11 @@
 				<walk ground="50" />
 				<run ground="174" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -2822,15 +2822,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="157" min="1" max="1" chance="0.0075" /> <!-- Spiked Club -->
 				<item id="186" min="1" max="1" chance="0.0075" /> <!-- Staff of Magic -->
@@ -2845,7 +2845,7 @@
 				<item id="1901" min="1" max="1" chance="13.54" /> <!-- Tiger's Eye Stone -->
 				<item id="2980" min="1" max="1" chance="12.7" /> <!-- Recipe: Brigandine Gauntlets -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20781" level="35" type="L2Monster" name="Delu Lizardman Shaman">
 		<parameters>
@@ -2873,11 +2873,11 @@
 				<walk ground="43" />
 				<run ground="174" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="2" /> <!-- Decrease Speed -->
 			<skill id="4158" level="3" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
@@ -2890,19 +2890,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="436" min="1" max="1" chance="0.075" /> <!-- Tunic of Knowledge -->
 				<item id="469" min="1" max="1" chance="0.075" /> <!-- Stockings of Knowledge -->
@@ -2916,7 +2916,7 @@
 				<item id="2192" min="1" max="1" chance="11.96" /> <!-- Recipe: Kite Shield -->
 				<item id="1938" min="1" max="1" chance="6.557" /> <!-- Mithril Banded Mail Material -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20782" level="17" type="L2Monster" name="Ol Mahum Novice">
 		<parameters>
@@ -2936,11 +2936,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2950,19 +2950,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>OL_MAHUM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="256" min="1" max="1" chance="0.3" /> <!-- Cestus -->
 				<item id="57" min="40" max="94" chance="70" /> <!-- Adena -->
@@ -2975,7 +2975,7 @@
 				<item id="1801" min="1" max="1" chance="18.41" /> <!-- Recipe: Piece Bone Gaiters -->
 				<item id="1924" min="1" max="1" chance="12.11" /> <!-- Leather Helmet Design -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20783" level="35" type="L2Monster" name="Dread Wolf">
 		<parameters>
@@ -2999,10 +2999,10 @@
 				<walk ground="24" />
 				<run ground="140" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -3012,20 +3012,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="500" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="11" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="137" max="273" chance="70" /> <!-- Adena -->
 				<item id="316" min="1" max="1" chance="0.003" /> <!-- Sage's Blood -->
@@ -3044,7 +3044,7 @@
 				<item id="1935" min="1" max="1" chance="1.81" /> <!-- Scale Mail Fragment -->
 				<item id="1900" min="1" max="1" chance="3.5448" /> <!-- Enchanted Necklace Chain -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20784" level="36" type="L2Monster" name="Tasaba Lizardman">
 		<parameters>
@@ -3069,11 +3069,11 @@
 				<walk ground="43" />
 				<run ground="140" />
 			</speed>
-			<hit_time>720</hit_time>
+			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4093" level="1" /> <!-- Evasion -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3084,20 +3084,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="154" max="309" chance="70" /> <!-- Adena -->
 				<item id="83" min="1" max="1" chance="0.075" /> <!-- Sword of Magic -->
@@ -3118,7 +3118,7 @@
 				<item id="2184" min="1" max="1" chance="3.8461" /> <!-- Recipe: Mithril Banded Gaiters -->
 				<item id="2153" min="1" max="1" chance="5.6945" /> <!-- Recipe: Tiger's Eye Earring -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20785" level="37" type="L2Monster" name="Tasaba Lizardman Shaman">
 		<parameters>
@@ -3144,11 +3144,11 @@
 				<walk ground="43" />
 				<run ground="140" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4034" level="3" /> <!-- Decrease Speed -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3159,20 +3159,20 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIZARDMAN1</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="149" max="298" chance="70" /> <!-- Adena -->
 				<item id="1124" min="1" max="1" chance="0.005" /> <!-- Boots of Power -->
@@ -3205,7 +3205,7 @@
 				<item id="1933" min="1" max="1" chance="4.154" /> <!-- Dark Stockings Fabric -->
 				<item id="1875" min="1" max="1" chance="2.3539" /> <!-- Stone of Purity -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20786" level="39" type="L2Monster" name="Lienrik">
 		<parameters>
@@ -3230,11 +3230,11 @@
 				<walk ground="100" />
 				<run ground="150" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4034" level="3" /> <!-- Decrease Speed -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3245,20 +3245,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>LIENRIK</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="166" max="330" chance="70" /> <!-- Adena -->
 				<item id="395" min="1" max="1" chance="0.006" /> <!-- Manticore Skin Shirt -->
@@ -3279,7 +3279,7 @@
 				<item id="2155" min="1" max="1" chance="6.2822" /> <!-- Recipe: Elven Ring -->
 				<item id="5550" min="1" max="1" chance="0.5218" /> <!-- Durable Metal Plate -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20787" level="40" type="L2Monster" name="Lienrik Lad">
 		<parameters>
@@ -3304,11 +3304,11 @@
 				<walk ground="100" />
 				<run ground="174" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4036" level="4" /> <!-- Poison -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3319,20 +3319,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>LIENRIK</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="199" max="397" chance="70" /> <!-- Adena -->
 				<item id="850" min="1" max="1" chance="0.012" /> <!-- Elven Earring -->
@@ -3355,7 +3355,7 @@
 				<item id="2029" min="1" max="1" chance="0.5687" /> <!-- Gastraphetes Shaft -->
 				<item id="5549" min="1" max="1" chance="4.7674" /> <!-- Metallic Thread -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20788" level="35" type="L2Monster" name="Rakul">
 		<parameters>
@@ -3381,10 +3381,10 @@
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3395,19 +3395,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="355" max="708" chance="70" /> <!-- Adena -->
 				<item id="260" min="1" max="1" chance="0.012" /> <!-- Triple-Edged Jamadhr -->
@@ -3425,7 +3425,7 @@
 				<item id="1901" min="1" max="1" chance="11.602" /> <!-- Tiger's Eye Earring Stone -->
 				<item id="1901" min="1" max="1" chance="11.602" /> <!-- Tiger's Eye Earring Stone -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20789" level="36" type="L2Monster" name="Crokian">
 		<parameters>
@@ -3451,11 +3451,11 @@
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<hit_time>780</hit_time>
+			<hitTime>780</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="2" /> <!-- NPC Clan Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3466,19 +3466,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>CROC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="333" max="668" chance="70" /> <!-- Adena -->
 				<item id="393" min="1" max="1" chance="0.011" /> <!-- Mithril Banded Mail -->
@@ -3501,7 +3501,7 @@
 				<item id="2188" min="1" max="1" chance="5.6469" /> <!-- Recipe: Manticore Skin Gaiters -->
 				<item id="2154" min="1" max="1" chance="8.4644" /> <!-- Recipe: Elven Earring -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20790" level="37" type="L2Monster" name="Dailaon">
 		<parameters>
@@ -3527,11 +3527,11 @@
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<hit_time>910</hit_time>
+			<hitTime>910</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4228" level="3" /> <!-- NPC Double Dagger Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3543,19 +3543,19 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>CROC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="428" max="853" chance="70" /> <!-- Adena -->
 				<item id="2038" min="1" max="1" chance="0.137" /> <!-- Maingauche Edge -->
@@ -3576,7 +3576,7 @@
 				<item id="1868" min="1" max="5" chance="67.4568" /> <!-- Thread -->
 				<item id="1902" min="1" max="1" chance="10.2518" /> <!-- Elven Earring Beads -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20791" level="38" type="L2Monster" name="Crokian Warrior">
 		<parameters>
@@ -3602,11 +3602,11 @@
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<hit_time>780</hit_time>
+			<hitTime>780</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3617,20 +3617,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>CROC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="735" max="1467" chance="70" /> <!-- Adena -->
 				<item id="352" min="1" max="1" chance="0.013" /> <!-- Brigandine Tunic -->
@@ -3652,7 +3652,7 @@
 				<item id="2041" min="1" max="1" chance="1.9395" /> <!-- War Pick Head -->
 				<item id="1825" min="1" max="1" chance="12.419" /> <!-- Recipe: Oriharukon -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20792" level="39" type="L2Monster" name="Farhite">
 		<parameters>
@@ -3680,11 +3680,11 @@
 				<walk ground="15" />
 				<run ground="174" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="2" /> <!-- Decrease Speed -->
 			<skill id="4151" level="3" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
@@ -3697,20 +3697,20 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>CROC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="684" max="1363" chance="70" /> <!-- Adena -->
 				<item id="88" min="1" max="1" chance="0.002" /> <!-- Morning Star -->
@@ -3735,7 +3735,7 @@
 				<item id="2202" min="1" max="1" chance="16.5409" /> <!-- Recipe: Assault Boots -->
 				<item id="1903" min="1" max="1" chance="26.9842" /> <!-- Elven Ring Piece -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20793" level="43" type="L2Monster" name="Nos">
 		<parameters>
@@ -3761,11 +3761,11 @@
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<hit_time>780</hit_time>
+			<hitTime>780</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -3777,20 +3777,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>CROC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="42" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="89" min="1" max="1" chance="0.003" /> <!-- Big Hammer -->
 				<item id="160" min="1" max="1" chance="0.003" /> <!-- Battle Axe -->
@@ -3818,7 +3818,7 @@
 				<item id="1953" min="1" max="1" chance="8.542" /> <!-- Sage's Rag Lining -->
 				<item id="2062" min="1" max="1" chance="2.1" /> <!-- Scythe Edge -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20794" level="41" type="L2Monster" name="Blade Stakato">
 		<parameters>
@@ -3844,11 +3844,11 @@
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3860,20 +3860,20 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="678" max="1356" chance="70" /> <!-- Adena -->
 				<item id="225" min="1" max="1" chance="0.006" /> <!-- Mithril Dagger -->
@@ -3890,7 +3890,7 @@
 				<item id="1952" min="1" max="1" chance="5.3584" /> <!-- Salamander Skin Mail Texture -->
 				<item id="1866" min="1" max="3" chance="55.7627" /> <!-- Suede -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20795" level="42" type="L2Monster" name="Blade Stakato Worker">
 		<parameters>
@@ -3916,11 +3916,11 @@
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3932,20 +3932,20 @@
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="636" max="1285" chance="70" /> <!-- Adena -->
 				<item id="851" min="1" max="1" chance="0.03" /> <!-- Omen Beast's Eye Earring -->
@@ -3967,7 +3967,7 @@
 				<item id="2047" min="1" max="1" chance="1.3879" /> <!-- Claymore Blade -->
 				<item id="4469" min="1" max="1" chance="0.9021" /> <!-- Dye of STR <Str+1 Con-1> -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20796" level="43" type="L2Monster" name="Blade Stakato Warrior">
 		<parameters>
@@ -3993,11 +3993,11 @@
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="4" /> <!-- Silence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4010,20 +4010,20 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="671" max="1364" chance="70" /> <!-- Adena -->
 				<item id="396" min="1" max="1" chance="0.023" /> <!-- Salamander Skin Mail -->
@@ -4043,7 +4043,7 @@
 				<item id="2930" min="1" max="1" chance="13.6873" /> <!-- Plate Helmet Design -->
 				<item id="1905" min="1" max="1" chance="16.5167" /> <!-- Omen Beast's Eye Earring Gemstone -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20797" level="44" type="L2Monster" name="Blade Stakato Drone">
 		<parameters>
@@ -4075,11 +4075,11 @@
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4034" level="4" /> <!-- Decrease Speed -->
 			<skill id="4046" level="4" /> <!-- Sleep -->
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
@@ -4097,20 +4097,20 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="1015" max="2079" chance="70" /> <!-- Adena -->
 				<item id="397" min="1" max="1" chance="0.021" /> <!-- Mithril Shirt -->
@@ -4130,7 +4130,7 @@
 				<item id="1908" min="1" max="1" chance="24.4093" /> <!-- Moonstone Earring Wire -->
 				<item id="2163" min="1" max="1" chance="13.1511" /> <!-- Recipe: Earring of Protection -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20798" level="45" type="L2Monster" name="Water Giant">
 		<parameters>
@@ -4156,11 +4156,11 @@
 				<walk ground="35" />
 				<run ground="174" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="4" /> <!-- Stun -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -4172,20 +4172,20 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="11" /> <!-- Giants -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="826" max="1677" chance="70" /> <!-- Adena -->
 				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
@@ -4205,7 +4205,7 @@
 				<item id="4043" min="1" max="1" chance="6.9587" /> <!-- Asofe -->
 				<item id="1908" min="1" max="1" chance="19.769" /> <!-- Moonstone Earring Wire -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="20799" level="46" type="L2Monster" name="Queen Undine Lad">
 		<parameters>
@@ -4232,11 +4232,11 @@
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4034" level="4" /> <!-- Decrease Speed -->
 			<skill id="4066" level="4" /> <!-- NPC Twister -->
 			<skill id="4093" level="1" /> <!-- Evasion -->
@@ -4251,16 +4251,16 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="828" max="1693" chance="70" /> <!-- Adena -->
 				<item id="354" min="1" max="1" chance="0.012" /> <!-- Chain Mail Shirt -->
@@ -4280,6 +4280,6 @@
 				<item id="2065" min="1" max="1" chance="1.6244" /> <!-- Skull Graver Head -->
 				<item id="2164" min="1" max="1" chance="16.1662" /> <!-- Recipe: Ring of Protection -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

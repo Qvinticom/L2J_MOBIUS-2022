@@ -14,7 +14,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -25,9 +25,9 @@
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="5763" level="1" /> <!-- Wink -->
-		</skill_list>
+		</skillList>
 		<shots soul="2" spirit="2" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="5" />
 			<height normal="3.75" />
@@ -47,7 +47,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -58,9 +58,9 @@
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="5952" level="1" /> <!-- Agathion's Blessing -->
-		</skill_list>
+		</skillList>
 		<shots soul="2" spirit="2" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="5" />
 			<height normal="5.5" />
@@ -80,7 +80,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -91,9 +91,9 @@
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="5955" level="1" /> <!-- Agathion Cute Trick - Joy -->
-		</skill_list>
+		</skillList>
 		<shots soul="2" spirit="2" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<collision>
 			<radius normal="6.5" />
 			<height normal="6.5" />
@@ -113,7 +113,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -123,9 +123,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<shots soul="2" spirit="2" />
-		<ex_crt_effect>true</ex_crt_effect>
+		<exCrtEffect>true</exCrtEffect>
 		<collision>
 			<radius normal="3" />
 			<height normal="5.15" />
@@ -145,10 +145,10 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-		</skill_list>
+		</skillList>
 		<shots soul="2" spirit="2" />
 		<status undying="false" />
 		<collision>

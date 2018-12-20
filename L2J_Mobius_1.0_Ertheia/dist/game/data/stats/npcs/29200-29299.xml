@@ -26,7 +26,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14342" level="1" /> <!-- Tail Haunting -->
@@ -37,11 +37,11 @@
 			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="250" />
@@ -72,7 +72,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -82,11 +82,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14351" level="1" /> <!-- Provoke -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
@@ -117,7 +117,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -127,11 +127,11 @@
 			<skill id="14350" level="1" /> <!-- Fear -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
@@ -161,7 +161,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -170,11 +170,11 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7" />
@@ -205,7 +205,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -215,11 +215,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14349" level="1" /> <!-- Larva Bite -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -250,7 +250,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
@@ -260,11 +260,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14332" level="1" /> <!-- Feeler Yoke -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
@@ -294,17 +294,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -335,17 +335,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14345" level="1" /> <!-- Larva Sting -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="19" />
@@ -376,17 +376,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14346" level="1" /> <!-- Larva Sting -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="19" />
@@ -417,7 +417,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -426,7 +426,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="50" />
@@ -458,7 +458,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="14023" level="1" /> <!-- Hero's Teleport -->
@@ -466,7 +466,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="60" />
@@ -498,7 +498,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -506,7 +506,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
@@ -541,7 +541,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -554,13 +554,13 @@
 			<skill id="14281" level="1" /> <!-- Octavis' Influence -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="600" aggroRange="300" />	
 		<collision>
 			<radius normal="30" />
 			<height normal="81" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="19462" min="1" max="1" chance="12.75" /> <!-- Octavis' Shirt -->
 				<item id="19458" min="1" max="1" chance="2.059" /> <!-- Octavis' Earring -->
@@ -627,11 +627,11 @@
 				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Crafting Pack -->
 				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Amaranthine Thrower Crafting Pack -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="99" /> <!-- Fortune Bag - Stage 1 -->
 				<item id="40198" min="1" max="1" chance="0.03" /> <!-- Disassembly Recipe Pouch: Armor -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29213" level="98" type="L2RaidBoss" name="Baylor" title="Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -669,7 +669,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
@@ -687,13 +687,13 @@
 			<skill id="5231" level="1" /> <!-- Stun -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5232" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" isAggressive="true" clanHelpRange="2000">
-			<clan_list>
+			<clanList>
 				<clan>BARLER_RO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="38056" min="1" max="1" chance="0.299999999999999" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
 				<item id="38055" min="1" max="1" chance="0.299999999999999" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
@@ -752,10 +752,10 @@
 				<item id="35462" min="1" max="1" chance="0.25829559347718" /> <!-- Recipe: Eternal Helmet (60%) -->
 				<item id="35353" min="1" max="1" chance="0.25829559347718" /> <!-- Eternal Shoe Ingredient -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="54" />
 			<height normal="77.5" />
@@ -790,13 +790,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="36" />
@@ -826,12 +826,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
@@ -861,12 +861,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
@@ -899,13 +899,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
@@ -939,7 +939,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="14247" level="1" /> <!-- Black Vortex -->
 			<skill id="14366" level="1" /> <!-- Black Vortex Swamp -->
@@ -947,9 +947,9 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="38052" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Caster Crafting Pack -->
 				<item id="38043" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Shaper Crafting Pack -->
@@ -1012,10 +1012,10 @@
 				<item id="37074" min="1" max="1" chance="1.236490773973" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
 				<item id="30298" min="1" max="1" chance="0.18810711571597" /> <!-- Superior Giant's Codex - Mastery -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="150" />
 			<height normal="150" />
@@ -1047,21 +1047,21 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14250" level="1" /> <!-- Touch of Death -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="800" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8603" min="1" max="1" chance="2.4" /> <!-- Herb of Mana -->
 				<item id="8604" min="1" max="1" chance="3.12" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.48" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -1091,17 +1091,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14348" level="1" /> <!-- Larva Bite -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="19" />
@@ -1132,17 +1132,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14347" level="1" /> <!-- Larva Bite -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="30" />
@@ -1172,17 +1172,17 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="1500">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="250" />
@@ -1223,7 +1223,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4122" level="1" /> <!-- Antharas -->
 			<skill id="4071" level="2" /> <!-- Bow/Crossbow Resistance -->
@@ -1231,7 +1231,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="1500" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="300" />
@@ -1263,7 +1263,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
@@ -1279,7 +1279,7 @@
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="63" />
@@ -1311,7 +1311,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
@@ -1327,7 +1327,7 @@
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="63" />
@@ -1358,13 +1358,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14390" level="1" /> <!-- Dragon Bomber Explosion -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="37" />
@@ -1395,13 +1395,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14390" level="1" /> <!-- Dragon Bomber Explosion -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="42" />
@@ -1445,7 +1445,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4679" level="1" /> <!-- Valakas -->
 			<skill id="4071" level="2" /> <!-- Bow/Crossbow Resistance -->
@@ -1454,11 +1454,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VALAKAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="190" />
@@ -1490,7 +1490,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="14407" level="1" /> <!-- Lavasaurus Alpha Attack -->
@@ -1498,7 +1498,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -1529,13 +1529,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14476" level="1" /> <!-- Sacrifice -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1568,7 +1568,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
@@ -1588,7 +1588,7 @@
 			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai isAggressive="true" aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
@@ -1611,11 +1611,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="0.1" />
@@ -1651,7 +1651,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1663,7 +1663,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1699,7 +1699,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1711,7 +1711,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1747,7 +1747,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1759,7 +1759,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1787,7 +1787,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1799,9 +1799,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
@@ -1865,10 +1865,10 @@
 				<item id="39485" min="1" max="1" chance="0.79105861113403" /> <!-- Alchemic Tome: Dye -->
 				<item id="39484" min="1" max="1" chance="0.78426424269484" /> <!-- Alchemic Tome: Life Stone -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
@@ -1895,7 +1895,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1907,9 +1907,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
@@ -1973,10 +1973,10 @@
 				<item id="39485" min="1" max="1" chance="0.79105861113403" /> <!-- Alchemic Tome: Dye -->
 				<item id="39484" min="1" max="1" chance="0.78426424269484" /> <!-- Alchemic Tome: Life Stone -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
@@ -2003,7 +2003,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2015,7 +2015,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="24" />
@@ -2042,7 +2042,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" targetable="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2054,7 +2054,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -2080,7 +2080,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4415" level="1"/> <!-- Bare Hands -->
 			<skill id="4416" level="10"/> <!-- Dragons -->
 			<skill id="5464" level="1"/> <!-- Wind Attack -->
@@ -2094,9 +2094,9 @@
 			<skill id="15591" level="1"/> <!-- Wind Pull -->
 			<skill id="15275" level="1"/> <!-- Tornado -->
 			<skill id="15600" level="1"/> <!-- Lindvior's Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17435" min="1" max="3" chance="13.943474249" /> <!-- Eternal Shield Heavy Armor -->
 				<item id="17420" min="1" max="3" chance="7.8261166740713" /> <!-- Amaranthine Fighter -->
@@ -2168,11 +2168,11 @@
 				<item id="17705" min="1" max="1" chance="1.9425491100697" /> <!-- Lv. 5 Ancient CON Dye CON + 5 / Dark Resistance + 25 -->
 				<item id="17709" min="1" max="1" chance="1.9267658985504" /> <!-- Lv. 5 Legendary STR Dye STR + 5 / DEX + 1 / Fire Resistance + 25 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 				<item id="40199" min="1" max="1" chance="4.964" /> <!-- Disassembly Recipe Pouch: Weapon -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="350" />
 			<height normal="210" />
@@ -2195,7 +2195,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="15610" level="7" /> <!-- Spinning Slasher -->
@@ -2204,7 +2204,7 @@
 			<skill id="15608" level="7" /> <!-- Power Strike -->
 			<skill id="15609" level="7" /> <!-- Decrease P. Def. -->
 			<skill id="15615" level="7" /> <!-- Increase P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
 		<collision>
 			<radius normal="60" />
@@ -2228,7 +2228,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="15616" level="7" /> <!-- Aggression -->
@@ -2240,7 +2240,7 @@
 			<skill id="15625" level="7" /> <!-- Raid Chain Strike -->
 			<skill id="15609" level="7" /> <!-- Decrease P. Def. -->
 			<skill id="15615" level="7" /> <!-- Increase P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
 		<collision>
 			<radius normal="70" />
@@ -2264,7 +2264,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="15623" level="7" /> <!-- Push Up -->
@@ -2273,7 +2273,7 @@
 			<skill id="15622" level="7" /> <!-- Ranged Magic -->
 			<skill id="15614" level="7" /> <!-- Decrease M. Def. -->
 			<skill id="15615" level="7" /> <!-- Increase P. Atk. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="100" />
@@ -2297,12 +2297,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2326,12 +2326,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2356,12 +2356,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16180" level="1" /> <!-- Darion -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="81.2165" />
@@ -2385,12 +2385,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2414,11 +2414,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2442,11 +2442,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2471,12 +2471,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2501,15 +2501,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14769" level="1" /> <!-- Raid Boss (Lv. 99) -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
@@ -2570,10 +2570,10 @@
 				<item id="37077" min="1" max="1" chance="1.6542339755496" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
 				<item id="37082" min="1" max="1" chance="1.6535646516671" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="70" />
@@ -2597,10 +2597,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="40.8" />
@@ -2624,10 +2624,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="40.8" />
@@ -2651,10 +2651,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
@@ -2678,10 +2678,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
@@ -2705,10 +2705,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2732,10 +2732,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2759,10 +2759,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2786,10 +2786,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />

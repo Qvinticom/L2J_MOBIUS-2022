@@ -24,7 +24,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -36,8 +36,8 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="5975" level="1" /> <!-- Dark Attack -->
 			<skill id="5976" level="1" /> <!-- Dark Storm -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -68,7 +68,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -80,8 +80,8 @@
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="5975" level="1" /> <!-- Dark Attack -->
 			<skill id="5976" level="2" /> <!-- Dark Storm -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -116,7 +116,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -129,8 +129,8 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="5975" level="3" /> <!-- Dark Attack -->
 			<skill id="5976" level="3" /> <!-- Dark Storm -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
@@ -160,7 +160,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -170,7 +170,7 @@
 			<skill id="6494" level="1" /> <!-- Holy Attack -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="12" />
@@ -200,7 +200,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -210,7 +210,7 @@
 			<skill id="6494" level="1" /> <!-- Holy Attack -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="18" />
@@ -240,7 +240,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
@@ -250,7 +250,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<status undying="false" />
 		<collision>
@@ -280,7 +280,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -290,7 +290,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
@@ -322,7 +322,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
@@ -332,7 +332,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4563" level="1" /> <!-- Solar Flare -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
@@ -364,7 +364,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -374,14 +374,14 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4563" level="1" /> <!-- Solar Flare -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="25.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
@@ -402,10 +402,10 @@
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27409" level="83" type="L2Monster" name="Solina Knight Captain">
 		<!-- TODO: Must be confirmed -->
@@ -430,7 +430,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="6312" level="1" /> <!-- Launch Holy Sword Energy -->
@@ -440,13 +440,13 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="31.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlets -->
 				<item id="14110" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Boots -->
@@ -461,10 +461,10 @@
 				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
 				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27410" level="83" type="L2Monster" name="Solina Knights">
 		<!-- TODO: Must be confirmed -->
@@ -492,7 +492,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -503,13 +503,13 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="28.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="14109" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gauntlets -->
 				<item id="14110" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Boots -->
@@ -524,10 +524,10 @@
 				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
 				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27411" level="84" type="L2Monster" name="Divinity Manager">
 		<!-- TODO: Must be confirmed -->
@@ -552,7 +552,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -561,14 +561,14 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="6309" level="1" /> <!-- Pain of the Ascetic -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="437" max="1019" chance="70" /> <!-- Adena -->
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
@@ -580,10 +580,10 @@
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27412" level="84" type="L2Monster" name="Divinity Supervisor">
 		<!-- TODO: Must be confirmed -->
@@ -608,7 +608,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -617,13 +617,13 @@
 			<skill id="6317" level="1" /> <!-- Divinity Tacit -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="13" />
 			<height normal="47" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="486" max="1135" chance="70" /> <!-- Adena -->
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
@@ -635,10 +635,10 @@
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27413" level="84" type="L2Monster" name="Divinity Fighter">
 		<!-- TODO: Must be confirmed -->
@@ -663,7 +663,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -672,13 +672,13 @@
 			<skill id="6328" level="1" /> <!-- Fighter Judgement -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="49" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="844" max="1972" chance="70" /> <!-- Adena -->
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
@@ -690,10 +690,10 @@
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27414" level="84" type="L2Monster" name="Divinity Magus">
 		<!-- TODO: Must be confirmed -->
@@ -719,7 +719,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="6321" level="1" /> <!-- Divine Flash -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -728,13 +728,13 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="18" />
 			<height normal="44" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="905" max="2114" chance="70" /> <!-- Adena -->
 				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
@@ -756,10 +756,10 @@
 			<spoil>
 				<item id="9551" min="1" max="1" chance="1.071" /> <!-- Holy Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27415" level="83" type="L2Monster" name="Solina Guide">
 		<!-- TODO: Must be confirmed -->
@@ -784,7 +784,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
@@ -793,14 +793,14 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="6303" level="1" /> <!-- Trial of the Coup -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
@@ -820,10 +820,10 @@
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27416" level="80" type="L2Monster" name="Relic Manager Golem">
 		<!-- TODO: Must be confirmed -->
@@ -848,7 +848,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6515" level="1" /> <!-- Unholy Attack -->
@@ -858,7 +858,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
@@ -891,7 +891,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="9" /> <!-- Bows -->
@@ -901,7 +901,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="11" />
@@ -933,7 +933,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6515" level="1" /> <!-- Unholy Attack -->
@@ -942,7 +942,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="10" />
@@ -970,7 +970,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
@@ -980,7 +980,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
@@ -1009,7 +1009,7 @@
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -1018,7 +1018,7 @@
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4047" level="1" /> <!-- Hold -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<status undying="false" />
 		<collision>
@@ -1051,11 +1051,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TOMB</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4789" level="7" /> <!-- High Lv. -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
@@ -1065,7 +1065,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="11" />
@@ -1101,11 +1101,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TOMB</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
 			<skill id="4789" level="7" /> <!-- High Lv. -->
@@ -1116,7 +1116,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="9" />
@@ -1150,11 +1150,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TOMB</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4157" level="1" /> <!-- Blaze -->
 			<skill id="4789" level="6" /> <!-- High Lv. -->
@@ -1163,7 +1163,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="10" />
@@ -1195,11 +1195,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>TOMB</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
 			<skill id="4789" level="6" /> <!-- High Lv. -->
@@ -1210,7 +1210,7 @@
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
-		</skill_list>
+		</skillList>
 		<status undying="false" />
 		<collision>
 			<radius normal="10" grown="12" />
@@ -1244,7 +1244,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -1254,7 +1254,7 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4180" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -1288,7 +1288,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -1299,7 +1299,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4180" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -1333,7 +1333,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -1342,7 +1342,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4180" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -1376,7 +1376,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -1387,7 +1387,7 @@
 			<skill id="4203" level="1" /> <!-- Decrease Speed -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -1421,7 +1421,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -1432,7 +1432,7 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4180" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -1463,7 +1463,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6527" level="1" /> <!-- Unholy Magic -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -1471,11 +1471,11 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>THIRD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21.12" />
@@ -1506,7 +1506,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6515" level="1" /> <!-- Unholy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -1514,11 +1514,11 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>THIRD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -1550,18 +1550,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>THIRD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -1592,18 +1592,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="7" /> <!-- Dagger -->
 			<skill id="4065" level="1" /> <!-- Heal -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>THIRD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" />
@@ -1635,18 +1635,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>THIRD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -1676,11 +1676,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="7" />
@@ -1710,11 +1710,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" />
@@ -1747,18 +1747,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -1776,7 +1776,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27438" level="85" type="L2Monster" name="Krakia Carcass" title="Yul Archer">
 		<!-- TODO: Must be confirmed -->
@@ -1805,18 +1805,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -1834,7 +1834,7 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27439" level="85" type="L2Monster" name="Krakia Lotus" title="Wynn Summoner">
 		<!-- TODO: Must be confirmed -->
@@ -1863,18 +1863,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -1892,7 +1892,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27440" level="85" type="L2Monster" name="Rakzan" title="Sigel Knight">
 		<!-- TODO: Must be confirmed -->
@@ -1920,18 +1920,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="65" grown="48" />
 			<height normal="79" grown="93" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -1949,7 +1949,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27441" level="85" type="L2Monster" name="Weiss Khan" title="Feoh Wizard">
 		<!-- TODO: Must be confirmed -->
@@ -1978,18 +1978,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -2007,7 +2007,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27442" level="85" type="L2Monster" name="Bamonti" title="Othell Rogue">
 		<!-- TODO: Must be confirmed -->
@@ -2035,18 +2035,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="19" grown="14" />
 			<height normal="43" grown="50" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -2063,7 +2063,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27443" level="85" type="L2Monster" name="Seknus" title="Iss Enchanter">
 		<!-- TODO: Must be confirmed -->
@@ -2092,18 +2092,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="21" />
 			<height normal="69" grown="76" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -2122,7 +2122,7 @@
 			<skill id="14448" level="1" /> <!-- Blink -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27444" level="87" type="L2Monster" name="Noctum" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2146,16 +2146,16 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14449" level="1" /> <!-- Dedicated Blow -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
 				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
@@ -2186,10 +2186,10 @@
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="50" />
 			<height normal="60.5" />
@@ -2233,7 +2233,7 @@
 			<radius normal="50" />
 			<height normal="100" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -2264,7 +2264,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14449" level="1" /> <!-- Dedicated Blow -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27446" level="86" type="L2Monster" name="Demonic Bathus" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2284,7 +2284,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2292,13 +2292,13 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
@@ -2312,10 +2312,10 @@
 				<item id="40205" min="1" max="1" chance="14.69" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27447" level="86" type="L2Monster" name="Demonic Carcass" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2339,7 +2339,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2347,13 +2347,13 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
@@ -2366,10 +2366,10 @@
 				<item id="36533" min="1" max="1" chance="1.419" /> <!-- Synthetic Braid -->
 				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27448" level="86" type="L2Monster" name="Demonic Rakzan" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2389,7 +2389,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2397,13 +2397,13 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="42" grown="48" />
 			<height normal="79" grown="93" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
@@ -2418,10 +2418,10 @@
 				<item id="40205" min="1" max="1" chance="14.16" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27449" level="85" type="L2Monster" name="Demonic Weiss Khan" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2444,7 +2444,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -2452,13 +2452,13 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
 				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
@@ -2470,10 +2470,10 @@
 				<item id="36532" min="1" max="1" chance="10.94" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="2.011" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27450" level="86" type="L2Monster" name="Demonic Bamonti" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2496,7 +2496,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2504,13 +2504,13 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14447" level="1" /> <!-- Chains of Hatred -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="19" grown="14" />
 			<height normal="43" grown="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17323" min="1" max="1" chance="0.075" /> <!-- Immortal Ring -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
@@ -2525,10 +2525,10 @@
 				<item id="36557" min="1" max="1" chance="4.944" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27451" level="29" type="L2Monster" name="Kanilov" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2552,7 +2552,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -2561,7 +2561,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4073" level="1" /> <!-- Stun -->
 			<skill id="14093" level="1" /> <!-- Sakum Follower Blow -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
@@ -2590,7 +2590,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -2599,7 +2599,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4073" level="1" /> <!-- Stun -->
 			<skill id="14094" level="1" /> <!-- Sakum Follower Blow -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
@@ -2628,7 +2628,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2638,7 +2638,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14095" level="1" /> <!-- Sakum Chaos -->
 			<skill id="14352" level="1" /> <!-- Sakum Chaos -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -2672,18 +2672,18 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
 				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="18" grown="12" />
 			<height normal="35" grown="42" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -2700,7 +2700,7 @@
 			<skill id="14609" level="1" /> <!-- Cry of Destiny - Dark Blast -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="27456" level="10" type="L2Monster" name="Wisp">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2721,10 +2721,10 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="10" />
@@ -2750,11 +2750,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
@@ -2780,7 +2780,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2789,7 +2789,7 @@
 			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4416" level="20" /> <!-- Non-living Beings -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="10" />
@@ -2819,7 +2819,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2828,7 +2828,7 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
@@ -2858,7 +2858,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -2868,7 +2868,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4073" level="1" /> <!-- Stun -->
 			<skill id="14094" level="5" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
@@ -2898,7 +2898,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2906,7 +2906,7 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14095" level="1" /> <!-- Sakum Chaos -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="18" />
@@ -2938,7 +2938,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2952,13 +2952,13 @@
 			<skill id="14674" level="1" /> <!-- Cry of Destiny - Chain Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="65" grown="48" />
 			<height normal="79" grown="93" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
@@ -2969,10 +2969,10 @@
 				<item id="36532" min="1" max="1" chance="9.197" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="1.782" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27463" level="86" type="L2Monster" name="Krakia Bathus" title="Tyrr Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2999,7 +2999,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3013,13 +3013,13 @@
 			<skill id="14677" level="1" /> <!-- Cry of Destiny - Giant Punch -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
@@ -3032,10 +3032,10 @@
 				<item id="40205" min="1" max="1" chance="12.57" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27464" level="86" type="L2Monster" name="Bamonti" title="Othell Rogue">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3062,7 +3062,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3075,13 +3075,13 @@
 			<skill id="14679" level="1" /> <!-- Cry of Destiny - Heart Breaker -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="19" grown="14" />
 			<height normal="43" grown="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17323" min="1" max="1" chance="0.03" /> <!-- Immortal Ring -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
@@ -3095,10 +3095,10 @@
 				<item id="36557" min="1" max="1" chance="4.254" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27465" level="86" type="L2Monster" name="Krakia Carcass" title="Yul Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3126,7 +3126,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3140,13 +3140,13 @@
 			<skill id="14682" level="1" /> <!-- Cry of Destiny - Pinpoint Shot -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
@@ -3160,10 +3160,10 @@
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27466" level="85" type="L2Monster" name="Weiss Khan" title="Feoh Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3191,7 +3191,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -3205,13 +3205,13 @@
 			<skill id="14685" level="1" /> <!-- Cry of Destiny - Elemental Spike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
@@ -3224,10 +3224,10 @@
 				<item id="40205" min="1" max="1" chance="12.64" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27467" level="85" type="L2Monster" name="Seknus" title="Iss Enchanter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3255,7 +3255,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="5" /> <!-- Very Weak M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -3269,13 +3269,13 @@
 			<skill id="14692" level="1" /> <!-- Cry of Destiny - Death Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" />
 			<height normal="69" grown="76" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
@@ -3290,10 +3290,10 @@
 				<item id="36518" min="1" max="1" chance="3.493" /> <!-- Durable Leather -->
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27468" level="87" type="L2Monster" name="Krakia Lotus" title="Wynn Summoner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3321,7 +3321,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -3335,13 +3335,13 @@
 			<skill id="14689" level="1" /> <!-- Cry of Destiny - Mark of Plague -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets -->
 				<item id="57" min="916" max="2136" chance="20" /> <!-- Adena -->
@@ -3353,10 +3353,10 @@
 				<item id="40205" min="1" max="1" chance="12.9" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27469" level="85" type="L2Monster" name="Weiss Ele" title="Aeore Healer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3384,7 +3384,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4225" level="5" /> <!-- Stun Resistance -->
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 			<skill id="4287" level="5" /> <!-- Hold Resistance -->
@@ -3392,13 +3392,13 @@
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="18" grown="12" />
 			<height normal="35" grown="42" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
@@ -3412,10 +3412,10 @@
 				<item id="40205" min="1" max="1" chance="12.04" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27470" level="70" type="L2Monster" name="Shilen's Messenger Cabrio" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3446,12 +3446,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="4180" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="18" />
@@ -3482,13 +3482,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4208" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="11" />
@@ -3519,11 +3519,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="6" />
@@ -3561,12 +3561,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4195" level="1" /> <!-- Twister -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="24" grown="29" />
@@ -3598,12 +3598,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4168" level="1" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" grown="25" />
@@ -3634,11 +3634,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -3669,11 +3669,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4177" level="1" /> <!-- Cancel -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="42" />
@@ -3710,12 +3710,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4197" level="1" /> <!-- Hold -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="21" grown="25" />
@@ -3748,12 +3748,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4194" level="1" /> <!-- Aura Burn -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="15" grown="25" />
@@ -3785,12 +3785,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4169" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -3821,15 +3821,15 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="450" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VI_NIGHTMARE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="6" />
@@ -3862,7 +3862,7 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
@@ -3872,7 +3872,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="25" />
@@ -3898,10 +3898,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="10" />
@@ -3927,10 +3927,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="0.1" />
@@ -3956,10 +3956,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="0.1" />
@@ -3984,10 +3984,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="5" /> <!-- Plants -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="12" />
@@ -4013,11 +4013,11 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600" />
 		<collision>
 			<radius normal="0.1" />
@@ -4043,11 +4043,11 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600" />
 		<collision>
 			<radius normal="0.1" />
@@ -4073,11 +4073,11 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600" />
 		<collision>
 			<radius normal="0.1" />
@@ -4103,11 +4103,11 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600" />
 		<collision>
 			<radius normal="0.1" />
@@ -4133,10 +4133,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
@@ -4163,16 +4163,16 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="22.88" />
 			<height normal="41.6" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17415" min="1" max="1" chance="0.003" /> <!-- Seraph Ring -->
 				<item id="17391" min="1" max="1" chance="0.0009" /> <!-- Specter Caster -->
@@ -4199,10 +4199,10 @@
 				<item id="40206" min="1" max="1" chance="6.312" /> <!-- Specter Fragment -->
 				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="27493" level="85" type="L2Monster" name="Grotesque Bug">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4223,10 +4223,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="17" />
 			<height normal="20" />
@@ -4251,11 +4251,11 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="35" />
@@ -4280,11 +4280,11 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="37" />
@@ -4309,10 +4309,10 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="17" />
@@ -4335,9 +4335,9 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="47" />
@@ -4360,9 +4360,9 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="29" />
 			<height normal="39" />
@@ -4385,14 +4385,14 @@
 			</attribute>
 		</stats>
 		<status attackable="false" randomWalk="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4405,6 +4405,6 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

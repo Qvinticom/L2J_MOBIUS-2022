@@ -17,13 +17,13 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -36,10 +36,10 @@
 				<item id="36543" min="1" max="1" chance="1.364" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="39.5" />
@@ -63,13 +63,13 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -82,10 +82,10 @@
 				<item id="36538" min="1" max="1" chance="1.888" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="40" />
@@ -108,13 +108,13 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -127,10 +127,10 @@
 				<item id="36518" min="1" max="1" chance="7.489" /> <!-- Durable Leather -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
@@ -153,13 +153,13 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -172,10 +172,10 @@
 				<item id="36543" min="1" max="1" chance="1.366" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="37" />
@@ -198,13 +198,13 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -217,10 +217,10 @@
 				<item id="36538" min="1" max="1" chance="1.858" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="36" />

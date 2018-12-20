@@ -400,7 +400,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -415,8 +415,8 @@
 			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6655" level="1" /> <!-- Tarsque Carapace -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="63" />

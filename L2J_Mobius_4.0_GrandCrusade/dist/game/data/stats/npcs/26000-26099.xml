@@ -27,7 +27,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -35,8 +35,8 @@
 			<skill id="16249" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17306" min="1" max="1" chance="15.38" /> <!-- Immortal Gaiters -->
 				<item id="17305" min="1" max="1" chance="14.83" /> <!-- Immortal Breastplate -->
@@ -109,10 +109,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="56" />
@@ -146,15 +146,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16250" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17312" min="1" max="1" chance="15.17" /> <!-- Immortal Leather Leggings -->
 				<item id="17311" min="1" max="1" chance="15.12" /> <!-- Immortal Leather Armor -->
@@ -227,10 +227,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="52" />
@@ -263,15 +263,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16251" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17316" min="1" max="1" chance="15.63" /> <!-- Immortal Tunic -->
 				<item id="17317" min="1" max="1" chance="14.91" /> <!-- Immortal Stockings -->
@@ -344,10 +344,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="44" />
@@ -381,15 +381,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16252" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17305" min="1" max="1" chance="14.84" /> <!-- Immortal Breastplate -->
 				<item id="17306" min="1" max="1" chance="14.78" /> <!-- Immortal Gaiters -->
@@ -462,10 +462,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="42" />
@@ -499,15 +499,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16253" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17312" min="1" max="1" chance="15.53" /> <!-- Immortal Leather Leggings -->
 				<item id="17311" min="1" max="1" chance="14.54" /> <!-- Immortal Leather Armor -->
@@ -580,10 +580,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="45" />
@@ -616,7 +616,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -624,8 +624,8 @@
 			<skill id="16254" level="1" /> <!-- 92Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17316" min="1" max="1" chance="15.6" /> <!-- Immortal Tunic -->
 				<item id="17317" min="1" max="1" chance="14.26" /> <!-- Immortal Stockings -->
@@ -698,10 +698,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
@@ -726,13 +726,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
@@ -757,13 +757,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="26.5" />
@@ -788,12 +788,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -818,11 +818,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="32" />
@@ -847,12 +847,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -885,7 +885,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -893,8 +893,8 @@
 			<skill id="16242" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17307" min="1" max="1" chance="12.45" /> <!-- Immortal Gauntlets -->
 				<item id="17309" min="1" max="1" chance="12.45" /> <!-- Immortal Shield -->
@@ -970,10 +970,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="80" />
 			<height normal="60" />
@@ -1006,15 +1006,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16243" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17309" min="1" max="1" chance="12.51" /> <!-- Immortal Shield -->
 				<item id="17313" min="1" max="1" chance="11.89" /> <!-- Immortal Leather Gloves -->
@@ -1090,10 +1090,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="33" grown="39.6" />
 			<height normal="49" grown="60.5" />
@@ -1126,15 +1126,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16244" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17318" min="1" max="1" chance="12.52" /> <!-- Immortal Gloves -->
 				<item id="17319" min="1" max="1" chance="12.37" /> <!-- Immortal Shoes -->
@@ -1210,10 +1210,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.5985" />
@@ -1247,15 +1247,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16245" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17308" min="1" max="1" chance="12.48" /> <!-- Immortal Boots -->
 				<item id="17309" min="1" max="1" chance="11.7" /> <!-- Immortal Shield -->
@@ -1331,10 +1331,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="56" />
@@ -1367,15 +1367,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16246" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17320" min="1" max="1" chance="12.42" /> <!-- Immortal Sigil -->
 				<item id="17313" min="1" max="1" chance="12.31" /> <!-- Immortal Leather Gloves -->
@@ -1451,10 +1451,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="80" />
@@ -1488,7 +1488,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1496,8 +1496,8 @@
 			<skill id="16247" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17315" min="1" max="1" chance="12.21" /> <!-- Immortal Circlet -->
 				<item id="17319" min="1" max="1" chance="11.94" /> <!-- Immortal Shoes -->
@@ -1573,10 +1573,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="37" />
 			<height normal="98" />
@@ -1600,13 +1600,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="23" />
@@ -1631,13 +1631,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -1661,12 +1661,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="55" />
@@ -1690,11 +1690,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -1718,12 +1718,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -1756,7 +1756,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1764,8 +1764,8 @@
 			<skill id="16304" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -1843,10 +1843,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" />
 			<height normal="75" />
@@ -1880,7 +1880,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -1888,8 +1888,8 @@
 			<skill id="16305" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -1967,10 +1967,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="54" />
@@ -2003,7 +2003,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2011,8 +2011,8 @@
 			<skill id="16306" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -2090,10 +2090,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="50" />
@@ -2127,7 +2127,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2135,8 +2135,8 @@
 			<skill id="16307" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -2214,10 +2214,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="54" />
@@ -2250,7 +2250,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2258,8 +2258,8 @@
 			<skill id="16308" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -2337,10 +2337,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="50" />
@@ -2373,7 +2373,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2381,8 +2381,8 @@
 			<skill id="16309" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -2460,10 +2460,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="54" />
@@ -2487,12 +2487,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -2517,12 +2517,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="23.5" />
@@ -2546,11 +2546,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="23.5" />
@@ -2575,11 +2575,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="25.4" />
@@ -2603,12 +2603,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -2633,7 +2633,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2641,8 +2641,8 @@
 			<skill id="16292" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -2720,10 +2720,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="120" />
@@ -2748,7 +2748,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2756,8 +2756,8 @@
 			<skill id="16293" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -2835,10 +2835,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="62" />
@@ -2863,7 +2863,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2871,8 +2871,8 @@
 			<skill id="16294" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -2950,10 +2950,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="26" />
 			<height normal="60" />
@@ -2978,7 +2978,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -2986,8 +2986,8 @@
 			<skill id="16295" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -3065,10 +3065,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="66" />
@@ -3093,7 +3093,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3101,8 +3101,8 @@
 			<skill id="16296" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -3180,10 +3180,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="68" />
@@ -3207,7 +3207,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3215,8 +3215,8 @@
 			<skill id="16297" level="1" /> <!-- 98Lv. Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -3294,10 +3294,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="54" />
@@ -3321,12 +3321,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
@@ -3351,12 +3351,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
@@ -3380,11 +3380,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="33" />
@@ -3408,11 +3408,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="38" />
@@ -3435,12 +3435,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />
@@ -3473,7 +3473,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3481,8 +3481,8 @@
 			<skill id="16280" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17396" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet -->
 				<item id="17399" min="1" max="1" chance="0.75" /> <!-- Seraph Gauntlets -->
@@ -3563,10 +3563,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="55.5" />
@@ -3599,7 +3599,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3607,8 +3607,8 @@
 			<skill id="16281" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
 				<item id="17402" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Helmet -->
@@ -3689,10 +3689,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="33" />
 			<height normal="57" />
@@ -3726,7 +3726,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3734,8 +3734,8 @@
 			<skill id="16282" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
 				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet -->
@@ -3816,10 +3816,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="47" />
@@ -3852,7 +3852,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3860,8 +3860,8 @@
 			<skill id="16283" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17396" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet -->
 				<item id="17399" min="1" max="1" chance="0.75" /> <!-- Seraph Gauntlets -->
@@ -3942,10 +3942,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="33" />
 			<height normal="57" />
@@ -3979,7 +3979,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -3987,8 +3987,8 @@
 			<skill id="16284" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
 				<item id="17402" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Helmet -->
@@ -4069,10 +4069,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="47" />
@@ -4105,7 +4105,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -4113,8 +4113,8 @@
 			<skill id="16285" level="1" /> <!-- 97Lv. Raid Boss -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
 				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet -->
@@ -4195,10 +4195,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="58" />
 			<height normal="52.5" />
@@ -4222,12 +4222,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="39.5" />
@@ -4252,12 +4252,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="34.5" />
@@ -4282,11 +4282,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -4311,11 +4311,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -4340,12 +4340,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -4370,7 +4370,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -4378,8 +4378,8 @@
 			<skill id="16255" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17341" min="1" max="1" chance="6.06" /> <!-- Twilight Gauntlets -->
 				<item id="17343" min="1" max="1" chance="6.049" /> <!-- Twilight Shield -->
@@ -4455,10 +4455,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="80" />
 			<height normal="91" />
@@ -4483,15 +4483,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16256" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17348" min="1" max="1" chance="6.063" /> <!-- Twilight Leather Boots -->
 				<item id="17354" min="1" max="1" chance="5.969" /> <!-- Twilight Sigil -->
@@ -4567,10 +4567,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="78" />
@@ -4595,15 +4595,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16257" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17349" min="1" max="1" chance="6.067" /> <!-- Twilight Circlet -->
 				<item id="17354" min="1" max="1" chance="6.065" /> <!-- Twilight Sigil -->
@@ -4679,10 +4679,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="77" />
@@ -4707,15 +4707,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16258" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17354" min="1" max="1" chance="6.068" /> <!-- Twilight Sigil -->
 				<item id="17341" min="1" max="1" chance="6.061" /> <!-- Twilight Gauntlets -->
@@ -4791,10 +4791,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="78" />
@@ -4819,15 +4819,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16259" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17354" min="1" max="1" chance="6.054" /> <!-- Twilight Sigil -->
 				<item id="17348" min="1" max="1" chance="6.047" /> <!-- Twilight Leather Boots -->
@@ -4903,10 +4903,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" />
 			<height normal="59" />
@@ -4931,7 +4931,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -4939,8 +4939,8 @@
 			<skill id="16260" level="1" /> <!-- 93Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17349" min="1" max="1" chance="6.066" /> <!-- Twilight Circlet -->
 				<item id="17352" min="1" max="1" chance="6.055" /> <!-- Twilight Gloves -->
@@ -5016,10 +5016,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="45" />
 			<height normal="86" />
@@ -5044,13 +5044,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="51" />
@@ -5075,13 +5075,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="54" />
@@ -5105,12 +5105,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="36.5" />
@@ -5135,11 +5135,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="56" />
@@ -5163,12 +5163,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="67" />
@@ -5201,7 +5201,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -5209,8 +5209,8 @@
 			<skill id="16268" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17339" min="1" max="1" chance="9.98" /> <!-- Twilight Breastplate -->
 				<item id="17340" min="1" max="1" chance="9.977" /> <!-- Twilight Gaiters -->
@@ -5283,10 +5283,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="50" />
 			<height normal="71" />
@@ -5319,15 +5319,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16269" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17346" min="1" max="1" chance="10.065" /> <!-- Twilight Leather Leggings -->
 				<item id="17345" min="1" max="1" chance="9.938" /> <!-- Twilight Leather Armor -->
@@ -5400,10 +5400,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="56" />
@@ -5437,15 +5437,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16270" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17351" min="1" max="1" chance="10.004" /> <!-- Twilight Stockings -->
 				<item id="17350" min="1" max="1" chance="9.946" /> <!-- Twilight Tunic -->
@@ -5518,10 +5518,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -5555,15 +5555,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16271" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17340" min="1" max="1" chance="9.993" /> <!-- Twilight Gaiters -->
 				<item id="17339" min="1" max="1" chance="9.943" /> <!-- Twilight Breastplate -->
@@ -5636,10 +5636,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="32" />
 			<height normal="55" />
@@ -5673,15 +5673,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16272" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17345" min="1" max="1" chance="10.069" /> <!-- Twilight Leather Armor -->
 				<item id="17346" min="1" max="1" chance="10.027" /> <!-- Twilight Leather Leggings -->
@@ -5754,10 +5754,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -5790,7 +5790,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -5798,8 +5798,8 @@
 			<skill id="16273" level="1" /> <!-- 94Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17351" min="1" max="1" chance="10.036" /> <!-- Twilight Stockings -->
 				<item id="17350" min="1" max="1" chance="9.977" /> <!-- Twilight Tunic -->
@@ -5872,10 +5872,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="44" />
 			<height normal="51" />
@@ -5900,13 +5900,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
@@ -5931,13 +5931,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="34" />
@@ -5962,12 +5962,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -5992,11 +5992,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -6021,13 +6021,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -6060,7 +6060,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -6068,8 +6068,8 @@
 			<skill id="16236" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17307" min="1" max="1" chance="12.31" /> <!-- Immortal Gauntlets -->
 				<item id="17320" min="1" max="1" chance="12.28" /> <!-- Immortal Sigil -->
@@ -6145,10 +6145,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
@@ -6182,15 +6182,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16237" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17313" min="1" max="1" chance="12.56" /> <!-- Immortal Leather Gloves -->
 				<item id="17320" min="1" max="1" chance="12.55" /> <!-- Immortal Sigil -->
@@ -6266,10 +6266,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="75" />
@@ -6302,15 +6302,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16238" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17320" min="1" max="1" chance="12.28" /> <!-- Immortal Sigil -->
 				<item id="17319" min="1" max="1" chance="12.04" /> <!-- Immortal Shoes -->
@@ -6386,10 +6386,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="66" />
@@ -6423,15 +6423,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16239" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17308" min="1" max="1" chance="12.5" /> <!-- Immortal Boots -->
 				<item id="17320" min="1" max="1" chance="12.38" /> <!-- Immortal Sigil -->
@@ -6507,10 +6507,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="75" />
@@ -6543,15 +6543,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16240" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17313" min="1" max="1" chance="12.43" /> <!-- Immortal Leather Gloves -->
 				<item id="17314" min="1" max="1" chance="12.12" /> <!-- Immortal Leather Boots -->
@@ -6627,10 +6627,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="66" />
@@ -6663,7 +6663,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
@@ -6671,8 +6671,8 @@
 			<skill id="16241" level="1" /> <!-- 88Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17318" min="1" max="1" chance="12.57" /> <!-- Immortal Gloves -->
 				<item id="17319" min="1" max="1" chance="12.28" /> <!-- Immortal Shoes -->
@@ -6748,10 +6748,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="38" />
 			<height normal="60" />
@@ -6775,13 +6775,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -6806,13 +6806,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="22" />
@@ -6836,12 +6836,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="43" />
@@ -6865,11 +6865,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="43" />
@@ -6894,13 +6894,13 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="4" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="34.5" />
@@ -6920,9 +6920,9 @@
 			<defence physical="156.58914728682" magical="115.05309417379" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="70" />
@@ -6943,9 +6943,9 @@
 			<defence physical="156.58914728682" magical="115.05309417379" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="94" />
@@ -6970,19 +6970,19 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="68" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="39385" min="1" max="1" chance="100" /> <!-- Lv. 5 Windy CHA Dye -->
 				<item id="39390" min="1" max="1" chance="100" /> <!-- Lv. 5 Windy LUC Dye -->
@@ -7009,7 +7009,7 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26091" level="40" type="L2Monster" name="Aspiring Orc Ruler of Aden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -7026,9 +7026,9 @@
 			<defence physical="156.58914728682" magical="115.05309417379" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="94" />
@@ -7048,9 +7048,9 @@
 			<defence physical="3680.3191489362" magical="2133.5047930793" />
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="77" />
 			<height normal="120" />
@@ -7075,12 +7075,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="49.5" />
@@ -7104,12 +7104,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="34" />
@@ -7133,12 +7133,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
@@ -7161,12 +7161,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="49" />
@@ -7189,12 +7189,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />
@@ -7218,12 +7218,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5466" level="1" /> <!-- Holy Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
@@ -7247,12 +7247,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="35.6" />

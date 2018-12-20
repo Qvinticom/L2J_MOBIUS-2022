@@ -15,14 +15,14 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -43,14 +43,14 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="50" />
@@ -73,13 +73,13 @@
 				<attack type="FIRE" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="78.88" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="19.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -165,7 +165,7 @@
 				<item id="46464" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46449" min="1" max="1" chance="0.003" /> <!-- Kain's Soul Crystal - Stage 6 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="51" />
@@ -187,14 +187,14 @@
 				<attack type="FIRE" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="55" />
@@ -216,14 +216,14 @@
 				<attack type="FIRE" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="39.5" />
@@ -247,7 +247,7 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -260,7 +260,7 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -284,7 +284,7 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -297,7 +297,7 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -320,7 +320,7 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -333,7 +333,7 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -356,7 +356,7 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -369,7 +369,7 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -392,7 +392,7 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -405,7 +405,7 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -428,7 +428,7 @@
 				<attack type="WATER" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -441,7 +441,7 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -464,7 +464,7 @@
 				<attack type="FIRE" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -479,8 +479,8 @@
 			<skill id="14371" level="1" /> <!-- Flame Slash -->
 			<skill id="14370" level="1" /> <!-- Flame Earth Summon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
@@ -728,10 +728,10 @@
 				<item id="46464" min="1" max="1" chance="0.00062149116446728" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.00062149116446728" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" />
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -754,7 +754,7 @@
 				<attack type="FIRE" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -769,8 +769,8 @@
 			<skill id="14371" level="1" /> <!-- Flame Slash -->
 			<skill id="14370" level="1" /> <!-- Flame Earth Summon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
@@ -1018,10 +1018,10 @@
 				<item id="46464" min="1" max="1" chance="0.00062149116446728" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.00062149116446728" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" />
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -1044,7 +1044,7 @@
 				<attack type="FIRE" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -1059,8 +1059,8 @@
 			<skill id="14371" level="1" /> <!-- Flame Slash -->
 			<skill id="14370" level="1" /> <!-- Flame Earth Summon -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
@@ -1308,10 +1308,10 @@
 				<item id="46464" min="1" max="1" chance="0.00062149116446728" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.00062149116446728" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" />
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -1334,7 +1334,7 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -1345,8 +1345,8 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="80.34" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="20.7" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1410,7 +1410,7 @@
 				<item id="46449" min="1" max="1" chance="0.003" /> <!-- Kain's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.003" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -1434,7 +1434,7 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -1445,8 +1445,8 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="19440" min="2" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
@@ -1476,7 +1476,7 @@
 				<item id="46464" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.003" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -1500,7 +1500,7 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -1511,8 +1511,8 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="81.42" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="20.18" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1593,7 +1593,7 @@
 				<item id="46464" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.003" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -1616,7 +1616,7 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -1627,8 +1627,8 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="81.42" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="20.18" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1709,7 +1709,7 @@
 				<item id="46464" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.003" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -1732,7 +1732,7 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -1743,8 +1743,8 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
@@ -1992,10 +1992,10 @@
 				<item id="46464" min="1" max="1" chance="0.00062544302214068" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.00062544302214068" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" />
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -2018,7 +2018,7 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -2029,8 +2029,8 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="25000000" max="35000000" chance="100" /> <!-- Adena -->
 				<item id="38025" min="1" max="1" chance="0.299999999999997" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
@@ -2278,10 +2278,10 @@
 				<item id="46464" min="1" max="1" chance="0.00062544302214068" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.00062544302214068" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" />
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -2319,7 +2319,7 @@
 				<run ground="270" />
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<!-- TODO: NEED TO CHECK RETAIL -->
 			<skill id="23688" level="1" /> <!-- Reflection Armor -->
 			<skill id="23689" level="1" /> <!-- Fury of Kelbim -->
@@ -2334,13 +2334,13 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16517" level="1" /> <!-- Kelbim -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>KELBIM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17437" min="1" max="1" chance="2.551" /> <!-- Eternal Leather Armor -->
 				<item id="17442" min="1" max="1" chance="2.543" /> <!-- Eternal Tunic -->
@@ -2428,7 +2428,7 @@
 				<item id="38046" min="1" max="1" chance="0.3" /> <!-- Helios Avenger Crafting Pack -->
 				<item id="38047" min="1" max="1" chance="0.3" /> <!-- Helios Fighter Crafting Pack -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="54" />
@@ -2464,15 +2464,15 @@
 				<run ground="270" />
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>KELBIM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" />
@@ -2493,15 +2493,15 @@
 				<run ground="270" />
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>KELBIM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" />
@@ -2520,12 +2520,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="54" />
@@ -2542,10 +2542,10 @@
 				<run ground="270" />
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -2562,10 +2562,10 @@
 				<run ground="270" />
 			</speed>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="32" />
@@ -2595,14 +2595,14 @@
 				<attack type="WIND" value="430" />
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16517" level="2" /> <!-- Isabella -->
 			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="36389" min="1" max="1" chance="81.94" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="20.99" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
@@ -2668,7 +2668,7 @@
 				<item id="46479" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 6 -->
 				<item id="46509" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="67.5" />
@@ -2686,10 +2686,10 @@
 			<attack physical="47619.04761904762" magical="8403.361344537815" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3703.703703703704" magical="2150.537634408602" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="46" />
 			<height normal="50" />
@@ -2707,10 +2707,10 @@
 			<attack physical="47619.04761904762" magical="8403.361344537815" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3703.703703703704" magical="2150.537634408602" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="46" />
 			<height normal="50" />
@@ -2730,18 +2730,18 @@
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="25.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="23299" max="54277" chance="70" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="1.075" /> <!-- Eternal Leather Helmet Ingredient -->
@@ -2752,10 +2752,10 @@
 			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26135" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
 		<!-- Source: www.l2wiki.com -->
@@ -2770,10 +2770,10 @@
 			<attack physical="49047.61904761905" magical="8655.46218487395" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3814.814814814815" magical="2215.05376344086" />
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="29.5" />
@@ -2795,12 +2795,12 @@
 				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370"/>
 			</attribute>
 		</stats>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.26" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36574" min="1" max="1" chance="50.36" /> <!-- Scroll: Modify Weapon (R-grade) -->
@@ -2888,10 +2888,10 @@
 				<item id="46465" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
 				<item id="46450" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 7 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="28.25" />

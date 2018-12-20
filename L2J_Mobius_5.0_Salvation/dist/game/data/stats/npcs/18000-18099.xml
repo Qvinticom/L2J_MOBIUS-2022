@@ -21,11 +21,11 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
@@ -41,28 +41,28 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="400" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignore_npc_id>20134</ignore_npc_id> <!-- Cave Maiden -->
-				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
-				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
-				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
-				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
-				<ignore_npc_id>20240</ignore_npc_id> <!-- Royal Cave Servant -->
-				<ignore_npc_id>20246</ignore_npc_id> <!-- Cave Keeper -->
-				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
-				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
-				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
-				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
-				<ignore_npc_id>20276</ignore_npc_id> <!-- Royal Cave Servant -->
-				<ignore_npc_id>20277</ignore_npc_id> <!-- Cave Keeper -->
-				<ignore_npc_id>20287</ignore_npc_id> <!-- Cave Maiden -->
-			</clan_list>
+				<ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2397" min="1" max="1" chance="0.03" /> <!-- Tunic of Zubei -->
 				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Stockings of Zubei -->
@@ -71,10 +71,10 @@
 				<item id="4069" min="1" max="1" chance="2.429" /> <!-- Tunic of Zubei Fabric -->
 				<item id="4071" min="1" max="1" chance="1.809" /> <!-- Avadon Robe Fabric -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="40" />
@@ -101,11 +101,11 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
@@ -120,32 +120,32 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignore_npc_id>20134</ignore_npc_id> <!-- Cave Maiden -->
-				<ignore_npc_id>20236</ignore_npc_id> <!-- Cave Servant -->
-				<ignore_npc_id>20237</ignore_npc_id> <!-- Cave Servant Archer -->
-				<ignore_npc_id>20238</ignore_npc_id> <!-- Cave Servant Warrior -->
-				<ignore_npc_id>20239</ignore_npc_id> <!-- Cave Servant Captain -->
-				<ignore_npc_id>20240</ignore_npc_id> <!-- Royal Cave Servant -->
-				<ignore_npc_id>20246</ignore_npc_id> <!-- Cave Keeper -->
-				<ignore_npc_id>20272</ignore_npc_id> <!-- Cave Servant -->
-				<ignore_npc_id>20273</ignore_npc_id> <!-- Cave Servant Archer -->
-				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
-				<ignore_npc_id>20275</ignore_npc_id> <!-- Cave Servant Captain -->
-				<ignore_npc_id>20276</ignore_npc_id> <!-- Royal Cave Servant -->
-				<ignore_npc_id>20277</ignore_npc_id> <!-- Cave Keeper -->
-				<ignore_npc_id>20287</ignore_npc_id> <!-- Cave Maiden -->
-			</clan_list>
+				<ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
+				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+				<ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2397" min="1" max="1" chance="0.03" /> <!-- Tunic of Zubei -->
 				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Stockings of Zubei -->
@@ -154,10 +154,10 @@
 				<item id="4069" min="1" max="1" chance="2.429" /> <!-- Tunic of Zubei Fabric -->
 				<item id="4071" min="1" max="1" chance="1.809" /> <!-- Avadon Robe Fabric -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="18003" level="1" type="L2Monster" name="Nepetir">
 		<!-- Confirmed CT2.5 -->
@@ -177,11 +177,11 @@
 				<walk ground="23" />
 				<run ground="110" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -191,8 +191,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="9.5" />
@@ -212,11 +212,11 @@
 				<walk ground="78" />
 				<run ground="170" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -229,8 +229,8 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="45" />
@@ -250,11 +250,11 @@
 				<walk ground="80" />
 				<run ground="156" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -264,8 +264,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="8.5" />
@@ -295,11 +295,11 @@
 				<walk ground="100" />
 				<run ground="170" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
@@ -315,12 +315,12 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>MALRUK</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" grown="25" />
@@ -348,11 +348,11 @@
 				<walk ground="80" />
 				<run ground="140" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4118" level="6" /> <!-- Paralysis -->
@@ -367,12 +367,12 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>MALRUK</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="14" />
@@ -398,11 +398,11 @@
 				<walk ground="37" />
 				<run ground="200" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -418,12 +418,12 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="25" grown="30" />
@@ -452,11 +452,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="3" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -472,14 +472,14 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>DOOR</clan>
 				<clan>MERCENARY_SIEGE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -504,11 +504,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -522,9 +522,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -549,11 +549,11 @@
 				<walk ground="45" />
 				<run ground="60" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -565,9 +565,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
@@ -593,11 +593,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="3" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -613,9 +613,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" grown="12" />
@@ -644,11 +644,11 @@
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="2" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -664,9 +664,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -693,11 +693,11 @@
 				<walk ground="43" />
 				<run ground="115" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="3" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -713,9 +713,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -743,11 +743,11 @@
 				<walk ground="45" />
 				<run ground="155" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -762,9 +762,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -789,11 +789,11 @@
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -805,9 +805,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="16" />
@@ -833,11 +833,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -850,9 +850,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -879,11 +879,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="4" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -898,9 +898,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -929,11 +929,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="4" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -949,9 +949,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -976,11 +976,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -994,9 +994,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14" />
@@ -1021,11 +1021,11 @@
 				<walk ground="45" />
 				<run ground="60" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1037,9 +1037,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -1065,11 +1065,11 @@
 				<walk ground="80" />
 				<run ground="115" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="4" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -1085,9 +1085,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -1116,11 +1116,11 @@
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="4" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -1136,9 +1136,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -1164,11 +1164,11 @@
 				<walk ground="37" />
 				<run ground="120" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="4" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -1184,9 +1184,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -1215,11 +1215,11 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1234,9 +1234,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -1261,11 +1261,11 @@
 				<walk ground="45" />
 				<run ground="135" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1277,9 +1277,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -1305,11 +1305,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1322,9 +1322,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -1351,11 +1351,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="5" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -1370,9 +1370,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1401,11 +1401,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -1421,9 +1421,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -1448,11 +1448,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1466,9 +1466,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -1493,11 +1493,11 @@
 				<walk ground="45" />
 				<run ground="70" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1509,9 +1509,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -1537,11 +1537,11 @@
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -1557,9 +1557,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -1588,11 +1588,11 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="5" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="5" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -1608,9 +1608,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -1637,11 +1637,11 @@
 				<walk ground="52" />
 				<run ground="125" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="5" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -1657,9 +1657,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -1688,11 +1688,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1707,9 +1707,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -1734,11 +1734,11 @@
 				<walk ground="45" />
 				<run ground="140" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1750,9 +1750,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -1778,11 +1778,11 @@
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1795,9 +1795,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -1824,11 +1824,11 @@
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -1843,9 +1843,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -1874,11 +1874,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="6" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -1894,9 +1894,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -1921,11 +1921,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1939,9 +1939,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -1966,11 +1966,11 @@
 				<walk ground="45" />
 				<run ground="70" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1982,9 +1982,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -2010,11 +2010,11 @@
 				<walk ground="80" />
 				<run ground="125" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="6" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2030,9 +2030,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -2061,11 +2061,11 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="6" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -2081,9 +2081,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -2110,11 +2110,11 @@
 				<walk ground="52" />
 				<run ground="130" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="6" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2130,9 +2130,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -2161,11 +2161,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2180,9 +2180,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -2207,11 +2207,11 @@
 				<walk ground="45" />
 				<run ground="145" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2223,9 +2223,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -2251,11 +2251,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2268,9 +2268,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -2297,11 +2297,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2316,9 +2316,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -2347,11 +2347,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="7" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -2367,9 +2367,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -2394,11 +2394,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2412,9 +2412,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -2439,11 +2439,11 @@
 				<walk ground="45" />
 				<run ground="70" />
 			</speed>
-			<hit_time>910</hit_time>
+			<hitTime>910</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2455,9 +2455,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -2483,11 +2483,11 @@
 				<walk ground="36" />
 				<run ground="130" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="7" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2503,9 +2503,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14" />
@@ -2534,11 +2534,11 @@
 				<walk ground="10" />
 				<run ground="180" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="7" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="7" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -2554,9 +2554,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -2583,11 +2583,11 @@
 				<walk ground="40" />
 				<run ground="135" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="7" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2603,9 +2603,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="13" grown="22" />
@@ -2634,11 +2634,11 @@
 				<walk ground="45" />
 				<run ground="195" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2653,9 +2653,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
@@ -2680,11 +2680,11 @@
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
-			<hit_time>910</hit_time>
+			<hitTime>910</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2696,9 +2696,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
@@ -2724,11 +2724,11 @@
 				<walk ground="33" />
 				<run ground="195" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2741,9 +2741,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -2770,11 +2770,11 @@
 				<walk ground="33" />
 				<run ground="195" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2789,9 +2789,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
@@ -2820,11 +2820,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="3" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -2840,9 +2840,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -2867,11 +2867,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2885,9 +2885,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -2912,11 +2912,11 @@
 				<walk ground="45" />
 				<run ground="60" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2928,9 +2928,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="14" />
@@ -2956,11 +2956,11 @@
 				<walk ground="45" />
 				<run ground="110" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="3" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -2976,9 +2976,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" grown="12" />
@@ -3007,11 +3007,11 @@
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="2" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -3027,9 +3027,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -3056,11 +3056,11 @@
 				<walk ground="43" />
 				<run ground="115" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="3" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -3076,9 +3076,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -3107,11 +3107,11 @@
 				<walk ground="45" />
 				<run ground="155" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3126,9 +3126,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -3153,11 +3153,11 @@
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
-			<hit_time>800</hit_time>
+			<hitTime>800</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3169,9 +3169,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="16" />
@@ -3197,11 +3197,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3214,9 +3214,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -3243,11 +3243,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="4" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -3262,9 +3262,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -3293,11 +3293,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="4" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -3313,9 +3313,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -3340,11 +3340,11 @@
 				<walk ground="45" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3358,9 +3358,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14" />
@@ -3385,11 +3385,11 @@
 				<walk ground="45" />
 				<run ground="60" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3401,9 +3401,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -3429,11 +3429,11 @@
 				<walk ground="80" />
 				<run ground="115" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="4" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -3449,9 +3449,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -3480,11 +3480,11 @@
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="4" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -3500,9 +3500,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -3529,11 +3529,11 @@
 				<walk ground="37" />
 				<run ground="120" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="4" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -3549,9 +3549,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -3580,11 +3580,11 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3599,9 +3599,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -3626,11 +3626,11 @@
 				<walk ground="45" />
 				<run ground="135" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3642,9 +3642,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -3670,11 +3670,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3687,9 +3687,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -3716,11 +3716,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="5" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -3735,9 +3735,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -3766,11 +3766,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -3786,9 +3786,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -3813,11 +3813,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3831,9 +3831,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -3858,11 +3858,11 @@
 				<walk ground="45" />
 				<run ground="70" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3874,9 +3874,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -3902,11 +3902,11 @@
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -3922,9 +3922,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -3953,11 +3953,11 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="5" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="5" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -3973,9 +3973,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -4002,11 +4002,11 @@
 				<walk ground="52" />
 				<run ground="125" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="5" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -4022,9 +4022,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -4053,11 +4053,11 @@
 				<walk ground="80" />
 				<run ground="165" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4072,9 +4072,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -4099,11 +4099,11 @@
 				<walk ground="45" />
 				<run ground="140" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4115,9 +4115,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -4143,11 +4143,11 @@
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4160,9 +4160,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -4189,11 +4189,11 @@
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -4208,9 +4208,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -4239,11 +4239,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="6" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -4259,9 +4259,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -4286,11 +4286,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4304,9 +4304,9 @@
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="9" />
@@ -4331,11 +4331,11 @@
 				<walk ground="45" />
 				<run ground="70" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4347,9 +4347,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -4375,11 +4375,11 @@
 				<walk ground="80" />
 				<run ground="125" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="6" /> <!-- NPC Blaze -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -4395,9 +4395,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -4426,11 +4426,11 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="6" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
@@ -4446,9 +4446,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="11" />
@@ -4475,11 +4475,11 @@
 				<walk ground="52" />
 				<run ground="130" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="7" /> <!-- NPC Wild Sweep -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -4495,9 +4495,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" />
@@ -4526,11 +4526,11 @@
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4545,9 +4545,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
@@ -4572,11 +4572,11 @@
 				<walk ground="45" />
 				<run ground="145" />
 			</speed>
-			<hit_time>960</hit_time>
+			<hitTime>960</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4588,9 +4588,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -4616,11 +4616,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4633,9 +4633,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="12" grown="14.5" />
@@ -4662,11 +4662,11 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
@@ -4681,9 +4681,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />
@@ -4712,11 +4712,11 @@
 				<walk ground="80" />
 				<run ground="30" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="8" /> <!-- NPC Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
@@ -4732,9 +4732,9 @@
 			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
 			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skill_list>
-		<corpse_time>3</corpse_time>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<corpseTime>3</corpseTime>
+		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="17" />

@@ -19,14 +19,14 @@
 			<radius normal="19.2" />
 			<height normal="43.2" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="2" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="61.1" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="41.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -71,10 +71,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26201" level="102" type="L2RaidBoss" name="Grom" title="Destroyer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -94,14 +94,14 @@
 			<radius normal="36" />
 			<height normal="62" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="3" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="60.95" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="38.28" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -146,10 +146,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26202" level="102" type="L2RaidBoss" name="Medvez" title="Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -169,14 +169,14 @@
 			<radius normal="36" />
 			<height normal="72" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="4" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="60.16" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="38.98" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -221,10 +221,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26203" level="102" type="L2RaidBoss" name="Zigathan" title="Dark Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -244,14 +244,14 @@
 			<radius normal="24" />
 			<height normal="45" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="5" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="60.36" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="39.12" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -296,10 +296,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26204" level="102" type="L2RaidBoss" name="Hunchback Kwai" title="Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -319,14 +319,14 @@
 			<radius normal="33" />
 			<height normal="43.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="6" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="60.59" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="40.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -371,10 +371,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26205" level="85" type="L2Npc" name="Kornix" title="Soul Reaper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -432,14 +432,14 @@
 			<radius normal="24" />
 			<height normal="50.25" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="9" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="58.61" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="41.47" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -484,10 +484,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26208" level="102" type="L2RaidBoss" name="Demian" title="Creed Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -507,14 +507,14 @@
 			<radius normal="24" />
 			<height normal="50.25" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="10" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.96" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="40.42" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -559,10 +559,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26209" level="102" type="L2RaidBoss" name="Berk" title="High-ranking Executor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -582,14 +582,14 @@
 			<radius normal="48" />
 			<height normal="78" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="11" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.12" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="39.41" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -634,10 +634,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26210" level="102" type="L2RaidBoss" name="Tarku" title="Orc Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -657,14 +657,14 @@
 			<radius normal="26" />
 			<height normal="50" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="12" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="58.99" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="40.63" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -709,10 +709,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26211" level="85" type="L2Npc" name="Tarpaing" title="Orc Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -751,14 +751,14 @@
 			<radius normal="18" />
 			<height normal="13.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="14" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38047" min="1" max="1" chance="9.144" /> <!-- Helios Fighter Crafting Pack -->
 				<item id="38050" min="1" max="1" chance="9.133" /> <!-- Helios Shooter Crafting Pack -->
@@ -797,10 +797,10 @@
 				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
 				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26213" level="85" type="L2Npc" name="Embryo Secret Safe" title="Handle with Care">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -839,13 +839,13 @@
 			<radius normal="40" />
 			<height normal="37" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="26215" level="85" type="L2Npc" name="Madman Typhoon" title="Kelbim's Old Underling">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -884,14 +884,14 @@
 			<radius normal="23" />
 			<height normal="64" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="18" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.65" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="38.45" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -936,10 +936,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26217" level="97" type="L2Npc" name="Flynt" title="Evil Destructor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -959,12 +959,12 @@
 			<radius normal="40" />
 			<height normal="60" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14710" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="26218" level="97" type="L2Npc" name="Harp" title="Complete Being">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -984,12 +984,12 @@
 			<radius normal="44" />
 			<height normal="78" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14711" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="26219" level="104" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1009,7 +1009,7 @@
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
@@ -1019,8 +1019,8 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.55" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36574" min="1" max="1" chance="49.14" /> <!-- Scroll: Modify Weapon (R-grade) -->
@@ -1118,10 +1118,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26220" level="104" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1141,7 +1141,7 @@
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
@@ -1151,8 +1151,8 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="61.17" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36574" min="1" max="1" chance="50.91" /> <!-- Scroll: Modify Weapon (R-grade) -->
@@ -1250,10 +1250,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26221" level="102" type="L2RaidBoss" name="Whitera" title="Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1273,14 +1273,14 @@
 			<radius normal="31.5" />
 			<height normal="80.25" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="23" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="58.6" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="39.16" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1325,10 +1325,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26222" level="102" type="L2RaidBoss" name="Blektra" title="Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1348,14 +1348,14 @@
 			<radius normal="31.5" />
 			<height normal="80.25" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="24" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="58.78" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="38.08" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1400,10 +1400,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26223" level="102" type="L2RaidBoss" name="Upgraded Siege Tank" title="Test Run">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1423,14 +1423,14 @@
 			<radius normal="52.5" />
 			<height normal="72" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="25" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.44" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="38.01" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1475,10 +1475,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26224" level="102" type="L2RaidBoss" name="Vegima" title="Dark Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1498,14 +1498,14 @@
 			<radius normal="18" />
 			<height normal="39" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="26" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.08" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="41.6" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1550,10 +1550,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26225" level="102" type="L2RaidBoss" name="Varonia" title="Soul Reaper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1573,14 +1573,14 @@
 			<radius normal="16.8" />
 			<height normal="40.8" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="27" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="61.12" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="39.18" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1625,10 +1625,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26226" level="102" type="L2RaidBoss" name="Aronia" title="Soul Reaper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1648,14 +1648,14 @@
 			<radius normal="16.8" />
 			<height normal="40.8" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="28" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.77" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="39.55" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1700,10 +1700,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26227" level="85" type="L2Npc" name="Outh" title="Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1761,14 +1761,14 @@
 			<radius normal="24" />
 			<height normal="59.4" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="16893" level="31" /> <!-- Messiah Outer Castle Elite Monster -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="17441" min="1" max="1" chance="100" /> <!-- Eternal Circlet -->
 				<item id="17442" min="1" max="1" chance="100" /> <!-- Eternal Tunic -->
@@ -1789,10 +1789,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26230" level="85" type="L2Npc" name="Castle Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1832,13 +1832,13 @@
 			<radius normal="30" />
 			<height normal="24" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="26232" level="85" type="L2Npc" name="Resurrected Castle Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1933,18 +1933,18 @@
 			<defence physical="3851.85185185185" magical="2236.55913978495" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16899" level="1" /> <!-- Camille -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="39" />
 			<height normal="52.9" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17434" min="1" max="1" chance="1.242" /> <!-- Eternal Boots -->
 				<item id="17432" min="1" max="1" chance="1.241" /> <!-- Eternal Gaiters -->
@@ -2069,10 +2069,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="26237" level="85" type="L2Npc" name="Creed Guardian" title="Camille's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2206,11 +2206,11 @@
 			<radius normal="32" />
 			<height normal="51" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="26244" level="103" type="L2Npc" name="Isburg" title="Guardian Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2230,11 +2230,11 @@
 			<radius normal="48" />
 			<height normal="78" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="26245" level="85" type="L2Npc" name="Judge" title="Guardian Captain's Immediate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

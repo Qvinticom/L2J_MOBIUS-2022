@@ -27,11 +27,11 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4065" level="6" /> <!-- NPC Heal -->
@@ -49,25 +49,25 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" grown="12" />
@@ -99,11 +99,11 @@
 				<walk ground="65" />
 				<run ground="180" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4072" level="6" /> <!-- Stun -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
@@ -120,25 +120,25 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -168,11 +168,11 @@
 				<walk ground="65" />
 				<run ground="190" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -186,31 +186,31 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="39.6" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="2403" min="1" max="1" chance="0.075" /> <!-- Blue Wolf Stockings -->
 				<item id="2398" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Tunic -->
@@ -232,7 +232,7 @@
 				<item id="4039" min="1" max="1" chance="25.75" /> <!-- Mold Glue -->
 				<item id="4042" min="1" max="1" chance="13.04" /> <!-- Enria -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21203" level="72" type="L2Monster" name="Nephilim Archbishop">
 		<parameters>
@@ -261,11 +261,11 @@
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4046" level="6" /> <!-- Sleep -->
 			<skill id="4065" level="6" /> <!-- NPC Heal -->
@@ -283,31 +283,31 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" grown="14" />
 			<height normal="44" grown="56" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="612" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Gauntlets -->
 				<item id="2464" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Gloves -->
@@ -327,7 +327,7 @@
 				<item id="4958" min="1" max="1" chance="10.44" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
 				<item id="4959" min="1" max="1" chance="10.24" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21204" level="73" type="L2Monster" name="Nephilim Praetorian">
 		<parameters>
@@ -354,11 +354,11 @@
 				<walk ground="65" />
 				<run ground="190" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4072" level="7" /> <!-- Stun -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
@@ -375,31 +375,31 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="48" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
@@ -418,7 +418,7 @@
 				<item id="4990" min="1" max="1" chance="6.569" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
 				<item id="4991" min="1" max="1" chance="6.555" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21205" level="75" type="L2Monster" name="Nephilim Royal Guard">
 		<parameters>
@@ -443,11 +443,11 @@
 				<walk ground="65" />
 				<run ground="200" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -461,25 +461,25 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
@@ -508,11 +508,11 @@
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4046" level="8" /> <!-- Sleep -->
 			<skill id="4065" level="8" /> <!-- NPC Heal -->
@@ -530,31 +530,31 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" grown="14" />
 			<height normal="44" grown="56" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="110" min="1" max="1" chance="0.03" /> <!-- Doom Shield -->
 				<item id="2384" min="1" max="1" chance="0.03" /> <!-- Zubei's Leather Shirt -->
@@ -573,7 +573,7 @@
 				<item id="948" min="1" max="1" chance="2.762" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21207" level="68" type="L2Monster" name="Nephilim Commander">
 		<parameters>
@@ -595,11 +595,11 @@
 				<walk ground="65" />
 				<run ground="200" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
@@ -616,31 +616,31 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4336" level="2" /> <!-- Dark Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="400" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-				<ignore_npc_id>21175</ignore_npc_id> <!-- Lilim Butcher -->
-				<ignore_npc_id>21176</ignore_npc_id> <!-- Lilim Magus -->
-				<ignore_npc_id>21177</ignore_npc_id> <!-- Lilim Knight-Errant -->
-				<ignore_npc_id>21178</ignore_npc_id> <!-- Lilim Marauder -->
-				<ignore_npc_id>21179</ignore_npc_id> <!-- Lilim Seer -->
-				<ignore_npc_id>21180</ignore_npc_id> <!-- Lilim Knight -->
-				<ignore_npc_id>21181</ignore_npc_id> <!-- Lilim Assassin -->
-				<ignore_npc_id>21182</ignore_npc_id> <!-- Lilim Soldier -->
-				<ignore_npc_id>21183</ignore_npc_id> <!-- Lilim Knight Commander -->
-				<ignore_npc_id>21184</ignore_npc_id> <!-- Lilim Slayer -->
-				<ignore_npc_id>21185</ignore_npc_id> <!-- Lilim Great Magus -->
-				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
-			</clan_list>
+				<ignoreNpcId>21175</ignoreNpcId> <!-- Lilim Butcher -->
+				<ignoreNpcId>21176</ignoreNpcId> <!-- Lilim Magus -->
+				<ignoreNpcId>21177</ignoreNpcId> <!-- Lilim Knight-Errant -->
+				<ignoreNpcId>21178</ignoreNpcId> <!-- Lilim Marauder -->
+				<ignoreNpcId>21179</ignoreNpcId> <!-- Lilim Seer -->
+				<ignoreNpcId>21180</ignoreNpcId> <!-- Lilim Knight -->
+				<ignoreNpcId>21181</ignoreNpcId> <!-- Lilim Assassin -->
+				<ignoreNpcId>21182</ignoreNpcId> <!-- Lilim Soldier -->
+				<ignoreNpcId>21183</ignoreNpcId> <!-- Lilim Knight Commander -->
+				<ignoreNpcId>21184</ignoreNpcId> <!-- Lilim Slayer -->
+				<ignoreNpcId>21185</ignoreNpcId> <!-- Lilim Great Magus -->
+				<ignoreNpcId>21186</ignoreNpcId> <!-- Lilim Guard Knight -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="48" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91" min="1" max="1" chance="0.0075" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.0075" /> <!-- Spirit's Staff -->
@@ -655,7 +655,7 @@
 			<spoil>
 				<item id="4974" min="1" max="1" chance="36.48" /> <!-- Recipe: Black Ore Ring (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21208" level="20" type="L2Monster" name="Martyrium Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -738,10 +738,10 @@
 				<walk ground="60" />
 				<run ground="110" />
 			</speed>
-			<hit_time>840</hit_time>
+			<hitTime>840</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="2" /> <!--NPC HP Drain -->
 			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
@@ -752,15 +752,15 @@
 			<skill id="4414" level="3" /> <!--Light Armor Type -->
 			<skill id="4415" level="3" /> <!--One-handed Sword -->
 			<skill id="4416" level="9" /> <!--Demons -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="495" max="955" chance="70" /> <!-- Adena -->
 				<item id="156" min="1" max="1" chance="0.013" /> <!-- Hand Axe -->
@@ -777,7 +777,7 @@
 				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Enchanted Necklace -->
 				<item id="1932" min="1" max="1" chance="18.2156" /> <!-- Bone Helmet Design -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="36" />
@@ -808,11 +808,11 @@
 				<walk ground="60" />
 				<run ground="140" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -826,13 +826,13 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
@@ -921,11 +921,11 @@
 				<walk ground="40" />
 				<run ground="160" />
 			</speed>
-			<hit_time>170</hit_time>
+			<hitTime>170</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -939,13 +939,13 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -1034,11 +1034,11 @@
 				<walk ground="40" />
 				<run ground="170" />
 			</speed>
-			<hit_time>170</hit_time>
+			<hitTime>170</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -1052,13 +1052,13 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
@@ -1083,7 +1083,7 @@
 			<radius normal="11" />
 			<height normal="30" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1091,8 +1091,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="358" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate -->
 				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
@@ -1118,7 +1118,7 @@
 				<item id="4039" min="1" max="1" chance="21.52" /> <!-- Mold Glue -->
 				<item id="4042" min="1" max="1" chance="9.99" /> <!-- Enria -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21222" level="69" type="L2Monster" name="Sepulcher Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1138,15 +1138,15 @@
 			<radius normal="16" />
 			<height normal="49.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="887" min="1" max="1" chance="0.3" /> <!-- Adamantite Ring -->
 				<item id="57" min="2791" max="6512" chance="70" /> <!-- Adena -->
@@ -1163,7 +1163,7 @@
 				<item id="1874" min="1" max="1" chance="90.685" /> <!-- Oriharukon Ore -->
 				<item id="1875" min="1" max="1" chance="84.31" /> <!-- Stone of Purity -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21223" level="69" type="L2Monster" name="Sepulcher Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1183,7 +1183,7 @@
 			<radius normal="15" />
 			<height normal="46" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1191,8 +1191,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
 				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
@@ -1216,7 +1216,7 @@
 				<item id="4044" min="1" max="1" chance="21.52" /> <!-- Thons -->
 				<item id="4041" min="1" max="1" chance="5.792" /> <!-- Mold Hardener -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21224" level="74" type="L2Monster" name="Mausoleum Royal Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1236,15 +1236,15 @@
 			<radius normal="13" />
 			<height normal="34.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="926" min="1" max="1" chance="0.3" /> <!-- Black Ore Necklace -->
 				<item id="57" min="3222" max="7527" chance="70" /> <!-- Adena -->
@@ -1259,7 +1259,7 @@
 				<item id="1881" min="1" max="3" chance="76.76" /> <!-- Coarse Bone Powder -->
 				<item id="4043" min="1" max="1" chance="37.88" /> <!-- Asofe -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21225" level="75" type="L2Monster" name="Mausoleum Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1279,7 +1279,7 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -1287,8 +1287,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="358" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate -->
 				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
@@ -1309,7 +1309,7 @@
 				<item id="1874" min="1" max="3" chance="61.87" /> <!-- Oriharukon Ore -->
 				<item id="1875" min="1" max="3" chance="60.35" /> <!-- Stone of Purity -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21226" level="75" type="L2Monster" name="Sepulcher Royal Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1329,15 +1329,15 @@
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="3885" max="9074" chance="70" /> <!-- Adena -->
 				<item id="2133" min="1" max="1" chance="2.222" /> <!-- Gemstone (A-grade) -->
@@ -1352,7 +1352,7 @@
 				<item id="4044" min="1" max="1" chance="29.57" /> <!-- Thons -->
 				<item id="4041" min="1" max="1" chance="7.969" /> <!-- Mold Hardener -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21227" level="67" type="L2Monster" name="Sepulcher Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1469,11 +1469,11 @@
 				<walk ground="60" />
 				<run ground="130" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
@@ -1487,13 +1487,13 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
@@ -1523,11 +1523,11 @@
 				<walk ground="10" />
 				<run ground="110" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4099" level="1" /> <!-- NPC Berserk -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1540,13 +1540,13 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -1576,11 +1576,11 @@
 				<walk ground="60" />
 				<run ground="130" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1593,13 +1593,13 @@
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
@@ -1629,11 +1629,11 @@
 				<walk ground="60" />
 				<run ground="110" />
 			</speed>
-			<hit_time>840</hit_time>
+			<hitTime>840</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1646,13 +1646,13 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>C_DUNGEON</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
@@ -1905,15 +1905,15 @@
 			<radius normal="13" />
 			<height normal="34.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
 				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
@@ -1928,7 +1928,7 @@
 			<spoil>
 				<item id="4984" min="1" max="1" chance="6.788" /> <!-- Recipe: Blue Wolf Leather Armor (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21249" level="74" type="L2Monster" name="Graveyard Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1948,7 +1948,7 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1956,8 +1956,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="97" min="1" max="1" chance="0.003" /> <!-- Lance -->
 				<item id="268" min="1" max="1" chance="0.003" /> <!-- Bellion Cestus -->
@@ -1971,7 +1971,7 @@
 				<item id="4982" min="1" max="1" chance="6.873" /> <!-- Recipe: Blue Wolf Gaiters (60%) -->
 				<item id="4981" min="1" max="1" chance="4.331" /> <!-- Recipe: Blue Wolf Breastplate (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21250" level="74" type="L2Monster" name="Netherworld Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1991,15 +1991,15 @@
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="895" min="1" max="1" chance="0.075" /> <!-- Black Ore Ring -->
 				<item id="864" min="1" max="1" chance="0.03" /> <!-- Black Ore Earring -->
@@ -2019,7 +2019,7 @@
 				<item id="4988" min="1" max="1" chance="9.297" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
 				<item id="4986" min="1" max="1" chance="5.823" /> <!-- Recipe: Blue Wolf Tunic (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21251" level="75" type="L2Monster" name="Netherworld Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2039,7 +2039,7 @@
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -2049,8 +2049,8 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="234" min="1" max="1" chance="0.0075" /> <!-- Demon's Dagger -->
 				<item id="287" min="1" max="1" chance="0.0075" /> <!-- Bow of Peril -->
@@ -2067,7 +2067,7 @@
 				<item id="4192" min="1" max="1" chance="0.75" /> <!-- Recipe: Damascus Sword -->
 				<item id="4199" min="1" max="1" chance="0.75" /> <!-- Recipe: Bow of Peril -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21252" level="75" type="L2Monster" name="Graveyard Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2087,15 +2087,15 @@
 			<radius normal="14" />
 			<height normal="37.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="2599" max="6070" chance="70" /> <!-- Adena -->
 				<item id="1874" min="1" max="1" chance="14.59" /> <!-- Oriharukon Ore -->
@@ -2108,7 +2108,7 @@
 				<item id="5000" min="1" max="1" chance="0.75" /> <!-- Recipe: Damascus Sword (60%) -->
 				<item id="5004" min="1" max="1" chance="0.75" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21253" level="72" type="L2Monster" name="Graveyard Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2147,7 +2147,7 @@
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2155,8 +2155,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="1719" max="4010" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="17.08" /> <!-- Metallic Fiber -->
@@ -2170,7 +2170,7 @@
 			<spoil>
 				<item id="4973" min="1" max="1" chance="26.18" /> <!-- Recipe: Black Ore Earring (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21255" level="69" type="L2Monster" name="Netherworld Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2190,7 +2190,7 @@
 			<radius normal="24" />
 			<height normal="50.4" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2198,8 +2198,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="78" min="1" max="1" chance="0.0075" /> <!-- Great Sword -->
 				<item id="142" min="1" max="1" chance="0.0075" /> <!-- Keshanberk -->
@@ -2213,7 +2213,7 @@
 			<spoil>
 				<item id="4973" min="1" max="1" chance="26.87" /> <!-- Recipe: Black Ore Earring (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21256" level="23" type="L2Monster" name="Underground Werewolf">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2253,11 +2253,11 @@
 				<walk ground="90" />
 				<run ground="155" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4152" level="1" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4160" level="1" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
@@ -2271,19 +2271,19 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="600" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ALL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
 				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
@@ -2300,7 +2300,7 @@
 				<item id="1897" min="1" max="1" chance="6.334" /> <!-- Necklace of Wisdom Chain -->
 				<item id="734" min="1" max="1" chance="4.44" /> <!-- Wind Walk Potion -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21258" level="71" type="L2Monster" name="Fallen Orc Shaman">
 		<parameters>
@@ -2326,26 +2326,26 @@
 				<walk ground="10" />
 				<run ground="130" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4095" level="1" /> <!-- Damage Shield -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
@@ -2360,7 +2360,7 @@
 				<item id="1875" min="1" max="1" chance="18.54" /> <!-- Stone of Purity -->
 				<item id="1874" min="1" max="1" chance="18.35" /> <!-- Oriharukon Ore -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21259" level="71" type="L2Monster" name="Fallen Orc Shaman" title="Enhanced">
 		<parameters>
@@ -2385,11 +2385,11 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -2398,19 +2398,19 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>BEAST</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
@@ -2425,7 +2425,7 @@
 				<item id="1875" min="1" max="1" chance="18.54" /> <!-- Stone of Purity -->
 				<item id="1874" min="1" max="1" chance="18.35" /> <!-- Oriharukon Ore -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21260" level="50" type="L2Monster" name="Betrayer Orc Hero">
 		<parameters>
@@ -2451,11 +2451,11 @@
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -2468,9 +2468,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="1000" aggroRange="450" />
 		<collision>
 			<radius normal="12" grown="14" />
@@ -2505,11 +2505,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2523,9 +2523,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="1000" aggroRange="450" />
 		<collision>
 			<radius normal="13.5" />
@@ -2560,11 +2560,11 @@
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
-			<hit_time>630</hit_time>
+			<hitTime>630</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2578,9 +2578,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
 		<collision>
 			<radius normal="14" grown="16" />
@@ -2615,11 +2615,11 @@
 				<walk ground="70" />
 				<run ground="110" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2633,9 +2633,9 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
 		<collision>
 			<radius normal="20" grown="24" />
@@ -2670,11 +2670,11 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -2688,9 +2688,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
 		<collision>
 			<radius normal="13" />
@@ -2723,11 +2723,11 @@
 				<walk ground="40" />
 				<run ground="60" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2738,22 +2738,22 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-				<ignore_npc_id>21265</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21266</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21267</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21268</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21269</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21270</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21271</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21272</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
-			</clan_list>
+				<ignoreNpcId>21265</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21266</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21267</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21268</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21269</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21270</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21271</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21272</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -2783,11 +2783,11 @@
 				<walk ground="40" />
 				<run ground="60" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2798,22 +2798,22 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-				<ignore_npc_id>21265</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21266</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21267</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21268</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21269</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21270</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21271</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21272</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
-			</clan_list>
+				<ignoreNpcId>21265</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21266</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21267</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21268</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21269</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21270</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21271</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21272</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -2843,11 +2843,11 @@
 				<walk ground="40" />
 				<run ground="60" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -2858,22 +2858,22 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="500" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-				<ignore_npc_id>21265</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21266</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21267</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21268</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21269</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21270</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21271</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21272</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
-			</clan_list>
+				<ignoreNpcId>21265</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21266</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21267</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21268</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21269</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21270</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21271</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21272</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -2904,11 +2904,11 @@
 				<walk ground="40" />
 				<run ground="60" />
 			</speed>
-			<hit_time>350</hit_time>
+			<hitTime>350</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4151" level="3" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -2921,23 +2921,23 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="500" aggroRange="450">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-				<ignore_npc_id>21265</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21266</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21267</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21268</ignore_npc_id> <!-- Cave Ant Larva -->
-				<ignore_npc_id>21269</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21270</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21271</ignore_npc_id> <!-- Cave Ant -->
-				<ignore_npc_id>21272</ignore_npc_id> <!-- Cave Ant Soldier -->
-				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
-			</clan_list>
+				<ignoreNpcId>21265</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21266</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21267</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21268</ignoreNpcId> <!-- Cave Ant Larva -->
+				<ignoreNpcId>21269</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21270</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21271</ignoreNpcId> <!-- Cave Ant -->
+				<ignoreNpcId>21272</ignoreNpcId> <!-- Cave Ant Soldier -->
+				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -2968,11 +2968,11 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2984,13 +2984,13 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="26" />
@@ -3020,11 +3020,11 @@
 				<walk ground="80" />
 				<run ground="130" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3036,13 +3036,13 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="35" grown="42" />
@@ -3077,11 +3077,11 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>260</hit_time>
+			<hitTime>260</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3093,13 +3093,13 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="26" />
@@ -3133,11 +3133,11 @@
 				<walk ground="80" />
 				<run ground="130" />
 			</speed>
-			<hit_time>610</hit_time>
+			<hitTime>610</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3149,13 +3149,13 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="35" grown="42" />
@@ -3191,11 +3191,11 @@
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hit_time>300</hit_time>
+			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4072" level="3" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -3211,14 +3211,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ANT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" grown="24" />

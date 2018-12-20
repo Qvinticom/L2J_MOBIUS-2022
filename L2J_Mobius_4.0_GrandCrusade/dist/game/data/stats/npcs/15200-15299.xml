@@ -18,14 +18,14 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11289" level="2" /> <!-- Gate Root -->
 			<skill id="11291" level="2" /> <!-- Gate Vortex -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="57" />
@@ -50,14 +50,14 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11289" level="3" /> <!-- Gate Root -->
 			<skill id="11291" level="3" /> <!-- Gate Vortex -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="57" />
@@ -82,14 +82,14 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="23" /> <!-- Mercenaries -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11289" level="4" /> <!-- Gate Root -->
 			<skill id="11291" level="4" /> <!-- Gate Vortex -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="57" />
@@ -113,9 +113,9 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- CONSTRUCT -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="5" />
@@ -139,9 +139,9 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- CONSTRUCT -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="5" />
@@ -165,9 +165,9 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- CONSTRUCT -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="5" />
@@ -191,9 +191,9 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- CONSTRUCT -->
-		</skill_list>
+		</skillList>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="5" />
@@ -221,13 +221,13 @@
 			</speed>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="19406" level="1" /> <!-- Curse from Deadland -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
@@ -255,13 +255,13 @@
 			</speed>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="19406" level="2" /> <!-- Curse from Deadland -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
@@ -289,13 +289,13 @@
 			</speed>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="19406" level="3" /> <!-- Curse from Deadland -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
@@ -323,13 +323,13 @@
 			</speed>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="19406" level="4" /> <!-- Curse from Deadland -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />

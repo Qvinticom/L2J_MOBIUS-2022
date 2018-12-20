@@ -664,11 +664,11 @@
 				<walk ground="44" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
@@ -683,16 +683,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
 				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
@@ -712,7 +712,7 @@
 				<item id="6337" min="1" max="1" chance="1.35" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
 				<item id="6335" min="1" max="1" chance="1.087" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
@@ -746,11 +746,11 @@
 				<walk ground="30" />
 				<run ground="175" />
 			</speed>
-			<hit_time>590</hit_time>
+			<hitTime>590</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -763,16 +763,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
 				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
@@ -795,7 +795,7 @@
 				<item id="5370" min="1" max="1" chance="1.99" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
 				<item id="5368" min="1" max="1" chance="1.963" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="37.5" />
@@ -832,11 +832,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -854,16 +854,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
 				<item id="5315" min="1" max="1" chance="0.0075" /> <!-- Sealed Shield of Nightmare -->
@@ -879,7 +879,7 @@
 				<item id="5364" min="1" max="1" chance="5.031" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
 				<item id="5366" min="1" max="1" chance="3.318" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="42.5" />
@@ -915,11 +915,11 @@
 				<walk ground="36" />
 				<run ground="150" />
 			</speed>
-			<hit_time>470</hit_time>
+			<hitTime>470</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -934,16 +934,16 @@
 			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
 				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
@@ -966,7 +966,7 @@
 				<item id="5406" min="1" max="1" chance="1.315" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
 				<item id="5380" min="1" max="1" chance="1.269" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="41.5" />
@@ -1001,11 +1001,11 @@
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1019,16 +1019,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
 				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
@@ -1048,7 +1048,7 @@
 				<item id="6337" min="1" max="1" chance="1.447" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
 				<item id="6335" min="1" max="1" chance="0.969" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -1085,11 +1085,11 @@
 				<walk ground="24" />
 				<run ground="175" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1106,16 +1106,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
 				<item id="5315" min="1" max="1" chance="0.0075" /> <!-- Sealed Shield of Nightmare -->
@@ -1131,7 +1131,7 @@
 				<item id="5364" min="1" max="1" chance="5.159" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
 				<item id="5366" min="1" max="1" chance="3.339" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="16" />
 			<height normal="38.5" grown="46.2" />
@@ -1170,11 +1170,11 @@
 				<walk ground="10" />
 				<run ground="150" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4035" level="8" /> <!-- Poison -->
@@ -1190,17 +1190,17 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
 				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
@@ -1223,7 +1223,7 @@
 				<item id="5406" min="1" max="1" chance="1.315" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
 				<item id="5380" min="1" max="1" chance="1.269" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="28.2" />
@@ -1256,11 +1256,11 @@
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<hit_time>910</hit_time>
+			<hitTime>910</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1272,16 +1272,16 @@
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
 				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
@@ -1304,7 +1304,7 @@
 				<item id="5394" min="1" max="1" chance="1.905" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
 				<item id="5368" min="1" max="1" chance="1.894" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14.4" />
 			<height normal="33" />
@@ -1328,14 +1328,14 @@
 			<radius normal="38.5" />
 			<height normal="42.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="21754" level="81" type="L2Monster" name="Commander's Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1356,15 +1356,15 @@
 			<radius normal="11" />
 			<height normal="38.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="6701" max="15635" chance="70" /> <!-- Adena -->
 				<item id="1875" min="1" max="3" chance="39.69" /> <!-- Stone of Purity -->
@@ -1375,7 +1375,7 @@
 				<item id="730" min="1" max="1" chance="2.0195" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21755" level="81" type="L2Monster" name="Commander's Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1396,15 +1396,15 @@
 			<radius normal="18" />
 			<height normal="42.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="57" min="6701" max="15635" chance="70" /> <!-- Adena -->
 				<item id="1875" min="1" max="3" chance="39.69" /> <!-- Stone of Purity -->
@@ -1415,7 +1415,7 @@
 				<item id="730" min="1" max="1" chance="2.0195" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21758" level="80" type="L2Npc" name="Treasure Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1435,14 +1435,14 @@
 			<radius normal="38.5" />
 			<height normal="42.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="21759" level="80" type="L2Monster" name="Ketra Orc Captain">
 		<parameters>
@@ -1475,11 +1475,11 @@
 				<walk ground="24" />
 				<run ground="175" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1496,14 +1496,14 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="16" />
@@ -1541,11 +1541,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1563,14 +1563,14 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18" />
@@ -1588,11 +1588,10 @@
 				<walk ground="30" />
 				<run ground="175" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1604,8 +1603,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4143" level="1" /> <!-- Bomb -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<collision>
 			<radius normal="14" />
 			<height normal="12.4" />
@@ -1641,11 +1640,11 @@
 				<walk ground="44" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
@@ -1660,16 +1659,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
 				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
@@ -1692,7 +1691,7 @@
 				<item id="5338" min="1" max="1" chance="1.133" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
 				<item id="5336" min="1" max="1" chance="1.116" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
@@ -1729,11 +1728,11 @@
 				<walk ground="36" />
 				<run ground="175" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -1750,16 +1749,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
 				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
@@ -1782,7 +1781,7 @@
 				<item id="5336" min="1" max="1" chance="1.183" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
 				<item id="5338" min="1" max="1" chance="1.142" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />
@@ -1820,11 +1819,11 @@
 				<walk ground="36" />
 				<run ground="175" />
 			</speed>
-			<hit_time>490</hit_time>
+			<hitTime>490</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4098" level="8" /> <!-- Silence -->
@@ -1841,17 +1840,17 @@
 			<skill id="4563" level="8" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
 				<item id="5288" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gaiters -->
@@ -1877,7 +1876,7 @@
 				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
 				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
@@ -1911,11 +1910,11 @@
 				<walk ground="34" />
 				<run ground="150" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1928,16 +1927,16 @@
 			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
 				<item id="5304" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Tunic -->
@@ -1961,7 +1960,7 @@
 				<item id="5352" min="1" max="1" chance="1.086" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
 				<item id="5350" min="1" max="1" chance="1.073" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
@@ -1998,11 +1997,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -2020,16 +2019,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="7250" max="16917" chance="70" /> <!-- Adena -->
 				<item id="730" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (A-grade) -->
@@ -2040,7 +2039,7 @@
 			<spoil>
 				<item id="1875" min="1" max="15" chance="82.43" /> <!-- Stone of Purity -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="21.6" />
 			<height normal="51.6" />
@@ -2074,11 +2073,11 @@
 				<walk ground="34" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -2091,16 +2090,16 @@
 			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="5" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="6887" max="16069" chance="70" /> <!-- Adena -->
 				<item id="1877" min="1" max="1" chance="16.06" /> <!-- Adamantite Nugget -->
@@ -2128,7 +2127,7 @@
 				<item id="5468" min="1" max="1" chance="0.3" /> <!-- Recipe: Elemental Sword (60%) -->
 				<item id="5470" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Blade (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
@@ -2165,11 +2164,11 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -2187,16 +2186,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>VARKA_SILENOS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
 				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
@@ -2216,7 +2215,7 @@
 				<item id="5430" min="1" max="1" chance="3.836" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
 				<item id="5432" min="1" max="1" chance="3.782" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="42.5" />
@@ -2255,11 +2254,11 @@
 				<walk ground="10" />
 				<run ground="160" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4035" level="8" /> <!-- Poison -->
@@ -2275,17 +2274,17 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
 				<item id="5288" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gaiters -->
@@ -2311,7 +2310,7 @@
 				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
 				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="33.4" />
@@ -2344,11 +2343,11 @@
 				<walk ground="33" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -2360,16 +2359,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
 				<item id="5304" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Tunic -->
@@ -2393,7 +2392,7 @@
 				<item id="5350" min="1" max="1" chance="1.088" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
 				<item id="5352" min="1" max="1" chance="1.065" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14.4" />
 			<height normal="29.4" />
@@ -2430,11 +2429,11 @@
 				<walk ground="24" />
 				<run ground="175" />
 			</speed>
-			<hit_time>510</hit_time>
+			<hitTime>510</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
@@ -2451,16 +2450,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="7250" max="16917" chance="70" /> <!-- Adena -->
 				<item id="730" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (A-grade) -->
@@ -2471,7 +2470,7 @@
 			<spoil>
 				<item id="1875" min="1" max="15" chance="89.33" /> <!-- Stone of Purity -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="11" grown="16" />
 			<height normal="38.5" grown="46.2" />
@@ -2504,11 +2503,11 @@
 				<walk ground="33" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -2520,16 +2519,16 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 			<skill id="4789" level="6" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="6887" max="16069" chance="70" /> <!-- Adena -->
 				<item id="1877" min="1" max="1" chance="15.36" /> <!-- Adamantite Nugget -->
@@ -2557,7 +2556,7 @@
 				<item id="5468" min="1" max="1" chance="0.3" /> <!-- Recipe: Elemental Sword (60%) -->
 				<item id="5470" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Blade (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15.6" />
 			<height normal="32.1" />
@@ -2574,11 +2573,10 @@
 				<walk ground="30" />
 				<run ground="175" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2590,8 +2588,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4143" level="1" /> <!-- Bomb -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<collision>
 			<radius normal="14" />
 			<height normal="12.4" />
@@ -2629,11 +2627,11 @@
 				<walk ground="27" />
 				<run ground="175" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -2649,16 +2647,16 @@
 			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4789" level="7" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="50" spiritChance="50" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>KETRA_ORC</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
 				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
@@ -2678,7 +2676,7 @@
 				<item id="5430" min="1" max="1" chance="3.748" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
 				<item id="5432" min="1" max="1" chance="3.742" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -2703,18 +2701,18 @@
 			<radius normal="20.0" />
 			<height normal="25.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x): -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk.: -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="91036" min="1" max="1" chance="50.6" /> <!-- Fire Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21762" level="83" type="L2Monster" name="Lava" title="Elite">
 		<race>ELEMENTAL</race>
@@ -2735,19 +2733,19 @@
 			<radius normal="38.0" />
 			<height normal="45.0" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x): -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk.: -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def.: -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="91036" min="1" max="1" chance="50.53" /> <!-- Fire Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21763" level="83" type="L2Monster" name="Firen" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2767,20 +2765,20 @@
 			<radius normal="28" />
 			<height normal="70" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="91036" min="1" max="1" chance="100" /> <!-- Fire Spirit Rough Jewel -->
 				<item id="91032" min="1" max="1" chance="8.33" /> <!-- Fire Spirit Evolution Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite">
 		<!-- Classic Seven Sings -->
@@ -2796,23 +2794,23 @@
 			<defence physical="354.8" magical="161.5" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10.8" />
 			<height normal="33" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91038" min="1" max="1" chance="50.84" /> <!-- Earth Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21765" level="83" type="L2Monster" name="Tree Soldier" title="Elite">
 		<!-- Classic Seven Sings -->
@@ -2828,23 +2826,23 @@
 			<defence physical="939.1" magical="568" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="53.3" />
 			<height normal="40.55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91038" min="1" max="1" chance="50.14" /> <!-- Earth Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21766" level="83" type="L2Monster" name="Tortay" title="Master">
 		<!-- Classic Seven Sings -->
@@ -2860,24 +2858,24 @@
 			<defence physical="923.8" magical="563" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="65.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91038" min="1" max="1" chance="100" /> <!-- Earth Spirit Rough Jewel -->
 				<item id="91034" min="1" max="1" chance="8.322" /> <!-- Earth Spirit Evolution Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21767" level="17" type="L2Monster" name="Undine" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2897,14 +2895,14 @@
 			<radius normal="19.2" />
 			<height normal="45" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4010" level="5" /> <!-- Water Resistance -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="31" min="1" max="1" chance="0.75" /> <!-- Bone Gaiters -->
 				<item id="412" min="1" max="1" chance="0.75" /> <!-- Cotton Pants -->
@@ -2923,7 +2921,7 @@
 				<item id="1897" min="1" max="1" chance="17.09" /> <!-- Necklace of Wisdom Chain -->
 				<item id="734" min="1" max="1" chance="11.65" /> <!-- Wind Walk Potion -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21768" level="83" type="L2Monster" name="Snow Golem" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2943,19 +2941,19 @@
 			<radius normal="35" />
 			<height normal="47.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="91035" min="1" max="1" chance="48.78" /> <!-- Water Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21769" level="83" type="L2Monster" name="Ishtir" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2975,20 +2973,20 @@
 			<radius normal="42" />
 			<height normal="38.3" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="91035" min="1" max="1" chance="100" /> <!-- Water Spirit Rough Jewel -->
 				<item id="91031" min="1" max="1" chance="8.316" /> <!-- Water Spirit Evolution Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21770" level="82" type="L2Monster" name="Sylph" title="Elite">
 		<parameters>
@@ -3012,31 +3010,31 @@
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" />
 			<skill id="4408" level="10" />
 			<skill id="4410" level="15" />
 			<skill id="4411" level="18" />
 			<skill id="4412" level="13" />
 			<skill id="4413" level="13" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91037" min="1" max="1" chance="49.42" /> <!-- Wind Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14.3" />
 			<height normal="46.4" />
@@ -3064,31 +3062,31 @@
 				<walk ground="45" />
 				<run ground="175" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" />
 			<skill id="4408" level="12" />
 			<skill id="4410" level="15" />
 			<skill id="4411" level="15" />
 			<skill id="4412" level="18" />
 			<skill id="4413" level="13" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91037" min="1" max="1" chance="48.9" /> <!-- Wind Spirit Rough Jewel -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="45" />
@@ -3116,32 +3114,32 @@
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>	
+		<skillList>	
 			<skill id="4416" level="7" />
 			<skill id="4408" level="13" />
 			<skill id="4410" level="21" />
 			<skill id="4411" level="18" />
 			<skill id="4412" level="18" />
 			<skill id="4413" level="14" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="91037" min="1" max="1" chance="100" /> <!-- Wind Spirit Rough Jewel -->
 				<item id="91033" min="1" max="1" chance="8.353" /> <!-- Wind Spirit Evolution Stone -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="131" />
@@ -3165,13 +3163,13 @@
 			<radius normal="23.8" />
 			<height normal="32" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-		</skill_list>
+		</skillList>
 	</npc>
 	<npc id="21774" level="78" type="L2Monster" name="Buffalo" title="Guardian of Gorge">
 		<!-- Classic Seven Sings -->
@@ -3187,17 +3185,17 @@
 			<defence physical="1770.9" magical="1610.5" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="26.4" />
 			<height normal="37.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
 				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
@@ -3219,7 +3217,7 @@
 				<item id="4044" min="1" max="1" chance="12.21" /> <!-- Thons -->
 				<item id="4041" min="1" max="1" chance="3.125" /> <!-- Mold Hardener -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past">
 		<!-- Classic Seven Sings -->
@@ -3235,14 +3233,14 @@
 			<defence physical="11806.5" magical="1754" />
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="44" />
@@ -3270,24 +3268,24 @@
 				<walk ground="60" />
 				<run ground="175" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>	
+		<skillList>	
 			<skill id="4416" level="9" />
 			<skill id="4408" level="10" />
 			<skill id="4410" level="19" />
 			<skill id="4411" level="15" />
 			<skill id="4412" level="18" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
@@ -3316,24 +3314,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>	
+		<skillList>	
 			<skill id="4416" level="7" />
 			<skill id="4410" level="13" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="12" />
 			<skill id="4413" level="10" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="28" />
@@ -3362,24 +3360,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>	
+		<skillList>	
 			<skill id="4416" level="7" />
 			<skill id="4408" level="10" />
 			<skill id="4410" level="14" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="12" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="28" />
@@ -3408,23 +3406,23 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>				
+		<skillList>				
 			<skill id="4416" level="7" />
 			<skill id="4410" level="14" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="13" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
@@ -3453,24 +3451,24 @@
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>						
+		<skillList>						
 			<skill id="4416" level="7" />
 			<skill id="4408" level="10" />
 			<skill id="4410" level="15" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="12" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10.8" />
@@ -3499,24 +3497,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>						
+		<skillList>						
 			<skill id="4416" level="7" />
 			<skill id="4410" level="15" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="13" />
 			<skill id="4413" level="12" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
@@ -3545,24 +3543,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>							
+		<skillList>							
 			<skill id="4416" level="7" />
 			<skill id="4410" level="15" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="14" />
 			<skill id="4413" level="12" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
@@ -3591,24 +3589,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>									
+		<skillList>									
 			<skill id="4416" level="7" />
 			<skill id="4408" level="10" />
 			<skill id="4410" level="17" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="13" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="28" />
@@ -3637,24 +3635,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>											
+		<skillList>											
 			<skill id="4416" level="7" />
 			<skill id="4408" level="10" />
 			<skill id="4410" level="16" />
 			<skill id="4411" level="13" />
 			<skill id="4412" level="14" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="28" />
@@ -3683,24 +3681,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>												
+		<skillList>												
 			<skill id="4416" level="7" />
 			<skill id="4408" level="13" />
 			<skill id="4410" level="16" />
 			<skill id="4411" level="15" />
 			<skill id="4412" level="13" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
@@ -3729,24 +3727,24 @@
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>															
+		<skillList>															
 			<skill id="4416" level="7" />
 			<skill id="4408" level="12" />
 			<skill id="4410" level="16" />
 			<skill id="4411" level="15" />
 			<skill id="4412" level="14" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10.8" />
@@ -3775,24 +3773,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>															
+		<skillList>															
 			<skill id="4416" level="7" />
 			<skill id="4408" level="13" />
 			<skill id="4410" level="17" />
 			<skill id="4411" level="15" />
 			<skill id="4412" level="14" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
@@ -3821,25 +3819,25 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>																	
+		<skillList>																	
 			<skill id="4416" level="7" />
 			<skill id="4408" level="12" />
 			<skill id="4410" level="13" />
 			<skill id="4411" level="17" />
 			<skill id="4412" level="14" />
 			<skill id="4413" level="12" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="24" />
@@ -3868,24 +3866,24 @@
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>																	
+		<skillList>																	
 			<skill id="4416" level="7" />
 			<skill id="4408" level="12" />
 			<skill id="4410" level="13" />
 			<skill id="4411" level="18" />
 			<skill id="4412" level="14" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18" />
@@ -3914,24 +3912,24 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>																	
+		<skillList>																	
 			<skill id="4416" level="7" />
 			<skill id="4408" level="15" />
 			<skill id="4410" level="18" />
 			<skill id="4411" level="16" />
 			<skill id="4412" level="15" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="43" />
@@ -3960,25 +3958,25 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>																		
+		<skillList>																		
 			<skill id="4416" level="7" />
 			<skill id="4408" level="15" />
 			<skill id="4410" level="18" />
 			<skill id="4411" level="16" />
 			<skill id="4412" level="16" />
 			<skill id="4413" level="13" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="46" />
@@ -4007,24 +4005,24 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>																				
+		<skillList>																				
 			<skill id="4416" level="6" />
 			<skill id="4408" level="14" />
 			<skill id="4410" level="19" />
 			<skill id="4411" level="16" />
 			<skill id="4412" level="16" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18.6" />
@@ -4053,25 +4051,25 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>390</hit_time>
+			<hitTime>390</hitTime>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="240.785479" magical="160.17851" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>																						
+		<skillList>																						
 			<skill id="4416" level="1" />
 			<skill id="4408" level="14" />
 			<skill id="4410" level="19" />
 			<skill id="4411" level="16" />
 			<skill id="4412" level="17" />
 			<skill id="4413" level="12" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="350" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>UNDEAD</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
@@ -4096,14 +4094,14 @@
 			<radius normal="20" />
 			<height normal="34" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
 				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
@@ -4122,7 +4120,7 @@
 				<item id="5000" min="1" max="1" chance="0.3" /> <!-- Recipe: Damascus Sword (60%) -->
 				<item id="5004" min="1" max="1" chance="0.3" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21795" level="71" type="L2Monster" name="Guardian Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4142,14 +4140,14 @@
 			<radius normal="24" />
 			<height normal="40" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
 				<item id="142" min="1" max="1" chance="0.003" /> <!-- Keshanberk -->
@@ -4164,7 +4162,7 @@
 				<item id="1874" min="1" max="1" chance="35.25" /> <!-- Oriharukon Ore -->
 				<item id="1875" min="1" max="1" chance="34.96" /> <!-- Stone of Purity -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21796" level="72" type="L2Monster" name="Midnight Sairon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4185,11 +4183,11 @@
 			<radius normal="10.2" />
 			<height normal="22.5" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="266" min="1" max="1" chance="0.003" /> <!-- Great Pata -->
 				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
@@ -4206,7 +4204,7 @@
 				<item id="1875" min="1" max="1" chance="41.34" /> <!-- Stone of Purity -->
 				<item id="1874" min="1" max="1" chance="41.12" /> <!-- Oriharukon Ore -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21797" level="73" type="L2Monster" name="Daymen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4227,12 +4225,12 @@
 			<radius normal="13" />
 			<height normal="33.4" />
 		</collision>
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="175" min="1" max="1" chance="0.003" /> <!-- Art of Battle Axe -->
 				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
@@ -4247,7 +4245,7 @@
 				<item id="1875" min="1" max="1" chance="43.12" /> <!-- Stone of Purity -->
 				<item id="1874" min="1" max="1" chance="42.32" /> <!-- Oriharukon Ore -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21798" level="78" type="L2Monster" name="Kookaburra">
 	    <!-- Classic Seven Sings -->
@@ -4273,11 +4271,11 @@
 				<walk ground="23" />
 				<run ground="190" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -4289,15 +4287,15 @@
 			<skill id="4412" level="10" />
 			<skill id="4413" level="10" />
 			<skill id="4414" level="3" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ANIMAL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
 				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
@@ -4323,7 +4321,7 @@
 				<item id="1879" min="1" max="1" chance="59.28" /> <!-- Cokes -->
 				<item id="1895" min="1" max="3" chance="52.5" /> <!-- Metallic Fiber -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="26.4" />
@@ -4353,11 +4351,11 @@
 				<walk ground="23" />
 				<run ground="190" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -4370,15 +4368,15 @@
 			<skill id="4413" level="7" />
 			<skill id="4414" level="3" />
 			<skill id="4276" level="2" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ANIMAL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
 				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
@@ -4404,7 +4402,7 @@
 				<item id="1879" min="1" max="1" chance="59.28" /> <!-- Cokes -->
 				<item id="1895" min="1" max="3" chance="52.5" /> <!-- Metallic Fiber -->
 			</spoil>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="26.4" />
@@ -4434,11 +4432,11 @@
 				<walk ground="23" />
 				<run ground="190" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4244" level="6" /> <!-- NPC Wild Sweep -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4450,13 +4448,13 @@
 			<skill id="4410" level="15" />
 			<skill id="4411" level="13" />
 			<skill id="4414" level="3" />
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>ANIMAL</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />

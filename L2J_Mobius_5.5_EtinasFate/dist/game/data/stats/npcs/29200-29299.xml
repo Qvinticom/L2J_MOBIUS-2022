@@ -26,7 +26,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14342" level="1" /> <!-- Tail Haunting -->
@@ -37,11 +37,11 @@
 			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="250" />
@@ -72,7 +72,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -82,11 +82,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14351" level="1" /> <!-- Provoke -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" grown="13" />
@@ -117,7 +117,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -127,11 +127,11 @@
 			<skill id="14350" level="1" /> <!-- Fear -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
@@ -161,7 +161,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -170,11 +170,11 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7" />
@@ -205,7 +205,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -215,11 +215,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14349" level="1" /> <!-- Larva Bite -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="17" />
@@ -250,7 +250,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
@@ -260,11 +260,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14332" level="1" /> <!-- Feeler Yoke -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
@@ -294,17 +294,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="42" grown="50.4" />
@@ -335,17 +335,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14345" level="1" /> <!-- Larva Sting -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="19" />
@@ -376,17 +376,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14346" level="1" /> <!-- Larva Sting -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="19" />
@@ -417,7 +417,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -426,7 +426,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="50" />
@@ -458,7 +458,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="14023" level="1" /> <!-- Hero's Teleport -->
@@ -466,7 +466,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="60" />
@@ -498,7 +498,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="true" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -506,7 +506,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="30" />
@@ -541,7 +541,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14726" level="1" /> <!-- Octavis -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -554,13 +554,13 @@
 			<skill id="14281" level="1" /> <!-- Octavis' Influence -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="600" aggroRange="300" />	
 		<collision>
 			<radius normal="30" />
 			<height normal="81" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="19462" min="1" max="1" chance="12.75" /> <!-- Octavis' Shirt -->
 				<item id="19458" min="1" max="1" chance="2.059" /> <!-- Octavis' Earring -->
@@ -652,11 +652,11 @@
 				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Crafting Pack -->
 				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Amaranthine Thrower Crafting Pack -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="99" /> <!-- Fortune Bag - Stage 1 -->
 				<item id="40198" min="1" max="1" chance="0.03" /> <!-- Disassembly Recipe Pouch: Armor -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29213" level="99" type="L2RaidBoss" name="Baylor" title="Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -694,7 +694,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
@@ -713,13 +713,13 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="5232" level="1" /> <!-- Stun -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" isAggressive="true" clanHelpRange="2000">
-			<clan_list>
+			<clanList>
 				<clan>BARLER_RO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="36586" min="1" max="1" chance="70.09" /> <!-- Scroll: Modify Armor (R-grade) -->
 				<item id="45431" min="1" max="1" chance="20.79" /> <!-- Entrance Pass: Baylor -->
@@ -813,10 +813,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="54" />
 			<height normal="77.5" />
@@ -851,13 +851,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="36" />
@@ -887,12 +887,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
@@ -922,12 +922,12 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
@@ -960,13 +960,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="34" />
@@ -1000,7 +1000,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="14247" level="1" /> <!-- Black Vortex -->
 			<skill id="14366" level="1" /> <!-- Black Vortex Swamp -->
@@ -1008,9 +1008,9 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters -->
@@ -1108,10 +1108,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="150" />
 			<height normal="150" />
@@ -1143,21 +1143,21 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14250" level="1" /> <!-- Touch of Death -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="800" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="8603" min="1" max="1" chance="2.4" /> <!-- Herb of Mana -->
 				<item id="8604" min="1" max="1" chance="3.12" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.48" /> <!-- Superior Herb of Mana -->
 			</drop>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -1187,17 +1187,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14348" level="1" /> <!-- Larva Bite -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="19" />
@@ -1228,17 +1228,17 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14347" level="1" /> <!-- Larva Bite -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="600">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="30" />
@@ -1268,17 +1268,17 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="1500">
-			<clan_list>
+			<clanList>
 				<clan>EARTH_WORM</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="250" />
@@ -1319,7 +1319,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4122" level="1" /> <!-- Antharas -->
 			<skill id="4071" level="2" /> <!-- Bow/Crossbow Resistance -->
@@ -1327,7 +1327,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="1500" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="300" />
@@ -1359,7 +1359,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
@@ -1376,7 +1376,7 @@
 			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="63" />
@@ -1408,7 +1408,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
@@ -1425,7 +1425,7 @@
 			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="63" />
@@ -1456,13 +1456,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14390" level="1" /> <!-- Dragon Bomber Explosion -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="37" />
@@ -1493,13 +1493,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14390" level="1" /> <!-- Dragon Bomber Explosion -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="42" />
@@ -1543,7 +1543,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4679" level="1" /> <!-- Valakas -->
 			<skill id="4071" level="2" /> <!-- Bow/Crossbow Resistance -->
@@ -1552,11 +1552,11 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VALAKAS</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="190" />
@@ -1588,7 +1588,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="14407" level="1" /> <!-- Lavasaurus Alpha Attack -->
@@ -1596,7 +1596,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -1627,13 +1627,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14476" level="1" /> <!-- Sacrifice -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1666,7 +1666,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
@@ -1686,7 +1686,7 @@
 			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
-		</skill_list>
+		</skillList>
 		<ai isAggressive="true" aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
@@ -1709,11 +1709,11 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-		</skill_list>
+		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="0.1" />
@@ -1749,7 +1749,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1761,7 +1761,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1797,7 +1797,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1809,7 +1809,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1845,7 +1845,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1857,7 +1857,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -1885,7 +1885,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1897,9 +1897,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
@@ -1963,10 +1963,10 @@
 				<item id="39485" min="1" max="1" chance="0.79105861113403" /> <!-- Alchemic Tome: Dye -->
 				<item id="39484" min="1" max="1" chance="0.78426424269484" /> <!-- Alchemic Tome: Life Stone -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
@@ -1993,7 +1993,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2005,9 +2005,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
@@ -2071,10 +2071,10 @@
 				<item id="39485" min="1" max="1" chance="0.79105861113403" /> <!-- Alchemic Tome: Dye -->
 				<item id="39484" min="1" max="1" chance="0.78426424269484" /> <!-- Alchemic Tome: Life Stone -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
@@ -2101,7 +2101,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" undying="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2113,7 +2113,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="24" />
@@ -2140,7 +2140,7 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status attackable="false" targetable="false" isDeathPenalty="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16101" level="1" /> <!-- Tauti -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2152,7 +2152,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="40" />
@@ -2178,7 +2178,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4415" level="1"/> <!-- Bare Hands -->
 			<skill id="4416" level="10"/> <!-- Dragons -->
 			<skill id="5464" level="1"/> <!-- Wind Attack -->
@@ -2192,9 +2192,9 @@
 			<skill id="15591" level="1"/> <!-- Wind Pull -->
 			<skill id="15275" level="1"/> <!-- Tornado -->
 			<skill id="15600" level="1"/> <!-- Lindvior's Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17439" min="1" max="3" chance="20.86" /> <!-- Eternal Leather Gloves -->
 				<item id="17440" min="1" max="3" chance="20.6" /> <!-- Eternal Leather Boots -->
@@ -2298,11 +2298,11 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 				<item id="40199" min="1" max="1" chance="4.952" /> <!-- Disassembly Recipe Pouch: Weapon -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="350" />
 			<height normal="210" />
@@ -2325,7 +2325,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="15610" level="7" /> <!-- Spinning Slasher -->
@@ -2334,7 +2334,7 @@
 			<skill id="15608" level="7" /> <!-- Power Strike -->
 			<skill id="15609" level="7" /> <!-- Decrease P. Def. -->
 			<skill id="15615" level="7" /> <!-- Increase P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
 		<collision>
 			<radius normal="60" />
@@ -2358,7 +2358,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="15616" level="7" /> <!-- Aggression -->
@@ -2370,7 +2370,7 @@
 			<skill id="15625" level="7" /> <!-- Raid Chain Strike -->
 			<skill id="15609" level="7" /> <!-- Decrease P. Def. -->
 			<skill id="15615" level="7" /> <!-- Increase P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
 		<collision>
 			<radius normal="70" />
@@ -2394,7 +2394,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="15623" level="7" /> <!-- Push Up -->
@@ -2403,7 +2403,7 @@
 			<skill id="15622" level="7" /> <!-- Ranged Magic -->
 			<skill id="15614" level="7" /> <!-- Decrease M. Def. -->
 			<skill id="15615" level="7" /> <!-- Increase P. Atk. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="100" />
@@ -2427,12 +2427,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2457,12 +2457,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2487,12 +2487,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16180" level="1" /> <!-- Darion -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="81.2165" />
@@ -2516,12 +2516,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2546,11 +2546,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2575,11 +2575,11 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2604,12 +2604,12 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -2634,15 +2634,15 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14769" level="1" /> <!-- Raid Boss (Lv. 99) -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<drop_lists>
+		</skillList>
+		<dropLists>
 			<drop>
 				<item id="38592" min="1" max="1" chance="0.75" /> <!-- Ekimus' Belt -->
 				<item id="17397" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate -->
@@ -2728,10 +2728,10 @@
 				<item id="46449" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 6 -->
 				<item id="46464" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="70" />
@@ -2756,10 +2756,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="40.8" />
@@ -2784,10 +2784,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="40.8" />
@@ -2811,10 +2811,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
@@ -2838,10 +2838,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
@@ -2866,10 +2866,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2894,10 +2894,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2922,10 +2922,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2950,10 +2950,10 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34.32" />
 			<height normal="62.4" />
@@ -2971,17 +2971,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16452" level="1" /> <!-- Raid Boss (Lv. 99) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="48" />
 			<height normal="123" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="59.55" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36574" min="1" max="1" chance="49.14" /> <!-- Scroll: Modify Weapon (R-grade) -->
@@ -3079,10 +3079,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29261" level="104" type="L2RaidBoss" name="Isadora" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3096,17 +3096,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16452" level="2" /> <!-- Raid Boss (Lv. 99) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="48" />
 			<height normal="123" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="61.17" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36574" min="1" max="1" chance="50.91" /> <!-- Scroll: Modify Weapon (R-grade) -->
@@ -3204,10 +3204,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29263" level="97" type="L2Monster" name="Harp" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3221,12 +3221,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16452" level="4" /> <!-- Raid Boss (Lv. 99) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="44" />
 			<height normal="78" />
@@ -3244,10 +3244,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="45" />
@@ -3265,10 +3265,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="39" />
@@ -3286,17 +3286,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16490" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="35326" min="1" max="1" chance="9.437" /> <!-- Seraph Ring Gem -->
 				<item id="35318" min="1" max="1" chance="8.254" /> <!-- Seraph Circlet Ingredient -->
@@ -3398,10 +3398,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29269" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3416,17 +3416,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16491" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="52" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="35326" min="1" max="1" chance="9.443" /> <!-- Seraph Ring Gem -->
 				<item id="35318" min="1" max="1" chance="8.183" /> <!-- Seraph Circlet Ingredient -->
@@ -3528,10 +3528,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29270" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3545,17 +3545,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16492" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="82" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17405" min="1" max="1" chance="1.81" /> <!-- Seraph Leather Gloves -->
 				<item id="17396" min="1" max="1" chance="1.808" /> <!-- Seraph Helmet -->
@@ -3633,10 +3633,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29271" level="97" type="L2Monster" name="Pafuron">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3651,15 +3651,15 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17407" min="1" max="1" chance="0.03" /> <!-- Seraph Circlet -->
 				<item id="57" min="8860" max="20682" chance="70" /> <!-- Adena -->
@@ -3670,10 +3670,10 @@
 				<item id="36534" min="1" max="1" chance="2.825" /> <!-- Durable Braid -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29272" level="97" type="L2Monster" name="Krutati">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3687,15 +3687,15 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="64" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17396" min="1" max="1" chance="0.03" /> <!-- Seraph Helmet -->
 				<item id="57" min="8860" max="20682" chance="70" /> <!-- Adena -->
@@ -3705,10 +3705,10 @@
 			<spoil>
 				<item id="36533" min="1" max="1" chance="60.12" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29273" level="98" type="L2RaidBoss" name="Lindvior's Herald Numa" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3722,17 +3722,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16493" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="100" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -3810,10 +3810,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29274" level="98" type="L2RaidBoss" name="Valakas' Herald Potigia" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3827,17 +3827,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16494" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="48" />
 			<height normal="73" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -3915,10 +3915,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29275" level="98" type="L2RaidBoss" name="Antharas' Herald Komabor" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3932,17 +3932,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16495" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="100" />
 			<height normal="112" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -4020,10 +4020,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29276" level="85" type="L2Monster" name="Mino Muscle Bomber">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4037,10 +4037,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="55" />
@@ -4059,10 +4059,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="46.5" />
@@ -4080,17 +4080,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16496" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -4168,10 +4168,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29279" level="98" type="L2RaidBoss" name="Vengeful Oretross" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4185,17 +4185,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16497" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="45" grown="32" />
 			<height normal="96" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -4273,10 +4273,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29280" level="98" type="L2RaidBoss" name="Vengeful Eligos" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4290,17 +4290,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16498" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="100" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -4378,10 +4378,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29281" level="85" type="L2Monster" name="Dark Spicula">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4395,10 +4395,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="19" />
@@ -4417,10 +4417,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -4438,17 +4438,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16499" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" grown="18" />
 			<height normal="88" grown="46" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -4526,10 +4526,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29284" level="98" type="L2RaidBoss" name="Vengeful Edaire" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4543,17 +4543,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16500" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" grown="14" />
 			<height normal="85" grown="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -4631,10 +4631,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29285" level="98" type="L2RaidBoss" name="Vengeful Agonia" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4648,17 +4648,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16501" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" grown="32" />
 			<height normal="95" grown="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -4736,10 +4736,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29286" level="85" type="L2Monster" name="Dark Weiss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4753,10 +4753,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
@@ -4774,10 +4774,10 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" grown="12" />
 			<height normal="35" grown="42" />
@@ -4795,17 +4795,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16502" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17316" min="1" max="1" chance="15.6" /> <!-- Immortal Tunic -->
 				<item id="17317" min="1" max="1" chance="14.26" /> <!-- Immortal Stockings -->
@@ -4878,10 +4878,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29289" level="92" type="L2RaidBoss" name="Amden Orc Turation" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4896,17 +4896,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16503" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="52" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17312" min="1" max="1" chance="15.17" /> <!-- Immortal Leather Leggings -->
 				<item id="17311" min="1" max="1" chance="15.12" /> <!-- Immortal Leather Armor -->
@@ -4979,10 +4979,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29290" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4997,17 +4997,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16504" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="61" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="36389" min="1" max="1" chance="81.31" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="20.28" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
@@ -5072,10 +5072,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29291" level="98" type="L2Monster" name="Nerva Orc Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5090,15 +5090,15 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="57" min="25865" max="60385" chance="70" /> <!-- Adena -->
 				<item id="36560" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Top-grade) -->
@@ -5108,10 +5108,10 @@
 				<item id="36560" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Top-grade) -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29292" level="99" type="L2Monster" name="Nerva Orc Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5125,15 +5125,15 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
 				<item id="57" min="26383" max="61577" chance="70" /> <!-- Adena -->
@@ -5144,10 +5144,10 @@
 				<item id="36519" min="1" max="1" chance="15.15" /> <!-- Quality Leather -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29293" level="99" type="L2RaidBoss" name="Theor" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5161,17 +5161,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16505" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="54.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="36389" min="1" max="1" chance="78.29" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="20.93" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
@@ -5236,10 +5236,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29294" level="85" type="L2Monster" name="Tebird" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5253,12 +5253,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16506" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="50" />
@@ -5276,17 +5276,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16507" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="36389" min="1" max="1" chance="80.51" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="19" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
@@ -5351,10 +5351,10 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29296" level="99" type="L2Monster" name="Nerva Orc Assassin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5369,15 +5369,15 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="30864" max="72036" chance="70" /> <!-- Adena -->
@@ -5388,10 +5388,10 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29297" level="99" type="L2Monster" name="Nerva Orc Ambusher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5406,15 +5406,15 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="25368" max="59208" chance="70" /> <!-- Adena -->
@@ -5425,10 +5425,10 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="29298" level="85" type="L2Monster" name="Varbasion" title="Dimensional Invader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5442,12 +5442,12 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16508" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="88" />
@@ -5465,17 +5465,17 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16509" level="1" /> <!-- 99Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="82" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<drop>
 				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
 				<item id="17402" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Helmet -->
@@ -5556,9 +5556,9 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky_drop>
+			<lucky>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
+			</lucky>
+		</dropLists>
 	</npc>
 </list>
