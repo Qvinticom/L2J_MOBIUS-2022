@@ -25,7 +25,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -54,8 +53,8 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class NpcData implements IGameXmlReader
 {
-	private final Map<Integer, L2NpcTemplate> _npcs = new ConcurrentHashMap<>();
-	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
+	private final Map<Integer, L2NpcTemplate> _npcs = new HashMap<>();
+	private final Map<String, Integer> _clans = new HashMap<>();
 	private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
 	
 	protected NpcData()
@@ -286,30 +285,28 @@ public class NpcData implements IGameXmlReader
 											}
 											case "speed":
 											{
+												for (Node speedNode = statsNode.getFirstChild(); speedNode != null; speedNode = speedNode.getNextSibling())
 												{
-													for (Node speedNode = statsNode.getFirstChild(); speedNode != null; speedNode = speedNode.getNextSibling())
+													attrs = speedNode.getAttributes();
+													switch (speedNode.getNodeName().toLowerCase())
 													{
-														attrs = speedNode.getAttributes();
-														switch (speedNode.getNodeName().toLowerCase())
+														case "walk":
 														{
-															case "walk":
-															{
-																set.set("baseWalkSpd", parseDouble(attrs, "ground"));
-																set.set("baseSwimWalkSpd", parseDouble(attrs, "swim"));
-																set.set("baseFlyWalkSpd", parseDouble(attrs, "fly"));
-																break;
-															}
-															case "run":
-															{
-																set.set("baseRunSpd", parseDouble(attrs, "ground"));
-																set.set("baseSwimRunSpd", parseDouble(attrs, "swim"));
-																set.set("baseFlyRunSpd", parseDouble(attrs, "fly"));
-																break;
-															}
+															set.set("baseWalkSpd", parseDouble(attrs, "ground"));
+															set.set("baseSwimWalkSpd", parseDouble(attrs, "swim"));
+															set.set("baseFlyWalkSpd", parseDouble(attrs, "fly"));
+															break;
+														}
+														case "run":
+														{
+															set.set("baseRunSpd", parseDouble(attrs, "ground"));
+															set.set("baseSwimRunSpd", parseDouble(attrs, "swim"));
+															set.set("baseFlyRunSpd", parseDouble(attrs, "fly"));
+															break;
 														}
 													}
-													break;
 												}
+												break;
 											}
 											case "hittime":
 											{
