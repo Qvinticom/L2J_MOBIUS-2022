@@ -189,7 +189,10 @@ public class CubicInstance
 					final L2Character target = stream.sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent)).findFirst().orElse(null);
 					if (target != null)
 					{
-						activateCubicSkill(skill, target);
+						if (Rnd.nextDouble() > (target.getCurrentHp() / target.getMaxHp()))
+						{
+							activateCubicSkill(skill, target);
+						}
 						break;
 					}
 				}
