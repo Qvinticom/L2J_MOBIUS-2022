@@ -48,9 +48,11 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ArmorsetSkillHolder;
+import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
+import com.l2jmobius.gameserver.model.items.type.ItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
@@ -1639,8 +1641,25 @@ public abstract class Inventory extends ItemContainer
 				return;
 			}
 			
-			final L2PcInstance player = (L2PcInstance) getOwner();
+			// Equip only identical grade arrows.
+			final L2EtcItem etcItem = item.getEtcItem();
+			if (etcItem != null)
+			{
+				final L2ItemInstance weapon = getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+				if (weapon != null)
+				{
+					final EtcItemType itemType = etcItem.getItemType();
+					final ItemType weaponItemType = weapon.getItemType();
+					if ((((weaponItemType == WeaponType.BOW) && (itemType == EtcItemType.ARROW)) //
+						|| (((weaponItemType == WeaponType.CROSSBOW) || (weaponItemType == WeaponType.TWOHANDCROSSBOW)) && (itemType == EtcItemType.BOLT))) //
+						&& (weapon.getItem().getCrystalTypePlus() != item.getItem().getCrystalTypePlus()))
+					{
+						return;
+					}
+				}
+			}
 			
+			final L2PcInstance player = (L2PcInstance) getOwner();
 			if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 			{
 				return;
