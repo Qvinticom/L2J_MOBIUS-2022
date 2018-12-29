@@ -200,7 +200,6 @@ public class GameServer
 		
 		new File(Config.DATAPACK_ROOT, "data/clans").mkdirs();
 		new File(Config.DATAPACK_ROOT, "data/crests").mkdirs();
-		new File(Config.DATAPACK_ROOT, "data/pathnode").mkdirs();
 		new File(Config.DATAPACK_ROOT, "data/geodata").mkdirs();
 		
 		HtmCache.getInstance();
