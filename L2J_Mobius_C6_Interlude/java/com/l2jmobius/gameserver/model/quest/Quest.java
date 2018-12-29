@@ -1623,6 +1623,10 @@ public class Quest extends ManagedScript
 		
 		// Return random candidate.
 		final List<L2PcInstance> members = getPartyMembers(player, npc, var, value);
+		if (members.isEmpty())
+		{
+			return player;
+		}
 		return members.get(Rnd.get(members.size()));
 	}
 	
@@ -1696,7 +1700,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// if there was no match, return null...
-		if (candidates.size() == 0)
+		if (candidates.isEmpty())
 		{
 			return null;
 		}

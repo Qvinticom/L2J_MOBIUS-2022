@@ -253,6 +253,10 @@ public class Q660_AidingTheFloranVillage extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		switch (npc.getNpcId())
 		{

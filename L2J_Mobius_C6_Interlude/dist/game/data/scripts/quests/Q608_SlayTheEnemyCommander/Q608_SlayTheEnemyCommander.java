@@ -126,6 +126,11 @@ public class Q608_SlayTheEnemyCommander extends Quest
 			if (partyMember.getAllianceWithVarkaKetra() >= 4)
 			{
 				QuestState st = partyMember.getQuestState(qn);
+				if (st == null)
+				{
+					continue;
+				}
+				
 				if (st.hasQuestItems(KETRA_ALLIANCE_4))
 				{
 					st.set("cond", "2");

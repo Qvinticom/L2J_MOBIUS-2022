@@ -414,6 +414,11 @@ public class Q426_QuestForFishingShot extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
+		
 		int npcId = npc.getNpcId();
 		int drop = 0;
 		int chance = 0;

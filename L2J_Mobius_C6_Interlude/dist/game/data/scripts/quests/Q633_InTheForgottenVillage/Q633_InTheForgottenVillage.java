@@ -185,7 +185,11 @@ public class Q633_InTheForgottenVillage extends Quest
 			}
 			
 			QuestState st = partyMember.getQuestState(qn);
-			
+			if (st == null)
+			{
+				return null;
+			}
+		
 			if (st.dropItems(RIB_BONE, 1, 200, MOBS.get(npcId)))
 			{
 				st.set("cond", "2");

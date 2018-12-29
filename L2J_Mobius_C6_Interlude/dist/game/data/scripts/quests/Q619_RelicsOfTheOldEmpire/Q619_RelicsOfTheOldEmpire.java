@@ -156,6 +156,10 @@ public class Q619_RelicsOfTheOldEmpire extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		st.dropItemsAlways(RELICS, 1, 0);
 		st.dropItems(ENTRANCE, 1, 0, 50000);

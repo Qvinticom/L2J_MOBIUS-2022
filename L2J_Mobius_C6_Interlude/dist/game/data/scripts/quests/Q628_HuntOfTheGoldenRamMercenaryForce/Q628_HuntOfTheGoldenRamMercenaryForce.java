@@ -174,6 +174,10 @@ public class Q628_HuntOfTheGoldenRamMercenaryForce extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		final int cond = st.getInt("cond");
 		final int npcId = npc.getNpcId();

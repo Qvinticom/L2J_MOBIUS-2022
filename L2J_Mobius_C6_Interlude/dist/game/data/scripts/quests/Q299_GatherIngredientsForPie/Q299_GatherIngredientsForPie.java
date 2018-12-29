@@ -208,6 +208,10 @@ public class Q299_GatherIngredientsForPie extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(HONEY_POUCH, 1, 100, (npc.getNpcId() == 20934) ? 571000 : 625000))
 		{

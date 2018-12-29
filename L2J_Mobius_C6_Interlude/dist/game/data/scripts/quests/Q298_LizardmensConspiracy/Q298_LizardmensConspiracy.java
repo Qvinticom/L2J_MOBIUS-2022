@@ -136,6 +136,10 @@ public class Q298_LizardmensConspiracy extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		switch (npc.getNpcId())
 		{

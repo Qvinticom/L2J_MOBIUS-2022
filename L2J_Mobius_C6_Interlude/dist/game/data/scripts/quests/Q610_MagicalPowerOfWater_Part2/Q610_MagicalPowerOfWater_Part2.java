@@ -224,6 +224,11 @@ public class Q610_MagicalPowerOfWater_Part2 extends Quest
 		for (L2PcInstance partyMember : getPartyMembers(player, npc, "cond", "2"))
 		{
 			QuestState st = partyMember.getQuestState(qn);
+			if (st == null)
+			{
+				continue;
+			}
+			
 			st.set("cond", "3");
 			st.playSound(QuestState.SOUND_MIDDLE);
 			st.giveItems(ICE_HEART_OF_ASHUTAR, 1);

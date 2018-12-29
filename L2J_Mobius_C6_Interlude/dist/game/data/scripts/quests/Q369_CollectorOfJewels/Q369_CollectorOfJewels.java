@@ -181,6 +181,10 @@ public class Q369_CollectorOfJewels extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		final int cond = st.getInt("cond");
 		final int[] drop = DROPLIST.get(npc.getNpcId());

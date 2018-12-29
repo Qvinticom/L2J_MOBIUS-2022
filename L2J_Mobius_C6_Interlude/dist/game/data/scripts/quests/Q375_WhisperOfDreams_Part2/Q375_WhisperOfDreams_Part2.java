@@ -131,6 +131,10 @@ public class Q375_WhisperOfDreams_Part2 extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		switch (npc.getNpcId())
 		{

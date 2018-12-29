@@ -117,6 +117,10 @@ public class Q647_InfluxOfMachines extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(DESTROYED_GOLEM_SHARD, 1, 500, 300000))
 		{

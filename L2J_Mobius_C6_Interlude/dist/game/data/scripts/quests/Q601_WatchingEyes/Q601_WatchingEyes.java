@@ -158,6 +158,10 @@ public class Q601_WatchingEyes extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(PROOF_OF_AVENGER, 1, 100, 500000))
 		{

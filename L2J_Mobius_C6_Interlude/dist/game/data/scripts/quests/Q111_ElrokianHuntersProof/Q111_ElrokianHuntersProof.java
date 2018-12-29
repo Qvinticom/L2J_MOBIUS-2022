@@ -239,6 +239,10 @@ public class Q111_ElrokianHuntersProof extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		switch (npc.getNpcId())
 		{

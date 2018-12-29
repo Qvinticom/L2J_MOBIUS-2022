@@ -139,6 +139,10 @@ public class Q646_SignsOfRevolt extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(CURSED_DOLL, 1, 180, 750000))
 		{

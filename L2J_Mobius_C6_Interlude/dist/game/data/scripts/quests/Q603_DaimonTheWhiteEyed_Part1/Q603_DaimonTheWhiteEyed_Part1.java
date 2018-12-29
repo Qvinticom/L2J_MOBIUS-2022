@@ -257,6 +257,10 @@ public class Q603_DaimonTheWhiteEyed_Part1 extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(EVIL_SPIRIT_BEADS, 1, 200, CHANCES.get(npc.getNpcId())))
 		{

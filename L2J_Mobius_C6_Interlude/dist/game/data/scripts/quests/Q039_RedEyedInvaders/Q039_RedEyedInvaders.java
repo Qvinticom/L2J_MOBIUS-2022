@@ -213,8 +213,12 @@ public class Q039_RedEyedInvaders extends Quest
 		if ((partyMember != null) && (npcId != ARANEID))
 		{
 			final QuestState st = partyMember.getQuestState(qn);
-			final int[] list = FIRST_DP.get(npcId);
+			if (st == null)
+			{
+				return null;
+			}
 			
+			final int[] list = FIRST_DP.get(npcId);
 			if (st.dropItems(list[0], 1, 100, 500000) && (st.getQuestItemsCount(list[1]) == 100))
 			{
 				st.set("cond", "3");

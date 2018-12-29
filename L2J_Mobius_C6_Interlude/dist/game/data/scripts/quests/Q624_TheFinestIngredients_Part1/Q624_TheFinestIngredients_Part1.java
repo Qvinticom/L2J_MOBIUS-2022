@@ -140,6 +140,10 @@ public class Q624_TheFinestIngredients_Part1 extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		switch (npc.getNpcId())
 		{

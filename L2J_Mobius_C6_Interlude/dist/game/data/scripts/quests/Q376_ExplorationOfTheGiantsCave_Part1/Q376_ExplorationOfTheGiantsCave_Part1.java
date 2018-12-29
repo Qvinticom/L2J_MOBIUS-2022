@@ -201,6 +201,10 @@ public class Q376_ExplorationOfTheGiantsCave_Part1 extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		st.dropItems(PARCHMENT, 1, 0, 20000);
 		

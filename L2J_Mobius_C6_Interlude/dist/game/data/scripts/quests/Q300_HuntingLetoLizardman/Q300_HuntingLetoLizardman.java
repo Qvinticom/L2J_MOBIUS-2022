@@ -141,6 +141,10 @@ public class Q300_HuntingLetoLizardman extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(BRACELET, 1, 60, CHANCES.get(npc.getNpcId())))
 		{

@@ -147,6 +147,10 @@ public class Q644_GraveRobberAnnihilation extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(ORC_GRAVE_GOODS, 1, 120, 500000))
 		{

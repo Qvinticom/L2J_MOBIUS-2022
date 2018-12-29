@@ -123,6 +123,11 @@ public class Q613_ProveYourCourage extends Quest
 			if (partyMember.getAllianceWithVarkaKetra() <= -3)
 			{
 				QuestState st = partyMember.getQuestState(qn);
+				if (st == null)
+				{
+					continue;
+				}
+				
 				if (st.hasQuestItems(VARKA_ALLIANCE_3))
 				{
 					st.set("cond", "2");

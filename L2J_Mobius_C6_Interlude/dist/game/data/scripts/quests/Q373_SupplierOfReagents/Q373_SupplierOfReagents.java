@@ -428,9 +428,12 @@ public class Q373_SupplierOfReagents extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		final int[] drop = DROPLIST.get(npc.getNpcId());
-		
 		if (drop[2] == 0)
 		{
 			st.dropItems(drop[0], 1, 0, drop[1]);

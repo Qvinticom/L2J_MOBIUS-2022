@@ -206,6 +206,10 @@ public class Q631_DeliciousTopChoiceMeat extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(TOP_QUALITY_MEAT, 1, 120, CHANCES.get(npc.getNpcId())))
 		{

@@ -137,8 +137,12 @@ public class Q637_ThroughTheGateOnceMore extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
-		if ((st != null) && st.dropItems(NECROMANCER_HEART, 1, 10, 400000))
+		if (st.dropItems(NECROMANCER_HEART, 1, 10, 400000))
 		{
 			st.set("cond", "2");
 		}

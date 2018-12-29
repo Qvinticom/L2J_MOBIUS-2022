@@ -109,6 +109,10 @@ public class Q432_BirthdayPartySong extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(RED_CRYSTAL, 1, 50, 500000))
 		{

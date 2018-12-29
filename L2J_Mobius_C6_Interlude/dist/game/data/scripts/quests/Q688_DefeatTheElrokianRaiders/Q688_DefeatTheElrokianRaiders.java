@@ -132,6 +132,10 @@ public class Q688_DefeatTheElrokianRaiders extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		st.dropItems(DINOSAUR_FANG_NECKLACE, 1, 0, 500000);
 		

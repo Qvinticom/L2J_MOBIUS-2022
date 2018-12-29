@@ -134,6 +134,11 @@ public class Q641_AttackSailren extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
+		
 		if (st.dropItems(GAZKH_FRAGMENT, 1, 30, 50000))
 		{
 			st.set("cond", "2");

@@ -148,6 +148,10 @@ public class Q618_IntoTheFlame extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(VACUALITE_ORE, 1, 50, 500000))
 		{

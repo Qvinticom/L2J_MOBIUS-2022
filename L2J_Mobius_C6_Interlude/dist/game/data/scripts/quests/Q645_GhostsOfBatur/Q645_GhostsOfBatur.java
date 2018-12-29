@@ -145,6 +145,10 @@ public class Q645_GhostsOfBatur extends Quest
 		}
 		
 		QuestState st = partyMember.getQuestState(qn);
+		if (st == null)
+		{
+			return null;
+		}
 		
 		if (st.dropItems(CURSED_GRAVE_GOODS, 1, 180, 750000))
 		{
