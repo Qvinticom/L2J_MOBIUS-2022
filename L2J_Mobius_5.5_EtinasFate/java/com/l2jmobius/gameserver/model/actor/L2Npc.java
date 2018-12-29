@@ -396,6 +396,12 @@ public class L2Npc extends L2Character
 			return false;
 		}
 		
+		// Summons can attack NPCs.
+		if (attacker.isSummon())
+		{
+			return true;
+		}
+		
 		if (!isTargetable())
 		{
 			return false;

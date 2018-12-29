@@ -627,7 +627,8 @@ public abstract class L2Summon extends L2Playable
 		}
 		else
 		{
-			target = skill.getTarget(this, forceUse, dontMove, false);
+			final L2Object currentTarget = _owner.getTarget();
+			target = skill.getTarget(this, skill.isBad() && (currentTarget != null) && (!currentTarget.isPlayable() || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
 		}
 		
 		// Check the validity of the target
@@ -776,7 +777,7 @@ public abstract class L2Summon extends L2Playable
 	@Override
 	public void doCast(Skill skill)
 	{
-		if ((skill.getTarget(this, false, false, false) == null) && !_owner.getAccessLevel().allowPeaceAttack())
+		if ((skill.getTarget(this, skill.isBad(), false, false) == null) && !_owner.getAccessLevel().allowPeaceAttack())
 		{
 			// Send a System Message to the L2PcInstance
 			_owner.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -786,7 +787,7 @@ public abstract class L2Summon extends L2Playable
 			return;
 		}
 		
-		super.doCast(skill);
+		doCast(skill, null, skill.isBad(), false);
 	}
 	
 	@Override

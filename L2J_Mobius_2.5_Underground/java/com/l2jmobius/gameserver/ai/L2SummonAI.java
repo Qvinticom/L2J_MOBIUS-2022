@@ -118,7 +118,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 			return;
 		}
 		
-		final L2Object target = _skill.getTarget(_actor, _forceUse, _dontMove, false);
+		final L2Object target = _skill.getTarget(_actor, _skill.isBad(), _dontMove, false);
 		if (checkTargetLost(target))
 		{
 			setTarget(null);
@@ -133,7 +133,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		summon.setFollowStatus(false);
 		setIntention(AI_INTENTION_IDLE);
 		_startFollow = val;
-		_actor.doCast(_skill, _item, _forceUse, _dontMove);
+		_actor.doCast(_skill, _item, _skill.isBad(), _dontMove);
 	}
 	
 	private void thinkPickUp()
