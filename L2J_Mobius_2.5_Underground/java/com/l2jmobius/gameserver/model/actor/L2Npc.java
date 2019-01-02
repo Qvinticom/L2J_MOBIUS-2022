@@ -622,7 +622,7 @@ public class L2Npc extends L2Character
 	 */
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
-		// if (canInteract(player))
+		if (canInteract(player))
 		{
 			final IBypassHandler handler = BypassHandler.getInstance().getHandler(command);
 			if (handler != null)

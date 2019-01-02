@@ -559,11 +559,7 @@ public class L2Npc extends L2Character
 		{
 			return false;
 		}
-		else if ((player.getInstanceId() != getInstanceId()) && (player.getInstanceId() != -1))
-		{
-			return false;
-		}
-		else if (_isBusy)
+		else if (player.getInstanceId() != getInstanceId())
 		{
 			return false;
 		}
@@ -707,7 +703,7 @@ public class L2Npc extends L2Character
 	 */
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
-		// if (canInteract(player))
+		if (canInteract(player))
 		{
 			if (_isBusy && (_busyMessage.length() > 0))
 			{

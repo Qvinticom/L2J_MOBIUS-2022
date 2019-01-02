@@ -701,13 +701,30 @@ public class L2NpcInstance extends L2Character
 	 */
 	protected boolean canInteract(L2PcInstance player)
 	{
-		// TODO: NPC busy check etc...
-		
-		if (!isInsideRadius(player, INTERACTION_DISTANCE, false, false))
+		if (player.isCastingNow())
 		{
 			return false;
 		}
-		
+		else if (player.isDead() || player.isFakeDeath())
+		{
+			return false;
+		}
+		else if (player.isSitting())
+		{
+			return false;
+		}
+		else if (player.isInStoreMode())
+		{
+			return false;
+		}
+		else if (!isInsideRadius(player, INTERACTION_DISTANCE, false, false))
+		{
+			return false;
+		}
+		else if (player.getInstanceId() != getInstanceId())
+		{
+			return false;
+		}
 		return true;
 	}
 	
