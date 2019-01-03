@@ -87,10 +87,12 @@
 		</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
-		<castRange>0</castRange>
-		<effectRange>900</effectRange>
-		<hitTime>4000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<effectPoint>
+			<value level="1">204</value>
+			<value level="2">379</value>
+			<value level="3">549</value>
+		</effectPoint>		
+		<hitTime>1500</hitTime>
 		<magicLvl>
 			<value level="1">7</value>
 			<value level="2">25</value>
@@ -107,7 +109,7 @@
 			<value level="3">8</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>300</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -665,7 +667,6 @@
 		</effects>
 	</skill>
 	<skill id="1612" toLevel="1" name="Slowing Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -678,7 +679,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<hitTime>1200</hitTime>
-		<hitCancelTime>500</hitCancelTime>
 		<effectPoint>
 			<value level="1">680</value>
 			<value level="2">850</value>
@@ -759,7 +759,7 @@
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
-				<rate>25</rate>
+				<rate>10</rate>
 				<max>1</max>
 			</effect>
 			<effect name="BlockActions" />
@@ -914,12 +914,13 @@
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<affectRange>1000</affectRange>
-		<hitTime>2000</hitTime>
-		<hitCancelTime>500</hitCancelTime>
+		<effectPoint>673</effectPoint>
+		<hitTime>1000</hitTime>		
 		<icon>icon.skill1621</icon>
-		<operateType>A2</operateType>
 		<magicLvl>80</magicLvl>
 		<mpConsume>38</mpConsume>
+		<hpConsume>1115</hpConsume>
+		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
@@ -941,10 +942,6 @@
 			</effect>
 			<effect name="HealEffect">
 				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxHp">
-				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1009,13 +1006,13 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
 		<chargeConsume>7</chargeConsume>
-		<activateRate>100</activateRate>
-		<basicProperty>NONE</basicProperty>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>600</castRange>
 		<coolTime>720</coolTime>
-		<effectPoint>-1000</effectPoint>
-		<effectRange>400</effectRange>
-		<hitTime>2500</hitTime>
+		<effectPoint>-673</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1500</hitTime>
 		<icon>icon.skill1624</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
@@ -1026,7 +1023,7 @@
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>5</magicCriticalRate>		
 		<trait>PHYSICAL_BLOCKADE</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1036,12 +1033,13 @@
 					<item>DUAL</item>
 				</weaponType>
 			</condition>
+			<condition name="EnergySaved">
+				<amount>5</amount>
+			</condition>
 		</conditions>
-		<effects>
-			<effect name="Mute" />
-			<effect name="PhysicalMute" />
-			<effect name="BlockTarget" />
-			<effect name="BlockMove" />
+		<effects>		
+			<effect name="PhysicalAttackMute" />	
+			<effect name="BlockActions" />
 			<effect name="DefenceCriticalDamage">
 				<amount>-50</amount>
 				<mode>PER</mode>
@@ -1203,25 +1201,26 @@
 		</effects>
 	</skill>
 	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
-		<icon>icon.skill1629</icon>
-		<castRange>800</castRange>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<activateRate>80</activateRate>
+		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1629</icon>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>76</magicLvl>
 		<mpConsume>60</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<activateRate>80</activateRate>
 		<nextAction>ATTACK</nextAction>
-		<staticReuse>true</staticReuse>
-		<isMagic>1</isMagic>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
+		<castRange>800</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
 		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<isDebuff>true</isDebuff>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1240,27 +1239,29 @@
 		</effects>
 	</skill>
 	<skill id="1630" toLevel="1" name="Throwing Blood Dagger">
-		<icon>icon.skill1630</icon>
-		<castRange>800</castRange>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
-		<mpConsume>60</mpConsume>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>	
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<activateRate>80</activateRate>
+		<lvlBonusRate>20</lvlBonusRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectRange>900</effectRange>
+		<icon>icon.skill1630</icon>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>76</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
-		<activateRate>80</activateRate>
-		<reuseDelay>30000</reuseDelay>
+		<mpConsume>60</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<isMagic>1</isMagic>
+		<castRange>800</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
-		<lvlBonusRate>20</lvlBonusRate>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>SINGLE</affectScope>		
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1277,7 +1278,7 @@
 	</skill>
 	<skill id="1631" toLevel="2" name="Clear Movements">
 		<icon>icon.skill1631</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -1293,7 +1294,7 @@
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>420000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="ReuseSkillById">

@@ -1109,8 +1109,6 @@
 		</effects>
 	</skill>
 	<skill id="222" toLevel="4" name="Fury Fists">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill0222</icon>
 		<magicLvl>43</magicLvl>
 		<mpConsume>8</mpConsume>
@@ -1119,8 +1117,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="DamOverTime">
-				<power>12</power>
+			<effect name="HealOverTime">
+				<power>-12</power>
 				<ticks>2</ticks>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -6265,16 +6263,20 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Accuracy">
-				<amount>6</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>20</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="Accuracy">
+				<amount>6</amount>
+				<mode>DIFF</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
@@ -7285,7 +7287,6 @@
 		</effects>
 	</skill>
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -7313,13 +7314,23 @@
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>12</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>30</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="Accuracy">
+				<amount>6</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>6</amount>
+				<mode>DIFF</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>

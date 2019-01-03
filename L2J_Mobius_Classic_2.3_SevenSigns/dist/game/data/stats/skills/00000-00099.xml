@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1" toLevel="45" name="Triple Slash">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>		
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -47,6 +52,7 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
+		<isDebuff>true</isDebuff>
 		<icon>icon.skill0001</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -143,7 +149,7 @@
 			<value level="45">103</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -209,6 +215,10 @@
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -579,6 +589,12 @@
 	</skill>
 	<skill id="6" toLevel="45" name="Sonic Blaster">
 		<castRange>600</castRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>35</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-183</value>
 			<value level="2">-188</value>
@@ -718,10 +734,11 @@
 			<value level="44">129</value>
 			<value level="45">130</value>
 		</mpConsume>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -787,6 +804,7 @@
 				</power>
 				<overHit>true</overHit>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="7" toLevel="44" name="Sonic Storm">
@@ -6311,18 +6329,28 @@
 		</conditions>
 		<effects>
 			<effect name="PAtk">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
-			<effect name="Speed">
-				<amount>-30</amount>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
@@ -6576,8 +6604,15 @@
 		</conditions>
 		<effects>
 			<effect name="Speed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALFIST</item>
+				</weaponType>
 			</effect>
 			<effect name="Accuracy">
 				<amount>3</amount>

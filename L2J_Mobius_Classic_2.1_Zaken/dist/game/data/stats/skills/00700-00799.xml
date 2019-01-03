@@ -2413,7 +2413,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
-		<activateRate>90</activateRate>
+		<activateRate>40</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -2426,7 +2426,7 @@
 		<magicLvl>80</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
@@ -2439,12 +2439,7 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
-			</condition>
-			<condition name="OpCheckAbnormal">
-				<type>SEED_OF_KNIGHT</type>
-				<level>4</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
+			</condition>			
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -2455,8 +2450,8 @@
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>BUFF</slot>
-				<rate>25</rate>
-				<max>5</max>
+				<rate>10</rate>
+				<max>1</max>
 			</effect>
 			<effect name="MaxCp">
 				<amount>-90</amount>

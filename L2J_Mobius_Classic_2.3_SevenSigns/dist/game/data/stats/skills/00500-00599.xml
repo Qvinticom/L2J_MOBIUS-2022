@@ -1895,6 +1895,10 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="Cp">
+				<amount>-95</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MaxHp">
 				<amount>35</amount>
 				<mode>PER</mode>
@@ -1919,6 +1923,7 @@
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
+			
 		</effects>
 	</skill>
 	<skill id="537" toLevel="1" name="Spoil Bomb">

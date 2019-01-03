@@ -864,7 +864,6 @@
 		</effects>
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
-		<!-- Glory Days Confirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -889,22 +888,22 @@
 		</conditions>
 		<effects>
 			<effect name="PAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>

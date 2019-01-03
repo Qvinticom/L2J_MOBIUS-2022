@@ -1585,11 +1585,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetRace">
-				<race>UNDEAD</race>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -3471,14 +3466,11 @@
 			<value level="1">2</value>
 			<value level="2">3</value>
 		</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<abnormalType>MAX_BREATH_UP</abnormalType>
-		<castRange>400</castRange>
+		<abnormalTime>600</abnormalTime>
 		<effectPoint>
-			<value level="1">121</value>
-			<value level="2">417</value>
+			<value level="1">5</value>
+			<value level="2">10</value>
 		</effectPoint>
-		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1073</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3495,10 +3487,10 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Breath">
+			<effect name="MagicalSkillPower">
 				<amount>
 					<value level="1">400</value>
 					<value level="2">600</value>

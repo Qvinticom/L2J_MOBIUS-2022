@@ -3106,7 +3106,7 @@
 	</skill>
 	<skill id="1459" toLevel="3" name="Divine Power">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_POWER_UP</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2000</hitTime>
@@ -3123,7 +3123,7 @@
 			<value level="3">109</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3132,9 +3132,9 @@
 		<effects>
 			<effect name="HealEffect">
 				<amount>
-					<value level="1">100</value>
-					<value level="2">300</value>
-					<value level="3">500</value>
+					<value level="1">20</value>
+					<value level="2">50</value>
+					<value level="3">80</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3161,15 +3161,9 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpCheckClass">
-				<classId>ORACLE</classId>
-				<affectType>TARGET</affectType>
-				<isWithin>false</isWithin>
-			</condition>
-			<condition name="OpCheckClass">
-				<classId>SHILLIEN_ORACLE</classId>
-				<affectType>TARGET</affectType>
-				<isWithin>false</isWithin>
+			<condition name="OpSkillAcquire">
+				<skillId>1013</skillId>
+				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
