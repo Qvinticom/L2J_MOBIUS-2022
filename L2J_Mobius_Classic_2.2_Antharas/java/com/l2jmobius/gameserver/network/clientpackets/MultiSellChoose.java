@@ -45,6 +45,7 @@ import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -356,6 +357,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						case PC_CAFE_POINTS:
 						{
 							player.setPcCafePoints((int) (player.getPcCafePoints() - totalCount));
+							player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) totalCount, 1));
 							break;
 						}
 						default:
