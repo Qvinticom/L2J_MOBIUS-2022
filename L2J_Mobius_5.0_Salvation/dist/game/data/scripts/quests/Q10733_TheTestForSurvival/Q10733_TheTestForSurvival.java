@@ -94,7 +94,6 @@ public final class Q10733_TheTestForSurvival extends Quest
 			{
 				if ((qs.isCond(2) || qs.isCond(3)) && hasQuestItems(player, GERETH_RECOMMENDATION))
 				{
-					giveAdena(player, 5000, true);
 					addExpAndSp(player, 295, 2);
 					qs.exitQuest(false, true);
 				}

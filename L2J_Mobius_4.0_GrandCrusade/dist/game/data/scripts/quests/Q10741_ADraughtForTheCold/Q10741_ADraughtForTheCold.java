@@ -83,7 +83,6 @@ public final class Q10741_ADraughtForTheCold extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveAdena(player, 2000, true);
 					addExpAndSp(player, 22973, 2);
 					qs.exitQuest(false, true);
 				}

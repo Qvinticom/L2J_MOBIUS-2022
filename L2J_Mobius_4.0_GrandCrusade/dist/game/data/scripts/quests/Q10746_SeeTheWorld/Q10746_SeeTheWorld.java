@@ -148,7 +148,7 @@ public final class Q10746_SeeTheWorld extends Quest
 					giveItems(player, SCROLL_OF_ESCAPE, 10);
 					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					giveAdena(player, 147600, true);
-					addExpAndSp(player, 53422, 5);
+					addExpAndSp(player, 161998, 5);
 					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					htmltext = "30037-01.html";

@@ -200,8 +200,7 @@ public final class Q10742_AFurryFriend extends Quest
 					}
 					else if (qs.isCond(2))
 					{
-						giveAdena(player, 2500, true);
-						addExpAndSp(player, 52516, 5);
+						addExpAndSp(player, 68007, 5);
 						qs.exitQuest(false, true);
 						htmltext = "33952-04.html";
 					}

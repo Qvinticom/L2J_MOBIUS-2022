@@ -91,7 +91,6 @@ public final class Q10745_TheSecretIngredients extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					giveAdena(player, 48000, true);
 					addExpAndSp(player, 241076, 5);
 					if (player.isMageClass())
 					{

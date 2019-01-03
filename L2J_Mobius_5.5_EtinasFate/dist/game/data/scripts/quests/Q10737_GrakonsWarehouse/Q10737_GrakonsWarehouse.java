@@ -91,7 +91,6 @@ public final class Q10737_GrakonsWarehouse extends Quest
 				{
 					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_007_post_01.htm", TutorialShowHtml.LARGE_WINDOW));
 					showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
-					giveAdena(player, 11000, true);
 					if (player.isMageClass())
 					{
 						giveItems(player, APPRENTICE_ADVENTURER_STAFF);

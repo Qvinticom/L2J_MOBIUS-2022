@@ -214,7 +214,6 @@ public final class Q10734_DoOrDie extends Quest
 								}
 								case 7:
 								{
-									giveAdena(player, 7000, true);
 									addExpAndSp(player, 805, 2);
 									qs.exitQuest(false, true);
 									htmltext = "33942-07.html";

@@ -90,8 +90,7 @@ public final class Q10743_StrangeFungus extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveAdena(player, 62000, true);
-					addExpAndSp(player, 62876, 0);
+					addExpAndSp(player, 93982, 0);
 					giveItems(player, LEATHER_SHOES);
 					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);

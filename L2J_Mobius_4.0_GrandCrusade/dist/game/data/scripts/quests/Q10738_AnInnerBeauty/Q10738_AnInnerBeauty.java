@@ -81,7 +81,6 @@ public final class Q10738_AnInnerBeauty extends Quest
 			{
 				if (qs.isStarted())
 				{
-					giveAdena(player, 12000, true);
 					addExpAndSp(player, 2625, 1);
 					qs.exitQuest(false, true);
 				}

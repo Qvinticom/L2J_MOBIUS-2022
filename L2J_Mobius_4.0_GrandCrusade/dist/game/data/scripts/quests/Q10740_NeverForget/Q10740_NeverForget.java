@@ -142,10 +142,9 @@ public final class Q10740_NeverForget extends Quest
 							case 3:
 							{
 								showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
-								giveAdena(player, 1600, true);
 								giveItems(player, RING_OF_KNOWLEDGE);
 								giveItems(player, HEALING_POTION);
-								addExpAndSp(player, 16851, 0);
+								addExpAndSp(player, 24001, 0);
 								qs.exitQuest(false, true);
 								htmltext = "33951-06.html";
 								break;

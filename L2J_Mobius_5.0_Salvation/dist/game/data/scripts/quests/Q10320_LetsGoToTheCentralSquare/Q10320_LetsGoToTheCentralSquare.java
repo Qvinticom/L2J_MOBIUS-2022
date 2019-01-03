@@ -87,7 +87,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 			{
 				if (qs.isStarted())
 				{
-					addExpAndSp(player, 300, 6);
+					addExpAndSp(player, 70, 5);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

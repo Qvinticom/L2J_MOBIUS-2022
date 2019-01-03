@@ -107,7 +107,6 @@ public final class Q10736_ASpecialPower extends Quest
 					}
 					case 7:
 					{
-						giveAdena(player, 900, true);
 						rewardItems(player, SOULSHOTS_REWARD);
 						addExpAndSp(player, 3154, 0);
 						qs.exitQuest(false, true);

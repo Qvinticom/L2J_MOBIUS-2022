@@ -74,7 +74,6 @@ public final class Q10732_AForeignLand extends Quest
 				if (qs.isStarted())
 				{
 					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_001_Radar_01.htm", TutorialShowHtml.LARGE_WINDOW));
-					giveAdena(player, 3000, true);
 					addExpAndSp(player, 75, 2);
 					qs.exitQuest(false, true);
 				}

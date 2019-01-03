@@ -130,8 +130,7 @@ public final class Q10744_StrongerThanSteel extends Quest
 					}
 					else if (qs.isCond(3))
 					{
-						giveAdena(player, 34000, true);
-						addExpAndSp(player, 112001, 5);
+						addExpAndSp(player, 153994, 5);
 						qs.exitQuest(false, true);
 						htmltext = "33954-05.html";
 					}

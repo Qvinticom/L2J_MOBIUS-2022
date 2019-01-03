@@ -45,7 +45,7 @@ public final class Q10739_SupplyAndDemand extends Quest
 	private static final ItemHolder ARMOR_SUPPLY_BOX = new ItemHolder(39523, 1);
 	private static final ItemHolder GROCERY_SUPPLY_BOX = new ItemHolder(39524, 1);
 	private static final ItemHolder ACCESSORY_SUPPLY_BOX = new ItemHolder(39525, 1);
-	private static final ItemHolder LEATHER_SHIRT = new ItemHolder(21, 1);
+	private static final ItemHolder LEATHER_SHIRT = new ItemHolder(22, 1);
 	private static final ItemHolder LEATHER_PANTS = new ItemHolder(29, 1);
 	private static final ItemHolder APPRENTICE_EARRING = new ItemHolder(112, 2);
 	private static final ItemHolder NECKLACE_OF_KNOWNLEDGE = new ItemHolder(906, 1);
@@ -206,7 +206,6 @@ public final class Q10739_SupplyAndDemand extends Quest
 					giveItems(player, LEATHER_PANTS);
 					giveItems(player, APPRENTICE_EARRING);
 					giveItems(player, NECKLACE_OF_KNOWNLEDGE);
-					giveAdena(player, 1400, true);
 					addExpAndSp(player, 8136, 0);
 					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
