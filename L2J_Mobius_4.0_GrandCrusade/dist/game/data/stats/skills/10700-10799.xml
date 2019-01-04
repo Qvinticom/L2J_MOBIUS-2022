@@ -2992,29 +2992,22 @@
 		<!-- Glory Days confirmed -->
 		<!-- Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. -->
 		<icon>icon.skill10793</icon>
-		<operateType>A3</operateType>
+		<operateType>A2</operateType>
 		<mpConsume>77</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<effectPoint>-689</effectPoint>
+		<effectPoint>689</effectPoint>
 		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>0</abnormalLvl>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
-		<affectRange>300</affectRange>
-		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DeleteHate" />
-			<effect name="TargetCancel">
-				<chance>100</chance>
-			</effect>
 			<effect name="Speed">
 				<amount>50</amount>
 				<mode>DIFF</mode>
