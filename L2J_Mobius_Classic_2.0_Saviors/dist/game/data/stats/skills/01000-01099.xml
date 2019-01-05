@@ -3466,11 +3466,14 @@
 			<value level="1">2</value>
 			<value level="2">3</value>
 		</abnormalLvl>
-		<abnormalTime>600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MAX_BREATH_UP</abnormalType>
+		<castRange>400</castRange>
 		<effectPoint>
-			<value level="1">5</value>
-			<value level="2">10</value>
+			<value level="1">121</value>
+			<value level="2">417</value>
 		</effectPoint>
+		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1073</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3479,18 +3482,22 @@
 			<value level="2">52</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">20</value>
-			<value level="2">48</value>
+			<value level="1">12</value>
+			<value level="2">38</value>
 		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">8</value>
+			<value level="2">10</value>
+		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalSkillPower">
+			<effect name="Breath">
 				<amount>
 					<value level="1">400</value>
 					<value level="2">600</value>

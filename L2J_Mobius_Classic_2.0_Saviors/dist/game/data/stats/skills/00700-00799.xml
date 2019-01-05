@@ -2410,10 +2410,10 @@
 		</effects>
 	</skill>
 	<skill id="762" toLevel="1" name="Insane Crusher">
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
-		<activateRate>40</activateRate>
+		<activateRate>90</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -2423,10 +2423,12 @@
 		<icon>icon.skill0762</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
 		<magicLvl>80</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
