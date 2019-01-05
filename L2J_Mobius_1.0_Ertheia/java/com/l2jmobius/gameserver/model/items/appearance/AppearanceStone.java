@@ -387,8 +387,16 @@ public class AppearanceStone
 		{
 			if (!targetItem.isWeapon() || (targetItem.getItemType() != _weaponType))
 			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_USED_AS_AN_APPEARANCE_WEAPON);
-				return false;
+				if (_weaponType != WeaponType.CROSSBOW)
+				{
+					player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_USED_AS_AN_APPEARANCE_WEAPON);
+					return false;
+				}
+				else if ((targetItem.getItemType() != WeaponType.CROSSBOW) && (targetItem.getItemType() != WeaponType.TWOHANDCROSSBOW))
+				{
+					player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_USED_AS_AN_APPEARANCE_WEAPON);
+					return false;
+				}
 			}
 			
 			switch (_handType)
@@ -475,7 +483,14 @@ public class AppearanceStone
 			{
 				if (!targetItem.isWeapon() || (targetItem.getItemType() != holder.getWeaponType()))
 				{
-					continue;
+					if (holder.getWeaponType() != WeaponType.CROSSBOW)
+					{
+						continue;
+					}
+					else if ((targetItem.getItemType() != WeaponType.CROSSBOW) && (targetItem.getItemType() != WeaponType.TWOHANDCROSSBOW))
+					{
+						continue;
+					}
 				}
 				
 				switch (holder.getHandType())
