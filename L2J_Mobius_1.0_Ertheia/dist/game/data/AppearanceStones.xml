@@ -57,6 +57,8 @@
 	<appearance_stone id="37919" targetType="WEAPON" type="FIXED" visualId="10167" weaponType="SWORD" lifeTime="15days" /> <!-- Pig Lollipop Appearance Stone: One-handed Sword (15 days ) -->
 	<appearance_stone id="38189" targetType="WEAPON" type="FIXED" visualId="38211" weaponType="SWORD" lifeTime="30days" /> <!-- Blue Mackerel Appearance Stone: One-handed Sword (30 days ) -->
 	<appearance_stone id="38200" targetType="WEAPON" type="FIXED" visualId="38211" weaponType="SWORD" /> <!-- Blue Mackerel Appearance Stone: One-handed Sword -->
+	<appearance_stone id="37840" targetType="WEAPON" type="FIXED" visualId="37696" weaponType="SWORD" magicType="MAGICAL" lifeTime="15days" /> <!-- Valentine Appearance Stone: One-handed Magic Sword (15 days ) -->
+	<appearance_stone id="37856" targetType="WEAPON" type="FIXED" visualId="37696" weaponType="SWORD" magicType="MAGICAL" lifeTime="30days" /> <!-- Valentine Appearance Stone: One-handed Magic Sword (30 days ) -->
 
 	<appearance_stone id="22668" targetType="WEAPON" type="FIXED" visualId="22652" weaponType="SWORD" handType="TWO_HANDED" /> <!-- Emerald Weapon Appearance Stone: Two-handed Sword -->
 	<appearance_stone id="22729" targetType="WEAPON" type="FIXED" visualId="22713" weaponType="SWORD" handType="TWO_HANDED" /> <!-- Japanese Long Sword Appearance Stone -->
@@ -151,20 +153,31 @@
 
 	<appearance_stone id="22673" targetType="WEAPON" type="FIXED" visualId="22657" weaponType="BLUNT" /> <!-- Weapon Appearance Stone: One-handed Blunt Weapon -->
 	<appearance_stone id="22734" targetType="WEAPON" type="FIXED" visualId="22718" weaponType="BLUNT" /> <!-- Japanese Blunt Appearance Stone -->
+	<appearance_stone id="37835" targetType="WEAPON" type="FIXED" visualId="37691" weaponType="BLUNT" lifeTime="15days" /> <!-- Valentine Appearance Stone: One-handed Blunt Weapon ( 15 days ) -->
+	<appearance_stone id="37851" targetType="WEAPON" type="FIXED" visualId="37691" weaponType="BLUNT" lifeTime="30days" /> <!-- Valentine Appearance Stone: One-handed Blunt Weapon ( 30 days ) -->
 	<appearance_stone id="22675" targetType="WEAPON" type="FIXED" visualId="22659" weaponType="BLUNT" magicType="MAGICAL" /> <!-- Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon -->
 	<appearance_stone id="22736" targetType="WEAPON" type="FIXED" visualId="22720" weaponType="BLUNT" magicType="MAGICAL" /> <!-- Japanese Magic Blunt Appearance Stone -->
+	<appearance_stone id="37841" targetType="WEAPON" type="FIXED" visualId="37697" weaponType="BLUNT" magicType="MAGICAL" lifeTime="15days" /> <!-- Valentine Appearance Stone: One-handed Magic Blunt Weapon ( 15 days ) -->
+	<appearance_stone id="37857" targetType="WEAPON" type="FIXED" visualId="37697" weaponType="BLUNT" magicType="MAGICAL" lifeTime="30days" /> <!-- Valentine Appearance Stone: One-handed Magic Blunt Weapon ( 30 days ) -->
+	
 
 	<appearance_stone id="22674" targetType="WEAPON" type="FIXED" visualId="22658" weaponType="BLUNT" handType="TWO_HANDED" /> <!-- Emerald Weapon Appearance Stone: Two-handed Blunt Weapon -->
 	<appearance_stone id="22735" targetType="WEAPON" type="FIXED" visualId="22719" weaponType="BLUNT" handType="TWO_HANDED" /> <!-- Japanese Giant Blunt Appearance Stone -->
 	<appearance_stone id="22676" targetType="WEAPON" type="FIXED" visualId="22660" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" /> <!-- Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon -->
 	<appearance_stone id="22676" targetType="WEAPON" type="FIXED" visualId="38215" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" /> <!-- Sea Horse Two-handed Magic Blunt Appearance Stone -->
 	<appearance_stone id="22737" targetType="WEAPON" type="FIXED" visualId="22721" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" /> <!-- Japanese Giant Magic Blunt Appearance Stone -->
+	<appearance_stone id="37842" targetType="WEAPON" type="FIXED" visualId="37698" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" lifeTime="15days" /> <!-- Valentine Appearance Stone: Two-handed Magic Blunt Weapon ( 15 days ) -->
+	<appearance_stone id="37858" targetType="WEAPON" type="FIXED" visualId="37698" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" lifeTime="15days" /> <!-- Valentine Appearance Stone: Two-handed Magic Blunt Weapon ( 30 days ) -->
 
 	<appearance_stone id="22678" targetType="WEAPON" type="FIXED" visualId="22662" weaponType="DUALDAGGER" /> <!-- Emerald Weapon Appearance Stone: Dual Dagger -->
 	<appearance_stone id="22739" targetType="WEAPON" type="FIXED" visualId="22723" weaponType="DUALDAGGER" /> <!-- Japanese Double Dagger Appearance Stone -->
+	<appearance_stone id="37844" targetType="WEAPON" type="FIXED" visualId="37700" weaponType="DUALDAGGER" lifeTime="15days" /> <!-- Valentine Appearance Stone: Dual Dagger ( 15 days ) -->
+	<appearance_stone id="37860" targetType="WEAPON" type="FIXED" visualId="37700" weaponType="DUALDAGGER" lifeTime="30days" /> <!-- Valentine Appearance Stone: Dual Dagger ( 30 days ) -->
 
 	<appearance_stone id="22679" targetType="WEAPON" type="FIXED" visualId="22663" weaponType="DUALBLUNT" /> <!-- Emerald Weapon Appearance Stone: Dual Blunt Weapon -->
 	<appearance_stone id="22740" targetType="WEAPON" type="FIXED" visualId="22724" weaponType="DUALBLUNT" /> <!-- Japanese Double Blunt Appearance Stone -->
+	<appearance_stone id="37845" targetType="WEAPON" type="FIXED" visualId="37701" weaponType="DUALBLUNT" lifeTime="15days" /> <!-- Valentine Appearance Stone: Dual Blunt Weapon ( 15 days ) -->
+	<appearance_stone id="37861" targetType="WEAPON" type="FIXED" visualId="37701" weaponType="DUALBLUNT" lifeTime="30days" /> <!-- Valentine Appearance Stone: Dual Blunt Weapon ( 30 days ) -->
 
 	<!-- Armor Appearance Stones -->
 	<!-- Normal -->
@@ -354,6 +367,10 @@
 	<appearance_stone id="22681" targetType="ARMOR" type="FIXED" visualId="22665" armorType="SIGIL" raceNot="ERTHEIA" /> <!-- Emerald Weapon Appearance Stone: Sigil -->
 	<appearance_stone id="22741" targetType="ARMOR" type="FIXED" visualId="22725" armorType="SHIELD" raceNot="ERTHEIA" /> <!-- Japanese Shield Appearance Stone -->
 	<appearance_stone id="22742" targetType="ARMOR" type="FIXED" visualId="22726" armorType="SIGIL" raceNot="ERTHEIA" /> <!-- Japanese Sigil Appearance Stone -->
+	<appearance_stone id="37846" targetType="ARMOR" type="FIXED" visualId="37702" armorType="SHIELD" raceNot="ERTHEIA" lifeTime="15days" /> <!-- Valentine Appearance Stone: Shield ( 15 days ) -->
+	<appearance_stone id="37862" targetType="ARMOR" type="FIXED" visualId="37702" armorType="SHIELD" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Valentine Appearance Stone: Shield ( 30 days ) -->
+	<appearance_stone id="37847" targetType="ARMOR" type="FIXED" visualId="37703" armorType="SIGIL" raceNot="ERTHEIA" lifeTime="15days" /> <!-- Valentine Appearance Stone: Sigil ( 15 days ) -->
+	<appearance_stone id="37863" targetType="ARMOR" type="FIXED" visualId="37703" armorType="SIGIL" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Valentine Appearance Stone: Sigil ( 30 days ) -->
 
 	<!-- Accessory Appearance Stones -->
 	<!-- Normal -->
