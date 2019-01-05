@@ -1008,7 +1008,7 @@ public abstract class DocumentBase
 				case "mindistance":
 				{
 					final int distance = Integer.decode(getValue(a.getNodeValue(), null));
-					cond = joinAnd(cond, new ConditionMinDistance(distance * distance));
+					cond = joinAnd(cond, new ConditionMinDistance(distance));
 					break;
 				}
 				case "race":
