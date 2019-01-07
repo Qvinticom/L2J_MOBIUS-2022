@@ -131,10 +131,8 @@ public class AutoSpawnHandler
 			// Restore spawn group data, then the location data.
 			while (rs.next())
 			{
-				// Register random spawn group, set various options on the
-				// created spawn instance.
+				// Register random spawn group, set various options on the created spawn instance.
 				final AutoSpawnInstance spawnInst = registerSpawn(rs.getInt("npcId"), rs.getInt("initialDelay"), rs.getInt("respawnDelay"), rs.getInt("despawnDelay"));
-				
 				spawnInst.setSpawnCount(rs.getInt("count"));
 				spawnInst.setBroadcast(rs.getBoolean("broadcastSpawn"));
 				spawnInst.setRandomSpawn(rs.getBoolean("randomSpawn"));
@@ -144,7 +142,6 @@ public class AutoSpawnHandler
 				try (ResultSet rs2 = ps.executeQuery())
 				{
 					ps.clearParameters();
-					
 					while (rs2.next())
 					{
 						// Add each location to the spawn group/instance.
@@ -410,8 +407,7 @@ public class AutoSpawnHandler
 				// Retrieve the required spawn instance for this spawn task.
 				final AutoSpawnInstance spawnInst = _registeredSpawns.get(_objectId);
 				
-				// If the spawn is not scheduled to be active, cancel the spawn
-				// task.
+				// If the spawn is not scheduled to be active, cancel the spawn task.
 				if (!spawnInst.isSpawnActive())
 				{
 					return;
@@ -468,6 +464,7 @@ public class AutoSpawnHandler
 				if (spawnInst._spawnCount == 1)
 				{
 					npcInst = newSpawn.doSpawn();
+					newSpawn.stopRespawn(); // Just in case...
 					npcInst.setXYZ(npcInst.getX(), npcInst.getY(), npcInst.getZ());
 					spawnInst.addNpcInstance(npcInst);
 				}
@@ -485,9 +482,21 @@ public class AutoSpawnHandler
 					}
 				}
 				
-				if ((npcInst != null) && spawnInst.isBroadcasting())
+				if (npcInst != null)
 				{
-					Broadcast.toAllOnlinePlayers("The " + npcInst.getName() + " has spawned near " + MapRegionManager.getInstance().getClosestTownName(npcInst) + "!");
+					if (spawnInst.isRandomSpawn())
+					{
+						while (!L2World.getInstance().getVisibleObjectsInRange(npcInst, L2Npc.class, 10).isEmpty())
+						{
+							LOGGER.log(Level.INFO, "AutoSpawnHandler: Random spawn location " + npcInst.getLocation() + " for " + npcInst + " is occupied. Teleporting...");
+							npcInst.teleToLocation(locationList[Rnd.get(locationList.length)]);
+						}
+					}
+					
+					if (spawnInst.isBroadcasting())
+					{
+						Broadcast.toAllOnlinePlayers("The " + npcInst.getName() + " has spawned near " + MapRegionManager.getInstance().getClosestTownName(npcInst) + "!");
+					}
 				}
 				
 				// If there is no despawn time, do not create a despawn task.
