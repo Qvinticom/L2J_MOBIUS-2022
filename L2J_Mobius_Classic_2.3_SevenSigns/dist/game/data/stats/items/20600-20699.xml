@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20662" name="Agathion - Uthanka" type="Armor">
-		<!-- Bracelet that can be used to summon Agathion - Uthanka. Cannot be exchanged, dropped, or sold. -->
+		<!-- Bracelet that can be used to summon Agathion Uthanka. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -45,7 +45,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20678" name="Gatekeeper Hat" type="Armor">
-		<!-- Occupies 2 Hair Accessory slots. -->
+		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. Cooldown is 1h. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

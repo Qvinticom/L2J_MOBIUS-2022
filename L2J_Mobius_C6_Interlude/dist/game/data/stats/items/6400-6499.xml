@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6400" type="EtcItem" name="Badge of Hyena">
+		<!-- The badge that indicates that its bearer's event collector grade is "hyena." Without this badge, one cannot prove one's grade. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -15,6 +16,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6401" type="EtcItem" name="Badge of Fox">
+		<!-- The badge that indicates that its bearer's event collector grade is "fox." Without this badge, one cannot prove one's grade. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -29,6 +31,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6402" type="EtcItem" name="Badge of Wolf">
+		<!-- The badge that indicates that its bearer's event collector grade is "wolf." Without this badge, one cannot prove one's grade. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -43,6 +46,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6403" type="EtcItem" name="Star Shard">
+		<!-- Starlight Festival Event A gift from the sky. When it is thrown, it creates a small explosion. Can be used as an ingredient to make other types of fireworks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -57,6 +61,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6404" type="EtcItem" name="Gunpowder">
+		<!-- Starlight Festival Event - Black powder. An ingredient used to make larger fireworks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -71,6 +76,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6405" type="EtcItem" name="Magnesium">
+		<!-- Starlight Festival Event - A chemical compound that generates a powerful flash when ignited. It is needed to make large fireworks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -85,6 +91,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6406" type="EtcItem" name="Firework">
+		<!-- Starlight Festival Event - An explosive device that brilliantly lights up the sky. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -99,6 +106,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6407" type="EtcItem" name="Large Firework">
+		<!-- Starlight Festival Event - A large explosive device that ignites to light up the sky. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -113,6 +121,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6408" type="Armor" name="Formal Wear">
+		<!-- Formal wear appears as a wedding dress for female characters and as a tuxedo for male characters. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="magic"/>
@@ -142,6 +151,7 @@
 		</for>
 	</item>
 	<item id="6409" type="EtcItem" name="2006 Battle Tournament - CP Potion">
+		<!-- Restores CP by 200. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="500"/>
@@ -156,6 +166,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6410" type="EtcItem" name="2006 Battle Tournament - Quick Healing Potion">
+		<!-- A magical potion that quickly restores HP. However, its effects do not last. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="180"/>
@@ -170,6 +181,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6411" type="EtcItem" name="Small Nimble Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -184,6 +196,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6412" type="EtcItem" name="Small Ugly Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -198,6 +211,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6413" type="EtcItem" name="Small Pudgy Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -212,6 +226,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6414" type="EtcItem" name="Nimble Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -226,6 +241,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6415" type="EtcItem" name="Ugly Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -240,6 +256,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6416" type="EtcItem" name="Pudgy Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -254,6 +271,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6417" type="EtcItem" name="Large Nimble Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -268,6 +286,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6418" type="EtcItem" name="Large Ugly Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -282,6 +301,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6419" type="EtcItem" name="Large Pudgy Green Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -296,6 +316,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6420" type="EtcItem" name="Small Jade Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -310,6 +331,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6421" type="EtcItem" name="Small Jade Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -324,6 +346,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6422" type="EtcItem" name="Small Jade Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -338,6 +361,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6423" type="EtcItem" name="Jade Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -352,6 +376,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6424" type="EtcItem" name="Jade Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -366,6 +391,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6425" type="EtcItem" name="Jade Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -380,6 +406,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6426" type="EtcItem" name="Big Jade Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -394,6 +421,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6427" type="EtcItem" name="Big Jade Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -408,6 +436,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6428" type="EtcItem" name="Big Jade Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -422,6 +451,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6429" type="EtcItem" name="Small Blue Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -436,6 +466,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6430" type="EtcItem" name="Small Blue Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -450,6 +481,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6431" type="EtcItem" name="Small Blue Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -464,6 +496,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6432" type="EtcItem" name="Blue Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -478,6 +511,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6433" type="EtcItem" name="Blue Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -492,6 +526,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6434" type="EtcItem" name="Blue Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -506,6 +541,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6435" type="EtcItem" name="Big Blue Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -520,6 +556,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6436" type="EtcItem" name="Big Blue Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -534,6 +571,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6437" type="EtcItem" name="Big Blue Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -548,6 +586,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6438" type="EtcItem" name="Small Yellow Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -562,6 +601,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6439" type="EtcItem" name="Small Yellow Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -576,6 +616,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6440" type="EtcItem" name="Small Yellow Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -590,6 +631,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6441" type="EtcItem" name="Yellow Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -604,6 +646,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6442" type="EtcItem" name="Yellow Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -618,6 +661,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6443" type="EtcItem" name="Yellow Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -632,6 +676,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6444" type="EtcItem" name="Big Yellow Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -646,6 +691,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6445" type="EtcItem" name="Big Yellow Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -660,6 +706,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6446" type="EtcItem" name="Big Yellow Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -674,6 +721,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6447" type="EtcItem" name="Small Orange Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -688,6 +736,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6448" type="EtcItem" name="Small Orange Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -702,6 +751,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6449" type="EtcItem" name="Small Orange Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -716,6 +766,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6450" type="EtcItem" name="Orange Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -730,6 +781,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6451" type="EtcItem" name="Orange Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -744,6 +796,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6452" type="EtcItem" name="Orange Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -758,6 +811,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6453" type="EtcItem" name="Big Orange Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -772,6 +826,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6454" type="EtcItem" name="Big Orange Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -786,6 +841,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6455" type="EtcItem" name="Big Orange Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -800,6 +856,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6456" type="EtcItem" name="Small Purple Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -814,6 +871,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6457" type="EtcItem" name="Small Purple Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -828,6 +886,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6458" type="EtcItem" name="Small Purple Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -842,6 +901,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6459" type="EtcItem" name="Purple Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -856,6 +916,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6460" type="EtcItem" name="Purple Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -870,6 +931,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6461" type="EtcItem" name="Purple Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -884,6 +946,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6462" type="EtcItem" name="Big Purple Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -898,6 +961,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6463" type="EtcItem" name="Big Purple Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -912,6 +976,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6464" type="EtcItem" name="Big Purple Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -926,6 +991,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6465" type="EtcItem" name="Small Red Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -940,6 +1006,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6466" type="EtcItem" name="Small Red Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -954,6 +1021,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6467" type="EtcItem" name="Small Red Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -968,6 +1036,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6468" type="EtcItem" name="Red Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -982,6 +1051,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6469" type="EtcItem" name="Red Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -996,6 +1066,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6470" type="EtcItem" name="Red Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1010,6 +1081,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6471" type="EtcItem" name="Big Red Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1024,6 +1096,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6472" type="EtcItem" name="Big Red Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1038,6 +1111,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6473" type="EtcItem" name="Big Red Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1052,6 +1126,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6474" type="EtcItem" name="Small White Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1066,6 +1141,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6475" type="EtcItem" name="Small White Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1080,6 +1156,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6476" type="EtcItem" name="Small White Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1094,6 +1171,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6477" type="EtcItem" name="White Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1108,6 +1186,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6478" type="EtcItem" name="White Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1122,6 +1201,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6479" type="EtcItem" name="White Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1136,6 +1216,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6480" type="EtcItem" name="Big White Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1150,6 +1231,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6481" type="EtcItem" name="Big White Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1164,6 +1246,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6482" type="EtcItem" name="Big White Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1178,6 +1261,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6483" type="EtcItem" name="Small Black Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1192,6 +1276,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6484" type="EtcItem" name="Small Black Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1206,6 +1291,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6485" type="EtcItem" name="Small Black Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1220,6 +1306,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6486" type="EtcItem" name="Black Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1234,6 +1321,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6487" type="EtcItem" name="Black Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1248,6 +1336,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6488" type="EtcItem" name="Black Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1262,6 +1351,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6489" type="EtcItem" name="Big Black Nimble Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1276,6 +1366,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6490" type="EtcItem" name="Big Black Ugly Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1290,6 +1381,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6491" type="EtcItem" name="Big Black Fat Fish">
+		<!-- Double-click to randomly change into another item. The changed item can be used as an ingredient for general manufacture. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1304,6 +1396,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6492" type="EtcItem" name="Small Green Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1318,6 +1411,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6493" type="EtcItem" name="Green Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1332,6 +1426,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6494" type="EtcItem" name="Big Green Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1346,6 +1441,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6495" type="EtcItem" name="Small Jade Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1360,6 +1456,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6496" type="EtcItem" name="Jade Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1374,6 +1471,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6497" type="EtcItem" name="Big Jade Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1388,6 +1486,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6498" type="EtcItem" name="Small Blue Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -1402,6 +1501,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6499" type="EtcItem" name="Blue Treasure Chest">
+		<!-- Double-click to see the change. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>

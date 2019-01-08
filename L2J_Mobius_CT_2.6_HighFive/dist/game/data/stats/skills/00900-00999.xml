@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="900" levels="6" name="Energy Blast">
+		<!-- Inflicts a powerful blow with 15838 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
@@ -25,6 +26,7 @@
 		</for>
 	</skill>
 	<skill id="901" levels="6" name="Dark Strike">
+		<!-- Inflicts a powerful blow with 9503 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
@@ -49,6 +51,7 @@
 		</for>
 	</skill>
 	<skill id="902" levels="6" name="Bursting Flame">
+		<!-- Inflicts a powerful long-range attack with 9503 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
@@ -72,6 +75,7 @@
 		</for>
 	</skill>
 	<skill id="903" levels="6" name="Stratum Explosion">
+		<!-- Inflicts a powerful blow on nearby enemies with 5068 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
@@ -95,6 +99,7 @@
 		</for>
 	</skill>
 	<skill id="904" levels="6" name="Corpse Burst">
+		<!-- Causes a nearby corpse to burst open, poisoning enemies with 348 Power. Effect 8. -->
 		<table name="#effectPoints"> -338 -340 -341 -342 -344 -345 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
@@ -133,6 +138,7 @@
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
+		<!-- Inflicts a powerful continuous attack on nearby enemies, stunning them with 12670 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 12670 12936 13195 13446 13688 13920 </table>
@@ -164,6 +170,7 @@
 		</for>
 	</skill>
 	<skill id="906" levels="6" name="Lance Step">
+		<!-- Inflicts a mighty straight-line blow with 9503 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
@@ -187,6 +194,7 @@
 		</for>
 	</skill>
 	<skill id="907" levels="6" name="Aqua Blast">
+		<!-- Inflicts a powerful long-range attack with 9503 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
@@ -211,6 +219,7 @@
 		</for>
 	</skill>
 	<skill id="908" levels="6" name="Spin Slash">
+		<!-- Inflicts a powerful blow on nearby enemies with 5068 Power. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
@@ -233,6 +242,7 @@
 		</for>
 	</skill>
 	<skill id="909" levels="6" name="Ice Focus">
+		<!-- Inflicts continuous damage on nearby enemies with 348 Power, decreasing their Speed, Atk. Spd. and Casting Spd. -->
 		<table name="#effectPoints"> -338 -340 -341 -342 -344 -345 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
@@ -272,6 +282,7 @@
 		</for>
 	</skill>
 	<skill id="910" levels="6" name="Water Jet">
+		<!-- Strikes enemies with 12670 Power in a mighty rush of Water. Effect 8. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 12670 12936 13195 13446 13688 13920 </table>
@@ -305,7 +316,7 @@
 		</for>
 	</skill>
 	<skill id="911" levels="11" name="Energy Burst">
-		<!-- Aurabird Falcon and Owl -->
+		<!-- Inflicts a powerful blow on nearby enemies with 469 Power. -->
 		<table name="#effectPoints"> -669 -673 -676 -679 -681 -684 -687 -689 -692 -694 -696 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
@@ -327,7 +338,7 @@
 		</for>
 	</skill>
 	<skill id="912" levels="1" name="Summon Imperial Phoenix">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Summons an Imperial Phoenix. Consumes 2 A-Grade Crystals and 1 soul each. -->
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0912" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -351,6 +362,7 @@
 		</for>
 	</skill>
 	<skill id="913" levels="1" name="Deflect Magic">
+		<!-- Increases Resistance to magic attacks by 100% for 20 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="DD_RESIST" />
@@ -370,7 +382,7 @@
 		</for>
 	</skill>
 	<skill id="914" levels="1" name="Song of Purification">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Provides an 80% chance of removing a party member's de-buffs. And for the next 2 minutes, increases Resistance to de-buff attacks by 30% and increases the power of received HP recovery magic by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SONG_OF_PURIFICATION" />
@@ -396,7 +408,7 @@
 		</for>
 	</skill>
 	<skill id="915" levels="1" name="Dance of Berserker">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Decreases a party member's P. Def., M. Def. and Evasion, and increases their P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed for 2 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_BERSERKER" />
@@ -428,7 +440,7 @@
 		</for>
 	</skill>
 	<skill id="916" levels="4" name="Shield Deflect Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 8 seconds, transfers magical damage back to the enemy caster. -->
 		<table name="#magicLvl"> 60 64 68 72 </table>
 		<table name="#mpConsume"> 28 29 29 29 </table>
 		<table name="#vengeanceMdam"> 20 30 40 50 </table>
@@ -454,7 +466,7 @@
 		</for>
 	</skill>
 	<skill id="917" levels="1" name="Final Secret">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 seconds, you call upon your hidden reserves to increase your skills power and ordinary attack damage by 30% during PvP. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FINAL_SECRET" />
@@ -475,7 +487,7 @@
 		</for>
 	</skill>
 	<skill id="918" levels="1" name="Maximum Focus Force">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Immediately increases spiritual energy to its maximum level. -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="80" />
@@ -499,7 +511,7 @@
 		</for>
 	</skill>
 	<skill id="919" levels="1" name="Maximum Focus Sonic">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Immediately increases spiritual energy to its maximum level. -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="80" />
@@ -523,7 +535,7 @@
 		</for>
 	</skill>
 	<skill id="920" levels="37" name="Power Crush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with 664 Power added to P. Atk. Over-hit and Critical hit are possible. -->
 		<table name="#effectPoints"> -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 </table>
@@ -552,7 +564,7 @@
 		</for>
 	</skill>
 	<skill id="921" levels="1" name="Cursed Pierce">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with 3849 Power added to P. Atk. Over-hit is possible. Ignores Shield Defense. Critical is possible. -->
 		<set name="baseCritRate" val="30" />
 		<set name="castRange" val="80" />
 		<set name="coolTime" val="720" />
@@ -578,8 +590,7 @@
 		</for>
 	</skill>
 	<skill id="922" levels="1" name="Hide">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
+		<!-- Hides the user. Increases Speed by 30%, and the effect is canceled if any action other than movement is initiated. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HIDE" />
@@ -601,7 +612,7 @@
 		</for>
 	</skill>
 	<skill id="923" levels="1" name="Dual Dagger Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When using a dual dagger, increases P. Atk. by 87.5 and the rate of deadly attack by 5%. -->
 		<set name="icon" val="icon.skill0923" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
@@ -616,7 +627,7 @@
 		</for>
 	</skill>
 	<skill id="924" levels="1" name="Seven Arrow">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical hit is possible. -->
 		<set name="baseCritRate" val="15" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-676" />
@@ -639,7 +650,7 @@
 		</for>
 	</skill>
 	<skill id="925" levels="1" name="Sigil Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a Sigil is equipped, increases M. Atk. by 4% and MP Recovery Bonus by 17%. -->
 		<set name="icon" val="icon.skill0925" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
@@ -656,7 +667,7 @@
 		</for>
 	</skill>
 	<skill id="926" levels="1" name="Sigil Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a Sigil is equipped, increases heal power by 30 and MP Recovery Bonus by 17%. -->
 		<set name="icon" val="icon.skill0925" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
@@ -673,7 +684,7 @@
 		</for>
 	</skill>
 	<skill id="927" levels="14" name="Burning Chop" enchantGroup1="2">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Attacks the enemy with 167 Power added to P. Atk., causes burns for 10 seconds, and makes him consume 43 HP every second. Cannot be used when a bow/crossbow is equipped. Over-hit and Critical are possible. -->
 		<table name="#abnormalLvls"> 5 5 5 6 6 6 7 7 7 7 7 8 8 8 </table>
 		<table name="#dot"> 43 43 43 53 53 53 61 61 61 61 61 66 66 66 </table>
 		<table name="#effectPoints"> -193 -213 -233 -252 -271 -279 -288 -296 -304 -311 -317 -323 -328 -333 </table>
@@ -720,7 +731,7 @@
 		</for>
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
-		<!-- High Five Skill -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical hit is possible. Over-hit is possible. Requires a dual dagger to be equipped. -->
 		<set name="baseCritRate" val="20" />
 		<set name="blowChance" val="40" />
 		<set name="castRange" val="40" />
@@ -749,6 +760,7 @@
 		</for>
 	</skill>
 	<skill id="929" levels="1" name="Spirit of the Cat">
+		<!-- Harness the spirit of your servitor. This skill transforms you into a Human/Cat hybrid with specialized skills for 5 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -780,6 +792,7 @@
 		</for>
 	</skill>
 	<skill id="930" levels="1" name="Spirit of the Demon">
+		<!-- Harness the spirit of your servitor. This skill transforms you into a Dark Elf/Phantom hybrid with specialized skills for 5 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -811,6 +824,7 @@
 		</for>
 	</skill>
 	<skill id="931" levels="1" name="Spirit of the Unicorn">
+		<!-- Harness the spirit of your servitor. This skill transforms you into an Elf/Unicorn hybrid with specialized skills for 5 minute. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -842,6 +856,7 @@
 		</for>
 	</skill>
 	<skill id="932" levels="9" name="Star Stone Gathering">
+		<!-- Collects Star Stones. -->
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="6000" />
@@ -860,7 +875,7 @@
 		</cond>
 	</skill>
 	<skill id="933" levels="1" name="Detection">
-		<!-- Confirmed CT2.5 -->
+		<!-- Finds any enemies hidden nearby. -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2500" />
@@ -876,6 +891,7 @@
 		</for>
 	</skill>
 	<skill id="934" levels="1" name="Sigil Mastery">
+		<!-- When a sigil is equipped, increases Max MP by 5% and MP Recovery Bonus by 17%. -->
 		<set name="icon" val="icon.skill0925" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
@@ -892,6 +908,7 @@
 		</for>
 	</skill>
 	<skill id="935" levels="1" name="Sigil Mastery">
+		<!-- When a sigil is equipped, increases Max MP by 5% and MP Recovery Bonus by 17%. -->
 		<set name="icon" val="icon.skill0925" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="P" />
@@ -908,7 +925,7 @@
 		</for>
 	</skill>
 	<skill id="936" levels="47" name="Ordinary Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Mercenary's ability. -->
 		<table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mAtk"> 707.24 718.68 729.65 740.16 750.2 759.76 768.84 777.44 785.56 793.2 800.37 807.06 813.29 819.06 824.38 829.26 833.72 837.78 841.44 844.73 847.67 850.28 852.58 854.61 856.4 857.97 859.35 860.59 861.71 862.76 863.77 864.79 865.85 867.01 868.3 869.77 868.34 862.19 850.88 829.58 806.11 702.08 737.18 774.04 812.74 857.44 0.0 </table>
 		<table name="#mDef"> 549.56 549.89 549.87 549.5 548.78 547.72 546.33 544.61 542.56 540.2 537.53 534.55 531.26 527.69 523.83 519.68 515.27 510.58 505.64 500.45 495.02 489.35 483.46 477.35 471.04 464.53 457.83 450.96 443.92 436.73 429.39 421.92 414.34 406.64 398.85 390.98 379.99 364.12 342.98 311.93 278.52 291.7 305.68 320.53 336.29 354.71 0.0 </table>
@@ -934,7 +951,7 @@
 		</for>
 	</skill>
 	<skill id="937" levels="47" name="Elite Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Elite Mercenary's ability. -->
 		<table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mAtk"> 732.77 744.85 756.46 767.61 778.28 788.48 798.2 807.44 816.2 824.48 832.28 839.61 846.48 852.89 858.85 864.37 869.47 874.16 878.46 882.39 885.96 889.21 892.16 894.83 897.25 899.46 901.48 903.35 905.11 906.8 908.45 910.11 911.81 913.6 915.53 917.64 916.85 911.34 900.67 880.0 857.17 802.38 842.49 884.62 928.85 979.94 0.0 </table>
 		<table name="#mDef"> 574.06 574.7 574.97 574.9 574.47 573.71 572.6 571.17 569.4 567.32 564.92 562.21 559.2 555.89 552.29 548.41 544.26 539.83 535.15 530.21 525.02 519.61 513.96 508.1 502.03 495.76 489.3 482.67 475.86 468.91 461.8 454.57 447.21 439.74 432.18 424.53 413.76 398.11 377.2 346.37 313.17 327.99 343.71 360.4 378.13 398.84 0.0 </table>
@@ -963,7 +980,7 @@
 		</for>
 	</skill>
 	<skill id="938" levels="47" name="Top Elite Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Exalted Mercenary's ability. -->
 		<table name="#magicLvl"> 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mAtk"> 781.79 795.09 807.93 820.3 832.2 843.63 854.57 865.04 875.02 884.53 893.55 902.11 910.2 917.84 925.02 931.77 938.09 944.01 949.54 954.69 959.49 963.96 968.14 972.03 975.68 979.11 982.36 985.46 988.45 991.36 994.23 997.11 1000.04 1003.06 1006.22 1009.55 1009.99 1005.7 996.25 976.81 955.21 1002.97 1053.12 1105.77 1161.06 1224.92 0.0 </table>
 		<table name="#mDef"> 621.1 622.32 623.18 623.67 623.81 623.6 623.05 622.16 620.93 619.38 617.51 615.33 612.83 610.04 606.95 603.57 599.91 595.98 591.79 587.34 582.64 577.7 572.53 567.13 561.53 555.72 549.73 543.55 537.2 530.69 524.03 517.24 510.32 503.29 496.16 488.94 478.6 463.38 442.89 412.47 379.69 397.66 416.73 436.96 458.45 483.57 0.0 </table>
@@ -989,7 +1006,7 @@
 		</for>
 	</skill>
 	<skill id="939" levels="1" name="Soul Rage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to level 40. Critical hit and over-hit are possible. -->
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-340" />
@@ -1014,6 +1031,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="940" levels="1" name="Fake Attack">
+		<!-- Pretends to attack. -->
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
@@ -1022,6 +1040,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="941" levels="1" name="Special Motion">
+		<!-- Surprises the target. -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1200" />
@@ -1033,6 +1052,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="942" levels="1" name="Special Motion">
+		<!-- Acts grumpy. -->
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
@@ -1042,6 +1062,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="943" levels="1" name="Special Motion">
+		<!-- Brings down snow on the target's head. -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1200" />
@@ -1053,6 +1074,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="944" levels="1" name="Special Motion">
+		<!-- Laughs at target. -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1200" />
@@ -1064,6 +1086,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="945" levels="1" name="Magician's Will">
+		<!-- Increases M. Atk. by 5%, Casting Spd. by 5% and magical Critical Rate by 5%. Decreases MP consumption by 5%. -->
 		<set name="icon" val="icon.skill0945" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
@@ -1078,6 +1101,7 @@
 		</for>
 	</skill>
 	<skill id="946" levels="1" name="Silent Mind">
+		<!-- Allows use of a bow without consuming MP. -->
 		<set name="icon" val="icon.skill0946" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
@@ -1089,7 +1113,7 @@
 		</for>
 	</skill>
 	<skill id="947" levels="1" name="Lucky Strike">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit is possible. -->
 		<set name="affectLimit" val="3-6" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="5" />
@@ -1116,6 +1140,7 @@
 		</for>
 	</skill>
 	<skill id="948" levels="1" name="Eye for Eye">
+		<!-- For 10 seconds, returns damage from close range physical attacks and skills back to the opponent. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
@@ -1136,6 +1161,7 @@
 		</for>
 	</skill>
 	<skill id="949" levels="1" name="Onslaught of Pa'agrio">
+		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 seconds, and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
@@ -1174,8 +1200,7 @@
 		</for>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- Inflicts consecutive attacks using a Demon's claws with 2583 Power. -->
 		<table name="#magicLvl"> 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 71 72 72 73 74 74 74 </table>
 		<table name="#power"> 2583 2640 2695 2749 2802 2852 2900 </table>
@@ -1198,8 +1223,7 @@
 		</for>
 	</skill>
 	<skill id="951" levels="7" name="Wing Assault">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- Allows user to make a winged charge at the enemy's location. Power 2067. -->
 		<table name="#magicLvl"> 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 71 71 72 72 73 74 74 </table>
 		<table name="#power"> 2067 2112 2156 2200 2241 2282 2320 </table>
@@ -1227,7 +1251,7 @@
 		</for>
 	</skill>
 	<skill id="952" levels="5" name="Collector's Experience">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by 72.7 when using a sword/blunt weapon. Increases Shield Defense by 10% when using a shield. There's a chance that Collector's Fortune will be activated on yourself when using Crushing Strike. -->
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#pAtk"> 72.7 86.1 100.2 114.8 129.3 </table>
 		<table name="#rShld"> 1.1 1.15 1.2 1.25 1.3 </table>
@@ -1251,7 +1275,7 @@
 		</for>
 	</skill>
 	<skill id="953" levels="1" name="Life to Soul">
-		<!-- Confirmed CT2.5 -->
+		<!-- Consumes user's life force in order to increase the soul. -->
 		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="328" />
@@ -1273,7 +1297,7 @@
 		</for>
 	</skill>
 	<skill id="954" levels="1" name="Strider Bite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 seconds, and makes him consume 54 HP every second. Over-hit and Critical are possible. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1306,7 +1330,7 @@
 		</for>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Speed by 66 for 15 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -1326,8 +1350,7 @@
 		</for>
 	</skill>
 	<skill id="956" levels="3" name="Boost Morale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- For 2 minutes when using a sword/blunt weapon/dualsword, increases one's own Accuracy by 4, Critical Rate by 50, and Critical Damage by 10%. -->
 		<table name="#accCombat"> 4 6 8 </table>
 		<table name="#cAtk"> 1.1 1.2 1.3 </table>
 		<table name="#magicLvl"> 43 55 66 </table>
@@ -1359,8 +1382,7 @@
 		</for>
 	</skill>
 	<skill id="957" levels="37" name="Guillotine Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- Attacks the target with 2057 Power added to P. Atk. Requires a two-handed sword/two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit is possible. -->
 		<table name="#effectPoints"> -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 58 59 59 61 62 64 65 67 69 70 71 73 73 75 76 77 79 80 81 83 84 85 86 88 89 90 91 92 93 94 95 96 96 97 98 99 99 </table>
@@ -1393,8 +1415,7 @@
 		</for>
 	</skill>
 	<skill id="958" levels="37" name="Triple Blade Slash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- Attacks the enemy with 2057 Power added to P. Atk. Requires a dualsword. Over-hit is possible. Ignores Shield Defense. -->
 		<table name="#effectPoints"> -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 58 59 59 61 62 64 65 67 69 70 71 73 73 75 76 77 79 80 81 83 84 85 86 88 89 90 91 92 93 94 95 96 96 97 98 99 99 </table>
@@ -1424,7 +1445,7 @@
 		</for>
 	</skill>
 	<skill id="959" levels="1" name="Frog Jump">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -1445,7 +1466,7 @@
 		</for>
 	</skill>
 	<skill id="960" levels="1" name="Race Running">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -1466,7 +1487,7 @@
 		</for>
 	</skill>
 	<skill id="961" levels="1" name="Swift Dash">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -1487,7 +1508,7 @@
 		</for>
 	</skill>
 	<skill id="962" levels="1" name="Guard's March">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Speed by 33 for 5 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -1509,7 +1530,7 @@
 		</for>
 	</skill>
 	<skill id="963" levels="1" name="Guard's Ambush">
-		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
+		<!-- Hides the user. Increases Speed by 30%, and the effect is canceled if any action other than movement is initiated. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="STEALTH" />
@@ -1531,6 +1552,7 @@
 		</for>
 	</skill>
 	<skill id="964" levels="1" name="Children of Shilen">
+		<!-- Increases Casting Spd. by 13 and MP Recovery Bonus by 2%. -->
 		<set name="icon" val="icon.skill0294" />
 		<set name="magicLvl" val="14" />
 		<set name="operateType" val="P" />
@@ -1543,7 +1565,7 @@
 		</for>
 	</skill>
 	<skill id="965" levels="1" name="Fake Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Pretends to attack. -->
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="magicLvl" val="80" />
@@ -1552,7 +1574,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="966" levels="1" name="Special Motion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Plays harp. -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
@@ -1572,7 +1594,7 @@
 		<!-- TODO: Implement and use proper effects. -->
 	</skill>
 	<skill id="968" levels="1" name="Treykan Claw">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with 6960 Power added to P. Atk. -->
 		<set name="castRange" val="20" />
 		<set name="coolTime" val="167" />
 		<set name="effectPoint" val="-354" />
@@ -1593,7 +1615,7 @@
 		</for>
 	</skill>
 	<skill id="969" levels="1" name="Treykan Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases your Speed by 100% for 5 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -1615,7 +1637,7 @@
 		</for>
 	</skill>
 	<skill id="970" levels="1" name="Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases your Speed by 66 for 15 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -1635,7 +1657,7 @@
 		</for>
 	</skill>
 	<skill id="971" levels="1" name="Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. by 30% for 20 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -1659,7 +1681,7 @@
 		</for>
 	</skill>
 	<skill id="972" levels="1" name="Snipe">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 2 minutes, increases Accuracy by 6, P. Atk. by 199, bow's range by 200 and Critical Rate by 20% when using a bow. The player cannot move while the effect lasts. -->
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SNIPE" />
@@ -1690,7 +1712,7 @@
 		</for>
 	</skill>
 	<skill id="973" levels="8" name="Stun Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with Power 455 added to P. Atk. Stuns the enemy for 9 seconds. -->
 		<table name="#effectPoints"> -288 -292 -342 -300 -304 -307 -311 -314 </table>
 		<table name="#magicLvl"> 60 70 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 58 59 76 77 77 78 78 79 </table>
@@ -1724,7 +1746,7 @@
 		</for>
 	</skill>
 	<skill id="974" levels="7" name="Stun Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Shoots an arrow with 1951 Power added to P. Atk. Causes shock for 9 seconds. Also cancels target. -->
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 107 111 111 112 112 112 112 </table>
 		<table name="#power"> 1951 2534 2588 2639 2690 2738 2784 </table>
@@ -1759,7 +1781,7 @@
 		</for>
 	</skill>
 	<skill id="975" levels="7" name="Aqua Swirl">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's M. Atk. with 102 Power to create a powerful vortex of Water that inflicts Water damage on the enemy. -->
 		<table name="#effectPoints"> -673 -676 -679 -681 -684 -687 -689 </table>
 		<table name="#elementPower"> 25 25 30 35 40 45 50 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 </table>
@@ -1786,7 +1808,7 @@
 		</for>
 	</skill>
 	<skill id="976" levels="7" name="Wind Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's M. Atk. with 102 Power to create a powerful hurricane that inflicts Wind damage on the enemy. -->
 		<table name="#effectPoints"> -669 -673 -676 -679 -681 -684 -687 </table>
 		<table name="#elementPower"> 25 25 30 35 40 45 50 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 </table>
@@ -1813,7 +1835,7 @@
 		</for>
 	</skill>
 	<skill id="977" levels="6" name="Ice Bolt">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's M. Atk. with 93 Power to temporarily freeze the surrounding air, inflicting Water damage on the enemy and decreasing their Speed by 20% for 1 minute. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#elementPower"> 25 30 35 40 45 50 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
@@ -1851,7 +1873,7 @@
 		</for>
 	</skill>
 	<skill id="978" levels="7" name="Shoulder Charge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Disrupts the enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. -->
 		<table name="#effectPoints"> -341 -342 -343 -344 -345 -346 -347 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 56 56 56 57 57 58 58 </table>
@@ -1890,7 +1912,7 @@
 		</for>
 	</skill>
 	<skill id="979" levels="6" name="Aggression">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes the target with 7427 power. -->
 		<table name="#effectPoints"> -7427 -8137 -8851 -9570 -10292 -11018 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1915,7 +1937,7 @@
 		</for>
 	</skill>
 	<skill id="980" levels="6" name="Hate Aura">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes nearby enemies to attack with 6752 power. -->
 		<table name="#effectPoints"> -7427 -8137 -8851 -9570 -10292 -11018 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 108 109 110 111 112 112 </table>
@@ -1941,7 +1963,7 @@
 		</for>
 	</skill>
 	<skill id="981" levels="6" name="Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes the enemy to Sleep for 30 seconds. -->
 		<table name="#effectPoints"> -676 -679 -681 -684 -687 -689 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 58 58 59 59 60 60 </table>
@@ -1976,6 +1998,7 @@
 		</for>
 	</skill>
 	<skill id="982" levels="3" name="Combat Aura">
+		<!-- Increases party member's P. Atk. by 3% and Atk. Spd. by 3% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#amount"> 1.03 1.04 1.05 </table>
 		<table name="#magicLvl"> 52 64 70 </table>
@@ -2001,7 +2024,7 @@
 		</for>
 	</skill>
 	<skill id="983" levels="1" name="Patience">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by 20% when being attacked. -->
 		<set name="icon" val="icon.skill0983" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
@@ -2017,7 +2040,7 @@
 		</for>
 	</skill>
 	<skill id="984" levels="25" name="Shield Strike">
-		<!-- Confirmed High Five -->
+		<!-- Attacks the enemy using a shield with 833 Power added to P. Atk, and provokes the enemy. Requires a shield. -->
 		<table name="#effectPoints"> -377 -392 -407 -437 -453 -469 -501 -518 -535 -570 -588 -606 -643 -662 -681 -719 -738 -758 -777 -797 -816 -836 -856 -875 -895 </table>
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 38 41 44 48 51 55 58 61 62 65 67 69 71 73 75 77 78 78 79 80 80 81 82 82 83 </table>
@@ -2045,7 +2068,7 @@
 		</for>
 	</skill>
 	<skill id="985" levels="1" name="Challenge for Fate">
-		<!-- Confirmed High Five -->
+		<!-- Challenges and provokes nearby enemies. Increases your P. Def. and M. Def for 15 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -2072,7 +2095,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="986" levels="25" name="Deadly Strike">
-		<!-- Confirmed High Five -->
+		<!-- Attacks the enemy with 833 Power added to P. Atk. Cannot be used when a bow/crossbow/hand-to-hand combat weapon is equipped. Over-hit is possible. -->
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 38 41 44 48 51 55 58 61 62 65 67 69 71 73 75 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 833 992 1171 1371 1592 1832 2091 2272 2460 2653 2850 3050 3252 3453 3653 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
@@ -2098,7 +2121,7 @@
 		</for>
 	</skill>
 	<skill id="987" levels="1" name="Multiple Shot">
-		<!-- Confirmed High Five -->
+		<!-- Attacks multiple enemies with 16667 Power added to P. Atk. Over-hit and Critical hit are possible. Requires a bow/crossbow. -->
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="900" />
 		<set name="baseCritRate" val="15" />
@@ -2127,7 +2150,7 @@
 		</for>
 	</skill>
 	<skill id="988" levels="3" name="Battle Whisper">
-		<!-- Confirmed High Five -->
+		<!-- For 2 minutes, increases the user's P. Atk. by 5%, Critical Damage by 5%, and Atk. Spd. by 5%. Increases the additional MP consumption when singing while sing/dance effect lasts. -->
 		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#amount"> 1.05 1.07 1.1 </table>
 		<table name="#effectPoints"> 454 523 635 </table>
@@ -2157,7 +2180,7 @@
 		</for>
 	</skill>
 	<skill id="989" levels="1" name="Defense Motion">
-		<!-- Confirmed High Five -->
+		<!-- For 2 minutes, increases your P. Def. by 25%, Evasion by 3, and M. Def. by 10%. Increases the additional MP consumption when dancing while sing/dance effect lasts. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_DEFENCE_MOTION1" />
@@ -2184,7 +2207,7 @@
 		</for>
 	</skill>
 	<skill id="990" levels="1" name="Death Shot">
-		<!-- Confirmed High Five -->
+		<!-- Shoots an arrow that is aimed to kill. Attacks the enemy with 24306 Power added to P. Atk. Over-hit possible. Critical hit possible. Requires a bow/crossbow to be equipped. -->
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-887" />
@@ -2208,7 +2231,7 @@
 		</for>
 	</skill>
 	<skill id="991" levels="1" name="Throwing Dagger">
-		<!-- Confirmed High Five -->
+		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and decreases Speed by 80% for 10 seconds. Requires a dagger to be equipped. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -2241,7 +2264,7 @@
 		</for>
 	</skill>
 	<skill id="992" levels="8" name="Sonic Mastery">
-		<!-- Confirmed High Five -->
+		<!-- Absorbs the target's energy. Energy can be absorbed with a 15% chance for regular physical attacks and 30% during a critical attack. Applies when a sword, blunt weapon, or dualsword is equipped. Up to 1 stage of energy can be absorbed. -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 </table>
 		<set name="icon" val="icon.skill0992" />
@@ -2272,7 +2295,7 @@
 		</for>
 	</skill>
 	<skill id="993" levels="8" name="Force Mastery">
-		<!-- Confirmed High Five -->
+		<!-- Absorbs the target's energy. Energy can be absorbed with a 15% chance for regular physical attacks and 30% during a critical attack. Applies when a hand-to-hand combat weapon is equipped. Up to 1 stage of energy can be absorbed. -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 </table>
 		<set name="icon" val="icon.skill0993" />
@@ -2304,7 +2327,7 @@
 		</for>
 	</skill>
 	<skill id="994" levels="1" name="Rush">
-		<!-- Confirmed High Five -->
+		<!-- Charges toward the enemy. Cannot be used when a bow/crossbow is equipped. -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-303" />
@@ -2330,7 +2353,7 @@
 		</for>
 	</skill>
 	<skill id="995" levels="1" name="Rush Impact">
-		<!-- Confirmed High Five -->
+		<!-- Rushes forward to attack the enemies in front with 4224 Power added to P. Atk. and inflicts Shock for 9 seconds. Cannot be used when a bow/crossbow is equipped. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -2370,7 +2393,7 @@
 		</for>
 	</skill>
 	<skill id="996" levels="1" name="Disarm">
-		<!-- High Five Skill -->
+		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
@@ -2393,7 +2416,7 @@
 		</for>
 	</skill>
 	<skill id="997" levels="25" name="Crushing Strike">
-		<!-- Confirmed High Five -->
+		<!-- Impacts the enemy with 1041 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by 10% for 3 seconds. Requires a sword or blunt weapon to be equipped. Over-hit is possible. -->
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 38 41 44 48 51 55 58 61 62 65 67 69 71 73 75 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 1041 1240 1464 1714 1990 2290 2614 2840 3075 3316 3563 3813 4065 4316 4566 4689 4811 4931 5050 5166 5280 5390 5498 5603 5704 </table>
@@ -2431,7 +2454,7 @@
 		</for>
 	</skill>
 	<skill id="998" levels="1" name="Blazing Boost">
-		<!-- Confirmed High Five -->
+		<!-- Quickly approaches the enemy. Cannot be used when a bow/crossbow is equipped. -->
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-303" />

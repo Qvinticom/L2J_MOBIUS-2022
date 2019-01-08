@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
-		<!-- Salvation -->
-		<!-- For 30 minutes, selected party member's P. Atk. +22%, M. Atk. +40%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +70%, and Atk. Spd./ Casting Spd. +15%, and Skill Cooldown -20% and Skill MP Consumption -15%. -->
+		<!-- For $s1, selected party member's P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, and Atk. Spd./ Casting Spd. +$s6, and Skill Cooldown -$s7 and Skill MP Consumption -$s8. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
@@ -78,6 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="19526" toLevel="3" name="Limit of Sigel">
+		<!-- Decreases the duration of Protection of Faith/ Party Rescue by $s2 if it is shorter than $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -92,6 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="19527" toLevel="3" name="Limit of Iss">
+		<!-- Decreases the duration of Battle Rhapsody/ Overlord's Dignity by $s2 if it is shorter than $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>

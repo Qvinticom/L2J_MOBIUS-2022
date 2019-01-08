@@ -1,91 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4500" toLevel="1" name="Treasure Chest (Lv. 27)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4501" toLevel="1" name="Treasure Chest (Lv. 29)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4502" toLevel="1" name="Treasure Chest (Lv. 31)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4503" toLevel="1" name="Treasure Chest (Lv. 32)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4504" toLevel="1" name="Treasure Chest (Lv. 33)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4505" toLevel="1" name="Treasure Chest (Lv. 35)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4506" toLevel="1" name="Treasure Chest (Lv. 39)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4507" toLevel="1" name="Treasure Chest (Lv. 42)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4508" toLevel="1" name="Treasure Chest (Lv. 43)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4509" toLevel="1" name="Treasure Chest (Lv. 45)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4510" toLevel="1" name="Treasure Chest (Lv. 47)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4511" toLevel="1" name="Treasure Chest (Lv. 49)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4512" toLevel="1" name="Treasure Chest (Lv. 52)">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<icon>icon.skill0042</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -110,6 +110,7 @@
 		<affectScope>NONE</affectScope>
 	</skill>
 	<skill id="4515" toLevel="1" name="Raid Curse">
+		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -136,8 +137,6 @@
 		</effects>
 	</skill>
 	<skill id="4516" toLevel="1" name="Orfen Heal">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -249,6 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="4522" toLevel="1" name="Eye of Assassin">
+		<!-- Greatly increases the critical success rate of dagger and rapier skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -470,6 +470,7 @@
 		</effects>
 	</skill>
 	<skill id="4533" toLevel="1" name="Dance of Resistance">
+		<!-- Momentarily decreases Speed and Accuracy significantly. Dance of Inspiration can remove the curse. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DANCE_OF_INSPIRATION</abnormalType>
@@ -498,6 +499,7 @@
 		</effects>
 	</skill>
 	<skill id="4534" toLevel="1" name="Nihilistic Dance">
+		<!-- Atk. Spd. decreases momentarily. and Evasion significantly. Dance of Fury can remove the curse. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
@@ -526,6 +528,7 @@
 		</effects>
 	</skill>
 	<skill id="4535" toLevel="1" name="Dance of Weakness">
+		<!-- P. Def. decreases momentarily. and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
@@ -554,6 +557,7 @@
 		</effects>
 	</skill>
 	<skill id="4536" toLevel="1" name="Song of Seduction">
+		<!-- Momentarily decreases Speed and Accuracy significantly. Song of Wind can remove the curse. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SONG_OF_WIND</abnormalType>
@@ -582,6 +586,7 @@
 		</effects>
 	</skill>
 	<skill id="4537" toLevel="1" name="Song of Sweet Whispers">
+		<!-- Atk. Spd. decreases momentarily. and Evasion significantly. Song of Water can remove the curse. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SONG_OF_WATER</abnormalType>
@@ -610,6 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="4538" toLevel="1" name="Song of Temptation">
+		<!-- P. Def. decreases momentarily. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
@@ -638,6 +644,7 @@
 		</effects>
 	</skill>
 	<skill id="4539" toLevel="1" name="Vague Curse">
+		<!-- Momentarily decreases Speed and Accuracy significantly. Guidance spell can remove the curse. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -667,6 +674,7 @@
 		</effects>
 	</skill>
 	<skill id="4540" toLevel="1" name="Curse of Weakness">
+		<!-- P. Def. decreases momentarily. and Speed significantly. Shield spell can remove the curse. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -696,6 +704,7 @@
 		</effects>
 	</skill>
 	<skill id="4541" toLevel="1" name="Nihilistic Curse">
+		<!-- P. Atk. decreases momentarily., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -829,7 +838,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4547" toLevel="1" name="Watchman's Gaze">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>WATCHER_GAZE</abnormalType>
@@ -849,7 +857,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4548" toLevel="1" name="Annulment">
-		<!-- Confirmed CT2.5 -->
 		<castRange>1000</castRange>
 		<effectRange>1500</effectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -887,6 +894,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4551" toLevel="10" name="Hot Springs Rheumatism">
+		<!-- Infected with Hot Springs Rheumatism. While afflicted, Critical Rate increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -952,6 +960,7 @@
 		</effects>
 	</skill>
 	<skill id="4552" toLevel="10" name="Hot Springs Cholera">
+		<!-- Infected with Hot Springs Cholera. While afflicted, Accuracy increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1017,6 +1026,7 @@
 		</effects>
 	</skill>
 	<skill id="4553" toLevel="10" name="Hot Springs Flu">
+		<!-- Infected with Hot Springs Flu. While afflicted, Atk. Spd. increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1082,6 +1092,7 @@
 		</effects>
 	</skill>
 	<skill id="4554" toLevel="10" name="Hot Spring Malaria">
+		<!-- Infected with Hot Springs Malaria. While afflicted, Casting Spd. increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1158,8 +1169,6 @@
 		</effects>
 	</skill>
 	<skill id="4556" toLevel="1" name="Dispel Hot Spring Disease A D">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1179,8 +1188,6 @@
 		</effects>
 	</skill>
 	<skill id="4557" toLevel="1" name="Dispel Hot Spring Disease B D">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1200,8 +1207,6 @@
 		</effects>
 	</skill>
 	<skill id="4558" toLevel="1" name="Dispel Hot Spring Disease C D">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1221,8 +1226,7 @@
 		</effects>
 	</skill>
 	<skill id="4559" toLevel="1" name="Hot Spring Illusion">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Temporary optical illusion caused by the Hot Spring. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -2250,6 +2254,7 @@
 		</effects>
 	</skill>
 	<skill id="4575" toLevel="2" name="Haste">
+		<!-- Atk. Spd. is increased by $s1. Effect $s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2292,6 +2297,7 @@
 		</effects>
 	</skill>
 	<skill id="4576" toLevel="3" name="Reflect Damage">
+		<!-- Reflects $s1 of received damage. Effect $s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2339,6 +2345,7 @@
 		</effects>
 	</skill>
 	<skill id="4577" toLevel="12" name="Decrease Accuracy">
+		<!-- Accuracy decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2422,6 +2429,7 @@
 		</effects>
 	</skill>
 	<skill id="4578" toLevel="1" name="Petrify">
+		<!-- Petrified and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -2464,6 +2472,7 @@
 		</effects>
 	</skill>
 	<skill id="4579" toLevel="12" name="Bleed">
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2564,6 +2573,7 @@
 		</effects>
 	</skill>
 	<skill id="4580" toLevel="12" name="Decrease P. Atk.">
+		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2644,6 +2654,7 @@
 		</effects>
 	</skill>
 	<skill id="4581" toLevel="12" name="Hold">
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2697,6 +2708,7 @@
 		</effects>
 	</skill>
 	<skill id="4582" toLevel="12" name="Poison">
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2780,6 +2792,7 @@
 		</effects>
 	</skill>
 	<skill id="4583" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2860,6 +2873,7 @@
 		</effects>
 	</skill>
 	<skill id="4584" toLevel="12" name="Reducing P. Def Stun">
+		<!-- P. Def. decreases momentarily. Stunned and unable to move momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -2958,6 +2972,7 @@
 		</effects>
 	</skill>
 	<skill id="4585" toLevel="3" name="Berserker Spirit">
+		<!-- P. Def. decreases momentarily by $s1, M. Def. by $s2, and Evasion by $s3. Increases P. Atk. by $s4, M. Atk. by $s5, Atk. Spd. by $s6, Casting Spd. by $s7, and Speed by $s8. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3056,6 +3071,7 @@
 		</effects>
 	</skill>
 	<skill id="4586" toLevel="12" name="Decrease Evasion">
+		<!-- Evasion decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3137,6 +3153,7 @@
 		</effects>
 	</skill>
 	<skill id="4587" toLevel="12" name="Decrease P. Atk.">
+		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3303,6 +3320,7 @@
 		</effects>
 	</skill>
 	<skill id="4589" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3388,6 +3406,7 @@
 		</effects>
 	</skill>
 	<skill id="4590" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3473,6 +3492,7 @@
 		</effects>
 	</skill>
 	<skill id="4591" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3558,6 +3578,7 @@
 		</effects>
 	</skill>
 	<skill id="4592" toLevel="12" name="Decrease P. Def.">
+		<!-- P. Def. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3641,6 +3662,7 @@
 		</effects>
 	</skill>
 	<skill id="4593" toLevel="12" name="Decrease P. Def.">
+		<!-- P. Def. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3724,6 +3746,7 @@
 		</effects>
 	</skill>
 	<skill id="4594" toLevel="12" name="Decrease P. Def.">
+		<!-- P. Def. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3861,6 +3884,7 @@
 		</effects>
 	</skill>
 	<skill id="4596" toLevel="12" name="Bleed">
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3945,6 +3969,7 @@
 		</effects>
 	</skill>
 	<skill id="4597" toLevel="12" name="Bleed">
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4029,6 +4054,7 @@
 		</effects>
 	</skill>
 	<skill id="4598" toLevel="12" name="Bleed">
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4113,6 +4139,7 @@
 		</effects>
 	</skill>
 	<skill id="4599" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

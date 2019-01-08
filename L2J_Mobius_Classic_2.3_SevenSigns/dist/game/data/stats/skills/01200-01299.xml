@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1201" toLevel="35" name="Dryad Root">
+		<!-- Immobilizes the enemy for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -177,6 +178,7 @@
 		</effects>
 	</skill>
 	<skill id="1204" toLevel="6" name="Wind Walk">
+		<!-- For $s1 Speed +$s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -246,6 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="1206" toLevel="21" name="Wind Shackle">
+		<!-- Enemy's Atk. Spd. -$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -408,6 +411,7 @@
 		</effects>
 	</skill>
 	<skill id="1208" toLevel="19" name="Seal of Binding">
+		<!-- For $s1 inflicts Hold on the nearby targets. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -521,6 +525,7 @@
 		</effects>
 	</skill>
 	<skill id="1209" toLevel="6" name="Seal of Poison">
+		<!-- Poisons nearby enemies, causing loss of $s2 HP per sec. for $s1. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -597,6 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="1210" toLevel="4" name="Seal of Gloom">
+		<!-- For $s2, nearby enemies' MP -$s3 with $s1 Power added to M. Atk. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -669,6 +675,7 @@
 		</effects>
 	</skill>
 	<skill id="1213" toLevel="13" name="Seal of Mirage">
+		<!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -750,7 +757,7 @@
 		</effects>
 	</skill>
 	<skill id="1216" toLevel="1" name="Self Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Restores HP with 42 Power. -->
 		<effectPoint>10</effectPoint>
 		<hitTime>5000</hitTime>
 		<icon>icon.skill1216</icon>
@@ -771,6 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="1217" toLevel="41" name="Greater Heal">
+		<!-- Restores the target's HP with $s1 Power. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">236</value>
@@ -999,6 +1007,7 @@
 		</effects>
 	</skill>
 	<skill id="1218" toLevel="41" name="Greater Battle Heal">
+		<!-- Immediately restores the target's HP with $s1 Power. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">202</value>
@@ -1226,6 +1235,7 @@
 		</effects>
 	</skill>
 	<skill id="1219" toLevel="41" name="Greater Group Heal">
+		<!-- Restores all party members' HP with $s1 Power. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">202</value>
@@ -1454,6 +1464,7 @@
 		</effects>
 	</skill>
 	<skill id="1220" toLevel="33" name="Blaze">
+		<!-- Ignites flames on your body with $s1 Power, inflicting Fire damage on the enemy. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -1624,6 +1635,7 @@
 		</effects>
 	</skill>
 	<skill id="1222" toLevel="17" name="Curse Chaos">
+		<!-- Enemy's P. Accuracy -$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1762,7 +1774,7 @@
 		</effects>
 	</skill>
 	<skill id="1223" toLevel="15" name="Surrender to Earth">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, enemy's Earth Resistance -$s2 and Wind Resistance +$s3. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1911,6 +1923,7 @@
 		</effects>
 	</skill>
 	<skill id="1224" toLevel="17" name="Surrender to Poison">
+		<!-- Enemy's Poison Resistance -$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2085,7 +2098,7 @@
 		</effects>
 	</skill>
 	<skill id="1225" toLevel="18" name="Summon Mew the Cat">
-		<!-- H5 hitTime -->
+		<!-- Summons Mew the Cat for assistance in combat. Consumes $s1 Spirit Ore. -->
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2225,7 +2238,7 @@
 		</effects>
 	</skill>
 	<skill id="1226" toLevel="18" name="Summon Boxer the Unicorn">
-		<!-- H5 hitTime -->
+		<!-- Summons Boxer the Unicorn. Consumes $s1 Spirit Ore. -->
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2383,7 +2396,7 @@
 		</effects>
 	</skill>
 	<skill id="1227" toLevel="18" name="Summon Mirage the Unicorn">
-		<!-- H5 hitTime -->
+		<!-- Summons Mirage the Unicorn, which helps in combat using attack magic. Consumes $s1 Spirit Ore. -->
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2523,7 +2536,7 @@
 		</effects>
 	</skill>
 	<skill id="1228" toLevel="18" name="Summon Silhouette">
-		<!-- H5 hitTime -->
+		<!-- Summons Silhouette, which helps in combat using attack magic. Consumes $s1 Spirit Ore. -->
 		<hitTime>
 			<value level="1">15000</value>
 			<value level="2">15000</value>
@@ -2663,6 +2676,7 @@
 		</effects>
 	</skill>
 	<skill id="1229" toLevel="23" name="Chant of Life">
+		<!-- Recovers $s2 HP per sec. for all party members for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2831,6 +2845,7 @@
 		</effects>
 	</skill>
 	<skill id="1230" toLevel="36" name="Prominence">
+		<!-- Ignites flames to inflict Fire damage on the enemy with $s1 Power added to M. Atk. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -3038,6 +3053,7 @@
 		</effects>
 	</skill>
 	<skill id="1231" toLevel="31" name="Aura Flare">
+		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
@@ -3231,6 +3247,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="1232" toLevel="3" name="Blazing Skin">
+		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3286,6 +3303,7 @@
 		</effects>
 	</skill>
 	<skill id="1233" toLevel="4" name="Decay">
+		<!-- Rots the enemy, causing loss of $s2 HP per sec. for $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -3349,6 +3367,7 @@
 		</effects>
 	</skill>
 	<skill id="1234" toLevel="36" name="Vampiric Claw">
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -3555,7 +3574,7 @@
 		</effects>
 	</skill>
 	<skill id="1235" toLevel="36" name="Hydro Blast">
-		<!-- Confirmed CT2.5 -->
+		<!-- Releases a high pressure current to inflict Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -3767,6 +3786,7 @@
 		</effects>
 	</skill>
 	<skill id="1236" toLevel="21" name="Frost Bolt">
+		<!-- Momentarily freezes the surrounding air, inflicting Water damage with $s1 Power added to M. Atk. and decreasing the enemy's Speed by $s3 for $s2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3913,6 +3933,7 @@
 		</effects>
 	</skill>
 	<skill id="1237" toLevel="19" name="Ice Dagger">
+		<!-- Hurls a blade of ice with $s1 Power added to M. Atk., inflicting water damage and causing loss of $s3 HP per sec. for $s2. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -4091,7 +4112,7 @@
 		</effects>
 	</skill>
 	<skill id="1238" toLevel="3" name="Freezing Skin">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4147,6 +4168,7 @@
 		</effects>
 	</skill>
 	<skill id="1239" toLevel="36" name="Hurricane">
+		<!-- Creates a whirlwind that uses $s1 Power to inflict Wind damage to the enemy. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -4359,6 +4381,7 @@
 		</effects>
 	</skill>
 	<skill id="1240" toLevel="6" name="Guidance">
+		<!-- P. Accuracy +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4428,6 +4451,7 @@
 		</effects>
 	</skill>
 	<skill id="1242" toLevel="6" name="Death Whisper">
+		<!-- P. Critical Damage +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4497,6 +4521,7 @@
 		</effects>
 	</skill>
 	<skill id="1243" toLevel="6" name="Blessed Shield">
+		<!-- Shield Defense +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4566,7 +4591,7 @@
 		</effects>
 	</skill>
 	<skill id="1244" toLevel="13" name="Freezing Flame">
-		<!-- Updated to IO -->
+		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -4707,6 +4732,7 @@
 		</pveEffects>
 	</skill>
 	<skill id="1245" toLevel="19" name="Steal Essence">
+		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
@@ -4827,6 +4853,7 @@
 		</effects>
 	</skill>
 	<skill id="1246" toLevel="14" name="Seal of Silence">
+		<!-- Blocks nearby enemies' use of magic for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -4917,7 +4944,7 @@
 		</effects>
 	</skill>
 	<skill id="1247" toLevel="16" name="Seal of Scourge">
-		<!-- should stop regen - check if mul regHP by 0 will work -->
+		<!-- Blocks nearby enemies' natural HP recovery ability by $s2 for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -5018,6 +5045,7 @@
 		</effects>
 	</skill>
 	<skill id="1248" toLevel="14" name="Seal of Suspension">
+		<!-- Nearby enemies' physical/ magic skill Cooldown -$s2 for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>REUSE_DELAY_UP</abnormalType>
@@ -5115,6 +5143,7 @@
 		</effects>
 	</skill>
 	<skill id="1249" toLevel="3" name="Pa'agrio's Vision">
+		<!-- Accuracy of nearby clan members +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5167,6 +5196,7 @@
 		</effects>
 	</skill>
 	<skill id="1250" toLevel="3" name="Pa'agrio's Protection">
+		<!-- Shield Defense of nearby clan members +$s2 for $s1. Effect $s3. -->
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -5219,6 +5249,7 @@
 		</effects>
 	</skill>
 	<skill id="1251" toLevel="2" name="Chant of Fury">
+		<!-- All party members' Atk. Spd. +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5264,6 +5295,7 @@
 		</effects>
 	</skill>
 	<skill id="1252" toLevel="3" name="Chant of Evasion">
+		<!-- All party members' Evasion +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5315,6 +5347,7 @@
 		</effects>
 	</skill>
 	<skill id="1253" toLevel="3" name="Chant of Rage">
+		<!-- Critical Damage of all party members +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5366,6 +5399,7 @@
 		</effects>
 	</skill>
 	<skill id="1254" toLevel="6" name="Mass Resurrection">
+		<!-- Resurrect a dead clan member. -->
 		<affectLimit>50-50</affectLimit>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -5430,7 +5464,7 @@
 		</effects>
 	</skill>
 	<skill id="1255" toLevel="2" name="Party Return">
-		<!-- Confirmed CT2.5 -->
+		<!-- Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
@@ -5468,6 +5502,7 @@
 		</effects>
 	</skill>
 	<skill id="1256" toLevel="18" name="Pa'agrio's Heart">
+		<!-- Restores a clan member's HP with $s1 Power and recovers $s3 HP per sec. for $s2. -->
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -5629,6 +5664,7 @@
 		</effects>
 	</skill>
 	<skill id="1257" toLevel="3" name="Decrease Weight">
+		<!-- Weight penalty interval +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5679,7 +5715,7 @@
 		</effects>
 	</skill>
 	<skill id="1258" toLevel="4" name="Restore Life">
-		<!-- Confirmed CT2.5 -->
+		<!-- Recovers HP by $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">500</value>
@@ -5727,6 +5763,7 @@
 		</effects>
 	</skill>
 	<skill id="1259" toLevel="4" name="Stun Resistance">
+		<!-- Stun Resistance +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5783,6 +5820,7 @@
 		</effects>
 	</skill>
 	<skill id="1260" toLevel="3" name="Pa'agrio's Tact">
+		<!-- Nearby clan members' Evasion +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5835,6 +5873,7 @@
 		</effects>
 	</skill>
 	<skill id="1261" toLevel="2" name="Pa'agrio's Rage">
+		<!-- Nearby clan members' P. Def. -$s2, M. Def. -$s3, and Evasion - $s4, and P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, and Speed +$s9 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5930,6 +5969,7 @@
 		</effects>
 	</skill>
 	<skill id="1262" toLevel="10" name="Transfer Pain">
+		<!-- Transfers $s1 of received damage to a servitor. Consumes MP proportionately to your level. -->
 		<icon>icon.skill1262</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -5981,6 +6021,7 @@
 		</effects>
 	</skill>
 	<skill id="1263" toLevel="24" name="Curse Gloom">
+		<!-- Curses the enemy, momentarily reducing their M. Def. by $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="24">10</value>
@@ -6297,6 +6338,7 @@
 		</effects>
 	</skill>
 	<skill id="1264" toLevel="3" name="Solar Spark">
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-303</value>
@@ -6342,6 +6384,7 @@
 		</effects>
 	</skill>
 	<skill id="1265" toLevel="14" name="Solar Flare">
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-474</value>
@@ -6442,6 +6485,7 @@
 		</effects>
 	</skill>
 	<skill id="1266" toLevel="3" name="Shadow Spark">
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-303</value>
@@ -6487,6 +6531,7 @@
 		</effects>
 	</skill>
 	<skill id="1267" toLevel="14" name="Shadow Flare">
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-474</value>
@@ -6587,6 +6632,7 @@
 		</effects>
 	</skill>
 	<skill id="1268" toLevel="4" name="Vampiric Rage">
+		<!-- For $s1 recovers as HP $s2 of the physical damage inflicted on the enemy with a certain probability. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6644,6 +6690,7 @@
 		</effects>
 	</skill>
 	<skill id="1269" toLevel="11" name="Curse Disease">
+		<!-- Power of HP recovery magic received by the enemy -$s2 for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -6722,6 +6769,7 @@
 		</effects>
 	</skill>
 	<skill id="1271" toLevel="2" name="Benediction">
+		<!-- Restores all party members' Hp. Works only with MP<25%. -->
 		<affectRange>2000</affectRange>
 		<effectPoint>560</effectPoint>
 		<hitTime>7000</hitTime>
@@ -6760,6 +6808,7 @@
 		</effects>
 	</skill>
 	<skill id="1272" toLevel="15" name="Word of Fear">
+		<!-- Frightens nearby enemies into fleeing for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -6855,6 +6904,7 @@
 		</effects>
 	</skill>
 	<skill id="1273" toLevel="15" name="Eva's Serenade">
+		<!-- Soothes surrounding enemies, eliminating their desire to attack. -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<hitTime>4000</hitTime>
@@ -6926,6 +6976,7 @@
 		</effects>
 	</skill>
 	<skill id="1274" toLevel="4" name="Energy Bolt">
+		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-102</value>
@@ -6973,6 +7024,7 @@
 		</effects>
 	</skill>
 	<skill id="1275" toLevel="14" name="Aura Bolt">
+		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-190</value>
@@ -7070,6 +7122,7 @@
 		</effects>
 	</skill>
 	<skill id="1276" toLevel="14" name="Summon Kai the Cat">
+		<!-- Summons Kai the Cat. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1276</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -7171,6 +7224,7 @@
 		</effects>
 	</skill>
 	<skill id="1277" toLevel="14" name="Summon Merrow the Unicorn">
+		<!-- Summons Merrow the Unicorn. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1277</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -7271,6 +7325,7 @@
 		</effects>
 	</skill>
 	<skill id="1278" toLevel="14" name="Summon Soulless">
+		<!-- Summons a Soulless. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill1278</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -7371,7 +7426,7 @@
 		</effects>
 	</skill>
 	<skill id="1279" toLevel="9" name="Summon Binding Cubic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Summons Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes $s1 Spirit Ore. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1279</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7447,7 +7502,7 @@
 		</effects>
 	</skill>
 	<skill id="1280" toLevel="9" name="Summon Aqua Cubic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Summons Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes $s1 Spirit Ore. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1280</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7523,7 +7578,7 @@
 		</effects>
 	</skill>
 	<skill id="1281" toLevel="9" name="Summon Spark Cubic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Summons Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes $s1 Spirit Ore. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1281</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -7599,6 +7654,7 @@
 		</effects>
 	</skill>
 	<skill id="1282" toLevel="2" name="Pa'agrio's Haste">
+		<!-- Speed of nearby clan members +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7645,6 +7701,7 @@
 		</effects>
 	</skill>
 	<skill id="1283" toLevel="13" name="Soul Guard">
+		<!-- P. Def. +$s1. Continuously consumes MP. -->
 		<icon>icon.skill1283</icon>
 		<magicLvl>
 			<value level="1">44</value>
@@ -7720,6 +7777,7 @@
 		</effects>
 	</skill>
 	<skill id="1284" toLevel="3" name="Chant of Revenge">
+		<!-- For $s1, gives a party member the ability to transfer $s2 of received damage back to the enemy. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -7770,6 +7828,7 @@
 		</effects>
 	</skill>
 	<skill id="1285" toLevel="1" name="Seed of Fire">
+		<!-- Uses energy of fire to ??? Fire attack level +20. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -7796,6 +7855,7 @@
 		</effects>
 	</skill>
 	<skill id="1286" toLevel="1" name="Seed of Water">
+		<!-- Uses energy of Water to ??? Water attack level +20. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -7822,6 +7882,7 @@
 		</effects>
 	</skill>
 	<skill id="1287" toLevel="1" name="Seed of Wind">
+		<!-- Uses energy of wind to ??? Wind attack level +20. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -7848,6 +7909,7 @@
 		</effects>
 	</skill>
 	<skill id="1288" toLevel="1" name="Aura Symphony">
+		<!-- Deals non-attribute magical damage to the target. Power 150. -->
 		<castRange>900</castRange>
 		<effectPoint>-4200</effectPoint>
 		<effectRange>1400</effectRange>
@@ -7870,6 +7932,7 @@
 		</effects>
 	</skill>
 	<skill id="1289" toLevel="2" name="Inferno">
+		<!-- Inflicts fire damage on the enemy with 150 Power added to M. Atk., and HP -60 per sec. for 15 sec. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -7916,6 +7979,7 @@
 		</effects>
 	</skill>
 	<skill id="1290" toLevel="1" name="Blizzard">
+		<!-- Inflicts water damage on the enemy with 150 Power added to M. Atk., and their Speed -50% for 30 sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -7951,6 +8015,7 @@
 		</effects>
 	</skill>
 	<skill id="1291" toLevel="2" name="Demon Wind">
+		<!-- Inflicts wind damage on the enemy with 150 Power added to M. Atk., and their HP recovery magic effect -50% for 2 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -7996,6 +8061,7 @@
 		</effects>
 	</skill>
 	<skill id="1292" toLevel="1" name="Elemental Assault">
+		<!-- Deals non-attribute magical damage to the target. Power 200. Over-hit. -->
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -8019,6 +8085,7 @@
 		</effects>
 	</skill>
 	<skill id="1293" toLevel="1" name="Elemental Symphony">
+		<!-- Deals non-attribute magical damage to the target. Power 200. Over-hit. -->
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -8042,6 +8109,7 @@
 		</effects>
 	</skill>
 	<skill id="1294" toLevel="1" name="Elemental Storm">
+		<!-- Deals non-attribute magical damage to the target. Power 200. -->
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -8064,6 +8132,7 @@
 		</effects>
 	</skill>
 	<skill id="1295" toLevel="17" name="Aqua Splash">
+		<!-- Creates a massive tidal wave and inflicts water damage on the target and nearby enemies with $s1 Power added to M. Atk. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -8181,6 +8250,7 @@
 		</effects>
 	</skill>
 	<skill id="1296" toLevel="17" name="Rain of Fire">
+		<!-- Creates a massive explosion and inflicts fire damage on the target and nearby enemies with $s1 Power added to M. Atk. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<castRange>500</castRange>
@@ -8298,7 +8368,7 @@
 		</effects>
 	</skill>
 	<skill id="1297" toLevel="6" name="Clear Mind">
-		<!-- Confirmed CT2.5 -->
+		<!-- MP Recovery Bonus +$s1 while standing and +$s2 when walking. -->
 		<icon>icon.skill1297</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -8338,6 +8408,7 @@
 		</effects>
 	</skill>
 	<skill id="1298" toLevel="17" name="Mass Slow">
+		<!-- Speed near the enemy -$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -8442,6 +8513,7 @@
 		</effects>
 	</skill>
 	<skill id="1299" toLevel="2" name="Servitor Empowerment">
+		<!-- For $s1, servitor's P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38100" name="Leona's Cube (1-time)" type="EtcItem">
-		<!-- Double-click for a chance to obtain either Emperor's Rune (2-hour), Emperor's Vitality Tonic, Scroll: 1,000,000 SP, Scroll: 5,000,000 SP, or Scroll: 10,000,000 SP. Once a day. -->
+		<!-- Double-click for a chance to obtain either Emperor's Rune (2-hr.), Emperor's Vitality Tonic, Scroll: 1,000,000 SP, Scroll: 5,000,000 SP, or Scroll: 10,000,000 SP. -->
 		<set name="icon" val="icon.etc_violet_crystal_cube_pc_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -479,7 +479,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38161" name="Agathion - Blessed Virgo" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -503,7 +503,7 @@
 		</skills>
 	</item>
 	<item id="38162" name="Agathion - Twinkling Virgo" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -527,7 +527,7 @@
 		</skills>
 	</item>
 	<item id="38163" name="Agathion - Radiant Virgo" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -551,7 +551,7 @@
 		</skills>
 	</item>
 	<item id="38164" name="Agathion - Virgo" type="Armor">
-		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -574,7 +574,7 @@
 		</skills>
 	</item>
 	<item id="38165" name="Agathion - Faint Virgo" type="Armor">
-		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -651,7 +651,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38174" name="Samurai Long Sword Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a one-handed sword into that of a Samurai Long Sword. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Samurai Long Sword. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -660,7 +660,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38175" name="Apprentice's Spellbook Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a one-handed magic sword into that of an Apprentice's Spellbook. -->
+		<!-- Changes the appearance of a magic sword to that of an Apprentice's Spellbook. -->
 		<set name="icon" val="Icon.special_look_change_book" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -679,7 +679,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38177" name="Hellblade Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a one-handed sword into that of a Hellblade. 30-day. -->
+		<!-- Changes the appearance of a one-handed sword to that of Hellblade. Limited time item (30-day). -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -709,7 +709,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38180" name="Blades of Delusion Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blades of Delusion. 30-day. -->
+		<!-- Turns the appearance of a dual sword into that of a Blades of Delusion. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -719,7 +719,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38181" name="Blood Brother Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a two-handed sword into that of a Blood Brother. 30-day. -->
+		<!-- Changes the appearance of a two-handed sword to that of Blood Brother. Limited time item (30-day). -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -729,7 +729,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38182" name="Mardil's Fan Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a one-handed magic sword into that of a Mardil's Fan. 30-day. -->
+		<!-- Changes the appearance of a magic sword to that of Mardil's Fan. Limited time item (30-day). -->
 		<set name="icon" val="Icon.shape_shifting_magic_blunt_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -739,7 +739,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38183" name="Hellblade Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a one-handed sword into that of a Hellblade. -->
+		<!-- Changes the appearance of a one-handed sword to that of Hellblade. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -766,7 +766,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38186" name="Blades of Delusion Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blades of Delusion. -->
+		<!-- Turns the appearance of a dual sword into that of a Blades of Delusion. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -776,14 +776,14 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38187" name="Blood Brother Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a two-handed sword into that of a Blood Brother. -->
+		<!-- Changes the appearance of a two-handed sword to that of Blood Brother. -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38188" name="Mardil's Fan Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a one-handed magic sword into that of a Mardil's Fan. -->
+		<!-- Changes the appearance of a magic sword to that of Mardil's Fan. -->
 		<set name="icon" val="Icon.shape_shifting_magic_blunt_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -793,7 +793,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38189" name="Blue Mackerel Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a one-handed sword into that of a Blue Mackerel. 30-day. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Blue Mackerel for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -813,7 +813,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38191" name="Shark Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a two-handed sword into that of a Shark. 30-day. -->
+		<!-- Changes the appearance of a two-handed sword to that of a Shark for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38193" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a two-handed blunt weapon into that of a Sea Horse. 30-day. -->
+		<!-- Changes the appearance of a two-handed staff to that of a Sea Horse for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38199" name="Blue Mackerel Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blue Mackerel. 30-day. -->
+		<!-- Turns the appearance of a dual sword into that of a Blue Mackerel. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />

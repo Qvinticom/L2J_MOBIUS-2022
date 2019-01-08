@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38100" name="Leona's Cube (1-time)" type="EtcItem">
-		<!-- Double-click for a chance to obtain either Emperor's Rune (2-hour), Emperor's Vitality Tonic, Scroll: 1,000,000 SP, Scroll: 5,000,000 SP, or Scroll: 10,000,000 SP. Once a day. -->
+		<!-- Double-click for a chance to obtain either Emperor's Rune (2-hour), Emperor's Vitality Tonic, Scroll: 1,000,000 SP, Scroll: 5,000,000 SP, or Scroll: 10,000,000 SP. -->
 		<set name="icon" val="icon.etc_violet_crystal_cube_pc_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -479,7 +479,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38161" name="Agathion - Blessed Virgo" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -503,7 +503,7 @@
 		</skills>
 	</item>
 	<item id="38162" name="Agathion - Twinkling Virgo" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -527,7 +527,7 @@
 		</skills>
 	</item>
 	<item id="38163" name="Agathion - Radiant Virgo" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -551,7 +551,7 @@
 		</skills>
 	</item>
 	<item id="38164" name="Agathion - Virgo" type="Armor">
-		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -574,7 +574,7 @@
 		</skills>
 	</item>
 	<item id="38165" name="Agathion - Faint Virgo" type="Armor">
-		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -709,7 +709,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38180" name="Blades of Delusion Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blades of Delusion. 30-day. -->
+		<!-- Turns the appearance of a dual sword into that of a Blades of Delusion. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -766,7 +766,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38186" name="Blades of Delusion Appearance Stone" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blades of Delusion. -->
+		<!-- Turns the appearance of a dual sword into that of a Blades of Delusion. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38199" name="Blue Mackerel Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blue Mackerel. 30-day. -->
+		<!-- Turns the appearance of a dual sword into that of a Blue Mackerel. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="39101" toLevel="1" name="Chase Down">
-		<!-- For 15 seconds, Speed increases by 66. -->
+		<!-- Speed +66 for 15 seconds. -->
 		<abnormalTime>15</abnormalTime>
 		<icon>icon.skill0998</icon>
 		<operateType>A2</operateType>
@@ -16,7 +16,7 @@
 		</effects>
 	</skill>
 	<skill id="39102" toLevel="1" name="Sneak">
-		<!-- Protected from preemptive attacks from monsters. -->
+		<!-- Do not receive preemptive attacks from monsters. -->
 		<icon>icon.skill10518</icon>
 		<operateType>T</operateType>
 		<mpConsume>1</mpConsume>
@@ -34,11 +34,12 @@
 		</effects>
 	</skill>
 	<skill id="39169" toLevel="1" name="Cheer Firecracker">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Large firecracker that explodes in colorful light and fills the sky. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39171" toLevel="1" name="Member of the Balthus Knight">
+		<!-- You have dressed up as a member of the Balthus Knights for 1 hour. Gain opportunities to receive special supplies. -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49784</itemConsumeId>
 		<abnormalLvl>1</abnormalLvl>
@@ -80,7 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="39172" toLevel="1" name="Party Scroll of Escape">
-		<!-- Salvation -->
+		<!-- Teleports party members to the nearest village. -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -103,7 +104,7 @@
 		</effects>
 	</skill>
 	<skill id="39173" toLevel="1" name="Stealth Detector">
-		<!-- Use it to fire a flash bang that reveals hidden targets around you. -->
+		<!-- Fires a Flare to reveal nearby hiding enemies or traps. -->
 		<affectRange>300</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>200</hitTime>

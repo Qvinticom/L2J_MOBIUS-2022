@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2300" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -17,7 +16,6 @@
 		</for>
 	</skill>
 	<skill id="2301" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -33,7 +31,6 @@
 		</for>
 	</skill>
 	<skill id="2302" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -49,7 +46,6 @@
 		</for>
 	</skill>
 	<skill id="2303" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -68,7 +64,6 @@
 		</for>
 	</skill>
 	<skill id="2304" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -87,7 +82,7 @@
 		</for>
 	</skill>
 	<skill id="2305" levels="1" name="Primeval Potion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Improves Resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="POTION_OF_GENESIS" />
@@ -103,9 +98,6 @@
 		</for>
 	</skill>
 	<skill id="2306" levels="3" name="Primeval Crystals">
-		<!-- Lvl 1 Name - Blue Primeval Crystal -->
-		<!-- Lvl 2 Name - Green Primeval Crystal -->
-		<!-- Lvl 3 Name - Red Primeval Crystal -->
 		<table name="#amount"> 50000 100000 200000 </table>
 		<table name="#itemConsumeId"> 8954 8955 8956 </table>
 		<set name="hitTime" val="200" />
@@ -127,7 +119,6 @@
 		</for>
 	</skill>
 	<skill id="2307" levels="1" name="Remove Petrification Scroll">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -143,7 +134,6 @@
 		</for>
 	</skill>
 	<skill id="2308" levels="36" name="Event Item">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8980,1,17,1000,100
 			8989,1,1341,1000,100
@@ -199,7 +189,6 @@
 		</for>
 	</skill>
 	<skill id="2309" levels="1" name="Pig Chest">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			2513,300,8627,5,100
 		</table>
@@ -220,6 +209,7 @@
 		</for>
 	</skill>
 	<skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
+		<!-- Increases Accuracy. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -239,6 +229,7 @@
 		</for>
 	</skill>
 	<skill id="2311" levels="1" name="Scroll of Death Whisper - Event Use">
+		<!-- Increases critical attack power. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -258,6 +249,7 @@
 		</for>
 	</skill>
 	<skill id="2312" levels="1" name="Scroll of Focus - Event Use">
+		<!-- Increases critical attack rate. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -277,6 +269,7 @@
 		</for>
 	</skill>
 	<skill id="2313" levels="1" name="Scroll of Acumen - Event Use">
+		<!-- Increases Casting Spd. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -296,6 +289,7 @@
 		</for>
 	</skill>
 	<skill id="2314" levels="1" name="Scroll of Haste - Event Use">
+		<!-- Increases Atk. Spd. Effect 2. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -315,6 +309,7 @@
 		</for>
 	</skill>
 	<skill id="2315" levels="1" name="Scroll of Agility - Event Use">
+		<!-- Increases Evasion. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -334,6 +329,7 @@
 		</for>
 	</skill>
 	<skill id="2316" levels="1" name="Scroll of Empower - Event Use">
+		<!-- Increases M. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -353,6 +349,7 @@
 		</for>
 	</skill>
 	<skill id="2317" levels="1" name="Scroll of Might - Event Use">
+		<!-- Increases P. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -372,6 +369,7 @@
 		</for>
 	</skill>
 	<skill id="2318" levels="1" name="Scroll of Wind Walk - Event Use">
+		<!-- Increases Speed. Effect 2. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -391,6 +389,7 @@
 		</for>
 	</skill>
 	<skill id="2319" levels="1" name="Scroll of Shield - Event Use">
+		<!-- Increases P. Def. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -413,7 +412,7 @@
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9156" /> <!-- Blessed Scroll of Escape -->
+		<set name="itemConsumeId" val="9156" /> <!-- Blessed Scroll of Escape - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -439,7 +438,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9157" /> <!-- Blessed Scroll of Resurrection -->
+		<set name="itemConsumeId" val="9157" /> <!-- Blessed Scroll of Resurrection - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -454,7 +453,6 @@
 		</for>
 	</skill>
 	<skill id="2322" levels="1" name="Chest Key - For Events Only">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -475,7 +473,6 @@
 		</for>
 	</skill>
 	<skill id="2323" levels="1" name="Red Sage's Stone">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9177,1,2.5;9184,1,2.5;9191,1,2.5;9198,1,2.5;9153,3,6.6;9146,3,6.6;9150,3,6.8;9156,1,7.0;9157,1,2.0;9206,10,45.997;9207,5,15.0;8678,1,0.0015;8682,1,0.0015
 		</table>
@@ -498,7 +495,6 @@
 		</for>
 	</skill>
 	<skill id="2324" levels="1" name="Blue Sage's Stone">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9178,1,2.5;9185,1,2.5;9192,1,2.5;9199,1,2.5;9147,3,6.6;9151,3,6.6;9149,3,6.8;9156,1,7.0;9157,1,2.0;9206,10,45.997;9207,5,15.0;8685,1,0.0015;8679,1,0.0015
 		</table>
@@ -521,7 +517,6 @@
 		</for>
 	</skill>
 	<skill id="2325" levels="1" name="Orange Sage's Stone">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9180,1,2.5;9187,1,2.5;9194,1,2.5;9201,1,2.5;9149,3,6.6;9155,3,6.6;9150,3,6.8;9156,1,7.0;9157,1,2.0;9206,10,45.997;9207,5,15.0;8688,1,0.0015;8680,1,0.0015
 		</table>
@@ -544,7 +539,6 @@
 		</for>
 	</skill>
 	<skill id="2326" levels="1" name="Black Sage's Stone">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9182,1,2.5;9189,1,2.5;9196,1,2.5;9203,1,2.5;9148,3,6.6;9146,3,6.6;9154,3,6.8;9156,1,7.0;9157,1,2.0;9206,10,45.997;9207,5,15.0;8681,1,0.0015;8687,1,0.0015
 		</table>
@@ -567,7 +561,6 @@
 		</for>
 	</skill>
 	<skill id="2327" levels="1" name="White Sage's Stone">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9183,1,2.5;9190,1,2.5;9197,1,2.5;9204,1,2.5;9152,3,6.6;9155,3,6.6;9147,3,6.8;9156,1,7.0;9157,1,2.0;9206,10,45.997;9207,5,15.0;8685,1,0.0015;8683,1,0.0015
 		</table>
@@ -590,7 +583,6 @@
 		</for>
 	</skill>
 	<skill id="2328" levels="1" name="Green Sage's Stone">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			9179,1,2.5;9186,1,2.5;9193,1,2.5;9200,1,2.5;9148,3,6.6;9152,3,6.6;9154,3,6.8;9156,1,7.0;9157,1,2.0;9206,10,45.997;9207,5,15.0;8686,1,0.0015;8684,1,0.0015
 		</table>
@@ -655,6 +647,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2335" levels="1" name="Fire Resist Potion">
+		<!-- Resistance to the element of fire is increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -672,6 +665,7 @@
 		</for>
 	</skill>
 	<skill id="2336" levels="1" name="Water Resist Potion">
+		<!-- Resistance to the element of water is increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -689,6 +683,7 @@
 		</for>
 	</skill>
 	<skill id="2337" levels="1" name="Wind Resist Potion">
+		<!-- Resistance to the element of wind is increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -706,6 +701,7 @@
 		</for>
 	</skill>
 	<skill id="2338" levels="1" name="Earth Resist Potion">
+		<!-- Resistance to the element of earth is increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -723,6 +719,7 @@
 		</for>
 	</skill>
 	<skill id="2339" levels="1" name="Holy Resist Potion">
+		<!-- Increases the Resistance to holy element. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -740,6 +737,7 @@
 		</for>
 	</skill>
 	<skill id="2340" levels="1" name="Unholy Resist Potion">
+		<!-- Increases the Resistance to dark element. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -757,6 +755,7 @@
 		</for>
 	</skill>
 	<skill id="2341" levels="1" name="Caravan's Secret Medicine">
+		<!-- Immune to desert heat. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HOT_GROUND" />
@@ -1009,7 +1008,7 @@
 		<set name="affectRange" val="600" />
 		<set name="hitTime" val="200" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9713" />
+		<set name="itemConsumeId" val="9713" /> <!-- Nornil's Power -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
@@ -1025,7 +1024,6 @@
 		</for>
 	</skill>
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1048,7 +1046,6 @@
 		</for>
 	</skill>
 	<skill id="2355" levels="1" name="Gate Key of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1071,7 +1068,6 @@
 		</for>
 	</skill>
 	<skill id="2356" levels="1" name="Gate Key of Blood">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1094,7 +1090,7 @@
 		</for>
 	</skill>
 	<skill id="2357" levels="1" name="Fiery Demon Blood">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fiery Demon Blood -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="EVIL_BLOOD" />
@@ -1112,7 +1108,6 @@
 		</for>
 	</skill>
 	<skill id="2358" levels="1" name="Holy Water">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1125,7 +1120,6 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="2359" levels="1" name="Magic Bottle">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1157,7 +1151,6 @@
 		</cond>
 	</skill>
 	<skill id="2361" levels="1" name="Evolving Wolf's Food">
-		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="1100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1166,7 +1159,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2362" levels="1" name="Prison Gate Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1189,7 +1181,6 @@
 		</for>
 	</skill>
 	<skill id="2363" levels="1" name="Underground Warehouse Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1259,7 +1250,6 @@
 		</for>
 	</skill>
 	<skill id="2366" levels="1" name="Blue Coral Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1282,7 +1272,6 @@
 		</for>
 	</skill>
 	<skill id="2367" levels="1" name="Red Coral Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -1305,7 +1294,6 @@
 		</for>
 	</skill>
 	<skill id="2368" levels="1" name="Spirit of the Lake">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
@@ -1347,7 +1335,7 @@
 		</cond>
 	</skill>
 	<skill id="2370" levels="1" name="Scroll of Transformation - Pig">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a cute pig. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1370,7 +1358,7 @@
 		</for>
 	</skill>
 	<skill id="2371" levels="1" name="Transform Sealbook - Onyx Beast">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into an Onyx Beast. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1393,7 +1381,7 @@
 		</for>
 	</skill>
 	<skill id="2372" levels="1" name="Transform Sealbook - Death Blader">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a Death Blader. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1416,7 +1404,7 @@
 		</for>
 	</skill>
 	<skill id="2373" levels="1" name="Transform Sealbook - Grail Apostle">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into an Grail Apostle. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1439,7 +1427,7 @@
 		</for>
 	</skill>
 	<skill id="2374" levels="1" name="Transform Sealbook - Unicorn">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a Unicorn. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1462,7 +1450,7 @@
 		</for>
 	</skill>
 	<skill id="2375" levels="1" name="Transform Sealbook - Lilim Knight">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a Lilim Knight. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1485,7 +1473,7 @@
 		</for>
 	</skill>
 	<skill id="2376" levels="1" name="Transform Sealbook - Golem Guardian">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a Golem Guardian. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1508,7 +1496,7 @@
 		</for>
 	</skill>
 	<skill id="2377" levels="1" name="Transform Sealbook - Inferno Drake">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into an Inferno Drake. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1531,7 +1519,7 @@
 		</for>
 	</skill>
 	<skill id="2378" levels="1" name="Transform Sealbook - Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a Dragon Bomber. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1554,7 +1542,7 @@
 		</for>
 	</skill>
 	<skill id="2379" levels="1" name="Wind">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition increases speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1571,7 +1559,7 @@
 		</for>
 	</skill>
 	<skill id="2380" levels="1" name="Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PD_UP" />
@@ -1588,7 +1576,7 @@
 		</for>
 	</skill>
 	<skill id="2381" levels="1" name="Magic Barrier">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition increases magic resistance. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MD_UP" />
@@ -1605,7 +1593,7 @@
 		</for>
 	</skill>
 	<skill id="2382" levels="1" name="Bless Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition increases shield defense power. Effect 6. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
@@ -1622,7 +1610,7 @@
 		</for>
 	</skill>
 	<skill id="2383" levels="1" name="Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Attack Speed. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -1639,7 +1627,7 @@
 		</for>
 	</skill>
 	<skill id="2384" levels="1" name="Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition increases Cast Speed. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -1656,7 +1644,7 @@
 		</for>
 	</skill>
 	<skill id="2385" levels="1" name="Empower">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition increases M. Atk. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MA_UP" />
@@ -1673,7 +1661,7 @@
 		</for>
 	</skill>
 	<skill id="2386" levels="1" name="Divine Power">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Recovery Magic. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HEAL_POWER_UP" />
@@ -1690,7 +1678,7 @@
 		</for>
 	</skill>
 	<skill id="2387" levels="1" name="Might">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_UP" />
@@ -1707,7 +1695,7 @@
 		</for>
 	</skill>
 	<skill id="2388" levels="1" name="Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases the success rate of critical attacks. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -1724,7 +1712,7 @@
 		</for>
 	</skill>
 	<skill id="2389" levels="1" name="Guidance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Accuracy. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -1741,7 +1729,7 @@
 		</for>
 	</skill>
 	<skill id="2390" levels="1" name="Berserker Spirit">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases P. Def./magic resistance/evasion and increases P. Atk/M Atk/attack speed/cast speed/speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -1765,7 +1753,7 @@
 		</for>
 	</skill>
 	<skill id="2391" levels="1" name="Clarity">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases MP consumption. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -1784,7 +1772,6 @@
 		</for>
 	</skill>
 	<skill id="2392" levels="1" name="Blessed Scroll of Battlefield Escape">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1806,7 +1793,6 @@
 		</for>
 	</skill>
 	<skill id="2393" levels="1" name="Blessed Scroll of Battlefield Resurrection">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
@@ -1828,7 +1814,7 @@
 		</for>
 	</skill>
 	<skill id="2394" levels="1" name="Scroll of Battlefield Transformation">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transform into a Pixy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1851,7 +1837,6 @@
 		</for>
 	</skill>
 	<skill id="2395" levels="1" name="Lesser Battlefield Healing Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1871,7 +1856,7 @@
 		</for>
 	</skill>
 	<skill id="2396" levels="1" name="Mental Potion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Resistance to Hold, Sleep, and Mental attacks. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -1890,7 +1875,7 @@
 		</for>
 	</skill>
 	<skill id="2397" levels="1" name="Medusa Potion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Petrifies others so you don't receive physical/magical damage. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="TURN_STONE" />
@@ -1906,7 +1891,7 @@
 		</for>
 	</skill>
 	<skill id="2398" levels="1" name="Instant Haste Potion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Greatly increases speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -1923,7 +1908,7 @@
 		</for>
 	</skill>
 	<skill id="2399" levels="1" name="Capture Rope">
-		<!-- Confirmed CT2.5 -->
+		<!-- Instantly puts the enemy into hold. Targets will not receive any additional hold attack while the effect lasts. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />

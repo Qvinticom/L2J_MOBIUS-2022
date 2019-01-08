@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25001" level="23" type="L2RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
 		<parameters>
@@ -50,7 +50,7 @@
 				<item id="847" min="4" max="8" chance="30.81" /> <!-- Red Crescent -->
 				<item id="890" min="4" max="8" chance="30.28" /> <!-- Ring of Devotion -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="1866" min="2" max="6" chance="100" /> <!-- Scroll: Enchant Armor (D-grade)-->
+				<item id="1866" min="2" max="6" chance="100" /> <!-- Suede -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -320,7 +320,7 @@
 				<item id="607" min="2" max="2" chance="11.52" /> <!-- Ogre Power Gauntlets -->
 				<item id="396" min="2" max="2" chance="11.4" /> <!-- Salamander Skin Mail -->
 				<item id="955" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="70000" min="5" max="15" chance="100" /> <!-- Sealed Rune - Stage 1 -->	
+				<item id="70000" min="5" max="15" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="956" min="5" max="15" chance="49.85" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</drop>
 		</dropLists>
@@ -608,7 +608,7 @@
 				<item id="226" min="1" max="1" chance="0.75" /> <!-- Cursed Dagger -->
 				<item id="96" min="1" max="1" chance="0.75" /> <!-- Scythe -->
 				<item id="89" min="1" max="1" chance="0.75" /> <!-- Big Hammer -->
-				<item id="72" min="1" max="1" chance="0.75" /> <!-- StormBringer -->
+				<item id="72" min="1" max="1" chance="0.75" /> <!-- Stormbringer -->
 				<item id="71" min="1" max="1" chance="0.75" /> <!-- Flamberge -->
 				<item id="160" min="1" max="1" chance="0.75" /> <!-- Battle Axe -->
 				<item id="161" min="1" max="1" chance="0.75" /> <!-- Silver Axe -->
@@ -624,7 +624,7 @@
 				<item id="173" min="1" max="1" chance="0.75" /> <!-- Skull Graver -->
 				<item id="192" min="1" max="1" chance="0.75" /> <!-- Crystal Staff -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Stage 1 -->	
+				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="5" max="15" chance="29.49" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -881,7 +881,7 @@
 				<item id="167" min="1" max="1" chance="7.46" /> <!-- Scalpel -->
 				<item id="312" min="1" max="1" chance="7.455" /> <!-- Branch of Life -->
 				<item id="101" min="1" max="1" chance="7.434" /> <!-- Scroll of Wisdom -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="955" min="1" max="1" chance="48.86" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 		</dropLists>
@@ -1077,12 +1077,12 @@
 				<item id="912" min="1" max="1" chance="27.74" /> <!-- Near Forest Necklace -->
 				<item id="47" min="1" max="3" chance="17.51" /> <!-- Helmet -->
 				<item id="58" min="1" max="3" chance="16.58" /> <!-- Mithril Breastplate -->
-				<item id="393" min="1" max="3" chance="16.53" /> <!-- Scroll of Wisdom -->
+				<item id="393" min="1" max="3" chance="16.53" /> <!-- Mithril Banded Mail -->
 				<item id="59" min="1" max="3" chance="16.49" /> <!-- Mithril Gaiters -->
 				<item id="415" min="1" max="3" chance="16.16" /> <!-- Mithril Banded Gaiters -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1207,7 +1207,7 @@
 		<dropLists>
 			<drop>
 				<item id="193" min="1" max="1" chance="1.957" /> <!-- Stick of Faith -->
-				<item id="72" min="1" max="1" chance="1.95" /> <!-- StormBringer -->
+				<item id="72" min="1" max="1" chance="1.95" /> <!-- Stormbringer -->
 				<item id="160" min="1" max="1" chance="1.946" /> <!-- Battle Axe -->
 				<item id="89" min="1" max="1" chance="1.919" /> <!-- Big Hammer -->
 				<item id="173" min="1" max="1" chance="1.919" /> <!-- Skull Graver -->
@@ -1217,12 +1217,12 @@
 				<item id="298" min="1" max="1" chance="1.875" /> <!-- Orcish Glaive -->
 				<item id="302" min="1" max="1" chance="1.875" /> <!-- Body Slasher -->
 				<item id="71" min="1" max="1" chance="1.87" /> <!-- Flamberge -->
-				<item id="191" min="1" max="1" chance="1.841" /> <!-- Heavy Doom Hammer	 -->	
+				<item id="191" min="1" max="1" chance="1.841" /> <!-- Heavy Doom Hammer -->
 				<item id="281" min="1" max="1" chance="1.829" /> <!-- Crystallized Ice Bow -->
 				<item id="161" min="1" max="1" chance="1.826" /> <!-- Silver Axe -->
-				<item id="226" min="1" max="1" chance="1.82" /> <!-- Cursed Dagger	-->
+				<item id="226" min="1" max="1" chance="1.82" /> <!-- Cursed Dagger -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="7" max="21" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="7" max="21" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="31.24" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -2195,7 +2195,7 @@
 				<item id="96" min="1" max="1" chance="1.907" /> <!-- Scythe -->
 				<item id="302" min="1" max="1" chance="1.909" /> <!-- Body Slasher -->
 				<item id="192" min="1" max="1" chance="1.879" /> <!-- Crystal Staff -->
-				<item id="72" min="1" max="1" chance="1.878" /> <!-- StormBringer -->
+				<item id="72" min="1" max="1" chance="1.878" /> <!-- Stormbringer -->
 				<item id="298" min="1" max="1" chance="1.856" /> <!-- Orcish Glaive -->
 				<item id="263" min="1" max="1" chance="1.848" /> <!-- Chakram -->
 				<item id="232" min="1" max="1" chance="1.847" /> <!-- Dark Elven Dagger -->
@@ -2347,7 +2347,7 @@
 				<item id="263" min="1" max="1" chance="2.508" /> <!-- Chakram -->
 				<item id="161" min="1" max="1" chance="2.507" /> <!-- Silver Axe -->
 				<item id="173" min="1" max="1" chance="2.499" /> <!-- Skull Graver -->
-				<item id="72" min="1" max="1" chance="2.498" /> <!-- StormBringer -->
+				<item id="72" min="1" max="1" chance="2.498" /> <!-- Stormbringer -->
 				<item id="89" min="1" max="1" chance="2.485" /> <!-- Big Hammer -->
 				<item id="232" min="1" max="1" chance="2.478" /> <!-- Dark Elven Dagger -->
 				<item id="193" min="1" max="1" chance="2.474" /> <!-- Stick of Faith -->
@@ -2945,7 +2945,7 @@
 				<item id="223" min="1" max="1" chance="6.344" /> <!-- Kukuri -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3171,7 +3171,7 @@
 				<item id="226" min="1" max="1" chance="1.067" /> <!-- Cursed Dagger -->
 				<item id="193" min="1" max="1" chance="1.066" /> <!-- Stick of Faith -->
 				<item id="96" min="1" max="1" chance="1.058" /> <!-- Scythe -->
-				<item id="72" min="1" max="1" chance="1.052" /> <!-- StormBringer -->
+				<item id="72" min="1" max="1" chance="1.052" /> <!-- Stormbringer -->
 				<item id="161" min="1" max="1" chance="1.049" /> <!-- Silver Axe -->
 				<item id="298" min="1" max="1" chance="1.042" /> <!-- Orcish Glaive -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
@@ -3707,12 +3707,12 @@
 				<item id="912" min="1" max="1" chance="27.74" /> <!-- Near Forest Necklace -->
 				<item id="47" min="1" max="3" chance="17.51" /> <!-- Helmet -->
 				<item id="58" min="1" max="3" chance="16.58" /> <!-- Mithril Breastplate -->
-				<item id="393" min="1" max="3" chance="16.53" /> <!-- Scroll of Wisdom -->
+				<item id="393" min="1" max="3" chance="16.53" /> <!-- Mithril Banded Mail -->
 				<item id="59" min="1" max="3" chance="16.49" /> <!-- Mithril Gaiters -->
 				<item id="415" min="1" max="3" chance="16.16" /> <!-- Mithril Banded Gaiters -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4130,7 +4130,7 @@
 				<item id="630" min="1" max="3" chance="24" /> <!-- Square Shield -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="6" max="17" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="6" max="17" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4201,7 +4201,7 @@
 				<item id="77" min="1" max="1" chance="1.294" /> <!-- Tsurugi -->
 				<item id="162" min="1" max="1" chance="1.291" /> <!-- War Axe -->
 				<item id="76" min="1" max="1" chance="1.282" /> <!-- Sword of Delusion -->
-				<item id="301" min="1" max="1" chance="1.277" /> <!-- Scorpion -->
+				<item id="301" min="1" max="1" chance="1.277" /> <!-- scorpion -->
 				<item id="202" min="1" max="1" chance="1.276" /> <!-- Mace of Underworld -->
 				<item id="203" min="1" max="1" chance="1.266" /> <!-- Pa'agrio Axe -->
 				<item id="201" min="1" max="1" chance="1.249" /> <!-- Club of Nature -->
@@ -4622,7 +4622,7 @@
 				<item id="47" min="1" max="3" chance="18.39" /> <!-- Helmet -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23300" level="98" type="L2Monster" name="Commander of Operations">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -37,7 +37,7 @@
 				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
+				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -92,7 +92,7 @@
 				<item id="57" min="1683" max="3926" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 				<item id="35308" min="1" max="1" chance="0.03" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35432" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35432" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40206" min="1" max="1" chance="11.8" /> <!-- Specter Fragment -->
@@ -240,13 +240,13 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes -->
+				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes - Robe -->
 				<item id="57" min="1883" max="4395" chance="20" /> <!-- Adena -->
 				<item id="35322" min="1" max="1" chance="0.075" /> <!-- Seraph Shoe Ingredient -->
 				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
 				<item id="9552" min="1" max="1" chance="0.0075" /> <!-- Fire Crystal -->
 				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
-				<item id="35446" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35446" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="9554" min="1" max="1" chance="0.075" /> <!-- Earth Crystal -->
@@ -891,7 +891,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Amaranthine Retributer -->
 				<item id="57" min="33741" max="78752" chance="70" /> <!-- Adena -->
 				<item id="36862" min="1" max="1" chance="0.03" /> <!-- Recipe: Quality Leather - Upgrade -->
 				<item id="36879" min="1" max="1" chance="0.003" /> <!-- Recipe: Exquisite Fiber - Upgrade -->
@@ -981,7 +981,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shaper -->
 				<item id="57" min="30864" max="72036" chance="70" /> <!-- Adena -->
 				<item id="36878" min="1" max="1" chance="0.03" /> <!-- Recipe: Quality Fiber - Upgrade -->
 				<item id="36900" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Combination -->
@@ -1028,7 +1028,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shaper -->
 				<item id="57" min="25368" max="59208" chance="70" /> <!-- Adena -->
 				<item id="36920" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
 				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
@@ -1072,7 +1072,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
+				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="30595" max="71408" chance="70" /> <!-- Adena -->
 				<item id="36928" min="1" max="1" chance="0.003" /> <!-- Recipe: Armor Fragment (High-grade) - Upgrade -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
@@ -1116,7 +1116,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
+				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Amaranthine Fighter -->
 				<item id="57" min="39868" max="93051" chance="70" /> <!-- Adena -->
 				<item id="36936" min="1" max="1" chance="0.03" /> <!-- Recipe: Accessory Gem (High-grade) - Upgrade -->
 				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
@@ -1161,7 +1161,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17419" min="1" max="1" chance="0.0075" /> <!-- Helios Avenger -->
+				<item id="17419" min="1" max="1" chance="0.0075" /> <!-- Amaranthine Avenger -->
 				<item id="57" min="44878" max="104745" chance="70" /> <!-- Adena -->
 				<item id="36944" min="1" max="1" chance="0.0075" /> <!-- Recipe: Greater Synthetic Cokes - Upgrade -->
 				<item id="36929" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Top-grade) - Upgrade -->
@@ -1205,7 +1205,7 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
+				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Amaranthine Avenger -->
 				<item id="57" min="26383" max="61577" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="3.713" /> <!-- Quality Leather -->
 				<item id="36937" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem (Top-grade) - Upgrade -->
@@ -1531,14 +1531,14 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Cutter -->
 				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
 				<item id="36863" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="14.36" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="14.36" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1586,7 +1586,7 @@
 				<item id="36879" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Fiber - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="14.75" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="14.75" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1631,7 +1631,7 @@
 				<item id="36899" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="14.47" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="14.47" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1671,13 +1671,13 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Shooter -->
 				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<item id="36900" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Combination -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="14.63" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="14.63" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1717,13 +1717,13 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Caster -->
 				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36878" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Fiber - Upgrade -->
 				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="15.06" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="15.06" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1763,14 +1763,14 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Buster -->
 				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="35567" min="1" max="1" chance="0.0009" /> <!-- Dark Eternal Enhancement Stone -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
 				<item id="36920" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="15.45" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="15.45" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1810,13 +1810,13 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Stormer -->
 				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
 				<item id="36928" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (High-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="14.81" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="14.81" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1852,13 +1852,13 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Stormer -->
 				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36936" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (High-grade) - Upgrade -->
 				<item id="36929" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Top-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="15.3" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="15.3" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -1901,8 +1901,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
-				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
+				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
 				<item id="57" min="1218" max="2842" chance="20" /> <!-- Adena -->
 				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1910,8 +1910,8 @@
 				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
 				<item id="36876" min="1" max="1" chance="0.003" /> <!-- Recipe: Metallic Fiber - Upgrade -->
 				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
-				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -1965,9 +1965,9 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
-				<item id="17312" min="1" max="1" chance="0.0075" /> <!-- Immortal Leather Leggings -->
-				<item id="17316" min="1" max="1" chance="0.0075" /> <!-- Immortal Tunic -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17312" min="1" max="1" chance="0.0075" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17316" min="1" max="1" chance="0.0075" /> <!-- Immortal Tunic - Robe -->
 				<item id="57" min="1439" max="3357" chance="20" /> <!-- Adena -->
 				<item id="36810" min="1" max="1" chance="3.755" /> <!-- Immortal Shield Ingredient -->
 				<item id="36517" min="1" max="1" chance="2.58" /> <!-- Leather -->
@@ -3183,8 +3183,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Buster -->
 				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
@@ -3227,8 +3227,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Buster -->
 				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>

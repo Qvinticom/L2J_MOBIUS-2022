@@ -511,7 +511,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17025" name="PC Point Pack (700) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing 700 PC Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
+		<!-- Wrapped Pack containing 700 PA Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -529,7 +529,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="14559" min="1" max="1" chance="100" /> <!-- Player Commendation Points -->
+			<item id="14559" min="1" max="1" chance="100" /> <!-- PA Points -->
 		</capsuled_items>
 	</item>
 	<item id="17026" name="First Mate Hat Pack (Event)" type="EtcItem">
@@ -948,7 +948,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17046" name="Confession Box" type="EtcItem">
-		<!-- Contains a Talisman for Stun/Sleep/Hold/Paralysis Resistance. -->
+		<!-- Contains a Talisman for Stun/ Sleep/ Hold/ Paralysis Resistance. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -1046,7 +1046,7 @@
 		</stats>
 	</item>
 	<item id="17051" name="Talisman - STR" type="Armor">
-		<!-- STR + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- STR +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1068,7 +1068,7 @@
 		</skills>
 	</item>
 	<item id="17052" name="Talisman - DEX" type="Armor">
-		<!-- DEX + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- DEX +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1090,7 +1090,7 @@
 		</skills>
 	</item>
 	<item id="17053" name="Talisman - CON" type="Armor">
-		<!-- CON + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- CON +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1112,7 +1112,7 @@
 		</skills>
 	</item>
 	<item id="17054" name="Talisman - WIT" type="Armor">
-		<!-- WIT + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- WIT +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1134,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="17055" name="Talisman - INT" type="Armor">
-		<!-- INT + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- INT +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1156,7 +1156,7 @@
 		</skills>
 	</item>
 	<item id="17056" name="Talisman - MEN" type="Armor">
-		<!-- MEN + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- MEN +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1178,7 +1178,7 @@
 		</skills>
 	</item>
 	<item id="17057" name="Talisman - Stun Resistance" type="Armor">
-		<!-- Stun Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Stun Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1200,7 +1200,7 @@
 		</skills>
 	</item>
 	<item id="17058" name="Talisman - Sleep Resistance" type="Armor">
-		<!-- Sleep Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Sleep Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1222,7 +1222,7 @@
 		</skills>
 	</item>
 	<item id="17059" name="Talisman - Hold Resistance" type="Armor">
-		<!-- Hold Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Hold Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1244,7 +1244,7 @@
 		</skills>
 	</item>
 	<item id="17060" name="Talisman - Paralysis Resistance" type="Armor">
-		<!-- Paralysis resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Paralysis resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1348,7 +1348,7 @@
 		</skills>
 	</item>
 	<item id="17066" name="Event - Save the White Tiger Event Pack" type="EtcItem">
-		<!-- Event pack that can be obtained 1 time per account every 12 hours. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and Cupid's Fatigue Relief Potion that are needed for the event. -->
+		<!-- Event pack that can be obtained 1 time per account every 12 hours. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and "Cupid's Fatigue Relief Potion" that are needed for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

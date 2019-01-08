@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21400" toLevel="1" name="Mysterious Lindvior Defense Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. and M. Def. + 20% when fighting Lindvior. -->
 		<icon>BranchSys3.icon1.g_premium_hena_boss_lindvior</icon>
 		<operateType>P</operateType>
@@ -226,12 +225,10 @@
 		</effects>
 	</skill>
 	<skill id="21408" toLevel="1" name="Mysterious Dye Cancellation">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="21409" toLevel="1" name="Release Agathion's Seal - Three-headed Dragon">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -245,12 +242,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1575</npcId>
+				<npcId>1575</npcId> <!-- Three-headed Dragon -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="21410" toLevel="1" name="Cloak of the Chosen: Blessed Escape">
-		<!-- Updated to Helios -->
 		<!-- Can use Blessed Escape every hour. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -273,17 +269,14 @@
 		</effects>
 	</skill>
 	<skill id="21411" toLevel="1" name="Halloween Outfit Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="21412" toLevel="1" name="Halloween Weapon Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="21413" toLevel="1" name="Mysterious Halloween Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mysterious potion that changes the appearance into that of a Halloween weapon and outfit for 1 hour. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
@@ -292,7 +285,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="21414" toLevel="1" name="Halloween: Outfit">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Decreases Damage by 3%, LUC +1, and all Attribute Resistance + 10. -->
 		<icon>[icon.ev_wp_halloween]</icon>
 		<operateType>P</operateType>
@@ -333,7 +325,6 @@
 		</effects>
 	</skill>
 	<skill id="21415" toLevel="1" name="Halloween: Weapon">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Increases Damage by 3%, LUC +1, and Attack Attribute + 30. -->
 		<icon>[icon.ev_wp_halloween]</icon>
 		<operateType>P</operateType>
@@ -933,109 +924,91 @@
 		</effects>
 	</skill>
 	<skill id="21458" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Low-grade / Option 15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21459" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mid-grade / Option 15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21460" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- High-grade / Option 15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21461" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Low-grade / Option 16. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21462" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mid-grade / Option 16. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21463" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- High-grade / Option 16. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21464" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Low-grade / Option 17. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21465" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mid-grade / Option 17. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21466" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- High-grade / Option 17. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21467" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Low-grade / Option 18. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21468" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mid-grade / Option 18. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21469" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- High-grade / Option 18. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21470" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Low-grade / Option 19. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21471" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mid-grade / Option 19. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21472" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- High-grade / Option 19. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21473" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Low-grade / Option 20. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21474" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mid-grade / Option 20. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="21475" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- High-grade / Option 20. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
@@ -1087,10 +1060,7 @@
 		</effects>
 	</skill>
 	<skill id="21477" toLevel="4" name="Power of Abundance - Lv. 1">
-		<!-- Level 1 : Increases P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15% momentarily with the power of Talisman. -->
-		<!-- Level 2 : Increases P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16% momentarily with the power of Talisman. -->
-		<!-- Level 3 : Increases P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17% momentarily with the power of Talisman. -->
-		<!-- Level 4 : Increases P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20% momentarily with the power of Talisman. -->
+		<!-- Increases P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15% momentarily with the power of Talisman. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_therich_i00</value>
 			<value level="2">BranchIcon.Icon.g_therich_i01</value>

@@ -92,7 +92,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38913" name="Secret Fragment 7" additionalName="The" type="EtcItem">
-		<!-- Does your soul sing with sorrow in this chaotic time? Lend us your strength, and we will certainly win.. Forgive us, but we cannot hold your bloodied hand. The wind is indiscriminate, and does not favor one side over another. -->
+		<!-- Does your soul sing with sorrow in this chaotic time? Lend us your strength, and we will certainly win.. "Forgive us, but we cannot hold your bloodied hand. The wind is indiscriminate, and does not favor one side over another." -->
 		<set name="icon" val="icon.ev_ertheia7" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -299,7 +299,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38855" min="1" max="1" chance="100" /> <!-- Ruby lvl 1 -->
+			<item id="38855" min="1" max="1" chance="100" /> <!-- Ruby - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38933" name="La Vie En Rose's Sapphire Chest" type="EtcItem">
@@ -316,7 +316,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38927" min="1" max="1" chance="100" /> <!-- Sapphire lvl 1 -->
+			<item id="38927" min="1" max="1" chance="100" /> <!-- Sapphire - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38934" name="La Vie En Rose's Topaz Chest" type="EtcItem">
@@ -333,7 +333,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38850" min="1" max="1" chance="100" /> <!-- Topaz lvl 1 -->
+			<item id="38850" min="1" max="1" chance="100" /> <!-- Topaz - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38935" name="La Vie En Rose's Opal Chest" type="EtcItem">
@@ -350,7 +350,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38875" min="1" max="1" chance="100" /> <!-- Opal lvl 1 -->
+			<item id="38875" min="1" max="1" chance="100" /> <!-- Opal - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38936" name="La Vie En Rose's Obsidian Chest" type="EtcItem">
@@ -367,7 +367,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38870" min="1" max="1" chance="100" /> <!-- Obsidian lvl 1 -->
+			<item id="38870" min="1" max="1" chance="100" /> <!-- Obsidian - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38937" name="La Vie En Rose's Diamond Chest" type="EtcItem">
@@ -384,7 +384,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38890" min="1" max="1" chance="100" /> <!-- Diamond lvl 1 -->
+			<item id="38890" min="1" max="1" chance="100" /> <!-- Diamond - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38938" name="La Vie En Rose's Emerald Chest" type="EtcItem">
@@ -401,7 +401,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38880" min="1" max="1" chance="100" /> <!-- Emerald lvl 1 -->
+			<item id="38880" min="1" max="1" chance="100" /> <!-- Emerald - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38939" name="La Vie En Rose's Aquamarine Chest" type="EtcItem">
@@ -418,7 +418,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38885" min="1" max="1" chance="100" /> <!-- Aquamarine lvl 1 -->
+			<item id="38885" min="1" max="1" chance="100" /> <!-- Aquamarine - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38940" name="La Vie En Rose's Pearl Chest" type="EtcItem">
@@ -435,7 +435,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38895" min="1" max="1" chance="100" /> <!-- Pearl lvl 1 -->
+			<item id="38895" min="1" max="1" chance="100" /> <!-- Pearl - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="38941" name="La Vie En Rose's Jewelry Box" type="EtcItem">
@@ -469,7 +469,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38941" min="10" max="10" chance="100" /> <!-- Pearl lvl 1 -->
+			<item id="38941" min="10" max="10" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
 		</capsuled_items>
 	</item>
 	<item id="38943" name="La Vie En Rose's Noble Brooch Chest" type="EtcItem">
@@ -486,7 +486,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38767" min="1" max="1" chance="100" /> 
+			<item id="38767" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch -->
 		</capsuled_items>
 	</item>
 	<item id="38944" name="La Vie En Rose's Brilliant Brooch Chest" type="EtcItem">
@@ -503,7 +503,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38768" min="1" max="1" chance="100" />
+			<item id="38768" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Brilliant Brooch -->
 		</capsuled_items>
 	</item>
 	<item id="38945" name="La Vie En Rose's Noble Brooch Pack" type="EtcItem">
@@ -520,8 +520,8 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38941" min="30" max="30" chance="100" />
-			<item id="38943" min="1" max="1" chance="100" />
+			<item id="38941" min="30" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
 		</capsuled_items>
 	</item>
 	<item id="38946" name="La Vie En Rose's Brilliant Brooch Pack" type="EtcItem">
@@ -538,8 +538,8 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38941" min="55" max="30" chance="100" />
-			<item id="38943" min="1" max="1" chance="100" />
+			<item id="38941" min="55" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
 		</capsuled_items>
 	</item>
 	<item id="38947" name="10th Anniversary Time Capsule" type="EtcItem">
@@ -647,7 +647,7 @@
 		</stats>
 	</item>
 	<item id="38954" name="10th Anniversary Cake" type="EtcItem">
-		<!-- Lineage II 10th Anniversary item. When used, recovers 5000 HP and the remaining power is recovered as CP. No duration. -->
+		<!-- Lineage II 10th Anniversary item. When used, recovers 5000 HP and the remaining power is recovered as CP. No cooldown. -->
 		<set name="icon" val="icon.ev_10th_present3" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -658,7 +658,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38955" name="Formal Wear Appearance Stone (100-day)" type="EtcItem">
-		<!-- Appearance stone that changes an armor's appearance for 100 days. Can be used as a top or a one piece. It modifies everything, making the appearance of all armor into that of formalwear. -->
+		<!-- Appearance stone that changes an armor's appearance for 100 days. Tops and one-pieces only. It modifies everything, making the appearance of all armor into that of formalwear. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -670,7 +670,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38956" name="NC Dinos Appearance Stone (100-day)" type="EtcItem">
-		<!-- Appearance stone that changes an armor's appearance in an NPC Dinos Uniform for 100 days. Can be used as a top or a one piece. It modifies everything, making the appearance of all armor into that of an NC Dinos Uniform. -->
+		<!-- Appearance stone that changes an armor's appearance in an NPC Dinos Uniform for 100 days. Can be used as a full armor or a one piece. It modifies everything, making the appearance of all armor into that of an NC Dinos Uniform. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -718,7 +718,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="38960" name="+ 4 Amaranthine Shaper Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Shaper. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Shaper. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -730,7 +730,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38961" name="+ 4 Amaranthine Cutter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Cutter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Cutter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -742,7 +742,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38962" name="+ 4 Amaranthine Slasher Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Slasher. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Slasher Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -754,7 +754,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38963" name="+ 4 Amaranthine Avenger Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Avenger. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Avenger. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -766,7 +766,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38964" name="+ 4 Amaranthine Fighter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Fighter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Fighter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -778,7 +778,7 @@
 		<set name="weight" val="1550" />
 	</item>
 	<item id="38965" name="+ 4 Amaranthine Stormer Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Stormer. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Stormer. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -790,7 +790,7 @@
 		<set name="weight" val="2010" />
 	</item>
 	<item id="38966" name="+ 4 Amaranthine Thrower Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Thrower. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Thrower. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +802,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38967" name="+ 4 Amaranthine Shooter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Shooter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Shooter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -813,7 +813,7 @@
 		<set name="weight" val="1580" />
 	</item>
 	<item id="38968" name="+ 4 Amaranthine Buster Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Buster. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Buster. Will be deleted after the event. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -825,7 +825,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38969" name="+ 4 Amaranthine Caster Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Caster. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Caster. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -837,7 +837,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38970" name="+ 4 Amaranthine Retributer Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Retributer. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Retributer. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -849,7 +849,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38971" name="+ 4 Amaranthine Dualsword Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Dualsword. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Dual Sword. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -861,7 +861,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38972" name="+ 4 Amaranthine Dual Dagger Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Dual Dagger. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Dual Dagger. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -873,7 +873,7 @@
 		<set name="weight" val="2050" />
 	</item>
 	<item id="38973" name="+ 4 Amaranthine Dual Blunt Weapon Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 4 Amaranthine Dual Blunt Weapon. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Dual Blunt Weapon. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -886,7 +886,7 @@
 		<set name="spiritshots" val="1" />
 	</item>
 	<item id="38974" name="+ 5 Amaranthine Shaper Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Shaper. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Shaper. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -898,7 +898,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38975" name="+ 5 Amaranthine Cutter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Cutter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Cutter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -910,7 +910,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38976" name="+ 5 Amaranthine Slasher Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Slasher. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Slasher Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -922,7 +922,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38977" name="+ 5 Amaranthine Avenger Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Avenger. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Avenger. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -934,7 +934,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38978" name="+ 5 Amaranthine Fighter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Fighter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Fighter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -946,7 +946,7 @@
 		<set name="weight" val="1550" />
 	</item>
 	<item id="38979" name="+ 5 Amaranthine Stormer Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Stormer. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Stormer. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -958,7 +958,7 @@
 		<set name="weight" val="2010" />
 	</item>
 	<item id="38980" name="+ 5 Amaranthine Thrower Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Thrower. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Thrower. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -970,7 +970,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38981" name="+ 5 Amaranthine Shooter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Shooter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Shooter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +981,7 @@
 		<set name="weight" val="1580" />
 	</item>
 	<item id="38982" name="+ 5 Amaranthine Buster Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Buster. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Buster. Will be deleted after the event. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -993,7 +993,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38983" name="+ 5 Amaranthine Caster Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Caster. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Caster. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1005,7 +1005,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38984" name="+ 5 Amaranthine Retributer Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Retributer. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Retributer. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1017,7 +1017,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38985" name="+ 5 Amaranthine Dualsword Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Dualsword. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Dual Sword. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -1029,7 +1029,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38986" name="+ 5 Amaranthine Dual Dagger Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Dual Dagger. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Dual Dagger. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1041,7 +1041,7 @@
 		<set name="weight" val="2050" />
 	</item>
 	<item id="38987" name="+ 5 Amaranthine Dual Blunt Weapon Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 5 Amaranthine Dual Blunt Weapon. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Dual Blunt Weapon. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1054,7 +1054,7 @@
 		<set name="spiritshots" val="1" />
 	</item>
 	<item id="38988" name="+ 6 Amaranthine Shaper Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Shaper. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Shaper. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1066,7 +1066,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38989" name="+ 6 Amaranthine Cutter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Cutter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Cutter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1078,7 +1078,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38990" name="+ 6 Amaranthine Slasher Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Slasher. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Slasher Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38991" name="+ 6 Amaranthine Avenger Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Avenger. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Avenger. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1102,7 +1102,7 @@
 		<set name="weight" val="1740" />
 	</item>
 	<item id="38992" name="+ 6 Amaranthine Fighter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Fighter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Fighter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1114,7 +1114,7 @@
 		<set name="weight" val="1550" />
 	</item>
 	<item id="38993" name="+ 6 Amaranthine Stormer Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Stormer. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Stormer. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1126,7 +1126,7 @@
 		<set name="weight" val="2010" />
 	</item>
 	<item id="38994" name="+ 6 Amaranthine Thrower Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Thrower. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Thrower. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1138,7 +1138,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38995" name="+ 6 Amaranthine Shooter Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Shooter. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Shooter. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1149,7 +1149,7 @@
 		<set name="weight" val="1580" />
 	</item>
 	<item id="38996" name="+ 6 Amaranthine Buster Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Buster. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Buster. Will be deleted after the event. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1161,7 +1161,7 @@
 		<set name="weight" val="1520" />
 	</item>
 	<item id="38997" name="+ 6 Amaranthine Caster Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Caster. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Caster. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1173,7 +1173,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38998" name="+ 6 Amaranthine Retributer Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Retributer. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Retributer. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1185,7 +1185,7 @@
 		<set name="weight" val="1080" />
 	</item>
 	<item id="38999" name="+ 6 Amaranthine Dualsword Coupon" type="Weapon">
-		<!-- Bring this to the Master Yogi's Staff manager Goddess of Destruction to exchange it for a + 6 Amaranthine Dualsword. Deleted after event. -->
+		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Dual Sword. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20738" level="13" type="L2Monster" name="Kobold Looter Bepook">
 		<!-- Confirmed CT2.5 -->
@@ -31,16 +31,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="1" /> <!--Stun -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -76,15 +76,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!--HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="4" /> <!--Animals -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>0.5</sNpcPropHpRate>
@@ -756,15 +756,15 @@
 				<item id="2453" min="1" max="1" chance="0.03" /> <!-- Chain Gloves -->
 				<item id="2452" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gloves -->
 				<item id="2454" min="1" max="1" chance="0.03" /> <!-- Karmian Gloves -->
-				<item id="1958" min="1" max="1" chance="1.037" /> <!-- Reinforced Mithril Boots Design -->
-				<item id="2937" min="1" max="1" chance="1.0291" /> <!-- Chain Boots Part -->
-				<item id="2938" min="1" max="1" chance="1.0289" /> <!-- Karmian Boots Fabric -->
-				<item id="2939" min="1" max="1" chance="1.0289" /> <!-- Plate Leather Boots Lining -->
-				<item id="2940" min="1" max="1" chance="1.0289" /> <!-- Dwarven Chain Boots Part -->
+				<item id="1958" min="1" max="1" chance="1.037" /> <!-- Reinforced Mithril Boot Design -->
+				<item id="2937" min="1" max="1" chance="1.0291" /> <!-- Chain Boot Fragment -->
+				<item id="2938" min="1" max="1" chance="1.0289" /> <!-- Karmian Boot Fabric -->
+				<item id="2939" min="1" max="1" chance="1.0289" /> <!-- Plated Leather Boot Lining -->
+				<item id="2940" min="1" max="1" chance="1.0289" /> <!-- Dwarven Chain Boot Fragment -->
 				<item id="2941" min="1" max="1" chance="1.0289" /> <!-- Boots of Seal Pattern -->
-				<item id="2942" min="1" max="1" chance="1.0289" /> <!-- Reinforced Mithril Gloves Design -->
-				<item id="2943" min="1" max="1" chance="1.0289" /> <!-- Chain Gloves Design -->
-				<item id="2944" min="1" max="1" chance="1.0289" /> <!-- Karmian Gloves Fabric -->
+				<item id="2942" min="1" max="1" chance="1.0289" /> <!-- Reinforced Mithril Glove Design -->
+				<item id="2943" min="1" max="1" chance="1.0289" /> <!-- Chain Glove Design -->
+				<item id="2944" min="1" max="1" chance="1.0289" /> <!-- Karmian Glove Fabric -->
 				<item id="2216" min="1" max="1" chance="1.08" /> <!-- Recipe: Great Helmet -->
 				<item id="1894" min="1" max="1" chance="0.918" /> <!-- Crafted Leather -->
 				<item id="2321" min="1" max="1" chance="0.0911" /> <!-- Recipe: Stiletto -->
@@ -772,7 +772,7 @@
 			</drop>
 			<spoil>
 				<item id="2161" min="1" max="1" chance="42.3261" /> <!-- Recipe: Aquastone Ring -->
-				<item id="1949" min="1" max="1" chance="48.6561" /> <!-- Mithril Gloves Design -->
+				<item id="1949" min="1" max="1" chance="48.6561" /> <!-- Mithril Glove Design -->
 				<item id="1894" min="1" max="1" chance="15.2968" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -943,10 +943,10 @@
 				<item id="952" min="1" max="1" chance="1.904" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="2092" min="1" max="1" chance="1.86" /> <!-- Homunkulus' Sword Blade -->
 				<item id="2232" min="1" max="1" chance="0.75" /> <!-- Recipe: Drake Leather Armor -->
-				<item id="4555" min="1" max="1" chance="0.75" /> <!-- Greater Dye of CON (Con  1 Str -1) -->
-				<item id="4556" min="1" max="1" chance="0.75" /> <!-- Greater Dye of CON (Con  1 DEX -1) -->
-				<item id="4561" min="1" max="1" chance="0.75" /> <!-- Greater Dye of MEN (Men  1 Int -1) -->
-				<item id="4562" min="1" max="1" chance="0.75" /> <!-- Greater Dye of MEN (Men  1 Wit -1) -->
+				<item id="4555" min="1" max="1" chance="0.75" /> <!-- Greater Dye of CON <Con +1 Str -1> - 2nd Class Transfer -->
+				<item id="4556" min="1" max="1" chance="0.75" /> <!-- Greater Dye of CON <Con +1 DEX -1> - 2nd Class Transfer -->
+				<item id="4561" min="1" max="1" chance="0.75" /> <!-- Greater Dye of MEN <Men +1 Int -1> - 2nd Class Transfer -->
+				<item id="4562" min="1" max="1" chance="0.75" /> <!-- Greater Dye of MEN <Men +1 Wit -1> - 2nd Class Transfer -->
 				<item id="951" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<spoil>
@@ -1028,10 +1028,10 @@
 				<item id="4438" min="1" max="1" chance="0.75" /> <!-- Knuckle Duster Edge -->
 				<item id="2227" min="1" max="1" chance="0.75" /> <!-- Recipe: Forgotten Boots -->
 				<item id="2224" min="1" max="1" chance="0.3" /> <!-- Recipe: Demon's Tunic -->
-				<item id="4559" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int  1 Men -1) -->
-				<item id="4560" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int  1 Wit -1) -->
-				<item id="4563" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit  1 Int -1) -->
-				<item id="4564" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit  1 Men -1) -->
+				<item id="4559" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +1 Men -1> - 2nd Class Transfer -->
+				<item id="4560" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +1 Wit -1> - 2nd Class Transfer -->
+				<item id="4563" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +1 Int -1> - 2nd Class Transfer -->
+				<item id="4564" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +1 Men -1> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2951" min="1" max="1" chance="50.11" /> <!-- Rind Leather Glove Design -->
@@ -1102,10 +1102,10 @@
 				<item id="1867" min="1" max="1" chance="7.438" /> <!-- Animal Skin -->
 				<item id="1865" min="1" max="1" chance="5.596" /> <!-- Varnish -->
 				<item id="1866" min="1" max="1" chance="3.753" /> <!-- Suede -->
-				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR  1 CON -1) -->
-				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR  1 DEX -1) -->
-				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men  1 Int -1) -->
-				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men  1 Wit -1) -->
+				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR <STR +1 CON -1> - 1st Class Transfer -->
+				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR <STR +1 DEX -1> - 1st Class Transfer -->
+				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN <Men +1 Int -1> - 1st Class Transfer -->
+				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN <Men +1 Wit -1> - 1st Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1900" min="1" max="1" chance="16.88" /> <!-- Necklace Chain of Magic -->
@@ -1171,7 +1171,7 @@
 					<item id="1873" min="1" max="1" chance="1.75" /> <!-- Silver Nugget -->
 					<item id="1868" min="1" max="1" chance="17.5" /> <!-- Thread -->
 					<item id="1876" min="1" max="1" chance="1.75" /> <!-- Mithril Ore -->
-					<item id="2152" min="1" max="1" chance="1.539" /> <!-- Recipe: Enchanted Necklace -->
+					<item id="2152" min="1" max="1" chance="1.539" /> <!-- Recipe: Magic Necklace -->
 					<item id="6035" min="1" max="1" chance="0.729" /> <!-- Magic Haste Potion -->
 			</drop>
 			<spoil>
@@ -1600,8 +1600,8 @@
 				<item id="4119" min="1" max="1" chance="2.029" /> <!-- Demon's Dagger Edge -->
 				<item id="4964" min="1" max="1" chance="0.075" /> <!-- Recipe: Heavy War Axe (60%) -->
 				<item id="4963" min="1" max="1" chance="0.075" /> <!-- Recipe: Great Sword (60%) -->
-				<item id="4619" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int  4 Men -4) -->
-				<item id="4615" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con  4 Str -4) -->
+				<item id="4619" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +4 Men -4> - 2nd Class Transfer -->
+				<item id="4615" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con +4 Str -4> - 2nd Class Transfer -->
 				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 				<item id="5007" min="1" max="1" chance="0.03" /> <!-- Recipe: Bow of Peril (60%) -->
 			</drop>
@@ -1641,16 +1641,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="4" /> <!--NPC Strike -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4032" level="4" /> <!-- NPC Strike -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1715,16 +1715,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="3" /> <!--NPC Heal -->
-			<skill id="4066" level="3" /> <!--NPC Twister -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4065" level="3" /> <!-- NPC Heal -->
+			<skill id="4066" level="3" /> <!-- NPC Twister -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1787,16 +1787,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4030" level="2" /> <!--NPC Clan Might -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4030" level="2" /> <!-- NPC Clan Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1855,15 +1855,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="9" /> <!--Bows -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2166,13 +2166,13 @@
 				<item id="1872" min="1" max="1" chance="16.835" /> <!-- Animal Bone -->
 				<item id="1882" min="1" max="1" chance="2.812" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="0.444" /> <!-- Crafted Leather -->
-				<item id="1805" min="1" max="1" chance="0.045" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="1805" min="1" max="1" chance="0.045" /> <!-- Recipe: Soulshot (C-grade) -->
 				<item id="2298" min="1" max="1" chance="0.055" /> <!-- Recipe: Stormbringer -->
-				<item id="5269" min="1" max="1" chance="0.495" /> <!-- Recipe: Greater Soulshot (C) Compressed Package(100%) -->
+				<item id="5269" min="1" max="1" chance="0.495" /> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
 			</drop>
 			<spoil>
-				<item id="1905" min="1" max="1" chance="16.7101" /> <!-- Omen Beast's Eye Earring Gemstone -->
-				<item id="1805" min="1" max="1" chance="0.5726" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="1905" min="1" max="1" chance="16.7101" /> <!-- Onyx Beast's Eye Earring Gemstone -->
+				<item id="1805" min="1" max="1" chance="0.5726" /> <!-- Recipe: Soulshot (C-grade) -->
 				<item id="1906" min="1" max="1" chance="23.6124" /> <!-- Mithril Ring Wire -->
 			</spoil>
 		</dropLists>
@@ -2209,16 +2209,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4066" level="6" /> <!--NPC Twister -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="11" /> <!--Giants -->
+			<skill id="4066" level="6" /> <!-- NPC Twister -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2430,7 +2430,7 @@
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2632,7 +2632,7 @@
 		<dropLists>
 			<drop>
 				<item id="37" min="1" max="1" chance="2.272" /> <!-- Leather Shoes -->
-				<item id="49" min="1" max="1" chance="2.188" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.188" /> <!-- Gloves -->
 				<item id="57" min="41" max="98" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="9.481" /> <!-- Leather Shoe Texture -->
 				<item id="1868" min="1" max="1" chance="6.595" /> <!-- Thread -->
@@ -3032,17 +3032,17 @@
 				<item id="317" min="1" max="1" chance="0.003" /> <!-- Tome of Blood -->
 				<item id="2030" min="1" max="1" chance="0.075" /> <!-- Tome of Blood Page -->
 				<item id="1874" min="1" max="1" chance="1.212" /> <!-- Oriharukon Ore -->
-				<item id="1878" min="1" max="1" chance="0.86" /> <!-- Braided Hemp -->
+				<item id="1878" min="1" max="1" chance="0.86" /> <!-- Durable Braid -->
 				<item id="1884" min="1" max="1" chance="1.325" /> <!-- Cord -->
-				<item id="1889" min="1" max="1" chance="0.143" /> <!-- Compound Braid -->
+				<item id="1889" min="1" max="1" chance="0.143" /> <!-- Synthetic Braid -->
 				<item id="5220" min="1" max="1" chance="0.08" /> <!-- Metal Hardener -->
-				<item id="2153" min="1" max="1" chance="0.335" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="2153" min="1" max="1" chance="0.335" /> <!-- Recipe: Tiger's Eye -->
 				<item id="2977" min="1" max="1" chance="0.288" /> <!-- Recipe: Brigandine Boots -->
 			</drop>
 			<spoil>
 				<item id="2203" min="1" max="1" chance="7.0587" /> <!-- Recipe: Reinforced Mithril Boots -->
 				<item id="1935" min="1" max="1" chance="1.81" /> <!-- Scale Mail Fragment -->
-				<item id="1900" min="1" max="1" chance="3.5448" /> <!-- Enchanted Necklace Chain -->
+				<item id="1900" min="1" max="1" chance="3.5448" /> <!-- Necklace Chain of Magic -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3102,21 +3102,21 @@
 				<item id="57" min="154" max="309" chance="70" /> <!-- Adena -->
 				<item id="83" min="1" max="1" chance="0.075" /> <!-- Sword of Magic -->
 				<item id="144" min="1" max="1" chance="0.075" /> <!-- Sword of Occult -->
-				<item id="124" min="1" max="1" chance="0.03" /> <!-- Two-Handed Sword -->
-				<item id="2026" min="1" max="1" chance="0.3" /> <!-- Two-Handed Sword Edge -->
+				<item id="124" min="1" max="1" chance="0.03" /> <!-- Two-handed Sword -->
+				<item id="2026" min="1" max="1" chance="0.3" /> <!-- Two-handed Sword Edge -->
 				<item id="127" min="1" max="1" chance="0.03" /> <!-- Crimson Sword -->
 				<item id="130" min="1" max="1" chance="0.03" /> <!-- Elven Sword -->
 				<item id="1875" min="1" max="1" chance="0.21" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="0.539" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.269" /> <!-- High-Grade Suede -->
-				<item id="5550" min="1" max="1" chance="0.05" /> <!-- Durable Metal Plate -->
+				<item id="1885" min="1" max="1" chance="0.269" /> <!-- High-grade Suede -->
+				<item id="5550" min="1" max="1" chance="0.05" /> <!-- Reinforced Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.323" /> <!-- Metallic Thread -->
 				<item id="2250" min="1" max="1" chance="0.808" /> <!-- Recipe: Bone Arrow -->
 			</drop>
 			<spoil>
 				<item id="2021" min="1" max="1" chance="0.4623" /> <!-- Spinebone Sword Blade -->
 				<item id="2184" min="1" max="1" chance="3.8461" /> <!-- Recipe: Mithril Banded Gaiters -->
-				<item id="2153" min="1" max="1" chance="5.6945" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="2153" min="1" max="1" chance="5.6945" /> <!-- Recipe: Tiger's Eye -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3175,26 +3175,26 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="149" max="298" chance="70" /> <!-- Adena -->
-				<item id="1124" min="1" max="1" chance="0.005" /> <!-- Boots of Power -->
-				<item id="1948" min="1" max="1" chance="0.15" /> <!-- Boots of Power Pattern -->
+				<item id="1124" min="1" max="1" chance="0.005" /> <!-- Boots of Strength -->
+				<item id="1948" min="1" max="1" chance="0.15" /> <!-- Boots of Strength Pattern -->
 				<item id="2424" min="1" max="1" chance="0.005" /> <!-- Manticore Skin Boots -->
 				<item id="2923" min="1" max="1" chance="0.15" /> <!-- Manticore Skin Boot Lining -->
 				<item id="2425" min="1" max="1" chance="0.005" /> <!-- Brigandine Boots -->
-				<item id="2924" min="1" max="1" chance="0.15" /> <!-- Brigandine Boots Design -->
+				<item id="2924" min="1" max="1" chance="0.15" /> <!-- Brigandine Boot Design -->
 				<item id="2426" min="1" max="1" chance="0.005" /> <!-- Elven Mithril Boots -->
-				<item id="2925" min="1" max="1" chance="0.15" /> <!-- Elven Mithril Boots Design -->
+				<item id="2925" min="1" max="1" chance="0.15" /> <!-- Elven Mithril Boot Design -->
 				<item id="606" min="1" max="1" chance="0.005" /> <!-- Rip Gauntlets -->
-				<item id="1946" min="1" max="1" chance="0.15" /> <!-- Rip Gauntlets Pattern -->
+				<item id="1946" min="1" max="1" chance="0.15" /> <!-- Rip Gauntlet Pattern -->
 				<item id="2448" min="1" max="1" chance="0.005" /> <!-- Manticore Skin Gloves -->
-				<item id="2926" min="1" max="1" chance="0.15" /> <!-- Manticore Skin Gloves Lining -->
+				<item id="2926" min="1" max="1" chance="0.15" /> <!-- Manticore Skin Glove Lining -->
 				<item id="2449" min="1" max="1" chance="0.005" /> <!-- Brigandine Gauntlets -->
-				<item id="2927" min="1" max="1" chance="0.15" /> <!-- Brigandine Gauntlets Pattern -->
-				<item id="2450" min="1" max="1" chance="0.005" /> <!-- Mithril Gloves -->
-				<item id="2928" min="1" max="1" chance="0.15" /> <!-- Mithril Gloves Design -->
+				<item id="2927" min="1" max="1" chance="0.15" /> <!-- Brigandine Gauntlet Pattern -->
+				<item id="2450" min="1" max="1" chance="0.005" /> <!-- Elven Mithril Gloves -->
+				<item id="2928" min="1" max="1" chance="0.15" /> <!-- Elven Mithril Glove Design -->
 				<item id="1875" min="1" max="1" chance="0.4146" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="0.35365" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.17683" /> <!-- High-Grade Suede -->
-				<item id="5550" min="1" max="1" chance="0.02829" /> <!-- Durable Metal Plate -->
+				<item id="1885" min="1" max="1" chance="0.17683" /> <!-- High-grade Suede -->
+				<item id="5550" min="1" max="1" chance="0.02829" /> <!-- Reinforced Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.21219" /> <!-- Metallic Thread -->
 				<item id="2185" min="1" max="1" chance="0.4177" /> <!-- Recipe: Iron Boots -->
 				<item id="2982" min="1" max="1" chance="0.27065" /> <!-- Recipe: Brigandine Shield -->
@@ -3202,7 +3202,7 @@
 			</drop>
 			<spoil>
 				<item id="2022" min="1" max="1" chance="0.55" /> <!-- Mace of Judgment Head -->
-				<item id="1933" min="1" max="1" chance="4.154" /> <!-- Dark Stockings Fabric -->
+				<item id="1933" min="1" max="1" chance="4.154" /> <!-- Dark Stocking Fabric -->
 				<item id="1875" min="1" max="1" chance="2.3539" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
@@ -3264,20 +3264,20 @@
 				<item id="395" min="1" max="1" chance="0.006" /> <!-- Manticore Skin Shirt -->
 				<item id="1942" min="1" max="1" chance="0.267" /> <!-- Manticore Skin Shirt Texture -->
 				<item id="417" min="1" max="1" chance="0.009" /> <!-- Manticore Skin Gaiters -->
-				<item id="1943" min="1" max="1" chance="0.416" /> <!-- Manticore Skin Gaiters Pattern -->
+				<item id="1943" min="1" max="1" chance="0.416" /> <!-- Manticore Skin Gaiter Pattern -->
 				<item id="1875" min="1" max="1" chance="0.17" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="0.433" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.216" /> <!-- High-Grade Suede -->
-				<item id="5550" min="1" max="1" chance="0.03" /> <!-- Durable Metal Plate -->
+				<item id="1885" min="1" max="1" chance="0.216" /> <!-- High-grade Suede -->
+				<item id="5550" min="1" max="1" chance="0.03" /> <!-- Reinforced Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.26" /> <!-- Metallic Thread -->
-				<item id="2278" min="1" max="1" chance="0.02" /> <!-- Recipe: Reinforced Long Bow -->
+				<item id="2278" min="1" max="1" chance="0.02" /> <!-- Recipe: Reinforced Longbow -->
 				<item id="2286" min="1" max="1" chance="0.018" /> <!-- Recipe: Bonebreaker -->
 				<item id="2977" min="1" max="1" chance="0.348" /> <!-- Recipe: Brigandine Boots -->
 			</drop>
 			<spoil>
-				<item id="2026" min="1" max="1" chance="0.4711" /> <!-- Two-Handed Sword Edge -->
+				<item id="2026" min="1" max="1" chance="0.4711" /> <!-- Two-handed Sword Edge -->
 				<item id="2155" min="1" max="1" chance="6.2822" /> <!-- Recipe: Elven Ring -->
-				<item id="5550" min="1" max="1" chance="0.5218" /> <!-- Durable Metal Plate -->
+				<item id="5550" min="1" max="1" chance="0.5218" /> <!-- Reinforced Metal Plate -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3343,11 +3343,11 @@
 				<item id="1903" min="1" max="1" chance="0.72" /> <!-- Elven Ring Piece -->
 				<item id="1875" min="1" max="1" chance="0.18" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="0.464" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.232" /> <!-- High-Grade Suede -->
-				<item id="5550" min="1" max="1" chance="0.037" /> <!-- Durable Metal Plate -->
+				<item id="1885" min="1" max="1" chance="0.232" /> <!-- High-grade Suede -->
+				<item id="5550" min="1" max="1" chance="0.037" /> <!-- Reinforced Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.28" /> <!-- Metallic Thread -->
 				<item id="2188" min="1" max="1" chance="0.198" /> <!-- Recipe: Manticore Skin Gaiters -->
-				<item id="5473" min="1" max="1" chance="0.2" /> <!-- Recipe: Durable Metal Plate(100%) -->
+				<item id="5473" min="1" max="1" chance="0.2" /> <!-- Recipe: Reinforced Metal Plate -->
 				<item id="1341" min="10" max="30" chance="9.296" /> <!-- Bone Arrow -->
 			</drop>
 			<spoil>
@@ -3412,18 +3412,18 @@
 				<item id="57" min="355" max="708" chance="70" /> <!-- Adena -->
 				<item id="260" min="1" max="1" chance="0.012" /> <!-- Triple-Edged Jamadhr -->
 				<item id="1874" min="1" max="1" chance="0.374" /> <!-- Oriharukon Ore -->
-				<item id="1878" min="1" max="1" chance="2.247" /> <!-- Braided Hemp -->
+				<item id="1878" min="1" max="1" chance="2.247" /> <!-- Durable Braid -->
 				<item id="1884" min="1" max="1" chance="3.456" /> <!-- Cord -->
-				<item id="1889" min="1" max="1" chance="0.374" /> <!-- Compound Braid -->
+				<item id="1889" min="1" max="1" chance="0.374" /> <!-- Synthetic Braid -->
 				<item id="5220" min="1" max="1" chance="0.224" /> <!-- Metal Hardener -->
 				<item id="2189" min="1" max="1" chance="0.25" /> <!-- Recipe: Mithril Tunic -->
 				<item id="2293" min="1" max="1" chance="0.03" /> <!-- Recipe: Glaive -->
 				<item id="2275" min="1" max="1" chance="0.03" /> <!-- Recipe: Heavy Bone Club -->
 			</drop>
 			<spoil>
-				<item id="2186" min="1" max="1" chance="2.8093" /> <!-- Recipe: Brigandine Tunic -->
-				<item id="1901" min="1" max="1" chance="11.602" /> <!-- Tiger's Eye Earring Stone -->
-				<item id="1901" min="1" max="1" chance="11.602" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="2186" min="1" max="1" chance="2.8093" /> <!-- Recipe: Brigandine -->
+				<item id="1901" min="1" max="1" chance="11.602" /> <!-- Tiger's Eye Stone -->
+				<item id="1901" min="1" max="1" chance="11.602" /> <!-- Tiger's Eye Stone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3488,8 +3488,8 @@
 				<item id="1939" min="1" max="1" chance="0.803" /> <!-- Mithril Banded Gaiters Material -->
 				<item id="416" min="1" max="1" chance="0.0252" /> <!-- Reinforced Leather Gaiters -->
 				<item id="1874" min="1" max="1" chance="0.35" /> <!-- Oriharukon Ore -->
-				<item id="1889" min="1" max="1" chance="0.35" /> <!-- Compound Braid -->
-				<item id="1878" min="1" max="1" chance="2.11" /> <!-- Braided Hemp -->
+				<item id="1889" min="1" max="1" chance="0.35" /> <!-- Synthetic Braid -->
+				<item id="1878" min="1" max="1" chance="2.11" /> <!-- Durable Braid -->
 				<item id="1884" min="1" max="1" chance="3.25" /> <!-- Cord -->
 				<item id="5220" min="1" max="1" chance="0.211" /> <!-- Metal Hardener -->
 				<item id="2275" min="1" max="1" chance="0.037" /> <!-- Recipe: Heavy Bone Club -->
@@ -3562,11 +3562,11 @@
 				<item id="1660" min="1" max="1" chance="0.003" /> <!-- Cursed Maingauche -->
 				<item id="2044" min="1" max="1" chance="0.137" /> <!-- Cursed Maingauche Edge -->
 				<item id="1874" min="1" max="1" chance="0.35" /> <!-- Oriharukon Ore -->
-				<item id="1889" min="1" max="1" chance="0.35" /> <!-- Compound Braid -->
-				<item id="1878" min="1" max="1" chance="2.1" /> <!-- Braided Hemp -->
+				<item id="1889" min="1" max="1" chance="0.35" /> <!-- Synthetic Braid -->
+				<item id="1878" min="1" max="1" chance="2.1" /> <!-- Durable Braid -->
 				<item id="1884" min="1" max="1" chance="3.22" /> <!-- Cord -->
 				<item id="5220" min="1" max="1" chance="0.21" /> <!-- Metal Hardener -->
-				<item id="2147" min="1" max="1" chance="0.375" /> <!-- Recipe: Blacksmith's frame -->
+				<item id="2147" min="1" max="1" chance="0.375" /> <!-- Recipe: Blacksmith' frame -->
 				<item id="2984" min="1" max="1" chance="0.534" /> <!-- Recipe: Salamander Skin Boots -->
 				<item id="2289" min="1" max="1" chance="0.03" /> <!-- Recipe: Staff of Life -->
 				<item id="1341" min="10" max="30" chance="17.5" /> <!-- Bone Arrow -->
@@ -3633,18 +3633,18 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="735" max="1467" chance="70" /> <!-- Adena -->
-				<item id="352" min="1" max="1" chance="0.013" /> <!-- Brigandine Tunic -->
+				<item id="352" min="1" max="1" chance="0.013" /> <!-- Brigandine -->
 				<item id="1941" min="1" max="1" chance="0.612" /> <!-- Brigandine Temper -->
 				<item id="2377" min="1" max="1" chance="0.021" /> <!-- Mithril Scale Gaiters -->
-				<item id="2918" min="1" max="1" chance="0.9125" /> <!-- Mithril Scale Gaiters Material -->
+				<item id="2918" min="1" max="1" chance="0.9125" /> <!-- Mithril Scale Gaiter Material -->
 				<item id="2378" min="1" max="1" chance="0.021" /> <!-- Brigandine Gaiters -->
-				<item id="2919" min="1" max="1" chance="0.915" /> <!-- Brigandine Gaiters Material -->
+				<item id="2919" min="1" max="1" chance="0.915" /> <!-- Brigandine Gaiter Material -->
 				<item id="1876" min="1" max="1" chance="2.575" /> <!-- Mithril Ore -->
 				<item id="1880" min="1" max="1" chance="1.287" /> <!-- Steel -->
 				<item id="1877" min="1" max="1" chance="0.514" /> <!-- Adamantite Nugget -->
 				<item id="1881" min="1" max="1" chance="1.716" /> <!-- Coarse Bone Powder -->
 				<item id="1882" min="1" max="1" chance="2.862" /> <!-- Leather -->
-				<item id="2198" min="1" max="1" chance="0.269" /> <!-- Recipe: Sage's Rag -->
+				<item id="2198" min="1" max="1" chance="0.269" /> <!-- Recipe: Sage's Rags -->
 				<item id="3020" min="1" max="1" chance="0.75" /> <!-- Recipe: Elven Long Sword -->
 			</drop>
 			<spoil>
@@ -3727,7 +3727,7 @@
 				<item id="1877" min="1" max="1" chance="0.48" /> <!-- Adamantite Nugget -->
 				<item id="1881" min="1" max="1" chance="1.606" /> <!-- Coarse Bone Powder -->
 				<item id="1882" min="1" max="1" chance="2.675" /> <!-- Leather -->
-				<item id="2198" min="1" max="1" chance="0.25" /> <!-- Recipe: Sage's Rag -->
+				<item id="2198" min="1" max="1" chance="0.25" /> <!-- Recipe: Sage's Rags -->
 				<item id="3020" min="1" max="1" chance="0.06" /> <!-- Recipe: Elven Long Sword -->
 			</drop>
 			<spoil>
@@ -3880,10 +3880,10 @@
 				<item id="1866" min="1" max="1" chance="8.03" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="12.06" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.482" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="1" /> <!-- High-Grade Suede -->
-				<item id="2206" min="1" max="1" chance="0.316" /> <!-- Recipe: Mithril Shirt -->
-				<item id="4556" min="1" max="1" chance="0.048" /> <!-- Greater Dye of CON <Con+1 Dex-1> -->
-				<item id="5274" min="1" max="1" chance="0.04" /> <!-- Recipe: Greater Spiritshot (C) Compressed Package(100%) -->
+				<item id="1885" min="1" max="1" chance="1" /> <!-- High-grade Suede -->
+				<item id="2206" min="1" max="1" chance="0.316" /> <!-- Recipe: Reinforced Mithril Shirt -->
+				<item id="4556" min="1" max="1" chance="0.048" /> <!-- Greater Dye of CON <Con +1 DEX -1> - 2nd Class Transfer -->
+				<item id="5274" min="1" max="1" chance="0.04" /> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
 			</drop>
 			<spoil>
 				<item id="2991" min="1" max="1" chance="13.2768" /> <!-- Recipe: Karmian Boots -->
@@ -3948,10 +3948,10 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="636" max="1285" chance="70" /> <!-- Adena -->
-				<item id="851" min="1" max="1" chance="0.03" /> <!-- Omen Beast's Eye Earring -->
-				<item id="1905" min="1" max="1" chance="1.312" /> <!-- Omen Beast's Eye Earring Gemstone -->
-				<item id="914" min="1" max="1" chance="0.021" /> <!-- Necklace of Darkness -->
-				<item id="1907" min="1" max="1" chance="0.938" /> <!-- Necklace of Darkness Gem -->
+				<item id="851" min="1" max="1" chance="0.03" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="1905" min="1" max="1" chance="1.312" /> <!-- Onyx Beast's Eye Earring Gemstone -->
+				<item id="914" min="1" max="1" chance="0.021" /> <!-- Dark Necklace -->
+				<item id="1907" min="1" max="1" chance="0.938" /> <!-- Dark Necklace Gem -->
 				<item id="882" min="1" max="1" chance="0.043" /> <!-- Mithril Ring -->
 				<item id="1906" min="1" max="1" chance="1.854" /> <!-- Mithril Ring Wire -->
 				<item id="1867" min="1" max="1" chance="15.132" /> <!-- Animal Skin -->
@@ -3965,7 +3965,7 @@
 			<spoil>
 				<item id="2161" min="1" max="1" chance="15.3276" /> <!-- Recipe: Aquastone Ring -->
 				<item id="2047" min="1" max="1" chance="1.3879" /> <!-- Claymore Blade -->
-				<item id="4469" min="1" max="1" chance="0.9021" /> <!-- Dye of STR <Str+1 Con-1> -->
+				<item id="4469" min="1" max="1" chance="0.9021" /> <!-- Dye of STR <STR +1 CON -1> - 1st Class Transfer -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4031,17 +4031,17 @@
 				<item id="1868" min="1" max="1" chance="17.361" /> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="3.456" /> <!-- Silver Nugget -->
 				<item id="5549" min="1" max="1" chance="0.866" /> <!-- Metallic Thread -->
-				<item id="1889" min="1" max="1" chance="0.577" /> <!-- Compound Braid -->
+				<item id="1889" min="1" max="1" chance="0.577" /> <!-- Synthetic Braid -->
 				<item id="2998" min="1" max="1" chance="0.648" /> <!-- Recipe: Chain Shield -->
 				<item id="737" min="1" max="1" chance="0.866" /> <!-- Scroll of Resurrection -->
-				<item id="4557" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex+1 Str-1> -->
-				<item id="3033" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot C -->
-				<item id="3954" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot C -->
+				<item id="4557" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex +1 Str -1> - 2nd Class Transfer -->
+				<item id="3033" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (C-grade) -->
+				<item id="3954" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (C-grade) -->
 			</drop>
 			<spoil>
 				<item id="2199" min="1" max="1" chance="7.1642" /> <!-- Recipe: Karmian Stockings -->
 				<item id="2930" min="1" max="1" chance="13.6873" /> <!-- Plate Helmet Design -->
-				<item id="1905" min="1" max="1" chance="16.5167" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="1905" min="1" max="1" chance="16.5167" /> <!-- Onyx Beast's Eye Earring Gemstone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4113,14 +4113,14 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="1015" max="2079" chance="70" /> <!-- Adena -->
-				<item id="397" min="1" max="1" chance="0.021" /> <!-- Mithril Shirt -->
-				<item id="1961" min="1" max="1" chance="1" /> <!-- Mithril Shirt Fabric -->
+				<item id="397" min="1" max="1" chance="0.021" /> <!-- Reinforced Mithril Shirt -->
+				<item id="1961" min="1" max="1" chance="1" /> <!-- Reinforced Mithril Shirt Fabric -->
 				<item id="2387" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gaiters -->
-				<item id="2935" min="1" max="1" chance="1.65" /> <!-- Reinforced Mithril Gaiters Fragment -->
+				<item id="2935" min="1" max="1" chance="1.65" /> <!-- Reinforced Mithril Gaiter Fragment -->
 				<item id="1869" min="1" max="1" chance="11.167" /> <!-- Iron Ore -->
 				<item id="1864" min="1" max="1" chance="22.42" /> <!-- Stem -->
 				<item id="1880" min="1" max="1" chance="1.119" /> <!-- Steel -->
-				<item id="5550" min="1" max="1" chance="0.147" /> <!-- Durable Metal Plate -->
+				<item id="5550" min="1" max="1" chance="0.147" /> <!-- Reinforced Metal Plate -->
 				<item id="2220" min="1" max="1" chance="0.23" /> <!-- Recipe: Rind Leather Armor -->
 				<item id="2225" min="1" max="1" chance="0.24" /> <!-- Recipe: Demon's Stockings -->
 				<item id="2321" min="1" max="1" chance="0.03" /> <!-- Recipe: Stiletto -->
@@ -4195,7 +4195,7 @@
 				<item id="1869" min="1" max="1" chance="9" /> <!-- Iron Ore -->
 				<item id="1864" min="1" max="1" chance="17.98" /> <!-- Stem -->
 				<item id="1880" min="1" max="1" chance="0.9" /> <!-- Steel -->
-				<item id="5550" min="1" max="1" chance="0.118" /> <!-- Durable Metal Plate -->
+				<item id="5550" min="1" max="1" chance="0.118" /> <!-- Reinforced Metal Plate -->
 				<item id="2220" min="1" max="1" chance="0.18" /> <!-- Recipe: Rind Leather Armor -->
 				<item id="2225" min="1" max="1" chance="0.194" /> <!-- Recipe: Demon's Stockings -->
 				<item id="2321" min="1" max="1" chance="0.029" /> <!-- Recipe: Stiletto -->
@@ -4266,7 +4266,7 @@
 				<item id="354" min="1" max="1" chance="0.012" /> <!-- Chain Mail Shirt -->
 				<item id="1959" min="1" max="1" chance="0.65" /> <!-- Chain Mail Shirt Material -->
 				<item id="381" min="1" max="1" chance="0.019" /> <!-- Chain Gaiters -->
-				<item id="1960" min="1" max="1" chance="1.319" /> <!-- Chain Gaiters Part -->
+				<item id="1960" min="1" max="1" chance="1.319" /> <!-- Chain Gaiter Fragment -->
 				<item id="1871" min="1" max="1" chance="9.108" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="6.07" /> <!-- Suede -->
 				<item id="1877" min="1" max="1" chance="2.2106" /> <!-- Adamantite Nugget -->

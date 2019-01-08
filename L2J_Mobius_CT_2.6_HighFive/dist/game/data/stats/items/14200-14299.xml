@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14200" type="EtcItem" name="Forgotten Scroll - Summon Imperial Phoenix">
+		<!-- This Forgotten Scroll can be used by Phoenix Knights level 83 and above to learn Summon Lesser Phoenix. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -8,9 +9,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2650-1" />
+		<set name="item_skill" val="2650-1" /> <!-- Summon Imperial Phoenix -->
 	</item>
 	<item id="14201" type="EtcItem" name="Forgotten Scroll - Maximum Force Focus">
+		<!-- This Forgotten Scroll can be used by Grand Khavataris level 83 and above to learn Maximum Force Focus. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -18,9 +20,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2655-1" />
+		<set name="item_skill" val="2655-1" /> <!-- Maximum Force Focus -->
 	</item>
 	<item id="14202" type="EtcItem" name="Forgotten Scroll - Maximum Sonic Focus">
+		<!-- This Forgotten Scroll can be used by Duelists level 83 and above to learn Maximum Sonic Focus. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -28,9 +31,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2656-1" />
+		<set name="item_skill" val="2656-1" /> <!-- Maximum Sonic Focus -->
 	</item>
 	<item id="14203" type="EtcItem" name="Forgotten Scroll - Weapon Blockade">
+		<!-- This Forgotten Scroll can be used by Duelists level 83 and above to learn Weapon Blockade. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -41,9 +45,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2831-1" />
+		<set name="item_skill" val="2831-1" /> <!-- Weapon Blockade -->
 	</item>
 	<item id="14204" type="EtcItem" name="Forgotten Scroll - Spirit of the Cat">
+		<!-- This Forgotten Scroll can be used by Arcana Lords level 83 and above to learn Spirit of the Cat. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -51,9 +56,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2667-1" />
+		<set name="item_skill" val="2667-1" /> <!-- Spirit of the Cat -->
 	</item>
 	<item id="14205" type="EtcItem" name="Forgotten Scroll - Spirit of the Unicorn">
+		<!-- This Forgotten Scroll can be used by Elemental Masters level 83 and above to learn Spirit of the Unicorn. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -61,9 +67,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2669-1" />
+		<set name="item_skill" val="2669-1" /> <!-- Spirit of the Unicorn -->
 	</item>
 	<item id="14206" type="EtcItem" name="Forgotten Scroll - Spirit of the Phantom">
+		<!-- This Forgotten Scroll can be used by Spectral Masters level 83 and above to learn Spirit of the Phantom. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -71,9 +78,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2668-1" />
+		<set name="item_skill" val="2668-1" /> <!-- Spirit of the Phantom -->
 	</item>
 	<item id="14207" type="EtcItem" name="Forgotten Scroll - Deflect Magic">
+		<!-- This Forgotten Scroll can be used by Phoenix Knights, Hell Knights, Eva's Templars, Shillien Templars, Sword Muses and Spectral Dancers level 81 and above to learn Deflect Magic. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -81,9 +89,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2651-1" />
+		<set name="item_skill" val="2651-1" /> <!-- Deflect Magic -->
 	</item>
 	<item id="14208" type="EtcItem" name="Forgotten Scroll - Final Secret">
+		<!-- This Forgotten Scroll can be used by Duelists, Grand Khavataris, Dreadnoughts, Titans, Fortune Seekers, Maestros and Doombringers level 81 and above to learn Final Secret. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -91,9 +100,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2654-1" />
+		<set name="item_skill" val="2654-1" /> <!-- Final Circlet -->
 	</item>
 	<item id="14209" type="EtcItem" name="Forgotten Scroll - Hide">
+		<!-- This Forgotten Scroll can be used by Adventurers, Wind Riders, and Ghost Hunters level 81 and above to learn Hide. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -101,9 +111,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2657-1" />
+		<set name="item_skill" val="2657-1" /> <!-- Hide -->
 	</item>
 	<item id="14210" type="EtcItem" name="Forgotten Scroll - Dual Dagger Mastery">
+		<!-- This Forgotten Scroll can be used by Adventurers, Wind Riders, and Ghost Hunters level 81 and above to learn Dual Dagger Mastery. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -111,9 +122,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2658-1" />
+		<set name="item_skill" val="2658-1" /> <!-- Dual Dagger Mastery -->
 	</item>
 	<item id="14211" type="EtcItem" name="Forgotten Scroll - Seven Arrow">
+		<!-- This Forgotten Scroll can be used by Sagittarius, Moonlight Sentinels and Ghost Sentinels level 81 and above to learn Seven Arrow. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -121,9 +133,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2659-1" />
+		<set name="item_skill" val="2659-1" /> <!-- Seven Arrow -->
 	</item>
 	<item id="14212" type="EtcItem" name="Forgotten Scroll - Enlightenment - Wizard">
+		<!-- This Forgotten Scroll can be used by Archmages, Soul Takers, Mystic Muses, Storm Screamers and Soul Hounds level 81 and above to learn Enlightenment. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -131,9 +144,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2660-1" />
+		<set name="item_skill" val="2660-1" /> <!-- Enlightenment -->
 	</item>
 	<item id="14213" type="EtcItem" name="Forgotten Scroll - Enlightenment - Healer">
+		<!-- This Forgotten Scroll can be used by Cardinals, Hierophants, Eva's Saints, Shillien Saints, Dominators and Doom Cryers level 81 and above to learn Enlightenment. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -141,9 +155,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2661-1" />
+		<set name="item_skill" val="2661-1" /> <!-- Enlightenment -->
 	</item>
 	<item id="14214" type="EtcItem" name="Forgotten Scroll - Chant of Movement">
+		<!-- This Forgotten Scroll can be used by Warcryers level 72 and above to learn Chant of Movement. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -151,9 +166,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2662-1" />
+		<set name="item_skill" val="2662-1" /> <!-- Chant of Movement -->
 	</item>
 	<item id="14215" type="EtcItem" name="Forgotten Scroll - Combat of Pa'agrio">
+		<!-- This Forgotten Scroll can be used by Overlords level 70 and above to learn Combat of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -161,9 +177,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2663-1" />
+		<set name="item_skill" val="2663-1" /> <!-- Combat of Pa'agrio -->
 	</item>
 	<item id="14216" type="EtcItem" name="Forgotten Scroll - Critical of Pa'agrio">
+		<!-- This Forgotten Scroll can be used by Overlords level 74 and above to learn Critical of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -171,9 +188,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2664-1" />
+		<set name="item_skill" val="2664-1" /> <!-- Critical of Pa'agrio -->
 	</item>
 	<item id="14217" type="EtcItem" name="Forgotten Scroll - Condition of Pa'agrio">
+		<!-- This Forgotten Scroll can be used by Overlords level 72 and above to learn Condition of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -181,9 +199,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2665-1" />
+		<set name="item_skill" val="2665-1" /> <!-- Condition of Pa'agrio -->
 	</item>
 	<item id="14218" type="EtcItem" name="Forgotten Scroll - Dual Blow">
+		<!-- This Forgotten Scroll can be used by Dagger Master classes to learn Dual Blow. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -191,9 +210,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2666-1" />
+		<set name="item_skill" val="2666-1" /> <!-- Dual Blow -->
 	</item>
 	<item id="14219" type="EtcItem" name="Forgotten Scroll - Magician's Will">
+		<!-- This Forgotten Scroll can be used by Mages level 81 or above to learn Magician's Will. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -201,9 +221,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2780-1" />
+		<set name="item_skill" val="2780-1" /> <!-- Magician's Will -->
 	</item>
 	<item id="14220" type="EtcItem" name="Forgotten Scroll - Silent Mind">
+		<!-- This Forgotten Scroll can be used by Sagittarius, Moonlight Sentinels and Ghost Sentinels level 81 and above to learn Silent Mind. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -211,9 +232,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2781-1" />
+		<set name="item_skill" val="2781-1" /> <!-- Silent Mind -->
 	</item>
 	<item id="14221" type="EtcItem" name="Forgotten Scroll - Turn Stone">
+		<!-- This Forgotten Scroll can be used by Cardinals, Hierophants, Eva's Saints, Shillien Saints, Dominators and Doom Cryers level 81 and above to learn Turn Stone. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -221,9 +243,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2782-1" />
+		<set name="item_skill" val="2782-1" /> <!-- Turn Stone -->
 	</item>
 	<item id="14222" type="EtcItem" name="This Forgotten Scroll can be used by Fortune Seekers level 83 and above to learn Lucky Strike.">
+		<!-- This Forgotten Scroll can be used by Fortune Seekers level 83 and above to learn Lucky Strike. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -231,9 +254,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2783-1" />
+		<set name="item_skill" val="2783-1" /> <!-- Lucky Strike -->
 	</item>
 	<item id="14223" type="EtcItem" name="This Forgotten Scroll can be used by Doombringers level 83 and above to learn Eye for Eye.">
+		<!-- This Forgotten Scroll can be used by Doombringers level 83 and above to learn Eye for Eye. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -241,9 +265,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2784-1" />
+		<set name="item_skill" val="2784-1" /> <!-- Eye for Eye -->
 	</item>
 	<item id="14224" type="EtcItem" name="Forgotten Scroll - Curse of Desparion">
+		<!-- This Forgotten Scroll can be used by Soul Takers to learn Curse of Desparion. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -251,9 +276,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2785-1" />
+		<set name="item_skill" val="2785-1" /> <!-- Curse of Desparion -->
 	</item>
 	<item id="14225" type="EtcItem" name="Forgotten Scroll - Counter Critical">
+		<!-- This Forgotten Scroll can be used by Hierophants level 83 and above to learn Counter Critical. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -261,9 +287,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2786-1" />
+		<set name="item_skill" val="2786-1" /> <!-- Counter Critical -->
 	</item>
 	<item id="14226" type="EtcItem" name="Forgotten Scroll - Onslaught of Pa'agrio">
+		<!-- This Forgotten Scroll can be used by Dominators level 83 and above to learn Onslaught of Pa'agrio. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -271,9 +298,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2787-1" />
+		<set name="item_skill" val="2787-1" /> <!-- Onslaught of Pa'agrio -->
 	</item>
 	<item id="14227" type="EtcItem" name="Forgotten Scroll - Great Fury">
+		<!-- This Forgotten Scroll can be used by Doom Cryers level 83 and above to learn Great Fury. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -281,9 +309,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2788-1" />
+		<set name="item_skill" val="2788-1" /> <!-- Great Fury -->
 	</item>
 	<item id="14228" type="EtcItem" name="Sudden Agathion 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Sudden Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -298,6 +327,7 @@
 		<set name="capsuled_items" val="13024,1,1,100" />
 	</item>
 	<item id="14229" type="EtcItem" name="Shiny Agathion 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Shiny Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -312,6 +342,7 @@
 		<set name="capsuled_items" val="13025,1,1,100" />
 	</item>
 	<item id="14230" type="EtcItem" name="Sobbing Agathion 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Sobbing Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -326,6 +357,7 @@
 		<set name="capsuled_items" val="13026,1,1,100" />
 	</item>
 	<item id="14231" type="EtcItem" name="Gold Maned Lion Mount Bracelet 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Gold Maned Lion (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -340,6 +372,7 @@
 		<set name="capsuled_items" val="14053,1,1,100" />
 	</item>
 	<item id="14232" type="EtcItem" name="Steam Beatle Mount Bracelet 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Steam Beatle (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -354,6 +387,7 @@
 		<set name="capsuled_items" val="14054,1,1,100" />
 	</item>
 	<item id="14233" type="EtcItem" name="Vitality Replenishing Beverage 1-Unit Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 1 units of Vitality Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -368,6 +402,7 @@
 		<set name="capsuled_items" val="14055,1,1,100" />
 	</item>
 	<item id="14234" type="EtcItem" name="Snow Kung Transformation Stick 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing Snow Kung Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -382,6 +417,7 @@
 		<set name="capsuled_items" val="14056,1,1,100" />
 	</item>
 	<item id="14235" type="EtcItem" name="Scarecrow Jack Transformation Stick 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing Scarecrow Jack Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -396,6 +432,7 @@
 		<set name="capsuled_items" val="14057,1,1,100" />
 	</item>
 	<item id="14236" type="EtcItem" name="Tin Golem Transformation Stick 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing Tin Golem Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -410,6 +447,7 @@
 		<set name="capsuled_items" val="14058,1,1,100" />
 	</item>
 	<item id="14237" type="EtcItem" name="Teddy Boy Agathion 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Boy Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -424,6 +462,7 @@
 		<set name="capsuled_items" val="14059,1,1,100" />
 	</item>
 	<item id="14238" type="EtcItem" name="Teddy Girl Agathion 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Girl Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -438,6 +477,7 @@
 		<set name="capsuled_items" val="14060,1,1,100" />
 	</item>
 	<item id="14239" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon 2-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 2 ticket sheet that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -452,6 +492,7 @@
 		<set name="capsuled_items" val="14065,2,2,100" />
 	</item>
 	<item id="14240" type="EtcItem" name="Gold Maned Lion Mount Bracelet 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Gold Maned Lion (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -466,6 +507,7 @@
 		<set name="capsuled_items" val="14066,1,1,100" />
 	</item>
 	<item id="14241" type="EtcItem" name="Steam Beatle Mount Bracelet 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Steam Beatle (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -480,6 +522,7 @@
 		<set name="capsuled_items" val="14067,1,1,100" />
 	</item>
 	<item id="14242" type="EtcItem" name="Vitality Replenishing Beverage 1-Unit Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing 1 units of Vitality Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -494,6 +537,7 @@
 		<set name="capsuled_items" val="14068,1,1,100" />
 	</item>
 	<item id="14243" type="EtcItem" name="Snow Kung Transformation Stick 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing Snow Kung Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -508,6 +552,7 @@
 		<set name="capsuled_items" val="14069,1,1,100" />
 	</item>
 	<item id="14244" type="EtcItem" name="Scarecrow Jack Transformation Stick 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing Scarecrow Jack Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -522,6 +567,7 @@
 		<set name="capsuled_items" val="14070,1,1,100" />
 	</item>
 	<item id="14245" type="EtcItem" name="Tin Golem Transformation Stick 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing Tin Golem Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -536,6 +582,7 @@
 		<set name="capsuled_items" val="14071,1,1,100" />
 	</item>
 	<item id="14246" type="EtcItem" name="Teddy Boy Agathion 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Boy Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -550,6 +597,7 @@
 		<set name="capsuled_items" val="14072,1,1,100" />
 	</item>
 	<item id="14247" type="EtcItem" name="Teddy Girl Agathion 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Girl Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -564,6 +612,7 @@
 		<set name="capsuled_items" val="14073,1,1,100" />
 	</item>
 	<item id="14248" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon 1-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 1 ticket sheet that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -578,6 +627,7 @@
 		<set name="capsuled_items" val="14065,1,1,100" />
 	</item>
 	<item id="14249" type="EtcItem" name="Sudden Agathion 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Sudden Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -592,6 +642,7 @@
 		<set name="capsuled_items" val="14075,1,1,100" />
 	</item>
 	<item id="14250" type="EtcItem" name="Shiny Agathion 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Shiny Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -606,6 +657,7 @@
 		<set name="capsuled_items" val="14076,1,1,100" />
 	</item>
 	<item id="14251" type="EtcItem" name="Sobbing Agathion 30-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Sobbing Agathion Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -620,6 +672,7 @@
 		<set name="capsuled_items" val="14077,1,1,100" />
 	</item>
 	<item id="14252" type="EtcItem" name="Weapon-type Enhance Backup Stone (D-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a D-Grade weapon Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -634,6 +687,7 @@
 		<set name="capsuled_items" val="14078,1,1,100" />
 	</item>
 	<item id="14253" type="EtcItem" name="Weapon-type Enhance Backup Stone (C-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a C-Grade weapon Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -648,6 +702,7 @@
 		<set name="capsuled_items" val="14079,1,1,100" />
 	</item>
 	<item id="14254" type="EtcItem" name="Weapon-type Enhance Backup Stone (B-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a B-Grade weapon Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -662,6 +717,7 @@
 		<set name="capsuled_items" val="14080,1,1,100" />
 	</item>
 	<item id="14255" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing an A-Grade weapon Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -676,6 +732,7 @@
 		<set name="capsuled_items" val="14081,1,1,100" />
 	</item>
 	<item id="14256" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a S-Grade weapon Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -690,6 +747,7 @@
 		<set name="capsuled_items" val="14082,1,1,100" />
 	</item>
 	<item id="14257" type="EtcItem" name="Armor-type Enhance Backup Stone (D-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a D-Grade armor Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -704,6 +762,7 @@
 		<set name="capsuled_items" val="14083,1,1,100" />
 	</item>
 	<item id="14258" type="EtcItem" name="Armor-type Enhance Backup Stone (C-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a C-Grade armor Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -718,6 +777,7 @@
 		<set name="capsuled_items" val="14084,1,1,100" />
 	</item>
 	<item id="14259" type="EtcItem" name="Armor-type Enhance Backup Stone (B-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a B-Grade armor Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -732,6 +792,7 @@
 		<set name="capsuled_items" val="14085,1,1,100" />
 	</item>
 	<item id="14260" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing an A-Grade armor Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -746,6 +807,7 @@
 		<set name="capsuled_items" val="14086,1,1,100" />
 	</item>
 	<item id="14261" type="EtcItem" name="Armor-type Enhance Backup Stone (S-Grade Pack) (event)">
+		<!-- Dimensional item. A wrapped pack containing a S-Grade armor Enhance Backup Stone. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -760,6 +822,7 @@
 		<set name="capsuled_items" val="14087,1,1,100" />
 	</item>
 	<item id="14262" type="EtcItem" name="Snow Kung Transformation Stick 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing Snow Kung Transformation Stick (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -774,6 +837,7 @@
 		<set name="capsuled_items" val="14088,1,1,100" />
 	</item>
 	<item id="14263" type="EtcItem" name="Scarecrow Jack Transformation Stick 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing Scarecrow Jack Transformation Stick (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -788,6 +852,7 @@
 		<set name="capsuled_items" val="14089,1,1,100" />
 	</item>
 	<item id="14264" type="EtcItem" name="Tin Golem Transformation Stick 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Tin Golem Stick (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -802,6 +867,7 @@
 		<set name="capsuled_items" val="14090,1,1,100" />
 	</item>
 	<item id="14265" type="EtcItem" name="Teddy Boy Agathion 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Boy Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -816,6 +882,7 @@
 		<set name="capsuled_items" val="14091,1,1,100" />
 	</item>
 	<item id="14266" type="EtcItem" name="Teddy Girl Agathion 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Girl Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -830,6 +897,7 @@
 		<set name="capsuled_items" val="14092,1,1,100" />
 	</item>
 	<item id="14267" type="EtcItem" name="Sudden Agathion 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Sudden Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -844,6 +912,7 @@
 		<set name="capsuled_items" val="14093,1,1,100" />
 	</item>
 	<item id="14268" type="EtcItem" name="Shiny Agathion 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Shiny Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -858,6 +927,7 @@
 		<set name="capsuled_items" val="14094,1,1,100" />
 	</item>
 	<item id="14269" type="EtcItem" name="Sobbing Agathion 7-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Sobbing Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -872,6 +942,7 @@
 		<set name="capsuled_items" val="14095,1,1,100" />
 	</item>
 	<item id="14270" type="EtcItem" name="Snow Kung Transformation Stick 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing Snow Kung Transformation Stick (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -886,6 +957,7 @@
 		<set name="capsuled_items" val="14096,1,1,100" />
 	</item>
 	<item id="14271" type="EtcItem" name="Scarecrow Jack Transformation Stick 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing Scarecrow Jack Transformation Stick (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -900,6 +972,7 @@
 		<set name="capsuled_items" val="14097,1,1,100" />
 	</item>
 	<item id="14272" type="EtcItem" name="Tin Golem Transformation Stick 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing Tin Golem Transformation Stick (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -914,6 +987,7 @@
 		<set name="capsuled_items" val="14098,1,1,100" />
 	</item>
 	<item id="14273" type="EtcItem" name="Teddy Boy Agathion 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Boy Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -928,6 +1002,7 @@
 		<set name="capsuled_items" val="14099,1,1,100" />
 	</item>
 	<item id="14274" type="EtcItem" name="Teddy Girl Agathion 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Teddy Girl Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -942,6 +1017,7 @@
 		<set name="capsuled_items" val="14100,1,1,100" />
 	</item>
 	<item id="14275" type="EtcItem" name="Sudden Agathion 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Sudden Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -956,6 +1032,7 @@
 		<set name="capsuled_items" val="14101,1,1,100" />
 	</item>
 	<item id="14276" type="EtcItem" name="Shiny Agathion 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Shiny Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -970,6 +1047,7 @@
 		<set name="capsuled_items" val="14102,1,1,100" />
 	</item>
 	<item id="14277" type="EtcItem" name="Sobbing Agathion 7-Day Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing a Sobbing Agathion Bracelet (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -984,6 +1062,7 @@
 		<set name="capsuled_items" val="14103,1,1,100" />
 	</item>
 	<item id="14278" type="EtcItem" name="Weapon-type Enhance Backup Stone (D-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a D-Grade weapon Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -999,6 +1078,7 @@
 		<set name="capsuled_items" val="12362,1,1,100" />
 	</item>
 	<item id="14279" type="EtcItem" name="Weapon-type Enhance Backup Stone (C-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a C-Grade weapon Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1014,6 +1094,7 @@
 		<set name="capsuled_items" val="12363,1,1,100" />
 	</item>
 	<item id="14280" type="EtcItem" name="Weapon-type Enhance Backup Stone (B-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a B-Grade weapon Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1029,6 +1110,7 @@
 		<set name="capsuled_items" val="12364,1,1,100" />
 	</item>
 	<item id="14281" type="EtcItem" name="Weapon-type Enhance Backup Stone (A-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing an A-Grade weapon Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1044,6 +1126,7 @@
 		<set name="capsuled_items" val="12365,1,1,100" />
 	</item>
 	<item id="14282" type="EtcItem" name="Weapon-type Enhance Backup Stone (S-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a S-Grade weapon Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1059,6 +1142,7 @@
 		<set name="capsuled_items" val="12366,1,1,100" />
 	</item>
 	<item id="14283" type="EtcItem" name="Armor-type Enhance Backup Stone (D-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a D-Grade armor Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1074,6 +1158,7 @@
 		<set name="capsuled_items" val="12367,1,1,100" />
 	</item>
 	<item id="14284" type="EtcItem" name="Armor-type Enhance Backup Stone (C-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a C-Grade armor Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1089,6 +1174,7 @@
 		<set name="capsuled_items" val="12368,1,1,100" />
 	</item>
 	<item id="14285" type="EtcItem" name="Armor-type Enhance Backup Stone (B-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a B-Grade armor Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1104,6 +1190,7 @@
 		<set name="capsuled_items" val="12369,1,1,100" />
 	</item>
 	<item id="14286" type="EtcItem" name="Armor-type Enhance Backup Stone (A-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing an A-Grade armor Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1119,6 +1206,7 @@
 		<set name="capsuled_items" val="12370,1,1,100" />
 	</item>
 	<item id="14287" type="EtcItem" name="Armor-type Enhance Backup Stone (S-Grade Pack)">
+		<!-- Dimensional item. A wrapped pack containing a S-Grade armor Enhance Backup Stone. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1134,6 +1222,7 @@
 		<set name="capsuled_items" val="12371,1,1,100" />
 	</item>
 	<item id="14288" type="EtcItem" name="Vitality Replenishing Beverage 3-Unit Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 3 units of Vitality Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1148,6 +1237,7 @@
 		<set name="capsuled_items" val="14055,3,3,100" />
 	</item>
 	<item id="14289" type="EtcItem" name="Vitality Replenishing Beverage 3-Unit Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing 3 units of Vitality Replenishing Beverage. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1162,6 +1252,7 @@
 		<set name="capsuled_items" val="14068,3,3,100" />
 	</item>
 	<item id="14290" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon 2-Sheet Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing 2 ticket sheet that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1176,6 +1267,7 @@
 		<set name="capsuled_items" val="14074,2,2,100" />
 	</item>
 	<item id="14291" type="EtcItem" name="High-Grade Hunting Helper Exchange Coupon 1-Sheet Pack (Event)">
+		<!-- Dimensional item pack. A wrapped pack containing 1 ticket sheet that can be exchanged for a necklace that allows you to summon a High Quality Hunting Helper (5 hours). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1385,7 +1477,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="156" />
 			<set stat="mAtk" val="83" />

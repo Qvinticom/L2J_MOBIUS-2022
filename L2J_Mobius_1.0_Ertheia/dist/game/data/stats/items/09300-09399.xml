@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9300" name="Sharpshooter" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eminence Bow Bestows one of the following functions: Guidance, Miser, or Cheap Shot. -->
+		<!-- Kamael-exclusive Weapon: Eminence Bow. Bestows one of the following functions: Guidance, Miser, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -34,7 +34,7 @@
 		</stats>
 	</item>
 	<item id="9301" name="Sharpshooter" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eminence Bow (Soul Crystal Enhancement) Increases Accuracy by about 4. -->
+		<!-- Kamael-exclusive Weapon: Eminence Bow. <Soul Crystal Enhancement>. Increases Accuracy by about 4. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -70,7 +70,7 @@
 		</stats>
 	</item>
 	<item id="9302" name="Sharpshooter" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eminence Bow (Soul Crystal Enhancement) There is a 37% chance that the number of soulshots consumed is reduced to 5. -->
+		<!-- Kamael-exclusive Weapon: Eminence Bow. <Soul Crystal Enhancement>. There is a 37% chance that the number of soulshots consumed is reduced to 5. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -104,7 +104,7 @@
 		</stats>
 	</item>
 	<item id="9303" name="Sharpshooter" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eminence Bow (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. -->
+		<!-- Kamael-exclusive Weapon: Eminence Bow. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -140,7 +140,7 @@
 		</stats>
 	</item>
 	<item id="9304" name="Military Fleuret" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk Bestows one of the following functions. Guidance, Focus, or Back Blow. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. Bestows one of the following functions. Guidance, Focus, or Back Blow. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -175,7 +175,7 @@
 		</stats>
 	</item>
 	<item id="9305" name="Military Fleuret" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk (Soul Crystal Enhancement) Increases Accuracy by 5. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. <Soul Crystal Enhancement>. Increases Accuracy by 5. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -211,7 +211,7 @@
 		</stats>
 	</item>
 	<item id="9306" name="Military Fleuret" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk (Soul Crystal Enhancement) Increases Critical by 68. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. <Soul Crystal Enhancement>. Increases Critical by 68. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -247,7 +247,7 @@
 		</stats>
 	</item>
 	<item id="9307" name="Military Fleuret" additionalName="Back Blow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk (Soul Crystal Enhancement) Increases P. Critical Rate by 56 when attacking the target from behind. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. <Soul Crystal Enhancement>. Increases P. Critical Rate by 56 when attacking the target from behind. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -283,7 +283,7 @@
 		</stats>
 	</item>
 	<item id="9308" name="Innominate Victory" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Great Sword Bestows one of the following functions: Health, P. Critical Damage, or Focus. -->
+		<!-- Kamael-exclusive Weapon: Great Sword. Bestows one of the following functions: Health, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -315,7 +315,7 @@
 		</stats>
 	</item>
 	<item id="9309" name="Innominate Victory" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Great Sword (Soul Crystal Enhancement) Increases Max HP by 25%. -->
+		<!-- Kamael-exclusive Weapon: Great Sword. <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -350,7 +350,7 @@
 		</stats>
 	</item>
 	<item id="9310" name="Innominate Victory" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Great Sword (Soul Crystal Enhancement) P. Atk. + 247 during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Great Sword. <Soul Crystal Enhancement>. P. Atk. + 247 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -385,7 +385,7 @@
 		</stats>
 	</item>
 	<item id="9311" name="Innominate Victory" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Great Sword (Soul Crystal Enhancement) Increases Critical by 68. -->
+		<!-- Kamael-exclusive Weapon: Great Sword. <Soul Crystal Enhancement>. Increases Critical by 68. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -420,7 +420,7 @@
 		</stats>
 	</item>
 	<item id="9312" name="Peacemaker" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion Bestows one of the following functions: Evasion, Critical Bleed, or Miser. -->
+		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion. Bestows one of the following functions: Evasion, Critical Bleed, or Miser. -->
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -453,7 +453,7 @@
 		</stats>
 	</item>
 	<item id="9313" name="Peacemaker" additionalName="Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion (Soul Crystal Enhancement) Increases Evasion by 2. -->
+		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion. <Soul Crystal Enhancement>. Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -489,7 +489,7 @@
 		</stats>
 	</item>
 	<item id="9314" name="Peacemaker" additionalName="Critical Bleed" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion (Soul Crystal Enhancement) Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion. <Soul Crystal Enhancement>. Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -525,7 +525,7 @@
 		</stats>
 	</item>
 	<item id="9315" name="Peacemaker" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion (Soul Crystal Enhancement) There is a 19% chance that the number of soulshots consumed is reduced to 1. -->
+		<!-- Kamael-exclusive Weapon: Dark Elven Longbow Conversion. <Soul Crystal Enhancement>. There is a 19% chance that the number of soulshots consumed is reduced to 1. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -559,7 +559,7 @@
 		</stats>
 	</item>
 	<item id="9316" name="Colichemarde" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion Bestows one of the following functions. Focus, P. Critical Damage, or Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion. Bestows one of the following functions. Focus, P. Critical Damage, or Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -594,7 +594,7 @@
 		</stats>
 	</item>
 	<item id="9317" name="Colichemarde" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion (Soul Crystal Enhancement) Increases Critical by 64. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion. <Soul Crystal Enhancement>. Increases Critical by 64. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -630,7 +630,7 @@
 		</stats>
 	</item>
 	<item id="9318" name="Colichemarde" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion (Soul Crystal Enhancement) P. Atk. + 262 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion. <Soul Crystal Enhancement>. P. Atk. + 262 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -666,7 +666,7 @@
 		</stats>
 	</item>
 	<item id="9319" name="Colichemarde" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Damascus Sword Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -702,7 +702,7 @@
 		</stats>
 	</item>
 	<item id="9320" name="Dismantler" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion Bestows one of the following functions: Critical Drain, Health, or Critical Bleed. -->
+		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion. Bestows one of the following functions: Critical Drain, Health, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -734,7 +734,7 @@
 		</stats>
 	</item>
 	<item id="9321" name="Dismantler" additionalName="Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion (Soul Crystal Enhancement) The user absorbs 8 HP from the target during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion. <Soul Crystal Enhancement>. The user absorbs 8 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -769,7 +769,7 @@
 		</stats>
 	</item>
 	<item id="9322" name="Dismantler" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. -->
+		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -804,7 +804,7 @@
 		</stats>
 	</item>
 	<item id="9323" name="Dismantler" additionalName="Critical Bleed" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion (Soul Crystal Enhancement) Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Guardian's Sword Conversion. <Soul Crystal Enhancement>. Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -839,7 +839,7 @@
 		</stats>
 	</item>
 	<item id="9324" name="Hell Hound" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion Bestows one of the following functions: Guidance, Quick Recover, or Cheap Shot. -->
+		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion. Bestows one of the following functions: Guidance, Quick Recover, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -872,7 +872,7 @@
 		</stats>
 	</item>
 	<item id="9325" name="Hell Hound" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion (Soul Crystal Enhancement) Increases Accuracy by 3. -->
+		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 3. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -908,7 +908,7 @@
 		</stats>
 	</item>
 	<item id="9326" name="Hell Hound" additionalName="Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion (Soul Crystal Enhancement) Decreases cooldown by about 13%. -->
+		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion. <Soul Crystal Enhancement>. Decreases cooldown by about 13%. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -941,7 +941,7 @@
 		</stats>
 	</item>
 	<item id="9327" name="Hell Hound" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. -->
+		<!-- Kamael-exclusive Weapon: Bow of Peril Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -977,7 +977,7 @@
 		</stats>
 	</item>
 	<item id="9328" name="White Lightning" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion Bestows one of the following functions. Critical Poison, Haste, or Anger. When enchanted to 4 or more, P. Atk., magical power, and received healing of all party members, including yourself, are increased during a Critical Attack with a certain chance, and MP consumption during skill use is decreased -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions. Critical Poison, Haste, or Anger. When enchanted to 4 or more, P. Atk., magical power, and received healing of all party members, including yourself, are increased during a Critical Attack with a certain chance, and MP consumption during skill use is decreased -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1012,7 +1012,7 @@
 		</stats>
 	</item>
 	<item id="9329" name="White Lightning" additionalName="Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion (Soul Crystal Enhancement) Poisons the target with a 10% chance during a standard Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Poisons the target with a 10% chance during a standard Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1050,7 +1050,7 @@
 		</stats>
 	</item>
 	<item id="9330" name="White Lightning" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1086,7 +1086,7 @@
 		</stats>
 	</item>
 	<item id="9331" name="White Lightning" additionalName="Anger" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion (Soul Crystal Enhancement) P. Atk. + 31 and decreases Max HP by 15%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. P. Atk. + 31 and decreases Max HP by 15%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1122,7 +1122,7 @@
 		</stats>
 	</item>
 	<item id="9332" name="Divine Pain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Infernal Master Conversion Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
+		<!-- Kamael-exclusive Weapon: Infernal Master Conversion. Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1154,7 +1154,7 @@
 		</stats>
 	</item>
 	<item id="9333" name="Divine Pain" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Infernal Master Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1189,7 +1189,7 @@
 		</stats>
 	</item>
 	<item id="9334" name="Divine Pain" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Infernal Master Conversion (Soul Crystal Enhancement) P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1224,7 +1224,7 @@
 		</stats>
 	</item>
 	<item id="9335" name="Divine Pain" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Infernal Master Conversion (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1259,7 +1259,7 @@
 		</stats>
 	</item>
 	<item id="9336" name="Doomchanter" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
+		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1292,7 +1292,7 @@
 		</stats>
 	</item>
 	<item id="9337" name="Doomchanter" additionalName="Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion (Soul Crystal Enhancement) Weight Gauge increases by 20%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Weight Gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1329,7 +1329,7 @@
 		</stats>
 	</item>
 	<item id="9338" name="Doomchanter" additionalName="Critical Bleed" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion (Soul Crystal Enhancement) Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1366,7 +1366,7 @@
 		</stats>
 	</item>
 	<item id="9339" name="Doomchanter" additionalName="Mana Up" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1402,7 +1402,7 @@
 		</stats>
 	</item>
 	<item id="9340" name="Lacerator" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion Bestows one of the following functions. P. Critical Damage, Health, or Rsk. Focus. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. Bestows one of the following functions. P. Critical Damage, Health, or Rsk. Focus. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1437,7 +1437,7 @@
 		</stats>
 	</item>
 	<item id="9341" name="Lacerator" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion (Soul Crystal Enhancement) P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. <Soul Crystal Enhancement>. P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1473,7 +1473,7 @@
 		</stats>
 	</item>
 	<item id="9342" name="Lacerator" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1509,7 +1509,7 @@
 		</stats>
 	</item>
 	<item id="9343" name="Lacerator" additionalName="Rsk. Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion (Soul Crystal Enhancement) Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. <Soul Crystal Enhancement>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1545,7 +1545,7 @@
 		</stats>
 	</item>
 	<item id="9344" name="Undertaker" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion Bestows one of the following functions: Health, Critical Bleed, or Critical Drain. -->
+		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion. Bestows one of the following functions: Health, Critical Bleed, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1577,7 +1577,7 @@
 		</stats>
 	</item>
 	<item id="9345" name="Undertaker" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1612,7 +1612,7 @@
 		</stats>
 	</item>
 	<item id="9346" name="Undertaker" additionalName="Critical Bleed" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion (Soul Crystal Enhancement) Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1648,7 +1648,7 @@
 		</stats>
 	</item>
 	<item id="9347" name="Undertaker" additionalName="Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion (Soul Crystal Enhancement) User absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. User absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1684,7 +1684,7 @@
 		</stats>
 	</item>
 	<item id="9348" name="Reaper" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Soul Bow Conversion Bestows one of the following functions: Cheap Shot, Quick Recovery, or Critical Poison. -->
+		<!-- Kamael-exclusive Weapon: Soul Bow Conversion. Bestows one of the following functions: Cheap Shot, Quick Recovery, or Critical Poison. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1717,7 +1717,7 @@
 		</stats>
 	</item>
 	<item id="9349" name="Reaper" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Soul Bow Conversion (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1754,7 +1754,7 @@
 		</stats>
 	</item>
 	<item id="9350" name="Reaper" additionalName="Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Soul Bow Conversion (Soul Crystal Enhancement) Decreases cooldown by about 15%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Decreases cooldown by about 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1790,7 +1790,7 @@
 		</stats>
 	</item>
 	<item id="9351" name="Reaper" additionalName="Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Soul Bow Conversion (Soul Crystal Enhancement) Has an 18% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Has an 18% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1827,7 +1827,7 @@
 		</stats>
 	</item>
 	<item id="9352" name="?clair Bijou" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion Bestows one of the following functions. Haste, Health, or Critical Poison. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion. Bestows one of the following functions. Haste, Health, or Critical Poison. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1862,7 +1862,7 @@
 		</stats>
 	</item>
 	<item id="9353" name="?clair Bijou" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1898,7 +1898,7 @@
 		</stats>
 	</item>
 	<item id="9354" name="?clair Bijou" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1934,7 +1934,7 @@
 		</stats>
 	</item>
 	<item id="9355" name="?clair Bijou" additionalName="Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion (Soul Crystal Enhancement) Has a 15% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Has a 15% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1972,7 +1972,7 @@
 		</stats>
 	</item>
 	<item id="9356" name="Durendal" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion Bestows one of the following functions: Focus, Haste, or Health. -->
+		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion. Bestows one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2004,7 +2004,7 @@
 		</stats>
 	</item>
 	<item id="9357" name="Durendal" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2039,7 +2039,7 @@
 		</stats>
 	</item>
 	<item id="9358" name="Durendal" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2074,7 +2074,7 @@
 		</stats>
 	</item>
 	<item id="9359" name="Durendal" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2109,7 +2109,7 @@
 		</stats>
 	</item>
 	<item id="9360" name="Screaming Vengeance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion Bestows one of the following functions: Cheap Shot, Focus, or Quick Recover. -->
+		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Quick Recover. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2142,7 +2142,7 @@
 		</stats>
 	</item>
 	<item id="9361" name="Screaming Vengeance" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2179,7 +2179,7 @@
 		</stats>
 	</item>
 	<item id="9362" name="Screaming Vengeance" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2215,7 +2215,7 @@
 		</stats>
 	</item>
 	<item id="9363" name="Screaming Vengeance" additionalName="Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion (Soul Crystal Enhancement) Decreases cooldown by about 17%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2251,7 +2251,7 @@
 		</stats>
 	</item>
 	<item id="9364" name="Laevateinn" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion Bestows one of the following functions. Haste, Health, or Focus. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion. Bestows one of the following functions. Haste, Health, or Focus. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2287,7 +2287,7 @@
 		</stats>
 	</item>
 	<item id="9365" name="Laevateinn" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2324,7 +2324,7 @@
 		</stats>
 	</item>
 	<item id="9366" name="Laevateinn" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2361,7 +2361,7 @@
 		</stats>
 	</item>
 	<item id="9367" name="Laevateinn" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion (Soul Crystal Enhancement) Increases Critical by 84. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2398,7 +2398,7 @@
 		</stats>
 	</item>
 	<item id="9368" name="Gram" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion Bestows one of the following functions: Haste, Health, or Focus. -->
+		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion. Bestows one of the following functions: Haste, Health, or Focus. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2431,7 +2431,7 @@
 		</stats>
 	</item>
 	<item id="9369" name="Gram" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2467,7 +2467,7 @@
 		</stats>
 	</item>
 	<item id="9370" name="Gram" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2503,7 +2503,7 @@
 		</stats>
 	</item>
 	<item id="9371" name="Gram" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion (Soul Crystal Enhancement) Increases Critical by 84. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2539,7 +2539,7 @@
 		</stats>
 	</item>
 	<item id="9372" name="Sarunga" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
+		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2573,7 +2573,7 @@
 		</stats>
 	</item>
 	<item id="9373" name="Sarunga" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2611,7 +2611,7 @@
 		</stats>
 	</item>
 	<item id="9374" name="Sarunga" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion (Soul Crystal Enhancement) Increases Critical by 88. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2648,7 +2648,7 @@
 		</stats>
 	</item>
 	<item id="9375" name="Sarunga" additionalName="Critical Slow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion (Soul Crystal Enhancement) Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2686,7 +2686,7 @@
 		</stats>
 	</item>
 	<item id="9376" name="Dynasty Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion Bestows one of the following functions. Focus, Health, or Light. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. Bestows one of the following functions. Focus, Health, or Light. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2722,7 +2722,7 @@
 		</stats>
 	</item>
 	<item id="9377" name="Dynasty Rapier" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion (Soul Crystal Enhancement) Increases Critical Attack by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2759,7 +2759,7 @@
 		</stats>
 	</item>
 	<item id="9378" name="Dynasty Rapier" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2796,7 +2796,7 @@
 		</stats>
 	</item>
 	<item id="9379" name="Dynasty Rapier" additionalName="Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Enchanted to  4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Enchanted to . 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2834,7 +2834,7 @@
 		</stats>
 	</item>
 	<item id="9380" name="Dynasty Ancient Sword" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion Bestows one of the following functions: Focus, Health, or Light. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2867,7 +2867,7 @@
 		</stats>
 	</item>
 	<item id="9381" name="Dynasty Ancient Sword" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion (Soul Crystal Enhancement) Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2903,7 +2903,7 @@
 		</stats>
 	</item>
 	<item id="9382" name="Dynasty Ancient Sword" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2939,7 +2939,7 @@
 		</stats>
 	</item>
 	<item id="9383" name="Dynasty Ancient Sword" additionalName="Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2976,7 +2976,7 @@
 		</stats>
 	</item>
 	<item id="9384" name="Dynasty Crossbow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3010,7 +3010,7 @@
 		</stats>
 	</item>
 	<item id="9385" name="Dynasty Crossbow" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3048,7 +3048,7 @@
 		</stats>
 	</item>
 	<item id="9386" name="Dynasty Crossbow" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion (Soul Crystal Enhancement) Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3085,7 +3085,7 @@
 		</stats>
 	</item>
 	<item id="9387" name="Dynasty Crossbow" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion (Soul Crystal Enhancement) Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />

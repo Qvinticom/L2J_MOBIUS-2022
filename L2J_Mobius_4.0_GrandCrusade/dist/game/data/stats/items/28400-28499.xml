@@ -19,7 +19,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III 100% (1-hr) -->
+			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="28402" name="XP Rune III 100% Pack (7-day)" type="EtcItem">
@@ -34,7 +34,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III 100% (7-day) -->
+			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="28403" name="SP Rune 100% Pack (1-hr)" type="EtcItem">
@@ -49,7 +49,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% (1-hr) -->
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="28404" name="SP Rune 100% Pack (7-day)" type="EtcItem">
@@ -64,7 +64,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% (7-day) -->
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="28405" name="Maphr's Rune 100% Pack (1-hr)" type="EtcItem">
@@ -79,7 +79,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (1-hr) -->
+			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="28406" name="Maphr's Rune 100% Pack (7-day)" type="EtcItem">
@@ -129,7 +129,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28407" min="1" max="1" chance="100" /> <!-- Eva's Rune (7-day) -->
+			<item id="28407" min="1" max="1" chance="100" /> <!-- Eva's Rune - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="28410" name="Eva's Rune Pack (30-day)" type="EtcItem">
@@ -144,7 +144,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28408" min="1" max="1" chance="100" /> <!-- Eva's Rune Pack (30-day) -->
+			<item id="28408" min="1" max="1" chance="100" /> <!-- Eva's Rune - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="28411" name="XP Rune II Pack (7-day)" type="EtcItem">
@@ -160,7 +160,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35933" min="1" max="1" chance="100" /> <!-- XP Rune II (7-day) -->
+			<item id="35933" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% Pack (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="28481" name="Low-Grade Forbidden Secret Book" type="EtcItem">
@@ -541,7 +541,7 @@
 		</skills>
 	</item>
 	<item id="28438" name="Sayha's Talisman Stage 2" type="Armor">
-		<!-- When equipped, P. Def. + 225, M. Def. + 147, XP/SP Gain + 2%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. + 225, M. Def. + 147, XP/SP Gain + 2%.. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -558,7 +558,7 @@
 		</skills>
 	</item>
 	<item id="28439" name="Sayha's Talisman Stage 3" type="Armor">
-		<!-- When equipped, P. Def. + 450, M. Def. + 294, XP/SP Gain + 3%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. + 450, M. Def. + 294, XP/SP Gain + 3%.. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />

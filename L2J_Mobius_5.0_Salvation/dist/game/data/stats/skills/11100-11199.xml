@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11100" toLevel="1" name="Elemental Destruction: Double Casting">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- 4 Elements -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
@@ -16,7 +15,6 @@
 		</effects>
 	</skill>
 	<skill id="11101" toLevel="1" name="Elemental Destruction - Destroyed">
-		<!-- Updated to IO -->
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -30,7 +28,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11102" toLevel="1" name="Elemental Destruction: Water">
-		<!-- Updated to IO -->
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -45,7 +42,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11103" toLevel="1" name="Elemental Destruction: Wind">
-		<!-- Updated to IO -->
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -60,7 +56,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11104" toLevel="1" name="Elemental Destruction: Earth">
-		<!-- Updated to IO -->
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -75,7 +70,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11105" toLevel="1" name="Elemental Destruction: 4 Attributes">
-		<!-- Updated to IO -->
 		<!-- Body is destroyed. -->
 		<icon>icon.skill11866</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -90,8 +84,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11106" toLevel="7" name="Elemental Burst">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
+		<!-- Explodes Destruction to deal M. Atk. of $s1 power on the target and the nearby enemies. Effect: Fire - Ignite, Water - Frozen on a single target, Wind - Knock Back, Earth - Hold. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<abnormalTime>
@@ -144,23 +137,23 @@
 		<attachSkillList>
 			<item>
 				<requiredSkillId>11007</requiredSkillId> <!-- Fire Stance -->
-				<skillId>11107</skillId> <!-- Elemental Burst (Fire) -->
+				<skillId>11107</skillId> <!-- Elemental Burst: Fire -->
 			</item>
 			<item>
 				<requiredSkillId>11008</requiredSkillId> <!-- Water Stance -->
-				<skillId>11108</skillId> <!-- Elemental Burst (Water) -->
+				<skillId>11108</skillId> <!-- Elemental Burst: Water -->
 			</item>
 			<item>
 				<requiredSkillId>11009</requiredSkillId> <!-- Wind Stance -->
-				<skillId>11109</skillId> <!-- Elemental Burst (Wind) -->
+				<skillId>11109</skillId> <!-- Elemental Burst: Wind -->
 			</item>
 			<item>
 				<requiredSkillId>11010</requiredSkillId> <!-- Earth Stance -->
-				<skillId>11110</skillId> <!-- Elemental Burst (Earth) -->
+				<skillId>11110</skillId> <!-- Elemental Burst: Earth -->
 			</item>
 			<item>
 				<requiredSkillId>19313</requiredSkillId> <!-- Dark Stance -->
-				<skillId>11111</skillId> <!-- Elemental Burst (Dark) -->
+				<skillId>11111</skillId> <!-- Elemental Burst: Dark -->
 			</item>
 		</attachSkillList>
 		<conditions>
@@ -204,8 +197,7 @@
 		</effects>
 	</skill>
 	<skill id="11107" toLevel="7" name="Elemental Burst: Fire">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
@@ -280,7 +272,7 @@
 				</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>11139</skillId>
+				<skillId>11139</skillId> <!-- Ignite -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
@@ -292,8 +284,7 @@
 		</effects>
 	</skill>
 	<skill id="11108" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
@@ -373,38 +364,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19413</skillId>
+				<skillId>19413</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11109" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>WIND</attributeType>
@@ -483,38 +473,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19414</skillId>
+				<skillId>19414</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11110" toLevel="7" name="Elemental Burst: Earth">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>EARTH</attributeType>
@@ -593,38 +582,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19415</skillId>
+				<skillId>19415</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11111" toLevel="7" name="Elemental Burst: Dark">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with $s1 Power. For $s2, M. Def. - $s3. -->
+		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with $s1 Power. For $s2, M. Def. -$s3. -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>
 			<value level="1">15</value>
@@ -719,8 +707,7 @@
 		</effects>
 	</skill>
 	<skill id="11112" toLevel="7" name="Elemental Burst">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Water-Frozen, Holy-Stun. -->
+		<!-- Explodes Destruction on the target to inflict damage with $s1 power added to M. Atk. on the target and the enemies near it. Effect: Water - Frozen, Holy - Stun. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11112</reuseDelayGroup>
@@ -762,11 +749,11 @@
 		<attachSkillList>
 			<item>
 				<requiredSkillId>11008</requiredSkillId> <!-- Water Stance -->
-				<skillId>11114</skillId> <!-- Elemental Burst (Water) -->
+				<skillId>11114</skillId> <!-- Elemental Burst: Water -->
 			</item>
 			<item>
 				<requiredSkillId>19312</requiredSkillId> <!-- Holy Stance -->
-				<skillId>11113</skillId> <!-- Elemental Burst (Holy) -->
+				<skillId>11113</skillId> <!-- Elemental Burst: Holy -->
 			</item>
 		</attachSkillList>
 		<conditions>
@@ -810,8 +797,7 @@
 		</effects>
 	</skill>
 	<skill id="11113" toLevel="7" name="Elemental Burst: Holy">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Water-Frozen, Holy-Stun. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Water-Frozen, Holy-Stun. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<attributeType>HOLY</attributeType>
@@ -890,38 +876,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19416</skillId>
+				<skillId>19416</skillId> <!-- Elemental Burst: Holy -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11114" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Water-Frozen, Holy-Stun. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Water-Frozen, Holy-Stun. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
@@ -1000,38 +985,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19417</skillId>
+				<skillId>19417</skillId> <!-- Elemental Burst: Water -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11115" toLevel="7" name="Elemental Burst">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleport/Cancel Target on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleport/ Cancel Target on a single target/ Reset Teleport Skill Cooldown. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11115</reuseDelayGroup>
@@ -1073,11 +1057,11 @@
 		<attachSkillList>
 			<item>
 				<requiredSkillId>11007</requiredSkillId> <!-- Fire Stance -->
-				<skillId>11116</skillId> <!-- Elemental Burst (Fire) -->
+				<skillId>11116</skillId> <!-- Elemental Burst: Fire -->
 			</item>
 			<item>
 				<requiredSkillId>19313</requiredSkillId> <!-- Dark Stance -->
-				<skillId>11117</skillId> <!-- Elemental Burst (Dark) -->
+				<skillId>11117</skillId> <!-- Elemental Burst: Dark -->
 			</item>
 		</attachSkillList>
 		<conditions>
@@ -1121,8 +1105,7 @@
 		</effects>
 	</skill>
 	<skill id="11116" toLevel="7" name="Elemental Burst: Fire">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleport/Cancel Target on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleport/ Cancel Target on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
@@ -1196,7 +1179,7 @@
 				</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>11139</skillId>
+				<skillId>11139</skillId> <!-- Ignite -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
@@ -1208,8 +1191,7 @@
 		</effects>
 	</skill>
 	<skill id="11117" toLevel="7" name="Elemental Burst: Dark">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleport/Cancel Target on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 Power. Effect: Fire attribute - Ranged Ignite, Dark attribute - Single Target Teleport/ Cancel Target/ Reset Teleport Skill Cooldown. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>DARK</attributeType>
@@ -1294,8 +1276,7 @@
 		</effects>
 	</skill>
 	<skill id="11118" toLevel="7" name="Elemental Burst">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Wind-Cancel Target/Faint, Dark-Increased M. Critical Rate Received on a single target. -->
+		<!-- Explodes Destruction on the target to inflict damage with $s1 power added to M. Atk. on the target and the enemies near it. Effect: Wind - Cancel Target/ Faint, Dark - Increased chance of receiving M. Critical Attack on a single target. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11118</reuseDelayGroup>
@@ -1336,11 +1317,11 @@
 		<attachSkillList>
 			<item>
 				<requiredSkillId>11009</requiredSkillId> <!-- Wind Stance -->
-				<skillId>11119</skillId> <!-- Elemental Burst (Wind) -->
+				<skillId>11119</skillId> <!-- Elemental Burst: Wind -->
 			</item>
 			<item>
 				<requiredSkillId>19313</requiredSkillId> <!-- Dark Stance -->
-				<skillId>11120</skillId> <!-- Elemental Burst (Dark) -->
+				<skillId>11120</skillId> <!-- Elemental Burst: Dark -->
 			</item>
 		</attachSkillList>
 		<conditions>
@@ -1384,8 +1365,7 @@
 		</effects>
 	</skill>
 	<skill id="11119" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Wind-Cancel Target/Faint, Dark-Increased M. Critical Rate Received on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Wind-Cancel Target/ Faint, Dark-Increased M. Critical Rate Received on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<attributeType>WIND</attributeType>
@@ -1464,38 +1444,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19418</skillId>
+				<skillId>19418</skillId> <!-- Elemental Burst: Wind -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11120" toLevel="7" name="Elemental Burst: Dark">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Wind-Cancel Target/Faint, Dark-Increased M. Critical Rate Received on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Wind-Cancel Target/ Faint, Dark-Increased M. Critical Rate Received on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
@@ -1580,8 +1559,7 @@
 		</effects>
 	</skill>
 	<skill id="11121" toLevel="7" name="Elemental Burst">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Earth-Knock Down, Dark-Additional Damage on a single target. -->
+		<!-- Explodes Destruction on the target to inflict damage with $s1 power added to M. Atk. on the target and the enemies near it. Effect: Earth - Knock Down, Dark - Additional Damage on a single target. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11121</reuseDelayGroup>
@@ -1623,11 +1601,11 @@
 		<attachSkillList>
 			<item>
 				<requiredSkillId>11010</requiredSkillId> <!-- Earth Stance -->
-				<skillId>11122</skillId> <!-- Elemental Burst (Earth) -->
+				<skillId>11122</skillId> <!-- Elemental Burst: Earth -->
 			</item>
 			<item>
 				<requiredSkillId>19313</requiredSkillId> <!-- Dark Stance -->
-				<skillId>11123</skillId> <!-- Elemental Burst (Dark) -->
+				<skillId>11123</skillId> <!-- Elemental Burst: Dark -->
 			</item>
 		</attachSkillList>
 		<conditions>
@@ -1671,8 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="11122" toLevel="7" name="Elemental Burst: Earth">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Earth-Knock Down, Dark-Additional Damage on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Earth-Knock Down, Dark-Additional Damage on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>EARTH</attributeType> <!-- Earth -->
@@ -1751,38 +1728,37 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="4" toLevel="4">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="5" toLevel="5">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>5</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="6" toLevel="6">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>6</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="7" toLevel="7">
-				<skillId>19419</skillId>
+				<skillId>19419</skillId> <!-- Elemental Burst: Earth -->
 				<skillLevel>7</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11123" toLevel="7" name="Elemental Burst: Dark">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Earth-Knock Down, Dark-Additional Damage on a single target. -->
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Earth-Knock Down, Dark-Additional Damage on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
@@ -1863,8 +1839,7 @@
 		</effects>
 	</skill>
 	<skill id="11124" toLevel="7" name="Superior Elemental Master">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Increases M. Attack by $s1, P. Defense by $s2 and Magical Critical Damage by $s3. -->
+		<!-- Increases M. Atk. by $s1, P. Defense by $s2 and Magical Critical Damage by $s3. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1905,7 +1880,6 @@
 		</effects>
 	</skill>
 	<skill id="11125" toLevel="7" name="Superior Spirit Eye">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Increases M. Atk. and M. Critical Damage by $s1 and $s2, respectively. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
@@ -1942,8 +1916,7 @@
 		</effects>
 	</skill>
 	<skill id="11126" toLevel="3" name="Fire Destruction">
-		<!-- Updated to IO -->
-		<!-- Inflicts 620 magical damage on target, and inflicts Fear. Over-hit. -->
+		<!-- Inflicts $s1 magical damage on target, and inflicts Fear. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
@@ -1983,8 +1956,7 @@
 		</effects>
 	</skill>
 	<skill id="11127" toLevel="3" name="Dark Destruction">
-		<!-- Updated to IO -->
-		<!-- Inflicts 713 magical damage on target. Over-hit. -->
+		<!-- Inflicts $s1 magical damage on target. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
@@ -2014,8 +1986,7 @@
 		</effects>
 	</skill>
 	<skill id="11128" toLevel="3" name="Water Destruction">
-		<!-- Updated to IO -->
-		<!-- Inflicts 620 magical damage on target, and decreases their Speed by 130. Over-hit. -->
+		<!-- Inflicts $s1 magical damage on target, and decreases their Speed by $s2. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2059,8 +2030,7 @@
 		</effects>
 	</skill>
 	<skill id="11129" toLevel="3" name="Wind Destruction">
-		<!-- Updated to IO -->
-		<!-- Inflicts 620 magical damage on target, and inflicts Knock Back. Over-hit. -->
+		<!-- Inflicts $s1 magical damage on target, and inflicts Knock Back. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -2103,8 +2073,7 @@
 		</effects>
 	</skill>
 	<skill id="11130" toLevel="3" name="Soul Destruction">
-		<!-- Updated to IO -->
-		<!-- Inflicts 620 magical damage on target, and inflicts Hold. Over-hit. -->
+		<!-- Inflicts $s1 magical damage on target, and inflicts Hold. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
@@ -2141,8 +2110,7 @@
 		</effects>
 	</skill>
 	<skill id="11131" toLevel="3" name="Life Straw">
-		<!-- Updated to IO -->
-		<!-- For 10 sec., attacks target with 115 Power per second and recovers HP equivalent to 100% of damage inflicted. -->
+		<!-- For $s1, attacks target with $s2 Power per second and recovers HP equivalent to $s3 of damage inflicted. -->
 		<icon>icon.skill0000</icon>
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
@@ -2177,8 +2145,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11132" toLevel="3" name="Lightning Shield">
-		<!-- Updated to IO -->
-		<!-- For 30 sec., creates a shield of lightning and Paralyzes those that attack you. -->
+		<!-- Spreads lightning's defensive barrier for $s1. Paralyzes the target that attacked you. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2207,7 +2174,7 @@
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
 				<minDamage>100</minDamage>
-				<skillId>11133</skillId>
+				<skillId>11133</skillId> <!-- Lightning Shield: Paralyze -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -2217,7 +2184,6 @@
 		</effects>
 	</skill>
 	<skill id="11133" toLevel="3" name="Lightning Shield: Paralyze">
-		<!-- Updated to IO -->
 		<!-- Momentarily stiffened. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLvl>
@@ -2245,11 +2211,10 @@
 		</effects>
 	</skill>
 	<skill id="11134" toLevel="1" name="Meteor">
-		<!-- Updated to IO -->
-		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ores. -->
+		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11134</icon>
 		<affectRange>250</affectRange>
-		<channelingSkillId>11134</channelingSkillId>
+		<channelingSkillId>11134</channelingSkillId> <!-- Meteor -->
 		<channelingTickInterval>2</channelingTickInterval>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -2287,15 +2252,14 @@
 			</effect>
 			<effect name="CallSkill">
 				<!-- Ignite -->
-				<skillId>11139</skillId>
+				<skillId>11139</skillId> <!-- Ignite -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</channelingEffects>
 	</skill>
 	<skill id="11135" toLevel="1" name="Black Pool">
-		<!-- Updated to IO -->
-		<!-- Creates a black swamp in the selected location, dealing great damage, and receiving 50% of the target's damage as HP. Inflicts abnormal state and decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Shocks the target. Consumes 5 Spirit Ores. -->
+		<!-- Forms Black Swampland in a specified location to constantly inflict powerful damage on the enemies and absorbs $s1 of the damage inflicted on the target as your HP. Triggers additional abnormal state to decelerate. Its power increases as per the level of abnormal state. Once it reaches the final level, the Stun is inflicted. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill11135</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2328,16 +2292,14 @@
 			</effect>
 			<effect name="CallSkill">
 				<!-- Black Shackle -->
-				<skillId>11140</skillId>
+				<skillId>11140</skillId> <!-- Black Shackle -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</channelingEffects>
 	</skill>
 	<skill id="11136" toLevel="1" name="Snow Storm">
-		<!-- Updated to IO -->
-		<!-- Hits 8 times -->
-		<!-- Creates an ice storm in the selected location, dealing continuous damage. Inflicts abnormal state and decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes 5 Spirit Ores. -->
+		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11136</icon>
 		<affectRange>250</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2381,15 +2343,14 @@
 			</effect>
 			<effect name="CallSkill">
 				<!-- Freezing Slow -->
-				<skillId>11141</skillId>
+				<skillId>11141</skillId> <!-- Freezing Slow -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</channelingEffects>
 	</skill>
 	<skill id="11137" toLevel="1" name="Tornado">
-		<!-- Updated to IO -->
-		<!-- Creates a tornado in the selected location, dealing great damage. Inflicts abnormal state and decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes 5 Spirit Ores. -->
+		<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11137</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2431,15 +2392,14 @@
 			</effect>
 			<effect name="CallSkill">
 				<!-- Wind Binding -->
-				<skillId>11144</skillId>
+				<skillId>11144</skillId> <!-- Wind Binding -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</channelingEffects>
 	</skill>
 	<skill id="11138" toLevel="1" name="Soul Barrage">
-		<!-- Updated to IO -->
-		<!-- Detonates the soul in the selected location to attack surrounding enemies. Inflicts abnormal state and increases PvP Damage. The effect increases as the level of the abnormal state increases. Consumes 5 Spirit Ores. -->
+		<!-- Detonates the soul in the selected location to deal great damage to surrounding enemies. Increases PvP Damage Received. The effect becomes greater as the level of the debuff increases. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11138</icon>
 		<affectRange>250</affectRange> <!-- Guessed -->
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2463,15 +2423,14 @@
 			</effect>
 			<effect name="CallSkill">
 				<!-- Soul Weakness -->
-				<skillId>11145</skillId>
+				<skillId>11145</skillId> <!-- Soul Weakness -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</channelingEffects>
 	</skill>
 	<skill id="11139" toLevel="5" name="Ignite">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Damage is inflicted by $s1 power added to M. Attack as youre engulfed in flames and the Healing received decreases by $s2. -->
+		<!-- Damage is inflicted with $s1 power added to M. Atk. as you're engulfed in flames and the Healing received decreases by $s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2510,7 +2469,6 @@
 		</effects>
 	</skill>
 	<skill id="11140" toLevel="5" name="Black Shackle">
-		<!-- Updated to IO -->
 		<!-- Bound to dark power. -->
 		<icon>icon.skill11135</icon>
 		<abnormalLvl>
@@ -2545,7 +2503,6 @@
 		</effects>
 	</skill>
 	<skill id="11141" toLevel="5" name="Freezing Slow">
-		<!-- Updated to IO -->
 		<!-- The cold is creeping up from your feet. -->
 		<icon>icon.skill11136</icon>
 		<abnormalLvl>
@@ -2587,7 +2544,6 @@
 		</effects>
 	</skill>
 	<skill id="11142" toLevel="3" name="Damaged Area">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2628,7 +2584,6 @@
 		</effects>
 	</skill>
 	<skill id="11143" toLevel="3" name="Damaged Area">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2669,7 +2624,6 @@
 		</effects>
 	</skill>
 	<skill id="11144" toLevel="5" name="Wind Binding">
-		<!-- Updated to IO -->
 		<!-- Speed has decreased due to the gust. -->
 		<icon>icon.skill11137</icon>
 		<abnormalLvl>
@@ -2711,7 +2665,6 @@
 		</effects>
 	</skill>
 	<skill id="11145" toLevel="5" name="Soul Weakness">
-		<!-- Updated to IO -->
 		<!-- Cursed by a soul. -->
 		<icon>icon.skill11138</icon>
 		<abnormalLvl>
@@ -2763,8 +2716,7 @@
 		</effects>
 	</skill>
 	<skill id="11150" toLevel="11" name="Elemental Crash (Dark)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases M. Defense by $s2. -->
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases M. Defense by $s2. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -2863,8 +2815,7 @@
 		</effects>
 	</skill>
 	<skill id="11151" toLevel="7" name="Superior Necromancy">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Increases M. Attack by $s1 and P. Defense by $s2. Additionally, casting Elemental Spike (Dark) activates Curse Gloom which decreases the target??s M. Defense and all attribute defenses. -->
+		<!-- Increases M. Atk. by $s1 and P. Defense by $s2. Additionally, casting Elemental Spike (Dark) activates Curse Gloom which decreases the target's M. Defense and all attribute defenses. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2896,7 +2847,7 @@
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>11150</castSkillId>
-				<skillId>19409</skillId>
+				<skillId>19409</skillId> <!-- Curse Gloom -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
@@ -2904,8 +2855,7 @@
 		</effects>
 	</skill>
 	<skill id="11152" toLevel="1" name="Sacrificial Soul">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Sacrifice your servitor to become immune to debuffs for 3 sec. -->
+		<!-- Sacrifices your Servitor to become immune against debuff for $s1. -->
 		<icon>icon.skill1395</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3004,8 +2954,7 @@
 		</effects>
 	</skill>
 	<skill id="11153" toLevel="1" name="Chain Blaze">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Attacks the target and nearby enemies with M. Atk. +349. The damage increases incrementally. 2 Spirit Ores consumed. -->
+		<!-- Attacks the target and nearby enemies with M. Atk. +349. The damage increases incrementally. 2 Spirit Ore consumed. -->
 		<icon>icon.skill11153</icon>
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -3045,12 +2994,12 @@
 		</effects>
 	</skill>
 	<skill id="11154" toLevel="1" name="Fire Potential">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. is temporarily increased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="11155" toLevel="1" name="Water Potential">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Skill Cooldown -10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -3119,8 +3068,7 @@
 		</effects>
 	</skill>
 	<skill id="11176" toLevel="7" name="Superior Mana of Spirit">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Increases M. Attack by $s1 and decreases Magical Skill Cooldown by $s2. Casting Elemental Spike (Water) freeze the target at a certain probability. -->
+		<!-- Increases M. Atk. by $s1 and decreases Magical Skill Cooldown by $s2. Casting Elemental Spike (Water) freeze the target at a certain probability. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3174,8 +3122,7 @@
 		</effects>
 	</skill>
 	<skill id="11177" toLevel="7" name="Aqua Crash">
-		<!-- Updated to IO -->
-		<!-- Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
+		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3. Over-hit. -->
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<allStanceSkillId>11189</allStanceSkillId> <!-- Double Casting skill Id -->
@@ -3224,7 +3171,6 @@
 		</effects>
 	</skill>
 	<skill id="11178" toLevel="1" name="Aqua Crash - Speed Decrease">
-		<!-- Updated to IO -->
 		<!-- Use Aqua Crash to decrease target's Speed. -->
 		<icon>icon.skill11011</icon>
 		<magicLvl>85</magicLvl>
@@ -3235,14 +3181,13 @@
 				<!-- Aqua Crash -->
 				<!-- Frozen -->
 				<attackSkillId>11177</attackSkillId>
-				<skillId>11188</skillId>
+				<skillId>11188</skillId> <!-- Freeze - Slow -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11179" toLevel="1" name="Yoke Status">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3288,7 +3233,6 @@
 		</effects>
 	</skill>
 	<skill id="11180" toLevel="1" name="Yoke Status">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3334,7 +3278,6 @@
 		</effects>
 	</skill>
 	<skill id="11181" toLevel="1" name="Yoke Status">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3380,8 +3323,6 @@
 		</effects>
 	</skill>
 	<skill id="11182" toLevel="4" name="Yoke Status">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily immobilized midair. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3427,8 +3368,7 @@
 		</effects>
 	</skill>
 	<skill id="11183" toLevel="1" name="Superior Quick Recovery">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2 and Cooldown - 25% for magic skills. -->
+		<!-- Cooldown -25% for magic skills. INT +2. -->
 		<icon>icon.skill11004</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -3446,9 +3386,7 @@
 		</effects>
 	</skill>
 	<skill id="11184" toLevel="1" name="Superior Arcane Lore">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Glory Days confirmed -->
-		<!-- Fire/Water/Wind/Earth Resistance + 20, and M. Def. + 5%%. INT +2. -->
+		<!-- Fire/ Water/ Wind/ Earth Resistance +20, and M. Def. +5%. INT +2. -->
 		<icon>icon.skill10044</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -3481,8 +3419,7 @@
 		</effects>
 	</skill>
 	<skill id="11185" toLevel="10" name="Superior MP Boost">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2 and increases Max MP by 313. -->
+		<!-- Max MP +$s1. INT +$s2. -->
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3521,8 +3458,7 @@
 		</effects>
 	</skill>
 	<skill id="11186" toLevel="10" name="Superior Fast MP Recovery">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2 and increases MP Recovery Bonus by 3.6. -->
+		<!-- MP Recovery Bonus +$s1. INT +$s2. -->
 		<icon>icon.skill0229</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3561,8 +3497,7 @@
 		</effects>
 	</skill>
 	<skill id="11187" toLevel="10" name="Superior Clear Mind">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2, increases MP Recovery Bonus by 5.1 while standing and by 6.5 while walking. -->
+		<!-- MP Recovery Bonus +$s1 while walking and +$s2 while standing. INT +$s3. -->
 		<icon>icon.skill11187</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3618,7 +3553,6 @@
 		</effects>
 	</skill>
 	<skill id="11188" toLevel="5" name="Freeze - Slow">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Speed decreased by $s1 due to chill below your feet. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3670,8 +3604,7 @@
 		</effects>
 	</skill>
 	<skill id="11189" toLevel="7" name="Aqua Crash">
-		<!-- Updated to IO -->
-		<!-- Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
+		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3. Over-hit. -->
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
@@ -3718,37 +3651,31 @@
 		</effects>
 	</skill>
 	<skill id="11190" toLevel="1" name="Elemental Destruction: Fire">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11191" toLevel="1" name="Elemental Destruction: Water">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11192" toLevel="1" name="Elemental Destruction: Wind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11193" toLevel="1" name="Elemental Destruction: Earth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11194" toLevel="1" name="Elemental Destruction: Double Casting">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Elements -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11195" toLevel="1" name="Aqua Crash - Freeze">
-		<!-- Updated to IO -->
 		<!-- Use Aqua Crash to freeze target. -->
 		<icon>icon.skill11011</icon>
 		<magicLvl>85</magicLvl>
@@ -3757,21 +3684,20 @@
 		<effects>
 			<effect name="TriggerSkillBySkillAttack">
 				<attackSkillId>11177</attackSkillId> <!-- Aqua Crash -->
-				<skillId>11188</skillId> <!-- Frozen --> 
+				<skillId>11188</skillId> <!-- Freeze - Slow -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 				<chance>33</chance> <!-- Chance guessed -->
 			</effect>
 			<effect name="TriggerSkillBySkillAttack">
 				<attackSkillId>11189</attackSkillId> <!-- Aqua Crash -->
-				<skillId>11196</skillId> <!-- Frozen -->
+				<skillId>11196</skillId> <!-- Freeze -->
 				<skillLevel>1</skillLevel>
 				<chance>33</chance> <!-- Chance guessed -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11196" toLevel="1" name="Freeze">
-		<!-- Updated to IO -->
 		<!-- Frozen. -->
 		<icon>icon.skill11017</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3790,7 +3716,6 @@
 		</effects>
 	</skill>
 	<skill id="11199" toLevel="1" name="Elemental Destruction: Fire">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>

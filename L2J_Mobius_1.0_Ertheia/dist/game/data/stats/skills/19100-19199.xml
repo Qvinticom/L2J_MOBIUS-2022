@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19100" toLevel="1" name="Light Armor Mastery - Test">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Spd. And Skill Critical Rate increase depending on DEX. -->
 		<icon>icon.skill19100</icon>
 		<operateType>P</operateType>
@@ -9,7 +8,6 @@
 		<magicLvl>99</magicLvl>
 	</skill>
 	<skill id="19101" toLevel="1" name="Chain Blow - Test">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage with 33717 Power added to P. Atk. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. Additional damage occurs with Bleed. -->
 		<icon>icon.skill19101</icon>
 		<operateType>A1</operateType>
@@ -34,7 +32,6 @@
 		</conditions>
 	</skill>
 	<skill id="19102" toLevel="1" name="Chaos Sympathy">
-		<!-- Glory Days confirmed -->
 		<!-- Temporarily makes a participant in the Ceremony of Chaos invincible. -->
 		<icon>icon.skill1505</icon>
 		<operateType>A2</operateType>
@@ -67,7 +64,6 @@
 		</effects>
 	</skill>
 	<skill id="19103" toLevel="1" name="Resident Power">
-		<!-- Glory Days confirmed -->
 		<!-- For clan members owning a residence, Max CP + 700, and PvP Def. + 3%. -->
 		<icon>icon.skill0050</icon>
 		<operateType>P</operateType>
@@ -93,7 +89,6 @@
 		</effects>
 	</skill>
 	<skill id="19104" toLevel="2" name="Resident Power">
-		<!-- Glory Days confirmed -->
 		<!-- For clan members owning a residence, Max CP + 1000, and PvP Def. + 5%. -->
 		<icon>icon.skill0050</icon>
 		<operateType>P</operateType>
@@ -119,7 +114,6 @@
 		</effects>
 	</skill>
 	<skill id="19105" toLevel="1" name="Resident Advantage">
-		<!-- Glory Days confirmed -->
 		<!-- For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 13%. -->
 		<icon>icon.skill0820</icon>
 		<operateType>P</operateType>
@@ -148,7 +142,6 @@
 		</effects>
 	</skill>
 	<skill id="19106" toLevel="2" name="Resident Advantage">
-		<!-- Glory Days confirmed -->
 		<!-- For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 15%. -->
 		<icon>icon.skill0820</icon>
 		<operateType>P</operateType>
@@ -178,7 +171,6 @@
 		</effects>
 	</skill>
 	<skill id="19107" toLevel="1" name="Resident Guidance">
-		<!-- Glory Days confirmed -->
 		<!-- For clan members owning a residence, acquired XP + 3%. -->
 		<icon>icon.skill0788_3</icon>
 		<operateType>P</operateType>
@@ -192,7 +184,6 @@
 		</effects>
 	</skill>
 	<skill id="19108" toLevel="2" name="Resident Guidance">
-		<!-- Glory Days confirmed -->
 		<!-- For clan members owning a residence, acquired XP + 5%. -->
 		<icon>icon.skill0788_5</icon>
 		<operateType>P</operateType>
@@ -206,7 +197,6 @@
 		</effects>
 	</skill>
 	<skill id="19109" toLevel="4" name="Siege Golem's Spirit">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade). -->
 		<icon>icon.skill19109</icon>
 		<operateType>A2</operateType>
@@ -223,11 +213,7 @@
 		<abnormalType>TRANSFORM</abnormalType>
 	</skill>
 	<skill id="19110" toLevel="5" name="Clan Resilience">
-		<!-- Level 1: Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only. -->
-		<!-- Level 2: Clan members' resistance to Knock Back / Knock Down + 13. Elder or above only. -->
-		<!-- Level 3: Clan members' resistance to Knock Back / Knock Down + 14. Elder or above only. -->
-		<!-- Level 4: Clan members' resistance to Knock Back / Knock Down + 15. Elder or above only. -->
-		<!-- Level 5: Clan members' resistance to Knock Back / Knock Down + 16. Elder or above only. -->
+		<!-- Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only. -->
 		<icon>icon.skill_tough_spirit</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -250,11 +236,7 @@
 		</effects>
 	</skill>
 	<skill id="19111" toLevel="5" name="Clan Steadfastness">
-		<!-- Level 1: Clan members' resistance to Aerial Yoke + 12. Elder or above only. -->
-		<!-- Level 2: Clan members' resistance to Aerial Yoke + 13. Elder or above only. -->
-		<!-- Level 3: Clan members' resistance to Aerial Yoke + 14. Elder or above only. -->
-		<!-- Level 4: Clan members' resistance to Aerial Yoke + 15. Elder or above only. -->
-		<!-- Level 5: Clan members' resistance to Aerial Yoke + 16. Elder or above only. -->
+		<!-- Clan members' resistance to Aerial Yoke + 12. Elder or above only. -->
 		<icon>icon.skill_heavy_heart</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -270,7 +252,6 @@
 		</effects>
 	</skill>
 	<skill id="19112" toLevel="1" name="Clan Escape">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports nearby clan members to town. Cannot be used in special places such as GM Consultation Services. Consumes 50 Spirit Ores and 2000 Individual Fame. Viscount or above only. -->
 		<icon>icon.skill_pledge_party_recall</icon>
 		<operateType>A1</operateType>
@@ -280,7 +261,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19113" toLevel="1" name="Clan Escape Lock">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only. -->
 		<icon>icon.skill_recall</icon>
 		<operateType>A2</operateType>
@@ -291,7 +271,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="19114" toLevel="1" name="Clan Resurrection Lock">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
@@ -364,13 +343,11 @@
 		</effects>
 	</skill>
 	<skill id="19117" toLevel="1" name="Dimensional Defense">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Status defense abilities are greatly increased by receiving dimensional abilities. -->
 		<icon>icon.skill14216</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19118" toLevel="4" name="Bike Ability">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A2</operateType>
@@ -536,8 +513,7 @@
 		</effects>
 	</skill>
 	<skill id="19127" toLevel="2" name="Noble Guidance">
-		<!-- Level 1: P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
-		<!-- Level 2: P. Accuracy + 16, M. Accuracy + 16, servitor's P. Accuracy + 23. -->
+		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
 		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -564,8 +540,7 @@
 		</effects>
 	</skill>
 	<skill id="19128" toLevel="2" name="Noble Sting">
-		<!-- Level 1: Physical Skill Critical Damage + 5%. -->
-		<!-- Level 2: Physical Skill Critical Damage + 10%. -->
+		<!-- Physical Skill Critical Damage + 5%. -->
 		<icon>icon.skill10655</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -845,8 +820,7 @@
 		</effects>
 	</skill>
 	<skill id="19142" toLevel="2" name="Noble Warrior Buffs">
-		<!-- Level 1: Stun/Restrain success rate and defense rate + 5%. -->
-		<!-- Level 2: Stun/Restrain success rate and defense rate + 10%. -->
+		<!-- Stun/Restrain success rate and defense rate + 5%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill19142</icon>
 		<effects>
@@ -1041,10 +1015,7 @@
 		</effects>
 	</skill>
 	<skill id="19154" toLevel="4" name="Noble Empower">
-		<!-- Level 1: M. Atk. + 3% and recovery magic Power + 47. -->
-		<!-- Level 2: M. Atk. + 6% and recovery magic Power + 94. -->
-		<!-- Level 3: M. Atk. + 9% and recovery magic Power + 141. -->
-		<!-- Level 4: M. Atk. + 14% and recovery magic Power + 211. -->
+		<!-- M. Atk. + 3% and recovery magic Power + 47. -->
 		<operateType>P</operateType>
 		<icon>icon.skill1059</icon>
 		<effects>
@@ -1083,8 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="19156" toLevel="2" name="Noble Wizard Buffs">
-		<!-- Level 1: Restrain/Mind success rate and defense rate + 5%. -->
-		<!-- Level 2: Restrain/Mind success rate and defense rate + 10%. -->
+		<!-- Restrain/Mind success rate and defense rate + 5%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill19156</icon>
 		<effects>
@@ -1153,8 +1123,7 @@
 		</effects>
 	</skill>
 	<skill id="19160" toLevel="2" name="Noble Magic Death">
-		<!-- Level 1: M. Critical Damage + 3% and recovery magic Power + 94. -->
-		<!-- Level 2: M. Critical Damage + 5% and recovery magic Power + 211. -->
+		<!-- M. Critical Damage + 3% and recovery magic Power + 94. -->
 		<operateType>P</operateType>
 		<icon>icon.skill19160</icon>
 		<effects>
@@ -1529,53 +1498,43 @@
 		</effects>
 	</skill>
 	<skill id="19178" toLevel="1" name="Knight Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19179" toLevel="1" name="Warrior Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19180" toLevel="1" name="Rogue Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19181" toLevel="1" name="Archer Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19182" toLevel="1" name="Wizard Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19183" toLevel="1" name="Enchanter Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19184" toLevel="1" name="Summoner Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19185" toLevel="1" name="Healer Hidden Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19186" toLevel="1" name="Rampage Shield">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Has a chance of increasing P. Atk. when Shield Defense is successful. Requires Abilities. -->
 		<icon>icon.skill19186</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19187" toLevel="1" name="Blockade">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 sec., blocks target's P./M. Skills. Requires Abilities. -->
 		<icon>icon.skill19187</icon>
 		<operateType>A2</operateType>
@@ -1588,13 +1547,11 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="19188" toLevel="1" name="Snicker">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When hit in PvP, has a chance of canceling target's target. Requires Abilities. -->
 		<icon>icon.skill19188</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19189" toLevel="1" name="Retreating Shot">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 30534 power added to P. Atk., and cancels their target while moving 450 grids backward. Requires Abilities and bow/crossbow. -->
 		<icon>icon.skill10858</icon>
 		<operateType>A1</operateType>
@@ -1606,19 +1563,16 @@
 		<reuseDelay>30000</reuseDelay>
 	</skill>
 	<skill id="19190" toLevel="1" name="Brilliant Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Maximum MP + 10%, and MP Recovery Bonus + 8 when running. Requires Abilities. -->
 		<icon>icon.skill19190</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19191" toLevel="1" name="Mist Armor">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Damage Received - 10%. Requires Abilities. -->
 		<icon>icon.skill19191</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19192" toLevel="1" name="Mass Servitor Berserk">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., servitor's P. Atk. + 15%, and Critical Damage + 15%. Requires Abilities. -->
 		<icon>icon.skill19192</icon>
 		<operateType>A2</operateType>
@@ -1631,13 +1585,11 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19193" toLevel="1" name="Divine Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Healing power and magic power increases when using Radiant Heal. Requires Abilities. -->
 		<icon>icon.skill19193</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19196" toLevel="1" name="Rampage Shield">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 sec., P. Atk. + 30%. Requires a shield. -->
 		<icon>icon.skill19186</icon>
 		<operateType>A2</operateType>
@@ -1645,7 +1597,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="19197" toLevel="1" name="Divine Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., M. Atk. + 16%, and Healing Magic Power + 242. -->
 		<icon>icon.skill19193</icon>
 		<operateType>A2</operateType>
@@ -1653,14 +1604,12 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="19198" toLevel="1" name="Cancel Target">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0445</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="19199" toLevel="1" name="Hurricane Sign">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., P./M. Atk. + 10%. -->
 		<icon>icon.skill1996</icon>
 		<operateType>A2</operateType>

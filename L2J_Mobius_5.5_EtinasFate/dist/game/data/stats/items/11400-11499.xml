@@ -347,7 +347,7 @@
 		</stats>
 	</item>
 	<item id="11416" name="Dark Crystal Shield" type="Armor">
-		<!-- Masterwork Item that increases M. Def. -->
+		<!-- Increases Magic Damage Resistance by 2%. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -529,7 +529,7 @@
 		</stats>
 	</item>
 	<item id="11425" name="Sealed Dark Crystal Shield" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Masterwork Item. A village blacksmith can release the seal on this item. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -752,7 +752,7 @@
 		</stats>
 	</item>
 	<item id="11437" name="Tallum Gloves" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -773,7 +773,7 @@
 		</stats>
 	</item>
 	<item id="11438" name="Tallum Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -794,7 +794,7 @@
 		</stats>
 	</item>
 	<item id="11439" name="Tallum Gloves" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases M. Def. and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -815,7 +815,7 @@
 		</stats>
 	</item>
 	<item id="11440" name="Tallum Leather Armor" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t78_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -837,7 +837,7 @@
 		</stats>
 	</item>
 	<item id="11441" name="Tallum Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -858,7 +858,7 @@
 		</stats>
 	</item>
 	<item id="11442" name="Tallum Boots" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases MP Recovery Rate, Max MP, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -879,7 +879,7 @@
 		</stats>
 	</item>
 	<item id="11443" name="Tallum Boots" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases M. Def. and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -923,7 +923,7 @@
 		</stats>
 	</item>
 	<item id="11445" name="Tallum Plate Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t77_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -945,7 +945,7 @@
 		</stats>
 	</item>
 	<item id="11446" name="Tallum Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases Atk. Spd., Weight Limit, and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -965,7 +965,7 @@
 		</stats>
 	</item>
 	<item id="11447" name="Tallum Stockings" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Poison/Bleed Resistance -->
+		<!-- Masterwork Item that increases M. Def. and Poison/ Bleed Resistance -->
 		<set name="icon" val="icon.armor_t79_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1009,7 +1009,7 @@
 		</stats>
 	</item>
 	<item id="11449" name="Majestic Gauntlets" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases Bow/Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
+		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1051,7 +1051,7 @@
 		</stats>
 	</item>
 	<item id="11451" name="Majestic Leather Armor" type="Armor">
-		<!-- Masterwork Item that increases Bow/Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
+		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1117,7 +1117,7 @@
 		</stats>
 	</item>
 	<item id="11454" name="Majestic Boots" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases Bow/Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
+		<!-- Masterwork Item that increases Bow/ Crossbow P. Atk. and Max MP, and decreases Weight Limit and increases Stun Resistance -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1406,7 +1406,7 @@
 		</stats>
 	</item>
 	<item id="11469" name="Sealed Shield of Nightmare" type="Armor">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Masterwork Item. A village blacksmith can release the seal on this item. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1443,7 +1443,7 @@
 		</stats>
 	</item>
 	<item id="11471" name="Armor of Nightmare" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases P. Atk., and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1465,7 +1465,7 @@
 		</stats>
 	</item>
 	<item id="11472" name="Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases P. Atk., and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1486,7 +1486,7 @@
 		</stats>
 	</item>
 	<item id="11473" name="Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item that increases M. Def. and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases M. Def. and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1507,7 +1507,7 @@
 		</stats>
 	</item>
 	<item id="11474" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1528,7 +1528,7 @@
 		</stats>
 	</item>
 	<item id="11475" name="Leather Armor of Nightmare" type="Armor">
-		<!-- Sleep/Hold Resistance and M. Def. are increased. Has a chance of using some of the damage inflicted upon the enemy to restore one's own HP. Excludes damage from skill and ranged attacks. -->
+		<!-- Sleep/ Hold Resistance and M. Def. are increased. Has a chance of using some of the damage inflicted upon the enemy to restore one's own HP. Excludes damage from skill and ranged attacks. -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1550,7 +1550,7 @@
 		</stats>
 	</item>
 	<item id="11476" name="Robe of Nightmare" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1573,7 +1573,7 @@
 		</stats>
 	</item>
 	<item id="11477" name="Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item that increases P. Atk., and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases P. Atk., and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1594,7 +1594,7 @@
 		</stats>
 	</item>
 	<item id="11478" name="Boots of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- Masterwork Item with Sleep/Hold Resistance and M. Def. are increased. -->
+		<!-- Masterwork Item with Sleep/ Hold Resistance and M. Def. are increased. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1615,7 +1615,7 @@
 		</stats>
 	</item>
 	<item id="11479" name="Boots of Nightmare" additionalName="Robe" type="Armor">
-		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/Hold Resistance. -->
+		<!-- Masterwork Item that increases MP Recovery Rate, M. Atk., and Sleep/ Hold Resistance. -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1636,7 +1636,7 @@
 		</stats>
 	</item>
 	<item id="11480" name="Shield of Nightmare" type="Armor">
-		<!-- Masterwork Item that increases M. Def. -->
+		<!-- Increases Magic Damage Resistance by 2%. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1659,7 +1659,7 @@
 		</stats>
 	</item>
 	<item id="11481" name="Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- Masterwork Item with Sleep/Hold Resistance and P. Atk. are increased. -->
+		<!-- Masterwork Item with Sleep/ Hold Resistance and P. Atk. are increased. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

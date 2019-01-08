@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20300" level="44" type="L2Monster" name="Zenta Lizardman Matriarch">
 		<parameters>
@@ -755,7 +755,7 @@
 					<item id="2967" min="1" max="1" chance="9.4184" /> <!-- Elven Long Sword Blade -->
 					<item id="1864" min="1" max="1" chance="12.4662" /> <!-- Stem -->
 					<item id="1869" min="1" max="1" chance="6.19" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="2.6932" /> <!-- Braided Hemp -->
+					<item id="1878" min="1" max="1" chance="2.6932" /> <!-- Durable Braid -->
 					<item id="1884" min="1" max="1" chance="3.8127" /> <!-- Cord -->
 					<item id="2205" min="1" max="1" chance="0.9544" /> <!-- Recipe: Chain Gaiters -->
 					<item id="2299" min="1" max="1" chance="0.02" /> <!-- Recipe: Big Hammer -->
@@ -763,7 +763,7 @@
 			</drop>
 			<spoil>
 				<item id="1874" min="1" max="1" chance="5.7718" /> <!-- Oriharukon Ore -->
-				<item id="4472" min="1" max="1" chance="0.4947" /> <!-- Dye of CON <Con+1 Dex-1> -->
+				<item id="4472" min="1" max="1" chance="0.4947" /> <!-- Dye of CON <Con + 1 DEX - 1> - 1st Class Transfer -->
 				<item id="1869" min="1" max="1" chance="86.5765" /> <!-- Iron Ore -->
 			</spoil>
 		</dropLists>
@@ -1552,8 +1552,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
@@ -1625,7 +1625,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.11" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.11" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="2.02" /> <!-- Leather Shoes -->
 				<item id="57" min="38" max="90" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="8.767" /> <!-- Leather Shoe Texture -->
@@ -2050,8 +2050,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2109,8 +2109,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3315,7 +3315,7 @@
 		<dropLists>
 			<drop>
 				<item id="37" min="1" max="1" chance="2.104" /> <!-- Leather Shoes -->
-				<item id="49" min="1" max="1" chance="2.084" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.084" /> <!-- Gloves -->
 				<item id="57" min="40" max="94" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="9.249" /> <!-- Leather Shoe Texture -->
 				<item id="1060" min="1" max="1" chance="5.305" /> <!-- Healing Potion -->
@@ -3597,8 +3597,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3970,8 +3970,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4038,8 +4038,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4263,7 +4263,7 @@
 			</drop>
 			<spoil>
 				<item id="1831" min="1" max="3" chance="61.58" /> <!-- Antidote -->
-				<item id="49" min="1" max="1" chance="3.428" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="3.428" /> <!-- Gloves -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4800,7 +4800,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.044" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.044" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="2.026" /> <!-- Leather Shoes -->
 				<item id="57" min="37" max="88" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="8.613" /> <!-- Leather Shoe Texture -->

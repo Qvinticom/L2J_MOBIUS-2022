@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1901" toLevel="1" name="Aim">
-		<!-- Glory Days confirmed -->
-		<!-- Elemental Resistance + 10. -->
+		<!-- Elemental Resistance +10. -->
 		<icon>icon.skill1901</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -27,8 +26,7 @@
 		</effects>
 	</skill>
 	<skill id="1902" toLevel="1" name="Mental Fortress">
-		<!-- Glory Days confirmed -->
-		<!-- Debuff Resistance + 1%. -->
+		<!-- Debuff Resistance +1%. -->
 		<icon>icon.skill1902</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -41,8 +39,7 @@
 		</effects>
 	</skill>
 	<skill id="1903" toLevel="1" name="Fitness">
-		<!-- Glory Days confirmed -->
-		<!-- Increases HP Recovery bonus by 1 and MP Recovery bonus by 1. -->
+		<!-- Increases HP Recovery Bonus by 1 and MP Recovery Bonus by 1. -->
 		<icon>icon.skill1903</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -59,8 +56,7 @@
 		</effects>
 	</skill>
 	<skill id="1904" toLevel="2" name="Unbind">
-		<!-- Glory Days confirmed -->
-		<!-- Cancels all debuffs and renders immune for 10 seconds. -->
+		<!-- Cancels all debuffs and renders immune for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -93,7 +89,6 @@
 		</effects>
 	</skill>
 	<skill id="1905" toLevel="1" name="Swiftness">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Atk. Spd. by 4, Casting Spd. by 3, and Speed when not in combat by 13. -->
 		<icon>icon.skill1905</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -116,7 +111,6 @@
 		</effects>
 	</skill>
 	<skill id="1906" toLevel="1" name="Blessing of Water">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Water resistance by 20. -->
 		<icon>icon.skill1906</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -130,8 +124,7 @@
 		</effects>
 	</skill>
 	<skill id="1907" toLevel="2" name="Prevision">
-		<!-- Glory Days confirmed -->
-		<!-- For 15 sec., P. Evasion/ M. Evasion + 90, and Speed + 50. -->
+		<!-- For $s1, P. Evasion/ M. Evasion +$s2, and Speed +$s3. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>RACE_ELF1</abnormalType>
@@ -178,8 +171,7 @@
 		</effects>
 	</skill>
 	<skill id="1908" toLevel="1" name="Delicacy">
-		<!-- Glory Days confirmed -->
-		<!-- P. Critical Rate + 10 and M. Critical Rate + 10. -->
+		<!-- P. Critical Rate +10 and M. Critical Rate +10. -->
 		<icon>icon.skill1908</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -196,7 +188,6 @@
 		</effects>
 	</skill>
 	<skill id="1909" toLevel="1" name="Sharpness">
-		<!-- Glory Days confirmed -->
 		<!-- Increases P. Critical Damage and M. Critical Damage by 1%. -->
 		<icon>icon.skill1909</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -214,8 +205,7 @@
 		</effects>
 	</skill>
 	<skill id="1910" toLevel="1" name="Dark Presence">
-		<!-- Glory Days confirmed -->
-		<!-- STR and INT + 1 at night. -->
+		<!-- STR and INT +1 at night. -->
 		<icon>icon.skill1910</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -232,7 +222,6 @@
 		</effects>
 	</skill>
 	<skill id="1911" toLevel="1" name="Blessing of Wind">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Wind resistance by 20. -->
 		<icon>icon.skill1911</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -246,8 +235,7 @@
 		</effects>
 	</skill>
 	<skill id="1912" toLevel="2" name="Disparition">
-		<!-- Glory Days confirmed -->
-		<!-- Cancels all your debuffs. For 5 seconds, you cannot be targeted. -->
+		<!-- Cancels all your debuffs. For $s1, you cannot be targeted. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -282,7 +270,6 @@
 		</effects>
 	</skill>
 	<skill id="1913" toLevel="1" name="Life Siphon">
-		<!-- Glory Days confirmed -->
 		<!-- Absorbs 1% of the damage inflicted as HP. -->
 		<icon>icon.skill1913</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -296,8 +283,7 @@
 		</effects>
 	</skill>
 	<skill id="1914" toLevel="2" name="Savage">
-		<!-- Glory Days confirmed -->
-		<!-- For 60 sec., P. Atk. + 10%, M. Atk. + 20%, Atk. Spd., + 10%, and Casting Spd. + 10%. P. Def. / M. Def. - 10%. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd., +$s4, and Casting Spd. +$s5. P. Def./ M. Def. -$s6. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
@@ -348,7 +334,6 @@
 		</effects>
 	</skill>
 	<skill id="1915" toLevel="1" name="Blessing of Fire">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Fire resistance by 20. -->
 		<icon>icon.skill1915</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -362,8 +347,7 @@
 		</effects>
 	</skill>
 	<skill id="1916" toLevel="1" name="Energetic">
-		<!-- Glory Days confirmed -->
-		<!-- HP/MP/CP + 1%. -->
+		<!-- HP/ MP/ CP +1%. -->
 		<icon>icon.skill1916</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -384,7 +368,6 @@
 		</effects>
 	</skill>
 	<skill id="1917" toLevel="1" name="Undying Will">
-		<!-- Glory Days confirmed -->
 		<!-- When receiving damage while HP is below 30%, becomes invincible for 5 seconds. 1 time every 5 minutes only. -->
 		<icon>icon.skill1917</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -399,14 +382,12 @@
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>1918</skillId>
+				<skillId>1918</skillId> <!-- Undying Will -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1918" toLevel="2" name="Undying Will">
-		<!-- Glory Days confirmed -->
-		<!-- TODO: Check what the second level is doing -->
 		<!-- Becomes invincible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -451,8 +432,7 @@
 		</effects>
 	</skill>
 	<skill id="1919" toLevel="1" name="Dexterity">
-		<!-- Glory Days confirmed -->
-		<!-- Skill Cooldown - 1%. -->
+		<!-- Skill Cooldown -1%. -->
 		<icon>icon.skill1919</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -471,8 +451,7 @@
 		</effects>
 	</skill>
 	<skill id="1920" toLevel="2" name="Endurance">
-		<!-- Glory Days confirmed -->
-		<!-- For 5 sec., reflects 50% of received damage to attacker and recovers 460 HP every second. -->
+		<!-- For $s1, reflects $s2 of received damage to attacker and recovers s3 HP every second. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -503,7 +482,6 @@
 		</effects>
 	</skill>
 	<skill id="1921" toLevel="1" name="Blessing of Earth">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Earth resistance by 20. -->
 		<icon>icon.skill1921</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -517,8 +495,7 @@
 		</effects>
 	</skill>
 	<skill id="1922" toLevel="2" name="Earth Tremor">
-		<!-- Glory Days confirmed -->
-		<!-- Knocks Down nearby enemies for 3 sec., and decreases their P. Def./ M. Def. by 50%. -->
+		<!-- Knocks Down nearby enemies for $s1, and decreases their P. Def./ M. Def. by $s2. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -573,7 +550,6 @@
 		</effects>
 	</skill>
 	<skill id="1923" toLevel="1" name="Battle Instinct">
-		<!-- Glory Days confirmed -->
 		<!-- Increases PvP damage by 1%. -->
 		<icon>icon.skill1923</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -595,7 +571,6 @@
 		</effects>
 	</skill>
 	<skill id="1924" toLevel="1" name="Dark Silence">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Dark Attack Resistance by 20. -->
 		<icon>icon.skill1924</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -609,8 +584,7 @@
 		</effects>
 	</skill>
 	<skill id="1925" toLevel="2" name="Soul Protection">
-		<!-- Glory Days confirmed -->
-		<!-- For 60 seconds, blocks debuff attacks 2 times. -->
+		<!-- For $s1, blocks debuff attacks $s2 times. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
@@ -681,9 +655,7 @@
 		</effects>
 	</skill>
 	<skill id="1926" toLevel="1" name="Body Reinforcement">
-		<!-- Glory Days confirmed -->
 		<!-- For 5 minutes, transforms into ultimate combat form. -->
-		<!-- The p(m)atk/p(m)def multiplier are gone in Lindvior in benefit of higher stat in transform template -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -716,7 +688,6 @@
 		</effects>
 	</skill>
 	<skill id="1927" toLevel="1" name="Sigel Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Casts Sigel Force on entire party, which increases P Atk. by 1%. -->
 		<icon>icon.icon_sigel</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -728,7 +699,7 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Sigel Force -->
-				<skillId>1928</skillId>
+				<skillId>1928</skillId> <!-- Sigel Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
@@ -744,8 +715,7 @@
 		</effects>
 	</skill>
 	<skill id="1928" toLevel="1" name="Sigel Force">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 1%. -->
+		<!-- P. Atk. +1%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_SIGEL</abnormalType>
@@ -773,7 +743,6 @@
 		</effects>
 	</skill>
 	<skill id="1929" toLevel="1" name="Tyrr Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Casts Tyrr Force on entire party, which increases P. Critical Rate by 1%. -->
 		<icon>icon.icon_tir</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -785,15 +754,14 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Tyrr Force -->
-				<skillId>1930</skillId>
+				<skillId>1930</skillId> <!-- Tyrr Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1930" toLevel="1" name="Tyrr Force">
-		<!-- Glory Days confirmed -->
-		<!-- P. Critical Rate + 1%. -->
+		<!-- P. Critical Rate +1%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_TIR</abnormalType>
@@ -821,7 +789,6 @@
 		</effects>
 	</skill>
 	<skill id="1931" toLevel="1" name="Othell Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
@@ -833,15 +800,14 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Othell Force -->
-				<skillId>1932</skillId>
+				<skillId>1932</skillId> <!-- Othell Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1932" toLevel="1" name="Othell Force">
-		<!-- Glory Days confirmed -->
-		<!-- Atk. Spd. + 1%. -->
+		<!-- Atk. Spd. +1%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_OTHEL</abnormalType>
@@ -869,7 +835,6 @@
 		</effects>
 	</skill>
 	<skill id="1933" toLevel="1" name="Yul Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
@@ -881,15 +846,14 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Yul Force -->
-				<skillId>1934</skillId>
+				<skillId>1934</skillId> <!-- Yul Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1934" toLevel="1" name="Yul Force">
-		<!-- Glory Days confirmed -->
-		<!-- MP Recovery Bonus + 50%. -->
+		<!-- MP Recovery Bonus +50%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_YR</abnormalType>
@@ -917,7 +881,6 @@
 		</effects>
 	</skill>
 	<skill id="1935" toLevel="1" name="Feoh Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
@@ -929,15 +892,14 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Feoh Force -->
-				<skillId>1936</skillId>
+				<skillId>1936</skillId> <!-- Feoh Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1936" toLevel="1" name="Feoh Force">
-		<!-- Glory Days confirmed -->
-		<!-- Casting Spd. + 1%. -->
+		<!-- Casting Spd. +1%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_FEOH</abnormalType>
@@ -965,8 +927,7 @@
 		</effects>
 	</skill>
 	<skill id="1937" toLevel="1" name="Wynn Aura">
-		<!-- Glory Days confirmed -->
-		<!-- Casts Wynn Force on entire party, which decreases P./M. Skill MP Consumption by 3%. -->
+		<!-- Casts Wynn Force on entire party, which decreases P./ M. Skill MP Consumption by 3%. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
 		<icon>icon.icon_wynn</icon>
@@ -977,15 +938,14 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Wynn Force -->
-				<skillId>1938</skillId>
+				<skillId>1938</skillId> <!-- Wynn Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1938" toLevel="1" name="Wynn Force">
-		<!-- Glory Days confirmed -->
-		<!-- P./M. Skill MP Consumption - 3%. -->
+		<!-- P./ M. Skill MP Consumption -3%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_WYNN</abnormalType>
@@ -1019,7 +979,6 @@
 		</effects>
 	</skill>
 	<skill id="1939" toLevel="1" name="Aeore Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
@@ -1031,15 +990,14 @@
 		<effects>
 			<effect name="CallSkillOnActionTime">
 				<!-- Aeore Force -->
-				<skillId>1940</skillId>
+				<skillId>1940</skillId> <!-- Aeore Force -->
 				<skillLevel>1</skillLevel>
 				<ticks>7</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1940" toLevel="1" name="Aeore Force">
-		<!-- Glory Days confirmed -->
-		<!-- M. Atk. + 1%. -->
+		<!-- M. Atk. +1%. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_EOLH</abnormalType>
@@ -1067,7 +1025,6 @@
 		</effects>
 	</skill>
 	<skill id="1941" toLevel="1" name="Physical Nail Attack">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts consecutive attacks using a Demon's claws. -->
 		<effectRange>400</effectRange>
 		<icon>icon.skill0539</icon>
@@ -1089,7 +1046,6 @@
 		</effects>
 	</skill>
 	<skill id="1942" toLevel="1" name="Wing Storm">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks nearby enemies with spread wings. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1115,7 +1071,6 @@
 		</effects>
 	</skill>
 	<skill id="1943" toLevel="1" name="Wing Rush">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks with spread wings. Strikes all in target rush area. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1146,7 +1101,6 @@
 		</effects>
 	</skill>
 	<skill id="1944" toLevel="1" name="Death Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Shoots a death arrow at the enemy. -->
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1172,7 +1126,6 @@
 		</effects>
 	</skill>
 	<skill id="1945" toLevel="1" name="Power Death Beam">
-		<!-- Glory Days confirmed -->
 		<!-- Attack enemies at the front. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -1202,7 +1155,6 @@
 		</effects>
 	</skill>
 	<skill id="1946" toLevel="1" name="Block Sigel Force">
-		<!-- Glory Days confirmed -->
 		<!-- Sigel Momentum is not applied. -->
 		<icon>icon.icon_sigel</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1210,7 +1162,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1947" toLevel="1" name="Block Tyrr Force">
-		<!-- Glory Days confirmed -->
 		<!-- Tyrr Momentum is not applied. -->
 		<icon>icon.icon_tir</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1218,7 +1169,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1948" toLevel="1" name="Block Othell Force">
-		<!-- Glory Days confirmed -->
 		<!-- Othell Momentum is not applied. -->
 		<icon>icon.icon_othel</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1226,7 +1176,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1949" toLevel="1" name="Block Yul Force">
-		<!-- Glory Days confirmed -->
 		<!-- Yul Momentum is not applied. -->
 		<icon>icon.icon_yr</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1234,7 +1183,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1950" toLevel="1" name="Block Feoh Force">
-		<!-- Glory Days confirmed -->
 		<!-- Feoh Momentum is not applied. -->
 		<icon>icon.icon_feoh</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1242,7 +1190,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1951" toLevel="1" name="Block Iss Force">
-		<!-- Glory Days confirmed -->
 		<!-- Iss Momentum is not applied. -->
 		<icon>icon.icon_is</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1250,7 +1197,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1952" toLevel="1" name="Block Wynn Force">
-		<!-- Glory Days confirmed -->
 		<!-- Wynn Momentum is not applied. -->
 		<icon>icon.icon_wynn</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1258,7 +1204,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1953" toLevel="1" name="Block Aeore Force">
-		<!-- Glory Days confirmed -->
 		<!-- Aeore Momentum is not applied. -->
 		<icon>icon.icon_eolh</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1266,7 +1211,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1954" toLevel="1" name="Flying Body Reinforcement">
-		<!-- Glory Days confirmed -->
 		<!-- Transforms into final flying combat form. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1324,8 +1268,7 @@
 		</effects>
 	</skill>
 	<skill id="1955" toLevel="3" name="Party Solidarity">
-		<!-- Glory Days confirmed -->
-		<!-- Increases party members' P. Atk. by 1%, M. Atk. by 1%, P. Critical Rate by 1%, Atk. Spd. by 1%, and Casting Spd. by 1%. Decreases physical and magic skill Cooldown by 1%. Always includes Sigel and Aeore Force. When 4 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
+		<!-- Increases party members' P. Atk. by $s1, M. Atk. by $s2, P. Critical Rate by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. Decreases physical and magic skill Cooldown by $s6. Always includes Sigel and Aeore Force. When $s7 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_PARTY_BUF</abnormalType>
@@ -1414,8 +1357,7 @@
 		</effects>
 	</skill>
 	<skill id="1956" toLevel="4" name="Sub - P. Atk./M. Atk. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 1%, M. Atk. + 1%. -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0816</icon>
 		<magicLvl>1</magicLvl>
@@ -1443,8 +1385,7 @@
 		</effects>
 	</skill>
 	<skill id="1957" toLevel="4" name="Sub - P. Def./M. Def. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Def. + 1%, M. Def. + 1%. -->
+		<!-- P. Def. +$s1, M. Def. +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0439</icon>
 		<magicLvl>1</magicLvl>
@@ -1472,8 +1413,7 @@
 		</effects>
 	</skill>
 	<skill id="1958" toLevel="4" name="Sub - Atk. Spd./Casting Spd. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- Atk. Spd. + 1%, Casting Spd. + 1%. -->
+		<!-- Atk. Spd. +$s1, Casting Spd. +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0817</icon>
 		<magicLvl>1</magicLvl>
@@ -1501,8 +1441,7 @@
 		</effects>
 	</skill>
 	<skill id="1959" toLevel="4" name="Sub - Critical Rate Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Critical Rate/ M. Critical Rate + 10. -->
+		<!-- P. Critical Rate/ M. Critical Rate +$s1. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0814</icon>
 		<magicLvl>1</magicLvl>
@@ -1530,8 +1469,7 @@
 		</effects>
 	</skill>
 	<skill id="1960" toLevel="4" name="Sub - P. Accuracy/ M. Accuracy Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Accuracy + 2, M. Accuracy + 2. -->
+		<!-- P. Accuracy +$s1, M. Accuracy +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill1240</icon>
 		<magicLvl>1</magicLvl>
@@ -1559,8 +1497,7 @@
 		</effects>
 	</skill>
 	<skill id="1961" toLevel="4" name="Sub - P. Evasion/ M. Evasion Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Evasion + 2, M. Evasion + 2. -->
+		<!-- P. Evasion +$s1, M. Evasion +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0198</icon>
 		<magicLvl>1</magicLvl>
@@ -1588,8 +1525,7 @@
 		</effects>
 	</skill>
 	<skill id="1962" toLevel="4" name="Dual - P. Atk./M. Atk. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 3%, M. Atk. + 4%. -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0816</icon>
 		<magicLvl>1</magicLvl>
@@ -1617,8 +1553,7 @@
 		</effects>
 	</skill>
 	<skill id="1963" toLevel="4" name="Dual - P. Def./M. Def. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Def. + 3%, M. Def. + 3%. -->
+		<!-- P. Def. +$s1, M. Def. +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0439</icon>
 		<magicLvl>1</magicLvl>
@@ -1646,8 +1581,7 @@
 		</effects>
 	</skill>
 	<skill id="1964" toLevel="4" name="Dual - Atk. Spd./Casting Spd. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- Atk. Spd. + 3%, Casting Spd. + 3%. -->
+		<!-- Atk. Spd. +$s1, Casting Spd. +$s2. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0817</icon>
 		<magicLvl>1</magicLvl>
@@ -1675,8 +1609,7 @@
 		</effects>
 	</skill>
 	<skill id="1965" toLevel="4" name="Dual - Max HP Increase">
-		<!-- Glory Days confirmed -->
-		<!-- Max HP + 6%. -->
+		<!-- Max HP +$s1. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
@@ -1700,8 +1633,7 @@
 		</effects>
 	</skill>
 	<skill id="1966" toLevel="4" name="Dual - Max MP Increase">
-		<!-- Glory Days confirmed -->
-		<!-- Max MP + 6%. -->
+		<!-- Max MP +$s1. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0213</icon>
 		<magicLvl>
@@ -1725,8 +1657,7 @@
 		</effects>
 	</skill>
 	<skill id="1967" toLevel="4" name="Dual - Max CP Increase">
-		<!-- Glory Days confirmed -->
-		<!-- Max CP + 6%. -->
+		<!-- Max CP +$s1. -->
 		<operateType>P</operateType>
 		<icon>icon.skill1397</icon>
 		<magicLvl>
@@ -1750,7 +1681,6 @@
 		</effects>
 	</skill>
 	<skill id="1968" toLevel="1" name="Dual - HP Drain">
-		<!-- Glory Days confirmed -->
 		<!-- Has a chance of absorbing 5% of damage inflicted upon the enemy as HP when attacking. -->
 		<operateType>P</operateType>
 		<icon>icon.dual_hpsteal</icon>
@@ -1775,7 +1705,7 @@
 			<effect name="TriggerSkillByMagicType">
 				<!-- Dual - MP Drain -->
 				<magicTypes>0;1;2;3;4;22</magicTypes>
-				<skillId>1995</skillId>
+				<skillId>1995</skillId> <!-- Dual - MP Drain -->
 				<skillLevel>1</skillLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
@@ -1789,13 +1719,13 @@
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
-				<skillId>1995</skillId>
+				<skillId>1995</skillId> <!-- Dual - MP Drain -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<!-- Dual - MP Drain -->
 				<isCritical>false</isCritical>
-				<skillId>1995</skillId>
+				<skillId>1995</skillId> <!-- Dual - MP Drain -->
 				<skillLevel>1</skillLevel>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -1807,8 +1737,7 @@
 		</effects>
 	</skill>
 	<skill id="1970" toLevel="1" name="Dual - Specialized for P. Atk.">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 9%, P. Def./ M. Def. - 9%. -->
+		<!-- P. Atk. +9%, P. Def./ M. Def. -6%. -->
 		<operateType>P</operateType>
 		<icon>icon.dual_atkup</icon>
 		<magicLvl>99</magicLvl>
@@ -1830,8 +1759,7 @@
 		</effects>
 	</skill>
 	<skill id="1971" toLevel="1" name="Dual - Specialized for M. Atk.">
-		<!-- Glory Days confirmed -->
-		<!-- M. Atk. + 13%, P. Def./ M. Def. - 9%. -->
+		<!-- M. Atk. +13%, P. Def./ M. Def. -6%. -->
 		<operateType>P</operateType>
 		<icon>icon.dual_defup</icon>
 		<magicLvl>99</magicLvl>
@@ -1853,7 +1781,6 @@
 		</effects>
 	</skill>
 	<skill id="1972" toLevel="1" name="Dual - Physical Trait Increase">
-		<!-- Glory Days confirmed -->
 		<!-- Increases success rate for physical attacks and physical defense by 20%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill4084</icon>
@@ -1880,7 +1807,6 @@
 		</effects>
 	</skill>
 	<skill id="1973" toLevel="1" name="Dual - Mental Trait Increase">
-		<!-- Glory Days confirmed -->
 		<!-- Increases success rate for mental attacks and mental defense by 20%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill4116</icon>
@@ -1911,8 +1837,7 @@
 		</effects>
 	</skill>
 	<skill id="1974" toLevel="1" name="Dual - Berserker's Rage">
-		<!-- Glory Days confirmed -->
-		<!-- Has a chance of P. Atk. + 27% when attacking. -->
+		<!-- Has a chance of P. Atk. +27% when attacking. -->
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1929,14 +1854,13 @@
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>1975</skillId>
+				<skillId>1975</skillId> <!-- Dual - Berserker's Rage -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1975" toLevel="1" name="Dual - Berserker's Rage">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 27% for 15 sec. -->
+		<!-- P. Atk. +27% for 15 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_ATTACK_UP</abnormalType>
@@ -1960,8 +1884,7 @@
 		</effects>
 	</skill>
 	<skill id="1976" toLevel="1" name="Dual - Master's Rage">
-		<!-- Glory Days confirmed -->
-		<!-- Has a chance of Skill Power + 27% during skill use. -->
+		<!-- Has a chance of Skill Power +27% during skill use. -->
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<icon>icon.dual_t_skup</icon>
@@ -1971,7 +1894,7 @@
 			<effect name="TriggerSkillByMagicType">
 				<!-- Dual - Master's Rage -->
 				<magicTypes>0;1;2;3;4;22</magicTypes>
-				<skillId>1977</skillId>
+				<skillId>1977</skillId> <!-- Dual - Master's Rage -->
 				<skillLevel>1</skillLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1979,8 +1902,7 @@
 		</effects>
 	</skill>
 	<skill id="1977" toLevel="1" name="Dual - Master's Rage">
-		<!-- Glory Days confirmed -->
-		<!-- Skill Power + 27% for 15 sec. -->
+		<!-- Skill Power +27% for 15 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_SKILL_UP</abnormalType>
@@ -2010,8 +1932,7 @@
 		</effects>
 	</skill>
 	<skill id="1978" toLevel="1" name="Dual - Light of Protection">
-		<!-- Glory Days confirmed -->
-		<!-- Has a chance of P. Def./ M. Def. + 27% when attacked. -->
+		<!-- Has a chance of P. Def./ M. Def. +40% when attacked. -->
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2023,7 +1944,7 @@
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
-				<skillId>1979</skillId>
+				<skillId>1979</skillId> <!-- Dual - Light of Protection -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
@@ -2032,8 +1953,7 @@
 		</effects>
 	</skill>
 	<skill id="1979" toLevel="1" name="Dual - Light of Protection">
-		<!-- Glory Days confirmed -->
-		<!-- P. Def./ M. Def. + 27% for 15 sec. -->
+		<!-- P. Def./ M. Def. +40% for 15 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_DEFENCE_UP</abnormalType>
@@ -2062,8 +1982,7 @@
 		</effects>
 	</skill>
 	<skill id="1980" toLevel="1" name="Dual - Light of Blessing">
-		<!-- Glory Days confirmed -->
-		<!-- Has a chance of restoring HP when attacked. -->
+		<!-- Has a chance of restoring 10 000 HP when attacked. -->
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2075,7 +1994,7 @@
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
-				<skillId>1981</skillId>
+				<skillId>1981</skillId> <!-- Dual - Light of Blessing -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1000</minDamage>
 				<chance>20</chance>
@@ -2104,7 +2023,6 @@
 		</effects>
 	</skill>
 	<skill id="1982" toLevel="1" name="Dual - Shackles of the Giants">
-		<!-- Glory Days confirmed -->
 		<!-- Blocks target's Physical Skills for 5 sec. Can only use on PCs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2135,7 +2053,6 @@
 		</effects>
 	</skill>
 	<skill id="1983" toLevel="1" name="Dual - Silence of the Giants">
-		<!-- Glory Days confirmed -->
 		<!-- Blocks target's Magical Skills for 5 sec. Can only use on PCs. -->
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<icon>icon.dual_a_mblock</icon>
@@ -2166,7 +2083,6 @@
 		</effects>
 	</skill>
 	<skill id="1984" toLevel="1" name="Dual - Yoke of the Giants">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases target and nearby enemies' Spd. by 90% for 5 sec. Can only use on PCs. -->
 		<icon>icon.dual_a_spdown</icon>
 		<operateType>A2</operateType>
@@ -2203,7 +2119,6 @@
 		</effects>
 	</skill>
 	<skill id="1985" toLevel="1" name="Dual - Shield of the Giants">
-		<!-- Glory Days confirmed -->
 		<!-- Damage Reflect Resistance becomes 100% for 30 sec. -->
 		<icon>icon.dual_a_refdmg</icon>
 		<operateType>A2</operateType>
@@ -2229,8 +2144,7 @@
 		</effects>
 	</skill>
 	<skill id="1986" toLevel="4" name="Dual Maximum HP">
-		<!-- Glory Days confirmed -->
-		<!-- Max HP + 463. Can be used when the main/ dual class is Level 85 or above. -->
+		<!-- Max HP +$s1. Can be used when the main/ dual class is Level $s2 or above. -->
 		<icon>icon.skill0917</icon>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2255,8 +2169,7 @@
 		</effects>
 	</skill>
 	<skill id="1987" toLevel="1" name="Sigel Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe/ Light Armor. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe/ Light Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2281,8 +2194,7 @@
 		</effects>
 	</skill>
 	<skill id="1988" toLevel="1" name="Tyrr Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2305,8 +2217,7 @@
 		</effects>
 	</skill>
 	<skill id="1989" toLevel="1" name="Yul Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe/ Heavy Armor. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe/ Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2331,8 +2242,7 @@
 		</effects>
 	</skill>
 	<skill id="1990" toLevel="1" name="Othell Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with a Robe/ Heavy Armor. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with a Robe/ Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2357,8 +2267,7 @@
 		</effects>
 	</skill>
 	<skill id="1991" toLevel="1" name="Feoh Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with Light Armor/ Heavy Armor. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Light Armor/ Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2383,8 +2292,7 @@
 		</effects>
 	</skill>
 	<skill id="1992" toLevel="1" name="Wynn Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with Heavy Armor. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2407,7 +2315,6 @@
 		</effects>
 	</skill>
 	<skill id="1993" toLevel="1" name="Iss Armor Limit">
-		<!-- Glory Days confirmed -->
 		<!-- No Penalty. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
@@ -2415,8 +2322,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="1994" toLevel="1" name="Aeore Armor Limit">
-		<!-- Glory Days confirmed -->
-		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. - 50% when equipped with Heavy Armor. -->
+		<!-- Stats decrease when equipped with armor that is not best suited for you. Atk. Spd./ Casting Spd. -50% when equipped with Heavy Armor. -->
 		<icon>icon.skill6213_4</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2439,7 +2345,6 @@
 		</effects>
 	</skill>
 	<skill id="1995" toLevel="1" name="Dual - MP Drain">
-		<!-- Glory Days Confirmed -->
 		<!-- Restores MP. -->
 		<icon>icon.dual_mpsteal</icon>
 		<operateType>A1</operateType>
@@ -2458,8 +2363,7 @@
 		</effects>
 	</skill>
 	<skill id="1996" toLevel="2" name="Hurricane Shackle">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 60 sec., blocks target from using escape items and skills. -->
+		<!-- For $s1, blocks target from using escape items and skills. -->
 		<icon>icon.skill1996</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -2488,8 +2392,7 @@
 		</effects>
 	</skill>
 	<skill id="1997" toLevel="2" name="Gravity Exile">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30 sec., blocks target from being resurrected by another character. -->
+		<!-- For $s1, blocks target from being resurrected by another character. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>

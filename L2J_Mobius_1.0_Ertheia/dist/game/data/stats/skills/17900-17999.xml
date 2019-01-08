@@ -1,22 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17900" toLevel="1" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.giant_ench_armor_stone_r_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17901" toLevel="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.giant_ench_wp_stone_r_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17902" toLevel="1" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.giant_ench_armor_stone_r_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17903" toLevel="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.giant_ench_wp_stone_r_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -230,7 +226,7 @@
 		</effects>
 	</skill>
 	<skill id="17914" toLevel="1" name="Low-grade Love Potion">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
+		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<icon>icon.love_potion</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
@@ -274,7 +270,7 @@
 		</effects>
 	</skill>
 	<skill id="17915" toLevel="1" name="Love Potion">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
+		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<icon>icon.love_potion</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
@@ -318,7 +314,7 @@
 		</effects>
 	</skill>
 	<skill id="17916" toLevel="1" name="Mid-grade Love Potion">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
+		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<icon>icon.love_potion</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
@@ -362,7 +358,7 @@
 		</effects>
 	</skill>
 	<skill id="17917" toLevel="1" name="High-grade Love Potion">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
+		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<icon>icon.love_potion</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
@@ -406,7 +402,6 @@
 		</effects>
 	</skill>
 	<skill id="17918" toLevel="1" name="Cruel Love Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation envelopes you. Double-click for a random love effect. -->
 		<icon>icon.love_potion</icon>
 		<operateType>A1</operateType>
@@ -443,31 +438,26 @@
 		</effects>
 	</skill>
 	<skill id="17920" toLevel="4" name="Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Windy Healing Potion. Elementary Alchemy. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17921" toLevel="4" name="Windy Quick Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Windy Quick Healing Potion. Elementary Alchemy. -->
 		<icon>icon.etc_potion_gold_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17922" toLevel="4" name="Low-grade Love Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Low-grade Love Potion. Elementary Alchemy. -->
 		<icon>icon.love_potion_party</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17923" toLevel="1" name="Super Elixir">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Super Elixir. Intermediate Alchemy. -->
 		<icon>icon.super_elixir_potion</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17924" toLevel="3" name="Supreme Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Supreme Windy Healing Potion. Master Alchemy. -->
 		<icon>
 			<value level="1">icon.etc_potion_scarlet_i00</value>
@@ -478,7 +468,6 @@
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
 	<skill id="17925" toLevel="2" name="Giant's Scroll: Enchant Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Giant's Scroll: Enchant Weapon (R-grade). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_scrl_of_ench_am_r</value>
@@ -487,7 +476,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17926" toLevel="2" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Giant's Lucky Enchant Stone: Armor (R-grade). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_ench_armor_stone_r_i01</value>
@@ -496,7 +484,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17927" toLevel="2" name="Windy Lucky Enchant Stone: Armor (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Windy Lucky Enchant Stone: Armor (R-grade). Master Alchemy. -->
 		<icon>
 			<value level="1">icon.giant_ench_armor_stone_r_i02</value>
@@ -506,7 +493,6 @@
 		<reuseDelay>86400000</reuseDelay>
 	</skill>
 	<skill id="17928" toLevel="6" name="Lv. 1 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Legendary MEN Dye (Luck). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_men_luc</value>
@@ -519,7 +505,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17929" toLevel="6" name="Lv. 2 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 2 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv2_unique_dye_men_luc</value>
@@ -532,7 +517,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17930" toLevel="6" name="Lv. 3 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 3 Legendary MEN Dye (Luck). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv3_unique_dye_men_luc</value>
@@ -545,7 +529,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17931" toLevel="6" name="Lv. 4 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 4 Legendary MEN Dye (Luck). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.lv4_unique_dye_men_luc</value>
@@ -558,7 +541,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17932" toLevel="6" name="Lv. 1 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Legendary MEN Dye (Charisma). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_men_cha</value>
@@ -571,7 +553,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17933" toLevel="6" name="Lv. 2 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 2 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv2_unique_dye_men_cha</value>
@@ -584,7 +565,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17934" toLevel="6" name="Lv. 3 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 3 Legendary MEN Dye (Charisma). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.lv3_unique_dye_men_cha</value>
@@ -597,7 +577,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17935" toLevel="6" name="Lv. 4 Legendary MEN Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 4 Legendary MEN Dye (Charisma). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.lv4_unique_dye_men_cha</value>
@@ -610,7 +589,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17936" toLevel="14" name="Lv. 5 Legendary MEN Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 5 Legendary MEN Dye (Luck). Master Alchemy. -->
 		<icon>
 			<value level="1">icon.lv5_unique_dye_men_luc</value>
@@ -632,7 +610,6 @@
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="17937" toLevel="3" name="Mid-grade Life Stone (R-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Mid-grade Life Stone (R-grade). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.r_mineral_special_i00</value>
@@ -642,7 +619,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17938" toLevel="3" name="Mid-grade Life Stone (R95-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Mid-grade Life Stone (R95-grade). Intermediate Alchemy. -->
 		<icon>
 			<value level="1">icon.r95_mineral_special_i00</value>
@@ -652,7 +628,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17939" toLevel="3" name="Mid-grade Life Stone (R99-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Mid-grade Life Stone (R99-grade). Advanced Alchemy. -->
 		<icon>
 			<value level="1">icon.r99_mineral_special_i00</value>
@@ -662,14 +637,12 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17940" toLevel="1" name="Life Stone: Giant's Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Life Stone: Giant's Power. Master Alchemy. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
 		<reuseDelay>604800000</reuseDelay>
 	</skill>
 	<skill id="17941" toLevel="4" name="Lv. 1 Windy CHA Dye (Luck)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Windy CHA Dye (Luck). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_cha_luc</value>
@@ -680,7 +653,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17942" toLevel="4" name="Lv. 1 Windy LUC Dye (Charisma)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can convert to Lv. 1 Windy LUC Dye (Charisma). Elementary Alchemy. -->
 		<icon>
 			<value level="1">icon.lv1_unique_dye_luc_cha</value>
@@ -691,7 +663,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17943" toLevel="2" name="Alchemy Cube">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can use the Alchemy Cube. Elementary Combination Alchemy. -->
 		<icon>
 			<value level="1">icon.skill0000</value>
@@ -701,28 +672,24 @@
 		<displayInList>false</displayInList>
 	</skill>
 	<skill id="17944" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Talking Island Village. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="17945" toLevel="1" name="Scroll of Escape: Magmeld">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Magmeld. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="17946" toLevel="1" name="Scroll of Escape: Magmeld">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Magmeld. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="17947" toLevel="1" name="Scroll of Escape: Town of Rune">
-		<!-- Updated to IO -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -752,7 +719,6 @@
 		</effects>
 	</skill>
 	<skill id="17948" toLevel="1" name="Scroll of Escape: Town of Aden">
-		<!-- Updated to IO -->
 		<!-- Teleports you to the Town of Aden. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1066,7 +1032,6 @@
 		</effects>
 	</skill>
 	<skill id="17959" toLevel="1" name="Scroll of Escape: Town of Goddard">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Goddard. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1096,6 +1061,7 @@
 		</effects>
 	</skill>
 	<skill id="17960" toLevel="1" name="Scroll of Escape: Wall of Argos">
+		<!-- Teleports you to Wall of Argos. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1174,60 +1140,50 @@
 		</effects>
 	</skill>
 	<skill id="17963" toLevel="1" name="Alchemy Acquisition">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17964" toLevel="1" name="Master Alchemy: Failure">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17965" toLevel="1" name="Master Alchemy: Success">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17966" toLevel="1" name="Alchemy Cube: Random Success">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17967" toLevel="1" name="Low-grade Talisman Ingredient Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17968" toLevel="1" name="High-grade Tallisman Ingredient Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17969" toLevel="1" name="Low-grade Wind Dye Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17970" toLevel="1" name="Mid-grade Wind Dye Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17971" toLevel="1" name="High-grade Wind Dye Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17972" toLevel="1" name="New Talisman Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1256,7 +1212,6 @@
 		</effects>
 	</skill>
 	<skill id="17975" toLevel="1" name="Talisman - Wind: Defense">
-		<!-- TODO: Lack of information - Needs to be verified -->
 		<!-- Maximizes P./M. Def. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
@@ -1275,7 +1230,6 @@
 		</effects>
 	</skill>
 	<skill id="17976" toLevel="1" name="Talisman - Wind: Debuff Resistance">
-		<!-- TODO: Lack of information - Needs to be verified -->
 		<!-- Increases Debuff Resistance. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -1291,7 +1245,6 @@
 		</effects>
 	</skill>
 	<skill id="17978" toLevel="1" name="Equip Talisman - Insanity">
-		<!-- Ertheia Confirmed -->
 		<!-- The Talisman pulsates with power. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -1312,7 +1265,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17979" toLevel="1" name="Unequip Talisman - Insanity">
-		<!-- Ertheia Confirmed -->
 		<!-- The Talisman's power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
@@ -1332,7 +1284,6 @@
 		</effects>
 	</skill>
 	<skill id="17980" toLevel="1" name="Unseal Talisman - Insanity">
-		<!-- Ertheia Confirmed -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
@@ -1603,7 +1554,6 @@
 		</effects>
 	</skill>
 	<skill id="17990" toLevel="1" name="Scroll of Escape: Seed of Annihilation">
-		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1687,7 +1637,6 @@
 		</effects>
 	</skill>
 	<skill id="17993" toLevel="1" name="Scroll of Escape: Fairy Settlement">
-		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1744,7 +1693,6 @@
 		</effects>
 	</skill>
 	<skill id="17995" toLevel="1" name="Scroll of Escape: Prison of Darkness">
-		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1773,7 +1721,6 @@
 		</effects>
 	</skill>
 	<skill id="17996" toLevel="1" name="Scroll of Escape: Fortuna">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1781,7 +1728,6 @@
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="17997" toLevel="1" name="Scroll of Escape: Isle of Souls">
-		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1810,7 +1756,6 @@
 		</effects>
 	</skill>
 	<skill id="17998" toLevel="1" name="Scroll of Escape: Nornil's Cave">
-		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1839,7 +1784,6 @@
 		</effects>
 	</skill>
 	<skill id="17999" toLevel="1" name="Scroll of Escape: Seal of Shilen">
-		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>

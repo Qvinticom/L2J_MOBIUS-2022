@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48301" name="Resolute Attack Scroll" type="EtcItem">
-		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Atk. by 3%, P./ M. Skill Power by 3%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with �Resolute Defense Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Atk. by 3%, P./ M. Skill Power by 3%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with ?esolute Defense Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -18,7 +18,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48302" name="Resolute Defense Scroll" type="EtcItem">
-		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Def. by 3%, Debuff Resistance by 5%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with �Resolute Attack Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Def. by 3%, Debuff Resistance by 5%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with ?esolute Attack Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48317" name="Honey Vitality Beer" type="EtcItem">
-		<!-- Brewed with a secret special method of the Mystic Tavern. When used, recovers Vitality instantly and CON/ MEN/ LUC/ CHA +1 for 10 minutes. Using additional �Honey Vitality Beer' while the buff is active enables up to Lv. 3 stacked effects. Honey Vitality Beer Lv. 2: CON/ MEN/ LUC/ CHA +2 and XP gained +10% for 10 min. Honey Vitality Beer Lv. 3: CON/ MEN/ LUC/ CHA +3 and XP gained +30% for 10 min. Cannot be used together when fish stew. Cannot be used in the Olympiad. -->
+		<!-- Brewed with a secret special method of the Mystic Tavern. When used, recovers Vitality instantly and CON/ MEN/ LUC/ CHA +1 for 10 minutes. Using additional ?oney Vitality Beer' while the buff is active enables up to Lv. 3 stacked effects.. Honey Vitality Beer Lv. 2: CON/ MEN/ LUC/ CHA +2 and XP gained +10% for 10 min. Honey Vitality Beer Lv. 3: CON/ MEN/ LUC/ CHA +3 and XP gained +30% for 10 min. Cannot be used together when fish stew. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48385" name="Cannonball of Lunacy" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and causes Spezion's clones and minions to use the �Crazed Immolation' skill and self-destruct. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and causes Spezion's clones and minions to use the ?razed Immolation' skill and self-destruct. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48386" name="Cannonball of Rage" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and inflicts �Eroded Rage' buff on Spezion's clones and minions for 30 seconds. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and inflicts ?roded Rage' buff on Spezion's clones and minions for 30 seconds. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

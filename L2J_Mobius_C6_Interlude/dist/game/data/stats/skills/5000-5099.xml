@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5000" levels="1" name="Alfred - Super Strike">
 		<set name="mpConsume" val="212"/>
@@ -60,7 +60,7 @@
 		<set name="effectRange" val="1000"/>
 	</skill>
 	<skill id="5004" levels="1" name="Dimensional Shock">
-		<!--  Description(s): Shocks and instantly immobilizes. -->
+		<!-- Shocks and instantly immobilizes. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -68,6 +68,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
+		<!-- Frintezza is in temporary state of paralysis. -->
 		<set name="aggroPoints" val="100"/>
 		<set name="castRange" val="900"/>
 		<set name="effectRange" val="1400"/>
@@ -83,7 +84,7 @@
 		</for>
 	</skill>
 	<skill id="5006" levels="1" name="Frintezza's Melody">
-		<!-- Description(s): A general performance. -->
+		<!-- A general performance. -->
 		<set name="power" val="60000"/>
 		<set name="hitTime" val="34000"/>
 		<set name="target" val="TARGET_AREA"/>
@@ -96,14 +97,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="5007" levels="5" name="Frintezza's Songs">
-		<!--
-          Description(s):
-              Lvl 1 - Frintezza's Healing Rhapsody      Music to soothe the soul.
-              Lvl 2 - Frintezza's Rampaging Opus        A Consecutive Dash + Portrait Replay Performance
-              Lvl 3 - Frintezza's Power Concerto        A powerful tune affecting Attack/Speed.
-              Lvl 4 - Frintezza's Plagued Concerto      A triumphant ballad of Heal Suppressing.
-              Lvl 5 - Frintezza's Psycho Symphony       Two Can Dance + Cancel Performance.
-        -->
+		<!-- Music to soothe the soul. -->
 		<table name="#skill_landing_percent">0 60 0 0 0</table>
 		<table name="#skillRadius">0 100 0 100 100</table>
 		<table name="#Power">0 0 5 10 30</table>
@@ -143,14 +137,7 @@
 		</for>
 	</skill>
 	<skill id="5008" levels="5" name="Frintezza's Songs">
-		<!--
-          Description(s):
-              Lvl 1 - Frintezza's Concert Hall Melody        Music that makes you feel oh so good inside.
-              Lvl 2 - Frintezza's Rampaging Opus en masse    Consecutive Dash + Portrait Replay Performance
-              Lvl 3 - Frintezza Power Encore                 Attack/Speed Performance
-              Lvl 4 - Mournful Chorale Prelude               Instantly decreases the effect of HP regeneration magic.
-              Lvl 5 - Hypnotic Mazurka                       Instantly immobilizes the target by making it dance involuntarily.
-        -->
+		<!-- Music that makes you feel oh so good inside. -->
 		<table name="#skill_landing_percent">0 60 0 0 0</table>
 		<table name="#skillRadius">0 100 0 100 100</table>
 		<table name="#Power">0 0 5 10 30</table>
@@ -190,7 +177,7 @@
 		</for>
 	</skill>
 	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
-		<!-- Description(s): A portrait ghost that can make physical attacks. -->
+		<!-- A portrait ghost that can make physical attacks. -->
 		<set name="castRange" val="150"/>
 		<set name="effectRange" val="650"/>
 		<set name="element" val="6"/>
@@ -205,7 +192,7 @@
 		<set name="target" val="TARGET_AREA"/>
 	</skill>
 	<skill id="5010" levels="1" name="Frintezza's Ghostly Mage">
-		<!-- Description(s): A portrait ghost that can make magical attacks. -->
+		<!-- A portrait ghost that can make magical attacks. -->
 		<set name="mpConsume" val="20"/>
 		<set name="saveVs" val="MEN"/>
 		<set name="power" val="300"/>
@@ -222,7 +209,7 @@
 		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="5011" levels="1" name="Frintezza's Bomber Ghost">
-		<!-- Description(s): A portrait ghost who can create a suicide explosion. -->
+		<!-- A portrait ghost who can create a suicide explosion. -->
 		<set name="hpConsume" val="28000"/>
 		<set name="mpConsume" val="1"/>
 		<set name="power" val="3000"/>
@@ -238,7 +225,7 @@
 		<set name="isMagic" val="false"/>
 	</skill>
 	<skill id="5012" levels="1" name="Breath of Scarlet">
-		<!-- Description(s): Instantly immobilizes. -->
+		<!-- Instantly immobilizes. -->
 		<set name="magicLvl" val="85"/>
 		<set name="mpConsume" val="200"/>
 		<set name="saveVs" val="DEX"/>
@@ -259,7 +246,7 @@
 		</for>
 	</skill>
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
-		<!-- Description(s): Portrait ghost drains HP. -->
+		<!-- Portrait ghost drains HP. -->
 		<set name="element" val="6"/>
 		<set name="mpConsume" val="200"/>
 		<set name="power" val="200"/>
@@ -275,7 +262,7 @@
 		<set name="absorbPart" val="0.8"/>
 	</skill>
 	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
-		<!-- Frintezza Skills -->
+		<!-- Demon 1 general attack. -->
 		<table name="#power">1000 1500 2000</table>
 		<set name="magicLvl" val="85"/>
 		<set name="mpConsume" val="300"/>
@@ -292,10 +279,10 @@
 		<set name="effectRange" val="225"/>
 		<!-- charge values -->
 		<set name="num_charges" val="1"/>
-		<set name="charge_skill_id" val="5015"/>
+		<set name="charge_skill_id" val="5015"/> <!-- Frintezza's Daemon Charge -->
 	</skill>
 	<skill id="5015" levels="6" name="Frintezza's Daemon Charge">
-		<!-- Frintezza Skills -->
+		<!-- Demon 1 charge. -->
 		<table name="#power">3 5 10 15 20 30</table>
 		<table name="#charges">1 2 3 4 5 6</table>
 		<table name="#hitTime">1500 1450 1300 1200 1050 900</table>
@@ -319,7 +306,7 @@
 		</for>
 	</skill>
 	<skill id="5016" levels="1" name="Yoke of Scarlet">
-		<!-- Frintezza Skills -->
+		<!-- Instantly immobilizes. -->
 		<set name="magicLvl" val="85"/>
 		<set name="mpConsume" val="200"/>
 		<set name="saveVs" val="DEX"/>
@@ -340,7 +327,7 @@
 		</for>
 	</skill>
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
-		<!-- Frintezza Skills -->
+		<!-- Demon 1 metamorphosis. -->
 		<set name="magicLvl" val="85"/>
 		<set name="mpConsume" val="300"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -365,7 +352,7 @@
 		</for>
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">
-		<!-- Frintezza Skills -->
+		<!-- Demon 2 magic field. -->
 		<set name="magicLvl" val="85"/>
 		<table name="#power">1000 2000</table>
 		<table name="#skillRadius">700 1000</table>
@@ -381,7 +368,7 @@
 		<set name="skillRadius" val="#skillRadius"/>
 	</skill>
 	<skill id="5019" levels="1" name="Frintezza's Daemon Drain">
-		<!-- Frintezza Skills -->
+		<!-- Demon 3 HP drain range. -->
 		<set name="magicLvl" val="80"/>
 		<set name="mpConsume" val="200"/>
 		<set name="power" val="229"/>
@@ -399,7 +386,7 @@
 		<set name="reuseDelay" val="80000"/>
 	</skill>
 	<skill id="5020" levels="1" name="Forced Action">
-		<!-- Description(s): Crumples to the ground because of unknown power. -->
+		<!-- Crumples to the ground because of unknown power. -->
 		<set name="hpConsume" val="2000"/>
 		<set name="mpConsume" val="87"/>
 		<set name="power" val="40000"/>
@@ -419,6 +406,7 @@
 		</for>
 	</skill>
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
+		<!-- Makes sacred attacks. -->
 		<table name="#power">20 30 40 50 60 70 80 90 100 110 120 130</table>
 		<!-- Test-->
 		<set name="power" val="#power"/>
@@ -429,20 +417,7 @@
 		<set name="hitTime" val="3200"/>
 	</skill>
 	<skill id="5022" levels="12" name="Decrease Speed">
-		<!--  Description(s):
-              Lvl 1 - Instantly reduces Speed. Effect 1.
-              Lvl 2 - Instantly reduces Speed. Effect 2.
-              Lvl 3 - Instantly reduces Speed. Effect 2.
-              Lvl 4 - Instantly reduces Speed. Effect 3.
-              Lvl 5 - Instantly reduces Speed. Effect 3.
-              Lvl 6 - Instantly reduces Speed. Effect 3.
-              Lvl 7 - Instantly reduces Speed. Effect 3.
-              Lvl 8 - Instantly reduces Speed. Effect 3.
-              Lvl 9 - Instantly reduces Speed. Effect 3.
-              Lvl 10 - Instantly reduces Speed. Effect 3.
-              Lvl 11 - Instantly reduces Speed. Effect 3.
-              Lvl 12 - Instantly reduces Speed. Effect 3.
-        -->
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#mpConsume">37 62 86 116 149 184 215 229 241 249 255 258</table>
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<set name="activateRate" val="60"/>
@@ -463,20 +438,7 @@
 		</for>
 	</skill>
 	<skill id="5023" levels="12" name="Hold">
-		<!--  Description(s):
-              Lvl 1 - Temporarily holds and immobilizes target.
-              Lvl 2 - Temporarily holds and immobilizes target.
-              Lvl 3 - Temporarily holds and immobilizes target.
-              Lvl 4 - Temporarily holds and immobilizes target.
-              Lvl 5 - Temporarily holds and immobilizes target.
-              Lvl 6 - Temporarily holds and immobilizes target.
-              Lvl 7 - Temporarily holds and immobilizes target.
-              Lvl 8 - Temporarily holds and immobilizes target.
-              Lvl 9 - Temporarily holds and immobilizes target.
-              Lvl 10 - Temporarily holds and immobilizes target.
-              Lvl 11 - Temporarily holds and immobilizes target.
-              Lvl 12 - Temporarily holds and immobilizes target.
-        -->
+		<!-- Temporarily holds and immobilizes target. -->
 		<table name="#mpConsume_Init">3 4 6 7 9 11 13 14 15 15 16 16</table>
 		<table name="#mpConsume">10 16 21 28 36 44 52 55 58 60 61 62</table>
 		<table name="#effectPoint">100 100 100 100 100 100 100 100 100 100 100 100</table>
@@ -501,20 +463,7 @@
 		</for>
 	</skill>
 	<skill id="5024" levels="12" name="Decrease Atk.Speed">
-		<!--  Description(s):
-              Lvl 1 - Instantly reduces Atk. Spd. Effect 1.
-              Lvl 2 - Instantly reduces Atk. Spd. Effect 2.
-              Lvl 3 - Instantly reduces Atk. Spd. Effect 2.
-              Lvl 4 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 5 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 6 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 7 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 8 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 9 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 10 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 11 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 12 - Instantly reduces Atk. Spd. Effect 3.
-        -->
+		<!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#power">1 3 5 6 7 8 9 10 11 12 13 14</table>
 		<table name="#pAtkSpd">0.9 0.7 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</table>
 		<set name="saveVs" val="MEN"/>
@@ -531,6 +480,7 @@
 		</for>
 	</skill>
 	<skill id="5025" levels="1" name="Raid Boss - Level 30">
+		<!-- His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -539,6 +489,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5026" levels="1" name="Raid Boss - Level 39">
+		<!-- Once a human magician with an almost Dwarven interest in machinery,he heard about Titan Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -547,6 +498,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5027" levels="1" name="Raid Boss - Level 37">
+		<!-- This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -555,6 +507,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5028" levels="1" name="Raid Boss - Level 53">
+		<!-- Once a shaman who worshipped Pa'agrio, he is now consumed by evil and bent on manipulating the powers of the spirit-being Tasha to conquer the world. His growing horde of followers include Ragna Orcs, evil spirits and insects. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -563,6 +516,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5029" levels="1" name="Raid Boss - Level 52">
+		<!-- This powerful Chaos Golem was made from Starstones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal the blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the Horrifying Golem Army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is world domination. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -571,6 +525,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5030" levels="1" name="Raid Boss - Level 59">
+		<!-- This captain secretly loved the Princess Melissa. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Freya, he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -579,6 +534,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5031" levels="1" name="Raid Boss - Level 80">
+		<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -587,6 +543,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5032" levels="1" name="Raid Boss - Level 87">
+		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Ruler of Splendor. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -595,6 +552,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5033" levels="1" name="Raid Boss - Level 87">
+		<!-- This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite her claims of nobility, much of her background is still unknown. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -603,6 +561,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5034" levels="1" name="Raid Boss - Level 73">
+		<!-- This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos's imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Titan and isn't sure why he is still there. Even Daimon the White-Eyed cannot harm him in the Wall of Argos. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -611,6 +570,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5035" levels="1" name="Raid Boss - Level 76">
+		<!-- The result of one of Hardin's magical experiments, he is rather monstrous in appearance, spewing lava from all over his body. Despite his looks, he was in fact a very submissive Golem who followed Hardin like a father. He went mad from the feeling of abandonment after Hardin left the Blazing Swamp. When King Astaire attacked Aden Castle, some of the soldiers of Elmore were caught in the Blazing Swamp, and there they first saw this giant covered in lava. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -619,6 +579,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5036" levels="1" name="Raid Boss - Level 60">
+		<!-- The Ice Fairy who came to Freya after Princess Melissa was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -627,11 +588,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5037" levels="3" name="Decrease Casting Speed">
-		<!--  Description(s):
-              Lvl 1 - Instantly reduces Casting Speed. Effect 1.
-              Lvl 2 - Instantly reduces Casting Speed. Effect 2.
-              Lvl 3 - Instantly reduces Casting Speed. Effect 3.
-        -->
+		<!-- Instantly reduces Casting Speed. Effect 1. -->
 		<table name="#mAtkSpd">0.85 0.75 0.7</table>
 		<table name="#abnormal_lv">1 2 3</table>
 		<set name="target" val="TARGET_ONE"/>
@@ -677,6 +634,7 @@
 		</for>
 	</skill>
 	<skill id="5041" levels="1" name="Charm of Courage">
+		<!-- Prevents experience value from decreasing if killed during a siege war. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1149,21 +1107,7 @@
 		<set name="effectRange" val="4000"/>
 	</skill>
 	<skill id="5068" levels="12" name="Decrease Speed">
-		<!--
-          Description(s):
-              Lvl 1 - Instantly reduces Speed. Effect 3.
-              Lvl 2 - Instantly reduces Speed. Effect 3.
-              Lvl 3 - Instantly reduces Speed. Effect 3.
-              Lvl 4 - Instantly reduces Speed. Effect 3.
-              Lvl 5 - Instantly reduces Speed. Effect 3.
-              Lvl 6 - Instantly reduces Speed. Effect 3.
-              Lvl 7 - Instantly reduces Speed. Effect 3.
-              Lvl 8 - Instantly reduces Speed. Effect 3.
-              Lvl 9 - Instantly reduces Speed. Effect 3.
-              Lvl 10 - Instantly reduces Speed. Effect 3.
-              Lvl 11 - Instantly reduces Speed. Effect 3.
-              Lvl 12 - Instantly reduces Speed. Effect 3.
-        -->
+		<!-- Instantly reduces Speed. Effect 3. -->
 		<table name="#mpConsume">37 62 86 116 149 184 215 229 241 249 255 258</table>
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1186,21 +1130,7 @@
 		</for>
 	</skill>
 	<skill id="5069" levels="12" name="Decrease Atk.Spd.">
-		<!--
-          Description(s):
-              Lvl 1 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 2 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 3 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 4 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 5 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 6 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 7 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 8 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 9 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 10 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 11 - Instantly reduces Atk. Spd. Effect 3.
-              Lvl 12 - Instantly reduces Atk. Spd. Effect 3.
-        -->
+		<!-- Instantly reduces Atk. Spd. Effect 3. -->
 		<table name="#mpConsume">37 62 86 116 149 184 215 229 241 249 255 258</table>
 		<table name="#aspd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1223,21 +1153,7 @@
 		</for>
 	</skill>
 	<skill id="5070" levels="12" name="Decrease Casting Spd">
-		<!--
-          Description(s):
-              Lvl 1 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 2 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 3 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 4 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 5 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 6 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 7 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 8 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 9 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 10 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 11 - Instantly reduces Casting Spd. Effect 3.
-              Lvl 12 - Instantly reduces Casting Spd. Effect 3.
-        -->
+		<!-- Instantly reduces Casting Spd. Effect 3. -->
 		<table name="#mpConsume">37 62 86 116 149 184 215 229 241 249 255 258</table>
 		<table name="#Caspd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1260,21 +1176,7 @@
 		</for>
 	</skill>
 	<skill id="5071" levels="12" name="Decrease P.Atk">
-		<!--
-          Description(s):
-              Lvl 1 - Instantly reduces P. Atk. Effect 3.
-              Lvl 2 - Instantly reduces P. Atk. Effect 3.
-              Lvl 3 - Instantly reduces P. Atk. Effect 3.
-              Lvl 4 - Instantly reduces P. Atk. Effect 3.
-              Lvl 5 - Instantly reduces P. Atk. Effect 3.
-              Lvl 6 - Instantly reduces P. Atk. Effect 3.
-              Lvl 7 - Instantly reduces P. Atk. Effect 3.
-              Lvl 8 - Instantly reduces P. Atk. Effect 3.
-              Lvl 9 - Instantly reduces P. Atk. Effect 3.
-              Lvl 10 - Instantly reduces P. Atk. Effect 3.
-              Lvl 11 - Instantly reduces P. Atk. Effect 3.
-              Lvl 12 - Instantly reduces P. Atk. Effect 3.
-        -->
+		<!-- Instantly reduces P. Atk. Effect 3. -->
 		<table name="#mpConsume">37 62 86 116 149 184 215 229 241 249 255 258</table>
 		<table name="#pAtk">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1297,21 +1199,7 @@
 		</for>
 	</skill>
 	<skill id="5072" levels="12" name="Decrease M. Atk.">
-		<!--
-          Description(s):
-              Lvl 1 - Instantly reduces M. Atk. Effect 3.
-              Lvl 2 - Instantly reduces M. Atk. Effect 3.
-              Lvl 3 - Instantly reduces M. Atk. Effect 3.
-              Lvl 4 - Instantly reduces M. Atk. Effect 3.
-              Lvl 5 - Instantly reduces M. Atk. Effect 3.
-              Lvl 6 - Instantly reduces M. Atk. Effect 3.
-              Lvl 7 - Instantly reduces M. Atk. Effect 3.
-              Lvl 8 - Instantly reduces M. Atk. Effect 3.
-              Lvl 9 - Instantly reduces M. Atk. Effect 3.
-              Lvl 10 - Instantly reduces M. Atk. Effect 3.
-              Lvl 11 - Instantly reduces M. Atk. Effect 3.
-              Lvl 12 - Instantly reduces M. Atk. Effect 3.
-        -->
+		<!-- Instantly reduces M. Atk. Effect 3. -->
 		<table name="#mpConsume">37 62 86 116 149 184 215 229 241 249 255 258</table>
 		<table name="#mAtk">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1348,7 +1236,7 @@
 		<set name="effectRange" val="1500"/>
 	</skill>
 	<skill id="5074" levels="1" name="The Victor of War">
-		<!-- Description(s): Maximum CP is increased. -->
+		<!-- Maximum CP is increased. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1359,7 +1247,7 @@
 		</for>
 	</skill>
 	<skill id="5075" levels="1" name="The Vanquished of War">
-		<!-- Description(s): Maximum CP is decreased. -->
+		<!-- Maximum CP is decreased. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1372,7 +1260,7 @@
 		</for>
 	</skill>
 	<skill id="5076" levels="15" name="Death Penalty">
-		<!-- Description(s): Lvl [1-15] - Combat ability is decreased due to death. -->
+		<!-- Combat ability is decreased due to death. Effect 1. -->
 		<table name="#power">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</table>
 		<table name="#pAtk">1 0.958 0.907 0.856 0.805 0.754 0.703 0.652 0.601 0.550 0.499 0.448 0.397 0.356 0.305 0.254</table>
 		<table name="#mAtk">1 0.949 0.898 0.847 0.796 0.745 0.694 0.643 0.592 0.591 0.540 0.489 0.438 0.387 0.336 0.285</table>
@@ -1453,6 +1341,7 @@
 		</for>
 	</skill>
 	<skill id="5081" levels="4" name="Silence">
+		<!-- Blocks the ability to use physical skills. -->
 		<table name="#mpConsume">75 75 75 20</table>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="magiclvl" val="80"/>
@@ -1482,7 +1371,7 @@
 		<set name="reuseDelay" val="6000"/>
 	</skill>
 	<skill id="5083" levels="4" name="Shock">
-		<!-- Description(s): Lvl 1-4 - Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Temporarily immobilized and in a state of shock. -->
 		<table name="#power">568 873 1013 1162</table>
 		<table name="#mpConsume">93 93 93 5</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -1523,7 +1412,7 @@
 		</for>
 	</skill>
 	<skill id="5085" levels="1" name="Anesthesia">
-		<!-- Description(s): Temporarily stunned and immobilized. -->
+		<!-- Temporarily stunned and immobilized. -->
 		<set name="mpConsume" val="23"/>
 		<set name="power" val="80"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -1540,7 +1429,7 @@
 		</for>
 	</skill>
 	<skill id="5086" levels="1" name="Deadly Poison">
-		<!-- Description(s): Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
+		<!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillType" val="POISON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1613,7 +1502,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="5092" levels="1" name="Antharas Terror">
-		<!-- Antharas Skills -->
+		<!-- Temporarily overcome with fear and mindlessly fleeing. -->
 		<set name="magicLvl" val="70"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="saveVs" val="WIT"/>
@@ -1631,7 +1520,6 @@
 		</for>
 	</skill>
 	<skill id="5093" levels="1" name="Antharas Meteor">
-		<!-- Antharas Skills -->
 		<set name="magicLvl" val="79"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="power" val="500"/>

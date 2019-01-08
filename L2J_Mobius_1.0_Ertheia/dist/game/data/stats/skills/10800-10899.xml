@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10800" toLevel="10" name="Superior Elemental Resistance">
-		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Fire/Water/Wind/Earth Resistance + 20. -->
 		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
@@ -86,9 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="10801" toLevel="8" name="Bullseye">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases target's Bow/Crossbow Resistance by 40% and M. Def. by 5%. -->
-		<!-- TODO : Should cancel upon strike, guess there is a trigger on damage to add -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -209,9 +206,7 @@
 		</effects>
 	</skill>
 	<skill id="10802" toLevel="4" name="Mass Bullseye">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases target's and nearby enemies' Bow/Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. -->
-		<!-- TODO : Should cancel upon strike, guess there is a trigger on damage to add -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -280,7 +275,6 @@
 		</endEffects>
 	</skill>
 	<skill id="10803" toLevel="4" name="Time Bomb">
-		<!-- Glory Days confirmed -->
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
@@ -304,7 +298,6 @@
 		</effects>
 	</skill>
 	<skill id="10804" toLevel="4" name="Bullseye">
-		<!-- Glory Days confirmed -->
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
@@ -328,7 +321,6 @@
 		</effects>
 	</skill>
 	<skill id="10805" toLevel="4" name="Quick Charge">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily teleport 500 forward. -->
 		<icon>icon.skill10805</icon>
 		<operateType>DA1</operateType>
@@ -380,7 +372,6 @@
 		</conditions>
 	</skill>
 	<skill id="10806" toLevel="4" name="Frost Trap">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases Speed, Atk. Spd. and Casting Spd. -->
 		<icon>icon.skill0516</icon>
 		<operateType>A2</operateType>
@@ -418,7 +409,6 @@
 		</effects>
 	</skill>
 	<skill id="10807" toLevel="4" name="Gravity Trap">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A2</operateType>
@@ -450,7 +440,6 @@
 		</effects>
 	</skill>
 	<skill id="10808" toLevel="4" name="Decoy Provocation">
-		<!-- Glory Days confirmed -->
 		<!-- Decoy's provocation. Cannot change target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -481,8 +470,6 @@
 		</effects>
 	</skill>
 	<skill id="10809" toLevel="1" name="Survival Movement">
-		<!-- Glory Days confirmed -->
-		<!-- TODO Disappears after 4 strikes. -->
 		<!-- P. Evasion + 15. Disappears after 4 strikes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -616,8 +603,6 @@
 		</effects>
 	</skill>
 	<skill id="10812" toLevel="3" name="Sneak Shot">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NOT USED ANYMORE ? -->
 		<!-- Attacks distant target with 29176 Power added to P. Atk. Inflicts Stun when attacking from behind. Requires a bow/crossbow. Over-hit. Critical. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -637,7 +622,6 @@
 		<reuseDelay>30000</reuseDelay>
 	</skill>
 	<skill id="10813" toLevel="3" name="Sneak Shot: Stun">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the enemy for 5 sec. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -748,7 +732,6 @@
 		</effects>
 	</skill>
 	<skill id="10858" toLevel="3" name="Retreating Shot">
-		<!-- Updated to IO -->
 		<!-- Attacks target with 29176 Power added to P. Atk., cancels their targeting, and retreats 400 grids backward. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

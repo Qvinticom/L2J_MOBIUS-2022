@@ -23,7 +23,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters with Lv. 95 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters with Lv. 95 or above. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
@@ -34,7 +34,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47504" name="Lias Supply Items" type="EtcItem">
-		<!-- Supplies given by Lias to agents having completed Dimensional Rift - 100-day Subjugation Operation. -->
+		<!-- Supplies given by Lias to agents having completed "Dimensional Rift - 100-day Subjugation Operation". -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
@@ -272,7 +272,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47520" name="Request - Cruma Marshlands" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -368,7 +368,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47528" name="Request - Garden of Spirits" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Spirits. The request can be accepted by characters between Lv. 98-108. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Spirits. The request can be accepted by characters between Lv. 100-110. Double-click to receive the request -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -380,7 +380,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47529" name="Request - Atelia Fortress" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Atelia Fortress. The request can be accepted by characters between Lv. 98-108. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Atelia Fortress. The request can be accepted by characters between Lv. 100-110. Double-click to receive the request -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -462,7 +462,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47537" name="Request - Cruma Marshlands" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -562,7 +562,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47547" name="Bait" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Blueish Box with low probability. -->
+		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Bluish Box with low probability. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -584,7 +584,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="47549" name="PC Cafe Bait" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PC Cafes. -->
+		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PAs. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -610,7 +610,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47552" name="Powerful Fish" type="EtcItem">
-		<!-- Can be exchanged for a Stardust item or hair accessories through a Fishing Guild member. -->
+		<!-- Can be exchanged for a Hair Accessory or other items through a Fishing Guild member. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
@@ -658,7 +658,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47556" name="Stardust" type="EtcItem">
-		<!-- Ingredient used to produce the Zodiac Agathion -->
+		<!-- Ingredient needed to exchange Elementary Seed Bracelet. -->
 		<set name="icon" val="icon.star_crystal_piece" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000000" />
@@ -791,7 +791,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47563" name="Zodiac Agathion Box" type="EtcItem">
-		<!-- Double click to obtain one of the 12 types of Zodiac Agathion Stage 1. -->
+		<!-- Double click to obtain one of the twelve Agathions Stage 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -899,7 +899,7 @@
 		<capsuled_items>
 			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
 			<item id="47562" min="2" max="2" chance="100" /> <!-- Santiago's Reel Fragment -->
-			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->	
+			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->
 		</capsuled_items>
 	</item>
 	<item id="47572" name="Intermediate Supply Box" additionalName="Fishing Guild" type="EtcItem">
@@ -918,9 +918,9 @@
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
-			<item id="47552" min="1" max="1" chance="100" /> <!-- Nimble Fish -->
+			<item id="47552" min="1" max="1" chance="100" /> <!-- Powerful Fish -->
 			<item id="47562" min="3" max="3" chance="100" /> <!-- Santiago's Reel Fragment -->
-			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->	
+			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->
 		</capsuled_items>
 	</item>
 	<item id="47573" name="Magic Spices" type="EtcItem">
@@ -971,7 +971,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47579" name="Christmas Party Herb" type="EtcItem">
-		<!-- Christmas Party Herb. P. Atk./M. Atk./P. Def./M. Def. are increased by 50%, and you are turned into Santa for 2 minutes. Effect disappears when restarted. -->
+		<!-- Christmas Party Herb. P. Atk./ M. Atk./ P. Def./ M. Def. are increased by 50%, and you are turned into Santa for 2 minutes. Effect disappears when restarted. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

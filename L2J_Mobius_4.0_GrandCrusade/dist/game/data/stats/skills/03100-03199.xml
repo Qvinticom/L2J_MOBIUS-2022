@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3100" toLevel="10" name="Item Skill: Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Sleep on the target during magic use. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -43,7 +43,7 @@
 		</effects>
 	</skill>
 	<skill id="3101" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily paralyzes the target during magic use. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -92,13 +92,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6126</skillId>
+				<skillId>6126</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="3102" toLevel="10" name="Item Skill: Medusa">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily petrifies the target during magic use. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -138,7 +138,7 @@
 		</effects>
 	</skill>
 	<skill id="3103" toLevel="10" name="Item Skill: Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during magic use. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -178,7 +178,7 @@
 		</effects>
 	</skill>
 	<skill id="3104" toLevel="15" name="Item Skill: Poison (Magic Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Poison on the target during magic use. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -273,7 +273,7 @@
 		</effects>
 	</skill>
 	<skill id="3105" toLevel="15" name="Item Skill: Bleed (Magic Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Bleed on the target during magic use. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -369,7 +369,7 @@
 		</effects>
 	</skill>
 	<skill id="3106" toLevel="10" name="Item Skill: Silence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily blocks the target's magic skill during magic use. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -408,7 +408,7 @@
 		</effects>
 	</skill>
 	<skill id="3107" toLevel="10" name="Item Skill: Doom">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during magic use. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -448,7 +448,7 @@
 		</effects>
 	</skill>
 	<skill id="3108" toLevel="15" name="Item Skill: Aggression Up">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Increases the target's urge to attack during a critical attack. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
@@ -490,7 +490,7 @@
 		</effects>
 	</skill>
 	<skill id="3109" toLevel="15" name="Item Skill: Aggression Down">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Decreases the target's urge to attack during a critical attack. Power $s1. -->
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<icon>icon.skill3080</icon>
@@ -548,7 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="3110" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Burns up the target's MP during a critical attack. Power $s1. -->
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<icon>icon.skill3080</icon>
@@ -592,7 +592,7 @@
 		</effects>
 	</skill>
 	<skill id="3111" toLevel="15" name="Item Skill: Slow (Critical)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily decreases the target's Speed during a critical attack. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -641,7 +641,7 @@
 		</effects>
 	</skill>
 	<skill id="3112" toLevel="15" name="Item Skill: Winter (Critical)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily decreases the target's Atk. Spd. during a critical attack. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -690,7 +690,7 @@
 		</effects>
 	</skill>
 	<skill id="3113" toLevel="10" name="Item Skill: Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Activated skill: Causes a target to enter the Stun state momentarily if critically hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -728,7 +728,7 @@
 		</effects>
 	</skill>
 	<skill id="3114" toLevel="15" name="Item Skill: Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Hold on the target during a critical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -779,7 +779,7 @@
 		</effects>
 	</skill>
 	<skill id="3115" toLevel="10" name="Item Skill: Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Sleep on the target during a critical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -820,7 +820,7 @@
 		</effects>
 	</skill>
 	<skill id="3116" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily paralyzes the target during a critical attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -868,13 +868,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6126</skillId>
+				<skillId>6126</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="3117" toLevel="10" name="Item Skill: Medusa">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily petrifies the target during a critical attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -913,7 +913,7 @@
 		</effects>
 	</skill>
 	<skill id="3118" toLevel="10" name="Item Skill: Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during a critical attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -952,7 +952,7 @@
 		</effects>
 	</skill>
 	<skill id="3119" toLevel="15" name="Item Skill: Poison (Critical)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Poison on the target during a critical attack. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1046,7 +1046,7 @@
 		</effects>
 	</skill>
 	<skill id="3120" toLevel="15" name="Item Skill: Bleed (Critical)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily inflicts Bleed on the target during a critical attack. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1141,7 +1141,7 @@
 		</effects>
 	</skill>
 	<skill id="3121" toLevel="10" name="Item Skill: Silence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily blocks the target's magic skill during a critical attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -1179,7 +1179,7 @@
 		</effects>
 	</skill>
 	<skill id="3122" toLevel="10" name="Item Skill: Doom">
-		<!-- Confirmed CT2.5 -->
+		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a critical attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1218,7 +1218,7 @@
 		</effects>
 	</skill>
 	<skill id="3123" toLevel="10" name="Item Skill: Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Instantly recovers your HP. Power $s1. -->
 		<effectPoint>
 			<value level="1">440</value>
 			<value level="2">481</value>
@@ -1295,7 +1295,7 @@
 		</effects>
 	</skill>
 	<skill id="3124" toLevel="10" name="Item Skill: Blessed Body">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Max HP by $s1 temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1376,7 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="3125" toLevel="10" name="Item Skill: Battle Roar">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Max HP temporarily and restores HP by the increased amount. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1447,7 +1447,7 @@
 		</effects>
 	</skill>
 	<skill id="3126" toLevel="10" name="Item Skill: Prayer">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases the effectiveness of HP recovery magic temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1528,7 +1528,7 @@
 		</effects>
 	</skill>
 	<skill id="3127" toLevel="10" name="Item Skill: Recharge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Regenerates MP. Power $s1. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">440</value>
@@ -1606,7 +1606,7 @@
 		</effects>
 	</skill>
 	<skill id="3128" toLevel="10" name="Item Skill: Blessed Soul">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Max MP by $s1 temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1687,7 +1687,7 @@
 		</effects>
 	</skill>
 	<skill id="3129" toLevel="15" name="Item Skill: Mana Gain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases the recharge recover rate of MP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1798,7 +1798,7 @@
 		</effects>
 	</skill>
 	<skill id="3130" toLevel="10" name="Item Skill: Ritual">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Regenerates CP. Power $s1. -->
 		<effectPoint>
 			<value level="1">440</value>
 			<value level="2">481</value>
@@ -1875,7 +1875,7 @@
 		</effects>
 	</skill>
 	<skill id="3131" toLevel="10" name="Item Skill: Cheer">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Max CP by $s1 temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1956,7 +1956,7 @@
 		</effects>
 	</skill>
 	<skill id="3132" toLevel="15" name="Item Skill: Might">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases P. Atk. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2067,7 +2067,7 @@
 		</effects>
 	</skill>
 	<skill id="3133" toLevel="15" name="Item Skill: Empower">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases M. Atk. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2178,7 +2178,7 @@
 		</effects>
 	</skill>
 	<skill id="3134" toLevel="10" name="Item Skill: Duel Might">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases PvP P. Atk. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2252,7 +2252,7 @@
 		</effects>
 	</skill>
 	<skill id="3135" toLevel="15" name="Item Skill: Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases P. Def. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2363,7 +2363,7 @@
 		</effects>
 	</skill>
 	<skill id="3136" toLevel="15" name="Item Skill: Magic Barrier">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases M. Def. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2474,7 +2474,7 @@
 		</effects>
 	</skill>
 	<skill id="3137" toLevel="10" name="Item Skill: Duel Weakness">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Decreases the opponent's PvP P. Atk. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PVP_DMG_DOWN</abnormalType>
@@ -2553,7 +2553,7 @@
 		</effects>
 	</skill>
 	<skill id="3138" toLevel="10" name="Item Skill: Heal Empower">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases the power of HP recovery magic temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2634,7 +2634,7 @@
 		</effects>
 	</skill>
 	<skill id="3139" toLevel="15" name="Item Skill: Agility">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Evasion temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2740,7 +2740,7 @@
 		</effects>
 	</skill>
 	<skill id="3140" toLevel="15" name="Item Skill: Guidance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Accuracy temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2846,7 +2846,7 @@
 		</effects>
 	</skill>
 	<skill id="3141" toLevel="10" name="Item Skill: Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Critical Rate temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2927,7 +2927,7 @@
 		</effects>
 	</skill>
 	<skill id="3142" toLevel="10" name="Item Skill: Wild Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Critical Rate of magic attacks temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -3008,7 +3008,7 @@
 		</effects>
 	</skill>
 	<skill id="3143" toLevel="10" name="Item Skill: Eva's Kiss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Lung Capacity temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -3078,7 +3078,7 @@
 		</effects>
 	</skill>
 	<skill id="3144" toLevel="10" name="Item Skill: Acrobatics">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases the height from which you can jump without sustaining damage temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -3148,7 +3148,7 @@
 		</effects>
 	</skill>
 	<skill id="3145" toLevel="15" name="Item Skill: Iron Body">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases Resistance to damage from falling. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -3254,7 +3254,7 @@
 		</effects>
 	</skill>
 	<skill id="3146" toLevel="1" name="Item Skill: Return">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>20000</hitTime>
 		<icon>icon.skill3123</icon>
@@ -3278,7 +3278,7 @@
 		</effects>
 	</skill>
 	<skill id="3147" toLevel="1" name="Item Skill: Quick Return">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill3123</icon>
@@ -3302,7 +3302,7 @@
 		</effects>
 	</skill>
 	<skill id="3148" toLevel="10" name="Item Skill: Vampiric Rage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -3383,7 +3383,7 @@
 		</effects>
 	</skill>
 	<skill id="3149" toLevel="15" name="Item Skill: Aggression">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Increases the target's urge to attack. Power $s1. -->
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -3454,7 +3454,7 @@
 		</effects>
 	</skill>
 	<skill id="3150" toLevel="15" name="Item Skill: Charm (Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Decreases the target's urge to attack. Power $s1. -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -3541,7 +3541,7 @@
 		</effects>
 	</skill>
 	<skill id="3151" toLevel="15" name="Item Skill: Peace">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Puts the opponent's mind at peace and erases the desire to attack. -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -3612,7 +3612,7 @@
 		</effects>
 	</skill>
 	<skill id="3152" toLevel="10" name="Item Skill: Trick">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Cancels the target's status. -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
@@ -3656,7 +3656,7 @@
 		</effects>
 	</skill>
 	<skill id="3153" toLevel="10" name="Item Skill: Vampiric Touch">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Absorbs HP. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -3738,7 +3738,7 @@
 		</effects>
 	</skill>
 	<skill id="3154" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Burns up the enemy's MP. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -3819,7 +3819,7 @@
 		</effects>
 	</skill>
 	<skill id="3155" toLevel="10" name="Item Skill: Unlock">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Opens doors Lv. $2 with $s1 chance, doors Lv. $s4 with $s3 chance, and chests Lv. $s6 or below with $s5 chance. Requires $s7 Keys of a Thief. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-5</value>
@@ -3891,7 +3891,7 @@
 		</effects>
 	</skill>
 	<skill id="3156" toLevel="1" name="Item Skill: Firecracker">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Ignites a Firecracker. -->
 		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>60</magicLvl>
@@ -3905,7 +3905,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="3157" toLevel="1" name="Item Skill: Large Firecracker">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Ignites a Large Firecracker. -->
 		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>75</magicLvl>
@@ -3919,7 +3919,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="3158" toLevel="1" name="Item Skill: Celestial Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Instantly becomes invincible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -3948,7 +3948,7 @@
 		</effects>
 	</skill>
 	<skill id="3159" toLevel="3" name="Item Skill: Stealth">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -4017,7 +4017,7 @@
 		</effects>
 	</skill>
 	<skill id="3160" toLevel="9" name="Item Skill: Resurrection">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Resurrects a corpse. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -4094,7 +4094,7 @@
 		</effects>
 	</skill>
 	<skill id="3161" toLevel="8" name="Item Skill: Skill Clarity">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Temporarily decreases MP Consumption for physical skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -4169,7 +4169,7 @@
 		</effects>
 	</skill>
 	<skill id="3162" toLevel="8" name="Item Skill: Spell Clarity">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Temporarily decreases MP Consumption for magical skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -4241,7 +4241,7 @@
 		</effects>
 	</skill>
 	<skill id="3163" toLevel="3" name="Item Skill: Music Clarity">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Temporarily decreases MP Consumption for song/dance skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -4288,7 +4288,7 @@
 		</effects>
 	</skill>
 	<skill id="3164" toLevel="3" name="Item Skill: Clarity">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Temporarily decreases MP Consumptions for all skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -4349,7 +4349,7 @@
 		</effects>
 	</skill>
 	<skill id="3165" toLevel="10" name="Item Skill: Prominence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Detonates a fireball by compressing the air around the caster. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4430,7 +4430,7 @@
 		</effects>
 	</skill>
 	<skill id="3167" toLevel="10" name="Item Skill: Hydro Blast">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a spray of highly pressurized water. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4511,7 +4511,7 @@
 		</effects>
 	</skill>
 	<skill id="3168" toLevel="10" name="Item Skill: Hurricane">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Creates a whirlwind of destruction. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4592,7 +4592,7 @@
 		</effects>
 	</skill>
 	<skill id="3169" toLevel="10" name="Item Skill: Stone">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Attacks the target with a stone boulder. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4673,7 +4673,7 @@
 		</effects>
 	</skill>
 	<skill id="3170" toLevel="10" name="Item Skill: Solar Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a holy attack. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4754,7 +4754,7 @@
 		</effects>
 	</skill>
 	<skill id="3171" toLevel="10" name="Item Skill: Shadow Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a dark attack. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4835,7 +4835,7 @@
 		</effects>
 	</skill>
 	<skill id="3172" toLevel="10" name="Item Skill: Aura Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes an elemental attack. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-436</value>
@@ -4914,7 +4914,7 @@
 		</effects>
 	</skill>
 	<skill id="3173" toLevel="10" name="Item Skill: Prominence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a fire attack against the enemies near a target. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -4998,7 +4998,7 @@
 		</effects>
 	</skill>
 	<skill id="3174" toLevel="10" name="Item Skill: Hydro Blast">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a water attack against the enemies near a target. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -5082,7 +5082,7 @@
 		</effects>
 	</skill>
 	<skill id="3175" toLevel="10" name="Item Skill: Hurricane">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a wind attack against the enemies near a target. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -5166,7 +5166,7 @@
 		</effects>
 	</skill>
 	<skill id="3176" toLevel="10" name="Item Skill: Stone">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Attacks the enemies near a target with a stone boulder. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -5250,7 +5250,7 @@
 		</effects>
 	</skill>
 	<skill id="3177" toLevel="10" name="Item Skill: Solar Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a holy attack against the enemies near a target. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -5334,7 +5334,7 @@
 		</effects>
 	</skill>
 	<skill id="3178" toLevel="10" name="Item Skill: Shadow Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a dark attack against the enemies near a target. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -5418,7 +5418,7 @@
 		</effects>
 	</skill>
 	<skill id="3179" toLevel="10" name="Item Skill: Aura Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes an elemental attack against the enemies near a target. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -5500,7 +5500,7 @@
 		</effects>
 	</skill>
 	<skill id="3180" toLevel="10" name="Item Skill: Prominence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a flaming attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -5582,7 +5582,7 @@
 		</effects>
 	</skill>
 	<skill id="3181" toLevel="10" name="Item Skill: Hydro Blast">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a water attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -5664,7 +5664,7 @@
 		</effects>
 	</skill>
 	<skill id="3182" toLevel="10" name="Item Skill: Hurricane">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a wind attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -5746,7 +5746,7 @@
 		</effects>
 	</skill>
 	<skill id="3183" toLevel="10" name="Item Skill: Stone">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes an earth attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -5828,7 +5828,7 @@
 		</effects>
 	</skill>
 	<skill id="3184" toLevel="10" name="Item Skill: Solar Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a holy attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -5910,7 +5910,7 @@
 		</effects>
 	</skill>
 	<skill id="3185" toLevel="10" name="Item Skill: Shadow Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes a dark attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -5992,7 +5992,7 @@
 		</effects>
 	</skill>
 	<skill id="3186" toLevel="10" name="Item Skill: Aura Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Unleashes an elemental attack against nearby enemies. Power $s1. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -6072,7 +6072,7 @@
 		</effects>
 	</skill>
 	<skill id="3187" toLevel="15" name="Item Skill: Slow (Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily decreases the target's Speed. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -6168,7 +6168,7 @@
 		</effects>
 	</skill>
 	<skill id="3188" toLevel="15" name="Item Skill: Winter (Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily decreases the target's Atk. Spd. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -6264,7 +6264,7 @@
 		</effects>
 	</skill>
 	<skill id="3189" toLevel="10" name="Item Skill: Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Applied skill: Inflicts Stun on the target momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -6338,7 +6338,7 @@
 		</effects>
 	</skill>
 	<skill id="3190" toLevel="10" name="Item Skill: Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily inflicts Hold on the target. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -6416,7 +6416,7 @@
 		</effects>
 	</skill>
 	<skill id="3191" toLevel="10" name="Item Skill: Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily puts a target into sleep. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -6495,7 +6495,7 @@
 		</effects>
 	</skill>
 	<skill id="3192" toLevel="10" name="Item Skill: Paralyze">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily paralyzes the target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -6580,13 +6580,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6126</skillId>
+				<skillId>6126</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="3193" toLevel="10" name="Item Skill: Medusa">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily petrifies the target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -6662,7 +6662,7 @@
 		</effects>
 	</skill>
 	<skill id="3194" toLevel="10" name="Item Skill: Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily inflicts Fear on the target and causes him to flee. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -6738,7 +6738,7 @@
 		</effects>
 	</skill>
 	<skill id="3195" toLevel="15" name="Item Skill: Poison (Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily poisons a target. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -6869,7 +6869,7 @@
 		</effects>
 	</skill>
 	<skill id="3196" toLevel="15" name="Item Skill: Bleed (Active)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily inflicts Bleed on the target. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -7000,7 +7000,7 @@
 		</effects>
 	</skill>
 	<skill id="3197" toLevel="10" name="Item Skill: Silence">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily blocks the target's magic skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -7075,7 +7075,7 @@
 		</effects>
 	</skill>
 	<skill id="3198" toLevel="10" name="Item Skill: Doom">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Momentarily blocks all of the target's physical/magic skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -7151,7 +7151,7 @@
 		</effects>
 	</skill>
 	<skill id="3199" toLevel="3" name="Item Skill: Skill Refresh">
-		<!-- Confirmed CT2.5 -->
+		<!-- Active: Temporarily decreases the Cooldown for physical skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>

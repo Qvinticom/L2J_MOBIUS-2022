@@ -953,7 +953,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="40194" name="Entrance Pass: Octavis (Normal)" type="EtcItem">
-		<!-- Double-click to reset cooldown to Octavis' (normal) dungeon. Usable once a day outside instances while on a cooldown. -->
+		<!-- Additional pass to the instance zone. Double-click to reset cooldown to Octavis' (normal) dungeon. Can only be used when on a cooldown to the instance zone. Can only be used once during the set time period outside of the instance zone. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -988,7 +988,7 @@
 		</skills>
 	</item>
 	<item id="40196" name="Ertheia Bracelet" type="Armor">
-		<!-- Activates 5 Talisman Slots. MP + 216, STR + 1, and INT + 1. -->
+		<!-- Activates 5 Talisman Slots. MP +216, STR +1, and INT +1. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15600" type="Armor" name="Vorpal Gloves">
 		<set name="icon" val="icon.armor_t96_g_i03" />
@@ -455,6 +455,7 @@
 		</for>
 	</item>
 	<item id="15623" type="EtcItem" name="Exp">
+		<!-- You acquire Exp. as a reward. -->
 		<set name="icon" val="icon.etc_exp_point_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -466,6 +467,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15624" type="EtcItem" name="SP">
+		<!-- You acquire skill points as a reward. -->
 		<set name="icon" val="icon.etc_sp_point_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -477,6 +479,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15625" type="EtcItem" name="Question Mark">
+		<!-- Question Mark -->
 		<set name="icon" val="icon.etc_question_mark_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -488,6 +491,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15626" type="EtcItem" name="Vitality">
+		<!-- You acquire vitality points as a reward. -->
 		<set name="icon" val="icon.etc_vitality_point_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -499,6 +503,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15627" type="EtcItem" name="Clan Point">
+		<!-- You acquire clan points as a reward. -->
 		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -510,6 +515,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15628" type="EtcItem" name="Gamble Reward">
+		<!-- Reward different from the gamble and the game result -->
 		<set name="icon" val="icon.etc_quest_game_reward_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -521,6 +527,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15629" type="EtcItem" name="Random Reward">
+		<!-- Randomly selected reward -->
 		<set name="icon" val="icon.etc_quest_random_reward_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -532,6 +539,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15630" type="EtcItem" name="Flexible Reward">
+		<!-- Reward determined by calculating for adjustments -->
 		<set name="icon" val="icon.etc_quest_account_reward_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -543,6 +551,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15631" type="EtcItem" name="Bonus Reward">
+		<!-- Additional reward -->
 		<set name="icon" val="icon.etc_quest_add_reward_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -554,6 +563,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15632" type="EtcItem" name="Sub Class Reward">
+		<!-- Sub-class authority was obtained. -->
 		<set name="icon" val="icon.etc_quest_subclass_reward_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -565,6 +575,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15633" type="EtcItem" name="PK Reduction">
+		<!-- The PK Count is decreased. -->
 		<set name="icon" val="icon.etc_quest_pkcount_reward_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -576,6 +587,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15634" type="EtcItem" name="Vesper Cutter Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Cutter. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -585,6 +597,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15635" type="EtcItem" name="Vesper Slasher Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Slasher. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_slasher_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -594,6 +607,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15636" type="EtcItem" name="Vesper Buster Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Buster. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_burster_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -603,6 +617,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15637" type="EtcItem" name="Vesper Shaper Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Shaper. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -612,6 +627,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15638" type="EtcItem" name="Vesper Fighter Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Fighter. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_fighter_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -621,6 +637,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15639" type="EtcItem" name="Vesper Stormer Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Stormer. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_stormer_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -630,6 +647,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15640" type="EtcItem" name="Vesper Avenger Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Avenger. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -639,6 +657,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15641" type="EtcItem" name="Vesper Retributer Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Retributer. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_retributer_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -648,6 +667,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15642" type="EtcItem" name="Vesper Caster Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Caster. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_caster_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -657,6 +677,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15643" type="EtcItem" name="Vesper Singer Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Singer. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -666,6 +687,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15644" type="EtcItem" name="Vesper Thrower Piece">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Thrower. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_vesper_thrower_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -675,6 +697,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15645" type="EtcItem" name="Sealed Moirai Helmet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Helmet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_blluelycan_helmet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -684,6 +707,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15646" type="EtcItem" name="Sealed Moirai Leather Helmet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Helmet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_blluelycan_leather_helmet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -693,6 +717,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15647" type="EtcItem" name="Sealed Moirai Circlet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Circlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_blluelycan_circlet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -702,6 +727,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15648" type="EtcItem" name="Sealed Moirai Breastplate Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Breastplate. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_cuirass_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -711,6 +737,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15649" type="EtcItem" name="Sealed Moirai Leather Breastplate Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Breastplate. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_houberk_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -720,6 +747,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15650" type="EtcItem" name="Sealed Moirai Tunic Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Tunic. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_jaket_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -729,6 +757,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15651" type="EtcItem" name="Sealed Moirai Gaiter Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Gaiters. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_gaiter_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -738,6 +767,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15652" type="EtcItem" name="Sealed Moirai Leather Legging Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Leggings. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_legging_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -747,6 +777,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15653" type="EtcItem" name="Sealed Moirai Stockings Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Stockings. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_hose_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -756,6 +787,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15654" type="EtcItem" name="Sealed Moirai Gauntlet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Gauntlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_gauntlet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -765,6 +797,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15655" type="EtcItem" name="Sealed Moirai Leather Gloves Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Gloves. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_gloves_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -774,6 +807,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15656" type="EtcItem" name="Sealed Moirai Gloves Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Gloves. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_gloves_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -783,6 +817,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15657" type="EtcItem" name="Sealed Moirai Boots Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Boots. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_boots_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -792,6 +827,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15658" type="EtcItem" name="Sealed Moirai Leather Boots Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Leather Boots. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_leather_boots_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -801,6 +837,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15659" type="EtcItem" name="Sealed Moirai Shoes Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Shoes. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_shoes_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -810,6 +847,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15660" type="EtcItem" name="Sealed Vesper Helmet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Helmet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_helmet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -819,6 +857,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15661" type="EtcItem" name="Sealed Vesper Leather Helmet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Helmet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_leather_helmet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -828,6 +867,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15662" type="EtcItem" name="Sealed Vesper Circlet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Circlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_circlet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -837,6 +877,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15663" type="EtcItem" name="Sealed Vesper Breastplate Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Breastplate. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_cuirass_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -846,6 +887,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15664" type="EtcItem" name="Sealed Vesper Leather Breastplate Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Breastplate. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_houberk_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -855,6 +897,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15665" type="EtcItem" name="Sealed Vesper Tunic Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Tunic. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_jaket_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -864,6 +907,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15666" type="EtcItem" name="Sealed Vesper Gaiter Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Gaiters. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_gaiter_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -873,6 +917,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15667" type="EtcItem" name="Sealed Vesper Gauntlet Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Gauntlet. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_gauntlet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -882,6 +927,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15668" type="EtcItem" name="Sealed Vesper Boots Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Boots. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_boots_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -891,6 +937,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15669" type="EtcItem" name="Sealed Vesper Verteidiger Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Shield. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_verteidiger_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -900,6 +947,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15670" type="EtcItem" name="Sealed Vesper Leather Legging Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Leggings. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_leather_legging_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -909,6 +957,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15671" type="EtcItem" name="Sealed Vesper Leather Gloves Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Gloves. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_leather_gloves_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -918,6 +967,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15672" type="EtcItem" name="Sealed Vesper Leather Boots Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Leather Boots. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_leather_boots_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -927,6 +977,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15673" type="EtcItem" name="Sealed Vesper Stockings Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Stockings. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_hose_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -936,6 +987,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15674" type="EtcItem" name="Sealed Vesper Gloves Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Gloves. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_gloves_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -945,6 +997,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15675" type="EtcItem" name="Sealed Vesper Shoes Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Shoes. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_shoes_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1131,7 +1184,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -1273,7 +1326,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_chance" val="4" />
 		<set name="oncrit_skill" val="3579-1" />
-		<set name="item_skill" val="3427-1" />
+		<set name="item_skill" val="3427-1" /> <!-- Special Ability: Infinity Rapier -->
 		<cond msgId="1518">
 			<and>
 				<player races="KAMAEL" />
@@ -1352,15 +1405,17 @@
 		</for>
 	</item>
 	<item id="15690" type="EtcItem" name="Secret Key">
+		<!-- Key that opens a secret door -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="9076-1" />
+		<set name="item_skill" val="9076-1" /> <!-- Secret Door Key -->
 	</item>
 	<item id="15691" type="EtcItem" name="Sealed Vesper Sigil Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Vesper Sigil. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_vesper_sigil_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1370,6 +1425,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15692" type="EtcItem" name="Sealed Moirai Sigil Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Sigil. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_sigil_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1379,6 +1435,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15693" type="EtcItem" name="Sealed Moirai Shield Piece">
+		<!-- An essential ingredient that a Dwarf needs to make a Sealed Moirai Shield. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_shield_piece_I01" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1388,6 +1445,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15694" type="Armor" name="Sealed Moirai Helmet">
+		<!-- Sealed Moirai Helmet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1408,6 +1466,7 @@
 		</for>
 	</item>
 	<item id="15695" type="Armor" name="Sealed Moirai Leather Helmet">
+		<!-- Sealed Moirai Leather Helmet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1425,6 +1484,7 @@
 		</for>
 	</item>
 	<item id="15696" type="Armor" name="Sealed Moirai Circlet">
+		<!-- Sealed Moirai Circlet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1445,6 +1505,7 @@
 		</for>
 	</item>
 	<item id="15697" type="Armor" name="Sealed Moirai Breastplate">
+		<!-- Sealed Moirai Breastplate. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1466,6 +1527,7 @@
 		</for>
 	</item>
 	<item id="15698" type="Armor" name="Sealed Moirai Leather Breastplate">
+		<!-- Sealed Moirai Leather Gaiters. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1484,6 +1546,7 @@
 		</for>
 	</item>
 	<item id="15699" type="Armor" name="Sealed Moirai Tunic">
+		<!-- Sealed Moirai Tunic. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />

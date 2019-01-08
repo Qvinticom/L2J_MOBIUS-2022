@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23100" level="39" type="L2Monster" name="Ant Warrior Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2741,7 +2741,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="667" max="1557" chance="70" /> <!-- Adena -->
-				<item id="17410" min="1" max="1" chance="0.003" /> <!-- Seraph Gloves -->
+				<item id="17410" min="1" max="1" chance="0.003" /> <!-- Seraph Gloves - Robe -->
 				<item id="36523" min="1" max="1" chance="0.299999999999998" /> <!-- Adamantite -->
 				<item id="35321" min="1" max="1" chance="0.0749999999999982" /> <!-- Seraph Glove Ingredient -->
 				<item id="9548" min="1" max="1" chance="0.0299999999999998" /> <!-- Earth Stone -->
@@ -2819,7 +2819,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17402" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Helmet -->
+				<item id="17402" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Helmet - Light Armor -->
 				<item id="57" min="1175" max="2742" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
@@ -3617,7 +3617,7 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17315" min="1" max="1" chance="0.03" /> <!-- Immortal Circlet -->
+				<item id="17315" min="1" max="1" chance="0.03" /> <!-- Immortal Circlet - Robe -->
 				<item id="57" min="709" max="1655" chance="20" /> <!-- Adena -->
 				<item id="36816" min="1" max="1" chance="2.459" /> <!-- Immortal Circlet Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -3979,7 +3979,7 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17319" min="1" max="1" chance="0.03" /> <!-- Immortal Shoes -->
+				<item id="17319" min="1" max="1" chance="0.03" /> <!-- Immortal Shoes - Robe -->
 				<item id="57" min="727" max="1697" chance="20" /> <!-- Adena -->
 				<item id="36820" min="1" max="1" chance="3.726" /> <!-- Immortal Shoe Ingredient -->
 				<item id="36758" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Shoes (60%) -->
@@ -4051,7 +4051,7 @@
 				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="30425" min="1" max="1" chance="0.0075" /> <!-- Recipe: Blessed Spiritshot (R-grade) (for dwarves) -->
+				<item id="30425" min="1" max="1" chance="0.0075" /> <!-- Recipe: Blessed Spiritshot (R-grade) -->
 				<item id="36739" min="1" max="1" chance="0.003" /> <!-- Recipe: Requiem Shooter (60%) -->
 			</drop>
 			<spoil>
@@ -4109,7 +4109,7 @@
 			<drop>
 				<item id="57" min="758" max="1769" chance="20" /> <!-- Adena -->
 				<item id="36818" min="1" max="1" chance="3.293" /> <!-- Immortal Stocking Ingredient -->
-				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) -->
 				<item id="36756" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Stockings (60%) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
@@ -4468,7 +4468,7 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17318" min="1" max="1" chance="0.03" /> <!-- Immortal Gloves -->
+				<item id="17318" min="1" max="1" chance="0.03" /> <!-- Immortal Gloves - Robe -->
 				<item id="57" min="669" max="1559" chance="20" /> <!-- Adena -->
 				<item id="36819" min="1" max="1" chance="2.598" /> <!-- Immortal Glove Ingredient -->
 				<item id="36757" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Gloves (60%) -->

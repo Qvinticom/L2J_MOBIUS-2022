@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7800" type="EtcItem" name="Small Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -9,9 +10,10 @@
 		<set name="price" val="1083" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-3" />
+		<set name="item_skill" val="2228-3" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7801" type="EtcItem" name="Black Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -20,9 +22,10 @@
 		<set name="price" val="1155" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-4" />
+		<set name="item_skill" val="2228-4" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7802" type="EtcItem" name="Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -31,9 +34,10 @@
 		<set name="price" val="1179" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-5" />
+		<set name="item_skill" val="2228-5" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7803" type="EtcItem" name="Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -42,9 +46,10 @@
 		<set name="price" val="1202" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-6" />
+		<set name="item_skill" val="2228-6" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7804" type="EtcItem" name="Large Black Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_tuna_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -53,9 +58,10 @@
 		<set name="price" val="1226" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-7" />
+		<set name="item_skill" val="2228-7" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7805" type="EtcItem" name="Large Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_angler_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -64,9 +70,10 @@
 		<set name="price" val="1251" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-8" />
+		<set name="item_skill" val="2228-8" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7806" type="EtcItem" name="Large Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="icon" val="icon.etc_bream_i05" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -75,9 +82,10 @@
 		<set name="price" val="1276" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2228-9" />
+		<set name="item_skill" val="2228-9" /> <!-- Item - Easy Black Fish -->
 	</item>
 	<item id="7807" type="EtcItem" name="Green Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast fish. -->
 		<set name="icon" val="icon.etc_bait_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -89,6 +97,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7808" type="EtcItem" name="Purple Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fat fish. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -100,6 +109,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7809" type="EtcItem" name="Yellow Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by ugly fish. -->
 		<set name="icon" val="icon.etc_bait_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -111,6 +121,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7810" type="Weapon" name="Soulfire Dirk - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -128,7 +139,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3014-1" />
+		<set name="item_skill" val="3014-1" /> <!-- Special Ability: Mana Up -->
 		<for>
 			<set stat="pAtk" val="86" />
 			<set stat="mAtk" val="91" />
@@ -140,6 +151,7 @@
 		</for>
 	</item>
 	<item id="7811" type="Weapon" name="Soulfire Dirk - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -170,6 +182,7 @@
 		</for>
 	</item>
 	<item id="7812" type="Weapon" name="Soulfire Dirk - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -200,6 +213,7 @@
 		</for>
 	</item>
 	<item id="7813" type="Weapon" name="Hell Knife - Magic Regeneration">
+		<!-- <Soul Crystal Enhancement>. Casts Regeneration on a target with a 30% chance when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -230,6 +244,7 @@
 		</for>
 	</item>
 	<item id="7814" type="Weapon" name="Hell Knife - Mental Shield">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -260,6 +275,7 @@
 		</for>
 	</item>
 	<item id="7815" type="Weapon" name="Hell Knife - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse: Weakness when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -290,6 +306,7 @@
 		</for>
 	</item>
 	<item id="7816" type="Weapon" name="Apprentice Adventurer's Staff">
+		<!-- Apprentice Adventurer's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -318,6 +335,7 @@
 		</for>
 	</item>
 	<item id="7817" type="Weapon" name="Apprentice Adventurer's Bone Club">
+		<!-- Apprentice Adventurer's Bone Club. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -345,6 +363,7 @@
 		</for>
 	</item>
 	<item id="7818" type="Weapon" name="Apprentice Adventurer's Knife">
+		<!-- Apprentice Adventurer's Knife. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -372,6 +391,7 @@
 		</for>
 	</item>
 	<item id="7819" type="Weapon" name="Apprentice Adventurer's Cestus">
+		<!-- Apprentice Adventurer's Cestus. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -399,6 +419,7 @@
 		</for>
 	</item>
 	<item id="7820" type="Weapon" name="Apprentice Adventurer's Bow">
+		<!-- Apprentice Adventurer's Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -428,6 +449,7 @@
 		</for>
 	</item>
 	<item id="7821" type="Weapon" name="Apprentice Adventurer's Long Sword">
+		<!-- Apprentice Adventurer's Long Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -454,6 +476,7 @@
 		</for>
 	</item>
 	<item id="7822" type="Weapon" name="Traveler's Mace">
+		<!-- Traveler's Mace. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -485,6 +508,7 @@
 		</for>
 	</item>
 	<item id="7823" type="Weapon" name="Traveler's Dark Elven Bow">
+		<!-- Traveler's Dark Elven Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -517,6 +541,7 @@
 		</for>
 	</item>
 	<item id="7824" type="Weapon" name="Traveler's Long Bow">
+		<!-- Traveler's Long Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -549,6 +574,7 @@
 		</for>
 	</item>
 	<item id="7825" type="Weapon" name="Traveler's Staff">
+		<!-- Traveler's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -580,6 +606,7 @@
 		</for>
 	</item>
 	<item id="7826" type="Weapon" name="Traveler's Bastard Sword">
+		<!-- Traveler's Bastard Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -609,6 +636,7 @@
 		</for>
 	</item>
 	<item id="7827" type="Weapon" name="Traveler's Wand">
+		<!-- Traveler's Wand. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_divine_tome_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -639,6 +667,7 @@
 		</for>
 	</item>
 	<item id="7828" type="Weapon" name="Traveler's Jamadhr">
+		<!-- Traveler's Jamadhr. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -669,6 +698,7 @@
 		</for>
 	</item>
 	<item id="7829" type="Weapon" name="Traveler's Tomahawk">
+		<!-- Traveler's Tomahawk. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -699,6 +729,7 @@
 		</for>
 	</item>
 	<item id="7830" type="Weapon" name="Traveler's Poniard Dagger">
+		<!-- Traveler's Poniard Dagger. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_dirk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -729,6 +760,7 @@
 		</for>
 	</item>
 	<item id="7831" type="Weapon" name="Traveler's Pike">
+		<!-- Traveler's Pike. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="icon" val="icon.weapon_pike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -745,7 +777,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<cond msgId="1685">
 			<player pkCount="0" />
 		</cond>
@@ -760,6 +792,7 @@
 		</for>
 	</item>
 	<item id="7832" type="EtcItem" name="Apprentice Adventurer's Weapon Exchange Coupon">
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guide. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -768,6 +801,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7833" type="EtcItem" name="Adventurer's Magic Accessory Exchange Coupon">
+		<!-- Use this exchange coupon to borrow magic accessories from the Adventurers' Guild. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
@@ -803,6 +837,7 @@
 		</for>
 	</item>
 	<item id="7835" type="EtcItem" name="Amulet: Seal of Disease">
+		<!-- Amulet required for the Seal of Disease spell. Used by Dominators. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -811,6 +846,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7836" type="Armor" name="Santa's Hat">
+		<!-- Santa's Hat, which is made to celebrate the holy day. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -820,6 +856,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="7837" type="Armor" name="Sayha's White Mask">
+		<!-- 2006 Lineage II Epic Collection Souvenir. -->
 		<set name="icon" val="icon.accessory_full_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -831,6 +868,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7838" type="EtcItem" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -838,6 +876,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="7839" type="Armor" name="Gran Kain's Black Mask">
+		<!-- 2007 Lineage II Limited Edition Souvenir. -->
 		<set name="icon" val="icon.accessory_full_mask_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -849,6 +888,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7840" type="Armor" name="Rabbit Ears - Event">
+		<!-- Hair accessory. In rememberance of the day you took on the hordes of angry bunnies. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -860,6 +900,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7841" type="Armor" name="Racoon Ears">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -871,6 +912,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7842" type="Armor" name="Cat Ears">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -882,6 +924,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7843" type="Armor" name="Pirate's Eyepatch">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -893,6 +936,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7844" type="Armor" name="Monocle">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -904,6 +948,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7845" type="Armor" name="Outlaw's Eyepatch">
+		<!-- Purple eyepatch accessory. It cannot be exchanged for an event item and can't be dropped. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -915,6 +960,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7846" type="Armor" name="Maiden's Hairpin">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -929,6 +975,7 @@
 		</cond>
 	</item>
 	<item id="7847" type="Armor" name="Lady's Hairpin">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -943,6 +990,7 @@
 		</cond>
 	</item>
 	<item id="7848" type="Armor" name="Forget-me-not Hairpin">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -957,6 +1005,7 @@
 		</cond>
 	</item>
 	<item id="7849" type="Armor" name="Daisy Hairpin">
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -991,6 +1040,7 @@
 		</for>
 	</item>
 	<item id="7851" type="Armor" name="Clan Oath Armor">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1061,6 +1111,7 @@
 		</for>
 	</item>
 	<item id="7854" type="Armor" name="Clan Oath Brigandine">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1122,6 +1173,7 @@
 		</for>
 	</item>
 	<item id="7857" type="Armor" name="Clan Oath Aketon">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1193,6 +1245,7 @@
 		</for>
 	</item>
 	<item id="7860" type="Armor" name="Apella Helm">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1211,6 +1264,7 @@
 		</for>
 	</item>
 	<item id="7861" type="Armor" name="Apella Plate Armor">
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1233,6 +1287,7 @@
 		</for>
 	</item>
 	<item id="7862" type="Armor" name="Apella Gauntlet - Heavy Armor">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1254,6 +1309,7 @@
 		</for>
 	</item>
 	<item id="7863" type="Armor" name="Apella Solleret - Heavy Armor">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1275,6 +1331,7 @@
 		</for>
 	</item>
 	<item id="7864" type="Armor" name="Apella Brigandine">
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1294,6 +1351,7 @@
 		</for>
 	</item>
 	<item id="7865" type="Armor" name="Apella Leather Gloves - Light Armor">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1312,6 +1370,7 @@
 		</for>
 	</item>
 	<item id="7866" type="Armor" name="Apella Boots - Light Armor">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1330,6 +1389,7 @@
 		</for>
 	</item>
 	<item id="7867" type="Armor" name="Apella Doublet">
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1353,6 +1413,7 @@
 		</for>
 	</item>
 	<item id="7868" type="Armor" name="Apella Silk Gloves - Robe">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1374,6 +1435,7 @@
 		</for>
 	</item>
 	<item id="7869" type="Armor" name="Apella Sandals - Robe">
+		<!-- May be worn by Elder and above. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1395,6 +1457,7 @@
 		</for>
 	</item>
 	<item id="7870" type="Armor" name="Sealed Apella Helm">
+		<!-- May be worn by Elders and above. Sealed Apella Helmet. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1413,6 +1476,7 @@
 		</for>
 	</item>
 	<item id="7871" type="Armor" name="Sealed Apella Plate Armor">
+		<!-- May be worn by Elders and above. Sealed Apella Plate Armor. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1004_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1435,6 +1499,7 @@
 		</for>
 	</item>
 	<item id="7872" type="Armor" name="Sealed Apella Gauntlet">
+		<!-- May be worn by Elders and above. Sealed Apella Gauntlet. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1004_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1456,6 +1521,7 @@
 		</for>
 	</item>
 	<item id="7873" type="Armor" name="Sealed Apella Solleret">
+		<!-- May be worn by Elders and above. Sealed Apella Solleret. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1004_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1477,6 +1543,7 @@
 		</for>
 	</item>
 	<item id="7874" type="Armor" name="Sealed Apella Brigandine">
+		<!-- May be worn by Elders and above. Sealed Apella Clothing. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1005_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1496,6 +1563,7 @@
 		</for>
 	</item>
 	<item id="7875" type="Armor" name="Sealed Apella Leather Gloves">
+		<!-- May be worn by Elders and above. Sealed Apella Leather Gloves. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1005_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1514,6 +1582,7 @@
 		</for>
 	</item>
 	<item id="7876" type="Armor" name="Sealed Apella Boots">
+		<!-- May be worn by Elders and above. Sealed Apella Shoes. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1005_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1532,6 +1601,7 @@
 		</for>
 	</item>
 	<item id="7877" type="Armor" name="Sealed Apella Doublet">
+		<!-- May be worn by Elders and above. Sealed Apella Doublet. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1006_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1555,6 +1625,7 @@
 		</for>
 	</item>
 	<item id="7878" type="Armor" name="Sealed Apella Silk Gloves">
+		<!-- May be worn by Elders and above. Sealed Apella Silk Gloves. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1006_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1576,6 +1647,7 @@
 		</for>
 	</item>
 	<item id="7879" type="Armor" name="Sealed Apella Sandals">
+		<!-- May be worn by Elders and above. Sealed Apella Sandals. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t1006_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1651,6 +1723,7 @@
 		</for>
 	</item>
 	<item id="7882" type="Weapon" name="Pa'agrian Sword">
+		<!-- Bestows one of the following functions: Focus, Health or Critical Drain. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1678,6 +1751,7 @@
 		</for>
 	</item>
 	<item id="7883" type="Weapon" name="Guardian Sword">
+		<!-- Bestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1705,6 +1779,7 @@
 		</for>
 	</item>
 	<item id="7884" type="Weapon" name="Infernal Master">
+		<!-- Bestows one of the following functions: Haste, Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1786,6 +1861,7 @@
 		</for>
 	</item>
 	<item id="7887" type="Weapon" name="Mysterious Sword">
+		<!-- Bestows one of the following functions: Acumen, M. Atk., or Magic Weakness. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1813,6 +1889,7 @@
 		</for>
 	</item>
 	<item id="7888" type="Weapon" name="Ecliptic Sword">
+		<!-- Bestows one of the following functions: Empower, M. Atk. or Magic Silence. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1840,6 +1917,7 @@
 		</for>
 	</item>
 	<item id="7889" type="Weapon" name="Wizard's Tear">
+		<!-- Bestows one of the following functions: Acumen, M. Atk., or Conversion. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1895,6 +1973,7 @@
 		</for>
 	</item>
 	<item id="7891" type="Weapon" name="Ecliptic Axe">
+		<!-- Bestows one of the following functions: Conversion, M. Atk. or Magic Hold. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1923,6 +2002,7 @@
 		</for>
 	</item>
 	<item id="7892" type="Weapon" name="Spell Breaker">
+		<!-- Bestows one of the following functions: Acumen, Mental Shield or Magic Hold. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1951,6 +2031,7 @@
 		</for>
 	</item>
 	<item id="7893" type="Weapon" name="Kaim Vanul's Bones">
+		<!-- Bestows one of the following functions: Mana Up, Magic Silence, or Conversion. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1979,6 +2060,7 @@
 		</for>
 	</item>
 	<item id="7894" type="Weapon" name="Spiritual Eye">
+		<!-- Bestows one of the following functions: Mana Up, Magic Poison, or Acumen. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2007,6 +2089,7 @@
 		</for>
 	</item>
 	<item id="7895" type="Weapon" name="Flaming Dragon Skull">
+		<!-- Bestows one of the following functions: Acumen, M. Atk. or Magic Silence. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2062,6 +2145,7 @@
 		</for>
 	</item>
 	<item id="7897" type="Weapon" name="Dwarven Hammer">
+		<!-- Bestows one of the following functions: Health, Anger, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2089,6 +2173,7 @@
 		</for>
 	</item>
 	<item id="7898" type="Weapon" name="Karik Horn">
+		<!-- Bestows one of the following functions: Focus, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2116,6 +2201,7 @@
 		</for>
 	</item>
 	<item id="7899" type="Weapon" name="Destroyer Hammer">
+		<!-- Bestows one of the following functions: Health, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

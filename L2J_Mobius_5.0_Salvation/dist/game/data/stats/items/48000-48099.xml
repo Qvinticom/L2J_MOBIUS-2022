@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48004" name="Scroll: Energy of Harmony" type="EtcItem">
-		<!-- A scroll that contains harmony between races. Use it to increase your XP and SP by 50% for 30 minutes. Cannot be used with Fall of the Dragon/Nevit's Hourglass/Dandy's Home Run Ball. Will be deleted when the event has concluded. -->
+		<!-- A scroll that contains harmony between races. Use it to increase your XP and SP by 50% for 30 minutes. Cannot be used with Fall of the Dragon/ Nevit's Hourglass/ Dandy's Home Run Ball. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_london_olympic_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -246,7 +246,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48025" name="Chevalier Outfit Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a top armor or a one-piece into that of Chevalier. It changes everything, making the appearance of all armor into that of Chevalier. -->
+		<!-- Changes the appearance of upper or full-body armor to that of a Chevalier costume. Makes entire armor look like the Chevalier costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -273,7 +273,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48028" name="Valkyrie Outfit Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a top armor or a one-piece into that of Valkyrie. It changes everything, making the appearance of all armor into that of Valkyrie. -->
+		<!-- Changes the appearance of upper or full-body armor to that of a Valkyrie costume. Makes entire armor look like the Valkyrie costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -299,7 +299,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48031" name="Entrance Pass: Shilen's Altar" type="EtcItem">
-		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instanced Zone. Can only be used once a day outside of the instance zone. -->
+		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instance Zone. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />

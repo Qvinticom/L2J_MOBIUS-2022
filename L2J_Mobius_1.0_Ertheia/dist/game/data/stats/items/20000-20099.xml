@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20000" name="Spicy Kimchi" type="EtcItem">
-		<!-- Event Item Temporarily increases Recovery Rate. Effect 1. -->
+		<!-- Event Item. Temporarily increases Recovery Rate. Effect 1. -->
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -17,7 +17,7 @@
 		</skills>
 	</item>
 	<item id="20001" name="Spicy Kimchi" type="EtcItem">
-		<!-- Event Item Temporarily increases Recovery Rate and power. Effect 2. -->
+		<!-- Event Item. Temporarily increases Recovery Rate and power. Effect 2. -->
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -33,7 +33,7 @@
 		</skills>
 	</item>
 	<item id="20002" name="Spicy Kimchi" type="EtcItem">
-		<!-- Event Item Temporarily increases Recovery Rate, power and power Speed. Effect 3. -->
+		<!-- Event Item. Temporarily increases Recovery Rate, power and power Speed. Effect 3. -->
 		<set name="icon" val="BranchSys.icon.etc_kimchi_power_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -49,7 +49,7 @@
 		</skills>
 	</item>
 	<item id="20003" name="Sweet-and-Sour White Kimchi" type="EtcItem">
-		<!-- Event Item Magically multiplies the effect of Spicy Kimchi by 5. -->
+		<!-- Event Item. Magically multiplies the effect of Spicy Kimchi by 5. -->
 		<set name="icon" val="BranchSys.icon.etc_kimchi_time_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -65,7 +65,7 @@
 		</skills>
 	</item>
 	<item id="20004" name="Vitality Ginseng" type="EtcItem">
-		<!-- Event item Recovers Vitality upon acquiring XP Vitality item with limited usage. -->
+		<!-- Event item. Recovers Vitality upon acquiring XP Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.etc_ginseng_recovery_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="20005" name="Vitality Red Ginseng" type="EtcItem">
-		<!-- Event item Magic Red Ginseng that replenishes some Vitality. Vitality item with limited usage. -->
+		<!-- Event item. Magic Red Ginseng that replenishes some Vitality. Vitality item with limited usage. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -612,7 +612,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="20033" name="My Teleport Flag" type="EtcItem">
-		<!-- Dimensional Item Item consumed when saving a new My Teleport location. Can be shared within an account through the Dimensional Merchant. -->
+		<!-- Dimensional Item. Item consumed when saving a new My Teleport location. Can be shared within an account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys.icon.br_flag_of_bookmark_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

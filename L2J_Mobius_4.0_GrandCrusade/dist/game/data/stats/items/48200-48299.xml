@@ -15,7 +15,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48203" name="Noble Circlet of Authority" type="Armor">
-		<!-- Noble Circlet of Authority. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Authority. Can be augmented. -->
+		<!-- Noble Circlet of Authority.. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Authority. Can be augmented. -->
 		<set name="icon" val="icon.bm_pattack_circlet_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -188,6 +188,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48220" name="NoItemName" type="EtcItem">
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

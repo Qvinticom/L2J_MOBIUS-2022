@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4900" name="Staff of Evil Spirits" additionalName="Magic Focus" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 20% chance of casting Focus on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Focus on the target during magic use. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="4901" name="Staff of Evil Spirits" additionalName="Blessed Body" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 20% chance of casting Blessed Body on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Blessed Body on the target during magic use. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -65,7 +65,7 @@
 		</stats>
 	</item>
 	<item id="4902" name="Staff of Evil Spirits" additionalName="Magic Poison" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 6% chance of casting Curse Poison on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of casting Curse Poison on the target during magic use. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

@@ -130,7 +130,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21206" name="Queen Ant's Ring" additionalName="30-day" type="Armor">
-		<!-- MP + 21, Poison Resistance + 30%, Poison Atk. Rate + 30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied even when two identical rings are worn. 30-day. -->
+		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied even when two identical rings are worn. 30-day. -->
 		<set name="icon" val="icon.bm_ring_of_queen_ant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -158,7 +158,7 @@
 		</stats>
 	</item>
 	<item id="21207" name="Baium's Ring" additionalName="30-day" type="Armor">
-		<!-- MP + 21, Poison Resistance + 40%, Poison Atk. Rate + 40%, Accuracy increase, P. Critical Damage increase, hold tolerance + 30%, hold Atk. Rate + 30%, attack increase, and Casting Spd. Increase. Only one effect is applied even when two identical rings are worn. 30-day. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increase, P. Critical Damage increase, hold tolerance +30%, hold Atk. Rate +30%, attack increase, and Casting Spd. Increase. Only one effect is applied even when two identical rings are worn. 30-day. -->
 		<set name="icon" val="icon.bm_ring_of_baium" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -186,7 +186,7 @@
 		</stats>
 	</item>
 	<item id="21208" name="Zaken's Earring" additionalName="30-day" type="Armor">
-		<!-- MP + 31, Bleed Resistance + 30%, Bleed Atk. Rate + 30%, Heal Amount increase, Vampiric Rage Effect, Stun/Mental Attack Resistance + 20%, and Stun/Mental Atk. Rate + 20%. When equipped with two identical earrings, the effect of only one earring will be applied. 30-day. Cannot be used in Olympiad. -->
+		<!-- MP +31, Bleed Resistance +30%, Bleed Atk. Rate +30%, Heal Amount increase, Vampiric Rage Effect, Stun/ Mental Attack Resistance +20%, and Stun/ Mental Atk. Rate +20%. When equipped with two identical earrings, the effect of only one earring will be applied. 30-day. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_earring_of_zaken" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -214,7 +214,7 @@
 		</stats>
 	</item>
 	<item id="21209" name="MP Recovery Potion Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 3 MP Recovery (+ 50%) potions. -->
+		<!-- Wrapped Pack containing 3 MP Recovery Bonus (+50%) potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -230,11 +230,11 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21210" min="3" max="3" chance="100" /> <!-- MP Recovery Potion -->
+			<item id="21210" min="3" max="3" chance="100" /> <!-- MP Recovery Bonus Potion -->
 		</capsuled_items>
 	</item>
 	<item id="21210" name="MP Recovery Potion" type="EtcItem">
-		<!-- Instantly restores MP by 50%. -->
+		<!-- Instantly restores MP by 50%. Cooldown is 5 min. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -399,7 +399,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21218" name="Queen Ant's Ring" additionalName="180-day" type="Armor">
-		<!-- MP + 21, Poison Resistance + 30%, Poison Atk. Rate + 30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied even when two identical rings are worn. 180 days. -->
+		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied even when two identical rings are worn. 180 days. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -427,7 +427,7 @@
 		</stats>
 	</item>
 	<item id="21219" name="Baium's Ring" additionalName="180-day" type="Armor">
-		<!-- MP + 21, Poison Resistance + 40%, Poison Atk. Rate + 40%, Accuracy increase, P. Critical Damage increase, hold tolerance + 30%, hold Atk. Rate + 30%, attack increase, and Casting Spd. Increase. Only one effect is applied even when two identical rings are worn. 180 days. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increase, P. Critical Damage increase, hold tolerance +30%, hold Atk. Rate +30%, attack increase, and Casting Spd. Increase. Only one effect is applied even when two identical rings are worn. 180 days. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -455,7 +455,7 @@
 		</stats>
 	</item>
 	<item id="21220" name="Zaken's Earring" additionalName="180-day" type="Armor">
-		<!-- MP + 31, Bleed Resistance + 30%, Bleed Atk. Rate + 30%, Heal Amount increase, Vampiric Rage Effect, Stun/Mental Attack Resistance 20% increase, and Stun/Mental Atk. Rate 20% increase. When equipped with two identical earrings, the effect of only one earring will be applied. 180 days. -->
+		<!-- MP +31, Bleed Resistance +30%, Bleed Atk. Rate +30%, Heal Amount increase, Vampiric Rage Effect, Stun/ Mental Attack Resistance 20% increase, and Stun/ Mental Atk. Rate 20% increase. When equipped with two identical earrings, the effect of only one earring will be applied. 180 days. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -483,7 +483,7 @@
 		</stats>
 	</item>
 	<item id="21221" name="Valakas' Necklace" additionalName="180-day" type="Armor">
-		<!-- MP + 50, Sleep Resistance + 40%, Sleep Attack Rate + 40%, HP + 445, cooldown decrease, P. Atk. and M. Atk. Increase, Wild Magic Effect, damage shield effect, and Fire Resistance increases. 180 days. -->
+		<!-- MP +50, Sleep Resistance +40%, Sleep Attack Rate +40%, HP +445, cooldown decrease, P. Atk. and M. Atk. Increase, Wild Magic Effect, Damage Reflect effect, and Fire Resistance increases. 180 days. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -511,7 +511,7 @@
 		</stats>
 	</item>
 	<item id="21222" name="Antharas' Earring" additionalName="180-day" type="Armor">
-		<!-- MP + 37, Bleed Resistance + 40%, Bleed Atk. Rate + 40%, Heal Amount increase, Vampiric Rage Effect, Stun/Mental Attack Resistance 30%, Stun/Mental Atk. Rate + 30%, MP consumption decrease, and Earth Resistance increases. Only one effect is applied even when the two identical earrings are worn. 180 days. -->
+		<!-- MP +37, Bleed Resistance +40%, Bleed Atk. Rate +40%, Heal Amount increase, Vampiric Rage Effect, Stun/ Mental Attack Resistance 30%, Stun/ Mental Atk. Rate +30%, MP consumption decrease, and Earth Resistance increases. Only one effect is applied even when the two identical earrings are worn. 180 days. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1113,7 +1113,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21247" name="Vitality Replenishing Potion" type="EtcItem">
-		<!-- Partially replenishes your Vitality upon use. Cooldown is 60 min.  Will not be deleted upon death. -->
+		<!-- Partially replenishes your Vitality upon use. Cooldown is 60 min. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1134,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="21248" name="Vitality Replenishing Potion" additionalName="Event" type="EtcItem">
-		<!-- Replenishes some Vitality upon use. Cooldown is 60 min.  Will not be deleted upon death. -->
+		<!-- Replenishes some Vitality upon use. Cooldown is 60 min. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1195,7 +1195,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21251" name="Vitality Maintaining Potion (30-minute)" type="EtcItem">
-		<!-- Maintains Vitality for 30 min.  Will not be deleted upon death. -->
+		<!-- Maintains Vitality for 30 min. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1216,7 +1216,7 @@
 		</skills>
 	</item>
 	<item id="21252" name="Vitality Maintaining Potion (30-minute)" additionalName="Event" type="EtcItem">
-		<!-- Maintains Vitality for 30 min.  Will not be deleted upon death. -->
+		<!-- Maintains Vitality for 30 min. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1277,7 +1277,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21255" name="Gludio Homemade Cookie" type="EtcItem">
-		<!-- P. Atk. + 10% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
+		<!-- P. Atk. +10% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1299,7 +1299,7 @@
 		</skills>
 	</item>
 	<item id="21256" name="Gludio Homemade Cookie" additionalName="Event" type="EtcItem">
-		<!-- Increases P. Atk. + 10% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
+		<!-- Increases P. Atk. +10% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1361,7 +1361,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21259" name="Dion Homemade Cookie" type="EtcItem">
-		<!-- P. Def. + 15% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
+		<!-- P. Def. +15% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1383,7 +1383,7 @@
 		</skills>
 	</item>
 	<item id="21260" name="Dion Homemade Cookie" additionalName="Event" type="EtcItem">
-		<!-- Increases P. Def. + 15% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
+		<!-- Increases P. Def. +15% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1467,7 +1467,7 @@
 		</skills>
 	</item>
 	<item id="21264" name="Aden Homemade Cookie" additionalName="Event" type="EtcItem">
-		<!-- For 60 minutes, a powerful spirit acts to increases Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
+		<!-- For 60 minutes, a powerful spirit acts to increases Max MP +20%, HP Recovery Bonus +20%, M. Critical Rate +2, P. Critical Damage during a standard attack +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1529,7 +1529,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21267" name="Giran Homemade Cookie" type="EtcItem">
-		<!-- For 60 minutes, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
+		<!-- For 60 minutes, Max MP +20%, HP Recovery Bonus +20%, M. Critical Rate +2, P. Critical Damage during a standard attack +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1551,7 +1551,7 @@
 		</skills>
 	</item>
 	<item id="21268" name="Giran Homemade Cookie" additionalName="Event" type="EtcItem">
-		<!-- For 60 minutes, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
+		<!-- For 60 minutes, Max MP +20%, HP Recovery Bonus +20%, M. Critical Rate +2, P. Critical Damage during a standard attack +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Decreases Dark attribute defense by $s2 for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
@@ -39,7 +38,6 @@
 		</effects>
 	</skill>
 	<skill id="19403" toLevel="3" name="Elemental Harmony">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Harmony of attributes increases all attack attributes by $s2 for $s1. -->
 		<abnormalTime>
 			<value level="1">5</value>
@@ -105,7 +103,6 @@
 		</effects>
 	</skill>
 	<skill id="19404" toLevel="6" name="Fire Attribute">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Property Toggle Skill (Presentation) -->
 		<icon>icon.skill11046</icon>
 		<operateType>A1</operateType>
@@ -116,14 +113,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>19403</skillId>
+				<skillId>19403</skillId> <!-- Elemental Harmony -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19405" toLevel="4" name="Discarded Wizard's Soul">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Summons Discarded Wizard's Soul. -->
 		<icon>icon.skill19405</icon>
 		<magicLvl>
@@ -163,8 +159,7 @@
 		</effects>
 	</skill>
 	<skill id="19406" toLevel="4" name="Curse from Deadland">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4 -->
+		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -210,7 +205,6 @@
 		</effects>
 	</skill>
 	<skill id="19407" toLevel="3" name="Essence of Mana">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Increases M. Attack by $s1, P. Defense by $s2 and M. Critical Rate by $s3. -->
 		<icon>icon.skill11034</icon>
 		<operateType>T</operateType>
@@ -243,7 +237,6 @@
 		</effects>
 	</skill>
 	<skill id="19408" toLevel="2" name="Embody Mana Armor">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Embodies Mana Armor to reflect $s1 of damage received and decrease $s2, and defend the rest by consuming MP. MP is consumed by $s3 every second and this skill effect is removed if MP reaches $s4. -->
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
 		<icon>icon.skill11065</icon>
@@ -267,7 +260,6 @@
 		</effects>
 	</skill>
 	<skill id="19409" toLevel="1" name="Curse Gloom">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Decreases M. Defense and all attribute defenses by $s2 and $s3, respectively, for $s1. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -312,8 +304,7 @@
 		</effects>
 	</skill>
 	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Elemental Crash inflicts Knock Back. -->
+		<!-- Elemental Buster inflicts Knock Back. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -340,8 +331,7 @@
 		</effects>
 	</skill>
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Elemental Crash inflicts Hold for $s1 -->
+		<!-- Elemental Crash inflicts Hold for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -365,7 +355,6 @@
 		</effects>
 	</skill>
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Crash inflicts Stun for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -390,7 +379,6 @@
 		</effects>
 	</skill>
 	<skill id="19413" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -417,7 +405,6 @@
 		</effects>
 	</skill>
 	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Knock Back. -->
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -450,7 +437,6 @@
 		</effects>
 	</skill>
 	<skill id="19415" toLevel="7" name="Elemental Burst: Earth">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Hold for $s1. -->
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -480,7 +466,6 @@
 		</effects>
 	</skill>
 	<skill id="19416" toLevel="7" name="Elemental Burst: Holy">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Stun for $s1. -->
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -510,7 +495,6 @@
 		</effects>
 	</skill>
 	<skill id="19417" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -540,7 +524,6 @@
 		</effects>
 	</skill>
 	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst release the target and inflicts Faint for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -569,7 +552,6 @@
 		</effects>
 	</skill>
 	<skill id="19419" toLevel="7" name="Elemental Burst: Earth">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Knock Down for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -602,7 +584,6 @@
 		</effects>
 	</skill>
 	<skill id="19420" toLevel="4" name="Quadruple Elemental Blast">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Constant damage is inflicted for $s1 due to powerful magic and you enter the Knock Down state. -->
 		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>

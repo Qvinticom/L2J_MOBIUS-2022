@@ -16,7 +16,7 @@
 		<set name="allow_self_resurrection" val="true" />
 	</item>
 	<item id="13301" name="My Teleport Book (Event)" type="EtcItem">
-		<!-- Increases by 3 slots the free teleport list, which can remember designated locations. Can expand up to 9 slots. -->
+		<!-- Increases by 3 slots the free teleport list, which can remember designated locations. Can expand up to 18 slots. -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="material" val="PAPER" />
@@ -148,7 +148,7 @@
 		</skills>
 	</item>
 	<item id="13307" name="Color Title (Event)" type="EtcItem">
-		<!-- Item that allows you to change a character's name color. You can change back to the original name color by using the /resetname command after changing the name color. If there is no original name, the name will disappear. -->
+		<!-- Item that allows you to change a character's title color. You can change back to the original title color by using the "/ resetname" command after changing the title color. If there is no original title, the title will disappear. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -986,7 +986,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13344" name="Agathion - Love Pack (30-day) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Love Agathion Seal Bracelet (30-day). -->
+		<!-- Dimensional Item Pack. A pack containing Love Agathion Seal Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1516,7 +1516,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13369" name="Agathion - Love Pack (7-day) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Love Agathion Seal Bracelet (7-day). -->
+		<!-- Dimensional Item Pack. A pack containing Love Agathion Seal Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1937,7 +1937,7 @@
 		</skills>
 	</item>
 	<item id="13389" name="Kratei Scale Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 516 when over-enchanted to + 4 or above. -->
+		<!-- Increases Max CP by 516 when over-enchanted to +4 or above. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1961,7 +1961,7 @@
 		</stats>
 	</item>
 	<item id="13390" name="Kratei Mithril Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 672 when over-enchanted to + 4 or above. -->
+		<!-- Increases Max CP by 672 when over-enchanted to +4 or above. -->
 		<set name="icon" val="icon.etc_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1985,7 +1985,7 @@
 		</stats>
 	</item>
 	<item id="13391" name="Kratei Striped Scale Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 564 when over-enchanted to + 4 or above. -->
+		<!-- Increases Max CP by 564 when over-enchanted to +4 or above. -->
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2009,7 +2009,7 @@
 		</stats>
 	</item>
 	<item id="13392" name="Kratei Striped Mithril Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 744 when over-enchanted to + 4 or above. -->
+		<!-- Increases Max CP by 744 when over-enchanted to +4 or above. -->
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20600" level="40" type="L2Monster" name="Karul Bugbear">
 		<parameters>
@@ -1789,8 +1789,8 @@
 				<item id="4103" min="1" max="1" chance="0.75" /> <!-- Pata Blade -->
 				<item id="4988" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
 				<item id="4041" min="1" max="1" chance="0.3" /> <!-- Mold Hardener -->
-				<item id="4613" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR  4 CON -4) -->
-				<item id="4622" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN (Men  4 Wit -4) -->
+				<item id="4613" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR +4 CON -4> - 2nd Class Transfer -->
+				<item id="4622" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN <Men +4 Wit -4> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="4998" min="1" max="1" chance="22.6" /> <!-- Recipe: Sealed Blue Wolf Gloves (60%) -->
@@ -1866,8 +1866,8 @@
 				<item id="4958" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
 				<item id="4974" min="1" max="1" chance="0.75" /> <!-- Recipe: Black Ore Ring (70%) -->
 				<item id="4940" min="1" max="1" chance="0.3" /> <!-- Recipe: Zubei's Breastplate (60%) -->
-				<item id="4614" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR  4 DEX -4) -->
-				<item id="4616" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con  4 DEX -4) -->
+				<item id="4614" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR +4 DEX -4> - 2nd Class Transfer -->
+				<item id="4616" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con +4 DEX -4> - 2nd Class Transfer -->
 				<item id="5001" min="1" max="1" chance="0.03" /> <!-- Recipe: Lance (60%) -->
 			</drop>
 			<spoil>
@@ -2201,8 +2201,8 @@
 				<item id="4118" min="1" max="1" chance="0.75" /> <!-- Evil Spirit Head -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
 				<item id="4989" min="1" max="1" chance="0.3" /> <!-- Recipe: Stockings of Doom (60%) -->
-				<item id="4623" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit  4 Int -4) -->
-				<item id="4624" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit  4 Men -4) -->
+				<item id="4623" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +4 Int -4> - 2nd Class Transfer -->
+				<item id="4624" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +4 Men -4> - 2nd Class Transfer -->
 				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
 				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
@@ -4808,8 +4808,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5010,8 +5010,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->

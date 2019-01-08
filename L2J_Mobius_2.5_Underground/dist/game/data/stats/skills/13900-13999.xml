@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13900" toLevel="2" name="Sigel">
-		<!-- Max HP +15%, PvP/PvE Damage Received -5% -->
+		<!-- Max HP + $s1 -->
 		<icon>icon.ensoul_big_ep</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -75,7 +75,6 @@
 		</effects>
 	</skill>
 	<skill id="13904" toLevel="1" name="Roa's Assistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Special buff prepared by Roa. Go find Roa during special events. For $s1 hour, XP/SP + $s2. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
@@ -528,7 +527,7 @@
 		</effects>
 	</skill>
 	<skill id="13918" toLevel="1" name="Elysium Buster">
-		<!-- M. Atk. + 6%, Casting Spd. + 15%, M. Critical Rate + 25, M. Critical Damage + 10%, Max HP/MP/CP + 15%. -->
+		<!-- M. Atk. + 6%, Casting Spd. + 15%, M. Critical Rate + 25%, M. Critical Damage + 10%, Max HP/MP/CP + 15%. -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -563,7 +562,7 @@
 		</effects>
 	</skill>
 	<skill id="13919" toLevel="1" name="Elysium Caster">
-		<!-- M. Atk. + 6%, Casting Spd. + 15%, M. Critical Rate + 25, M. Critical Damage + 10%, Max HP/MP/CP + 15%. -->
+		<!-- M. Atk. + 6%, Casting Spd. + 15%, M. Critical Rate + 25%, M. Critical Damage + 10%, Max HP/MP/CP + 15%. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -598,7 +597,7 @@
 		</effects>
 	</skill>
 	<skill id="13920" toLevel="1" name="Elysium Retributer">
-		<!-- P. Atk. + 6%, M. Atk. + 6%, Atk. Spd. + 15%, Casting Spd. + 15%, P. Critical Rate + 82, M. Critical Rate + 25, P. Critical Damage + 7%, M. Critical Damage + 10%, Max HP/MP/CP + 15%. -->
+		<!-- P. Atk. + 6%, M. Atk. + 6%, Atk. Spd. + 15%, Casting Spd. + 15%, P. Critical Rate + 82, M. Critical Rate + 25%, P. Critical Damage + 7%, M. Critical Damage + 10%, Max HP/MP/CP + 15%. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -766,7 +765,6 @@
 		</effects>
 	</skill>
 	<skill id="13924" toLevel="1" name="La Vie En Rose's Radiant Brooch">
-		<!-- Updated to IO -->
 		<!-- Expands inventory. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>P</operateType>

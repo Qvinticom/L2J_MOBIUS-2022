@@ -8,7 +8,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28401" name="XP Rune III 100% Pack (1-hr)" type="EtcItem">
-		<!-- Wrapped Pack containingXP Rune III 100% (1-hr). -->
+		<!-- Double-click to obtain aXP Rune III 100% (1-hr). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -19,11 +19,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III 100% (1-hr) -->
+			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="28402" name="XP Rune III 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III 100% (7-day). -->
+		<!-- Double-click to obtain a XP Rune III 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -34,11 +34,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III 100% (7-day) -->
+			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="28403" name="SP Rune 100% Pack (1-hr)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 100% (1-hr). -->
+		<!-- Double-click to obtain a SP Rune 100% (1-hr). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -49,11 +49,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% (1-hr) -->
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="28404" name="SP Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 100% (7-day). -->
+		<!-- Double-click to obtain a SP Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -64,11 +64,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% (7-day) -->
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="28405" name="Maphr's Rune 100% Pack (1-hr)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (1-hr). -->
+		<!-- Double-click to obtain a Maphr's Rune 100% (1-hr). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -79,11 +79,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (1-hr) -->
+			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="28406" name="Maphr's Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Rune 100% (7-day). -->
+		<!-- Double-click to obtain a Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -118,7 +118,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28409" name="Eva's Rune Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Rune (7-day). -->
+		<!-- Double-click to obtain an Eva's Rune (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -129,11 +129,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28407" min="1" max="1" chance="100" /> <!-- Eva's Rune (7-day) -->
+			<item id="28407" min="1" max="1" chance="100" /> <!-- Eva's Rune - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="28410" name="Eva's Rune Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Rune (30-day). -->
+		<!-- Double-click to obtain an Eva's Rune (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -144,11 +144,11 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="28408" min="1" max="1" chance="100" /> <!-- Eva's Rune Pack (30-day) -->
+			<item id="28408" min="1" max="1" chance="100" /> <!-- Eva's Rune - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="28411" name="XP Rune II Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune II Pack (7-day). -->
+		<!-- Double-click to obtain a XP Rune II Pack (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
 		<set name="default_action" val="PEEL" />
@@ -160,7 +160,7 @@
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35933" min="1" max="1" chance="100" /> <!-- XP Rune II (7-day) -->
+			<item id="35933" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% Pack (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="28481" name="Low-Grade Forbidden Secret Book" type="EtcItem">
@@ -182,21 +182,21 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28484" name="Brooch Spirit Stone" type="EtcItem">
-		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Enchant Types. Shadai at Heine can imbue the enhanced Elegant Brooch with a special power. -->
+		<!-- Spirit Stone needed for augmenting an Enhanced Magnificent Brooch. Can be also used for upgrading an Elegant Brooch. Bring this stone to Shadai in Heine to upgrade an Elegant Brooch to an Enhanced Magnificent Brooch. Additional fee is required. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28485" name="Brooch Spirit Stone" additionalName="Rare-Type" type="EtcItem">
-		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Rare Types. -->
+		<!-- Spirit Stone needed for augmenting a Rare Magnificent Brooch. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28489" name="Brilliant Brooch Jewel" type="EtcItem">
-		<!-- A brilliant, shining jewel. Shadai at Heine can imbue the enhanced Brilliant Brooch with a special power. -->
+		<!-- A shining jewel needed to create a La Vie En Rose's Magnificent Brooch. Bring this to Shadai in Heine to upgrade an Enhanced Magnificent Brooch to a Rare one. Additional fee is required. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -281,7 +281,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28412" name="+10 Shiny Elemental Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a + 10 Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -294,7 +294,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28413" name="+10 Reflect Attack T-shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a + 10 Reflect Attack T-shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Physical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -307,7 +307,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28414" name="+10 Reflect Magic T-shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a +10 Reflect Magic T-shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Magical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -320,7 +320,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28415" name="+10 Pa'agrio's Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a + 10 Pa'agrio's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Pa'agrio's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -333,7 +333,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28416" name="+10 Sayha's Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a + 10 Sayha's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Sayha's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -346,7 +346,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28417" name="+10 Eva's Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a + 10 Eva's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Eva's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -359,7 +359,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28418" name="+10 Maphr's Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a + 10 Maphr's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a +10 Maphr's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -372,7 +372,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28419" name="Shiny Elemental Shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -380,7 +380,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28420" name="Reflect Attack T-shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Reflect Attack T-shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Physical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -388,7 +388,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28421" name="Reflect Magic T-shirt Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Reflect Magic T-shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Magical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -396,58 +396,58 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28422" name="Shiny Elemental Shirt Special Pack" type="EtcItem">
-		<!-- Double-click to get 1 of the following: Blessed Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Shining Scroll: Enchant Elemental Shirt x1, Shiny Elemental Shirt Pack x1. -->
+		<!-- Double-click to get 1 of the following: Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Destruction Scroll: Enchant Elemental Shirt x1, Shiny Elemental Shirt Pack x1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28423" name="Reflect Attack T-shirt Special Pack" type="EtcItem">
-		<!-- Double-click to get 1 of the following: Blessed Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Shining Scroll: Enchant Elemental Shirt x1, Reflect Attack T-shirt Pack x1. -->
+		<!-- Double-click to get 1 of the following: Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Destruction Scroll: Enchant Elemental Shirt x1, Physical Reflect Shirt Pack x1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28424" name="Reflect Magic T-shirt Special Pack" type="EtcItem">
-		<!-- Double-click to get 1 of the following: Blessed Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Shining Scroll: Enchant Elemental Shirt x1, Reflect Magic T-shirt Pack x1. -->
+		<!-- Double-click to get 1 of the following: Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Destruction Scroll: Enchant Elemental Shirt x1, Magical Reflect Shirt Pack x1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28425" name="Royal White Save Ticket (R)" type="EtcItem">
-		<!-- A ticket that enhances probability by 30% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant succeeds, it increases randomly by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +30% for armor (R-grade) with a normal enchant scroll. Only for items enchanted between +3 and +9. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28426" name="Royal White Save Ticket (R95)" type="EtcItem">
-		<!-- A ticket that enhances probability by 30% when using a Normal Armor Enchant Scroll to enchant R95-grade Armor. Can only be used on 3-9 enchanted items. When Enchant succeeds, it increases randomly by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +30% for armor (R95-grade) with a normal enchant scroll. Only for items enchanted between +3 and +9. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28427" name="Royal White Save Ticket (R99)" type="EtcItem">
-		<!-- A ticket that enhances probability by 30% when using a Normal Armor Enchant Scroll to enchant R99-grade Armor. Can only be used on 3-9 enchanted items. When Enchant succeeds, it increases randomly by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +30% for armor (R99-grade) with a normal enchant scroll. Only for items enchanted between +3 and +9. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28428" name="Royal Purple Save Ticket (R)" type="EtcItem">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R-grade Weapons. Can only be used on 12+ enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +20% for weapons (R-grade) with a normal enchant scroll. Can only be used on 12+ enchanted items. When enchant succeeds, it increases by 1. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28429" name="Royal Purple Save Ticket (R95)" type="EtcItem">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R95-grade Weapons. Can only be used on 12+ enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +20% for weapons (R95-grade) with a normal enchant scroll. Can only be used on 12+ enchanted items. When enchant succeeds, it increases by 1. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28430" name="Royal Purple Save Ticket (R99)" type="EtcItem">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R99-grade Weapons. Can only be used on 12+ enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- Enchant success rate +20% for weapons (R99-grade) with a normal enchant scroll. Can only be used on 12+ enchanted items. When enchant succeeds, it increases by 1. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -468,7 +468,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28433" name="Agathion - Babayaga" additionalName="Premium" type="Armor">
-		<!-- Can summon Babayaga when equipped. -->
+		<!-- Can summon Hut on Chicken Legs when equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -482,7 +482,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28434" name="Mount - Elk" type="Armor">
-		<!-- Can mount an Elk when equipped. -->
+		<!-- Can mount a Fire Elk when equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -504,7 +504,7 @@
 		</skills>
 	</item>
 	<item id="28435" name="Draco's Hat: Warrior" additionalName="Event" type="Armor">
-		<!-- A cute Draco's Hat. Uses 2 Hair Accessory slots. STR + 2, DEX + 2, CON + 2. -->
+		<!-- A cute Draco's Hat. Uses 2 Hair Accessory slots. STR +2, DEX +2, CON +2. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -514,7 +514,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28436" name="Draco's Hat: Wizard" additionalName="Event" type="Armor">
-		<!-- A cute Draco's Hat. Uses 2 Hair Accessory slots. STR + 2, DEX + 2, CON + 2. -->
+		<!-- A cute Draco's Hat. Uses 2 Hair Accessory slots. STR +2, DEX +2, CON +2. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -524,7 +524,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28437" name="Sayha's Talisman Stage 1" type="Armor">
-		<!-- When equipped, P. Def. + 112, M. Def. + 74, XP/SP Gain + 1%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +112, M. Def. +74, Acquired XP/ SP +1%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -541,7 +541,7 @@
 		</skills>
 	</item>
 	<item id="28438" name="Sayha's Talisman Stage 2" type="Armor">
-		<!-- When equipped, P. Def. + 225, M. Def. + 147, XP/SP Gain + 2%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +225, M. Def. +147, Acquired XP/ SP +2%.. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -558,7 +558,7 @@
 		</skills>
 	</item>
 	<item id="28439" name="Sayha's Talisman Stage 3" type="Armor">
-		<!-- When equipped, P. Def. + 450, M. Def. + 294, XP/SP Gain + 3%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +450, M. Def. +294, Acquired XP/ SP +3%.. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -575,7 +575,7 @@
 		</skills>
 	</item>
 	<item id="28440" name="Sayha's Talisman Stage 4" type="Armor">
-		<!-- When equipped, P. Def. + 676, M. Def. + 441, X/SP Gain + 5%. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 2%, Skill Cooldown - 2%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +676, M. Def. +441, X/ SP Gain +5%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +2%, Skill Cooldown -2%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -592,7 +592,7 @@
 		</skills>
 	</item>
 	<item id="28441" name="Sayha's Talisman Stage 5" type="Armor">
-		<!-- When equipped, P. Def. + 901, M. Def. + 589, XP/SP Gain + 7%. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 2%, Skill Cooldown - 2%. Active Skills. Sayha's Protection Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +901, M. Def. +589, Acquired XP/ SP +7%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +2%, Skill Cooldown -2%. Active Skills. Sayha's Protection Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -610,7 +610,7 @@
 		</skills>
 	</item>
 	<item id="28442" name="Sayha's Talisman Stage 6" type="Armor">
-		<!-- When equipped, P. Def. + 1126, M. Def. + 736, XP/SP Gain + 10%. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 3%, Skill Cooldown - 3%. Active Skills. Sayha's Protection Lv. 1. Sayha's Encouragement Lv1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +1126, M. Def. +736, Acquired XP/ SP +10%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +3%, Skill Cooldown -3%. Active Skills. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -629,7 +629,7 @@
 		</skills>
 	</item>
 	<item id="28443" name="Sayha's Talisman Stage 7" type="Armor">
-		<!-- When equipped, P. Def. + 1351, M. Def. + 883, XP/SP Gain + 15%. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 3%, Skill Cooldown - 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Anger Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +1351, M. Def. +883, Acquired XP/ SP +15%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +3%, Skill Cooldown -3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. Sayha's Anger Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -649,7 +649,7 @@
 		</skills>
 	</item>
 	<item id="28444" name="Sayha's Talisman Stage 8" type="Armor">
-		<!-- When equipped, P. Def. + 1576, M. Def. + 1030, XP/SP Gain + 20%. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 5%, Skill Cooldown - 5%. <Active Skills>. Sayha's Protection Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. Sayha's Support Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +1576, M. Def. +1030, Acquired XP/ SP +20%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +5%, Skill Cooldown -5%. <Active Skills>. Sayha's Protection Lv. 2. Sayha's Encouragement Lv. 2. Sayha's Anger Lv. 2. Sayha's Support Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -670,7 +670,7 @@
 		</skills>
 	</item>
 	<item id="28445" name="Sayha's Talisman Stage 9" type="Armor">
-		<!-- When equipped, P. Def. + 1801, M. Def. + 1178, XP/SP Gain + 25%, Effect of Potions/Medicines + 5000. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 5%, Skill Cooldown - 5%. <Active Skills>. Sayha's Protection Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Anger Lv. 3. Sayha's Support Lv. 2. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +1801, M. Def. +1178, Acquired XP/ SP +25%, Effect of Potions/ Medicines +5000. If equipped with Venir's Talisman Stage 12 or above, Skill Power +5%, Skill Cooldown -5%. <Active Skills>. Sayha's Protection Lv. 3. Sayha's Encouragement Lv. 3. Sayha's Anger Lv. 3. Sayha's Support Lv. 2. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -691,7 +691,7 @@
 		</skills>
 	</item>
 	<item id="28446" name="Sayha's Talisman Stage 10" type="Armor">
-		<!-- When equipped, P. Def. + 2027, M. Def. + 1325, XP/SP Gain + 30%, Effect of Potions/Medicines + 7000. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 9%, Skill Cooldown - 5%. <Active Skills>. Sayha's Protection Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Anger Lv. 4. Sayha's Support Lv. 3. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. +2027, M. Def. +1325, Acquired XP/ SP +30%, Effect of Potions/ Medicines +7000. If equipped with Venir's Talisman Stage 12 or above, Skill Power +9%, Skill Cooldown -5%. <Active Skills>. Sayha's Protection Lv. 4. Sayha's Encouragement Lv. 4. Sayha's Anger Lv. 4. Sayha's Support Lv. 3. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -712,7 +712,7 @@
 		</skills>
 	</item>
 	<item id="28447" name="Sayha's Talisman Pack" type="EtcItem">
-		<!-- Wrapped pack containing Sayha's Talisman Stage 1. The talisman cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Sayha's Talisman Stage 1. The talisman cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -720,7 +720,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28448" name="Sayha's Talisman Stage 7 Pack" type="EtcItem">
-		<!-- Wrapped pack containing Sayha's Talisman Stage 7. The talisman cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Sayha's Talisman Stage 7. The talisman cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28449" name="Sayha's Talisman Stage 8 Pack" type="EtcItem">
-		<!-- Wrapped pack containing Sayha's Talisman Stage 8. The talisman cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Sayha's Talisman Stage 8. The talisman cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28450" name="Sayha's Talisman Stage 9 Pack" type="EtcItem">
-		<!-- Wrapped pack containing Sayha's Talisman Stage 9. The talisman cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Sayha's Talisman Stage 9. The talisman cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28451" name="Sayha's Talisman Stage 10 Pack" type="EtcItem">
-		<!-- Wrapped pack containing Sayha's Talisman Stage 10. The talisman cannot be dropped or exchanged. -->
+		<!-- Double-click to obtain a Sayha's Talisman Stage 10. The talisman cannot be dropped or exchanged. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -771,7 +771,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28455" name="Dimensional Bracelet Stage 6 Pack" type="EtcItem">
-		<!-- Double-click to obtain a Dimensional Bracelet Stage 6 (CHA + 5). -->
+		<!-- Double-click to obtain a Dimensional Bracelet Stage 6 (CHA +5). -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -779,7 +779,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28456" name="Dimensional Bracelet Stage 6" additionalName="CHA+5" type="Armor">
-		<!-- CHA + 5. Activates 6 talisman slots when equipped. -->
+		<!-- CHA +5. Activates 6 talisman slots when equipped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -930,7 +930,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28470" name="Ultimate Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain 1 of the La Vie En Rose's Jewelry Boxes. -->
+		<!-- Double-click to obtain 1 of the La Vie En Rose's Jewelry Boxes. Has a low chance of obtaining a La Vie En Rose's Magnificent Brooch Jewel. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -982,7 +982,7 @@
 		</skills>
 	</item>
 	<item id="28473" name="Mount - Elk (Event)" additionalName="7-day" type="Armor">
-		<!-- Equip it to mount an elk. <Usable Skill>. 1. Elk's Blessing: Maintains Vitality for 1 hour. (Cooldown time is 12 hours). 2. Summon Elk: Can summon a party member. (Cooldown time is 10 minutes) -->
+		<!-- Equip it to mount an elk. <Usable Skill>. 1. Elk's Blessing: Maintains Vitality for 1 hr. (Cooldown time is 12 hr.). 2. Summon Elk: Can summon a party member. (Cooldown time is 10 min.) -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1074,7 +1074,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28486" name="La Vie En Rose's Radiant Brooch" type="Armor">
-		<!-- Activates 6 Jewel Slots upon equipping. Increases inventory slots by + 12. -->
+		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -1090,7 +1090,7 @@
 		</stats>
 	</item>
 	<item id="28487" name="La Vie En Rose's Radiant Brooch" additionalName="Enchant Type" type="Armor">
-		<!-- Activates 6 Jewel Slots upon equipping. Increases inventory slots by 12. Increases CHA by 1. Can be augmented. -->
+		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. Additionally, CHA +1. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -1106,7 +1106,7 @@
 		</stats>
 	</item>
 	<item id="28488" name="La Vie En Rose's Radiant Brooch" additionalName="Rare-Type" type="Armor">
-		<!-- Activates 6 Jewel Slots upon equipping. Increases inventory slots by 12. Increases All Basic Stats by 2. Increases Max. CP by + 12. Can be augmented. -->
+		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. Additionally, all basic stats +2. Max CP +12%. Can be augmented. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -1122,7 +1122,7 @@
 		</stats>
 	</item>
 	<item id="28497" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- The Lucky Enchant Stone increases the chance of enchanting an R-grade weapon by 20% when using an Enchant Scroll. Can only be used on items that have been enchanted between + 3 and + 9. In case of Enchantment failure, the item is not Crystallized, but base Enchantment count is 0. -->
+		<!-- The Lucky Enchant Stone increases the chance of enchanting an R-grade weapon by 20% when using an Enchant Scroll. Can only be used on items that have been enchanted between +3 and +9. In case of Enchantment failure, the item is not Crystallized, but base Enchantment count is 0. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="etcitem_type" val="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />

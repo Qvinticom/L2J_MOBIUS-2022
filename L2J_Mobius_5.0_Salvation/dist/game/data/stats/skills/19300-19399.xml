@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19300" toLevel="1" name="Reverse Mana Drain">
-		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill19299</icon>
 		<effectPoint>-709</effectPoint>
 		<operateType>A1</operateType>
@@ -15,8 +14,7 @@
 		</effects>
 	</skill>
 	<skill id="19301" toLevel="9" name="Acid Swarm">
-		<!-- Salvation -->
-		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for 15 seconds. 
+		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P. Def/ M. Def -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
 		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
 		<operateType>A1</operateType>
@@ -116,8 +114,7 @@
 		</effects>
 	</skill>
 	<skill id="19302" toLevel="9" name="Thrown Acid Sworm">
-		<!-- Salvation -->
-		<!-- Damaged by acid. P. Def/M. Def -30% and, Atk. Spd./Movement Speed/Shield Def. -50%, cannot use magic skills, and HP -$s3 per second. -->
+		<!-- Poisoned. P. Def/ M. Def -$s1 and, Atk. Spd./ Speed/ Shield Def. -$s2, blocks magic skills, and HP -$s3 per second. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -200,8 +197,7 @@
 		</effects>
 	</skill>
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
-		<!-- Salvation -->
-		<!-- Moves to the right side of the target to attempt the Deadly Attack with 35530 Power added to P. Atk and stun the target for 2 seconds. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
+		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -254,7 +250,7 @@
 		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>19304</skillId>
+				<skillId>19304</skillId> <!-- Easterly Wind Strike -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -283,8 +279,7 @@
 		</effects>
 	</skill>
 	<skill id="19304" toLevel="2" name="Easterly Wind Strike">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Increases critical rate/critical damage inflicted from the side and critical rate/critical damage inflicted from behind by 20% and 10%, respectively. -->
+		<!-- Critical rate/ critical damage inflicted from the flank +$s1 and critical rate/ critical damage inflicted from behind +$s2, and also resets cooldown of Right Angle Reverse and Easterly Wind Strike. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -299,7 +294,7 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<selfEffects>
 			<effect name="ReuseSkillById">
-				<skillId>10705</skillId>
+				<skillId>10705</skillId> <!-- Easterly Wind Strike -->
 			</effect>
 		</selfEffects>
 		<effects>
@@ -326,8 +321,7 @@
 		</effects>
 	</skill>
 	<skill id="19305" toLevel="7" name="Shadow Reverse">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Attempts Deadly Attack on the target with 38160 power added to P. Attack and moves backward. Additionally, decreases Accuracy by 5 for 3 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
+		<!-- Teleports to the back of the target and attempts Deadly Attack with $s1 power added to P. Atk. Additionally, decreases target Accuracy by $s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<icon>icon.skill19305</icon>
@@ -396,8 +390,7 @@
 		</effects>
 	</skill>
 	<skill id="19306" toLevel="1" name="Coin of Maphr">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Each party member will receive a random set of effects based on a coin flip: Increased P./M. Atk and P./M. Skill Power OR Increased Head size and P./M. Def. Consumes 7777 Adena. Requires dagger/dual dagger. -->
+		<!-- Each party member will receive a random set of effects based on a coin flip: Increased P./ M. Atk. and P./ M. Skill Power or Increased Head size and P./ M. Def. Consumes 7777 Adena. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19306</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>7777</itemConsumeCount>
@@ -425,8 +418,7 @@
 		</effects>
 	</skill>
 	<skill id="19307" toLevel="2" name="Lucky Coin: Attack">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Maphr's Blessing increases Attack by $s2, M. Attack by $s3, and P./M. Skill Power by $s4 for $s1. -->
+		<!-- Maphr's Blessing increases P. Atk. by $s2, M. Atk. by $s3, and P./ M. Skill Power by $s4 for $s1. -->
 		<icon>icon.skill19307</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -454,8 +446,7 @@
 		</effects>
 	</skill>
 	<skill id="19308" toLevel="1" name="Lucky Coin: Defense">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Maphr's Blessing increases allly's P. Defense/M. Defense by $s2 and enlarges their head size for $s1. -->
+		<!-- Maphr's Blessing increases allly's P. Defense/ M. Defense by $s2 and enlarges their head size for $s1. -->
 		<icon>icon.skill19308</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -477,8 +468,7 @@
 		</effects>
 	</skill>
 	<skill id="19309" toLevel="7" name="Reverse Plunder">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Attempts Deadly Attack and item looting with 36840 power added to P. Attack. Requires dagger/dual dagger. -->
+		<!-- Attempts Deadly Attack with $s1 power added to P. Atk. and steals an item. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19309</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -524,8 +514,7 @@
 		</effects>
 	</skill>
 	<skill id="19311" toLevel="3" name="Dwarven Flare Bluff">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Fires Special Flare to inflict Bluff on enemies in front for 3 seconds. Requires dagger/dual dagger. Consumes 2 Soulstones. -->
+		<!-- Fires Special Flare to inflict Bluff on enemies in front for $s1. Requires dagger/ dual dagger. Consumes $s2 Soulstones. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>POWER_BLUFF</abnormalType>
@@ -575,8 +564,7 @@
 		</effects>
 	</skill>
 	<skill id="19312" toLevel="1" name="Holy Stance">
-		<!-- Salvation -->
-		<!-- Damage received -5%, Damage dealt +5%, and Holy Attribute Def. +100, and applies Holy to attribute magic. -->
+		<!-- Damage received -$s1, Damage dealt +$s2, and Holy Attribute Def. +$s3, and applies Holy to attribute magic. -->
 		<icon>icon.skill19312</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -626,13 +614,12 @@
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>5</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19313" toLevel="1" name="Dark Stance">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Increases Magical Skill Power by $s1 and Dark defense by $s2, and applies Dark to attribute magic. -->
 		<icon>icon.skill19313</icon>
 		<toggleGroupId>1</toggleGroupId>
@@ -652,14 +639,13 @@
 				<attribute>DARK</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId>
+				<skillId>19404</skillId> <!-- Fire Attribute -->
 				<skillLevel>6</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19314" toLevel="11" name="Elemental Spike (Dark)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit is possible. Over-hit. -->
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit. -->
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11011</reuseDelayGroup>
@@ -750,8 +736,7 @@
 		</effects>
 	</skill>
 	<skill id="19315" toLevel="4" name="Mana Burst">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Increases M. Attack by $s2 for $s1. Able to cast Quadruple Elemental Blaster if reached level 4. -->
+		<!-- For $s1 increases M. Atk. by $s2. Able to cast Quadruple Elemental Blast if reached level 4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -794,22 +779,21 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill" fromLevel="1" toLevel="1">
-				<skillId>19315</skillId>
+				<skillId>19315</skillId> <!-- Mana Burst -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="2" toLevel="2">
-				<skillId>19315</skillId>
+				<skillId>19315</skillId> <!-- Mana Burst -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill" fromLevel="3" toLevel="3">
-				<skillId>19315</skillId>
+				<skillId>19315</skillId> <!-- Mana Burst -->
 				<skillLevel>4</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="19316" toLevel="8" name="Elemental Final Storm (Dark)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<icon>icon.skill11040</icon>

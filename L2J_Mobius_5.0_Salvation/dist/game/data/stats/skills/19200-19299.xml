@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19200" toLevel="1" name="Gravity Sign">
-		<!-- For 30 sec., P./M. Def. + 10%. -->
+		<!-- For 30 sec., P./ M. Def. +10%. -->
 		<abnormalType>1</abnormalType>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -21,7 +21,7 @@
 		</effects>
 	</skill>
 	<skill id="19201" toLevel="1" name="Paladin's Protection">
-		<!-- For 15 sec., all party members' P. Def. + 200%, P. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
+		<!-- For 15 sec., all party members' P. Def. +200%, P. Evastion +8, Speed +20. Consumes 5 Soulstones. -->
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -53,7 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="19202" toLevel="1" name="Sentinel's Protection">
-		<!-- For 15 sec., all party members' M. Def. + 200%, M. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
+		<!-- For 15 sec., all party members' M. Def. +200%, M. Evastion +8, Speed +20. Consumes 5 Soulstones. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>SENTINEL_PROTECTION</abnormalVisualEffect>
@@ -85,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="19203" toLevel="1" name="Ultimate Bullseye">
-		<!-- Decreases target's Bow/Crossbow Resistance by 60% for 7 seconds. Does not cancel when striking. Consumes 1 Soulstone. -->
+		<!-- Decreases target's Bow/ Crossbow Resistance by $s2 for $s1. Does not cancel when striking. Consumes $s3 Soulstone. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -122,7 +122,7 @@
 		</effects>
 	</skill>
 	<skill id="19204" toLevel="1" name="Prophecy of Might">
-		<!-- Increases Critical Rate and Damage of general attacks and skills of selected party member by 25% for 5 minutes. Consumes 5 Spirit Ores. -->
+		<!-- For $s1, increases the selected party member's Physical/ Magic/ Skill Critical Rate and Power by $s2. If cast once, it activates the Glaring effect that increases your P. Atk./ M. Atk. by $s3, and resets the cooldown of Prophecy of Might. If cast twice, it cancels the Glaring effect. Consumes $s4 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -171,7 +171,7 @@
 		</effects>
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
-		<!-- Increases Bow/Crossbow Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
+		<!-- Increases Bow/ Crossbow Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -200,7 +200,7 @@
 		</effects>
 	</skill>
 	<skill id="19206" toLevel="1" name="Sage's Dance">
-		<!-- Increases M. Def. of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
+		<!-- Increases M. Def. of all party members by $s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -229,8 +229,7 @@
 		</effects>
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
-		<!-- Salvation -->
-		<!-- For 5 minutes, all party members' P. Atk./M. Atk. +15% and P. Skill Power/M. Skill Power +5%. Consumes 10 Spirit Ores.-->
+		<!-- For $s1, all party members' P. Atk./ M. Atk. +$s2 and Physical/ Magic Skill Power +$s3. Consumes $s4 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -271,8 +270,7 @@
 		</effects>
 	</skill>
 	<skill id="19208" toLevel="1" name="Seal of Restriction">
-		<!-- Updated to IO -->
-		<!-- Casts a curse that prevents the target and nearby enemies from receiving Invincibility for 30 seconds during PvP. Consumes 5 Spirit Ores. -->
+		<!-- For $s1, physical/ magic skill cooldown of the target and nearby enemies +$s2. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19208</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -323,8 +321,7 @@
 		</effects>
 	</skill>
 	<skill id="19209" toLevel="1" name="Divinity of Einhasad">
-		<!-- Updated to IO -->
-		<!-- Decreases Magic Skill MP Consumption by 30% and has a 100% to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal'. Consumes 5 Spirit Ores. -->
+		<!-- Decreases Magic Skill MP Consumption by $s2 and has a $s3 to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal' for $s1. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19209</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -355,8 +352,7 @@
 		</effects>
 	</skill>
 	<skill id="19210" toLevel="1" name="Summon Tree of Sephiroth">
-		<!-- Updated to IO -->
-		<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for 30 seconds and casts a debuff canceling blessing. Consumes 5 Spirit Ores. -->
+		<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for $s1 and casts a debuff canceling blessing. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill19210</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -377,7 +373,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
 			<effect name="Summon">
-				<npcId>15154</npcId>
+				<npcId>15154</npcId> <!-- Tree of Life -->
 				<lifeTime>30</lifeTime>
 			</effect>
 			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
@@ -407,8 +403,7 @@
 		</effects>
 	</skill>
 	<skill id="19211" toLevel="1" name="Barrer for Test">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 1 min., puts a barrier around a party member. The barrier blocks 50000 damage. Consumes 5 Soulstones. -->
+		<!-- For 1 min., puts a barrier around a party member. The barrier blocks 50000 damage. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
@@ -420,8 +415,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19212" toLevel="1" name="Shillien Protection">
-		<!-- Updated to GC -->
-		<!-- Puts a barrier around a party member for 30 seconds. Recovers 100% CP/HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes 5 Spirit Ores. -->
+		<!-- Puts a barrier around a party member for $s1. Recovers $s2 CP/ HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -448,13 +442,12 @@
 		<effects>
 			<effect name="TriggerSkillByDeathBlow">
 				<chance>100</chance>
-				<skillId>19221</skillId>
+				<skillId>19221</skillId> <!-- Power of Darkness -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19213" toLevel="1" name="Polishing Arrows: Atk. Spd.">
-		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
@@ -481,7 +474,6 @@
 		</effects>
 	</skill>
 	<skill id="19214" toLevel="1" name="Polishing Bolts: Atk. Spd.">
-		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Bolts with increased Atk. Spd. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
@@ -508,7 +500,6 @@
 		</effects>
 	</skill>
 	<skill id="19215" toLevel="1" name="Polishing Arrows: P. Atk.">
-		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Arrows with increased P. Atk. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
@@ -535,7 +526,6 @@
 		</effects>
 	</skill>
 	<skill id="19216" toLevel="1" name="Polishing Bolts: P. Atk.">
-		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Bolts with increased P. Atk. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
@@ -562,7 +552,6 @@
 		</effects>
 	</skill>
 	<skill id="19217" toLevel="1" name="Polishing Arrows: Added Blow">
-		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Arrows with Additional Hit. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
@@ -589,7 +578,6 @@
 		</effects>
 	</skill>
 	<skill id="19218" toLevel="1" name="Polishing Bolts: Added Blow">
-		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Bolts with Additional Hit. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
@@ -616,7 +604,6 @@
 		</effects>
 	</skill>
 	<skill id="19219" toLevel="1" name="Blessing of Tree">
-		<!-- Updated to IO -->
 		<!-- Recovers HP and removes bad abnormal statuses. -->
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
@@ -643,8 +630,7 @@
 		</effects>
 	</skill>
 	<skill id="19220" toLevel="1" name="Sharing Equipment">
-		<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ores. -->
-		<!-- Info: Transfers PvP/PvE attack/defense from items, just as other SAs, but not augments. -->
+		<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19220</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -709,7 +695,6 @@
 		</effects>
 	</skill>
 	<skill id="19221" toLevel="1" name="Power of Darkness">
-		<!-- Updated to IO -->
 		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -730,7 +715,7 @@
 		</effects>
 	</skill>
 	<skill id="19222" toLevel="5" name="Dignity of the Exalted">
-		<!-- STR/DEX/CON/INT/WIT/MEN/CHA + 1 -->
+		<!-- STR +$s1, DEX +$s2, CON +$s3, INT +$s4, WIT +$s5, MEN +$s6, CHA +$s7. -->
 		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -810,7 +795,7 @@
 		</effects>
 	</skill>
 	<skill id="19223" toLevel="1" name="Belief of the Exalted">
-		<!-- Teleports to selected party member. Consumes 100 Spirit Ores. -->
+		<!-- Teleports to selected party member. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill19223</icon>
 		<operateType>A1</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -837,7 +822,7 @@
 		</effects>
 	</skill>
 	<skill id="19224" toLevel="1" name="Blessing of the Exalted">
-		<!-- Gives 'Blessing of the Exalted' effect to all party members. Maintains target's buff/de-buff condition even following death and resurrection. Consumes 40 Spirit Ores. -->
+		<!-- Gives 'Blessing of the Exalted' effect to all party members. Maintains target's buff/ de-buff condition even following death and resurrection. Consumes 40 Spirit Ore. -->
 		<icon>icon.skill19224</icon>
 		<operateType>A2</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -893,7 +878,7 @@
 		</effects>
 	</skill>
 	<skill id="19226" toLevel="2" name="Favor of the Exalted">
-		<!-- For 1 hr., increases gained XP/SP by 3%. Consumes 40 Spirit Ores. -->
+		<!-- For $s1 hr., increases gained XP/ SP by $s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -934,7 +919,7 @@
 		</effects>
 	</skill>
 	<skill id="19227" toLevel="2" name="Wind Hiding">
-		<!-- Blends into the wind for 5 seconds. Increases Speed by 14. Canceled when using normal attacks or attack skills. -->
+		<!-- Blends into the wind for $s1. Increases Speed by $s2. Canceled when using standard attacks or attack skills. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -967,8 +952,7 @@
 		</effects>
 	</skill>
 	<skill id="19228" toLevel="1" name="Song of Thief">
-		<!-- Updated to IO -->
-		<!-- Increases Dagger/Dual Dagger Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
+		<!-- Increases Dagger/ Dual Dagger Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SONG_OF_THIEF</abnormalType>
@@ -994,8 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="19229" toLevel="1" name="Fate of the Exalted">
-		<!-- Updated to IO -->
-		<!-- LUC + 3. -->
+		<!-- LUC +3. -->
 		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1008,6 +991,7 @@
 		</effects>
 	</skill>
 	<skill id="19230" toLevel="30" name="MP Recovery">
+		<!-- MP Recovery Bonus +$s2 for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
@@ -1018,8 +1002,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19231" toLevel="1" name="Song of Assault">
-		<!-- Salvation -->
-		<!-- For 30 sec , all Physical/Magic/Skill Critical Rate and Critical Damage of all party members +15%. Consumes 5 Spirit Ores. -->
+		<!-- For $s1 increases all Physical/ Magic/ Skill Critical Rate and Critical Damage of all party member by $s2. Consumes $s3 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -1072,8 +1055,7 @@
 		</effects>
 	</skill>
 	<skill id="19232" toLevel="1" name="Crippling Dance">
-		<!-- Salvation : Dance of Assault-->
-		<!-- For 30 sec, all party members' P. Atk./M. Atk. +25% and P. Skill Power/M. Skill Power +15%. Consumes 5 Spirit Ores. -->
+		<!-- For $s1, all party members' P. Atk./ M. Atk. +$s2 and Physical/ Magic Skill Power +$s3. Consumes $s4 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -1114,7 +1096,7 @@
 		</effects>
 	</skill>
 	<skill id="19233" toLevel="3" name="Guardian's Shield">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Defense by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1129,7 +1111,7 @@
 		</effects>
 	</skill>
 	<skill id="19234" toLevel="3" name="Guardian's Magic Barrier">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase M. Defense by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1144,7 +1126,7 @@
 		</effects>
 	</skill>
 	<skill id="19235" toLevel="3" name="Guardian's Body">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Maximum HP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1159,7 +1141,7 @@
 		</effects>
 	</skill>
 	<skill id="19236" toLevel="3" name="Guardian's Elemental Cover">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase all Defense Attributes by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1214,7 +1196,7 @@
 		</effects>
 	</skill>
 	<skill id="19237" toLevel="2" name="Guardian's Armor Defense">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Defense and M. Defense by $s1 if heavy armor is equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1241,7 +1223,7 @@
 		</effects>
 	</skill>
 	<skill id="19238" toLevel="2" name="Guardian's Leather Defense">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Defense and M. Defense by $s1 if light armor is equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1268,7 +1250,7 @@
 		</effects>
 	</skill>
 	<skill id="19239" toLevel="2" name="Guardian's Tunic Defense">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Defense and M. defense by $s1 if robe is equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1295,7 +1277,7 @@
 		</effects>
 	</skill>
 	<skill id="19240" toLevel="2" name="Guardian's Resist">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Debuff Resistance by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1309,7 +1291,7 @@
 		</effects>
 	</skill>
 	<skill id="19241" toLevel="4" name="Guardian's Life">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Maximum HP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1325,7 +1307,7 @@
 		</effects>
 	</skill>
 	<skill id="19242" toLevel="1" name="Guardian's Block">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Shield Defense by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1336,7 +1318,7 @@
 		</effects>
 	</skill>
 	<skill id="19243" toLevel="4" name="Guardian's Armor">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Defense by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1352,7 +1334,7 @@
 		</effects>
 	</skill>
 	<skill id="19244" toLevel="1" name="Guardian's Guidance">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1424,7 +1406,7 @@
 		</effects>
 	</skill>
 	<skill id="19245" toLevel="2" name="Guardian's Death Shield">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decrease critical damage received by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1438,7 +1420,7 @@
 		</effects>
 	</skill>
 	<skill id="19246" toLevel="2" name="Guardian's Focus Shield">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decrease chance of receiving P. Critical Damage by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1452,7 +1434,7 @@
 		</effects>
 	</skill>
 	<skill id="19247" toLevel="2" name="Guardian's Mind Control">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decreases skill cooldown by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1467,7 +1449,7 @@
 		</effects>
 	</skill>
 	<skill id="19248" toLevel="2" name="Guardian's Blessing">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase EXP and SP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1484,8 +1466,7 @@
 		</effects>
 	</skill>
 	<skill id="19249" toLevel="2" name="Guardian's Binding Cover">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- TODO: Recived Critical Damage When Immobile -->
+		<!-- Decrease damage received by $s1 when immobilized. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -1507,7 +1488,7 @@
 		</effects>
 	</skill>
 	<skill id="19250" toLevel="1" name="Guardian's Spirit">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase all Defense Attributes by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1538,7 +1519,7 @@
 		</effects>
 	</skill>
 	<skill id="19251" toLevel="1" name="Guardian's Potential">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase skill critical rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1549,7 +1530,7 @@
 		</effects>
 	</skill>
 	<skill id="19252" toLevel="2" name="Guardian's Expert Potion">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Recovery Potion and Miracle Potion by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1563,7 +1544,7 @@
 		</effects>
 	</skill>
 	<skill id="19253" toLevel="1" name="Guardian's Defense Master">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decrease damage received by $s1. -->
 		<icon>icon.skill0528</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1582,7 +1563,7 @@
 		</effects>
 	</skill>
 	<skill id="19254" toLevel="2" name="Berserker's Haste">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack Speed by $s1. -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1598,7 +1579,7 @@
 		</effects>
 	</skill>
 	<skill id="19255" toLevel="4" name="Berserker's Might">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1614,7 +1595,7 @@
 		</effects>
 	</skill>
 	<skill id="19256" toLevel="4" name="Berserker's Elemental Attack">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack Attribute by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1629,7 +1610,7 @@
 		</effects>
 	</skill>
 	<skill id="19257" toLevel="3" name="Berserker's Craft Focus">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Skill Critical Rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1644,7 +1625,7 @@
 		</effects>
 	</skill>
 	<skill id="19258" toLevel="2" name="Berserker's Backfire">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Damage From Behind by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1659,7 +1640,7 @@
 		</effects>
 	</skill>
 	<skill id="19259" toLevel="3" name="Berserker's Focus">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase P. Critical Rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1674,7 +1655,7 @@
 		</effects>
 	</skill>
 	<skill id="19260" toLevel="1" name="Berserker's Coast">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decrease skill consuming MP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1686,7 +1667,7 @@
 		</effects>
 	</skill>
 	<skill id="19261" toLevel="3" name="Berserker's Craft Death">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Skill Critical Damage by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1701,7 +1682,7 @@
 		</effects>
 	</skill>
 	<skill id="19262" toLevel="2" name="Berserker's Mortal">
-		<!-- Updated to GRAND CRUSADE -->		
+		<!-- Increase Skill Prominence rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1715,7 +1696,7 @@
 		</effects>
 	</skill>
 	<skill id="19263" toLevel="3" name="Berserker's Death Whisper">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Critical Damage by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1730,7 +1711,7 @@
 		</effects>
 	</skill>
 	<skill id="19264" toLevel="1" name="Berserker's Eagle">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1802,7 +1783,7 @@
 		</effects>
 	</skill>
 	<skill id="19265" toLevel="2" name="Berserker's Battle">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1816,7 +1797,7 @@
 		</effects>
 	</skill>
 	<skill id="19266" toLevel="2" name="Berserker's Fire">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Physical Skill Power by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1830,7 +1811,7 @@
 		</effects>
 	</skill>
 	<skill id="19267" toLevel="1" name="Berserker's Skill Reduction">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decreases skill cooldown by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1842,7 +1823,7 @@
 		</effects>
 	</skill>
 	<skill id="19268" toLevel="2" name="Berserker's Blessing">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase EXP and SP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1859,7 +1840,7 @@
 		</effects>
 	</skill>
 	<skill id="19269" toLevel="2" name="Berserker's Binding Attack">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase damage on immobile target by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -1881,7 +1862,7 @@
 		</effects>
 	</skill>
 	<skill id="19270" toLevel="2" name="Berserker's Divine Attack">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack Attribute by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1894,7 +1875,7 @@
 		</effects>
 	</skill>
 	<skill id="19271" toLevel="2" name="Berserker's Expert Potion">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Recovery Potion and Miracle Potion by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1908,7 +1889,7 @@
 		</effects>
 	</skill>
 	<skill id="19272" toLevel="1" name="Berserker's Combat Master">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Damage by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1931,7 +1912,7 @@
 		</effects>
 	</skill>
 	<skill id="19273" toLevel="2" name="Wizard's Acumen">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Casting Speed by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1945,7 +1926,7 @@
 		</effects>
 	</skill>
 	<skill id="19274" toLevel="3" name="Wizard's Empower">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase M. Atk. by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1960,7 +1941,7 @@
 		</effects>
 	</skill>
 	<skill id="19275" toLevel="3" name="Wizard's Elemental Shot">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack Attribute by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1974,7 +1955,7 @@
 		</effects>
 	</skill>
 	<skill id="19276" toLevel="3" name="Wizard's Wild Magic">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase M. Critical Rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1989,7 +1970,7 @@
 		</effects>
 	</skill>
 	<skill id="19277" toLevel="3" name="Wizard's Condition">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Maximum HP and MP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2012,7 +1993,7 @@
 		</effects>
 	</skill>
 	<skill id="19278" toLevel="1" name="Wizard's Eva">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decrease skill consuming MP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2024,7 +2005,7 @@
 		</effects>
 	</skill>
 	<skill id="19279" toLevel="3" name="Wizard's Mystic">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Magical Critical Damage by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2039,7 +2020,7 @@
 		</effects>
 	</skill>
 	<skill id="19280" toLevel="2" name="Wizard's Prominence">
-		<!-- Updated to GRAND CRUSADE -->		
+		<!-- Increase Skill Prominence rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2053,7 +2034,7 @@
 		</effects>
 	</skill>
 	<skill id="19281" toLevel="1" name="Wizard's Sight">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2125,7 +2106,7 @@
 		</effects>
 	</skill>
 	<skill id="19282" toLevel="2" name="Wizard's Protection">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Mental, Stun, and Aerial Yoke success rate by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2146,7 +2127,7 @@
 		</effects>
 	</skill>
 	<skill id="19283" toLevel="2" name="Wizard's Water">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Magical Skill Power by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2160,7 +2141,7 @@
 		</effects>
 	</skill>
 	<skill id="19284" toLevel="2" name="Wizard's Magic Reduction">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Decreases skill cooldown by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2175,7 +2156,7 @@
 		</effects>
 	</skill>
 	<skill id="19285" toLevel="2" name="Wizard's Blessing">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase EXP and SP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2192,7 +2173,7 @@
 		</effects>
 	</skill>
 	<skill id="19286" toLevel="2" name="Wizard's Binding Shot">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase damage on immobile target by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -2214,7 +2195,7 @@
 		</effects>
 	</skill>
 	<skill id="19287" toLevel="2" name="Wizard's Divine Shot">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Attack Attribute by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2227,7 +2208,7 @@
 		</effects>
 	</skill>
 	<skill id="19288" toLevel="2" name="Wizard's Expert Potion">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Recovery Potion and Miracle Potion by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2241,7 +2222,7 @@
 		</effects>
 	</skill>
 	<skill id="19289" toLevel="1" name="Wizard's Spellmaster">
-		<!-- Updated to GRAND CRUSADE -->
+		<!-- Increase Damage by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2256,9 +2237,7 @@
 		</effects>
 	</skill>
 	<skill id="19290" toLevel="2" name="Vitality of the Exalted">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Level: 1 Increases bonus XP/SP by 30%. -->
-		<!-- Level: 2 Increases bonus XP/SP by 100%. -->
+		<!-- Increases bonus XP/ SP by $s1. -->
 		<icon>icon.s_vitality_of_honors1</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2282,8 +2261,7 @@
 		</effects>
 	</skill>
 	<skill id="19296" toLevel="8" name="Counter Flip">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Dumps the target who hit you with a melee attack over your back to put it into the Knock Down state for 5 seconds. This cancels the Counter stance. Requires dagger/dual dagger. -->
+		<!-- Knocks down the opponent who attacked you for $s1 and moves you behind opponent's back. Cancels Counter Stance. Requires dagger/ dual dagger. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2341,7 +2319,7 @@
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
-				<skillId>19297</skillId>
+				<skillId>19297</skillId> <!-- Counter Flip -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -2356,8 +2334,7 @@
 		</effects>
 	</skill>
 	<skill id="19297" toLevel="8" name="Counter Flip">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Countering has knocked you down for 5sec. -->
+		<!-- Countering has knocked you down for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2415,8 +2392,7 @@
 		</effects>
 	</skill>
 	<skill id="19298" toLevel="8" name="Flash Dagger">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Reflects strong light against enemies in front to make them lose the sight, disabling them to not catch a target for 3sec. Requires dagger/dual dagger. -->
+		<!-- Blinds enemies in front of you for $s1 and cancels their ability to pick a target. Requires dagger/ dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>CONFUSION</abnormalType>
@@ -2476,8 +2452,7 @@
 		</effects>
 	</skill>
 	<skill id="19299" toLevel="7" name="Reverse Mana">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Attempts Deadly Attack with $s1 power added to P. Attack and recovers your MP by $s2. Half-kill is possible. Requires dagger/dual dagger. -->
+		<!-- Attempts Deadly Attack with $s1 power added to P. Atk. and recovers your MP by $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2515,7 +2490,7 @@
 		</conditions>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>19300</skillId>
+				<skillId>19300</skillId> <!-- Reverse Mana Drain -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>

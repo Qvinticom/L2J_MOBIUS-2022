@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5800" levels="1" name="Self-Destruction">
 		<set name="effectPoint" val="-676" />
@@ -21,6 +21,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5802" levels="1" name="Stun">
+		<!-- Temporarily renders target unable to act. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -112,6 +113,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5810" levels="1" name="Decrease Spd.">
+		<!-- Temporarily decreases Spd. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -172,7 +174,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5815" levels="1" name="Presentation - Mercenary Troops Shout">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -181,7 +182,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5816" levels="1" name="Presentation - Female Priest Transformation">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="7700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -190,7 +190,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5817" levels="1" name="Presentation - Dragon Shout">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -198,7 +197,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5818" levels="1" name="Presentation - Repentance">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2430" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -207,7 +205,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5819" levels="1" name="Presentation - Victory">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5930" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -216,7 +213,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5820" levels="1" name="Presentation - Removal">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="7000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -225,7 +221,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5821" levels="1" name="Presentation - Female Priest Exit">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5330" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -234,7 +229,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5822" levels="1" name="Drake Bait">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1000" />
 		<set name="effectRange" val="1100" />
@@ -251,7 +245,6 @@
 		</cond>
 	</skill>
 	<skill id="5823" levels="1" name="Presentation - District1 Boss Defeat">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -260,7 +253,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5824" levels="1" name="Presentation - District1 Boss Arise">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -269,7 +261,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5825" levels="1" name="Presentation - Algraia Exit">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5330" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -396,6 +387,7 @@
 		</for>
 	</skill>
 	<skill id="5831" levels="1" name="Polearm Swing">
+		<!-- HP is decreased momentarily from bleeding. Effect 9. -->
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-689" />
 		<set name="hitTime" val="1800" />
@@ -416,7 +408,7 @@
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
-		<!-- Confirmed CT2.5 -->
+		<!-- Your mark is fixed. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -440,6 +432,7 @@
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield">
+		<!-- Increases defense power temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -463,6 +456,7 @@
 		</for>
 	</skill>
 	<skill id="5834" levels="1" name="Magic Barrier">
+		<!-- Temporarily increases magic resistance. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
@@ -505,6 +499,7 @@
 		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
+		<!-- Recovers party member's HP and increases HP recovery bonus in an instant. Power 1. Effect 5. -->
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -564,8 +559,6 @@
 		</for>
 	</skill>
 	<skill id="5839" levels="1" name="Breath">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tiat Skills -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="1200" />
 		<set name="castRange" val="900" />
@@ -586,8 +579,6 @@
 		</for>
 	</skill>
 	<skill id="5840" levels="1" name="Fire Breath">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tiat Skills -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="1200" />
 		<set name="castRange" val="900" />
@@ -610,8 +601,7 @@
 		</for>
 	</skill>
 	<skill id="5841" levels="1" name="Multi Defense">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tiat Skills -->
+		<!-- P. Def. and magic resistance are increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="INSTINCT" />
@@ -634,8 +624,6 @@
 		</for>
 	</skill>
 	<skill id="5842" levels="1" name="Spinning Slasher">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tiat Skills -->
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="400" />
 		<set name="coolTime" val="733" />
@@ -653,8 +641,7 @@
 		</for>
 	</skill>
 	<skill id="5843" levels="1" name="Terror">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tiat Skills -->
+		<!-- Temporarily inflicted with Fear and moves regardless of volition. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -681,8 +668,6 @@
 		</for>
 	</skill>
 	<skill id="5844" levels="1" name="Thunder Storm">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tiat Skills -->
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
@@ -718,6 +703,7 @@
 		</for>
 	</skill>
 	<skill id="5846" levels="12" name="Bleed">
+		<!-- HP is decreased momentarily from bleeding. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dot"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -762,7 +748,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5849" levels="1" name="Decrease Speed">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Speed is decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -792,7 +778,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5851" levels="1" name="Shock">
-		<!-- CT2.5 retail confirmed -->
+		<!-- A state of instant paralysis caused by the shock -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -818,7 +804,7 @@
 		</for>
 	</skill>
 	<skill id="5852" levels="1" name="Flip Block">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Flips blocks. -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
@@ -830,7 +816,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5853" levels="1" name="Flip Block">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Flips blocks. -->
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
@@ -842,6 +828,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5854" levels="1" name="Decrease Speed">
+		<!-- Speed is decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -855,6 +842,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5855" levels="1" name="Shock">
+		<!-- A state of instant paralysis caused by the shock -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="STUN" />
@@ -872,7 +860,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5856" levels="1" name="Transform Tow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transforms into a Tow. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -893,7 +881,7 @@
 		</for>
 	</skill>
 	<skill id="5857" levels="1" name="Transform Lure Tow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transforms into a Lure Tow. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -914,7 +902,7 @@
 		</for>
 	</skill>
 	<skill id="5858" levels="1" name="Transform Heavy Tow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transforms into a Heavy Tow. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -935,7 +923,7 @@
 		</for>
 	</skill>
 	<skill id="5859" levels="1" name="Transform Wing Tow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transforms into a Wim Tow. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -956,6 +944,7 @@
 		</for>
 	</skill>
 	<skill id="5860" levels="1" name="Wrath of Valakas">
+		<!-- Magic skills are blocked, temporarily decreasing speed. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE" />
@@ -972,6 +961,7 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5861" levels="1" name="Authority of Valakas">
+		<!-- Magic skills are blocked, temporarily decreasing speed. Destruction of the Mind is activated, inflicting major damage on the minds of nearby party members after 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE" />
@@ -1030,6 +1020,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5866" levels="10" name="Soul Worm">
+		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1050,6 +1041,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5867" levels="10" name="Soul Worm">
+		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1073,6 +1065,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5868" levels="10" name="Soul Worm">
+		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1094,6 +1087,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5869" levels="10" name="Soul Worm">
+		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1115,6 +1109,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5870" levels="10" name="Flash Worm">
+		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1134,6 +1129,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5871" levels="10" name="Flash Worm">
+		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1155,6 +1151,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5872" levels="10" name="Flash Worm">
+		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<table name="#magicLvl"> 76 77 78 79 80 81 82 83 84 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1175,6 +1172,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5873" levels="5" name="Death Worm">
+		<!-- Life force is being sapped out by the Leech of Darkness. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -1191,6 +1189,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5874" levels="5" name="Death Worm">
+		<!-- Life force is being sapped out by the Leech of Darkness. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -1208,6 +1207,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5875" levels="5" name="Death Worm">
+		<!-- Life force is being sapped out by the Leech of Darkness. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<table name="#affectLimits"> 0-0 10-10 10-10 10-10 10-10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1226,6 +1226,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5876" levels="1" name="Begrudged Haunting">
+		<!-- The grudge of those who didn't die. Can die by lethal malice after 5 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DEATH_CLACK" />
@@ -1250,6 +1251,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5878" levels="1" name="Cruel Puncture">
+		<!-- Life force is lost and Casting Spd. is decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
@@ -1278,6 +1280,7 @@
 		</for>
 	</skill>
 	<skill id="5879" levels="1" name="Cruel Expunge">
+		<!-- HP is decreased momentarily from bleeding. Effect 9. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1305,6 +1308,7 @@
 		</for>
 	</skill>
 	<skill id="5880" levels="2" name="Vicious Mutilation">
+		<!-- Speed is decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1322,6 +1326,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5881" levels="2" name="Vicious Mutilation">
+		<!-- P. Def., Evasion, and Speed are decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1339,6 +1344,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5882" levels="2" name="Weakened Pommel">
+		<!-- A state of instant paralysis caused by the shock -->
 		<table name="#magicLvl"> 79 83 </table>
 		<table name="#mpConsume"> 79 82 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1369,6 +1375,7 @@
 		</for>
 	</skill>
 	<skill id="5883" levels="1" name="Meggling Injury">
+		<!-- HP is decreased momentarily from bleeding. Effect 9. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1396,7 +1403,7 @@
 		</for>
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<table name="#power"> 2319 18664 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1428,8 +1435,7 @@
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: lvl 2 has wrong Id in client -->
+		<!-- A state of instant paralysis caused by the shock -->
 		<table name="#icons"> icon.skill0100 icon.skill0000 </table>
 		<table name="#power"> 2319 18664 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1462,6 +1468,7 @@
 		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">
+		<!-- Evasion and Speed are decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1489,6 +1496,7 @@
 		</for>
 	</skill>
 	<skill id="5887" levels="1" name="Howl from Beyond">
+		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are greatly decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_C" />
@@ -1507,6 +1515,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker">
+		<!-- Temporarily cannot move due to shock and has lost the target. -->
 		<table name="#magicLvl"> 83 85 </table>
 		<table name="#mpConsume"> 82 83 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1538,6 +1547,7 @@
 		</for>
 	</skill>
 	<skill id="5889" levels="3" name="Tainted Shackle">
+		<!-- Cannot act because the target is locked. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -1556,6 +1566,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5890" levels="3" name="Tainted Mass Shackle">
+		<!-- Cannot move because the target is locked. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
@@ -1584,6 +1595,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5892" levels="2" name="Cunning Coercion">
+		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Temporarily inflicts mental shock on the enemy. -->
 		<table name="#hitTime"> 1000 11470 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1621,6 +1633,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5894" levels="1" name="Mark of Despair">
+		<!-- Significantly decreases P. Def., M. Def., evasion and HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Damage and critical attack rate are increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_A" />
@@ -1657,6 +1670,7 @@
 		</for>
 	</skill>
 	<skill id="5895" levels="1" name="Mark of Cowardice">
+		<!-- Significantly decreases HP, P. Def., M. Def. and evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_B" />
@@ -1702,6 +1716,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5897" levels="1" name="Spike of Anger">
+		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1730,6 +1745,7 @@
 		</for>
 	</skill>
 	<skill id="5898" levels="2" name="Blast of Anger">
+		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<table name="#hitTime"> 2000 22940 </table>
 		<table name="#mpConsume"> 140 150 </table>
 		<set name="abnormalLvl" val="1" />

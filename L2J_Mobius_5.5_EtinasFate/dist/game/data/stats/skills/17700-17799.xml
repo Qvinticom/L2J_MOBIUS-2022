@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17701" toLevel="6" name="Topaz: Spiritshot">
-		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1062. -->
+		<!-- Disrupts the target's skill casting. When used during PvP, inflicts fixed damage of $s1 and ignores CP. -->
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>A1</operateType>
 		<abnormalLvl>
@@ -51,7 +51,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="17702" toLevel="5" name="Jewel: Quick Recovery">
-		<!-- Restores 1500, 3000, 6000, 8000, 13000 HP. -->
+		<!-- Recovers HP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -69,7 +69,7 @@
 		</effects>
 	</skill>
 	<skill id="17703" toLevel="5" name="Jewel: Heal Boost">
-		<!-- Received Heal Amount + 3%, 6%, 9%, 13%, 21%. -->
+		<!-- Received heal amount +$s1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -87,7 +87,7 @@
 		</effects>
 	</skill>
 	<skill id="17704" toLevel="6" name="Obsidian">
-		<!-- Received Damage in PvP - 1%, 3%, 7%, 11%, 15%. -->
+		<!-- Decreases damage received during PvP by $s1. -->
 		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -103,7 +103,7 @@
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>18720</skillId>
+				<skillId>18720</skillId> <!-- Greater Obsidian - Cancel Target -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DamageByAttack">
@@ -121,7 +121,7 @@
 		</effects>
 	</skill>
 	<skill id="17705" toLevel="6" name="Opal">
-		<!-- Attack Attribute + 10, +20, +40, +70, +120. -->
+		<!-- Increases Atk. Attribute by $s1. -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -204,7 +204,7 @@
 		</effects>
 	</skill>
 	<skill id="17706" toLevel="5" name="Jewel: Atk. Spd. Increase">
-		<!-- Atk. Spd. + 33, 48, 78, 138, 258. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -222,7 +222,7 @@
 		</effects>
 	</skill>
 	<skill id="17707" toLevel="5" name="Jewel: Casting Spd. Increase">
-		<!-- Casting Spd. + 33, 52, 90, 166, 318. -->
+		<!-- Increases Casting Spd. by $s1. -->
 		<icon>icon.skill17085</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -240,7 +240,7 @@
 		</effects>
 	</skill>
 	<skill id="17708" toLevel="6" name="Diamond">
-		<!-- P. Def. + 283, and Received P. Critical Damage - 1%. -->
+		<!-- Increases P. Def. by $s1, and decreases Received P. Critical Damage by $s2. -->
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -281,11 +281,7 @@
 		</effects>
 	</skill>
 	<skill id="17709" toLevel="6" name="Pearl">
-		<!-- M. Def. + 163, and Received P. Critical Damage - 1%. -->
-		<!-- M. Def. + 328, and Received P. Critical Damage - 2%. -->
-		<!-- M. Def. + 548, and Received P. Critical Damage - 3%. -->
-		<!-- M. Def. + 821, and Received P. Critical Damage - 4%. -->
-		<!-- M. Def. + 1150, and Received P. Critical Damage - 5%. -->
+		<!-- M. Def. +$s1, and Received M. Critical Damage -$s2. -->
 		<icon>icon.etc_bm_jewel_pearl_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -326,15 +322,13 @@
 		</effects>
 	</skill>
 	<skill id="17710" toLevel="1" name="10th Anniversary Blessing Effect (Free)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17711" toLevel="24" name="10th Anniversary Blessing - Stage 1">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- You can obtain an item in 1 hr. 23 stages total. (Note:) If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
+		<!-- You can obtain an item in $s1 hr. $s2 stages total. <Note:> If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -367,15 +361,13 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17712" toLevel="1" name="10th Anniversary Blessing Effect (Paid)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17713" toLevel="24" name="10th Anniversary Special Blessing - Stage 1">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- You can obtain an item in 1 hr. 23 stages total. Special Blessings have a higher chance of obtaining items. (Note:) If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
+		<!-- You can obtain an item in $s1 hr. $s2 stages total. <Note:> If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -408,28 +400,27 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17714" toLevel="1" name="Dancing Cat's Steps">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 1 hr., Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill Cooldown -10%, and Skill MP Consumption -15%. (Same slot as Art of Seduction buff) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17715" toLevel="1" name="Spirit Hit Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17716" toLevel="1" name="Spirit Hit Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17717" toLevel="1" name="Spirit Hit Lv. 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts 3186 damage to a single target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17718" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -450,8 +441,7 @@
 		</effects>
 	</skill>
 	<skill id="17719" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Sealed Antharas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Sealed Antharas Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -472,8 +462,7 @@
 		</effects>
 	</skill>
 	<skill id="17720" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Sealed Antharas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Sealed Antharas Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -494,8 +483,7 @@
 		</effects>
 	</skill>
 	<skill id="17721" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Sealed Antharas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Sealed Antharas Buster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -517,8 +505,7 @@
 		</effects>
 	</skill>
 	<skill id="17722" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -539,8 +526,7 @@
 		</effects>
 	</skill>
 	<skill id="17723" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Stormer (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Stormer (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -561,8 +547,7 @@
 		</effects>
 	</skill>
 	<skill id="17724" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Fighter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Fighter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -583,8 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="17725" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Avenger (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Avenger (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -605,8 +589,7 @@
 		</effects>
 	</skill>
 	<skill id="17726" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Dual Blunt Weapon (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Dual Blunt Weapon (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -627,8 +610,7 @@
 		</effects>
 	</skill>
 	<skill id="17727" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Antharas Dualsword (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Dual Sword (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -649,8 +631,7 @@
 		</effects>
 	</skill>
 	<skill id="17728" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -671,8 +652,7 @@
 		</effects>
 	</skill>
 	<skill id="17729" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -693,8 +673,7 @@
 		</effects>
 	</skill>
 	<skill id="17730" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -715,8 +694,7 @@
 		</effects>
 	</skill>
 	<skill id="17731" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -737,8 +715,7 @@
 		</effects>
 	</skill>
 	<skill id="17732" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Buster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -759,8 +736,7 @@
 		</effects>
 	</skill>
 	<skill id="17733" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Caster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -781,8 +757,7 @@
 		</effects>
 	</skill>
 	<skill id="17734" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Valakas Retributer (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Retributer (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -803,8 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="17735" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -825,8 +799,7 @@
 		</effects>
 	</skill>
 	<skill id="17736" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -847,8 +820,7 @@
 		</effects>
 	</skill>
 	<skill id="17737" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -869,8 +841,7 @@
 		</effects>
 	</skill>
 	<skill id="17738" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Caster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -891,8 +862,7 @@
 		</effects>
 	</skill>
 	<skill id="17739" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -913,8 +883,7 @@
 		</effects>
 	</skill>
 	<skill id="17740" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Shooter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Shooter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -935,8 +904,7 @@
 		</effects>
 	</skill>
 	<skill id="17741" toLevel="1" name="Dandy's Breath">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Can obtain Lindvior Dual Dagger (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Dual Dagger (1-hr.). (Need Dandy's Scroll: Release Seal) -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
@@ -957,7 +925,7 @@
 		</effects>
 	</skill>
 	<skill id="17742" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -985,7 +953,7 @@
 		</effects>
 	</skill>
 	<skill id="17743" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1013,7 +981,7 @@
 		</effects>
 	</skill>
 	<skill id="17744" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1041,7 +1009,7 @@
 		</effects>
 	</skill>
 	<skill id="17745" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1069,7 +1037,7 @@
 		</effects>
 	</skill>
 	<skill id="17746" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1097,7 +1065,7 @@
 		</effects>
 	</skill>
 	<skill id="17747" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1125,7 +1093,7 @@
 		</effects>
 	</skill>
 	<skill id="17748" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1153,7 +1121,7 @@
 		</effects>
 	</skill>
 	<skill id="17749" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1181,7 +1149,7 @@
 		</effects>
 	</skill>
 	<skill id="17750" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1209,7 +1177,7 @@
 		</effects>
 	</skill>
 	<skill id="17751" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1237,7 +1205,7 @@
 		</effects>
 	</skill>
 	<skill id="17752" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1265,7 +1233,7 @@
 		</effects>
 	</skill>
 	<skill id="17753" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1293,7 +1261,7 @@
 		</effects>
 	</skill>
 	<skill id="17754" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1321,7 +1289,7 @@
 		</effects>
 	</skill>
 	<skill id="17755" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1349,7 +1317,7 @@
 		</effects>
 	</skill>
 	<skill id="17756" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1377,7 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="17757" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1405,7 +1373,7 @@
 		</effects>
 	</skill>
 	<skill id="17758" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1433,7 +1401,7 @@
 		</effects>
 	</skill>
 	<skill id="17759" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1461,7 +1429,7 @@
 		</effects>
 	</skill>
 	<skill id="17760" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1489,7 +1457,7 @@
 		</effects>
 	</skill>
 	<skill id="17761" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1517,7 +1485,7 @@
 		</effects>
 	</skill>
 	<skill id="17762" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1545,7 +1513,7 @@
 		</effects>
 	</skill>
 	<skill id="17763" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1573,7 +1541,7 @@
 		</effects>
 	</skill>
 	<skill id="17764" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1601,7 +1569,7 @@
 		</effects>
 	</skill>
 	<skill id="17765" toLevel="1" name="Dandy's Strength">
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1629,7 +1597,7 @@
 		</effects>
 	</skill>
 	<skill id="17766" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1665,7 +1633,7 @@
 		</effects>
 	</skill>
 	<skill id="17767" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1701,7 +1669,7 @@
 		</effects>
 	</skill>
 	<skill id="17768" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1737,7 +1705,7 @@
 		</effects>
 	</skill>
 	<skill id="17769" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1773,7 +1741,7 @@
 		</effects>
 	</skill>
 	<skill id="17770" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1809,7 +1777,7 @@
 		</effects>
 	</skill>
 	<skill id="17771" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1845,7 +1813,7 @@
 		</effects>
 	</skill>
 	<skill id="17772" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1881,7 +1849,7 @@
 		</effects>
 	</skill>
 	<skill id="17773" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1917,7 +1885,7 @@
 		</effects>
 	</skill>
 	<skill id="17774" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1953,7 +1921,7 @@
 		</effects>
 	</skill>
 	<skill id="17775" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1989,7 +1957,7 @@
 		</effects>
 	</skill>
 	<skill id="17776" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2025,7 +1993,7 @@
 		</effects>
 	</skill>
 	<skill id="17777" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2061,7 +2029,7 @@
 		</effects>
 	</skill>
 	<skill id="17778" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2097,7 +2065,7 @@
 		</effects>
 	</skill>
 	<skill id="17779" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2133,7 +2101,7 @@
 		</effects>
 	</skill>
 	<skill id="17780" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2169,7 +2137,7 @@
 		</effects>
 	</skill>
 	<skill id="17781" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2205,7 +2173,7 @@
 		</effects>
 	</skill>
 	<skill id="17782" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2241,7 +2209,7 @@
 		</effects>
 	</skill>
 	<skill id="17783" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2277,7 +2245,7 @@
 		</effects>
 	</skill>
 	<skill id="17784" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2313,7 +2281,7 @@
 		</effects>
 	</skill>
 	<skill id="17785" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2349,7 +2317,7 @@
 		</effects>
 	</skill>
 	<skill id="17786" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2385,7 +2353,7 @@
 		</effects>
 	</skill>
 	<skill id="17787" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2421,7 +2389,7 @@
 		</effects>
 	</skill>
 	<skill id="17788" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2457,7 +2425,7 @@
 		</effects>
 	</skill>
 	<skill id="17789" toLevel="1" name="Assisting Strength">
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage +10%, HP/ MP/ CP +20%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2493,7 +2461,7 @@
 		</effects>
 	</skill>
 	<skill id="17790" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2536,7 +2504,7 @@
 		</effects>
 	</skill>
 	<skill id="17791" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2579,7 +2547,7 @@
 		</effects>
 	</skill>
 	<skill id="17792" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2622,7 +2590,7 @@
 		</effects>
 	</skill>
 	<skill id="17793" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Casting Spd. +1999, M. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2665,7 +2633,7 @@
 		</effects>
 	</skill>
 	<skill id="17794" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2708,7 +2676,7 @@
 		</effects>
 	</skill>
 	<skill id="17795" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2751,7 +2719,7 @@
 		</effects>
 	</skill>
 	<skill id="17796" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2794,7 +2762,7 @@
 		</effects>
 	</skill>
 	<skill id="17797" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2837,7 +2805,7 @@
 		</effects>
 	</skill>
 	<skill id="17798" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2880,7 +2848,7 @@
 		</effects>
 	</skill>
 	<skill id="17799" toLevel="1" name="Great Assisting Strength">
-		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
+		<!-- PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500 and additional damage to dragons +300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>

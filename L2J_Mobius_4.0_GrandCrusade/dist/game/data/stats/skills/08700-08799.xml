@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8700" toLevel="1" name="Special Talisman (R95-grade) - Shield Defense (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Shield Defense by 1515 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
@@ -28,7 +27,6 @@
 		</effects>
 	</skill>
 	<skill id="8701" toLevel="1" name="Special Talisman (R99-grade) - Shield Defense (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Shield Defense by 1638 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
@@ -55,36 +53,31 @@
 		</effects>
 	</skill>
 	<skill id="8702" toLevel="1" name="Special Talisman (R-grade) - Momentum">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8703" toLevel="1" name="Special Talisman (R90-grade) - Momentum">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>90</magicLvl>
 	</skill>
 	<skill id="8704" toLevel="1" name="Special Talisman (R95-grade) - Momentum">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>95</magicLvl>
 	</skill>
 	<skill id="8705" toLevel="1" name="Special Talisman (R99-grade) - Momentum">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 	</skill>
 	<skill id="8706" toLevel="1" name="Special Talisman (R-grade) - Momentum (Active)">
-		<!-- Glory Days confirmed -->
-		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -109,8 +102,7 @@
 		</effects>
 	</skill>
 	<skill id="8707" toLevel="1" name="Special Talisman (R90-grade) - Momentum (Active)">
-		<!-- Glory Days confirmed -->
-		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -135,8 +127,7 @@
 		</effects>
 	</skill>
 	<skill id="8708" toLevel="1" name="Special Talisman (R95-grade) - Momentum (Active)">
-		<!-- Glory Days confirmed -->
-		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -161,8 +152,7 @@
 		</effects>
 	</skill>
 	<skill id="8709" toLevel="1" name="Special Talisman (R99-grade) - Momentum (Active)">
-		<!-- Glory Days confirmed -->
-		<!-- Increases Momentum by 5 momentarily through the power of the talisman. -->
+		<!-- Increases Momentum through the power of the talisman. Up to level 5. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -187,7 +177,6 @@
 		</effects>
 	</skill>
 	<skill id="8710" toLevel="1" name="Special Talisman (R-grade) - Mana Drain (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs 2 MP per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
@@ -222,7 +211,6 @@
 		</effects>
 	</skill>
 	<skill id="8711" toLevel="1" name="Special Talisman (R90-grade) - Mana Drain (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs 3 MP per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
@@ -257,7 +245,6 @@
 		</effects>
 	</skill>
 	<skill id="8712" toLevel="1" name="Special Talisman (R95-grade) - Mana Drain (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs 4 MP per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
@@ -292,7 +279,6 @@
 		</effects>
 	</skill>
 	<skill id="8713" toLevel="1" name="Special Talisman (R99-grade) - Mana Drain (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs 5 MP per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A2</operateType>
@@ -327,7 +313,6 @@
 		</effects>
 	</skill>
 	<skill id="8714" toLevel="1" name="Steal Mana">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -345,7 +330,6 @@
 		</effects>
 	</skill>
 	<skill id="8715" toLevel="1" name="Steal Mana">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -363,7 +347,6 @@
 		</effects>
 	</skill>
 	<skill id="8716" toLevel="1" name="Steal Mana">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -381,7 +364,6 @@
 		</effects>
 	</skill>
 	<skill id="8717" toLevel="1" name="Steal Mana">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r_talisman_mh_up_active</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -399,7 +381,6 @@
 		</effects>
 	</skill>
 	<skill id="8718" toLevel="1" name="Special Talisman (R-grade) - Blood Siphon (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
@@ -426,7 +407,6 @@
 		</effects>
 	</skill>
 	<skill id="8719" toLevel="1" name="Special Talisman (R90-grade) - Blood Siphon (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
@@ -453,7 +433,6 @@
 		</effects>
 	</skill>
 	<skill id="8720" toLevel="1" name="Special Talisman (R95-grade) - Blood Siphon (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
@@ -480,7 +459,6 @@
 		</effects>
 	</skill>
 	<skill id="8721" toLevel="1" name="Special Talisman (R99-grade) - Blood Siphon (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily absorbs HP by 1% per attack with the power of Talisman. -->
 		<icon>icon.r_talisman_cr_up_active</icon>
 		<operateType>A2</operateType>
@@ -507,7 +485,6 @@
 		</effects>
 	</skill>
 	<skill id="8722" toLevel="1" name="Special Talisman (R-grade) - Increase Range">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
@@ -525,7 +502,6 @@
 		</effects>
 	</skill>
 	<skill id="8723" toLevel="1" name="Special Talisman (R90-grade) - Increase Range">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
@@ -543,7 +519,6 @@
 		</effects>
 	</skill>
 	<skill id="8724" toLevel="1" name="Special Talisman (R95-grade) - Increase Range">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
@@ -561,7 +536,6 @@
 		</effects>
 	</skill>
 	<skill id="8725" toLevel="1" name="Special Talisman (R99-grade) - Increase Range">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 10 when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
@@ -579,7 +553,6 @@
 		</effects>
 	</skill>
 	<skill id="8726" toLevel="1" name="Special Talisman (R-grade) - Increase Range (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
@@ -610,7 +583,6 @@
 		</effects>
 	</skill>
 	<skill id="8727" toLevel="1" name="Special Talisman (R90-grade) - Increase Range (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
@@ -641,7 +613,6 @@
 		</effects>
 	</skill>
 	<skill id="8728" toLevel="1" name="Special Talisman (R95-grade) - Increase Range (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
@@ -672,7 +643,6 @@
 		</effects>
 	</skill>
 	<skill id="8729" toLevel="1" name="Special Talisman (R99-grade) - Increase Range (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases the range of bows and crossbows by 20 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
@@ -703,7 +673,6 @@
 		</effects>
 	</skill>
 	<skill id="8730" toLevel="1" name="Special Talisman (R-grade) - Increase Servitor Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r85_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -723,7 +692,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8731" toLevel="1" name="Special Talisman (R90-grade) - Increase Servitor Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r90_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -743,7 +711,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8732" toLevel="1" name="Special Talisman (R95-grade) - Increase Servitor Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r95_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -763,7 +730,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8733" toLevel="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r99_sp_talisman_sm_st_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -783,7 +749,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8734" toLevel="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<icon>icon.r_sp_talisman_sm_rt_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -803,7 +768,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8735" toLevel="1" name="Special Talisman (R-grade) - Increase Magic Cancel">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases Magic Cancel Rate by 10% when equipped. -->
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
@@ -817,7 +781,6 @@
 		</effects>
 	</skill>
 	<skill id="8736" toLevel="1" name="Special Talisman (R-grade) - Increase Magic Cancel (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Prevents magic from being canceled momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>A2</operateType>
@@ -844,7 +807,6 @@
 		</effects>
 	</skill>
 	<skill id="8737" toLevel="1" name="Special Talisman (R-grade) - MP Recovery">
-		<!-- Glory Days confirmed -->
 		<!-- Increases natural MP recovery amount by 0.66 when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
@@ -858,7 +820,6 @@
 		</effects>
 	</skill>
 	<skill id="8738" toLevel="1" name="Special Talisman (R90-grade) - MP Recovery">
-		<!-- Glory Days confirmed -->
 		<!-- Increases natural MP recovery amount by 0.68 when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
@@ -872,7 +833,6 @@
 		</effects>
 	</skill>
 	<skill id="8739" toLevel="1" name="Special Talisman (R95-grade) - MP Recovery">
-		<!-- Glory Days confirmed -->
 		<!-- Increases natural MP recovery amount by 0.70 when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
@@ -886,7 +846,6 @@
 		</effects>
 	</skill>
 	<skill id="8740" toLevel="1" name="Special Talisman (R99-grade) - MP Recovery">
-		<!-- Glory Days confirmed -->
 		<!-- Increases natural MP recovery amount by 0.72 when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
@@ -900,7 +859,6 @@
 		</effects>
 	</skill>
 	<skill id="8741" toLevel="1" name="Special Talisman (R-grade) - Decrease MP Consumption">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases MP Consumption by 15% when equipped. -->
 		<icon>icon.r85_talisman_mp_up_active</icon>
 		<operateType>P</operateType>
@@ -925,7 +883,6 @@
 		</effects>
 	</skill>
 	<skill id="8742" toLevel="1" name="Special Talisman (R-grade) - Enhance Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 75 when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
@@ -939,7 +896,6 @@
 		</effects>
 	</skill>
 	<skill id="8743" toLevel="1" name="Special Talisman (R90-grade) - Enhance Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 82 when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
@@ -953,7 +909,6 @@
 		</effects>
 	</skill>
 	<skill id="8744" toLevel="1" name="Special Talisman (R95-grade) - Enhance Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 90 when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
@@ -967,7 +922,6 @@
 		</effects>
 	</skill>
 	<skill id="8745" toLevel="1" name="Special Talisman (R99-grade) - Enhance Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 96 when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
@@ -981,7 +935,6 @@
 		</effects>
 	</skill>
 	<skill id="8746" toLevel="1" name="Special Talisman (R-grade) - Increase Heal Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 225 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1008,7 +961,6 @@
 		</effects>
 	</skill>
 	<skill id="8747" toLevel="1" name="Special Talisman (R90-grade) - Increase Heal Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 246 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1035,7 +987,6 @@
 		</effects>
 	</skill>
 	<skill id="8748" toLevel="1" name="Special Talisman (R95-grade) - Increase Heal Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 270 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1062,7 +1013,6 @@
 		</effects>
 	</skill>
 	<skill id="8749" toLevel="1" name="Special Talisman (R99-grade) - Increase Heal Enhancement (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases heal rate by 288 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1089,7 +1039,6 @@
 		</effects>
 	</skill>
 	<skill id="8750" toLevel="1" name="Special Ability: Infinity Cutter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases the enemy's P. Def. during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1097,7 +1046,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8751" toLevel="1" name="Decrease P. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Temporarily reduces P. Def. Effect 3. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
@@ -1116,7 +1064,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8752" toLevel="1" name="Special Ability: Infinity Avenger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Seduces the enemy during a critical attack. Also increases Max HP, Max MP, Max CP, shield defense capability. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. -->
 		<icon>icon.weapon_the_axe_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1124,7 +1071,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8753" toLevel="1" name="Discord">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1135,7 +1081,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8754" toLevel="1" name="Special Ability: Infinity Slasher">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Critical Rate/damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1143,16 +1088,14 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8755" toLevel="1" name="Special Ability: Infinity Crusher">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Throws enemy into a state of stun during a critical attack. Increases Max HP, Max CP, Atk. Spd. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/CP, attack speed and damage during PvP while reflecting debuff inflicted to the enemy. -->
 		<icon>icon.weapon_the_hammer_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8756" toLevel="1" name="Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Momentarily stunned and unable to move. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1173,7 +1116,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8757" toLevel="1" name="Special Ability: Infinity Dual">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks enemy's ability to use physical skills during a critical attack. Increases Max HP, Max MP, Max CP, Critical Rate. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1181,7 +1123,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8758" toLevel="1" name="Restrain Physical Skills">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily blocks opponent's ability to use physical skills. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -1203,16 +1144,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8759" toLevel="1" name="Special Ability: Infinity Fighter">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Throws enemy into a state of stun during a critical attack. Increases Max HP, Max MP, Max CP, and Evasion. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
+		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/MP/CP, evasion and damage during PvP while reflecting debuff inflicted to the enemy. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8760" toLevel="1" name="Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Momentarily stunned and unable to move. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1233,7 +1172,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8761" toLevel="1" name="Special Ability: Infinity Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily the enemy's magic skills during a critical attack. Increases Max MP / Max CP / Atk. Spd. / MP Regeneration, Critical Rate when attacking from behind, and damage inflicted during PvP. restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1241,7 +1179,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8762" toLevel="1" name="Restrain Magic Skills">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily blocks magic skills. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -1263,7 +1200,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8763" toLevel="1" name="Special Ability: Infinity Stormer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- During a critical attack, this ability removes one or more of the enemy's buffs. It increases Max HP, Max CP, Atk. Spd., and Accuracy, and gives a bonus to damage inflicted on the enemy during PvP. It reflects debuffs targeted upon the character back upon the enemy. It enables the character to attack multiple enemies. -->
 		<icon>icon.weapon_the_pole_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1271,7 +1207,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8764" toLevel="1" name="Dispel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1282,15 +1217,13 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8765" toLevel="1" name="Special Ability: Infinity Thrower">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill Cooldown is short. Has a chance to decrease MP Consumption. -->
+		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8766" toLevel="1" name="Decrease Speed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Temporarily decreases Speed. Effect 3. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -1311,7 +1244,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="8767" toLevel="1" name="Special Ability: Infinity Retributer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max HP, Max CP, M. Atk., and Critical Rate of a magic damage. Inflicts additional damage during PvP. Decreases MP Consumption and cancel rate when casting a magic. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1319,7 +1251,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8768" toLevel="1" name="Full Recovery">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
@@ -1331,7 +1262,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8769" toLevel="1" name="Special Ability: Infinity Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max MP, Max CP, Casting Spd, MP Recovery Rate, and damage inflicted during PvP. -->
 		<icon>icon.weapon_the_mace_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1339,7 +1269,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8770" toLevel="1" name="Full Recovery">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
@@ -1351,7 +1280,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8771" toLevel="1" name="Special Ability: Infinity Rapier">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases the enemy's P. Def. on a critical attack. Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. Reflects some of the damage received back to the enemy. In addition, when a critical hit occurs during a regular attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<icon>icon.weapon_infinity_rapier_i00</icon>
 		<operateType>P</operateType>
@@ -1359,7 +1287,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8772" toLevel="1" name="Special Ability: Infinity Sword">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Critical Rate/damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<operateType>P</operateType>
@@ -1367,15 +1294,13 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8773" toLevel="1" name="Special Ability: Infinity Shooter">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill Cooldown is short. Has a chance to decrease MP Consumption. -->
+		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill cooldown is short. Has a chance to decrease MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8774" toLevel="1" name="Special Talisman (R-grade) - Cancel Debuff (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Cancels all debuffs momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>A1</operateType>
@@ -1399,7 +1324,6 @@
 		</effects>
 	</skill>
 	<skill id="8775" toLevel="1" name="Immortal Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1415,7 +1339,6 @@
 		</effects>
 	</skill>
 	<skill id="8776" toLevel="1" name="Twilight Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1431,7 +1354,6 @@
 		</effects>
 	</skill>
 	<skill id="8777" toLevel="1" name="Seraph Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1447,7 +1369,6 @@
 		</effects>
 	</skill>
 	<skill id="8778" toLevel="1" name="Eternal Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1463,7 +1384,6 @@
 		</effects>
 	</skill>
 	<skill id="8779" toLevel="1" name="Istina's Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.istina_bracelet_i00</icon>
 		<operateType>P</operateType>
@@ -1479,7 +1399,6 @@
 		</effects>
 	</skill>
 	<skill id="8780" toLevel="1" name="Octavis' Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.octavis_bracelet_i00</icon>
 		<operateType>P</operateType>
@@ -1495,7 +1414,6 @@
 		</effects>
 	</skill>
 	<skill id="8781" toLevel="1" name="Equip Shield">
-		<!-- Glory Days confirmed -->
 		<!-- Shield Defense is additionally increased. -->
 		<icon>icon.weapon_sacon_i00</icon>
 		<operateType>P</operateType>
@@ -1509,7 +1427,6 @@
 		</effects>
 	</skill>
 	<skill id="8782" toLevel="1" name="Equip Shield">
-		<!-- Glory Days confirmed -->
 		<!-- Shield Defense is additionally increased. -->
 		<icon>icon.kratere_i00</icon>
 		<operateType>P</operateType>
@@ -1523,7 +1440,6 @@
 		</effects>
 	</skill>
 	<skill id="8783" toLevel="1" name="Equip Shield">
-		<!-- Glory Days confirmed -->
 		<!-- Shield Defense is additionally increased. -->
 		<icon>icon.beranka_i00</icon>
 		<operateType>P</operateType>
@@ -1537,7 +1453,6 @@
 		</effects>
 	</skill>
 	<skill id="8784" toLevel="1" name="Equip Shield">
-		<!-- Glory Days confirmed -->
 		<!-- Shield Defense is additionally increased. -->
 		<icon>icon.weapon_akra_i00</icon>
 		<operateType>P</operateType>
@@ -1551,7 +1466,6 @@
 		</effects>
 	</skill>
 	<skill id="8785" toLevel="1" name="Equip Shield">
-		<!-- Glory Days confirmed -->
 		<!-- Shield Defense is additionally increased. -->
 		<icon>icon.heavengate_shield_i00</icon>
 		<operateType>P</operateType>
@@ -1565,15 +1479,13 @@
 		</effects>
 	</skill>
 	<skill id="8786" toLevel="1" name="Top-grade Royal Guard Earring - Gludio">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max CP by 5% and Bleed Resistance by 15%, effectiveness of Stun attacks by 15% and Water Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8787" toLevel="1" name="Top-grade Royal Guard Earring - Dion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Poison Resistance by 15%, effectiveness of hold attacks by 15% and Holy Resistance by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
@@ -1581,7 +1493,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8788" toLevel="1" name="Top-grade Royal Guard Earring - Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Paralysis Resistance by 15%, effectiveness of bleed attacks by 15% and Wind Resistance by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
@@ -1589,7 +1500,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8789" toLevel="1" name="Top-grade Royal Guard Earring - Oren">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Hold Resistance by 15%, effectiveness of paralysis attacks by 15% and Dark Resistance by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
@@ -1597,24 +1507,21 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8790" toLevel="1" name="Top-grade Royal Guard Earring - Aden">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max CP by 5% and Stun Resistance by 15%, effectiveness of mental attacks by 15% and Earth Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8791" toLevel="1" name="Top-grade Royal Guard Earring - Innadril">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max CP by 5% and Stun Resistance by 15%, effectiveness of sleep attacks by 15% and Water Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8792" toLevel="1" name="Top-grade Royal Guard Earring - Goddard">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases Max CP by 5% and Sleep Resistance by 15%, effectiveness of Stun attacks by 15% and Fire Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1628,7 +1535,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8794" toLevel="1" name="Top-grade Royal Guard Earring - Schuttgart">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Mental Attack Resistance by 15%, effectiveness of hold attacks by 15% and Wind Resistance by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
@@ -1688,7 +1594,6 @@
 		</effects>
 	</skill>
 	<skill id="8799" toLevel="1" name="Top-grade Royal Guard Ring - Aden">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Holy Resistance by 15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>

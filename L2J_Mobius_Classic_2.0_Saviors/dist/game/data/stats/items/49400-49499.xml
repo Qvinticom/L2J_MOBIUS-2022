@@ -1155,8 +1155,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49467" min="1" max="1" chance="100" />
-			<item id="49469" min="10" max="10" chance="100" />
+			<item id="49467" min="1" max="1" chance="100" /> <!-- Fire Dragon Pendant -->
+			<item id="49469" min="10" max="10" chance="100" /> <!-- Pendant Polish -->
 		</capsuled_items>
 	</item>
 	<item id="49472" name="Land Dragon Pendant Chest" type="EtcItem">
@@ -1491,7 +1491,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49499" name="Angel Cat's Energy" additionalName="30-day" type="EtcItem">
-		<!-- Increases Max. HP / MP by 5%, XP and SP gain by 20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. Duration: 30 minutes. -->
+		<!-- For 30 minutes, increases Max. HP / MP by 5%, XP and SP gain by 20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

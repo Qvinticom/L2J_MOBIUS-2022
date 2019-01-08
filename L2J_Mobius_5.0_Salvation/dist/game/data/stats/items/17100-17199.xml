@@ -1148,7 +1148,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="17158" name="Vesper's Mighty Power" type="EtcItem">
-		<!-- P. Atk. + 15%, M. Atk. by 20%, and Speed by 10 for 10 min. -->
+		<!-- P. Atk. +15%, M. Atk. by 20%, and Speed by 10 for 10 min. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1702,7 +1702,7 @@
 		</skills>
 	</item>
 	<item id="17186" name="Olympic Athlete's Ring" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 3-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 3-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1724,7 +1724,7 @@
 		</stats>
 	</item>
 	<item id="17187" name="Olympic Athlete's Necklace" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 3-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 3-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1748,7 +1748,7 @@
 		</stats>
 	</item>
 	<item id="17188" name="Olympic Athlete's Earring" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 3-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 3-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1772,7 +1772,7 @@
 		</stats>
 	</item>
 	<item id="17189" name="Olympic Athlete's Ring" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 7-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 7-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1794,7 +1794,7 @@
 		</stats>
 	</item>
 	<item id="17190" name="Olympic Athlete's Necklace" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 7-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 7-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1818,7 +1818,7 @@
 		</stats>
 	</item>
 	<item id="17191" name="Olympic Athlete's Earring" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 7-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 7-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1842,7 +1842,7 @@
 		</stats>
 	</item>
 	<item id="17192" name="Olympic Athlete's Ring" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 10-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 10-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="17193" name="Olympic Athlete's Necklace" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 10-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 10-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1888,7 +1888,7 @@
 		</stats>
 	</item>
 	<item id="17194" name="Olympic Athlete's Earring" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 10-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 10-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1912,7 +1912,7 @@
 		</stats>
 	</item>
 	<item id="17195" name="Olympic Athlete's Ring" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 30-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 30-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1934,7 +1934,7 @@
 		</stats>
 	</item>
 	<item id="17196" name="Olympic Athlete's Necklace" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 30-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 30-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1958,7 +1958,7 @@
 		</stats>
 	</item>
 	<item id="17197" name="Olympic Athlete's Earring" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 30-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 30-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1982,7 +1982,7 @@
 		</stats>
 	</item>
 	<item id="17198" name="Olympic Athlete's Ring" type="Armor">
-		<!-- Olympic Athlete's Ring. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2003,7 +2003,7 @@
 		</stats>
 	</item>
 	<item id="17199" name="Olympic Athlete's Necklace" type="Armor">
-		<!-- Olympic Athlete's Necklace. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

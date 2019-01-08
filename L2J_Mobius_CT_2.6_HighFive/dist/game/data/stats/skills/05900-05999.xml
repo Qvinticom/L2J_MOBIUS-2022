@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" levels="1" name="Burst of Oblivion">
+		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="OBLIVION" />
@@ -32,6 +33,7 @@
 		</for>
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
+		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
 		<table name="#hitTime"> 2000 22940 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
@@ -63,8 +65,6 @@
 		</for>
 	</skill>
 	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -75,6 +75,7 @@
 		</for>
 	</skill>
 	<skill id="5903" levels="1" name="Burst of Misplace">
+		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="DISARM" />
@@ -129,6 +130,7 @@
 		</for>
 	</skill>
 	<skill id="5905" levels="1" name="Confusing Nuph">
+		<!-- Physical and magic skills are all blocked. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="SILENCE_ALL" />
@@ -157,6 +159,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5907" levels="2" name="Ritual of Entombment">
+		<!-- ????? ?? ?? ??? ????. ??? ???? ?? ??? ??? ??? ???. -->
 		<table name="#hitTime"> 3000 34400 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -181,6 +184,7 @@
 		</for>
 	</skill>
 	<skill id="5908" levels="2" name="Ritual of Entombment">
+		<!-- Temporarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
 		<table name="#hitTime"> 3000 34400 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -240,6 +244,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5912" levels="1" name="Pestilence Cleanse">
+		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are increased. Skill Re-use time is increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_D" />
@@ -271,6 +276,7 @@
 		</for>
 	</skill>
 	<skill id="5914" levels="1" name="Putrefaction Cleanse">
+		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_E" />
@@ -324,6 +330,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5918" levels="10" name="Physical Root Weakness">
+		<!-- Physical Root Weakness -->
 		<table name="#trait_root_physically"> -10 -20 -30 -40 -50 -60 -70 -80 -90 -99 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 80 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -335,8 +342,7 @@
 		</for>
 	</skill>
 	<skill id="5919" levels="1" name="Obey">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- Lord of Immortality's command. Cannot resurrect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BLOCK_RESURRECTION" />
@@ -359,8 +365,6 @@
 		</for>
 	</skill>
 	<skill id="5920" levels="1" name="Tentacle of Agony">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
@@ -380,8 +384,7 @@
 		</for>
 	</skill>
 	<skill id="5921" levels="1" name="Inhale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- P. Atk., Atk. Spd., M. Atk., accuracy, critical attack rate and Critical Damage are decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_F" />
@@ -421,8 +424,7 @@
 		</for>
 	</skill>
 	<skill id="5922" levels="1" name="Exhale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- Evasion, P. Def., M. Def. and speed are decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_G" />
@@ -457,7 +459,6 @@
 		</for>
 	</skill>
 	<skill id="5923" levels="1" name="Soul Retain">
-		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="MA_UP" />
@@ -542,7 +543,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5930" levels="1" name="Shielding of the Lost">
-		<!-- TODO: Implement me! -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP_BOW" />
@@ -559,8 +559,6 @@
 		</for>
 	</skill>
 	<skill id="5931" levels="1" name="Ultimate Shield">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />
@@ -572,8 +570,6 @@
 		</for>
 	</skill>
 	<skill id="5932" levels="1" name="Dark Blade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -595,8 +591,6 @@
 		</for>
 	</skill>
 	<skill id="5933" levels="1" name="Dark Blade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -618,6 +612,7 @@
 		</for>
 	</skill>
 	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
+		<!-- Resistance to Dark and earth attributes is greatly raised. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_EARTH" />
@@ -630,8 +625,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5935" levels="1" name="Dark Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -652,8 +645,6 @@
 		</for>
 	</skill>
 	<skill id="5936" levels="1" name="Earth Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -705,6 +696,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5940" levels="12" name="Energy of Generation">
+		<!-- HP recovery bonus and MP recovery bonus are increased. -->
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 9 10 11 12 13 14 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -719,6 +711,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5941" levels="1" name="Energy of Erosion">
+		<!-- Max HP and Max MP are decreased. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAX_HP_DOWN" />
@@ -732,6 +725,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5942" levels="1" name="Energy of Pollution">
+		<!-- The effectiveness of HP Regeneration and MP Regeneration magic are temporarily decreased. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HEAL_EFFECT_DOWN" />
@@ -745,6 +739,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5943" levels="1" name="Energy of Contamination">
+		<!-- P. Def. is decreased and MP consumption for skills is increased. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_COST_UP" />
@@ -758,6 +753,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5944" levels="1" name="Energy of Oblivion">
+		<!-- Accuracy is decreased. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HIT_DOWN" />
@@ -771,6 +767,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5945" levels="1" name="Region2 Rotation5">
+		<!-- Resurrection is decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -815,8 +812,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5950" levels="1" name="Birthday Cake">
-		<!-- Confirmed CT2.5 -->
-		<!-- Birthday Skill -->
+		<!-- Birthday cake received once a year. Recovers Vitality through the acquisition of Exp. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="43200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -838,6 +834,7 @@
 		</for>
 	</skill>
 	<skill id="5951" levels="1" name="Agathion's Blessing">
+		<!-- The summoned sprite uses a blessing. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -847,6 +844,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5952" levels="1" name="Agathion's Blessing">
+		<!-- The summoned sprite uses a blessing. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -856,6 +854,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5953" levels="1" name="Agathion's Blessing">
+		<!-- The summoned sprite uses a blessing. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -865,6 +864,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5954" levels="1" name="Agathion Cute Trick - Tin Plate Golem">
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -874,6 +874,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5955" levels="1" name="Agathion Cute Trick - Joy">
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -886,6 +887,7 @@
 		</cond>
 	</skill>
 	<skill id="5956" levels="1" name="Agathion Cute Trick - Anger">
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -898,6 +900,7 @@
 		</cond>
 	</skill>
 	<skill id="5957" levels="1" name="Agathion Cute Trick - Sorrow">
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -910,6 +913,7 @@
 		</cond>
 	</skill>
 	<skill id="5958" levels="1" name="Agathion Cute Trick - Teddy Bear Boy">
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -922,6 +926,7 @@
 		</cond>
 	</skill>
 	<skill id="5959" levels="1" name="Agathion Cute Trick - Teddy Bear Girl">
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -934,6 +939,7 @@
 		</cond>
 	</skill>
 	<skill id="5960" levels="1" name="Stronghold Reactivate">
+		<!-- Wrapped in flames and HP is decreased. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
@@ -951,6 +957,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5961" levels="1" name="Barrier Thunder Storm">
+		<!-- A state of instant paralysis caused by the shock -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1028,6 +1035,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5968" levels="2" name="Rapid Shot">
+		<!-- Temporarily increases your own bow Atk. Spd. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 303 549 </table>
 		<table name="#magicLvl"> 32 55 </table>
@@ -1044,6 +1052,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5969" levels="2" name="Punch of Doom">
+		<!-- Becomes shocked momentarily while propelling a powerful iron-fist to enemy that gives significant damage. Requires a hand-to-hand combat weapon. Ignores shield defense. Over-hit is possible. Power 10331. -->
 		<table name="#effectPoints"> -674 -698 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -1066,6 +1075,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5970" levels="1" name="Seduced Knight's Help">
+		<!-- Increases Max HP. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -1080,6 +1090,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5971" levels="1" name="Seduced Ranger's Help">
+		<!-- Seduced Ranger's help. HP recovery bonus increases. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -1094,6 +1105,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5972" levels="1" name="Seduced Wizard's Help">
+		<!-- Increases Max MP. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -1108,6 +1120,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5973" levels="1" name="Seduced Warrior's Help">
+		<!-- Seduced Warrior's help. MP recovery bonus increases. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -1122,6 +1135,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5974" levels="1" name="Tiat Transformation">
+		<!-- Tiat's Transformation -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1201,7 +1215,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5980" levels="3" name="Seal Isolation">
-		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -484 -572 -653 </table>
 		<table name="#magicLvl"> 51 61 79 </table>
 		<table name="#mpConsume"> 50 61 75 </table>
@@ -1222,6 +1235,7 @@
 		</for>
 	</skill>
 	<skill id="5981" levels="3" name="Lilith's Curse">
+		<!-- Max HP and Speed are decreased. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1234,6 +1248,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5982" levels="1" name="Aura Bird - Falcon">
+		<!-- Mounts the Aura Bird - Falcon. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1265,6 +1280,7 @@
 		</for>
 	</skill>
 	<skill id="5983" levels="1" name="Aura Bird - Owl">
+		<!-- Mounts the Aura Bird - Owl. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1296,6 +1312,7 @@
 		</for>
 	</skill>
 	<skill id="5984" levels="1" name="Hand of Death">
+		<!-- P. Def., M. Def., and speed are greatly decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MD_DOWN" />
@@ -1332,7 +1349,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5987" levels="1" name="Weapon Maintenance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maintains the weapon in optimal condition to increase attack ability. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -1365,7 +1382,7 @@
 		</for>
 	</skill>
 	<skill id="5988" levels="1" name="Armor Maintenance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maintains the armor to increase defense ability. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
@@ -1401,6 +1418,7 @@
 		</for>
 	</skill>
 	<skill id="5989" levels="1" name="Invincible">
+		<!-- Renders caster invincible against standard targets, skills, and buffs/de-buffs. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1414,6 +1432,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5990" levels="3" name="Lesser Heal">
+		<!-- Quickly restores HP. Power 817. -->
 		<table name="#effectPoints"> 595 610 631 </table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
@@ -1449,8 +1468,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5993" levels="1" name="Command of Anger">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- When a blow is incurred, an opponent loses their target and cannot use skills and magic. -->
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="OBLIVION" />
@@ -1487,6 +1505,7 @@
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
+		<!-- The target's head is enlarged. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />

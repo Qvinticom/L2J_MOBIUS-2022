@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Decreases Dark attribute defense by $s2 for $s1. -->
+		<!-- Decreases Dark Attribute Resistance by $s2 for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
 			<value level="1">7</value>
@@ -39,8 +38,7 @@
 		</effects>
 	</skill>
 	<skill id="19403" toLevel="3" name="Elemental Harmony">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Harmony of attributes increases all attack attributes by $s2 for $s1. -->
+		<!-- For $s1, harmony of attributes increases all Atk. Attributes by $s2. -->
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -105,7 +103,6 @@
 		</effects>
 	</skill>
 	<skill id="19404" toLevel="6" name="Fire Attribute">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Property Toggle Skill (Presentation) -->
 		<icon>icon.skill11046</icon>
 		<operateType>A1</operateType>
@@ -116,14 +113,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CallSkill">
-				<skillId>19403</skillId>
+				<skillId>19403</skillId> <!-- Elemental Harmony -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19405" toLevel="4" name="Discarded Wizard's Soul">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Summons Discarded Wizard's Soul. -->
 		<icon>icon.skill19405</icon>
 		<magicLvl>
@@ -163,8 +159,7 @@
 		</effects>
 	</skill>
 	<skill id="19406" toLevel="4" name="Curse from Deadland">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4 -->
+		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -210,8 +205,7 @@
 		</effects>
 	</skill>
 	<skill id="19407" toLevel="3" name="Essence of Mana">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Increases M. Attack by $s1, P. Defense by $s2 and M. Critical Rate by $s3. -->
+		<!-- M. Atk. +$s1, P. Def. +$s2 and M. Critical Rate +$s3. -->
 		<icon>icon.skill11034</icon>
 		<operateType>T</operateType>
 		<mpConsume>36</mpConsume>
@@ -243,8 +237,7 @@
 		</effects>
 	</skill>
 	<skill id="19408" toLevel="2" name="Embody Mana Armor">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Embodies Mana Armor to reflect $s1 of damage received and decrease $s2, and defend the rest by consuming MP. MP is consumed by $s3 every second and this skill effect is removed if MP reaches $s4. -->
+		<!-- Embodies a Mana Armor that reflects $s1 of the damage received, reduces damage received by $s2, and blocks the rest by consuming MP. MP is consumed by $s3 every second and this skill effect is removed if MP reaches $s4. -->
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
 		<icon>icon.skill11065</icon>
 		<operateType>T</operateType>
@@ -267,8 +260,7 @@
 		</effects>
 	</skill>
 	<skill id="19409" toLevel="1" name="Curse Gloom">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Decreases M. Defense and all attribute defenses by $s2 and $s3, respectively, for $s1. -->
+		<!-- M. Defense and Attribute Resistance -$s2 and -$s3, respectively, for $s1. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
 		<abnormalTime>10</abnormalTime>
@@ -312,8 +304,7 @@
 		</effects>
 	</skill>
 	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Elemental Crash inflicts Knock Back. -->
+		<!-- Elemental Buster inflicts Knock Back. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -340,8 +331,7 @@
 		</effects>
 	</skill>
 	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Elemental Crash inflicts Hold for $s1 -->
+		<!-- Elemental Crash inflicts Hold for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -365,7 +355,6 @@
 		</effects>
 	</skill>
 	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Crash inflicts Stun for $s1. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -390,7 +379,6 @@
 		</effects>
 	</skill>
 	<skill id="19413" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -417,7 +405,6 @@
 		</effects>
 	</skill>
 	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Knock Back. -->
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -450,7 +437,6 @@
 		</effects>
 	</skill>
 	<skill id="19415" toLevel="7" name="Elemental Burst: Earth">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Hold for $s1. -->
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -480,8 +466,7 @@
 		</effects>
 	</skill>
 	<skill id="19416" toLevel="7" name="Elemental Burst: Holy">
-		<!-- Salvation -->
-		<!-- Elemental Burst inflicts Stun for 5 seconds. -->
+		<!-- Elemental Burst inflicts Stun for $s1. -->
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -510,7 +495,6 @@
 		</effects>
 	</skill>
 	<skill id="19417" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Frozen for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -540,8 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Elemental Burst release the target and inflicts Faint for $s1. -->
+		<!-- Elemental Burst cancel target and inflicts Faint for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -569,7 +552,6 @@
 		</effects>
 	</skill>
 	<skill id="19419" toLevel="7" name="Elemental Burst: Earth">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Elemental Burst inflicts Knock Down for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -602,8 +584,7 @@
 		</effects>
 	</skill>
 	<skill id="19420" toLevel="4" name="Quadruple Elemental Blast">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Constant damage is inflicted for $s1 due to powerful magic and you enter the Knock Down state. -->
+		<!-- Receives damage over time for $s1 by a powerful magic with $s2 Power added to M. Atk. and becomes Knocked Down. -->
 		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -627,8 +608,7 @@
 		</effects>
 	</skill>
 	<skill id="19421" toLevel="1" name="Ensemble Melody">
-		<!-- Added to Salvation -->
-		<!-- Casts Horn Melody, Drum Melody, Pipe Organ Melody, Guitar Melody, all at once. -->
+		<!-- Casts owned Horn, Drum, Organ, and Guitar Melodies, all at once. -->
 		<icon>icon.skill19421</icon>
 		<operateType>A1</operateType>
 		<mpConsume>140</mpConsume>
@@ -650,26 +630,25 @@
 		<magicLvl>103</magicLvl>
 		<effects>
 			<effect name="CallSkill"> <!-- Horn Melody -->
-				<skillId>11517</skillId>
+				<skillId>11517</skillId> <!-- Horn Melody -->
 				<skillLevel>0</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Drum Melody -->
-				<skillId>11518</skillId>
+				<skillId>11518</skillId> <!-- Drum Melody -->
 				<skillLevel>0</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Pipe Organ Melody -->
-				<skillId>11519</skillId>
+				<skillId>11519</skillId> <!-- Pipe Organ Melody -->
 				<skillLevel>0</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Guitar Melody -->
-				<skillId>11520</skillId>
+				<skillId>11520</skillId> <!-- Guitar Melody -->
 				<skillLevel>0</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19422" toLevel="1" name="Trio Sonata">
-		<!-- Added to Salvation -->
-		<!-- Casts Prevailing Sonata, Daring Sonata, Refreshing Sonata, all at once. -->
+		<!-- Casts owned Combat, Marching, and Refreshing Sonatas, all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
 		<mpConsume>140</mpConsume>
@@ -690,22 +669,21 @@
 		<magicLvl>101</magicLvl>
 		<effects>
 			<effect name="CallSkill"> <!-- Prevailing Sonata -->
-				<skillId>11529</skillId>
+				<skillId>11529</skillId> <!-- Prevailing Sonata -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Daring Sonata -->
-				<skillId>11530</skillId>
+				<skillId>11530</skillId> <!-- Daring Sonata -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Refreshing Sonata -->
-				<skillId>11532</skillId>
+				<skillId>11532</skillId> <!-- Refreshing Sonata -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19423" toLevel="1" name="Spirit's Chorus">
-		<!-- Added to Salvation -->
-		<!-- Casts Prevailing Song, Marching Song, and Relax Song, all at once. -->
+		<!-- Casts owned Prevailing Song, Marching Song, and Relax Song, all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
 		<mpConsume>140</mpConsume>
@@ -726,22 +704,21 @@
 		<magicLvl>101</magicLvl>
 		<effects>
 			<effect name="CallSkill"> <!-- Prevailing Song -->
-				<skillId>11607</skillId>
+				<skillId>11607</skillId> <!-- Prevailing Song -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Daring Song -->
-				<skillId>11608</skillId>
+				<skillId>11608</skillId> <!-- Daring Song -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Refreshing Song -->
-				<skillId>11609</skillId>
+				<skillId>11609</skillId> <!-- Refreshing Song -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19424" toLevel="1" name="Dance of Triumph">
-		<!-- Added to Salvation -->
-		<!-- Casts Prevailing Dance, Marching Dance, and Relax Dance, all at once. -->
+		<!-- Casts owned Prevailing Dance, Marching Dance, and Relax Dance, all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
 		<mpConsume>140</mpConsume>
@@ -762,22 +739,21 @@
 		<magicLvl>101</magicLvl>
 		<effects>
 			<effect name="CallSkill"> <!-- Prevailing Dance -->
-				<skillId>11610</skillId>
+				<skillId>11610</skillId> <!-- Prevailing Dance -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Daring Dance -->
-				<skillId>11611</skillId>
+				<skillId>11611</skillId> <!-- Daring Dance -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Refreshing Dance -->
-				<skillId>11612</skillId>
+				<skillId>11612</skillId> <!-- Refreshing Dance -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19425" toLevel="1" name="Immune Derangement">
-		<!-- Added to Salvation -->
-		<!-- Casts Elemental Resistance, Debuff Resistance, and Mental Attack Resistance, all at once. -->
+		<!-- Casts owned Elemental Resistance, Debuff Resistance, and Mental Attack Resistance, all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
 		<mpConsume>0</mpConsume>
@@ -798,154 +774,36 @@
 		<magicLvl>99</magicLvl>
 		<effects>
 			<effect name="CallSkill"> <!-- Elemental Resistance -->
-				<skillId>11565</skillId>
+				<skillId>11565</skillId> <!-- Elemental Resistance -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Holy Attack Resistance -->
-				<skillId>11566</skillId>
+				<skillId>11566</skillId> <!-- Resistance Debuff -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Mental Attack Resistance -->
-				<skillId>11567</skillId>
+				<skillId>11567</skillId> <!-- Mental Attack Resistance -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19430" toLevel="11" name="Resonant Halo">
-		<!-- Salvation-->
-		<!-- P. Atk. +300 and Atk. Spd. +5 and allows casting Radiant Crash/Resolving Bash in AoE, which increases MP Consumption by 35.-->
-		<!-- 325,350,375,400,425,450,475,500,525,550-->
+		<!-- Increases P. Atk. by $s1 and Atk. Spd. by $s2 and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by $s3. Using the skill again cancels the effect. -->
 		<icon>icon.skill19430</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19431" toLevel="9" name="Sforzando Sting">
-		<!-- Salvation-->
 		<icon>icon.skill19431</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19432" toLevel="1" name="Swift Praise">
-		<!-- Increases all party members' P. Atk./M. Atk./Atk. Spd./Casting Spd. $s2 times for $s1. Cooldown $s3.-->
+		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. $s2 times for $s1. Cooldown $s3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 	</skill>
 	<skill id="19433" toLevel="11" name="Alluring Conduct">
-		<!-- Attacks the target and nearby enemies with 23178 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by 50% for 12 seconds.
-		Increases cooldown of all skills by 10%and applies the Swift Praise effect to the caster. Can be used in the Triad state.
-		Requires a sword, blunt, dual sword or dual blunt to be equipped.-->
-		<abnormalLvl>5</abnormalLvl>
-		<abnormalTime>12</abnormalTime>
-		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>
-			<value fromLevel="1" toLevel="11">99</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
-		</activateRate>
-		<castRange>80</castRange>
-		<coolTime>500</coolTime>
-		<effectRange>400</effectRange>
-		<hitTime>200</hitTime>
-		<icon>icon.skill19433</icon>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">86</value>
-			<value level="3">88</value>
-			<value level="4">90</value>
-			<value level="5">92</value>
-			<value level="6">94</value>
-			<value level="7">96</value>
-			<value level="8">98</value>
-			<value level="9">101</value>
-			<value level="10">103</value>
-			<value level="11">105</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">146</value>
-			<value level="2">150</value>
-			<value level="3">156</value>
-			<value level="4">160</value>
-			<value level="5">166</value>
-			<value level="6">172</value>
-			<value level="7">176</value>
-			<value level="8">182</value>
-			<value level="9">188</value>
-			<value level="10">194</value>
-			<value level="11">200</value>
-		</mpConsume>
-		<operateType>A2</operateType>
-		<nextAction>ATTACK</nextAction>
-		<reuseDelay>1500</reuseDelay>
-		<rideState>NONE</rideState>
-		<effectPoint>707</effectPoint>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUAL</item>
-					<item>DUALBLUNT</item>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">23178</value>
-					<value level="2">24105</value>
-					<value level="3">25959</value>
-					<value level="4">27813</value>
-					<value level="5">29667</value>
-					<value level="6">31521</value>
-					<value level="7">33375</value>
-					<value level="8">35229</value>
-					<value level="9">38010</value>
-					<value level="10">39864</value>
-					<value level="11">41718</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
-				</power>
-				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="11">1</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
-				</pDefMod>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Reuse">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-		</effects>
-	</skill>
-	<!-- 19433  -->
-	<skill id="19438" toLevel="1" name="Triple Stroke">
-		<!-- Added to Salvation -->
-		<!-- Casts War Drum, Marching Drum and Relax Drum all at once. -->
+		<!-- Casts owned War Drum, Marching Drum and Relax Drum all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
 		<mpConsume>0</mpConsume>
@@ -967,22 +825,20 @@
 		<magicLvl>99</magicLvl>
 		<effects>
 			<effect name="CallSkill"> <!-- War Drum -->
-				<skillId>19444</skillId>
+				<skillId>19444</skillId> <!-- War Drum -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Marching Drum -->
-				<skillId>19445</skillId>
+				<skillId>19445</skillId> <!-- Marching Drum -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">	<!-- Soothing Drum -->
-				<skillId>19446</skillId>
+				<skillId>19446</skillId> <!-- Soothing Drum -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19439" toLevel="1" name="Overload's Dignity">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For $s1, increases nearby party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. $s2 times. This effect cannot be stacked, and a limit applies after its duration is over.. -->
 		<icon>icon.skill19439</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1040,13 +896,11 @@
 		</effects>
 	</skill>
 	<skill id="19442" toLevel="3" name="Single Note">
-		<!-- Dual Note on Level 2 and Triad on Level 3 -->
 		<!-- For $s1, P. Atk. and Atk. Spd. +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
-		<!-- For 150 seconds, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1093,7 +947,6 @@
 		</effects>
 	</skill>
 	<skill id="19445" toLevel="1" name="Marching Drum">
-		<!-- For 150 seconds, party members' Atk. Spd. +40%, Casting Spd. +30%, Speed +20, Damage Reflection +10%, and Skill Cooldown -10%. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1145,7 +998,6 @@
 		</effects>
 	</skill>
 	<skill id="19446" toLevel="1" name="Soothing Drum">
-		<!-- For 150 seconds, party members' HP Recovery Bonus +75%, MP Recovery Bonus +100%, and P. Evasion/ M. Evasion +5, and Skill MP Consumption -22%. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1197,7 +1049,7 @@
 		</effects>
 	</skill>
 	<skill id="19447" toLevel="2" name="Glaring">
-		<!-- For $s1, P. Atk. and M. Atk. +15%. Canceled if Prophecy of Might is cast -->
+		<!-- For $s1, P. Atk. and M. Atk. +$s2. Canceled if Prophecy of Might is cast. -->
 		<icon>icon.skill11866</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>

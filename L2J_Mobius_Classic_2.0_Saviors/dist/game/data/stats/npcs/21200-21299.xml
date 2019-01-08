@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21200" level="60" type="L2Monster" name="Nephilim Bishop">
 		<parameters>
@@ -401,7 +401,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus Sword -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
 				<item id="57" min="1667" max="3889" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="13.87" /> <!-- Metallic Fiber -->
@@ -414,9 +414,9 @@
 				<item id="4116" min="1" max="1" chance="1.069" /> <!-- Deadman's Glory Stone -->
 			</drop>
 			<spoil>
-				<item id="4962" min="1" max="1" chance="10.22" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="6.569" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="6.555" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+				<item id="4962" min="1" max="1" chance="10.22" /> <!-- Recipe: Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="6.569" /> <!-- Recipe: Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="6.555" /> <!-- Recipe: Doom Helmet (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -742,16 +742,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="2" /> <!--NPC HP Drain -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="3" /> <!--Light Armor Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -770,11 +770,11 @@
 				<item id="1867" min="1" max="1" chance="17.289" /> <!-- Animal Skin -->
 				<item id="1881" min="1" max="1" chance="1.719" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="0.857" /> <!-- Stone of Purity -->
-				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword(100%) -->
+				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword -->
 			</drop>
 			<spoil>
-				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boots Lining -->
-				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Enchanted Necklace -->
+				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boot Lining -->
+				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Magic Necklace -->
 				<item id="1932" min="1" max="1" chance="18.2156" /> <!-- Bone Helmet Design -->
 			</spoil>
 		</dropLists>
@@ -1096,7 +1096,7 @@
 			<drop>
 				<item id="358" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate -->
 				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
-				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus Sword -->
 				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
 				<item id="57" min="2594" max="6059" chance="70" /> <!-- Adena -->
 				<item id="1869" min="3" max="9" chance="13.07" /> <!-- Iron Ore -->
@@ -1156,7 +1156,7 @@
 				<item id="4049" min="1" max="3" chance="7.475" /> <!-- Adamantite Earring Gemstone -->
 				<item id="4051" min="2" max="6" chance="4.185" /> <!-- Adamantite Necklace Chain -->
 				<item id="4050" min="5" max="15" chance="2.611" /> <!-- Adamantite Ring Wire -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="27" chance="94.245" /> <!-- Coal -->
@@ -1292,7 +1292,7 @@
 			<drop>
 				<item id="358" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate -->
 				<item id="2380" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiters -->
-				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus Sword -->
 				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
 				<item id="57" min="3885" max="9074" chance="70" /> <!-- Adena -->
 				<item id="1874" min="1" max="1" chance="11.87" /> <!-- Oriharukon Ore -->
@@ -1302,7 +1302,7 @@
 				<item id="4078" min="1" max="1" chance="4.352" /> <!-- Blue Wolf Breastplate Part -->
 				<item id="4114" min="1" max="1" chance="1.305" /> <!-- Damascus Sword Blade -->
 				<item id="4121" min="1" max="1" chance="1.282" /> <!-- Bow of Peril Shaft -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="39" chance="91.585" /> <!-- Coal -->
@@ -1341,7 +1341,7 @@
 			<drop>
 				<item id="57" min="3885" max="9074" chance="70" /> <!-- Adena -->
 				<item id="2133" min="1" max="1" chance="2.222" /> <!-- Gemstone (A-grade) -->
-				<item id="90012" min="1" max="1" chance="1.155" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="1.155" /> <!-- Low-grade Life Stone -->
 				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
@@ -1915,13 +1915,13 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
-				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Doom Helmet -->
 				<item id="57" min="1692" max="3947" chance="70" /> <!-- Adena -->
 				<item id="1895" min="1" max="1" chance="20.47" /> <!-- Metallic Fiber -->
 				<item id="1864" min="4" max="12" chance="18.22" /> <!-- Stem -->
-				<item id="4088" min="1" max="1" chance="9.853" /> <!-- Sealed Blue Wolf Helmet Design -->
-				<item id="4089" min="1" max="1" chance="9.808" /> <!-- Sealed Doom Helmet Design -->
+				<item id="4088" min="1" max="1" chance="9.853" /> <!-- Blue Wolf Helmet Design -->
+				<item id="4089" min="1" max="1" chance="9.808" /> <!-- Doom Helmet Pattern -->
 				<item id="1878" min="2" max="6" chance="5.877" /> <!-- Durable Braid -->
 				<item id="1865" min="9" max="27" chance="4.137" /> <!-- Varnish -->
 			</drop>
@@ -2100,7 +2100,7 @@
 				<item id="57" min="2599" max="6070" chance="70" /> <!-- Adena -->
 				<item id="1874" min="1" max="1" chance="14.59" /> <!-- Oriharukon Ore -->
 				<item id="1870" min="12" max="36" chance="9.504" /> <!-- Coal -->
-				<item id="90012" min="1" max="1" chance="0.75" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.75" /> <!-- Low-grade Life Stone -->
 				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
@@ -2164,7 +2164,7 @@
 				<item id="1866" min="2" max="6" chance="10.02" /> <!-- Suede -->
 				<item id="1870" min="5" max="15" chance="5.986" /> <!-- Coal -->
 				<item id="1871" min="9" max="27" chance="3.356" /> <!-- Charcoal -->
-				<item id="90012" min="1" max="1" chance="0.75" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.75" /> <!-- Low-grade Life Stone -->
 				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>

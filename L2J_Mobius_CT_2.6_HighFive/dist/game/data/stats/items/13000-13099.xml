@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13000" type="Armor" name="Sealed Helm of Nightmare - Light Armor Use">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -17,6 +18,7 @@
 		</for>
 	</item>
 	<item id="13001" type="Armor" name="Sealed Helm of Nightmare - Robe">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -36,6 +38,7 @@
 		</for>
 	</item>
 	<item id="13002" type="EtcItem" name="Essence of Kamaloka">
+		<!-- An item filled with the essence of Kanabions you have defeated. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -46,6 +49,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13003" type="EtcItem" name="Pathfinder's Reward (D-Grade)">
+		<!-- A gift for participating adventurers. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -56,9 +60,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2572-1" />
+		<set name="item_skill" val="2572-1" /> <!-- Pathfinder's Reward -->
 	</item>
 	<item id="13004" type="EtcItem" name="Pathfinder's Reward (C-Grade)">
+		<!-- A gift for participating adventurers. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -69,9 +74,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2573-1" />
+		<set name="item_skill" val="2573-1" /> <!-- Pathfinder's Reward -->
 	</item>
 	<item id="13005" type="EtcItem" name="Pathfinder's Reward (B-Grade)">
+		<!-- A gift for participating adventurers. -->
 		<set name="icon" val="icon.etc_bead_green_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -82,9 +88,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2574-1" />
+		<set name="item_skill" val="2574-1" /> <!-- Pathfinder's Reward -->
 	</item>
 	<item id="13006" type="EtcItem" name="Pathfinder's Reward (A-Grade)">
+		<!-- A gift for participating adventurers. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -95,9 +102,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2575-1" />
+		<set name="item_skill" val="2575-1" /> <!-- Pathfinder's Reward -->
 	</item>
 	<item id="13007" type="EtcItem" name="Pathfinder's Reward (S-Grade)">
+		<!-- A gift for participating adventurers. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -108,9 +116,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2576-1" />
+		<set name="item_skill" val="2576-1" /> <!-- Pathfinder's Reward -->
 	</item>
 	<item id="13008" type="EtcItem" name="Spellbook - Bless the Blood">
+		<!-- Spellbook needed to learn Bless the Blood. Used by Shillien Elders. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -129,6 +138,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13010" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
+		<!-- Dimensional item. Extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Hall of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -140,9 +150,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2589-1" />
+		<set name="item_skill" val="2589-1" /> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
 	</item>
 	<item id="13011" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka">
+		<!-- Dimensional item. Extra entrance pass that lets you enter Near Kamaloka. Can cancel the limit on entrance if used while a limit on entrance to Near Kamaloka exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -154,9 +165,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2590-1" />
+		<set name="item_skill" val="2590-1" /> <!-- Extra Entrance Pass - Near Kamaloka -->
 	</item>
 	<item id="13012" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
+		<!-- Dimensional item. Extra entrance pass that lets you enter Kamaloka (Labyrinth of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Labyrinth of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -168,9 +180,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2591-1" />
+		<set name="item_skill" val="2591-1" /> <!-- Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss) -->
 	</item>
 	<item id="13013" type="EtcItem" name="Gesto's Box">
+		<!-- Goods earmarked for Gesto. Collect 300 and take them to him. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -179,6 +192,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13014" type="EtcItem" name="Freight Chest's Seal">
+		<!-- Seal stamped on a freight chest. Take it to Gesto. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -186,6 +200,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="13015" type="EtcItem" name="My Teleport Spellbook">
+		<!-- Dimensional item. Increases by 3 slots the free teleport list, which can remember designated locations. Can expand up to 9 slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="material" val="PAPER" />
@@ -197,9 +212,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="TeleportBookmark" />
-		<set name="item_skill" val="2587-1" />
+		<set name="item_skill" val="2587-1" /> <!-- Increase number of teleport slots. -->
 	</item>
 	<item id="13016" type="EtcItem" name="My Teleport Scroll">
+		<!-- Dimensional item. Item that is consumed when moving to the remembered location. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.bookmark_scroll_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -212,6 +228,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13017" type="EtcItem" name="White Weasel Hunting Helper Necklace">
+		<!-- Dimensional item. Item that allows you to summon a hunting helper who temporarily casts warrior-type battle support magic. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -223,13 +240,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" />
+		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13018" type="EtcItem" name="Fairy Princess Hunting Helper Necklace">
+		<!-- Dimensional item. Item that allows you to summon a hunting helper who temporarily casts magician-type battle support magic. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -241,13 +259,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" />
+		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13019" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace">
+		<!-- Dimensional item. Item that allows you to summon a warrior-type battle hunting helper. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -259,13 +278,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" />
+		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13020" type="EtcItem" name="Fox Shaman Hunting Helper Necklace">
+		<!-- Dimensional item. Item that allows you to summon a magician-type battle hunting helper. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -277,13 +297,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="item_skill" val="2046-1" />
+		<set name="item_skill" val="2046-1" /> <!-- Wolf's Necklace -->
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13021" type="EtcItem" name="Color Name">
+		<!-- Dimensional item. Item that allows you to change a character's name color. You can change back to the original name color by using the "/resetname" command after changing the name color. If there is no original name, the name will disappear. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -298,6 +319,7 @@
 		<set name="handler" val="NicknameColor" />
 	</item>
 	<item id="13022" type="Armor" name="Light Purple-Maned Horse Mount Bracelet - 7-day limited period">
+		<!-- Dimensional item. Can ride a purple maned horse when equipped. Can be used for 7 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -309,10 +331,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="619-1" />
-		<set name="item_skill" val="8247-1" />
+		<set name="item_skill" val="8247-1" /> <!-- Mount Darkmane Pacer -->
 		<set name="time" val="10080" />
 	</item>
 	<item id="13023" type="Armor" name="Agathion of Love - 30-day limited period">
+		<!-- Dimensional item. Can summon an Agathion of Love when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -324,10 +347,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="3267-1" />
-		<set name="item_skill" val="5763-1;8245-1;3267-1" />
+		<set name="item_skill" val="5763-1;8245-1;3267-1" /> <!-- Wink -->
 		<set name="time" val="43200" />
 	</item>
 	<item id="13024" type="Armor" name="Sudden Agathion - 30-day limited period">
+		<!-- Dimensional item. Can summon a Sudden Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -339,10 +363,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="3267-1" />
-		<set name="item_skill" val="8257-1;3267-1;5956-1" />
+		<set name="item_skill" val="8257-1;3267-1;5956-1" /> <!-- Release Seal on Agathion - Anger -->
 		<set name="time" val="43200" />
 	</item>
 	<item id="13025" type="Armor" name="Shiny Agathion - 30-day limited period">
+		<!-- Dimensional item. Can summon a Shiny Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -354,10 +379,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="3267-1" />
-		<set name="item_skill" val="8256-1;3267-1;5955-1" />
+		<set name="item_skill" val="8256-1;3267-1;5955-1" /> <!-- Release Seal on Agathion - Joy -->
 		<set name="time" val="43200" />
 	</item>
 	<item id="13026" type="Armor" name="Sobbing Agathion - 30-day limited period">
+		<!-- Dimensional item. Can summon a Sobbing Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -369,10 +395,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="3267-1" />
-		<set name="item_skill" val="8258-1;3267-1;5957-1" />
+		<set name="item_skill" val="8258-1;3267-1;5957-1" /> <!-- Release Seal on Agathion - Sorrow -->
 		<set name="time" val="43200" />
 	</item>
 	<item id="13027" type="EtcItem" name="Gran Kain's Gift Box - 30-day limited period">
+		<!-- Dimensional item. Gift Box that gives you an item once a day. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -383,7 +410,7 @@
 		<set name="is_premium" val="true" />
 		<set name="reuse_delay" val="86400000" /><!-- TODO: Manage global (main class <-> subclasses) reuse for skills. -->
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2606-1" />
+		<set name="item_skill" val="2606-1" /> <!-- Gran Kain's Gift Box -->
 		<set name="time" val="43200" />
 	</item>
 	<item id="13028" type="EtcItem" name="Vitality Replenishing Herb">
@@ -393,7 +420,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2580-1" />
+		<set name="item_skill" val="2580-1" /> <!-- Vitality Replenishing Herb -->
 	</item>
 	<item id="13029" type="EtcItem" name="Vitality Replenishing Transformation Herb - Timitran">
 		<set name="immediate_effect" val="true" />
@@ -411,6 +438,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="13032" type="EtcItem" name="Pailaka Instant Shield">
+		<!-- Potion of temporary invincibility created with the light of Sprites. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -424,13 +452,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2577-1" />
+		<set name="item_skill" val="2577-1" /> <!-- Instant Defense -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
 	<item id="13033" type="EtcItem" name="Quick Healing Potion">
+		<!-- Instantly recovers stamina. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -444,13 +473,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2592-1" />
+		<set name="item_skill" val="2592-1" /> <!-- Quick Healing Potion -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
 	<item id="13034" type="Weapon" name="Sprite's Sword">
+		<!-- Sword created with the essences of water and fire. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -479,6 +509,7 @@
 		</for>
 	</item>
 	<item id="13035" type="Weapon" name="Enhanced Sprite's Sword">
+		<!-- Sword created with the essences of water and fire. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -496,7 +527,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="8237-1" />
+		<set name="item_skill" val="8237-1" /> <!-- Shalin Heal -->
 		<cond msgId="1518">
 			<player instanceId="43" />
 		</cond>
@@ -508,6 +539,7 @@
 		</for>
 	</item>
 	<item id="13036" type="Weapon" name="Sword of Ice and Fire">
+		<!-- Sword created with the essences of water and fire. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -525,7 +557,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="8238-1;8237-1" />
+		<set name="item_skill" val="8238-1;8237-1" /> <!-- Shalin Strike -->
 		<cond msgId="1518">
 			<player instanceId="43" />
 		</cond>
@@ -537,6 +569,7 @@
 		</for>
 	</item>
 	<item id="13037" type="EtcItem" name="Pailaka Soulshot - Grade D">
+		<!-- Weapon containing the light of Sprites -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -548,9 +581,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2150-1" />
+		<set name="item_skill" val="2150-1" /> <!-- Soulshot: D-Grade -->
 	</item>
 	<item id="13038" type="EtcItem" name="Essence of Water">
+		<!-- If you bring it along with a Sprite's Sword to the Temple Inspector, you can exchange them for an Enhanced Sprite's Sword. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -567,6 +601,7 @@
 		</cond>
 	</item>
 	<item id="13039" type="EtcItem" name="Essence of Fire">
+		<!-- If you bring it along with an Enhanced Sprite's Sword to the Temple Inspector, you can exchange them for a Sword of Ice and Fire. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -583,6 +618,7 @@
 		</cond>
 	</item>
 	<item id="13040" type="EtcItem" name="Fire Attribute Enhancer">
+		<!-- Temporarily increases P. Def. for fire-related attributes. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -595,12 +631,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2335-1" />
+		<set name="item_skill" val="2335-1" /> <!-- Fire Resist Potion -->
 		<cond msgId="113" addName="1">
 			<player instanceId="43" />
 		</cond>
 	</item>
 	<item id="13041" type="EtcItem" name="Water Attribute Enhancer">
+		<!-- Temporarily increases P. Def. for water-related attributes. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -613,12 +650,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2336-1" />
+		<set name="item_skill" val="2336-1" /> <!-- Water Resist Potion -->
 		<cond msgId="113" addName="1">
 			<player instanceId="43" />
 		</cond>
 	</item>
 	<item id="13042" type="Weapon" name="Ancient Legacy Sword">
+		<!-- Sword containing the power of the Giants. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -636,7 +674,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="8250-1" />
+		<set name="item_skill" val="8250-1" /> <!-- Summon Tigress -->
 		<cond msgId="1518">
 			<player instanceId="44" />
 		</cond>
@@ -648,6 +686,7 @@
 		</for>
 	</item>
 	<item id="13043" type="Weapon" name="Enhanced Ancient Legacy Sword">
+		<!-- Sword containing the power of the Giants. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -665,7 +704,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="8250-1;8242-1" />
+		<set name="item_skill" val="8250-1;8242-1" /> <!-- Summon Tigress -->
 		<cond msgId="1518">
 			<player instanceId="44" />
 		</cond>
@@ -677,6 +716,7 @@
 		</for>
 	</item>
 	<item id="13044" type="Weapon" name="Complete Ancient Legacy Sword">
+		<!-- Sword containing the power of the Giants. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -694,7 +734,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="8250-2;8242-1;8243-1" />
+		<set name="item_skill" val="8250-2;8242-1;8243-1" /> <!-- Summon Tigress -->
 		<cond msgId="1518">
 			<player instanceId="44" />
 		</cond>
@@ -706,6 +746,7 @@
 		</for>
 	</item>
 	<item id="13045" type="EtcItem" name="Pailaka Soulshot - Grade C">
+		<!-- Weapon containing the light of Sprites -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -717,12 +758,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2151-1" />
+		<set name="item_skill" val="2151-1" /> <!-- Soulshot: C-Grade -->
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
 	<item id="13046" type="EtcItem" name="Pailaka Weapon Upgrade Stage 1">
+		<!-- If you bring it along with an Ancient Legacy Sword to the Dwarf Adventurer, you can exchange them for an Ancient Legacy Sword Stage 2. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -739,6 +781,7 @@
 		</cond>
 	</item>
 	<item id="13047" type="EtcItem" name="Pailaka Weapon Upgrade Stage 2">
+		<!-- If you bring it along with an Ancient Legacy Sword Stage 2 to the Dwarf Adventurer, you can exchange them for an Ancient Legacy Sword Stage 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -755,6 +798,7 @@
 		</cond>
 	</item>
 	<item id="13048" type="EtcItem" name="Pailaka Antidote">
+		<!-- Cures paralysis-type poisons. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -766,12 +810,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2578-1" />
+		<set name="item_skill" val="2578-1" /> <!-- Cure Poison Paralyze -->
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>
 	</item>
 	<item id="13049" type="EtcItem" name="Divine Soul">
+		<!-- Potion that allows you to feel Holy energy. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -782,12 +827,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2340-1" />
+		<set name="item_skill" val="2340-1" /> <!-- Dark Resist Potion -->
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>
 	</item>
 	<item id="13050" type="Armor" name="Tigress exclusive armor">
+		<!-- Pailaka Piglis exclusive armor -->
 		<set name="icon" val="icon.etc_wolf_r_a_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -815,6 +861,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13052" type="Weapon" name="Spear of Silenos">
+		<!-- Spear of Silenos obtained from the Internal Supporter. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -833,7 +880,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="unequip_skill" val="8249-1" />
-		<set name="item_skill" val="8239-1;8240-1;3599-1" />
+		<set name="item_skill" val="8239-1;8240-1;3599-1" /> <!-- Critical Up -->
 		<cond msgId="1518">
 			<player instanceId="45" />
 		</cond>
@@ -846,6 +893,7 @@
 		</for>
 	</item>
 	<item id="13053" type="Weapon" name="Enhanced Spear of Silenos">
+		<!-- Spear of Silenos obtained from the Internal Supporter. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -864,7 +912,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="unequip_skill" val="8249-1" />
-		<set name="item_skill" val="8239-1;8240-2;3599-1" />
+		<set name="item_skill" val="8239-1;8240-2;3599-1" /> <!-- Critical Up -->
 		<cond msgId="1518">
 			<player instanceId="45" />
 		</cond>
@@ -877,6 +925,7 @@
 		</for>
 	</item>
 	<item id="13054" type="Weapon" name="Complete Spear of Silenos">
+		<!-- Spear of Silenos obtained from the Internal Supporter. Cannot be exchanged or dropped. Can only be equipped in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -895,7 +944,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="unequip_skill" val="8249-1" />
-		<set name="item_skill" val="8239-1;8240-3;3599-1" />
+		<set name="item_skill" val="8239-1;8240-3;3599-1" /> <!-- Critical Up -->
 		<cond msgId="1518">
 			<player instanceId="45" />
 		</cond>
@@ -908,6 +957,7 @@
 		</for>
 	</item>
 	<item id="13055" type="EtcItem" name="Pailaka Soulshot - Grade A">
+		<!-- Weapon containing the light of Sprites -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -919,12 +969,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2153-1" />
+		<set name="item_skill" val="2153-1" /> <!-- Soulshot: A-Grade -->
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
 	<item id="13056" type="EtcItem" name="Weapon Upgrade Stage 1">
+		<!-- If you bring it along with a Spear of Silenos to the Ketra Orc Intelligence Officer, you can exchange them for Spear of Silenos Stage 2. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -940,6 +991,7 @@
 		</cond>
 	</item>
 	<item id="13057" type="EtcItem" name="Weapon Upgrade Stage 2">
+		<!-- If you bring it along with a Spear of Silenos Stage 2 to the Ketra Orc Intelligence Officer, you can exchange them for Spear of Silenos Stage 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -966,6 +1018,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13059" type="EtcItem" name="Long-Range Defense Increasing Potion">
+		<!-- Increases Resistance to long-range attacks. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -978,7 +1031,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2593-1" />
+		<set name="item_skill" val="2593-1" /> <!-- Bow/Crossbow Attack Resistance Potion -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
@@ -1009,7 +1062,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3014-2" />
+		<set name="item_skill" val="3014-2" /> <!-- Special Ability: Mana Up -->
 		<for>
 			<set stat="pAtk" val="267" />
 			<set stat="mAtk" val="202" />
@@ -1036,7 +1089,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1073,6 +1126,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13067" type="EtcItem" name="Fantasy Isle Coin">
+		<!-- Currency used on Fantasy Isle. You can exchange them for reward items from the Fantasy Isle Paddies. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_pig_adena_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1109,33 +1163,37 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13071" type="EtcItem" name="Red Soul Crystal - Stage 16">
+		<!-- Red Crystal that absorbs souls, stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2096-1" />
+		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="13072" type="EtcItem" name="Blue Soul Crystal - Stage 16">
+		<!-- Blue Crystal that absorbs souls, stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2096-1" />
+		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="13073" type="EtcItem" name="Green Soul Crystal - Stage 16">
+		<!-- Green Crystal that absorbs souls, stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2096-1" />
+		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="13074" type="Armor" name="Shadow Item - Top Hat">
+		<!-- Top Hat reserved for fashionable society. Uses 2 hair accessory slots. This Shadow Item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_magicial_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1148,6 +1206,7 @@
 		<set name="duration" val="10080" />
 	</item>
 	<item id="13075" type="Armor" name="Shadow Item - Black Mask">
+		<!-- Traditional mask to hide one's true identity. Uses 2 hair accessory slots. This Shadow Item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_jjoro_masj_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1160,6 +1219,7 @@
 		<set name="duration" val="10080" />
 	</item>
 	<item id="13076" type="Armor" name="Shadow Item - Rider Goggles">
+		<!-- Goggles used to protect your eyes while riding on a mount. Uses 2 hair accessory slots. This Shadow Item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_dragonfly_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1172,6 +1232,7 @@
 		<set name="duration" val="10080" />
 	</item>
 	<item id="13077" type="EtcItem" name="Chaotic Arcana Sigil">
+		<!-- A rare Arcana Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
@@ -1187,6 +1248,7 @@
 		</for>
 	</item>
 	<item id="13078" type="Armor" name="Arcana Sigil">
+		<!-- Increases M. Def. Decreases Magic Cancel Rate. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -1198,7 +1260,7 @@
 		<set name="weight" val="940" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8310-1" />
+		<set name="item_skill" val="8310-1" /> <!-- Arcana Sigil -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1209,6 +1271,7 @@
 		</for>
 	</item>
 	<item id="13079" type="EtcItem" name="My Teleport Spellbook 1-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Free Teleporter's Scroll. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1223,6 +1286,7 @@
 		<set name="capsuled_items" val="13015,1,1,100" />
 	</item>
 	<item id="13080" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 30 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1237,6 +1301,7 @@
 		<set name="capsuled_items" val="13016,30,30,100" />
 	</item>
 	<item id="13081" type="EtcItem" name="Kamaloka Entrance Pass Pack">
+		<!-- A wrapped pack containing a Kamaloka Entrance Pass set. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1249,6 +1314,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13082" type="EtcItem" name="Feather of Blessing 3-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 3 sheets of the Feather of Blessing. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1263,6 +1329,7 @@
 		<set name="capsuled_items" val="10649,3,3,100" />
 	</item>
 	<item id="13083" type="EtcItem" name="Agathion of Love 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing an Agathion of Love Seal Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1277,6 +1344,7 @@
 		<set name="capsuled_items" val="13023,1,1,100" />
 	</item>
 	<item id="13084" type="EtcItem" name="Pumpkin Transformation Stick 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing Pumpkin Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1291,6 +1359,7 @@
 		<set name="capsuled_items" val="12800,1,1,100" />
 	</item>
 	<item id="13085" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing 5 Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1306,6 +1375,7 @@
 		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" />
 	</item>
 	<item id="13086" type="EtcItem" name="Kat the Cat Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Kat the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1320,6 +1390,7 @@
 		<set name="capsuled_items" val="12782,1,1,100" />
 	</item>
 	<item id="13087" type="EtcItem" name="Feline Queen Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Feline Queen Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1334,6 +1405,7 @@
 		<set name="capsuled_items" val="12783,1,1,100" />
 	</item>
 	<item id="13088" type="EtcItem" name="Monster Eye Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Monster Eye Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1348,6 +1420,7 @@
 		<set name="capsuled_items" val="12786,1,1,100" />
 	</item>
 	<item id="13089" type="EtcItem" name="Brown Bear Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Brown Bear Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1362,6 +1435,7 @@
 		<set name="capsuled_items" val="12787,1,1,100" />
 	</item>
 	<item id="13090" type="EtcItem" name="Fungus Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Fungus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1376,6 +1450,7 @@
 		<set name="capsuled_items" val="12788,1,1,100" />
 	</item>
 	<item id="13091" type="EtcItem" name="Skull Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Skull Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1390,6 +1465,7 @@
 		<set name="capsuled_items" val="12789,1,1,100" />
 	</item>
 	<item id="13092" type="EtcItem" name="Ornithomimus Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Ornithomimus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1404,6 +1480,7 @@
 		<set name="capsuled_items" val="12790,1,1,100" />
 	</item>
 	<item id="13093" type="EtcItem" name="Feline King Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Feline King Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1418,6 +1495,7 @@
 		<set name="capsuled_items" val="12791,1,1,100" />
 	</item>
 	<item id="13094" type="EtcItem" name="Kai the Cat Hat 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Kai the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1432,6 +1510,7 @@
 		<set name="capsuled_items" val="12792,1,1,100" />
 	</item>
 	<item id="13095" type="EtcItem" name="OX Stick 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing an OX Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1446,6 +1525,7 @@
 		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" />
 	</item>
 	<item id="13096" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Rock-Paper-Scissors Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1460,6 +1540,7 @@
 		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" />
 	</item>
 	<item id="13097" type="EtcItem" name="Purple Maned Horse Bracelet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Purple Maned Horse (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1474,6 +1555,7 @@
 		<set name="capsuled_items" val="13022,1,1,100" />
 	</item>
 	<item id="13098" type="EtcItem" name="Color Name 3-Sheet Pack">
+		<!-- Dimensional item pack. A wrapped pack containing a Color Name. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1488,6 +1570,7 @@
 		<set name="capsuled_items" val="13021,3,3,100" />
 	</item>
 	<item id="13099" type="EtcItem" name="Sealed Arcana Sigil Piece">
+		<!-- Ingredient needed for a Dwarf to make a Sealed Arcana Sigil. It can be sold to public stores. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

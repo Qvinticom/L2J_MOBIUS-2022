@@ -456,7 +456,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27659" name="Anniversary Coin" additionalName="Event" type="EtcItem">
-		<!-- An anniversary coin. It might be a good idea to collect these for later... -->
+		<!-- An anniversary coin. It might be a good idea to collect these for later?-1 -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
@@ -490,8 +490,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
-			<item id="38941" min="55" max="30" chance="100" />
-			<item id="38943" min="1" max="1" chance="100" />
+			<item id="38941" min="55" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
 		</capsuled_items>
 	</item>
 	<item id="27663" name="Supply Box" additionalName="Top-grade" type="EtcItem">
@@ -513,8 +513,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
-			<item id="27593" min="5" max="5" chance="95" />
-			<item id="27585" min="1" max="1" chance="5" />
+			<item id="27593" min="5" max="5" chance="95" /> <!-- Daily Coin -->
+			<item id="27585" min="1" max="1" chance="5" /> <!-- Special Supply Box - Standard -->
 		</capsuled_items>
 	</item>
 	<item id="27664" name="Tauti's Ring" additionalName="7-day" type="Armor">

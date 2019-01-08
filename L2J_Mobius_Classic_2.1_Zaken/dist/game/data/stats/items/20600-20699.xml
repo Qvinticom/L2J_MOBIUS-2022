@@ -45,7 +45,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20678" name="Gatekeeper Hat" type="Armor">
-		<!-- Occupies 2 Hair Accessory slots. -->
+		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. Cooldown is 1h. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

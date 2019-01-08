@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46700" name="Emperor Shunaiman's Shooter" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_crossbow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -32,7 +32,7 @@
 		</stats>
 	</item>
 	<item id="46701" name="Emperor Shunaiman's Buster" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -62,7 +62,7 @@
 		</stats>
 	</item>
 	<item id="46702" name="Emperor Shunaiman's Caster" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -93,7 +93,7 @@
 		</stats>
 	</item>
 	<item id="46703" name="Emperor Shunaiman's Retributer" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -124,7 +124,7 @@
 		</stats>
 	</item>
 	<item id="46704" name="Emperor Shunaiman's Dualsword" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_dual_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="46705" name="Emperor Shunaiman's Dual Dagger" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -185,7 +185,7 @@
 		</stats>
 	</item>
 	<item id="46706" name="Emperor Shunaiman's Dual Blunt" additionalName="30-day" type="Weapon">
-		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -216,7 +216,7 @@
 		</stats>
 	</item>
 	<item id="46707" name="Stylish Color Title" type="EtcItem">
-		<!-- Dimensional Item. Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/resettitle'. If there was no original title, the title disappears. -->
+		<!-- Dimensional Item. Item that can change the color of a character's title. After changing the color of the title, the original title color can be restored through the command '/ resettitle'. If there was no original title, the title disappears. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -229,7 +229,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46708" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
-		<!-- Dimensional Item. Extra Pass for Daily Instanced Zone Dungeon. Double click to reset the instance timer for the Nightmare Kamaloka dungeon. Usable once a day outside instances while on a cooldown. -->
+		<!-- Additional Pass for Daily Instance Zone Dungeon. Double click to reset cooldown to the Nightmare Kamaloka dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -237,7 +237,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46709" name="Pa'agrio's Blessing" type="EtcItem">
-		<!-- Dimensional Item. When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, Accuracy 4, Magic Accuracy by 4, Movement Speed 10, Attack/casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/ M. Def 10%, Accuracy 4, Magic Accuracy by 4, Speed 10, Attack/ casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 minutes. Buff effect persists through death. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -254,7 +254,7 @@
 		</skills>
 	</item>
 	<item id="46710" name="Lindvior's Earring" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, Petrification Atk./Resistance +50%, Knock Back/Knock Down Atk./Resistance +40%, Pulling Success Rate +40%, Pulling/Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./M. Abnormal Status Reflection +10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed +5, DEX +3, and WIT +3. Wind/Dark Attack Def. decreased. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. Effect does not stack with identical ones. -->
+		<!-- Dimensional Item. MP +59, Petrification Atk./ Resistance +50%, Knock Back/ Knock Down Atk./ Resistance +40%, Pulling Success Rate +40%, Pulling/ Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./ M. Abnormal Status Reflection +10%. Reflect damage magic back to the attacker with the probability of 10%. Speed +5, DEX +3, and WIT +3. Wind/ Dark Attack Def. decreased. Enables the skill of canceling Knock Back/ Knock Down and Knock Back/ Knock Down Resistance for 5 seconds. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -719,7 +719,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="46740" min="1" max="1" chance="100" /> <!-- Reward Fishing Rod -->
+			<item id="46740" min="1" max="1" chance="100" /> <!-- Reward Fishing Rod - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="46740" name="Reward Fishing Rod" additionalName="7-day" type="Weapon">
@@ -1106,7 +1106,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46777" name="Vitality Replenishing Potion of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Replenishes vitality by a certain amount when used. Reuse delay 60 minutes. 5-time weekly usage restriction does not apply. Will be deleted when the event ends. -->
+		<!-- Replenishes vitality by a certain amount when used. Reuse delay 60 minutes. No weekly usage limit. Will be deleted when the event ends. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1162,7 +1162,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46782" name="Graduation Gift" type="EtcItem">
-		<!-- A Mentee Graduation Gift. Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), Player Commendation - Enhanced Rosy Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
+		<!-- Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), PA - Art of Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1376,7 +1376,7 @@
 		</stats>
 	</item>
 	<item id="46795" name="Paulina's Light Crossbow" type="Weapon">
-		<!-- A Light Crossbow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- A Light Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

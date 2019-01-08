@@ -149,7 +149,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21856" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshots (S-grade) -->
+			<item id="21856" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="22608" name="Vitality Maintaining Potion (30-minute) 2-unit Pack" type="EtcItem">
@@ -266,7 +266,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 3-hour -->
+			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 30% - 3-hour -->
 		</capsuled_items>
 	</item>
 	<item id="22613" name="XP Rune III (Lv. 1-99) 30% Pack (1-hour)" type="EtcItem">
@@ -284,7 +284,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21084" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
+			<item id="21084" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 30% -->
 		</capsuled_items>
 	</item>
 	<item id="22614" name="XP Rune III (Lv. 1-99) 50% Pack (1-hour)" type="EtcItem">
@@ -302,7 +302,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22334" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hour -->
+			<item id="22334" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="22615" name="Extra Pass: Rim Kamaloka" type="EtcItem">
@@ -424,7 +424,7 @@
 		</skills>
 	</item>
 	<item id="22621" name="Vitality Recovery Potion" additionalName="1-hour" type="EtcItem">
-		<!-- Premium user exclusive item When the Vitality recovery potion is used, for 60 minutes, Vitality is restored as XP is acquired. -->
+		<!-- Premium user exclusive item. When the Vitality recovery potion is used, for 60 minutes, Vitality is restored as XP is acquired. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -444,7 +444,7 @@
 		</skills>
 	</item>
 	<item id="22622" name="Blessed Scroll of Escape" additionalName="1-day" type="EtcItem">
-		<!-- Premium user exclusive item Magic scroll that teleports you to the nearest village. Weight is 0. -->
+		<!-- Premium user exclusive item. Magic scroll that teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -464,7 +464,7 @@
 		</skills>
 	</item>
 	<item id="22623" name="Blessed Scroll of Resurrection" additionalName="1-day" type="EtcItem">
-		<!-- Premium user exclusive item Magic scroll that resurrects a dead player and completely restores XP. -->
+		<!-- Premium user exclusive item. Magic scroll that resurrects a dead player and completely restores XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="120" />
 		<set name="is_depositable" val="false" />
@@ -485,7 +485,7 @@
 		</skills>
 	</item>
 	<item id="22624" name="Elixir of Life" additionalName="1-day" type="EtcItem">
-		<!-- Premium user exclusive item Restores HP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
+		<!-- Premium user exclusive item. Restores HP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i02" />
 		<set name="weight" val="5" />
 		<set name="is_depositable" val="false" />
@@ -511,7 +511,7 @@
 		</skills>
 	</item>
 	<item id="22625" name="Elixir of Mind" additionalName="1-day" type="EtcItem">
-		<!-- Premium user exclusive item Restores MP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
+		<!-- Premium user exclusive item. Restores MP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_depositable" val="false" />
@@ -537,7 +537,7 @@
 		</skills>
 	</item>
 	<item id="22626" name="Elixir of CP" additionalName="1-day" type="EtcItem">
-		<!-- Premium user exclusive item Restores CP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
+		<!-- Premium user exclusive item. Restores CP. Can only be used at level 85 or above upon themselves. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i01" />
 		<set name="weight" val="5" />
 		<set name="is_depositable" val="false" />
@@ -563,7 +563,7 @@
 		</skills>
 	</item>
 	<item id="22627" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. -->
+		<!-- Premium user exclusive item. When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -584,7 +584,7 @@
 		</skills>
 	</item>
 	<item id="22628" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
+		<!-- Premium user exclusive item. When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -605,7 +605,7 @@
 		</skills>
 	</item>
 	<item id="22629" name="High-grade Life Stone (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item High-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are level 85 or above. -->
+		<!-- Premium user exclusive item. High-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are level 85 or above. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -619,7 +619,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22630" name="Top-grade Life Stone (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item Top-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are level 85 or above. -->
+		<!-- Premium user exclusive item. Top-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are level 85 or above. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -633,7 +633,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22631" name="High-grade Life Stone (R95-grade)" type="EtcItem">
-		<!-- Premium user exclusive item High-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 95. -->
+		<!-- Premium user exclusive item. High-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 95. -->
 		<set name="icon" val="icon.r95_mineral_rare_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -647,7 +647,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22632" name="Top-grade Life Stone (R95-grade)" type="EtcItem">
-		<!-- Premium user exclusive item Top-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 95. -->
+		<!-- Premium user exclusive item. Top-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 95. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -661,7 +661,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22633" name="High-grade Life Stone (R99-grade)" type="EtcItem">
-		<!-- Premium user exclusive item High-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 99. -->
+		<!-- Premium user exclusive item. High-level mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 99. -->
 		<set name="icon" val="icon.r99_mineral_rare_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22634" name="Top-grade Life Stone (R99-grade)" type="EtcItem">
-		<!-- Premium user exclusive item Top-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 99. -->
+		<!-- Premium user exclusive item. Top-grade mineral that has been petrified inside a creature through physical or magical damage. Can be used by characters who are above level 99. -->
 		<set name="icon" val="icon.r99_mineral_unique_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -821,7 +821,7 @@
 		</skills>
 	</item>
 	<item id="22641" name="Fire Crystal" type="EtcItem">
-		<!-- Premium user exclusive item Fire attack increases by 5 when bestowed on a weapon. Fire attack and water defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Fire attack increases by 5 when bestowed on a weapon. Fire attack and water defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -841,7 +841,7 @@
 		</skills>
 	</item>
 	<item id="22642" name="Water Crystal" type="EtcItem">
-		<!-- Premium user exclusive item Water attack increases by 5 when bestowed on a weapon. Water attack and fire defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Water attack increases by 5 when bestowed on a weapon. Water attack and fire defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -861,7 +861,7 @@
 		</skills>
 	</item>
 	<item id="22643" name="Earth Crystal" type="EtcItem">
-		<!-- Premium user exclusive item Earth attack increases by 5 when bestowed on a weapon. Earth attack and wind defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Earth attack increases by 5 when bestowed on a weapon. Earth attack and wind defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -881,7 +881,7 @@
 		</skills>
 	</item>
 	<item id="22644" name="Wind Crystal" type="EtcItem">
-		<!-- Premium user exclusive item Wind attack increases by 5 when bestowed on a weapon. Wind attack and earth defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Wind attack increases by 5 when bestowed on a weapon. Wind attack and earth defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -901,7 +901,7 @@
 		</skills>
 	</item>
 	<item id="22645" name="Dark Crystal" type="EtcItem">
-		<!-- Premium user exclusive item Dark attack increases by 5 when bestowed on a weapon. Dark attack and holy defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Dark attack increases by 5 when bestowed on a weapon. Dark attack and holy defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -921,7 +921,7 @@
 		</skills>
 	</item>
 	<item id="22646" name="Holy Crystal" type="EtcItem">
-		<!-- Premium user exclusive item Holy attack increases by 5 when bestowed on a weapon. Holy attack and dark defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Holy attack increases by 5 when bestowed on a weapon. Holy attack and dark defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. The crystal's power disappears when additional Elemental attributes are bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -941,7 +941,7 @@
 		</skills>
 	</item>
 	<item id="22647" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<!-- Premium user exclusive item. When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -961,7 +961,7 @@
 		</skills>
 	</item>
 	<item id="22648" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<!-- Premium user exclusive item. When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />

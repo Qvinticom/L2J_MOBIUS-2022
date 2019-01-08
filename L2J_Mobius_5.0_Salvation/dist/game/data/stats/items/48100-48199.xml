@@ -442,7 +442,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48133" name="Agathion - Joon Charm (30-day)" type="Armor">
-		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad. <Item Skill>. 1. Joon's Magic: For 30 min, XP/ SP gained +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Buff effect persists through death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hours. -->
+		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad.. <Item Skill>. 1. Joon's Magic: For 30 min, XP/ SP gained +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Buff effect persists through death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hours. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -950,7 +950,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48172" name="Herphah's Mission List" type="EtcItem">
-		<!-- A list of missions that Herphah instructed you to complete. Complete missions for the following people and return with the certificates they give you.- Fishing Guild Leader Santiago in Heine, Blacksmith Rupio in the Town of Giran, Head Blacksmith Flutter in the Town of Oren, Blacksmith Vincenz in the Town of Rune, Head Blacksmith Ferris in the Town of Aden -->
+		<!-- A list of missions that Herphah instructed you to complete. "Complete missions for the following people and return with the certificates they give you.- Fishing Guild Leader Santiago in Heine, Blacksmith Rupio in the Town of Giran, Head Blacksmith Flutter in the Town of Oren, Blacksmith Vincenz in the Town of Rune, Head Blacksmith Ferris in the Town of Aden" -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

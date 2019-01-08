@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20300" name="Agathion - Blue Sumo Wrestler" additionalName="Wild Magic (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Blue Sumo Wrestler. Cooldown is 1 hour. -->
+		<!-- Bracelet that summons Agathion - Blue Sumo Wrestler. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -50,7 +50,7 @@
 		</skills>
 	</item>
 	<item id="20302" name="Agathion - Great Sumo Match" additionalName="Big Head / Firework (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Great Sumo Match. Cooldown is 1 hour. -->
+		<!-- Bracelet that summons Agathion - Great Sumo Match. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_match_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -99,7 +99,7 @@
 		</skills>
 	</item>
 	<item id="20304" name="Agathion - Button-eyed Bear Doll" additionalName="Escape (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hours. -->
+		<!-- Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_toybear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -123,7 +123,7 @@
 		</skills>
 	</item>
 	<item id="20305" name="Agathion - Button-eyed Bear Doll" additionalName="Resurrection (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hours. -->
+		<!-- Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_toybear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -147,7 +147,7 @@
 		</skills>
 	</item>
 	<item id="20306" name="Agathion - Button-eyed Bear Doll" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 1 hour. -->
+		<!-- Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_toybear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -195,7 +195,7 @@
 		</skills>
 	</item>
 	<item id="20308" name="Agathion - God of Fortune" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - God of Fortune. Cooldown is 1 hour. -->
+		<!-- Bracelet that summons Agathion - God of Fortune. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_wealth_god_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -267,7 +267,7 @@
 		</skills>
 	</item>
 	<item id="20311" name="Agathion - Wonboso" additionalName="Wind Walk (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Wonboso. Cooldown is 1 hour. -->
+		<!-- Bracelet that summons Agathion - Wonboso. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_cashcow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -315,7 +315,7 @@
 		</skills>
 	</item>
 	<item id="20313" name="Agathion - Daewoonso" additionalName="New Year's Gift (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Daewoonso. Cooldown is 1 hour. -->
+		<!-- Bracelet that summons Agathion - Daewoonso. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_aga_luckycow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -339,7 +339,7 @@
 		</skills>
 	</item>
 	<item id="20314" name="Birthday Cake Pack" additionalName="Vitality" type="EtcItem">
-		<!-- Wrapped Pack containing Birthday Cake. -->
+		<!-- Double-click to obtain a Birthday Cake. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -357,11 +357,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20320" min="1" max="1" chance="100" /> <!-- Birthday Cake - Vitality (24-hour) -->
+			<item id="20320" min="1" max="1" chance="100" /> <!-- Birthday Cake - Vitality (24-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="20315" name="Goggles Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Goggles. -->
+		<!-- Double-click to obtain a Goggles. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -383,7 +383,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20316" name="Napoleon Hat Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Napoleon Hat. -->
+		<!-- Double-click to obtain a Napoleon Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20317" name="Horn Hairband Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Horn Hairband. Females only. -->
+		<!-- Double-click to obtain a Horn Hairband. Females only. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -427,7 +427,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20318" name="Black Gem Mask Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Black Gem Mask. -->
+		<!-- Double-click to obtain a Black Gem Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -449,7 +449,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20319" name="Plastic Hair Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Plastic Hair. -->
+		<!-- Double-click to obtain a Plastic Hair. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -708,7 +708,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20332" name="Beast Soulshot" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its P. Atk. significantly. Used from the master's inventory. -->
+		<!-- The power of a higher-level spirit is bestowed upon a pet/ servitor, temporarily increasing its P. Atk. significantly. Used from the master's inventory. -->
 		<set name="icon" val="BranchSys.icon.br_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -731,7 +731,7 @@
 		</skills>
 	</item>
 	<item id="20333" name="Beast Spiritshot" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. Used from the master's inventory. -->
+		<!-- The power of a higher-level spirit is bestowed upon a pet/ servitor, temporarily increasing its M. Atk. Used from the master's inventory. -->
 		<set name="icon" val="BranchSys.icon.br_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +754,7 @@
 		</skills>
 	</item>
 	<item id="20334" name="Blessed Beast Spiritshot" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory. -->
+		<!-- The power of a higher-level spirit is bestowed upon a pet/ servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory. -->
 		<set name="icon" val="BranchSys.icon.br_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1063,7 +1063,7 @@
 		</skills>
 	</item>
 	<item id="20348" name="Rune of Crystal (Lv. 5)" additionalName="5-hour" type="EtcItem">
-		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm which bestows a mysterious ability if stored in the inventory. It decreases the armor grade allowing to wear it 5 levels before. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1151,7 +1151,7 @@
 		</skills>
 	</item>
 	<item id="20352" name="Rune of Crystal (Lv. 5)" additionalName="7-day" type="EtcItem">
-		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm which bestows a mysterious ability if stored in the inventory. It decreases the armor grade allowing to wear it 5 levels before. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -2154,7 +2154,7 @@
 		</skills>
 	</item>
 	<item id="20392" name="Vitality Replenishing Potion" type="EtcItem">
-		<!-- Magic potion that replenishes some Vitality. Cooldown is 60 minutes. Vitality item with limited usage. -->
+		<!-- Magic potion that replenishes some Vitality. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -2177,7 +2177,7 @@
 		</skills>
 	</item>
 	<item id="20393" name="Sweet Fruit Cocktail" type="EtcItem">
-		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hour. -->
+		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -2209,7 +2209,7 @@
 		</skills>
 	</item>
 	<item id="20394" name="Fresh Fruit Cocktail" type="EtcItem">
-		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Berserker Spirit, Magic Barrier, Blessed Soul, Empower, Greater Acumen, Clarity, Blessed Body and Wild Magic can be felt for 1 hour. -->
+		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Berserker Spirit, Magic Barrier, Blessed Soul, Empower, Greater Acumen, Clarity, Blessed Body and Wild Magic can be felt for 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -2241,7 +2241,7 @@
 		</skills>
 	</item>
 	<item id="20395" name="Mount - Steam Beetle Pack" type="EtcItem">
-		<!-- Wrapped Pack containing bracelet that summons Steam Beetle. -->
+		<!-- Double-click to obtain a bracelet that summons Steam Beetle. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

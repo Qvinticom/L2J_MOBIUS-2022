@@ -173,7 +173,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="32316" name="Elixir of Blessing" type="EtcItem">
-		<!-- For 30 minutes, it receives the following level 1 effects: Horn Melody, Lute Melody, Pipe Organ Melody, Guitar Melody, Harp Melody and Drum Melody. Can be used at level 85 or above. Cooldown is 2 min. -->
+		<!-- For 30 min., it receives the following level 1 effects: Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. Can be used at level 85 or above. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
@@ -209,7 +209,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="32318" name="Basic Talisman - P. Atk. Spd." type="Armor">
-		<!-- Atk. Spd. + 2% when equipped. Shadow weapon. -->
+		<!-- Atk. Spd. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -229,7 +229,7 @@
 		</skills>
 	</item>
 	<item id="32319" name="Basic Talisman - P. Atk." type="Armor">
-		<!-- P. Atk. + 2% when equipped. Shadow weapon. -->
+		<!-- P. Atk. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -249,7 +249,7 @@
 		</skills>
 	</item>
 	<item id="32320" name="Basic Talisman - P. Def." type="Armor">
-		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
+		<!-- P. Def. +3% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -269,7 +269,7 @@
 		</skills>
 	</item>
 	<item id="32321" name="Basic Talisman - Casting Spd." type="Armor">
-		<!-- Casting Spd. + 2% when equipped. Shadow weapon. -->
+		<!-- Casting Spd. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -289,7 +289,7 @@
 		</skills>
 	</item>
 	<item id="32322" name="Basic Talisman - M. Def." type="Armor">
-		<!-- M. Def. + 3% when equipped. Shadow weapon. -->
+		<!-- M. Def. +3% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="32323" name="Basic Talisman - M. Atk." type="Armor">
-		<!-- M. Atk. + 2% when equipped. Shadow weapon. -->
+		<!-- M. Atk. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -869,7 +869,7 @@
 		</stats>
 	</item>
 	<item id="32351" name="Fantasy Fleuret" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Bastard Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Bastard Sword Conversion. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1549,7 +1549,7 @@
 		</stats>
 	</item>
 	<item id="32386" name="Fantasy Chevalier Rapier" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. Bestows one of the following functions: Guidance, Back Blow or Risk Evasion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Shamshir. Bestows one of the following functions: Guidance, Back Blow or Risk Evasion. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1578,7 +1578,7 @@
 		</stats>
 	</item>
 	<item id="32387" name="Fantasy Blinzlasher" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. Bestows one of the following functions: Guidance, Focus or Critical Damage. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Caliburs. Bestows one of the following functions: Guidance, Focus or Critical Damage. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

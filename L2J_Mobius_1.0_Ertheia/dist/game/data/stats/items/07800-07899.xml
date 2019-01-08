@@ -142,7 +142,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7810" name="Soulfire Dirk" additionalName="Mana Up" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -174,7 +174,7 @@
 		</stats>
 	</item>
 	<item id="7811" name="Soulfire Dirk" additionalName="Magic Hold" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Dryad Root on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -206,7 +206,7 @@
 		</stats>
 	</item>
 	<item id="7812" name="Soulfire Dirk" additionalName="Magic Silence" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Silence on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -238,7 +238,7 @@
 		</stats>
 	</item>
 	<item id="7813" name="Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 30% chance of casting Regeneration on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 30% chance of casting Regeneration on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -270,7 +270,7 @@
 		</stats>
 	</item>
 	<item id="7814" name="Twilight Knife" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 50% chance of casting Mental Shield on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -302,7 +302,7 @@
 		</stats>
 	</item>
 	<item id="7815" name="Twilight Knife" additionalName="Magic Weakness" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 7% chance of casting Curse Weakness on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1438,7 +1438,7 @@
 		</stats>
 	</item>
 	<item id="7860" name="Apella Helm" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1458,7 +1458,7 @@
 		</stats>
 	</item>
 	<item id="7861" name="Apella Plate Armor" type="Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1483,7 +1483,7 @@
 		</stats>
 	</item>
 	<item id="7862" name="Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1507,7 +1507,7 @@
 		</stats>
 	</item>
 	<item id="7863" name="Apella Solleret" additionalName="Heavy Armor" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1531,7 +1531,7 @@
 		</stats>
 	</item>
 	<item id="7864" name="Apella Brigandine" type="Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1553,7 +1553,7 @@
 		</stats>
 	</item>
 	<item id="7865" name="Apella Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1574,7 +1574,7 @@
 		</stats>
 	</item>
 	<item id="7866" name="Apella Boots" additionalName="Light Armor" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1595,7 +1595,7 @@
 		</stats>
 	</item>
 	<item id="7867" name="Apella Doublet" type="Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1621,7 +1621,7 @@
 		</stats>
 	</item>
 	<item id="7868" name="Apella Silk Gloves" additionalName="Robe" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1645,7 +1645,7 @@
 		</stats>
 	</item>
 	<item id="7869" name="Apella Sandals" additionalName="Robe" type="Armor">
-		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1669,7 +1669,7 @@
 		</stats>
 	</item>
 	<item id="7870" name="Sealed Apella Helm" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Helmet. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Helmet. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1689,7 +1689,7 @@
 		</stats>
 	</item>
 	<item id="7871" name="Sealed Apella Plate Armor" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Plate Armor. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Plate Armor. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1714,7 +1714,7 @@
 		</stats>
 	</item>
 	<item id="7872" name="Sealed Apella Gauntlets" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Gauntlets. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Gauntlets. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1738,7 +1738,7 @@
 		</stats>
 	</item>
 	<item id="7873" name="Sealed Apella Solleret" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Solleret. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Solleret. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1762,7 +1762,7 @@
 		</stats>
 	</item>
 	<item id="7874" name="Sealed Apella Brigandine" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Clothing. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Clothing. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1784,7 +1784,7 @@
 		</stats>
 	</item>
 	<item id="7875" name="Sealed Apella Leather Gloves" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Leather Gloves. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Leather Gloves. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1805,7 +1805,7 @@
 		</stats>
 	</item>
 	<item id="7876" name="Sealed Apella Boots" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Shoes. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Shoes. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1826,7 +1826,7 @@
 		</stats>
 	</item>
 	<item id="7877" name="Sealed Apella Doublet" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Doublet. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Doublet. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1852,7 +1852,7 @@
 		</stats>
 	</item>
 	<item id="7878" name="Sealed Apella Silk Gloves" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Silk Gloves. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Silk Gloves. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1876,7 +1876,7 @@
 		</stats>
 	</item>
 	<item id="7879" name="Sealed Apella Sandals" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Sandals. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Sandals. The blacksmith in a village can release the seal on this item. . Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

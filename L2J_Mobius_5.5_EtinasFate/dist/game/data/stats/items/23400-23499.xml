@@ -201,7 +201,7 @@
 		</skills>
 	</item>
 	<item id="23410" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -222,7 +222,7 @@
 		</skills>
 	</item>
 	<item id="23411" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, and dagger + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -243,7 +243,7 @@
 		</skills>
 	</item>
 	<item id="23412" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, and dagger + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -264,7 +264,7 @@
 		</skills>
 	</item>
 	<item id="23413" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (B-grade) + 3, and two-handed sword/blunt/fist, and dagger + 4. P. Atk. for bows + 6. M. Atk. for all weapons + 3. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -285,7 +285,7 @@
 		</skills>
 	</item>
 	<item id="23414" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (C-grade) + 3, and two-handed sword/blunt/fist, and dagger + 4. P. Atk. for bows + 6. M. Atk. for all weapons + 3. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -306,7 +306,7 @@
 		</skills>
 	</item>
 	<item id="23415" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc., two-handed sword/blunt/fist, and dagger (D-grade) + 2. P. Atk. for bows + 4. M. Atk. for all weapons + 2. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 2 for D-grade one-handed sword, one-handed blunt, one-handed staff, dagger, spear, other weapons, two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -327,7 +327,7 @@
 		</skills>
 	</item>
 	<item id="23416" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (R-grade) + 2. When enchanted to +4 or above, P. Def. Increases greatly. Can be safely enchanted up to +3. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (R-grade) +2. When enchanted to +4 or above, P. Def. Increases greatly. Can be safely enchanted up to +3. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -348,7 +348,7 @@
 		</skills>
 	</item>
 	<item id="23417" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (S-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (S-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -369,7 +369,7 @@
 		</skills>
 	</item>
 	<item id="23418" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (A-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (A-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -390,7 +390,7 @@
 		</skills>
 	</item>
 	<item id="23419" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (B-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (B-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -411,7 +411,7 @@
 		</skills>
 	</item>
 	<item id="23420" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (C-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (C-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -432,7 +432,7 @@
 		</skills>
 	</item>
 	<item id="23421" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (D-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (D-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -453,7 +453,7 @@
 		</skills>
 	</item>
 	<item id="23422" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -473,7 +473,7 @@
 		</skills>
 	</item>
 	<item id="23423" name="Blessed Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, and dagger + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -493,7 +493,7 @@
 		</skills>
 	</item>
 	<item id="23424" name="Blessed Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, and dagger + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -513,7 +513,7 @@
 		</skills>
 	</item>
 	<item id="23425" name="Blessed Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (B-grade) + 3, and two-handed sword/blunt/fist, and dagger + 4. P. Atk. for bows + 6. M. Atk. for all weapons + 3. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -533,7 +533,7 @@
 		</skills>
 	</item>
 	<item id="23426" name="Blessed Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (C-grade) + 3, and two-handed sword/blunt/fist, and dagger + 4. P. Atk. for bows + 6. M. Atk. for all weapons + 3. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -553,7 +553,7 @@
 		</skills>
 	</item>
 	<item id="23427" name="Blessed Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc., two-handed sword/blunt/fist, and dagger (D-grade) + 2. P. Atk. for bows + 4. M. Atk. for all weapons + 2. When enchanted to +4 or above, P. Atk. and M. Atk. Increase twofold. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Dimensional Item. When enchanted, increases P. Atk. by 2 for D-grade one-handed sword, one-handed blunt, one-handed staff, dagger, spear, other weapons, two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -573,7 +573,7 @@
 		</skills>
 	</item>
 	<item id="23428" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (R-grade) + 2. When enchanted to +4 or above, P. Def. Increases greatly. Can be safely enchanted up to +3. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (R-grade) +2. When enchanted to +4 or above, P. Def. Increases greatly. Can be safely enchanted up to +3. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -593,7 +593,7 @@
 		</skills>
 	</item>
 	<item id="23429" name="Blessed Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (S-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (S-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -613,7 +613,7 @@
 		</skills>
 	</item>
 	<item id="23430" name="Blessed Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (A-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (A-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -633,7 +633,7 @@
 		</skills>
 	</item>
 	<item id="23431" name="Blessed Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (B-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (B-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -653,7 +653,7 @@
 		</skills>
 	</item>
 	<item id="23432" name="Blessed Scroll: Enchant Armor (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (C-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (C-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -673,7 +673,7 @@
 		</skills>
 	</item>
 	<item id="23433" name="Blessed Scroll: Enchant Armor (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (D-grade) + 1. When enchanted to + 4 or above, P. Def. Increases by 3. Can be safely enchanted up to + 3, and one-piece armor can be safely enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/ accessories (D-grade) +1. When enchanted to +4 or above, P. Def. Increases by 3. Can be safely enchanted up to +3, and one-piece armor can be safely enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -693,7 +693,7 @@
 		</skills>
 	</item>
 	<item id="23434" name="Agathion - Phoenix Pack (7-day)" additionalName="Nirvana Rebirth" type="EtcItem">
-		<!-- Wrapped Pack containing Phoenix (7-day). -->
+		<!-- Double-click to obtain a Phoenix (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -709,7 +709,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23435" name="Agathion - Blue Opera Pack (7-day)" additionalName="Sword of Recovery" type="EtcItem">
-		<!-- Wrapped Pack containing Blue Opera (7-day -->
+		<!-- Double-click to obtain a Blue Opera (7-day -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -725,7 +725,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23436" name="Agathion - Button-eyed Bear Doll Pack (7-day)" additionalName="Vitality" type="EtcItem">
-		<!-- Wrapped Pack containing Button-eyed Bear Doll (7-day). -->
+		<!-- Double-click to obtain a Button-eyed Bear Doll (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -741,7 +741,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23437" name="Mysterious Friend Summon Bracelet Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mysterious Friend Summon Bracelet (30-day). -->
+		<!-- Double-click to obtain a Mysterious Friend Summon Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -757,7 +757,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23438" name="Party Cake Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Party Cake. Cannot be exchanged or dropped once open. -->
+		<!-- Double-click to obtain a Party Cake. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -773,7 +773,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23439" name="Feather of Blessing Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Feather of Blessing. Cannot be exchanged or dropped once open. -->
+		<!-- Double-click to obtain a Feather of Blessing. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -789,7 +789,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23440" name="Super Healthy Juice Pack (HP)" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Super Healthy Juices (HP). Cannot be exchanged or dropped once open. -->
+		<!-- Double-click to obtain 3 Super Healthy Juices (HP). Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -804,7 +804,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23441" name="Super Healthy Juice Pack (CP)" type="EtcItem">
-		<!-- Wrapped Pack containing 5 Super Healthy Juices (CP). Cannot be exchanged or dropped once open. -->
+		<!-- Double-click to obtain 5 Super Healthy Juices (CP). Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1212,7 +1212,7 @@
 		</skills>
 	</item>
 	<item id="23467" name="Fantasy Health Potion" additionalName="Event" type="EtcItem">
-		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no duration. -->
+		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no cooldown. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_red_potion" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -1229,7 +1229,7 @@
 		</skills>
 	</item>
 	<item id="23468" name="Fantasy Mana Potion" additionalName="Event" type="EtcItem">
-		<!-- Restores 100 MP. Instant effect with no duration. -->
+		<!-- Restores 100 MP. Instant effect with no cooldown. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_blue_potion" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1246,7 +1246,7 @@
 		</skills>
 	</item>
 	<item id="23469" name="Fantasy Cookie" additionalName="Event" type="EtcItem">
-		<!-- Cookie made for the Fantasy Isle Festival. For 60 min., Speed + 33. -->
+		<!-- Cookie made for the Fantasy Isle Festival. For 60 min., Speed +33. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1264,7 +1264,7 @@
 		</skills>
 	</item>
 	<item id="23470" name="Fantasy Homemade Cookie" additionalName="Event" type="EtcItem">
-		<!-- Homemade cookie made for the Fantasy Isle Festival. For 60 min., with the help of a powerful spirit, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and P. Def. Increases when receiving a critical attack. Speed - 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. -->
+		<!-- Homemade Cookie made to celebrate the Great Fantasy Isle Festival. For 60 min., a powerful soul increases Max MP by 20%, HP Recovery Bonus by 20%, Attack M. Critical Rate by 2, Standard Attack Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and increases P. Def. when hit by a critical attack. Decreases Speed by 15%. Additionally increases Standard Attack Critical Damage for party members equipped with melee/ ranged weapons when they receive more than a certain amount of damage. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1282,7 +1282,7 @@
 		</skills>
 	</item>
 	<item id="23471" name="Fantasy Special Cookie" additionalName="Event" type="EtcItem">
-		<!-- Special cookie made for the Fantasy Isle Festival. For 60 min., SP/XP obtained through hunt + 100% for characters Lv.1-95. -->
+		<!-- Special cookie made for the Fantasy Isle Festival. For 60 min., Acquired XP/ SP +100%. For characters Lv. 1-95. -->
 		<set name="icon" val="BranchSys3.Icon.ev_halloween_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1560,7 +1560,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23486" name="Santa Outfit Appearance Stone" additionalName="14-day" type="EtcItem">
-		<!-- Appearance stone that modifies into a Santa outfit. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Appearance stone that modifies into a Santa outfit. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1581,7 +1581,7 @@
 		</skills>
 	</item>
 	<item id="23487" name="Santa Outfit Appearance Stone" type="EtcItem">
-		<!-- Appearance stone that modifies into a Santa outfit. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Appearance stone that modifies into a Santa outfit. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Santa outfit. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1602,7 +1602,7 @@
 		</skills>
 	</item>
 	<item id="23488" name="Santa Outfit Appearance Stone Pack (14-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Santa Outfit Appearance Stone (14-day). -->
+		<!-- Double-click to obtain a Santa Outfit Appearance Stone (14-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1622,7 +1622,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23489" name="Santa Outfit Appearance Stone Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Santa Outfit Appearance Stone. -->
+		<!-- Double-click to obtain a Santa Outfit Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

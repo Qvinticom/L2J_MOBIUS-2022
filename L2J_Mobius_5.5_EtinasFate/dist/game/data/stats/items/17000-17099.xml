@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="17004" name="Agathion - Kid Rudolph" additionalName="Event" type="Armor">
-		<!-- Bracelet that summons a cute Kid Rudolph Agathion that gives you a Santa's Gift. The Kid Rudolph gives you Santa's gift every 30 minutes after being summoned. -->
+		<!-- Bracelet that summons a cute Kid Rudolph Agathion that gives you a Santa's Gift. The Kid Rudolph gives you Santa's gift every 30 min. after being summoned. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -374,7 +374,7 @@
 		</skills>
 	</item>
 	<item id="17019" name="Mounting Item 3 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Gold Maned Lion (7-day), 1 Mount - Darkmane Pacer (7-day), and 1 Mount - Steam Beetle (7-day). -->
+		<!-- Double-click to obtain a Mount - Gold Maned Lion (7-day), 1 Mount - Darkmane Pacer (7-day), and 1 Mount - Steam Beetle (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17020" name="Fresh Milk Pack (Event)" type="EtcItem">
-		<!-- Event - Wrapped Pack containing fresh milk. -->
+		<!-- Event - Double-click to obtain a fresh milk. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -420,7 +420,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17021" name="Dimensional Experience Pack 30 (Event)" type="EtcItem">
-		<!-- Event - Wrapped Pack containing High-grade Minion Coupon 2-unit Pack, a Feather of Blessing 3-unit Pack, and an Entrance Pass: Kamaloka 3-unit Pack. -->
+		<!-- Event - Double-click to obtain a High-grade Minion Coupon 2-unit Pack, a Feather of Blessing 3-unit Pack, and an Entrance Pass: Kamaloka 3-unit Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -444,7 +444,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17022" name="Varka Karm Pack (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Varka Karm (used by Varka Silenos). -->
+		<!-- Double-click to obtain a Varka Karm (used by Varka Silenos). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -466,7 +466,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17023" name="Ketra Karm Pack (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Ketra Karm (used by Ketra Orcs). -->
+		<!-- Double-click to obtain a Ketra Karm (used by Ketra Orcs). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -488,7 +488,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17024" name="Vitality Maintaining Potion Pack (Event)" type="EtcItem">
-		<!-- Event - Wrapped Pack containing 5 Vitality Potions (30min). -->
+		<!-- Event - Double-click to obtain 5 Vitality Potions (30 min). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -507,11 +507,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15440" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
+			<item id="15440" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
 	<item id="17025" name="PC Point Pack (700) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing 700 PC Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
+		<!-- Double-click to obtain 700 PA Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -529,7 +529,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="14559" min="1" max="1" chance="100" /> <!-- Player Commendation Points -->
+			<item id="14559" min="1" max="1" chance="100" /> <!-- PA Points -->
 		</capsuled_items>
 	</item>
 	<item id="17026" name="First Mate Hat Pack (Event)" type="EtcItem">
@@ -665,7 +665,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17032" name="Hero's Treasure Chest Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Hero's Treasure Chest. -->
+		<!-- Double-click to obtain a Hero's Treasure Chest. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -830,7 +830,7 @@
 		</skills>
 	</item>
 	<item id="17040" name="Love Box Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Love Box. -->
+		<!-- Double-click to obtain a Love Box. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -850,7 +850,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17041" name="Sentiment Box Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Sentiment Box. -->
+		<!-- Double-click to obtain a Sentiment Box. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -870,7 +870,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17042" name="Confession Box Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Confession Box. -->
+		<!-- Double-click to obtain a Confession Box. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -890,7 +890,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17043" name="Joy Box Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Joy Box. -->
+		<!-- Double-click to obtain a Joy Box. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -948,7 +948,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17046" name="Confession Box" type="EtcItem">
-		<!-- Contains a Talisman for Stun/Sleep/Hold/Paralysis Resistance. -->
+		<!-- Contains a Talisman for Stun/ Sleep/ Hold/ Paralysis Resistance. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -989,7 +989,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17048" name="Shiny Bracelet Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Bracelet. -->
+		<!-- Double-click to obtain a Shiny Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -1025,7 +1025,7 @@
 		</skills>
 	</item>
 	<item id="17050" name="Shiny Couple Ring" type="Armor">
-		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hour. -->
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1046,7 +1046,7 @@
 		</stats>
 	</item>
 	<item id="17051" name="Talisman - STR" type="Armor">
-		<!-- STR + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- STR +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1068,7 +1068,7 @@
 		</skills>
 	</item>
 	<item id="17052" name="Talisman - DEX" type="Armor">
-		<!-- DEX + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- DEX +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1090,7 +1090,7 @@
 		</skills>
 	</item>
 	<item id="17053" name="Talisman - CON" type="Armor">
-		<!-- CON + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- CON +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1112,7 +1112,7 @@
 		</skills>
 	</item>
 	<item id="17054" name="Talisman - WIT" type="Armor">
-		<!-- WIT + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- WIT +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1134,7 +1134,7 @@
 		</skills>
 	</item>
 	<item id="17055" name="Talisman - INT" type="Armor">
-		<!-- INT + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- INT +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1156,7 +1156,7 @@
 		</skills>
 	</item>
 	<item id="17056" name="Talisman - MEN" type="Armor">
-		<!-- MEN + 2 when equipped. Cannot be used in the Olympiad. -->
+		<!-- MEN +2 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1178,7 +1178,7 @@
 		</skills>
 	</item>
 	<item id="17057" name="Talisman - Stun Resistance" type="Armor">
-		<!-- Stun Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Stun Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1200,7 +1200,7 @@
 		</skills>
 	</item>
 	<item id="17058" name="Talisman - Sleep Resistance" type="Armor">
-		<!-- Sleep Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Sleep Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1222,7 +1222,7 @@
 		</skills>
 	</item>
 	<item id="17059" name="Talisman - Hold Resistance" type="Armor">
-		<!-- Hold Resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Hold Resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1244,7 +1244,7 @@
 		</skills>
 	</item>
 	<item id="17060" name="Talisman - Paralysis Resistance" type="Armor">
-		<!-- Paralysis resistance + 15 when equipped. Cannot be used in the Olympiad. -->
+		<!-- Paralysis resistance +15 when equipped. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_talisman_event_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1348,7 +1348,7 @@
 		</skills>
 	</item>
 	<item id="17066" name="Event - Save the White Tiger Event Pack" type="EtcItem">
-		<!-- Event pack that can be obtained 1 time per account every 12 hours. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and Cupid's Fatigue Relief Potion that are needed for the event. -->
+		<!-- Event pack that can be obtained 1 time per account every 12 hr. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and "Cupid's Fatigue Relief Potion" that are needed for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1590,7 +1590,7 @@
 		</skills>
 	</item>
 	<item id="17082" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Transformation Scroll: Anakim. -->
+		<!-- Double-click to obtain a Transformation Scroll: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1612,7 +1612,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17083" name="Bird Nest Pack (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Bird Nest (Event). -->
+		<!-- Double-click to obtain a Bird Nest (Event). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1634,7 +1634,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17084" name="Shadow Item: Magician Cap Pack" additionalName="Escape" type="EtcItem">
-		<!-- Wrapped Pack containing Shadow Item: Magician Cap. -->
+		<!-- Double-click to obtain a Shadow Item: Magician Cap. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1656,7 +1656,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17085" name="Shadow Item: Magician Cap Pack" additionalName="Big Head" type="EtcItem">
-		<!-- Wrapped Pack containing Shadow Item: Magician Cap. -->
+		<!-- Double-click to obtain a Shadow Item: Magician Cap. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1678,7 +1678,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17086" name="Shadow Item: Magician Cap Pack" additionalName="Firework" type="EtcItem">
-		<!-- Wrapped Pack containing Shadow Item: Magician Cap. -->
+		<!-- Double-click to obtain a Shadow Item: Magician Cap. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

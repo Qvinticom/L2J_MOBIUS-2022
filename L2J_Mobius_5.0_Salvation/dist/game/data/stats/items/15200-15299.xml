@@ -54,7 +54,7 @@
 			<item id="15249" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack - 30-day -->
 			<item id="15261" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 30-day -->
 			<item id="15262" min="1" max="1" chance="100" /> <!-- One-handed Sword of Fortune Set - 30-day -->
-			<item id="15265" min="1" max="1" chance="100" /> <!-- Dualsword of Fortune Set - 30-day -->
+			<item id="15265" min="1" max="1" chance="100" /> <!-- Dual Sword of Fortune Set - 30-day -->
 			<item id="15274" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 30-day -->
 			<item id="15275" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 30-day -->
 			<item id="15276" min="1" max="1" chance="100" /> <!-- Jewelry Pack (C-grade) - 30-day -->
@@ -109,7 +109,7 @@
 			<item id="15248" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack - 30-day -->
 			<item id="15249" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack - 30-day -->
 			<item id="15261" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 30-day -->
-			<item id="15265" min="1" max="1" chance="100" /> <!-- Dualsword of Fortune Set - 30-day -->
+			<item id="15265" min="1" max="1" chance="100" /> <!-- Dual Sword of Fortune Set - 30-day -->
 			<item id="15266" min="1" max="1" chance="100" /> <!-- Spear of Fortune Set - 30-day -->
 			<item id="15274" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 30-day -->
 			<item id="15275" min="1" max="1" chance="100" /> <!-- Jewelry Pack (B-grade) - 30-day -->
@@ -890,7 +890,7 @@
 			<item id="15154" min="1" max="1" chance="100" /> <!-- Shyeed's Bow of Fortune - 10-day -->
 			<item id="15155" min="1" max="1" chance="100" /> <!-- Bow of Peril of Fortune - 10-day -->
 			<item id="15156" min="1" max="1" chance="100" /> <!-- Eminence Bow of Fortune - 10-day -->
-			<item id="15157" min="1" max="1" chance="100" /> <!-- Light Crossbow of Fortune - 10-day -->
+			<item id="15157" min="1" max="1" chance="100" /> <!-- Light Bow of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
 	<item id="15237" name="Blunt Weapon of Fortune Set" additionalName="10-day" type="EtcItem">
@@ -986,7 +986,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15241" name="Dualsword of Fortune Set" additionalName="10-day" type="EtcItem">
-		<!-- When used, you acquire 4 dualswords at A~D-grade s. Expires after 10 days if not used. -->
+		<!-- When used, you acquire 4 dual swords at A~D-grade s. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1071,10 +1071,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15186" min="1" max="1" chance="100" /> <!-- Éclair Bijou of Fortune - 10-day -->
+			<item id="15186" min="1" max="1" chance="100" /> <!-- ?clair Bijou of Fortune - 10-day -->
 			<item id="15187" min="1" max="1" chance="100" /> <!-- Colichemarde of Fortune - 10-day -->
 			<item id="15188" min="1" max="1" chance="100" /> <!-- Admiral's Estoc of Fortune - 10-day -->
-			<item id="15189" min="1" max="1" chance="100" /> <!-- Grand Épée of Fortune - 10-day -->
+			<item id="15189" min="1" max="1" chance="100" /> <!-- Grand ?p?e of Fortune - 10-day -->
 		</capsuled_items>
 	</item>
 	<item id="15245" name="Crossbow of Fortune Set" additionalName="10-day" type="EtcItem">
@@ -1454,7 +1454,7 @@
 			<item id="15040" min="1" max="1" chance="100" /> <!-- Shyeed's Bow of Fortune - 30-day -->
 			<item id="15041" min="1" max="1" chance="100" /> <!-- Bow of Peril of Fortune - 30-day -->
 			<item id="15042" min="1" max="1" chance="100" /> <!-- Eminence Bow of Fortune - 30-day -->
-			<item id="15043" min="1" max="1" chance="100" /> <!-- Light Crossbow of Fortune - 30-day -->
+			<item id="15043" min="1" max="1" chance="100" /> <!-- Light Bow of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="15261" name="Blunt Weapon of Fortune Set" additionalName="30-day" type="EtcItem">
@@ -1550,7 +1550,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15265" name="Dualsword of Fortune Set" additionalName="30-day" type="EtcItem">
-		<!-- When used, you acquire a Grade S~D dualsword. Expires after 30 days if not used. -->
+		<!-- When used, you acquire a Grade S~D dual sword. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1635,10 +1635,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="15072" min="1" max="1" chance="100" /> <!-- Éclair Bijou of Fortune - 30-day -->
+			<item id="15072" min="1" max="1" chance="100" /> <!-- ?clair Bijou of Fortune - 30-day -->
 			<item id="15073" min="1" max="1" chance="100" /> <!-- Colichemarde of Fortune - 30-day -->
 			<item id="15074" min="1" max="1" chance="100" /> <!-- Admiral's Estoc of Fortune - 30-day -->
-			<item id="15075" min="1" max="1" chance="100" /> <!-- Grand Épée of Fortune - 30-day -->
+			<item id="15075" min="1" max="1" chance="100" /> <!-- Grand ?p?e of Fortune - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="15269" name="Crossbow of Fortune Set" additionalName="30-day" type="EtcItem">
@@ -1921,7 +1921,7 @@
 		</stats>
 	</item>
 	<item id="15282" name="Gludio Water Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Gludio territory. Water Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Gludio territory. Water Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1944,7 +1944,7 @@
 		</stats>
 	</item>
 	<item id="15283" name="Dion Holy Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Dion territory. Holy Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Dion territory. Holy Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1967,7 +1967,7 @@
 		</stats>
 	</item>
 	<item id="15284" name="Giran Wind Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Giran territory. Wind Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Giran territory. Wind Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1990,7 +1990,7 @@
 		</stats>
 	</item>
 	<item id="15285" name="Oren Dark Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Oren territory. Dark Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Oren territory. Dark Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2013,7 +2013,7 @@
 		</stats>
 	</item>
 	<item id="15286" name="Aden Earth Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Aden territory. Earth Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Aden territory. Earth Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2036,7 +2036,7 @@
 		</stats>
 	</item>
 	<item id="15287" name="Innadril Water Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Innadril territory. Water Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Innadril territory. Water Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2059,7 +2059,7 @@
 		</stats>
 	</item>
 	<item id="15288" name="Goddard Fire Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Goddard territory. Fire Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Goddard territory. Fire Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2082,7 +2082,7 @@
 		</stats>
 	</item>
 	<item id="15289" name="Rune Fire Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Rune territory. Fire Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Rune territory. Fire Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2105,7 +2105,7 @@
 		</stats>
 	</item>
 	<item id="15290" name="Schuttgart Wind Royal Guard Necklace" type="Armor">
-		<!-- Necklace given to the royal guard of Schuttgart territory. Wind Resistance + 30. -->
+		<!-- Necklace given to the royal guard of Schuttgart territory. Wind Resistance +30. -->
 		<set name="icon" val="icon.accessory_nectklace_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2128,7 +2128,7 @@
 		</stats>
 	</item>
 	<item id="15291" name="Gludio Earth Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Gludio territory. Earth Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Gludio territory. Earth Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2154,7 +2154,7 @@
 		</stats>
 	</item>
 	<item id="15292" name="Dion Water Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Dion territory. Water Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Dion territory. Water Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2180,7 +2180,7 @@
 		</stats>
 	</item>
 	<item id="15293" name="Giran Fire Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Giran territory. Fire Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Giran territory. Fire Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2206,7 +2206,7 @@
 		</stats>
 	</item>
 	<item id="15294" name="Oren Earth Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Oren territory. Earth Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Oren territory. Earth Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2232,7 +2232,7 @@
 		</stats>
 	</item>
 	<item id="15295" name="Aden Holy Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Aden territory. Holy Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Aden territory. Holy Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2258,7 +2258,7 @@
 		</stats>
 	</item>
 	<item id="15296" name="Innadril Holy Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Innadril territory. Holy Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Innadril territory. Holy Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2284,7 +2284,7 @@
 		</stats>
 	</item>
 	<item id="15297" name="Goddard Dark Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Goddard territory. Dark Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Goddard territory. Dark Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2310,7 +2310,7 @@
 		</stats>
 	</item>
 	<item id="15298" name="Rune Wind Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Rune territory. Wind Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Rune territory. Wind Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2336,7 +2336,7 @@
 		</stats>
 	</item>
 	<item id="15299" name="Schuttgart Dark Royal Guard Ring" type="Armor">
-		<!-- Ring given to the royal guard of Schuttgart territory. Dark Resistance + 15. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the royal guard of Schuttgart territory. Dark Resistance +15. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

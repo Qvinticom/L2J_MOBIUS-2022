@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="35000" name="Not in Use_Tauti Weapon" type="Weapon">
-		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Rage skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, and augmentation are not allowed. Crystallization, 1 Soul Crystal can be used. -->
+		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Wrath skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, and augmentation are not allowed. Crystallization, 1 Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_two_hand_pole_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -30,7 +30,7 @@
 		</stats>
 	</item>
 	<item id="35001" name="Tauti's Dual Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill �Tauti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 Special Soul Crystal can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_dual_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -80,7 +80,7 @@
 		</stats>
 	</item>
 	<item id="35003" name="Dark Eternal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to +4, decreases received P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t811_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -193,7 +193,7 @@
 		</stats>
 	</item>
 	<item id="35009" name="Dark Eternal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases chance of receiving P. Critical Attack. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="icon.armor_t812_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -310,7 +310,7 @@
 		</stats>
 	</item>
 	<item id="35014" name="Dark Eternal Tunic" additionalName="Magic Type / Robe" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t813_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -427,7 +427,7 @@
 		</stats>
 	</item>
 	<item id="35019" name="Dark Eternal Breastplate" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Sigel Knights only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to +4, decreases received P. Critical Damage and additionally increases P. Def. Sigel Knights only. -->
 		<set name="icon" val="icon.armor_t811_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -540,7 +540,7 @@
 		</stats>
 	</item>
 	<item id="35024" name="Dark Eternal Leather Armor" additionalName="Enchant Type / Light" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases chance of receiving P. Critical Attack. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t812_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -657,7 +657,7 @@
 		</stats>
 	</item>
 	<item id="35029" name="Dark Eternal Tunic" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers only. -->
 		<set name="icon" val="icon.armor_t813_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -753,7 +753,7 @@
 		</stats>
 	</item>
 	<item id="35033" name="Bloody Eternal Helmet" additionalName="Attack Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -775,7 +775,7 @@
 		</stats>
 	</item>
 	<item id="35034" name="Bloody Eternal Breastplate" additionalName="Attack Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, decreases received P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -801,7 +801,7 @@
 		</stats>
 	</item>
 	<item id="35035" name="Bloody Eternal Gaiters" additionalName="Attack Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -825,7 +825,7 @@
 		</stats>
 	</item>
 	<item id="35036" name="Bloody Eternal Gauntlets" additionalName="Attack Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -848,7 +848,7 @@
 		</stats>
 	</item>
 	<item id="35037" name="Bloody Eternal Boots" additionalName="Attack Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -871,7 +871,7 @@
 		</stats>
 	</item>
 	<item id="35038" name="Bloody Eternal Leather Helmet" additionalName="Assassin Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -893,7 +893,7 @@
 		</stats>
 	</item>
 	<item id="35039" name="Bloody Eternal Leather Armor" additionalName="Assassin Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases chance of receiving P. Critical Attack. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 		</stats>
 	</item>
 	<item id="35040" name="Bloody Eternal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 		</stats>
 	</item>
 	<item id="35041" name="Bloody Eternal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -970,7 +970,7 @@
 		</stats>
 	</item>
 	<item id="35042" name="Bloody Eternal Leather Boots" additionalName="Assassin Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -993,7 +993,7 @@
 		</stats>
 	</item>
 	<item id="35043" name="Bloody Eternal Circlet" additionalName="Magic Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1015,7 +1015,7 @@
 		</stats>
 	</item>
 	<item id="35044" name="Bloody Eternal Tunic" additionalName="Magic Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1043,7 +1043,7 @@
 		</stats>
 	</item>
 	<item id="35045" name="Bloody Eternal Stockings" additionalName="Magic Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1069,7 +1069,7 @@
 		</stats>
 	</item>
 	<item id="35046" name="Bloody Eternal Gloves" additionalName="Magic Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1092,7 +1092,7 @@
 		</stats>
 	</item>
 	<item id="35047" name="Bloody Eternal Shoes" additionalName="Magic Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1115,7 +1115,7 @@
 		</stats>
 	</item>
 	<item id="35048" name="Bloody Eternal Helmet" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Sigel Knights only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Sigel Knights only. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1137,7 +1137,7 @@
 		</stats>
 	</item>
 	<item id="35049" name="Bloody Eternal Breastplate" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Sigel Knights only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, decreases received P. Critical Damage and additionally increases P. Def. Sigel Knights only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1163,7 +1163,7 @@
 		</stats>
 	</item>
 	<item id="35050" name="Bloody Eternal Gaiters" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Sigel Knights only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Sigel Knights only. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1187,7 +1187,7 @@
 		</stats>
 	</item>
 	<item id="35051" name="Bloody Eternal Gauntlets" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Sigel Knights only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Sigel Knights only. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1210,7 +1210,7 @@
 		</stats>
 	</item>
 	<item id="35052" name="Bloody Eternal Boots" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Sigel Knights only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Sigel Knights only. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1233,7 +1233,7 @@
 		</stats>
 	</item>
 	<item id="35053" name="Bloody Eternal Leather Helmet" additionalName="Enchant Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1255,7 +1255,7 @@
 		</stats>
 	</item>
 	<item id="35054" name="Bloody Eternal Leather Armor" additionalName="Enchant Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases chance of receiving P. Critical Attack. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1283,7 +1283,7 @@
 		</stats>
 	</item>
 	<item id="35055" name="Bloody Eternal Leather Leggings" additionalName="Enchant Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1309,7 +1309,7 @@
 		</stats>
 	</item>
 	<item id="35056" name="Bloody Eternal Leather Gloves" additionalName="Enchant Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1332,7 +1332,7 @@
 		</stats>
 	</item>
 	<item id="35057" name="Bloody Eternal Leather Boots" additionalName="Enchant Type / Light" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1355,7 +1355,7 @@
 		</stats>
 	</item>
 	<item id="35058" name="Bloody Eternal Circlet" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1377,7 +1377,7 @@
 		</stats>
 	</item>
 	<item id="35059" name="Bloody Eternal Tunic" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers only. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1405,7 +1405,7 @@
 		</stats>
 	</item>
 	<item id="35060" name="Bloody Eternal Stockings" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1431,7 +1431,7 @@
 		</stats>
 	</item>
 	<item id="35061" name="Bloody Eternal Gloves" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1454,7 +1454,7 @@
 		</stats>
 	</item>
 	<item id="35062" name="Bloody Eternal Shoes" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1498,7 +1498,7 @@
 		</stats>
 	</item>
 	<item id="35064" name="Dark Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. Bestows an attack or defense type set option. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. Bestows an attack or defense type set option. When enchanted to +4, decreases received P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t811_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1611,7 +1611,7 @@
 		</stats>
 	</item>
 	<item id="35070" name="Dark Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. Bestows an assassin or enchant type set option. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases chance of receiving P. Critical Attack. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t812_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1728,7 +1728,7 @@
 		</stats>
 	</item>
 	<item id="35075" name="Dark Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- PvP enchant type item. Decreases damage from a PC by 8%. Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvP enchant type item. Decreases damage from a PC by 8%. Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t813_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1824,7 +1824,7 @@
 		</stats>
 	</item>
 	<item id="35079" name="Bloody Eternal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1846,7 +1846,7 @@
 		</stats>
 	</item>
 	<item id="35080" name="Bloody Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, decreases received P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1872,7 +1872,7 @@
 		</stats>
 	</item>
 	<item id="35081" name="Bloody Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1896,7 +1896,7 @@
 		</stats>
 	</item>
 	<item id="35082" name="Bloody Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1919,7 +1919,7 @@
 		</stats>
 	</item>
 	<item id="35083" name="Bloody Eternal Boots" additionalName="Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
@@ -1942,7 +1942,7 @@
 		</stats>
 	</item>
 	<item id="35085" name="Bloody Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1964,7 +1964,7 @@
 		</stats>
 	</item>
 	<item id="35086" name="Bloody Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, increases P. Evasion, Speed and P. Debuff Resistance, and decreases chance of receiving P. Critical Attack. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1992,7 +1992,7 @@
 		</stats>
 	</item>
 	<item id="35087" name="Bloody Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2018,7 +2018,7 @@
 		</stats>
 	</item>
 	<item id="35088" name="Bloody Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2041,7 +2041,7 @@
 		</stats>
 	</item>
 	<item id="35089" name="Bloody Eternal Leather Boots" additionalName="Light Armor" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2064,7 +2064,7 @@
 		</stats>
 	</item>
 	<item id="35090" name="Bloody Eternal Circlet" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 3%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2086,7 +2086,7 @@
 		</stats>
 	</item>
 	<item id="35091" name="Bloody Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. + 1% and M. Atk. by 2%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 8%. P. Atk. +1% and M. Atk. by 2%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2114,7 +2114,7 @@
 		</stats>
 	</item>
 	<item id="35092" name="Bloody Eternal Stockings" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 5%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2140,7 +2140,7 @@
 		</stats>
 	</item>
 	<item id="35093" name="Bloody Eternal Gloves" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2163,7 +2163,7 @@
 		</stats>
 	</item>
 	<item id="35094" name="Bloody Eternal Shoes" additionalName="Robe" type="Armor">
-		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. + 1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. P. Atk. +1% and M. Atk. by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2186,7 +2186,7 @@
 		</stats>
 	</item>
 	<item id="35095" name="Dark Amaranthine Shaper" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, PvP Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2220,7 +2220,7 @@
 		</stats>
 	</item>
 	<item id="35096" name="Dark Amaranthine Cutter" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, PvP Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2253,7 +2253,7 @@
 		</stats>
 	</item>
 	<item id="35097" name="Dark Amaranthine Slasher" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, PvP Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2286,7 +2286,7 @@
 		</stats>
 	</item>
 	<item id="35098" name="Dark Amaranthine Avenger" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, PvP Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2320,7 +2320,7 @@
 		</stats>
 	</item>
 	<item id="35099" name="Dark Amaranthine Fighter" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, PvP Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15400" toLevel="1" name="Shield of Darkness">
-		<!-- Glory Days confirmed -->
 		<!-- P. Def. greatly increases temporarily due to the power of darkness. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -36,7 +35,6 @@
 		</effects>
 	</skill>
 	<skill id="15402" toLevel="1" name="Wisp's Blessing">
-		<!-- Glory Days confirmed -->
 		<!-- P. Atk. And M. Atk. increases temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -66,7 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="15403" toLevel="1" name="Favor Exchange">
-		<!-- For 15 sec., Speed + 30%. -->
+		<!-- For 15 sec., Speed +30%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
@@ -93,7 +91,6 @@
 		</effects>
 	</skill>
 	<skill id="15404" toLevel="1" name="Unable to Target">
-		<!-- Glory Days confirmed -->
 		<!-- Cannot target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -113,7 +110,6 @@
 		</effects>
 	</skill>
 	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Uses the Master's Blessing buff. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -127,7 +123,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15406" toLevel="1" name="Warrior's Harmony Zone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a zone that provides the Harmony skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -141,7 +136,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15407" toLevel="1" name="Knight's Harmony Zone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a zone that provides the Harmony skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -155,7 +149,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15408" toLevel="1" name="Wizard's Harmony Zone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a zone that provides the Harmony skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -169,7 +162,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15409" toLevel="1" name="Summon Buff Servant">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons the Buff Servant. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -183,7 +175,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15411" toLevel="1" name="Soul Break">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful attack on a target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -218,7 +209,6 @@
 		</effects>
 	</skill>
 	<skill id="15412" toLevel="1" name="Presentation - Toad Cannon Explosion">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
@@ -231,7 +221,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15413" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Giant golem created by Dr. Chaos to excavate the Nornil Ruins. This Detector Golem is equipped with attack functions as well, and is a complete collection of all of Dr. Chaos' technological wonders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -239,7 +228,6 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="15414" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Leader of the Spiculas that activated the Intruder Elimination Project under Mother Nornil's orders. This prototype Spicula is emotionless and almost machine-like. It is currently creating mutations in various machines by spreading the Laido Virus. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -247,8 +235,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="15415" toLevel="1" name="Appearance Modification (No-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a No-grade item. -->
+		<!-- Appearance Modification (No-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -270,8 +257,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15416" toLevel="1" name="Appearance Modification (D-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a D-grade item. -->
+		<!-- Appearance Modification (D-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -293,8 +279,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15417" toLevel="1" name="Appearance Modification (C-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a C-grade item. -->
+		<!-- Appearance Modification (C-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -316,8 +301,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15418" toLevel="1" name="Appearance Modification (B-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a B-grade item. -->
+		<!-- Appearance Modification (B-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -339,8 +323,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15419" toLevel="1" name="Appearance Modification (A-grade)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of an A-grade item. -->
+		<!-- Appearance Modification (A-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -362,19 +345,16 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15420" toLevel="1" name="Before Lind Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="15421" toLevel="1" name="Lind Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="15426" toLevel="1" name="Energy Drain">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>145000</castRange>
@@ -382,7 +362,6 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="15427" toLevel="1" name="Bleed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- AoE Bleeding. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -393,7 +372,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15429" toLevel="1" name="Hold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Aerial Yoke. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -404,7 +382,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15431" toLevel="1" name="Supersonic Blaster">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>42</mpConsume>
@@ -425,7 +402,6 @@
 		</effects>
 	</skill>
 	<skill id="15432" toLevel="1" name="Power Strike">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>80</mpConsume>
@@ -447,7 +423,6 @@
 		</effects>
 	</skill>
 	<skill id="15433" toLevel="1" name="Surrender to Dark">
-		<!-- Glory Days confirmed -->
 		<!-- Dark Attack Resistance decreased, and Holy Attack Resistance increases momentarily. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -483,7 +458,6 @@
 		</effects>
 	</skill>
 	<skill id="15434" toLevel="1" name="Drain HP">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>73</mpConsume>
@@ -508,7 +482,6 @@
 		</effects>
 	</skill>
 	<skill id="15435" toLevel="1" name="Power Strike">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
@@ -530,7 +503,6 @@
 		</effects>
 	</skill>
 	<skill id="15436" toLevel="1" name="Wide Sweep">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>119</mpConsume>
@@ -553,7 +525,6 @@
 		</effects>
 	</skill>
 	<skill id="15437" toLevel="1" name="Sonic Blaster">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>80</mpConsume>
@@ -574,8 +545,7 @@
 		</effects>
 	</skill>
 	<skill id="15438" toLevel="1" name="Hold">
-		<!-- Glory Days confirmed -->
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Inflicted with Hold and unable to move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -604,7 +574,6 @@
 		</effects>
 	</skill>
 	<skill id="15439" toLevel="1" name="Drain HP">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>109</mpConsume>
@@ -629,7 +598,6 @@
 		</effects>
 	</skill>
 	<skill id="15440" toLevel="1" name="Aura Burn">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -651,7 +619,6 @@
 		</effects>
 	</skill>
 	<skill id="15441" toLevel="1" name="Death Bomb">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
@@ -671,8 +638,7 @@
 		</effects>
 	</skill>
 	<skill id="15442" toLevel="1" name="Bleed">
-		<!-- Glory Days confirmed -->
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP decreases from bleeding. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -706,7 +672,6 @@
 		</effects>
 	</skill>
 	<skill id="15443" toLevel="1" name="Drain HP">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>102</mpConsume>
@@ -732,8 +697,7 @@
 		</effects>
 	</skill>
 	<skill id="15444" toLevel="1" name="Bleed">
-		<!-- Glory Days confirmed -->
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP decreases from bleeding. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -768,7 +732,6 @@
 		</effects>
 	</skill>
 	<skill id="15445" toLevel="1" name="Super Strike">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>247</mpConsume>
@@ -789,7 +752,6 @@
 		</effects>
 	</skill>
 	<skill id="15446" toLevel="1" name="Drain HP">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>282</mpConsume>
@@ -816,8 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="15447" toLevel="1" name="Bleed">
-		<!-- Glory Days confirmed -->
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP decreases from bleeding. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -851,7 +812,6 @@
 		</effects>
 	</skill>
 	<skill id="15448" toLevel="1" name="Aura Burn">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>3</mpConsume>
@@ -868,7 +828,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15449" toLevel="1" name="Dagger Storm">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>7</mpConsume>
@@ -892,7 +851,6 @@
 		</effects>
 	</skill>
 	<skill id="15450" toLevel="1" name="Weakness">
-		<!-- Glory Days confirmed -->
 		<!-- P. Atk. decreases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -923,8 +881,7 @@
 		</effects>
 	</skill>
 	<skill id="15451" toLevel="1" name="Bleed">
-		<!-- Glory Days confirmed -->
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- HP decreases from bleeding. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -954,7 +911,6 @@
 		</effects>
 	</skill>
 	<skill id="15452" toLevel="1" name="P. Atk. Decrease">
-		<!-- Glory Days confirmed -->
 		<!-- P. Atk. decreases momentarily. -->
 		<icon>icon.skill1164</icon>
 		<operateType>A2</operateType>
@@ -982,7 +938,6 @@
 		</effects>
 	</skill>
 	<skill id="15453" toLevel="1" name="Vampiric Touch">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>135</mpConsume>
@@ -1005,8 +960,7 @@
 		</effects>
 	</skill>
 	<skill id="15454" toLevel="1" name="Memorable Raid Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., P. Atk. + 5%, M. Atk. + 20%, P. Def. + 5%, M. Def. + 5%, Atk. Spd. + 5%, Casting Spd. + 5%, Max HP/ MP + 5%, and XP/ SP gained through hunting + 30%. -->
+		<!-- For 2 hr., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, and acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1029,7 +983,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15455" toLevel="1" name="Thin Skin">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Received damage increases due to skin sensitivity. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1037,8 +990,7 @@
 		<magicLvl>97</magicLvl>
 	</skill>
 	<skill id="15456" toLevel="1" name="Triol's Voice">
-		<!-- Glory Days confirmed -->
-		<!-- Triol's Voice. -->
+		<!-- Triol's Voice -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
@@ -1060,7 +1012,6 @@
 		</effects>
 	</skill>
 	<skill id="15457" toLevel="2" name="Triol's Reign">
-		<!-- Glory Days confirmed -->
 		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1090,7 +1041,6 @@
 		</effects>
 	</skill>
 	<skill id="15458" toLevel="1" name="Memorable Raid Shield">
-		<!-- Glory Days confirmed -->
 		<!-- Defensive shield cast by the Memorable Raid boss unto itself. For 10 min., it only receives a certain amount of damage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1114,7 +1064,6 @@
 		</effects>
 	</skill>
 	<skill id="15459" toLevel="1" name="Blaze">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>73</mpConsume>
@@ -1138,8 +1087,7 @@
 		</effects>
 	</skill>
 	<skill id="15460" toLevel="1" name="Poison">
-		<!-- Glory Days confirmed -->
-		<!-- HP decreases from poison momentarily. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -1171,7 +1119,6 @@
 		</effects>
 	</skill>
 	<skill id="15461" toLevel="1" name="Drain HP">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>52</mpConsume>
@@ -1196,7 +1143,6 @@
 		</effects>
 	</skill>
 	<skill id="15462" toLevel="1" name="Heal">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>127</mpConsume>
@@ -1218,7 +1164,6 @@
 		</effects>
 	</skill>
 	<skill id="15463" toLevel="1" name="Prominence">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>37</mpConsume>
@@ -1242,7 +1187,6 @@
 		</effects>
 	</skill>
 	<skill id="15464" toLevel="1" name="Death Link">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>37</mpConsume>
@@ -1266,8 +1210,7 @@
 		</effects>
 	</skill>
 	<skill id="15466" toLevel="1" name="Triol's CON Increase">
-		<!-- Glory Days confirmed -->
-		<!-- Max HP + 200%. -->
+		<!-- Max HP +200%. -->
 		<icon>icon.skill1045</icon>
 		<operateType>P</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1283,8 +1226,7 @@
 		</effects>
 	</skill>
 	<skill id="15467" toLevel="1" name="Triol's P. Def. Increase">
-		<!-- Glory Days confirmed -->
-		<!-- P. Def. + 200%. -->
+		<!-- P. Def. +200%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>P</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1298,8 +1240,7 @@
 		</effects>
 	</skill>
 	<skill id="15468" toLevel="1" name="Triol's M. Def. Decrease">
-		<!-- Glory Days confirmed -->
-		<!-- M. Def. - 50%. -->
+		<!-- M. Def. +50%. -->
 		<icon>icon.skill1388</icon>
 		<operateType>P</operateType>
 		<rideState>NONE</rideState>
@@ -1313,8 +1254,7 @@
 		</effects>
 	</skill>
 	<skill id="15469" toLevel="1" name="Rites for Triol">
-		<!-- Updated to Helios -->
-		<!-- For 60 min., HP Recovery Bonus + 20%. -->
+		<!-- For 60 min., HP Recovery Bonus +20%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
@@ -1338,7 +1278,6 @@
 		</effects>
 	</skill>
 	<skill id="15470" toLevel="1" name="Cancel HP Regeneration">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill01703</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -1355,8 +1294,7 @@
 		</effects>
 	</skill>
 	<skill id="15471" toLevel="1" name="Appearance Modification (No-grade) (Raid)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a No-grade item. -->
+		<!-- Appearance Modification (No-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1378,8 +1316,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15472" toLevel="1" name="Appearance Modification (D-grade) (Raid)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a D-grade item. -->
+		<!-- Appearance Modification (D-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1401,8 +1338,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15473" toLevel="1" name="Appearance Modification (C-grade) (Raid)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a C-grade item. -->
+		<!-- Appearance Modification (C-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1424,8 +1360,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15474" toLevel="1" name="Appearance Modification (B-grade) (Raid)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of a B-grade item. -->
+		<!-- Appearance Modification (B-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1447,8 +1382,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15475" toLevel="1" name="Appearance Modification (A-grade) (Raid)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Changed to the appearance of an A-grade item. -->
+		<!-- Appearance Modification (A-grade) (Raid) -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1470,7 +1404,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15476" toLevel="1" name="Spore Spray">
-		<!-- Glory Days confirmed -->
 		<!-- HP and Speed decreased due to spores. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1503,7 +1436,6 @@
 		</effects>
 	</skill>
 	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
-		<!-- Glory Days confirmed -->
 		<!-- P. Def. and M. Def. decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1537,8 +1469,7 @@
 		</effects>
 	</skill>
 	<skill id="15478" toLevel="1" name="Spread Disease">
-		<!-- Glory Days confirmed -->
-		<!-- HP decreases from disease momentarily. -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -1570,7 +1501,6 @@
 		</effects>
 	</skill>
 	<skill id="15479" toLevel="1" name="Vomit Mucus">
-		<!-- Glory Days confirmed -->
 		<!-- P. Accuracy decreased due to mucus. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1597,7 +1527,6 @@
 		</effects>
 	</skill>
 	<skill id="15480" toLevel="1" name="Shoot Poison">
-		<!-- Glory Days confirmed -->
 		<!-- HP decreased due to poison. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1627,7 +1556,6 @@
 		</effects>
 	</skill>
 	<skill id="15481" toLevel="1" name="Shoot Spider Web">
-		<!-- Updated to Helios -->
 		<!-- The web decreases Speed by 10%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1655,14 +1583,12 @@
 		</effects>
 	</skill>
 	<skill id="15482" toLevel="1" name="Presentation - Lind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Event Presentation Skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 	</skill>
 	<skill id="15483" toLevel="1" name="Destroy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1673,7 +1599,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15484" toLevel="1" name="Lightning">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. On a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1685,7 +1610,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15485" toLevel="1" name="Eliminate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1696,7 +1620,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15486" toLevel="1" name="Straight Blow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleed on a single enemy. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1709,7 +1632,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15487" toLevel="1" name="Disarray">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1720,7 +1642,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15488" toLevel="1" name="Penetrate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1731,7 +1652,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15489" toLevel="1" name="Vivacity">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. for 5 sec. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -1741,7 +1661,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15490" toLevel="1" name="Rush">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Rush toward enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1750,7 +1669,6 @@
 		<castRange>600</castRange>
 	</skill>
 	<skill id="15491" toLevel="1" name="Deadly Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. On a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1761,7 +1679,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15492" toLevel="1" name="Immediate Response">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Poison on a single enemy. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -1774,8 +1691,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15493" toLevel="1" name="Charge">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Rush toward enemy. -->
+		<!-- Charges to attack a target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1783,7 +1699,6 @@
 		<castRange>600</castRange>
 	</skill>
 	<skill id="15494" toLevel="1" name="Strategic Response">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Atk. Spd. for 5 sec. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
@@ -1794,7 +1709,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15495" toLevel="1" name="Ingenious Response">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. for 5 sec. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -1804,7 +1718,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15496" toLevel="1" name="Travis' Authority">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- AoE M. Atk. On target's area. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1816,7 +1729,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15497" toLevel="1" name="Summons Royal Guard Member.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons Royal Guard Member. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1825,8 +1737,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15498" toLevel="1" name="Dragon Defender">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Max HP/MP + 10%, and Speed + 10. -->
+		<!-- For 2 hr., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
 		<icon>icon.skill4689</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -1834,7 +1745,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="15499" toLevel="1" name="Energy of Life">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>

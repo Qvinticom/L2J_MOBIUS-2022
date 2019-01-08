@@ -159,7 +159,7 @@
 		</skills>
 	</item>
 	<item id="70408" name="Agathion - Gwanseum Nyang" type="Armor">
-		<!-- Bracelet that summons the image of Gwanseum Nyang  as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
+		<!-- Bracelet that summons the image of Gwanseum Nyang as an Agathion. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
 		<set name="icon" val="BranchSys.icon.br_aga_mercygod_i00" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -528,7 +528,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70426" name="Energy of Protection" additionalName="Event" type="EtcItem">
-		<!-- For 20 min. Max HP / MP +5%, XP / SP +30%. Provides Mental Attack/Paralysis Resistance. <Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
+		<!-- For 20 min. Max HP / MP +5%, XP / SP +30%. Provides Mental Attack/Paralysis Resistance. <Attention> Cannot be stacked with Life Control Tower's and Angel Cat's Blessing. -->
 		<set name="icon" val="icon.general_energy_condense_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -546,7 +546,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70297" min="1" max="1" chance="100" />
+			<item id="70297" min="1" max="1" chance="100" /> <!-- Talisman of Border +4 -->
 		</capsuled_items>
 	</item>
 	<item id="70428" name="Talisman of Border Pack +5" type="EtcItem">
@@ -559,11 +559,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70298" min="1" max="1" chance="100" />
+			<item id="70298" min="1" max="1" chance="100" /> <!-- Talisman of Border +5 -->
 		</capsuled_items>
 	</item>
 	<item id="70429" name="Agathion - Singer and Dancer Pack (7-day)" type="EtcItem">
-		<!-- Double-click to get Agathion - Singer and Dancer (7-day). Cannot be exchanged, dropped, sold or shared within account. Can store in private warehouse. -->
+		<!-- Double-click to get Agathion - Singer & Dancer (7-day). Cannot be exchanged, dropped, sold or shared within account. Can store in private warehouse. -->
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -575,7 +575,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70114" min="1" max="1" chance="100" />
+			<item id="70114" min="1" max="1" chance="100" /> <!-- Agathion - Singer & Dancer - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="70430" name="Shaft with Antharas treasures" type="EtcItem">

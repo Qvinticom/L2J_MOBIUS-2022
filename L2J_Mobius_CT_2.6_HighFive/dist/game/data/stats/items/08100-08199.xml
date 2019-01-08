@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8100" type="EtcItem" name="Destroyed Golem Shards">
+		<!-- Shards obtained from hunting the Golem. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -12,6 +13,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8101" type="EtcItem" name="Dwarf's Favor">
+		<!-- Letter of introduction to Yumita, written by Head Blacksmith Newyear of Schuttgart Village. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -22,6 +24,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8102" type="Weapon" name="Pa'agrian Sword - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 77. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -39,7 +42,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3010-3" />
+		<set name="item_skill" val="3010-3" /> <!-- Special Ability: Focus -->
 		<for>
 			<set stat="pAtk" val="169" />
 			<set stat="mAtk" val="76" />
@@ -50,6 +53,7 @@
 		</for>
 	</item>
 	<item id="8103" type="Weapon" name="Pa'agrian Sword - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -67,7 +71,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-1" />
+		<set name="item_skill" val="3013-1" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="169" />
 			<set stat="mAtk" val="76" />
@@ -78,6 +82,7 @@
 		</for>
 	</item>
 	<item id="8104" type="Weapon" name="Pa'agrian Sword - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from a target when one makes a critical attack. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -107,6 +112,7 @@
 		</for>
 	</item>
 	<item id="8105" type="Weapon" name="Guardian Sword - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 8 HP from a target on a critical attack. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -136,6 +142,7 @@
 		</for>
 	</item>
 	<item id="8106" type="Weapon" name="Guardian Sword - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -153,7 +160,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-1" />
+		<set name="item_skill" val="3013-1" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -164,6 +171,7 @@
 		</for>
 	</item>
 	<item id="8107" type="Weapon" name="Guardian Sword - Critical Bleed">
+		<!-- <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 24% chance during a general critical attack. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -193,6 +201,7 @@
 		</for>
 	</item>
 	<item id="8108" type="Weapon" name="Infernal Master - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -210,7 +219,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3068-2" />
+		<set name="item_skill" val="3068-2" /> <!-- Special Ability: Haste -->
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -221,6 +230,7 @@
 		</for>
 	</item>
 	<item id="8109" type="Weapon" name="Infernal Master - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. Inflicts additional damage on a critical attack by 297. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -238,7 +248,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3067-1" />
+		<set name="item_skill" val="3067-1" /> <!-- Special Ability: Critical Damage -->
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -249,6 +259,7 @@
 		</for>
 	</item>
 	<item id="8110" type="Weapon" name="Infernal Master - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -266,7 +277,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3050-1" />
+		<set name="item_skill" val="3050-1" /> <!-- Special Ability: Focus -->
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -277,6 +288,7 @@
 		</for>
 	</item>
 	<item id="8111" type="Weapon" name="Mysterious Sword - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -294,7 +306,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3047-1" />
+		<set name="item_skill" val="3047-1" /> <!-- Special Ability: Acumen -->
 		<for>
 			<set stat="pAtk" val="85" />
 			<set stat="mAtk" val="81" />
@@ -305,6 +317,7 @@
 		</for>
 	</item>
 	<item id="8112" type="Weapon" name="Mysterious Sword - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15% and M. Atk. by 75. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -322,7 +335,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-1" />
+		<set name="item_skill" val="3077-1" /> <!-- Special Ability: M. Atk. -->
 		<for>
 			<set stat="pAtk" val="85" />
 			<set stat="mAtk" val="81" />
@@ -333,6 +346,7 @@
 		</for>
 	</item>
 	<item id="8113" type="Weapon" name="Mysterious Sword - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Has a 8% chance of casting Curse: Weakness when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -362,6 +376,7 @@
 		</for>
 	</item>
 	<item id="8114" type="Weapon" name="Ecliptic Sword - Empower">
+		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 26. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -379,7 +394,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3076-4" />
+		<set name="item_skill" val="3076-4" /> <!-- Special Ability: Empower -->
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -390,6 +405,7 @@
 		</for>
 	</item>
 	<item id="8115" type="Weapon" name="Ecliptic Sword - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15% and M. Atk. by 112. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -407,7 +423,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-4" />
+		<set name="item_skill" val="3077-4" /> <!-- Special Ability: M. Atk. -->
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -418,6 +434,7 @@
 		</for>
 	</item>
 	<item id="8116" type="Weapon" name="Ecliptic Sword - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -447,6 +464,7 @@
 		</for>
 	</item>
 	<item id="8117" type="Weapon" name="Wizard's Tear - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -464,7 +482,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3047-1" />
+		<set name="item_skill" val="3047-1" /> <!-- Special Ability: Acumen -->
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -475,6 +493,7 @@
 		</for>
 	</item>
 	<item id="8118" type="Weapon" name="Wizard's Tear - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15% and M. Atk. by 139. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -492,7 +511,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-6" />
+		<set name="item_skill" val="3077-6" /> <!-- Special Ability: M. Atk. -->
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -503,6 +522,7 @@
 		</for>
 	</item>
 	<item id="8119" type="Weapon" name="Wizard's Tear - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -520,7 +540,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3048-1" />
+		<set name="item_skill" val="3048-1" /> <!-- Special Ability: Conversion -->
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -531,6 +551,7 @@
 		</for>
 	</item>
 	<item id="8120" type="Weapon" name="Dwarven Hammer - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -547,7 +568,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-1" />
+		<set name="item_skill" val="3013-1" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="190" />
 			<set stat="mAtk" val="83" />
@@ -559,6 +580,7 @@
 		</for>
 	</item>
 	<item id="8121" type="Weapon" name="Dwarven Hammer - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 26. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -575,7 +597,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3012-4" />
+		<set name="item_skill" val="3012-4" /> <!-- Special Ability: Anger -->
 		<for>
 			<set stat="pAtk" val="190" />
 			<set stat="mAtk" val="83" />
@@ -587,6 +609,7 @@
 		</for>
 	</item>
 	<item id="8122" type="Weapon" name="Dwarven Hammer - Critical Bleed">
+		<!-- <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 42% chance during a general critical attack. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -616,6 +639,7 @@
 		</for>
 	</item>
 	<item id="8123" type="Weapon" name="Karik Horn - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 77. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -632,7 +656,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3010-3" />
+		<set name="item_skill" val="3010-3" /> <!-- Special Ability: Focus -->
 		<for>
 			<set stat="pAtk" val="169" />
 			<set stat="mAtk" val="76" />
@@ -644,6 +668,7 @@
 		</for>
 	</item>
 	<item id="8124" type="Weapon" name="Karik Horn - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -660,7 +685,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3036-3" />
+		<set name="item_skill" val="3036-3" /> <!-- Special Ability: Haste -->
 		<for>
 			<set stat="pAtk" val="169" />
 			<set stat="mAtk" val="76" />
@@ -672,6 +697,7 @@
 		</for>
 	</item>
 	<item id="8125" type="Weapon" name="Karik Horn - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from a target when one makes a critical attack. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -701,6 +727,7 @@
 		</for>
 	</item>
 	<item id="8126" type="Weapon" name="Destroyer Hammer - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -717,7 +744,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -729,6 +756,7 @@
 		</for>
 	</item>
 	<item id="8127" type="Weapon" name="Destroyer Hammer - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Sp.d by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -745,7 +773,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3068-2" />
+		<set name="item_skill" val="3068-2" /> <!-- Special Ability: Haste -->
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -757,6 +785,7 @@
 		</for>
 	</item>
 	<item id="8128" type="Weapon" name="Destroyer Hammer - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 18 HP from a target on a critical attack. Increases the amount of damage one inflicts during PvP. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -775,7 +804,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="24" />
 		<set name="oncrit_skill" val="3059-1" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="259" />
 			<set stat="mAtk" val="107" />
@@ -787,6 +816,7 @@
 		</for>
 	</item>
 	<item id="8129" type="Weapon" name="Ice Storm Hammer - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 68. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -803,7 +833,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3010-5" />
+		<set name="item_skill" val="3010-5" /> <!-- Special Ability: Focus -->
 		<for>
 			<set stat="pAtk" val="213" />
 			<set stat="mAtk" val="91" />
@@ -815,6 +845,7 @@
 		</for>
 	</item>
 	<item id="8130" type="Weapon" name="Ice Storm Hammer - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases Max HP 15% and increases P. Atk. by 28. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -831,7 +862,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3012-5" />
+		<set name="item_skill" val="3012-5" /> <!-- Special Ability: Anger -->
 		<for>
 			<set stat="pAtk" val="213" />
 			<set stat="mAtk" val="91" />
@@ -843,6 +874,7 @@
 		</for>
 	</item>
 	<item id="8131" type="Weapon" name="Ice Storm Hammer - Critical Bleed">
+		<!-- <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 41% chance during a general critical attack. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -872,6 +904,7 @@
 		</for>
 	</item>
 	<item id="8132" type="Weapon" name="Star Buster - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -888,7 +921,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-1" />
+		<set name="item_skill" val="3013-1" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -900,6 +933,7 @@
 		</for>
 	</item>
 	<item id="8133" type="Weapon" name="Star Buster - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -916,7 +950,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3036-6" />
+		<set name="item_skill" val="3036-6" /> <!-- Special Ability: Haste -->
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -928,6 +962,7 @@
 		</for>
 	</item>
 	<item id="8134" type="Weapon" name="Star Buster - Rsk. Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 99 when the character's HP falls to 60% or below. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -944,7 +979,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3027-6" />
+		<set name="item_skill" val="3027-6" /> <!-- Special Ability: Rsk. Focus -->
 		<for>
 			<set stat="pAtk" val="236" />
 			<set stat="mAtk" val="99" />
@@ -956,6 +991,7 @@
 		</for>
 	</item>
 	<item id="8135" type="Weapon" name="Doom Crusher - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -972,7 +1008,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<for>
 			<set stat="pAtk" val="282" />
 			<set stat="mAtk" val="114" />
@@ -984,6 +1020,7 @@
 		</for>
 	</item>
 	<item id="8136" type="Weapon" name="Doom Crusher - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 11% and damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1000,7 +1037,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3057-2" />
+		<set name="item_skill" val="3057-2" /> <!-- Special Ability: Anger -->
 		<for>
 			<set stat="pAtk" val="282" />
 			<set stat="mAtk" val="114" />
@@ -1012,6 +1049,7 @@
 		</for>
 	</item>
 	<item id="8137" type="Weapon" name="Doom Crusher - Rsk. Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or lower. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1028,7 +1066,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3056-2" />
+		<set name="item_skill" val="3056-2" /> <!-- Special Ability: Rsk. Haste -->
 		<for>
 			<set stat="pAtk" val="282" />
 			<set stat="mAtk" val="114" />
@@ -1040,6 +1078,7 @@
 		</for>
 	</item>
 	<item id="8138" type="Weapon" name="Ecliptic Axe - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1057,7 +1096,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3048-1" />
+		<set name="item_skill" val="3048-1" /> <!-- Special Ability: Conversion -->
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -1069,6 +1108,7 @@
 		</for>
 	</item>
 	<item id="8139" type="Weapon" name="Ecliptic Axe - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15%, and M. Atk. by 112. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1086,7 +1126,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-4" />
+		<set name="item_skill" val="3077-4" /> <!-- Special Ability: M. Atk. -->
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -1098,6 +1138,7 @@
 		</for>
 	</item>
 	<item id="8140" type="Weapon" name="Ecliptic Axe - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1128,6 +1169,7 @@
 		</for>
 	</item>
 	<item id="8141" type="Weapon" name="Spell Breaker - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1145,7 +1187,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3047-1" />
+		<set name="item_skill" val="3047-1" /> <!-- Special Ability: Acumen -->
 		<for>
 			<set stat="pAtk" val="140" />
 			<set stat="mAtk" val="122" />
@@ -1157,6 +1199,7 @@
 		</for>
 	</item>
 	<item id="8142" type="Weapon" name="Spell Breaker - Mental Shield">
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1187,6 +1230,7 @@
 		</for>
 	</item>
 	<item id="8143" type="Weapon" name="Spell Breaker - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1217,6 +1261,7 @@
 		</for>
 	</item>
 	<item id="8144" type="Weapon" name="Kaim Vanul's Bones - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1234,7 +1279,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3014-1" />
+		<set name="item_skill" val="3014-1" /> <!-- Special Ability: Mana Up -->
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -1246,6 +1291,7 @@
 		</for>
 	</item>
 	<item id="8145" type="Weapon" name="Kaim Vanul's Bones - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1276,6 +1322,7 @@
 		</for>
 	</item>
 	<item id="8146" type="Weapon" name="Kaim Vanul's Bones - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1293,7 +1340,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3048-1" />
+		<set name="item_skill" val="3048-1" /> <!-- Special Ability: Conversion -->
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -1305,6 +1352,7 @@
 		</for>
 	</item>
 	<item id="8147" type="Weapon" name="Spiritual Eye - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1322,7 +1370,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3014-2" />
+		<set name="item_skill" val="3014-2" /> <!-- Special Ability: Mana Up -->
 		<for>
 			<set stat="pAtk" val="170" />
 			<set stat="mAtk" val="143" />
@@ -1334,6 +1382,7 @@
 		</for>
 	</item>
 	<item id="8148" type="Weapon" name="Spiritual Eye - Magic Poison">
+		<!-- <Soul Crystal Enhancement>. Has a 8% chance of casting Curse: Poison when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1353,7 +1402,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="8" />
 		<set name="onmagic_skill" val="1168-6" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="170" />
 			<set stat="mAtk" val="143" />
@@ -1365,6 +1414,7 @@
 		</for>
 	</item>
 	<item id="8149" type="Weapon" name="Spiritual Eye - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1382,7 +1432,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3047-2" />
+		<set name="item_skill" val="3047-2" /> <!-- Special Ability: Acumen -->
 		<for>
 			<set stat="pAtk" val="170" />
 			<set stat="mAtk" val="143" />
@@ -1394,6 +1444,7 @@
 		</for>
 	</item>
 	<item id="8150" type="Weapon" name="Flaming Dragon Skull - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1411,7 +1462,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3047-2" />
+		<set name="item_skill" val="3047-2" /> <!-- Special Ability: Acumen -->
 		<for>
 			<set stat="pAtk" val="186" />
 			<set stat="mAtk" val="152" />
@@ -1423,6 +1474,7 @@
 		</for>
 	</item>
 	<item id="8151" type="Weapon" name="Flaming Dragon Skull - M. Atk.">
+		<!-- <Soul Crystal Enhancement>. Increases MP Consumption by 15%, M. Atk. by 167 and damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1440,7 +1492,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3073-2" />
+		<set name="item_skill" val="3073-2" /> <!-- Special Ability: M. Atk. -->
 		<for>
 			<set stat="pAtk" val="186" />
 			<set stat="mAtk" val="152" />
@@ -1452,6 +1504,7 @@
 		</for>
 	</item>
 	<item id="8152" type="Weapon" name="Flaming Dragon Skull - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1471,7 +1524,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="10" />
 		<set name="onmagic_skill" val="3074-2" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="186" />
 			<set stat="mAtk" val="152" />
@@ -1483,6 +1536,7 @@
 		</for>
 	</item>
 	<item id="8153" type="EtcItem" name="Adventurer's Guide Book">
+		<!-- An essential read for adventurers. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="default_action" val="SHOW_ADVENTURER_GUIDE_BOOK" />
 		<set name="immediate_effect" val="true" />
@@ -1490,38 +1544,43 @@
 		<set name="price" val="2000" />
 	</item>
 	<item id="8154" type="EtcItem" name="Herb of Life">
+		<!-- Recovers a certain amount of HP immediately. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2244-1" />
+		<set name="item_skill" val="2244-1" /> <!-- Herb of Life -->
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="8155" type="EtcItem" name="Herb of Mana">
+		<!-- Recovers a certain amount of MP immediately. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2245-1" />
+		<set name="item_skill" val="2245-1" /> <!-- Herb of Mana -->
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="8156" type="EtcItem" name="Herb of Power">
+		<!-- Increases P. Atk. for a certain period of time. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2246-1" />
+		<set name="item_skill" val="2246-1" /> <!-- Herb of Power -->
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="8157" type="EtcItem" name="Herb of Magic">
+		<!-- Instantly increases M. Atk. for a certain period of time. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2247-1" />
+		<set name="item_skill" val="2247-1" /> <!-- Herb of Magic -->
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="8158" type="EtcItem" name="Memento Mori (C-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1529,6 +1588,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8159" type="EtcItem" name="Memento Mori (B-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1536,6 +1596,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8160" type="EtcItem" name="Memento Mori (A-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_a_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1543,6 +1604,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8161" type="EtcItem" name="Dragon Heart (C-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1550,6 +1612,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8162" type="EtcItem" name="Dragon Heart (B-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1557,6 +1620,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8163" type="EtcItem" name="Dragon Heart (A-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_b_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1564,6 +1628,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8164" type="EtcItem" name="Earth Egg (C-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1571,6 +1636,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8165" type="EtcItem" name="Earth Egg (B-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1578,6 +1644,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8166" type="EtcItem" name="Earth Egg (A-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_c_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1585,6 +1652,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8167" type="EtcItem" name="Nonliving Nucleus (C-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1592,6 +1660,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8168" type="EtcItem" name="Nonliving Nucleus (B-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1599,6 +1668,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8169" type="EtcItem" name="Nonliving Nucleus (A-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_d_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1606,6 +1676,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8170" type="EtcItem" name="Angelic Essence (C-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1613,6 +1684,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8171" type="EtcItem" name="Angelic Essence (B-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1620,6 +1692,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8172" type="EtcItem" name="Angelic Essence (A-Grade)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_e_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1627,18 +1700,21 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8173" type="EtcItem" name="Cradle of Creation (C-Grade) (Not In Use)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8174" type="EtcItem" name="Cradle of Creation (B-Grade) (Not In Use)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8175" type="EtcItem" name="Cradle of Creation">
+		<!-- Win this item by gambling and exchange it for an A-Grade item. -->
 		<set name="icon" val="icon.etc_raid_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1646,6 +1722,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8176" type="EtcItem" name="Destruction Tombstone">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="icon" val="icon.etc_raid_f_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1653,6 +1730,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8177" type="Armor" name="Raid Challenger's Circlet">
+		<!-- Beginner's Raid Challenger Circlet. -->
 		<set name="icon" val="icon.accessory_raid_challenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1662,6 +1740,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8178" type="Armor" name="Raid Adventurer's Circlet">
+		<!-- Intermediate Raid Adventurer Circlet -->
 		<set name="icon" val="icon.accessory_raid_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1671,6 +1750,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8179" type="Armor" name="Raid Master's Circlet">
+		<!-- Advanced Raid Master Circlet. -->
 		<set name="icon" val="icon.accessory_raid_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1680,6 +1760,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8180" type="Armor" name="Circlet of Ice Fairy Sirra">
+		<!-- Circlet obtained by attacking the Ice Fairy Sirra. -->
 		<set name="icon" val="icon.accessory_ice_queen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1689,6 +1770,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8181" type="Armor" name="Academy Circlet">
+		<!-- Circlet awarded to graduates of the Academy. When equipped by a level 40~75 character, upon death, the Exp. penalty decreases by 50%. Can be repurchased through Blacksmith Pinter of Gludio. -->
 		<set name="icon" val="icon.accessory_academy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1702,6 +1784,7 @@
 		<set name="equip_condition" val="{{ec_academy;1}}" />
 	</item>
 	<item id="8182" type="Armor" name="Circlet of Rune">
+		<!-- Rose Circlet. Can be worn by the lord of Rune Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1712,7 +1795,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3633-2" />
+		<set name="item_skill" val="3633-2" /> <!-- Residential Shock Immunity -->
 		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{8}}}" />
 		<cond msgId="1518">
 			<and>
@@ -1723,6 +1806,7 @@
 		</cond>
 	</item>
 	<item id="8183" type="Armor" name="Circlet of Schuttgart">
+		<!-- Hammer and Torch Circlet. Can be worn by the lord of Schuttgart Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1733,7 +1817,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3633-1" />
+		<set name="item_skill" val="3633-1" /> <!-- Residential Shock Immunity -->
 		<set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{9}}}" />
 		<cond msgId="1518">
 			<and>
@@ -1744,6 +1828,7 @@
 		</cond>
 	</item>
 	<item id="8184" type="Armor" name="Party Hat">
+		<!-- A funky hair accessory which uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1753,6 +1838,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8185" type="Armor" name="Feathered Hat">
+		<!-- A wide-brimmed hat with a feather. Uses 2 accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1762,6 +1848,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8186" type="Armor" name="Artisan's Goggles">
+		<!-- Eye protection that uses 2 accessory slots. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1771,6 +1858,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="8187" type="Armor" name="Demon Horns">
+		<!-- A hair accessory for the 2006 Halloween Event. -->
 		<set name="icon" val="icon.accessory_hair_cornu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1779,6 +1867,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="8188" type="Armor" name="Little Angel Wings">
+		<!-- A wing-shaped hair accessory. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1788,6 +1877,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8189" type="Armor" name="Fairy Antennae">
+		<!-- Cute antennae hair accessory with stars. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1797,6 +1887,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8190" type="Weapon" name="Demonic Sword Zariche">
+		<!-- A deadly and powerful magical sword that was once wielded by the devil Bremnon himself. It is always thirsty for blood. -->
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FIST" />
@@ -1813,7 +1904,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="3603-1" />
+		<set name="item_skill" val="3603-1" /> <!-- Demon Sword Zariche -->
 		<for>
 			<set stat="pAtk" val="361" />
 			<set stat="mAtk" val="137" />
@@ -1824,6 +1915,7 @@
 		</for>
 	</item>
 	<item id="8191" type="Armor" name="Necklace of Frintezza">
+		<!-- MP +42, increase Resistance to sleep/paralysis/stun by 15%, increase sleep/paralysis/stun attack chance by 15%, increase Resistance to poison/bleed by 25%, increase poison/bleed attack chance by 25%, decrease in skill re-use delay, increase Damage Shield effect, and increase Resistance to Dark attacks. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1834,7 +1926,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3450000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3604-1" />
+		<set name="item_skill" val="3604-1" /> <!-- Frintezza's Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
@@ -1842,6 +1934,7 @@
 		</for>
 	</item>
 	<item id="8192" type="EtcItem" name="Soul Breaking Arrow">
+		<!-- Double-clicking the arrow temporarily pauses Frintezza's musical performance. It cannot be dropped and is deleted upon entering the Last Imperial Tomb. -->
 		<set name="icon" val="icon.etc_destory_soul_arrow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="GOLD" />
@@ -1850,9 +1943,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2234-1" />
+		<set name="item_skill" val="2234-1" /> <!-- Soul Breaking Arrow -->
 	</item>
 	<item id="8193" type="EtcItem" name="Fisherman's Potion - Green">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a green fish (level 1~3 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1862,9 +1956,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-1" />
+		<set name="item_skill" val="2274-1" /> <!-- Fisherman's Potion   Green -->
 	</item>
 	<item id="8194" type="EtcItem" name="Fisherman's Potion - Jade">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a jade fish (level 4~6 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_jade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1874,9 +1969,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-2" />
+		<set name="item_skill" val="2274-2" /> <!-- Fisherman's Potion   Green -->
 	</item>
 	<item id="8195" type="EtcItem" name="Fisherman's Potion - Blue">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a blue fish (level 7~9 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1886,9 +1982,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-3" />
+		<set name="item_skill" val="2274-3" /> <!-- Fisherman's Potion   Green -->
 	</item>
 	<item id="8196" type="EtcItem" name="Fisherman's Potion - Yellow">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a yellow fish (level 10~12 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1898,9 +1995,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-4" />
+		<set name="item_skill" val="2274-4" /> <!-- Fisherman's Potion   Green -->
 	</item>
 	<item id="8197" type="EtcItem" name="Fisherman's Potion - Orange">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch an orange fish (level 13~15 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_orange_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1910,9 +2008,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-5" />
+		<set name="item_skill" val="2274-5" /> <!-- Fisherman's Potion   Green -->
 	</item>
 	<item id="8198" type="EtcItem" name="Fisherman's Potion - Purple">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a purple fish (level 16~18 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1922,9 +2021,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-6" />
+		<set name="item_skill" val="2274-6" /> <!-- Fisherman's Potion   Green -->
 	</item>
 	<item id="8199" type="EtcItem" name="Fisherman's Potion - Red">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a red fish (level 19~21 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="icon" val="icon.etc_oblivion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1934,6 +2034,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2274-7" />
+		<set name="item_skill" val="2274-7" /> <!-- Fisherman's Potion   Green -->
 	</item>
 </list>

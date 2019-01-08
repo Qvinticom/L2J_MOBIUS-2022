@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5000" levels="1" name="Alfred - Super Strike">
-		<!-- CT2.5 retail confirmed -->
 		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
@@ -17,7 +16,6 @@
 		</for>
 	</skill>
 	<skill id="5001" levels="1" name="Alfred - Life Drain">
-		<!-- CT2.5 retail confirmed -->
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -35,7 +33,6 @@
 		</for>
 	</skill>
 	<skill id="5002" levels="1" name="Giselle - Vampiric Rage">
-		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -54,7 +51,6 @@
 		</for>
 	</skill>
 	<skill id="5003" levels="1" name="Giselle - Tempest">
-		<!-- CT2.5 retail confirmed -->
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -74,8 +70,7 @@
 		</for>
 	</skill>
 	<skill id="5004" levels="1" name="Dimensional Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="FLY_AWAY" />
@@ -101,8 +96,7 @@
 		</for>
 	</skill>
 	<skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Frintezza is in temporary state of paralysis. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -119,8 +113,7 @@
 		</for>
 	</skill>
 	<skill id="5006" levels="1" name="Frintezza's Melody">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A general performance. -->
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="34000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -130,8 +123,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5007" levels="5" name="Frintezza's Songs">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Music to soothe the soul. -->
 		<table name="#hitTime"> 32000 32000 32000 31000 35000 </table>
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="#hitTime" />
@@ -142,8 +134,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5008" levels="5" name="Frintezza's Songs">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Music that makes you feel oh so good inside. -->
 		<table name="#abnormalTypes"> NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN </table>
 		<table name="#activateRate"> 0 0 0 10 10 </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
@@ -191,8 +182,7 @@
 		</for>
 	</skill>
 	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A portrait ghost that can make physical attacks. -->
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -210,8 +200,7 @@
 		</for>
 	</skill>
 	<skill id="5010" levels="1" name="Frintezza's Ghostly Mage">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A portrait ghost that can make magical attacks. -->
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -230,8 +219,7 @@
 		</for>
 	</skill>
 	<skill id="5011" levels="1" name="Frintezza's Bomber Ghost">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A portrait ghost who can create a suicide explosion. -->
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -248,8 +236,7 @@
 		</for>
 	</skill>
 	<skill id="5012" levels="1" name="Breath of Scarlet">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Instantly immobilizes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -273,8 +260,7 @@
 		</for>
 	</skill>
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Portrait ghost drains HP. -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -293,8 +279,7 @@
 		</for>
 	</skill>
 	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon 1 general attack. -->
 		<table name="#baseCritRate"> 6 8 10 </table>
 		<table name="#magicLvl"> 85 85 90 </table>
 		<table name="#power"> 15835 19096 16176 </table>
@@ -318,8 +303,7 @@
 		</for>
 	</skill>
 	<skill id="5015" levels="6" name="Frintezza's Daemon Charge">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon 1 charge. -->
 		<table name="#coolTime"> 0 0 0 1500 1500 1500 </table>
 		<table name="#fanRange"> 0,0,400,150 0,0,500,170 0,0,700,200 0,0,400,150 0,0,500,170 0,0,700,200 </table>
 		<table name="#power"> 48761 52970 68074 48761 52970 68074 </table>
@@ -348,8 +332,7 @@
 		</for>
 	</skill>
 	<skill id="5016" levels="1" name="Yoke of Scarlet">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Instantly immobilizes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -375,8 +358,7 @@
 		</for>
 	</skill>
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon 1 metamorphosis. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="BIG_BODY" />
@@ -400,8 +382,7 @@
 		</for>
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon 2 magic field. -->
 		<table name="#power"> 607 754 </table>
 		<table name="#skillRadius"> 700 1000 </table>
 		<set name="affectRange" val="#skillRadius" />
@@ -420,8 +401,7 @@
 		</for>
 	</skill>
 	<skill id="5019" levels="1" name="Frintezza's Daemon Drain">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon 3 HP drain range. -->
 		<set name="affectRange" val="1000" />
 		<set name="coolTime" val="4000" />
 		<set name="effectPoint" val="-100" />
@@ -455,6 +435,7 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
+		<!-- Makes sacred attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -473,6 +454,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5022" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -491,6 +473,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5023" levels="12" name="Hold">
+		<!-- Temporarily holds and immobilizes target. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -509,6 +492,7 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="5024" levels="12" name="Decrease Atk. Spd.">
+		<!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -527,90 +511,91 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5025" levels="1" name="Raid Boss - Level 30">
-		<!-- Confirmed CT2.5 -->
+		<!-- His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5026" levels="1" name="Raid Boss - Level 39">
-		<!-- Confirmed CT2.5 -->
+		<!-- Once a human magician with an almost Dwarven interest in machinery, he heard about Titan Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5027" levels="1" name="Raid Boss - Level 37">
-		<!-- Confirmed CT2.5 -->
+		<!-- This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5028" levels="1" name="Raid Boss - Level 53">
-		<!-- Confirmed CT2.5 -->
+		<!-- Originally worshiped Pa'agrio, but he is a shaman who tries to rule Orcs and Elmoaden by using the evil power of Kasha. They are extending their territory by using evil spirits, insects and Ragna Orcs who follow them. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5029" levels="1" name="Raid Boss - Level 52">
-		<!-- Confirmed CT2.5 -->
+		<!-- This powerful Chaos Golem was made from Starstones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal the blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the Horrifying Golem Army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is world domination. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5030" levels="1" name="Raid Boss - Level 59">
-		<!-- Confirmed CT2.5 -->
+		<!-- This captain secretly loved the Princess Felicia. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Freya, he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5031" levels="1" name="Raid Boss - Level 80">
-		<!-- Confirmed CT2.5 -->
+		<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5032" levels="1" name="Raid Boss - Level 80">
-		<!-- Confirmed CT2.5 -->
+		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5033" levels="1" name="Raid Boss - Level 80">
-		<!-- Confirmed CT2.5 -->
+		<!-- This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite her claims of nobility, much of her background is still unknown. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5034" levels="1" name="Raid Boss - Level 73">
-		<!-- Confirmed CT2.5 -->
+		<!-- This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos's imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Titan and isn't sure why he is still there. Even Daimon the White-Eyed cannot harm him in the Wall of Argos. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5035" levels="1" name="Raid Boss - Level 76">
-		<!-- Confirmed CT2.5 -->
+		<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5036" levels="1" name="Raid Boss - Level 60">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Ice Fairy who came to Freya after Princess Felicia was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5037" levels="3" name="Decrease Casting Spd">
+		<!-- Instantly reduces Casting Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
@@ -627,7 +612,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5038" levels="16" name="Summon PVP Penalty">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#pvpDmg"> 0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7 0.5 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -649,7 +633,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5040" levels="12" name="NPC - Healing Potion">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#hot"> 7 12 18 27 37 46 55 58 61 64 66 67 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -677,13 +660,13 @@
 		</for>
 	</skill>
 	<skill id="5041" levels="1" name="Charm of Courage">
+		<!-- If you die on the battlefield during a castle siege/fortress siege/hideout siege, you can resurrect from the same stop. -->
 		<set name="icon" val="icon.skill5041" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5042" levels="12" name="NPC Dispel Bomb">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<table name="#power"> 52 78 112 155 203 255 305 328 348 364 377 378 </table>
@@ -703,7 +686,6 @@
 		</for>
 	</skill>
 	<skill id="5043" levels="12" name="NPC Super Sonic Blaster">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
@@ -723,7 +705,6 @@
 		</for>
 	</skill>
 	<skill id="5044" levels="3" name="NPC Ultimate Defense">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 2 </table>
 		<table name="#abnormalTime"> 30 30 5 </table>
 		<table name="#magicLvl"> 20 46 1 </table>
@@ -830,7 +811,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5051" levels="12" name="Castle Self AE Fire">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
 		<table name="#mpInitialConsume"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
@@ -853,7 +833,6 @@
 		</for>
 	</skill>
 	<skill id="5052" levels="12" name="Castle Long AE Fire">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
 		<table name="#mpInitialConsume"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
@@ -917,7 +896,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5056" levels="12" name="Castle DD Wind">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 5 8 11 14 18 22 26 28 29 30 31 31 </table>
 		<table name="#mpInitialConsume"> 2 2 3 4 5 6 7 7 8 8 8 8 </table>
@@ -1052,6 +1030,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5068" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1070,6 +1049,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5069" levels="12" name="Decrease Atk. Spd.">
+		<!-- Instantly reduces Atk. Spd. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -1088,6 +1068,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5070" levels="12" name="Decrease Casting Spd">
+		<!-- Instantly reduces Casting Spd. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
@@ -1106,6 +1087,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5071" levels="12" name="Decrease P. Atk.">
+		<!-- Instantly reduces P. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
@@ -1124,6 +1106,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5072" levels="12" name="Decrease M. Atk.">
+		<!-- Instantly reduces M. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MA_DOWN" />
@@ -1159,6 +1142,7 @@
 		</for>
 	</skill>
 	<skill id="5074" levels="1" name="The Victor of War">
+		<!-- Maximum CP is increased. -->
 		<set name="icon" val="icon.skill5074" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1170,6 +1154,7 @@
 		</for>
 	</skill>
 	<skill id="5075" levels="1" name="The Vanquished of War">
+		<!-- Maximum CP is decreased. -->
 		<set name="icon" val="icon.skill5075" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1181,6 +1166,7 @@
 		</for>
 	</skill>
 	<skill id="5076" levels="15" name="Death Penalty">
+		<!-- Combat ability is decreased due to death. Effect 1. -->
 		<table name="#accCombatrEvas"> 5 9 13 17 21 25 29 33 37 40 42 44 46 48 50 </table>
 		<table name="#icons"> icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c </table>
 		<table name="#pAtkpAtkSpdmAtkmAtkSpd"> 0.9 0.81 0.73 0.66 0.6 0.55 0.51 0.47 0.44 0.41 0.38 0.35 0.32 0.28 0.25 </table>
@@ -1213,7 +1199,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5078" levels="1" name="Frintezza Critical Power">
-		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1224,7 +1209,6 @@
 		</for>
 	</skill>
 	<skill id="5079" levels="1" name="NPC Focused Haste">
-		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -1247,7 +1231,6 @@
 		</for>
 	</skill>
 	<skill id="5080" levels="1" name="NPC Mighty Haste">
-		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -1270,6 +1253,7 @@
 		</for>
 	</skill>
 	<skill id="5081" levels="4" name="Silence">
+		<!-- Blocks the ability to use physical skills. -->
 		<table name="#mpConsume"> 75 75 75 20 </table>
 		<table name="#power"> 1715 3540 7306 8602 </table>
 		<set name="abnormalLvl" val="0" />
@@ -1313,6 +1297,7 @@
 		</for>
 	</skill>
 	<skill id="5083" levels="4" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#mpConsume"> 93 93 93 5 </table>
 		<table name="#power"> 1715 3540 7305 8602 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1372,7 +1357,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="5085" levels="1" name="Anesthesia">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily stunned and immobilized. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ANESTHESIA" />
@@ -1395,7 +1380,7 @@
 		</for>
 	</skill>
 	<skill id="5086" levels="1" name="Deadly Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CRITICAL_POISON" />
@@ -1422,7 +1407,6 @@
 		</for>
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
-		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 1.9 2.8 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#pDef"> 1 2.8 </table>
@@ -1441,7 +1425,6 @@
 		</for>
 	</skill>
 	<skill id="5088" levels="1" name="Signal">
-		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
@@ -1451,7 +1434,6 @@
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
@@ -1462,7 +1444,6 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5090" levels="1" name="Sailren Production">
-		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
@@ -1471,7 +1452,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5091" levels="1" name="Sailren Production 2">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1479,8 +1459,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5092" levels="1" name="Antharas Terror">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
+		<!-- Temporarily overcome with fear and mindlessly fleeing. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -1506,8 +1485,6 @@
 		</for>
 	</skill>
 	<skill id="5093" levels="1" name="Antharas Meteor">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1" />
@@ -1527,7 +1504,6 @@
 		</for>
 	</skill>
 	<skill id="5094" levels="1" name="Antharas Subordinate Suicide ">
-		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="250" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1544,7 +1520,6 @@
 		</for>
 	</skill>
 	<skill id="5095" levels="1" name="Antharas Subordinate Melee Attack">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
@@ -1560,7 +1535,6 @@
 		</for>
 	</skill>
 	<skill id="5096" levels="1" name="Antharas Subordinate Remote Attack">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -1576,7 +1550,6 @@
 		</for>
 	</skill>
 	<skill id="5097" levels="1" name="Antharas Subordinate Suicide (Narrow Range)">
-		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -1593,7 +1566,6 @@
 		</for>
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
-		<!-- TODO: Implement me! -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#abnormalVisualEffects"> SEIZURE1 SEIZURE2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />

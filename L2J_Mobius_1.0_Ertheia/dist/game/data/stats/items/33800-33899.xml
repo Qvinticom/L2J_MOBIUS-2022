@@ -23,7 +23,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="33802" name="Mentee Certificate Pack" type="EtcItem">
-		<!-- Dimensional Item Pack Contains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->
+		<!-- Dimensional Item Pack. Contains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1388,7 +1388,7 @@
 		</skills>
 	</item>
 	<item id="33875" name="Requiem Shaper" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Guidance, Haste, or Focus. When enchanted to + 4, physical Critical Damage increases. -->
+		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. When enchanted to + 4, physical Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1423,7 +1423,7 @@
 		</stats>
 	</item>
 	<item id="33876" name="Requiem Cutter" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Haste, Focus, or Health. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- Bestows one of the following functions: Haste, Focus, or Health. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1457,7 +1457,7 @@
 		</stats>
 	</item>
 	<item id="33877" name="Requiem Slasher" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Focus, Damage Up, or Haste. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1491,7 +1491,7 @@
 		</stats>
 	</item>
 	<item id="33878" name="Requiem Avenger" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Haste, Critical Damage, or Focus. When enchanted to + 4, physical Critical Damage increases. -->
+		<!-- Bestows one of the following functions: Haste, Critical Damage, or Focus. When enchanted to + 4, physical Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1526,7 +1526,7 @@
 		</stats>
 	</item>
 	<item id="33879" name="Requiem Fighter" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Focus, Damage Up, or Haste. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1561,7 +1561,7 @@
 		</stats>
 	</item>
 	<item id="33880" name="Requiem Stormer" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�HP Drain, Guidance, or Damage Up. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1597,7 +1597,7 @@
 		</stats>
 	</item>
 	<item id="33881" name="Requiem Thrower" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Damage Up, Focus, or Long Blow. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1633,7 +1633,7 @@
 		</stats>
 	</item>
 	<item id="33882" name="Requiem Shooter" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Focus, Critical Slow, or Haste. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1669,7 +1669,7 @@
 		</stats>
 	</item>
 	<item id="33883" name="Requiem Buster" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Acumen, Magic Hold, or Mana Up. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1703,7 +1703,7 @@
 		</stats>
 	</item>
 	<item id="33884" name="Requiem Caster" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Empower, Acumen, or Magic Hold. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1738,7 +1738,7 @@
 		</stats>
 	</item>
 	<item id="33885" name="Requiem Retributer" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�MP Regeneration, Acumen, or Empower. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1774,7 +1774,7 @@
 		</stats>
 	</item>
 	<item id="33886" name="Requiem Dualsword" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Haste, Damage Up, or Health. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1808,7 +1808,7 @@
 		</stats>
 	</item>
 	<item id="33887" name="Requiem Dual Dagger" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Damage Up, Focus, or Guidance. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1843,7 +1843,7 @@
 		</stats>
 	</item>
 	<item id="33888" name="Requiem Dual Blunt Weapon" additionalName="Event" type="Weapon">
-		<!-- Bestows one of the following functions:�Focus, Guidance, or Damage Up. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

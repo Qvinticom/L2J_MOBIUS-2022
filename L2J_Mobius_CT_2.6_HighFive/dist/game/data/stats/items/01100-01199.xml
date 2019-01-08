@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1100" type="Armor" name="Cotton Tunic">
+		<!-- A tunic made of tough cotton. -->
 		<set name="icon" val="icon.armor_t50_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -35,6 +36,7 @@
 		</for>
 	</item>
 	<item id="1102" type="Armor" name="Tunic of Magic">
+		<!-- A tunic, comfortably designed for mages. -->
 		<set name="icon" val="icon.armor_t58_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -52,6 +54,7 @@
 		</for>
 	</item>
 	<item id="1103" type="Armor" name="Cotton Stockings">
+		<!-- A pair of pants made of tough cotton. -->
 		<set name="icon" val="icon.armor_t50_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -69,6 +72,7 @@
 		</for>
 	</item>
 	<item id="1104" type="Armor" name="Stockings of Devotion">
+		<!-- Part of the devotion set. -->
 		<set name="icon" val="icon.armor_t55_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -86,6 +90,7 @@
 		</for>
 	</item>
 	<item id="1105" type="Armor" name="Stockings of Magic">
+		<!-- A pair of pants, comfortably designed for mages. -->
 		<set name="icon" val="icon.armor_t58_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -103,6 +108,7 @@
 		</for>
 	</item>
 	<item id="1106" type="EtcItem" name="Norman's Letter">
+		<!-- First half year financial summary of the Iron Gate guild: balance sheet and profit and loss statement of the Gludio region guild. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -114,6 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1107" type="EtcItem" name="Bone Fragment">
+		<!-- Bone fragments of the undead skeletons. Collect ten of these and go back to Magister Harne. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -191,6 +198,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1114" type="EtcItem" name="Orc Amulet">
+		<!-- An amulet possessed by Kaboo Orcs for magic purposes. Take it to Sentinel Rayen. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -202,6 +210,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1115" type="EtcItem" name="Orc's Necklace">
+		<!-- A bone necklace possessed by Kaboo Orc fighters for magic purposes. Take it to Sentinel Rayen. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -213,6 +222,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1116" type="EtcItem" name="Orc Amulet">
+		<!-- An amulet that the balor Orcs possess for magical purposes. Take this to Sentry Kayleen. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -224,6 +234,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1117" type="EtcItem" name="Orc's Necklace">
+		<!-- A bone necklace that the balor Orc fighters carry for magical purposes. Take this to Sentry Kayleen. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -235,6 +246,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1118" type="EtcItem" name="Spore Sac">
+		<!-- A sac containing spore pollen. Give 10 spore sacs to Herbiel. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -406,6 +418,7 @@
 		</for>
 	</item>
 	<item id="1130" type="EtcItem" name="Cobendell's Medicine">
+		<!-- A fever medicine concocted by Master Cobendell. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -417,6 +430,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1131" type="EtcItem" name="Cobendell's Medicine">
+		<!-- A fever medicine concocted by Master Cobendell. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -428,6 +442,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1132" type="EtcItem" name="Cobendell's Medicine">
+		<!-- A fever medicine concocted by Master Cobendell. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -439,6 +454,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1133" type="EtcItem" name="Cobendell's Medicine">
+		<!-- A fever medicine concocted by Master Cobendell. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -450,6 +466,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1134" type="EtcItem" name="Cobendell's Medicine">
+		<!-- A fever medicine concocted by Master Cobendell. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -461,6 +478,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1135" type="EtcItem" name="Spiritbound Wand">
+		<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into the wand and take it to Grand Magister Gallint. -->
 		<set name="icon" val="icon.weapon_club_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -472,6 +490,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1136" type="EtcItem" name="Spiritbound Wand">
+		<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into the wand and take it to Grand Magister Gallint. -->
 		<set name="icon" val="icon.weapon_club_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -483,6 +502,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1137" type="EtcItem" name="Spiritbound Wand">
+		<!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into the wand and take it to Grand Magister Gallint. -->
 		<set name="icon" val="icon.weapon_club_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -494,6 +514,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1138" type="EtcItem" name="Auron's Letter">
+		<!-- A letter written by Master Auron. Take this to Trader Simplon in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -505,6 +526,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1139" type="EtcItem" name="Warrior Guild Mark">
+		<!-- A mark that shows that player is a member of the Warrior Guild. Take this to the Ruins of Agony and kill tracker skeletons. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -516,6 +538,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1140" type="EtcItem" name="Rusted Bronze Sword">
+		<!-- An old bronze sword used by tracker skeletons. Collect ten and give them to Trader Simplon. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -527,6 +550,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1141" type="EtcItem" name="Rusted Bronze Sword">
+		<!-- An old and rusted bronze sword given by Trader Simplon, who said it was a 'Sword of Trial'. Take this to Master Auron. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -536,6 +560,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1142" type="Weapon" name="Rusted Bronze Sword">
+		<!-- An old and rusty bronze sword called the 'Sword of Trial'. Use this to hunt Venomous Spiders and Arachnid Trackers. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -560,6 +585,7 @@
 		</for>
 	</item>
 	<item id="1143" type="EtcItem" name="Simplon's Letter">
+		<!-- A letter written by Trader Simplon. Take this to Master Auron. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -571,6 +597,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1144" type="EtcItem" name="Venomous Spider's Leg">
+		<!-- A cut leg of a dead Venomous Spider or an Arachnid Tracker. Collect twenty of these and take to Master Auron. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -582,6 +609,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1145" type="EtcItem" name="Medallion of Warrior">
+		<!-- Take this medallion and go to the Grand Master of the Warrior's Guild to change your occupation to a Warrior. -->
 		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -651,6 +679,7 @@
 		</for>
 	</item>
 	<item id="1150" type="EtcItem" name="Spellbook: Wind Strike">
+		<!-- Spellbook needed to learn Wind Strike. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -659,6 +688,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1151" type="EtcItem" name="Spellbook: Self Heal">
+		<!-- Spellbook needed to learn Self Heal. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -667,6 +697,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1152" type="EtcItem" name="Spellbook: Heal">
+		<!-- Spellbook needed to learn Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -675,6 +706,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1153" type="EtcItem" name="Jenna's Letter">
+		<!-- A letter from Sentry Jenna to Master Harant. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -686,6 +718,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1154" type="EtcItem" name="Sentry Blade">
+		<!-- An adamantite sword newly issued to sentries. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -697,6 +730,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1155" type="EtcItem" name="Sentry Blade">
+		<!-- An adamantite sword newly issued to sentries. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -708,6 +742,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1156" type="EtcItem" name="Sentry Blade">
+		<!-- An adamantite sword newly issued to sentries. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -719,6 +754,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1157" type="EtcItem" name="Old Bronze Sword">
+		<!-- A bronze sword used in the past by sentries. Recover this and take it to Sentry Jenna. -->
 		<set name="icon" val="icon.weapon_crimson_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -730,6 +766,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1158" type="EtcItem" name="Bone Fragment">
+		<!-- A bone fragment obtained from the undead skeletons. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -741,6 +778,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1159" type="EtcItem" name="Elf Skull">
+		<!-- The skull of an undead Elf. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -752,6 +790,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1160" type="EtcItem" name="Dark Bezoar">
+		<!-- Gather 13 dark bezoars and take them to Sentry Nelsya. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -763,6 +802,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1161" type="EtcItem" name="Sword of Ritual">
+		<!-- Take this sword to the Grand Master of the Fighter Guild to change your occupation to a Knight. -->
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -774,6 +814,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1162" type="EtcItem" name="Coin of Lords">
+		<!-- A gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -785,6 +826,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1163" type="EtcItem" name="Coin of Lords">
+		<!-- A gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -796,6 +838,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1164" type="EtcItem" name="Coin of Lords">
+		<!-- A gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -807,6 +850,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1165" type="EtcItem" name="Coin of Lords">
+		<!-- A gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -818,6 +862,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1166" type="EtcItem" name="Coin of Lords">
+		<!-- A gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -829,6 +874,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1167" type="EtcItem" name="Coin of Lords">
+		<!-- A gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -840,6 +886,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1168" type="EtcItem" name="Gludio Guard's 1st Badge">
+		<!-- A mark that proves guard membership. As Captain Bathis requested, hunt Bugbear Raiders. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -851,6 +898,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1169" type="EtcItem" name="Bugbear Necklace">
+		<!-- A necklace worn by Bugbears for incantation purposes. Collect ten of these and visit Captain Bathis. -->
 		<set name="icon" val="icon.etc_totem_necklace_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -862,6 +910,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1170" type="EtcItem" name="Einhasad's 1st Temple Badge">
+		<!-- As High Priest Raymond requested, go to the Ruins of Despair, defeat the departed spirits of priests, and collect 12 Einhasad crucifixes. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -873,6 +922,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1171" type="EtcItem" name="Einhasad's Crucifix">
+		<!-- A holy symbol of Einhasad, the goddess of light. Collect 12 of these and go to High Priest Raymond. -->
 		<set name="icon" val="icon.accessary_necklace_of_knowledge_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -884,6 +934,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1172" type="EtcItem" name="Gludio Guard's 2nd Badge">
+		<!-- The mark that distinguishes guard membership. As Captain Bezique requested, hunt giant spiders. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -895,6 +946,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1173" type="EtcItem" name="Venomous Spider's Leg">
+		<!-- A severed leg of a dead Venomous Spider. Collect twenty of these and go to Captain Bezique. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -906,6 +958,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1174" type="EtcItem" name="Einhasad's 2nd Temple Badge">
+		<!-- As High Priest Levian requested, kill Langk lizardmen and collect the proof. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -917,6 +970,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1175" type="EtcItem" name="Lizardman's Totem">
+		<!-- A small sculpture Langk lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
 		<set name="icon" val="icon.etc_totem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -928,6 +982,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1176" type="EtcItem" name="Gludio Guard's 3rd Badge">
+		<!-- A mark that proves guard membership. As Captain Gilbert requested, hunt giant spiders. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -939,6 +994,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1177" type="EtcItem" name="Giant Spider's Husk">
+		<!-- The husk of a giant spider that you peeled off. Collect twenty of these and take them to Captain Gilbert. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -950,6 +1006,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1178" type="EtcItem" name="Einhasad's 3rd Temple Badge">
+		<!-- As High Priest Biotin requested, hunt silent horrors in the Elven Ruins. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -961,6 +1018,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1179" type="EtcItem" name="Skull of Silent Horror">
+		<!-- The skull of a long-dead Elf. Collect 10 and take them to High Priest Biotin. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -972,6 +1030,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1180" type="EtcItem" name="Bezique's Letter">
+		<!-- Captain Bezique's letter to Neti. Find Neti in the Village of Gludin and give her the letter. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -983,6 +1042,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1181" type="Weapon" name="Neti's Bow">
+		<!-- A favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the skeletons and spartoi of the Ruins of Agony to gather bone pieces. -->
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1009,6 +1069,7 @@
 		</for>
 	</item>
 	<item id="1182" type="Weapon" name="Neti's Dagger">
+		<!-- Neti used this dagger when she was a Treasure Hunter. Use it when hunting the skeletons and spartoi of the Ruins of Agony to gather bone pieces. -->
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1033,6 +1094,7 @@
 		</for>
 	</item>
 	<item id="1183" type="EtcItem" name="Spartoi's Bones">
+		<!-- Undead bone pieces. Collect 10 and take them to Neti. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1044,6 +1106,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1184" type="EtcItem" name="Horseshoe of Light">
+		<!-- A proof you received after passing Neti's test. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1055,6 +1118,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1185" type="EtcItem" name="Most Wanted List">
+		<!-- It is written that whoever does away with the Cat's Eye bandits and recovers the stolen goods will be rewarded. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1066,6 +1130,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1186" type="EtcItem" name="Stolen Jewelry">
+		<!-- A fair amount of jewelry the Cat's Eye bandits stole. You must take them to Captain Bezique. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1077,6 +1142,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1187" type="EtcItem" name="Stolen Tomes">
+		<!-- A rare tome the Cat's Eye bandits stole. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1088,6 +1154,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1188" type="EtcItem" name="Stolen Ring">
+		<!-- An expensive necklace that the Cat's Eye bandits have stolen. You must take it back to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1099,6 +1166,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1189" type="EtcItem" name="Stolen Necklace">
+		<!-- An expensive necklace the Cat's Eye bandits stole. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_necklace_of_blessing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1110,6 +1178,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1190" type="EtcItem" name="Bezique's Recommendation">
+		<!-- Take this medallion to the Grand Masters of the Fighter Guild to change your occupation to a Rogue. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1121,6 +1190,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1191" type="EtcItem" name="1st Letter of Order">
+		<!-- A certificate of forbidden book collection given by Priest Zigaunt. Carry this around and collect all the forbidden books. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1132,6 +1202,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1192" type="EtcItem" name="2nd Letter of Order">
+		<!-- A certificate that proves that you represent the religious body. This certificate is given by Priest Zigaunt. Take this to Lionel for covenant. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1143,6 +1214,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1193" type="EtcItem" name="Lionel's Book">
+		<!-- The last book of Lioniel. Hand this book to Grand Magister Gallint in the Einhovant School of Magic. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1154,6 +1226,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1194" type="EtcItem" name="Book of Vivyan">
+		<!-- A forbidden book Simplon sold to Vivyan. Collect five forbidden books and take them to Priest Zigaunt. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1165,6 +1238,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1195" type="EtcItem" name="Book of Simplon">
+		<!-- The rest of Simplon's forbidden books. Collect 5 forbidden books and take them to Priest Zigaunt. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1176,6 +1250,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1196" type="EtcItem" name="Book of Praga">
+		<!-- A forbidden book Simplon sold to Praga. Collect 5 forbidden books and take them to Priest Zigaunt. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1187,6 +1262,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1197" type="EtcItem" name="Certificate of Gallint">
+		<!-- A certificate that Gallint gives for safekeeping of forbidden books. Give to Lionel and receive covenant. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1198,6 +1274,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1198" type="EtcItem" name="Pendant of Mother">
+		<!-- The pendant of his mother that Guard Praga lost in the ruins. Take this to Guard Praga and receive a forbidden book. -->
 		<set name="icon" val="icon.accessary_blessed_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1209,6 +1286,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1199" type="EtcItem" name="Necklace of Mother">
+		<!-- A necklace chain where a pendant used to hang. Recover the pendant from the zombies in the Ruins of Agony to make it complete. -->
 		<set name="icon" val="icon.accessary_blessed_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

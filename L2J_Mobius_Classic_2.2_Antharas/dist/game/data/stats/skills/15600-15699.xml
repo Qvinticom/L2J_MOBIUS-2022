@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15600" toLevel="1" name="Lindvior's Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Powerful physical attack on target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -12,8 +11,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15601" toLevel="1" name="Lindvior's Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Powerful physical attack on target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -23,7 +21,6 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15603" toLevel="1" name="Disrupt Recharge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Disrupts recharge. -->
 		<icon>icon.skill14444</icon>
 		<operateType>A2</operateType>
@@ -32,7 +29,6 @@
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="15604" toLevel="1" name="Disrupt Recharge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Disrupts recharge. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -40,7 +36,6 @@
 		<castRange>1800</castRange>
 	</skill>
 	<skill id="15605" toLevel="1" name="Recharge Possible">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recharge possible. -->
 		<icon>icon.skill0005</icon>
 		<operateType>A2</operateType>
@@ -48,7 +43,6 @@
 		<hitTime>25000</hitTime>
 	</skill>
 	<skill id="15606" toLevel="1" name="Recharge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recharge. -->
 		<icon>icon.skill1449</icon>
 		<operateType>A1</operateType>
@@ -58,7 +52,6 @@
 		<coolTime>200</coolTime>
 	</skill>
 	<skill id="15607" toLevel="1" name="Depleted">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Energy depleted. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -70,7 +63,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15608" toLevel="7" name="Power Strike">
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Powerful physical attack on target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -98,8 +91,7 @@
 		</effects>
 	</skill>
 	<skill id="15609" toLevel="7" name="Decrease P. Def.">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Def. - 30%. -->
+		<!-- Decreases P. Def. by $s1. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -109,7 +101,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15610" toLevel="7" name="Spinning Slasher">
-		<!-- Powerful attack on nearby enemies. -->
+		<!-- Powerful attack on surrounding area. -->
 		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
 		<hitTime>6000</hitTime>
@@ -135,8 +127,7 @@
 		</effects>
 	</skill>
 	<skill id="15611" toLevel="7" name="Tornado Slasher">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful attack on nearby enemies. -->
+		<!-- Powerful attack on surrounding area. -->
 		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
 		<hitTime>6000</hitTime>
@@ -162,8 +153,7 @@
 		</effects>
 	</skill>
 	<skill id="15612" toLevel="7" name="Thunder Storm">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Stuns for 2 sec. -->
+		<!-- Stuns for $s1. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -173,7 +163,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15613" toLevel="7" name="Ranged Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful M. Atk. on enemy. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
@@ -184,8 +173,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15614" toLevel="7" name="Decrease M. Def.">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Def. - 20%. -->
+		<!-- Decreases M. Def. by $s1. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -195,8 +183,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15615" toLevel="7" name="Increases P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk./ M. Atk. + 10%. -->
+		<!-- P. Atk./ M. Atk. +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -205,7 +192,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15616" toLevel="7" name="Aggression">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Provokes target into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -216,8 +202,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15617" toLevel="7" name="Power Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Powerful physical attack on target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -226,7 +211,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15618" toLevel="7" name="Power Strike">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful P. Atk. on the target and decreases P. Def. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -237,8 +221,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15620" toLevel="7" name="Power Shot">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful P. Atk. on enemy. -->
+		<!-- Powerful physical attack on target. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -247,8 +230,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15621" toLevel="7" name="Stun Shot">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks and Stuns target for 2 sec. -->
+		<!-- Attacks and Stuns target for $s1. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -259,7 +241,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15622" toLevel="7" name="Ranged Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful M. Atk. on enemy. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
@@ -270,7 +251,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15623" toLevel="7" name="Push Up">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Aerial Yoke. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -282,7 +262,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15624" toLevel="7" name="Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Monster Heal. -->
 		<icon>icon.skill1401</icon>
 		<operateType>A1</operateType>
@@ -292,25 +271,21 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15626" toLevel="1" name="Raid Boss (Lv. 86)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A mutated version of the Dartanions at the Altar of Evil. It is bigger and stronger. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15627" toLevel="1" name="Raid Boss (Lv. 93)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Captain of the Garden Patrols. He fights with the monsters in the garden. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15628" toLevel="1" name="Raid Boss (Lv. 95)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A lesser member of the Spicula bosses, assigned to protect the Isle of Souls from the invading golems. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15629" toLevel="1" name="Nerva's Mental Blow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful attack on a single enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -320,7 +295,6 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15630" toLevel="1" name="Stun Trap">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilizes target and nearby enemies. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -331,7 +305,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15632" toLevel="1" name="Replenish Energy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recharge. -->
 		<icon>icon.skill14444</icon>
 		<operateType>A1</operateType>
@@ -341,25 +314,21 @@
 		<coolTime>200</coolTime>
 	</skill>
 	<skill id="15633" toLevel="1" name="Raid Boss (Lv. 99)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Originally a half-orc hero, but now turned to a demon due to excessive dark energy. Unlike the other half-orcs who retained their mind, this one is dictated only by primal instinct. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15634" toLevel="1" name="Raid Boss (Lv. 99)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A demon summoned from the dark spirit world by Triol , one of the 4 great demons, when he used his blood. Often called the Putrefier due to the ability to putrefy and merge corpses. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15635" toLevel="1" name="Raid Boss (Lv. 99)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A noble orc hero of royal blood, and a symbolic figure for the Nerva race that wishes to construct an orc kingdom. He has begun to take action to construct the orc kingdom after seeing the illusion made by Triol (Pa'agrio's phantom). -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15636" toLevel="1" name="Dimensional Teleport">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -367,7 +336,6 @@
 		<hitTime>3300</hitTime>
 	</skill>
 	<skill id="15637" toLevel="1" name="Dimensional Space">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You are in the Dimensional Space. You can either restart the game or go through Mermoden in the village to return. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -375,13 +343,11 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="15638" toLevel="1" name="Lindvior">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Very strong against Wind, and vulnerable to Earth. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15639" toLevel="1" name="Mysterious Fear">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- In Fear. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -391,21 +357,18 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15640" toLevel="1" name="Antharas' Explosive Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Antharas' rage has reached its limit, distorting even the very land Antharas is standing on. -->
 		<icon>icon.skill5086</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15641" toLevel="1" name="Valakas' Explosive Rage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Valakas' rage has reached its limit, distorting even the very land Valakas is standing on. -->
 		<icon>icon.skill5086</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15654" toLevel="1" name="Master's Blessing - GM's Courage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always by your side. Increases P. Atk. toward monsters by 100% for 5 minutes. -->
 		<icon>icon.skill5661</icon>
 		<operateType>A2</operateType>
@@ -414,7 +377,6 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="15655" toLevel="1" name="Master's Blessing - GM's Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always by your side. Becomes invincible for 5 minutes. -->
 		<icon>icon.skill5662</icon>
 		<operateType>A2</operateType>
@@ -423,7 +385,6 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="15656" toLevel="1" name="Power Strike">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful physical attack on target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -433,8 +394,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15657" toLevel="1" name="Decrease P. Def.">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Def. - 30%. -->
+		<!-- P. Def. -30%. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -444,8 +404,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15658" toLevel="1" name="Spinning Slasher">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful attack on nearby enemies. -->
+		<!-- Powerful attack on surrounding area. -->
 		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
 		<hitTime>6000</hitTime>
@@ -453,8 +412,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15659" toLevel="1" name="Tornado Slasher">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful attack on nearby enemies. -->
+		<!-- Powerful attack on surrounding area. -->
 		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
 		<hitTime>6000</hitTime>
@@ -462,7 +420,6 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15660" toLevel="1" name="Thunder Storm">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns for 2 sec. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -472,7 +429,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15661" toLevel="1" name="Dark Buster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks frontal enemies with the power of darkness. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
@@ -483,8 +439,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15662" toLevel="1" name="Decrease M. Def.">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- M. Def. - 20%. -->
+		<!-- M. Def. -20%. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -494,8 +449,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15663" toLevel="1" name="Increases P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. and M. Atk. + 10%. -->
+		<!-- P. Atk. and M. Atk. +10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -504,7 +458,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15664" toLevel="1" name="Push Up">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Floats the target into the air and stops him from moving for awhile. -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
@@ -515,168 +468,163 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15665" toLevel="1" name="Presentation - Anakim / Lilith">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 	</skill>
 	<skill id="15666" toLevel="5" name="HP Increase 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP +20%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15667" toLevel="5" name="P. Atk. Increase 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. +10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15668" toLevel="5" name="M. Atk Increase 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. +10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15669" toLevel="5" name="P. Def. Increase 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +20%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15670" toLevel="5" name="P. Def. Increase 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Def. +20%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15671" toLevel="5" name="Atk. Spd. Increase 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Atk. Spd. is increased by 10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15672" toLevel="5" name="Physical Attack Resistance 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. Resistance +10 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15673" toLevel="5" name="Terminal State">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 5 seconds HP doesn t drop below 1. Stuns the target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15674" toLevel="1" name="Mass Shackling">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15675" toLevel="1" name="Tribunal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and decreases the enemy's Critical Rate by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15676" toLevel="1" name="Shield Stun">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Makes an attack with a shield, stunning the target for $s1. Requires a shield. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15677" toLevel="1" name="Bloody Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15678" toLevel="1" name="Sayha's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15679" toLevel="1" name="Dandy's Precise Swing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Throws back the target and inflicts heavy physical damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15680" toLevel="1" name="Roa's Hi-tech Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts great damage by magic, for 5 sec. Speed, Atk. Spd., Casting Spd. -50%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15681" toLevel="2" name="Arena Administrator's Location">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15682" toLevel="3" name="Orc Thunder">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pulls the target into your reach. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15683" toLevel="3" name="Front Drain">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15684" toLevel="3" name="Arena Administrator's Recovery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Restores HP/ MP by 30%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15685" toLevel="3" name="Heal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Restores 10% of target's HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15686" toLevel="3" name="Multi-healing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Restores 10% of allies' HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15687" toLevel="1" name="Promise of Vengeance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Wrath caused by the death of an ally. Restores 50% of HP/ MP. P. Atk. and M. Atk., Speed, Casting Spd. +30% for 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15688" toLevel="1" name="Chain Snake">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pulls the targets to your character. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15689" toLevel="1" name="Mass Chain Snake">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pulls nearby enemies to your character. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15690" toLevel="2" name="Fearsome Defensive Strike">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15691" toLevel="1" name="Defense Break">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15692" toLevel="1" name="Smashing Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inflicts heavy physical damage on enemies surrounding your character. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15693" toLevel="1" name="Giant Bombardier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Knocks Down enemies in the working range. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15694" toLevel="1" name="Mighty Giant Bombardier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Stuns enemies in the working range. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15695" toLevel="15" name="(Hex)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Decreases the enemy's P. Def. by $s2 for $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15696" toLevel="1" name="Thunder Stun">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Stunned and unable to move momentarily. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15697" toLevel="1" name="Giant Bombardier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Knocks Down enemies in the working range. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

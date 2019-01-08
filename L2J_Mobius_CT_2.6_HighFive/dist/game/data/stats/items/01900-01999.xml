@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1900" type="EtcItem" name="Enchanted Necklace Chain">
+		<!-- A key material that Dwarves use to make an Enchanted Necklace. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -10,6 +11,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1901" type="EtcItem" name="Tiger's Eye Earring Stone">
+		<!-- A key material that Dwarves use to make Tiger's Eye. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -19,6 +21,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1902" type="EtcItem" name="Elven Earring Beads">
+		<!-- A key material that Dwarves use to make the Elven Earring. Can be sold in any shop. -->
 		<set name="icon" val="BranchSys2.icon.etc_elvenearing_beads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -28,6 +31,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1903" type="EtcItem" name="Elven Ring Piece">
+		<!-- A key material that Dwarves use to make the Elven Ring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -37,6 +41,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1904" type="EtcItem" name="Elven Necklace Beads">
+		<!-- A key material that Dwarves use to make the Elven Necklace. Can be sold in any shop. -->
 		<set name="icon" val="BranchSys2.icon.etc_elvennecklace_beads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -46,6 +51,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1905" type="EtcItem" name="Omen Beast's Eye Earring Gemstone">
+		<!-- A key material that Dwarves use to make the Omen Beast's Eye. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -55,6 +61,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1906" type="EtcItem" name="Mithril Ring Wire">
+		<!-- A key material that Dwarves use to make a Mithril Ring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -64,6 +71,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1907" type="EtcItem" name="Necklace of Darkness Gem">
+		<!-- A key material that Dwarves use to make a Necklace of Darkness. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -73,6 +81,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1908" type="EtcItem" name="Moonstone Earring Wire">
+		<!-- A key material that Dwarves use to make a Moonstone Earring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -82,6 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1909" type="EtcItem" name="Aquastone Ring Wire">
+		<!-- A key material that Dwarves use to make the Aquastone Ring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -91,6 +101,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1910" type="EtcItem" name="Aquastone Necklace Chain">
+		<!-- A key material that Dwarves use to make the Aquastone Necklace. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -100,6 +111,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1911" type="EtcItem" name="Earring of Protection Gemstone">
+		<!-- A key material that Dwarves use to make the Earring of Protection. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -109,6 +121,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1912" type="EtcItem" name="Ring of Protection Gemstone">
+		<!-- A key material that Dwarves use to make the Ring of Protection. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -118,6 +131,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1913" type="EtcItem" name="Necklace of Protection Gemstone">
+		<!-- A key material that Dwarves use to make the Necklace of Protection. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -127,6 +141,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1914" type="EtcItem" name="Earring of Seal Gemstone">
+		<!-- A key material that Dwarves use to make an Earring of Seal. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -136,6 +151,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1915" type="EtcItem" name="Ring of Ages Gemstone">
+		<!-- A key material that Dwarves use to make a Ring of Ages. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -145,6 +161,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1916" type="EtcItem" name="Necklace of Mermaid Teardrop">
+		<!-- A key material that Dwarves use to make the Necklace of Mermaid. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -154,6 +171,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1917" type="EtcItem" name="Sage's Necklace Chain">
+		<!-- A key material that Dwarves use to make a Sage's Necklace. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -163,6 +181,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1918" type="EtcItem" name="Nassen's Earring Gemstone">
+		<!-- A key material that Dwarves use to make Nassen's Earring. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -172,6 +191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1919" type="EtcItem" name="Ring of Sage Gemstone">
+		<!-- A key material that Dwarves use to make a Ring of Sage. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -181,6 +201,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1920" type="EtcItem" name="Necklace of Seal Chain">
+		<!-- A key material that Dwarves use to make a Necklace of Seal. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -190,6 +211,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1921" type="EtcItem" name="Leather Shoes Texture">
+		<!-- A key material that Dwarves use to make Leather Shoes. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -199,6 +221,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1922" type="EtcItem" name="Leather Tunic Pattern">
+		<!-- A key material that Dwarves use to make a Leather Tunic. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -208,6 +231,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1923" type="EtcItem" name="Leather Stockings Pattern">
+		<!-- A key material that Dwarves use to make Leather Stockings. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -217,6 +241,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1924" type="EtcItem" name="Leather Helmet Design">
+		<!-- A key material that Dwarves use to make a Leather Helmet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -226,6 +251,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1925" type="EtcItem" name="Leather Gloves Lining">
+		<!-- A key material that Dwarves use to make Leather Gloves. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -235,6 +261,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1926" type="EtcItem" name="Piece Bone Breastplate Fragment">
+		<!-- A key material that Dwarves use to make a Piece Bone Breastplate. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -244,6 +271,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1927" type="EtcItem" name="Hard Leather Shirt Pattern">
+		<!-- A key material that Dwarves use to make the Hard Leather Shirt. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -253,6 +281,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1928" type="EtcItem" name="Piece Bone Gaiters Fragment">
+		<!-- A key material that Dwarves use to make Piece Bone Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -262,6 +291,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1929" type="EtcItem" name="Hard Leather Gaiters Material">
+		<!-- A key material that Dwarves use to make Hard Leather Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -271,6 +301,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1930" type="EtcItem" name="Boot Lining">
+		<!-- A key material that Dwarves use to make Boots. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -280,6 +311,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1931" type="EtcItem" name="Leather Boots Lining">
+		<!-- A key material that Dwarves use to make Leather Boots. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -289,6 +321,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1932" type="EtcItem" name="Bone Helmet Design">
+		<!-- A key material that Dwarves use to make a Bone Helmet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -298,6 +331,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1933" type="EtcItem" name="Dark Stockings Fabric">
+		<!-- A key material that Dwarves use to make Dark Stockings. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -307,6 +341,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1934" type="EtcItem" name="Crafted Leather Gloves Lining">
+		<!-- A key material that Dwarves use to make Crafted Leather Gloves. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -316,6 +351,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1935" type="EtcItem" name="Scale Mail Fragment">
+		<!-- A key material that Dwarves use to make Scale Mail. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -325,6 +361,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1936" type="EtcItem" name="White Tunic Pattern">
+		<!-- A key material that Dwarves use to make a White Tunic. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -334,6 +371,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1937" type="EtcItem" name="Scale Gaiters Fragment">
+		<!-- A key material that Dwarves use to make Scale Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -343,6 +381,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1938" type="EtcItem" name="Mithril Banded Mail Material">
+		<!-- A key material that Dwarves use to make Mithril Banded Mail. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -352,6 +391,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1939" type="EtcItem" name="Mithril Banded Gaiters Material">
+		<!-- A key material that Dwarves use to make Mithril Banded Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -361,6 +401,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1940" type="EtcItem" name="Iron Boots Design">
+		<!-- A key material that Dwarves use to make Iron Boots. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -370,6 +411,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1941" type="EtcItem" name="Brigandine Temper">
+		<!-- A key material that Dwarves use to make Brigandine. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -379,6 +421,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1942" type="EtcItem" name="Manticore Skin Shirt Texture">
+		<!-- A key material that Dwarves use to make a Manticor Skin Shirt. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -388,6 +431,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1943" type="EtcItem" name="Manticore Skin Gaiters Pattern">
+		<!-- A key material that Dwarves use to make Manticor Skin Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -397,6 +441,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1944" type="EtcItem" name="Mithril Tunic Fabric">
+		<!-- A key material that Dwarves use to make a Mithril Tunic. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -406,6 +451,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1945" type="EtcItem" name="Mithril Stocking Design">
+		<!-- A key material that Dwarves use to make Mithril Stockings. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -415,6 +461,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1946" type="EtcItem" name="Rip Gauntlets Pattern">
+		<!-- A key material that Dwarves use to make Rip Gauntlets. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -424,6 +471,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1947" type="EtcItem" name="Kite Shield Fragment">
+		<!-- A key material that Dwarves use to make a Kite Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -433,6 +481,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1948" type="EtcItem" name="Boots of Power Pattern">
+		<!-- A key material that Dwarves use to make the Boots of Power. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -442,6 +491,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1949" type="EtcItem" name="Mithril Gloves Design">
+		<!-- A key material that Dwarves use to make Mithril Gloves. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -451,6 +501,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1950" type="EtcItem" name="Half Plate Temper">
+		<!-- A key material that Dwarves use to make Half Plate. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -460,6 +511,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1951" type="EtcItem" name="Plate Gaiters Part">
+		<!-- A key material that Dwarves use to make Plate Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -469,6 +521,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1952" type="EtcItem" name="Salamander Skin Mail Texture">
+		<!-- A key material that Dwarves use to make Salamander Skin Mail. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -478,6 +531,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1953" type="EtcItem" name="Sage's Rag Lining">
+		<!-- A key material that Dwarves use to make a Sage's Rag. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -487,6 +541,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1954" type="EtcItem" name="Karmian Stocking Design">
+		<!-- A key material that Dwarves use to make Karmian Stockings. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -496,6 +551,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1955" type="EtcItem" name="Chain Helmet Design">
+		<!-- A key material that Dwarves use to make a Chain Helmet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -505,6 +561,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1956" type="EtcItem" name="Square Shield Fragment">
+		<!-- A key material that Dwarves use to make a Square Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -514,6 +571,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1957" type="EtcItem" name="Assault Boots Part">
+		<!-- A key material that Dwarves use to make Assault Boots. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -523,6 +581,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1958" type="EtcItem" name="Reinforced Mithril Boots Design">
+		<!-- A key material that Dwarves use to make Reinforced Mithril Boots. This can be sold at shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -532,6 +591,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1959" type="EtcItem" name="Chain Mail Shirt Material">
+		<!-- A key material that Dwarves use to make a Chain Mail Shirt. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -541,6 +601,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1960" type="EtcItem" name="Chain Gaiters Part">
+		<!-- A key material that Dwarves use to make Chain Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -550,6 +611,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1961" type="EtcItem" name="Mithril Shirt Fabric">
+		<!-- A key material that Dwarves use to make a Mithril Shirt. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -559,6 +621,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1962" type="EtcItem" name="Karmian Tunic Pattern">
+		<!-- A key material that Dwarves use to make a Karmian Tunic. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -568,6 +631,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1963" type="EtcItem" name="Ogre Power Gauntlets Part">
+		<!-- A key material that Dwarves use to make Ogre Power Gauntlets. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -577,6 +641,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1964" type="EtcItem" name="Eldarake Temper">
+		<!-- A key material that Dwarves use to make an Eldarake. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -586,6 +651,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1965" type="EtcItem" name="Metal Plate Helmet Material">
+		<!-- A key material that Dwarves use to make a metal Plate Helmet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -595,6 +661,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1966" type="EtcItem" name="Plated Leather Fragment">
+		<!-- A key material that Dwarves use to make Plated Leather. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -604,6 +671,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1967" type="EtcItem" name="Plated Leather Gaiters Material">
+		<!-- A key material that Dwarves use to make Plated Leather Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -613,6 +681,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1968" type="EtcItem" name="Dwarven Chain Mail Shirt Material">
+		<!-- A key material that Dwarves use to make the Dwarven Chain Mail Shirt. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -622,6 +691,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1969" type="EtcItem" name="Dwarven Chain Gaiters Material">
+		<!-- A key material that Dwarves use to make Dwarven Chain Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -631,6 +701,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1970" type="EtcItem" name="Robe of Seal Fabric">
+		<!-- A key material that Dwarves use to make the Robe of Seal. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -640,6 +711,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1971" type="EtcItem" name="Great Helmet Material">
+		<!-- A key material that Dwarves use to make the Great Helmet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -649,6 +721,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1972" type="EtcItem" name="Knight's Shield Fragment">
+		<!-- A key material that Dwarves use to make a Knight's Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -658,6 +731,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1973" type="EtcItem" name="Pa'agrian Hand Design">
+		<!-- A key material that Dwarves use to make a Pa'agrian Hand. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -667,6 +741,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1974" type="EtcItem" name="Crimson Boot Fabric">
+		<!-- A key material that Dwarves use to make Crimson Boots. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -676,6 +751,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1975" type="EtcItem" name="Rind Leather Armor Design">
+		<!-- A key material that Dwarves use to make Rind Leather Armor. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -685,6 +761,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1976" type="EtcItem" name="Rind Leather Gaiters Material">
+		<!-- A key material that Dwarves use to make Rind Leather Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -694,6 +771,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1977" type="EtcItem" name="Composite Armor Temper">
+		<!-- A key material that Dwarves use to make Composite Armor. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -703,6 +781,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1978" type="EtcItem" name="Tower Shield Fragment">
+		<!-- A key material that Dwarves use to make the Tower Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -712,6 +791,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1979" type="EtcItem" name="Demon's Tunic Fabric">
+		<!-- A key material that Dwarves use to make a Demon's Tunic. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -721,6 +801,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1980" type="EtcItem" name="Demon's Stocking Pattern">
+		<!-- A key material that Dwarves use to make Demon's Stockings. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -730,6 +811,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1981" type="EtcItem" name="Mithril Gauntlets Design">
+		<!-- A key material that Dwarves use to make Mithril Gauntlets. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -739,6 +821,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1982" type="EtcItem" name="Forgotten Boots Pattern">
+		<!-- A key material that Dwarves use to make Forgotten Boots. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -748,6 +831,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1983" type="EtcItem" name="Shining Circlet Pattern">
+		<!-- A key material that Dwarves use to make the Shining Circlet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -757,6 +841,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1984" type="EtcItem" name="Theca Leather Armor Pattern">
+		<!-- A key material that Dwarves use to make Theca Leather Armor. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -766,6 +851,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1985" type="EtcItem" name="Theca Leather Gaiters Pattern">
+		<!-- A key material that Dwarves use to make Theca Leather Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -775,6 +861,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1986" type="EtcItem" name="Full Plate Armor Temper">
+		<!-- A key material that Dwarves use to make Full Plate Armor. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -784,6 +871,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1987" type="EtcItem" name="Drake Leather Armor Texture">
+		<!-- A key material that Dwarves use to make Drake Leather Armor. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -793,6 +881,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1988" type="EtcItem" name="Divine Tunic Fabric">
+		<!-- A key material that Dwarves use to make the Divine Tunic. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -802,6 +891,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1989" type="EtcItem" name="Divine Stocking Pattern">
+		<!-- A key material that Dwarves use to make Divine Stockings. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -811,6 +901,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1990" type="EtcItem" name="Mithril Helmet Design">
+		<!-- A key material that Dwarves use to make the Mithril Helmet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -820,6 +911,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1991" type="EtcItem" name="Cap of Mana Pattern">
+		<!-- A key material that Dwarves use to make the Cap of Mana. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -829,6 +921,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1992" type="EtcItem" name="Paradia Hood Material">
+		<!-- A key material that Dwarves use to make the Paradia Hood. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -838,6 +931,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1993" type="EtcItem" name="Hood of Solar Eclipse Texture">
+		<!-- A key material that Dwarves use to make the Hood of Solar Eclipse. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -847,6 +941,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1994" type="EtcItem" name="Hood of Summoning Texture">
+		<!-- A key material that Dwarves use to make a Hood of Summoning. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -856,6 +951,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1995" type="EtcItem" name="Elemental Hood Material">
+		<!-- A key material that Dwarves use to make the Elemental Hood. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -865,6 +961,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1996" type="EtcItem" name="Hood of Grace Texture">
+		<!-- A key material that Dwarves use to make the Hood of Grace. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -874,6 +971,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1997" type="EtcItem" name="Phoenix Hood Material">
+		<!-- A key material that Dwarves use to make a Phoenix Hood. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -883,6 +981,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1998" type="EtcItem" name="Hood of Aid Material">
+		<!-- A key material that Dwarves use to make the Hood of Aid. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -892,6 +991,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1999" type="EtcItem" name="Flame Helm Design">
+		<!-- A key material that Dwarves use to make the Flame Helm. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

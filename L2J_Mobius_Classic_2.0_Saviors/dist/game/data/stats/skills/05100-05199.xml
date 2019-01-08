@@ -37,7 +37,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5103" toLevel="1" name="">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -51,7 +50,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5104" toLevel="3" name="Battle Force">
-		<!-- Not Used Anymore -->
+		<!-- Status that delivers energy to a party member. Raises P. Atk. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -83,7 +82,7 @@
 		</effects>
 	</skill>
 	<skill id="5105" toLevel="3" name="Spell Force">
-		<!-- Not Used Anymore -->
+		<!-- Received M. Atk. from a party member. Increases M. Atk. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -181,7 +180,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5109" toLevel="1" name="Presentation -  Clan Gate">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -196,8 +194,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5110" toLevel="1" name="Cannon Fodder">
-		<!-- Confirmed CT2.5 -->
-		<!-- Swoop Cannon Skill -->
+		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
 		<affectRange>200</affectRange>
 		<castRange>1600</castRange>
 		<effectPoint>-100</effectPoint>
@@ -263,8 +260,7 @@
 		</effects>
 	</skill>
 	<skill id="5111" toLevel="1" name="Big Bang">
-		<!-- Confirmed CT2.5 -->
-		<!-- Swoop Cannon Skill -->
+		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
 		<affectRange>200</affectRange>
 		<castRange>2000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -330,7 +326,7 @@
 		</effects>
 	</skill>
 	<skill id="5112" toLevel="12" name="Stun">
-		<!-- Lvl 1-12 - Temporarily Immobilized and in a state of shock. -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -385,7 +381,6 @@
 		</effects>
 	</skill>
 	<skill id="5113" toLevel="12" name="Buff Dispel">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>6000</hitTime>
@@ -434,7 +429,7 @@
 		</effects>
 	</skill>
 	<skill id="5114" toLevel="12" name="Hold">
-		<!-- Lvl 1-12 - Temporarily Immobilized. -->
+		<!-- Inflicted with Hold and unable to move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -504,8 +499,6 @@
 		</effects>
 	</skill>
 	<skill id="5115" toLevel="12" name="Cubic Hate">
-		<!-- Summon Attractive Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>
 			<value level="1">-2908</value>
 			<value level="2">-3052</value>
@@ -548,8 +541,7 @@
 		</effects>
 	</skill>
 	<skill id="5116" toLevel="12" name="Hold">
-		<!-- Summon Attractive Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with Hold and unable to move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -589,7 +581,7 @@
 		</effects>
 	</skill>
 	<skill id="5117" toLevel="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -622,7 +614,6 @@
 		</effects>
 	</skill>
 	<skill id="5118" toLevel="1" name="Cancel Sailren Use">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -645,7 +636,6 @@
 		</effects>
 	</skill>
 	<skill id="5119" toLevel="1" name="Bleed">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -671,6 +661,7 @@
 		</effects>
 	</skill>
 	<skill id="5120" toLevel="1" name="Stun">
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -703,7 +694,6 @@
 		</effects>
 	</skill>
 	<skill id="5121" toLevel="1" name="Presentation -  Corpse Revival">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -714,7 +704,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5122" toLevel="1" name="Sailren Use Might">
-		<!-- CT2.5 retail confirmed -->
+		<!-- P. Atk. is increased by 50%. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -737,7 +727,7 @@
 		</effects>
 	</skill>
 	<skill id="5123" toLevel="1" name="Maximum Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maximizes P. Def., M. Def. and Shield Defense momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
@@ -770,7 +760,6 @@
 		</effects>
 	</skill>
 	<skill id="5124" toLevel="1" name="Anti-music">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>80</magicLvl>
@@ -789,7 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="5125" toLevel="1" name="Maximum Resist Status">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maximizes Debuff Resistance. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
@@ -814,7 +803,7 @@
 		</effects>
 	</skill>
 	<skill id="5126" toLevel="1" name="Maximum Recovery">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP and CP recovery bonus are maximized. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
@@ -843,7 +832,7 @@
 		</effects>
 	</skill>
 	<skill id="5127" toLevel="1" name="Recover Momentum">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maximizes P. Atk. and increases Momentum by 1 every 5 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
@@ -871,7 +860,7 @@
 		</effects>
 	</skill>
 	<skill id="5128" toLevel="1" name="Maximize long-range weapon use">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maximizes bow/crossbow use abilities. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
@@ -908,7 +897,7 @@
 		</effects>
 	</skill>
 	<skill id="5129" toLevel="1" name="Smokescreen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maximizes Evasion and assassination skill. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
@@ -1021,7 +1010,7 @@
 		</effects>
 	</skill>
 	<skill id="5134" toLevel="1" name="Anti-summoning Field">
-		<!-- Glory Days Confirmed -->
+		<!-- Through distorted space and segmented time, the servitor disappears and all speeds are decreased. All buffs that increase speed also disappear. -->
 		<abnormalTime>15</abnormalTime>
 		<affectRange>200</affectRange>
 		<attributeType>DARK</attributeType>
@@ -1060,8 +1049,6 @@
 		</effects>
 	</skill>
 	<skill id="5135" toLevel="1" name="Slash">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Feline King Skill -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1084,8 +1071,6 @@
 		</effects>
 	</skill>
 	<skill id="5136" toLevel="1" name="Spin Slash">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Feline King Skill -->
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1107,8 +1092,7 @@
 		</effects>
 	</skill>
 	<skill id="5137" toLevel="1" name="Grip of the Cat">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Feline King Skill -->
+		<!-- Immobilized. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1141,8 +1125,7 @@
 		</effects>
 	</skill>
 	<skill id="5138" toLevel="1" name="Whiplash">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Magnus the Unicorn Skill -->
+		<!-- Stunned State -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1176,8 +1159,6 @@
 		</effects>
 	</skill>
 	<skill id="5139" toLevel="1" name="Tidal Wave">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Magnus the Unicorn Skill -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1205,8 +1186,7 @@
 		</effects>
 	</skill>
 	<skill id="5140" toLevel="1" name="Dark Curse">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Spectral Lord Skill -->
+		<!-- Casts a curse poisoning nearby enemies. Decreases Atk. Spd. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -1241,8 +1221,6 @@
 		</effects>
 	</skill>
 	<skill id="5141" toLevel="1" name="Dicing Death">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Spectral Lord Skill -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1264,8 +1242,6 @@
 		</effects>
 	</skill>
 	<skill id="5142" toLevel="1" name="Corpse Burst">
-		<!-- CT2.5 retail confirmed -->
-		<!-- Summon Spectral Lord Skill -->
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1293,7 +1269,6 @@
 		</effects>
 	</skill>
 	<skill id="5143" toLevel="1" name="Sailren Use Blow">
-		<!-- Confirmed CT2.5 -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1314,7 +1289,6 @@
 		</effects>
 	</skill>
 	<skill id="5144" toLevel="1" name="Mirage">
-		<!-- Confirmed CT2.5 -->
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1330,6 +1304,7 @@
 		</effects>
 	</skill>
 	<skill id="5145" toLevel="1" name="Day of Doom">
+		<!-- Decreases P. Atk., P. Def., Speed, HP Recovery Rate, and Attribute Resistance. Increases MP Consumption for physical/magic skills. Prevents from receiving buff. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
@@ -1400,8 +1375,6 @@
 		</effects>
 	</skill>
 	<skill id="5146" toLevel="10" name="Heal">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
 		<hitTime>5000</hitTime>
 		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1442,8 +1415,7 @@
 		</effects>
 	</skill>
 	<skill id="5147" toLevel="10" name="Blessed Body">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Increases the maximum HP temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1489,8 +1461,7 @@
 		</effects>
 	</skill>
 	<skill id="5148" toLevel="10" name="Prayer">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Increases the effect of HP recovery magic temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1536,8 +1507,7 @@
 		</effects>
 	</skill>
 	<skill id="5149" toLevel="10" name="Recharge">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Restores MP. Power $s1. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1578,8 +1548,7 @@
 		</effects>
 	</skill>
 	<skill id="5150" toLevel="10" name="Blessed Soul">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Increases the maximum MP by $s1 temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1625,9 +1594,7 @@
 		</effects>
 	</skill>
 	<skill id="5151" toLevel="15" name="Mana Gain">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases MP recovery recharge rate. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1667,8 +1634,7 @@
 		</effects>
 	</skill>
 	<skill id="5152" toLevel="10" name="Ritual">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Restores CP. Power $s1. -->
 		<hitTime>5000</hitTime>
 		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1710,8 +1676,7 @@
 		</effects>
 	</skill>
 	<skill id="5153" toLevel="10" name="Cheer">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Increases maximum CP by $s1 temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1757,9 +1722,7 @@
 		</effects>
 	</skill>
 	<skill id="5154" toLevel="15" name="Might">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases P. Atk. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1815,9 +1778,7 @@
 		</effects>
 	</skill>
 	<skill id="5156" toLevel="15" name="Empower">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases M. Atk. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1873,8 +1834,7 @@
 		</effects>
 	</skill>
 	<skill id="5157" toLevel="10" name="Power in Duel">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Chance: Temporarily increases your P. Atk. in PvP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1913,9 +1873,7 @@
 		</effects>
 	</skill>
 	<skill id="5158" toLevel="15" name="Shield">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases P. Def. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -1971,9 +1929,7 @@
 		</effects>
 	</skill>
 	<skill id="5159" toLevel="15" name="Magic Barrier">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases M. Def. temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2029,8 +1985,7 @@
 		</effects>
 	</skill>
 	<skill id="5160" toLevel="10" name="Weakness in Duel">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Chance: temporarily decreases P. Atk. in PvP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PVP_DMG_DOWN</abnormalType>
@@ -2074,9 +2029,7 @@
 		</effects>
 	</skill>
 	<skill id="5161" toLevel="15" name="Agility">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases Evasion temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2132,9 +2085,7 @@
 		</effects>
 	</skill>
 	<skill id="5162" toLevel="15" name="Guidance">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Increases Accuracy temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2190,8 +2141,7 @@
 		</effects>
 	</skill>
 	<skill id="5163" toLevel="10" name="Focus">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Increases critical attack rate temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2237,8 +2187,7 @@
 		</effects>
 	</skill>
 	<skill id="5164" toLevel="10" name="Wild Magic">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Increases critical attack rate of magic attacks temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -2284,9 +2233,7 @@
 		</effects>
 	</skill>
 	<skill id="5165" toLevel="15" name="Charm">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Decreases the target's urge to attack. Power $s1. -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -2340,9 +2287,7 @@
 		</effects>
 	</skill>
 	<skill id="5166" toLevel="15" name="Decrease Speed">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Momentarily decreases the target's Speed. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2387,9 +2332,7 @@
 		</effects>
 	</skill>
 	<skill id="5167" toLevel="15" name="Winter">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
+		<!-- Active: Momentarily decreases the target's Atk. Spd. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2434,8 +2377,7 @@
 		</effects>
 	</skill>
 	<skill id="5168" toLevel="10" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily Stuns the target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2474,8 +2416,7 @@
 		</effects>
 	</skill>
 	<skill id="5169" toLevel="10" name="Hold">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily inflicts Hold on the target. Chance to father be inflicted with Hold greatly decreases while effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2517,8 +2458,7 @@
 		</effects>
 	</skill>
 	<skill id="5170" toLevel="10" name="Sleep">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily inflicts Sleep on the target. Chance to further be inflicted with Sleep greatly decreases while effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -2560,8 +2500,7 @@
 		</effects>
 	</skill>
 	<skill id="5171" toLevel="10" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily paralyzes the target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2600,8 +2539,7 @@
 		</effects>
 	</skill>
 	<skill id="5172" toLevel="10" name="Medusa">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily petrifies the target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -2641,8 +2579,7 @@
 		</effects>
 	</skill>
 	<skill id="5173" toLevel="10" name="Fear">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily inflicts Fear on the target, causing it to flee. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2683,10 +2620,7 @@
 		</effects>
 	</skill>
 	<skill id="5174" toLevel="15" name="Poison">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
-		<!-- Guessed -->
+		<!-- Active: Momentarily poisons the target. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -2766,10 +2700,7 @@
 		</effects>
 	</skill>
 	<skill id="5175" toLevel="15" name="Bleed">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Augmentation Skill (Trigger) -->
-		<!-- Guessed -->
-		<!-- Guessed -->
+		<!-- Active: Momentarily inflicts Bleed on the target. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -2850,8 +2781,7 @@
 		</effects>
 	</skill>
 	<skill id="5176" toLevel="10" name="Silence">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily blocks the target's magic skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -2890,8 +2820,7 @@
 		</effects>
 	</skill>
 	<skill id="5177" toLevel="10" name="Doom">
-		<!-- Confirmed CT2.5 -->
-		<!-- Augmentation Skill (Trigger) -->
+		<!-- Active: Momentarily blocks the target's physical/magic skills. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -2953,28 +2882,28 @@
 		</effects>
 	</skill>
 	<skill id="5179" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- The younger brother of the Elrokian chief, Mushika, he is notoriously ambitious, jealous and prone to fits of violence. Where his legendary brother is concerned, he also suffers from something of an inferiority complex. He currently leads the Elrokian faction opposed to Mushika's policies and is scheming to depose his brother and make himself chief. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5180" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Sailren, an enormous, vicious and dangerous dinosaur who inhabits the Primeval Isle, was sealed inside the Lost Nest ages ago by Shilen and the ancient Elrokian warriors. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5181" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Wandering near Goddard Castle, this seemingly ordinary Human knight is actually a demon searching for a powerful weapon to increase its strength. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5182" toLevel="1" name="Blessing of Protection">
-		<!-- Newbie Guide Buff -->
+		<!-- Keeps you safe from an attack by a chaotic character who is more than 10 Lv.s apart from you. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>PK_PROTECT</abnormalType>
@@ -2997,7 +2926,6 @@
 		</effects>
 	</skill>
 	<skill id="5184" toLevel="1" name="Dragon Breath">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>1200</affectRange>
 		<castRange>600</castRange>
 		<coolTime>2000</coolTime>
@@ -3015,7 +2943,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5185" toLevel="1" name="Presentation - Magic-type Guard">
-		<!-- Confirmed CT2.5 -->
 		<castRange>900</castRange>
 		<effectPoint>-655</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3036,6 +2963,7 @@
 		</effects>
 	</skill>
 	<skill id="5186" toLevel="2" name="Pet Haste">
+		<!-- Atk. Spd. increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3078,6 +3006,7 @@
 		</effects>
 	</skill>
 	<skill id="5187" toLevel="4" name="Pet Vampiric Rage">
+		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3130,6 +3059,7 @@
 		</effects>
 	</skill>
 	<skill id="5188" toLevel="3" name="Pet Regeneration">
+		<!-- Increases HP recovery bonus for a fixed time. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3181,6 +3111,7 @@
 		</effects>
 	</skill>
 	<skill id="5189" toLevel="6" name="Pet Blessed Body">
+		<!-- Increases maximum HP temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3250,6 +3181,7 @@
 		</effects>
 	</skill>
 	<skill id="5190" toLevel="6" name="Pet Blessed Soul">
+		<!-- Increases maximum MP temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3319,6 +3251,7 @@
 		</effects>
 	</skill>
 	<skill id="5191" toLevel="3" name="Pet Guidance">
+		<!-- Increases Accuracy temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3370,6 +3303,7 @@
 		</effects>
 	</skill>
 	<skill id="5192" toLevel="2" name="Pet Wind Walk">
+		<!-- Increases Speed temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3415,6 +3349,7 @@
 		</effects>
 	</skill>
 	<skill id="5193" toLevel="3" name="Pet Acumen">
+		<!-- Increases Casting Spd. temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3466,6 +3401,7 @@
 		</effects>
 	</skill>
 	<skill id="5194" toLevel="3" name="Pet Empower">
+		<!-- Increases M. Atk. power temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3517,6 +3453,7 @@
 		</effects>
 	</skill>
 	<skill id="5195" toLevel="12" name="Pet Greater Heal">
+		<!-- Recovers HP and momentarily increases HP Recovery Bonus. Power 50. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -3622,6 +3559,7 @@
 		</effects>
 	</skill>
 	<skill id="5196" toLevel="3" name="Pet Wind Shackle">
+		<!-- Receives help from the Spirit of the Wind. Momentarily decreases the enemy's Atk. Spd. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -3668,6 +3606,7 @@
 		</effects>
 	</skill>
 	<skill id="5197" toLevel="3" name="Pet Hex">
+		<!-- Momentarily decreases the enemy's P. Def. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -3714,6 +3653,7 @@
 		</effects>
 	</skill>
 	<skill id="5198" toLevel="3" name="Pet Slow">
+		<!-- Momentarily decreases the enemy's speed. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3760,6 +3700,7 @@
 		</effects>
 	</skill>
 	<skill id="5199" toLevel="3" name="Pet Curse Gloom">
+		<!-- Casts a curse that instantly decreases the enemy's M. Def. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>

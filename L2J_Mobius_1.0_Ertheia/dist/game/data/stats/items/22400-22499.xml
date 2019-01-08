@@ -481,7 +481,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22425" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate is raised by 10%.  P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. -->
+		<!-- Enchant success rate is raised by 10%. . P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -501,7 +501,7 @@
 		</skills>
 	</item>
 	<item id="22426" name="Ancient Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Dimensional Item Enchant success rate is raised by 10%. Prior enchant value remains after enchanting failure.  P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. Cannot be used on weapons above + 15. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within an account through the Dimensional Merchant. -->
+		<!-- Dimensional Item. Enchant success rate is raised by 10%. Prior enchant value remains after enchanting failure. . P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. Cannot be used on weapons above + 15. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within an account through the Dimensional Merchant. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -521,7 +521,7 @@
 		</skills>
 	</item>
 	<item id="22427" name="Heavenly Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate is 100%.  P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. Normal weapons can be enchanted to + 12 and magic weapons can be enchanted to + 7. -->
+		<!-- Enchant success rate is 100%. . P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. Normal weapons can be enchanted to + 12 and magic weapons can be enchanted to + 7. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -544,7 +544,7 @@
 		</skills>
 	</item>
 	<item id="22428" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate is raised by 10%.  When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
+		<!-- Enchant success rate is raised by 10%. . When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -564,7 +564,7 @@
 		</skills>
 	</item>
 	<item id="22429" name="Ancient Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate is raised by 10%.  Prior enchant value remains after enchanting failure.  When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
+		<!-- Enchant success rate is raised by 10%. . Prior enchant value remains after enchanting failure. . When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_am_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -584,7 +584,7 @@
 		</skills>
 	</item>
 	<item id="22430" name="Heavenly Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate is 100%.  When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
+		<!-- Enchant success rate is 100%. . When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />

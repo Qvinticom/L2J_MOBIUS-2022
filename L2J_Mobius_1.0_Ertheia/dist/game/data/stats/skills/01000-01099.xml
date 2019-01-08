@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1001" toLevel="15" name="Soul Cry">
-		<!-- Confirmed CT2.5 and updated to IO -->
+		<!-- Increases P. Atk. by 2. -->
 		<icon>icon.skill1001</icon>
 		<magicLvl>
 			<value level="1">1</value>
@@ -149,6 +149,7 @@
 		</effects>
 	</skill>
 	<skill id="1002" toLevel="3" name="Chant of Flame">
+		<!-- Increases all party members' Casting Spd. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -200,6 +201,7 @@
 		</effects>
 	</skill>
 	<skill id="1003" toLevel="3" name="Pa'agrio's Gift">
+		<!-- Increases nearby clan members' P. Atk. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -252,6 +254,7 @@
 		</effects>
 	</skill>
 	<skill id="1004" toLevel="3" name="Pa'agrio's Wisdom">
+		<!-- Increases nearby clan members' Casting Spd. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -304,6 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="1005" toLevel="3" name="Pa'agrio's Blessing">
+		<!-- Increases nearby clan members' P. Def. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -356,6 +360,7 @@
 		</effects>
 	</skill>
 	<skill id="1006" toLevel="3" name="Chant of Fire">
+		<!-- Increases all party members' M. Def. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -407,6 +412,7 @@
 		</effects>
 	</skill>
 	<skill id="1007" toLevel="3" name="Chant of Battle">
+		<!-- Increases all party members' P. Atk. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -458,6 +464,7 @@
 		</effects>
 	</skill>
 	<skill id="1008" toLevel="3" name="Pa'agrio's Glory">
+		<!-- Increases nearby clan members' M. Def. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -510,6 +517,7 @@
 		</effects>
 	</skill>
 	<skill id="1009" toLevel="3" name="Chant of Shielding">
+		<!-- Increases all party members' P. Def. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -561,6 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="1010" toLevel="3" name="Soul Shield">
+		<!-- Increases P. Def. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -612,6 +621,7 @@
 		</effects>
 	</skill>
 	<skill id="1011" toLevel="18" name="Heal">
+		<!-- Restores the target's HP with 50 Power. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">50</value>
@@ -710,6 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="1012" toLevel="3" name="Cure Poison">
+		<!-- Cures the target of minor poisoning. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">121</value>
@@ -752,6 +763,7 @@
 		</effects>
 	</skill>
 	<skill id="1013" toLevel="32" name="Recharge">
+		<!-- Recovers MP with up to 49 Power, depending on the target's level. Cannot be used by classes that have Recharge skill. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">268</value>
@@ -901,7 +913,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpSkillAcquire">
-				<skillId>1013</skillId>
+				<skillId>1013</skillId> <!-- Recharge -->
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
@@ -945,6 +957,7 @@
 		</effects>
 	</skill>
 	<skill id="1015" toLevel="15" name="Battle Heal">
+		<!-- Immediately restores the target's HP with 83 Power. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">66</value>
@@ -1047,6 +1060,7 @@
 		</effects>
 	</skill>
 	<skill id="1016" toLevel="9" name="Resurrection">
+		<!-- Resurrects a corpse. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1125,7 +1139,7 @@
 		</effects>
 	</skill>
 	<skill id="1018" toLevel="3" name="Purify">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Cancels paralysis and cures minor poison/bleed condition. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">418</value>
@@ -1168,6 +1182,7 @@
 		</effects>
 	</skill>
 	<skill id="1020" toLevel="27" name="Vitalize">
+		<!-- Recovers HP with 440 Power and cures minor poison/bleeding. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">528</value>
@@ -1361,6 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="1027" toLevel="15" name="Group Heal">
+		<!-- Restores all party members' HP with 66 Power. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">66</value>
@@ -1463,6 +1479,7 @@
 		</effects>
 	</skill>
 	<skill id="1028" toLevel="19" name="Might of Heaven">
+		<!-- Inflicts holy damage on the undead with 39 Power added to M. Atk. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -1592,6 +1609,7 @@
 		</effects>
 	</skill>
 	<skill id="1031" toLevel="8" name="Disrupt Undead">
+		<!-- Inflicts holy damage on the target with 19 Power added to M. Atk. Affects the undead. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -1666,6 +1684,7 @@
 		</effects>
 	</skill>
 	<skill id="1032" toLevel="3" name="Invigor">
+		<!-- Increases Bleed Resistance by 30% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1711,6 +1730,7 @@
 		</effects>
 	</skill>
 	<skill id="1033" toLevel="3" name="Poison Resistance">
+		<!-- Increases Poison Resistance by 30% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1761,6 +1781,7 @@
 		</effects>
 	</skill>
 	<skill id="1034" toLevel="13" name="Repose">
+		<!-- Diminishes undead monster's will to attack. -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<hitTime>1500</hitTime>
@@ -1826,6 +1847,7 @@
 		</effects>
 	</skill>
 	<skill id="1035" toLevel="4" name="Mental Shield">
+		<!-- Increases Hold/Sleep/Mental Attack Resistance by 20 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1894,6 +1916,7 @@
 		</effects>
 	</skill>
 	<skill id="1036" toLevel="2" name="Magic Barrier">
+		<!-- Increases M. Def. by 23% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1939,6 +1962,7 @@
 		</effects>
 	</skill>
 	<skill id="1040" toLevel="3" name="Shield">
+		<!-- Increases P. Def. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1990,6 +2014,7 @@
 		</effects>
 	</skill>
 	<skill id="1042" toLevel="12" name="Hold Undead">
+		<!-- Paralyzes an undead monster for 30 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2076,6 +2101,7 @@
 		</effects>
 	</skill>
 	<skill id="1043" toLevel="1" name="Holy Weapon">
+		<!-- Increases a party member's holy P. Atk. by 20 for 20 minutes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -2109,6 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="1044" toLevel="3" name="Regeneration">
+		<!-- Increases HP Regeneration by 10% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2160,6 +2187,7 @@
 		</effects>
 	</skill>
 	<skill id="1045" toLevel="6" name="Blessed Body">
+		<!-- Increases Max HP by 10% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2230,6 +2258,7 @@
 		</effects>
 	</skill>
 	<skill id="1047" toLevel="4" name="Mana Regeneration">
+		<!-- Increases MP Recovery Bonus by 1.72 for 20 minutes. Consumes 7 Spirit Ore. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2292,6 +2321,7 @@
 		</effects>
 	</skill>
 	<skill id="1048" toLevel="6" name="Blessed Soul">
+		<!-- Increases Max MP by 10% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2361,6 +2391,7 @@
 		</effects>
 	</skill>
 	<skill id="1049" toLevel="14" name="Requiem">
+		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for 2 minutes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
@@ -2434,7 +2465,7 @@
 		</effects>
 	</skill>
 	<skill id="1050" toLevel="2" name="Return">
-		<!-- Confirmed CT2.5 -->
+		<!-- Teleports caster to the nearest village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
 			<value level="1">20000</value>
@@ -2470,6 +2501,7 @@
 		</effects>
 	</skill>
 	<skill id="1056" toLevel="12" name="Cancellation">
+		<!-- Removes multiple buffs from the enemy. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-455</value>
@@ -2546,6 +2578,7 @@
 		</effects>
 	</skill>
 	<skill id="1059" toLevel="3" name="Empower">
+		<!-- Increases M. Atk. by 55% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2597,6 +2630,7 @@
 		</effects>
 	</skill>
 	<skill id="1062" toLevel="2" name="Berserker Spirit">
+		<!-- Decreases a party member's P. Def. by 5%, M. Def. by 10% and Evasion by 2, and increases P. Atk. by 5%, M. Atk. by 10%, Atk. Spd. by 5%, Casting Spd. by 5% and Speed by 5 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2696,6 +2730,7 @@
 		</effects>
 	</skill>
 	<skill id="1064" toLevel="14" name="Silence">
+		<!-- Blocks the enemy's use of magic for 1 minute. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -2785,6 +2820,7 @@
 		</effects>
 	</skill>
 	<skill id="1068" toLevel="3" name="Might">
+		<!-- Increases P. Atk. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2836,6 +2872,7 @@
 		</effects>
 	</skill>
 	<skill id="1069" toLevel="42" name="Sleep">
+		<!-- Causes the enemy to sleep for 30 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -3041,7 +3078,7 @@
 		</effects>
 	</skill>
 	<skill id="1071" toLevel="14" name="Surrender to Water">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 sec., decreases the enemy's Water Resistance by 20 and increases Fire Resistance by 10. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
@@ -3138,6 +3175,7 @@
 		</effects>
 	</skill>
 	<skill id="1072" toLevel="5" name="Sleeping Cloud">
+		<!-- Casts Sleep on nearby enemies for 30 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -3198,6 +3236,7 @@
 		</effects>
 	</skill>
 	<skill id="1073" toLevel="2" name="Eva's Kiss">
+		<!-- Increases lung capacity by 400% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3239,7 +3278,7 @@
 		</effects>
 	</skill>
 	<skill id="1074" toLevel="14" name="Surrender to Wind">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 sec., decreases the enemy's Wind Resistance by 20 and increases Earth Resistance by 10. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
@@ -3336,6 +3375,7 @@
 		</effects>
 	</skill>
 	<skill id="1075" toLevel="15" name="Peace">
+		<!-- Puts target's mind at peace, decreasing their aggression. -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -3389,6 +3429,7 @@
 		</effects>
 	</skill>
 	<skill id="1077" toLevel="3" name="Focus">
+		<!-- Increases Critical Rate by 20% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3440,6 +3481,7 @@
 		</effects>
 	</skill>
 	<skill id="1078" toLevel="6" name="Concentration">
+		<!-- Decreases magic cancel damage by 18 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3509,7 +3551,7 @@
 		</effects>
 	</skill>
 	<skill id="1083" toLevel="17" name="Surrender to Fire">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 sec., decreases the target's Fire Resistance by 20 and increases Water Resistance by 10. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -3672,6 +3714,7 @@
 		</effects>
 	</skill>
 	<skill id="1085" toLevel="3" name="Acumen">
+		<!-- Increases Casting Spd. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3723,6 +3766,7 @@
 		</effects>
 	</skill>
 	<skill id="1086" toLevel="2" name="Haste">
+		<!-- Increases Atk. Spd. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3768,6 +3812,7 @@
 		</effects>
 	</skill>
 	<skill id="1087" toLevel="3" name="Agility">
+		<!-- Increases Evasion by 2 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3819,6 +3864,7 @@
 		</effects>
 	</skill>
 	<skill id="1090" toLevel="6" name="Life Drain">
+		<!-- Inflicts non-attribute damage on the enemy with 15 Power added to M. Atk. and re-absorbs 80% of the damage as HP. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-121</value>
@@ -3877,6 +3923,7 @@
 		</effects>
 	</skill>
 	<skill id="1092" toLevel="19" name="Fear">
+		<!-- Frightens the enemy into fleeing for 10 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -3987,6 +4034,7 @@
 		</effects>
 	</skill>
 	<skill id="1095" toLevel="5" name="Venom">
+		<!-- Poisons the target, causing loss of 11 HP per second for 30 seconds. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4056,6 +4104,7 @@
 		</effects>
 	</skill>
 	<skill id="1096" toLevel="16" name="Seal of Chaos">
+		<!-- Decreases Accuracy of nearby enemies by 9 for 30 seconds. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -4189,6 +4238,7 @@
 		</effects>
 	</skill>
 	<skill id="1097" toLevel="20" name="Dreaming Spirit">
+		<!-- Causes the enemy to sleep for 30 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -4306,6 +4356,7 @@
 		</effects>
 	</skill>
 	<skill id="1099" toLevel="15" name="Seal of Slow">
+		<!-- Decreases nearby enemies' Speed by 20% for 1 minute. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>

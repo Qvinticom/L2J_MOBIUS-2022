@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15300" toLevel="1" name="Tempest">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks the target's area with ranged magic. -->
+		<!-- M. Atk. of all surrounding enemies of a target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -24,7 +23,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15302" toLevel="1" name="Mass Blood Siphon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Drains the HP of targets in a wide area around you. -->
 		<icon>icon.skill1090</icon>
 		<operateType>A1</operateType>
@@ -44,7 +42,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15303" toLevel="1" name="Blood Siphon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Steals the target's HP. -->
 		<icon>icon.skill1090</icon>
 		<operateType>A1</operateType>
@@ -64,7 +61,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15304" toLevel="1" name="Power of Blood">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., Atk. Spd. / Spd. + 30%. -->
 		<icon>icon.skill0077</icon>
 		<operateType>A2</operateType>
@@ -84,7 +80,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15305" toLevel="1" name="Hurricane">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the target with magic. -->
 		<icon>icon.skill1239</icon>
 		<operateType>A1</operateType>
@@ -104,7 +99,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15306" toLevel="1" name="Blazing Circle">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks nearby enemies with ranged magic. -->
 		<icon>icon.skill1239</icon>
 		<operateType>A1</operateType>
@@ -124,7 +118,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15307" toLevel="1" name="Chilling Power of Blood">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Greatly increases your P. Atk. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -144,8 +137,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15308" toLevel="1" name="Half-Chop">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful P. Atk. on the target and Stuns them. -->
+		<!-- Inflicts a powerful P. Atk. on the target and causes Stun. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -170,7 +162,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15309" toLevel="1" name="Model Blood Siphon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly kills an ally and increases your P. Atk./ Atk. Spd./ Max HP/ HP Recovery Rate by 200% for 1 min. -->
 		<icon>icon.skill11544</icon>
 		<operateType>A2</operateType>
@@ -191,7 +182,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15310" toLevel="1" name="Feast of Blood">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks with Bleed Attack within a fan-shaped range around you. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -221,7 +211,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15311" toLevel="1" name="Irresistible Temptation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilizes nearby enemies for 10 sec. -->
 		<icon>icon.skill11538</icon>
 		<operateType>A2</operateType>
@@ -247,8 +236,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15312" toLevel="1" name="Dreamy Steps">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Decreases nearby enemies' Spd. -->
+		<!-- Lowers Speed of enemies surrounding your character. -->
 		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -271,8 +259,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15313" toLevel="1" name="Sophie's Misunderstanding">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases nearby enemies' Spd. -->
+		<!-- Increases Speed of enemies surrounding your character. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -293,7 +280,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15315" toLevel="1" name="Alfred's Nemesis">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Able to inflict a powerful attack on Alfred. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
@@ -315,7 +301,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15316" toLevel="1" name="Delayed Healing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the target's area with magic and decreases the power of healing magic by 50%. -->
 		<icon>icon.skill11510</icon>
 		<operateType>A2</operateType>
@@ -344,7 +329,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15317" toLevel="1" name="Sabotage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the target's area with magic and eliminates 1 helpful buff. -->
 		<icon>icon.skill11536</icon>
 		<operateType>A1</operateType>
@@ -368,7 +352,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15318" toLevel="1" name="Memory Deterioration">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the target's area with magic and increases skill Cooldown by 100%. -->
 		<icon>icon.skill1248</icon>
 		<operateType>A2</operateType>
@@ -397,7 +380,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15319" toLevel="1" name="Hell Allegiance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases your Atk. Spd. -->
 		<icon>icon.skill0168</icon>
 		<operateType>A2</operateType>
@@ -419,7 +401,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15320" toLevel="1" name="Hell Strike">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts P. Atk. on the target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -439,7 +420,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15321" toLevel="1" name="Hell Arrow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts P. Atk. on the target and leaves DOT Damage. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -468,7 +448,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15323" toLevel="1" name="Hell Defense">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Stunned. -->
 		<icon>icon.skill11057</icon>
 		<operateType>A2</operateType>
@@ -496,7 +475,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15324" toLevel="1" name="Hell Fang">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a ranged physical attack in a fan-shaped range around you. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -516,7 +494,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15325" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
@@ -535,7 +512,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15326" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
@@ -554,7 +530,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15327" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
@@ -573,7 +548,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15328" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
@@ -591,7 +565,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15329" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can receive the mark of penitence after obtaining a certain amount of XP. -->
 		<icon>icon.etc_leash_i00</icon>
 		<operateType>A2</operateType>
@@ -609,7 +582,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15330" toLevel="7" name="Reputation Penalty">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You're being penalized for your reputation. Your XP does not refill even after resurrection. -->
 		<icon>icon.skill5076_c</icon>
 		<operateType>P</operateType>
@@ -617,7 +589,6 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="15331" toLevel="1" name="Headquarters' Effect">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk./ M. Atk. + 200%. Skill Cooldown - 50%. -->
 		<icon>icon.skill11544</icon>
 		<operateType>A2</operateType>
@@ -639,8 +610,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15332" toLevel="1" name="Power Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful attack on one target. -->
+		<!-- Inflicts a powerful attack on a target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -659,7 +629,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15334" toLevel="1" name="Rush">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Rush toward target. -->
 		<icon>icon.skill0493</icon>
 		<operateType>DA1</operateType>
@@ -684,7 +653,6 @@
 		</conditions>
 	</skill>
 	<skill id="15335" toLevel="1" name="Electric Stun">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Stunned for 3 sec. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -711,8 +679,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15336" toLevel="1" name="Trouble Benefit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk./ M. Atk. + 10%. -->
+		<!-- P. Atk. and M. Atk. + 10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -737,8 +704,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15339" toLevel="1" name="Half-kill">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful attack that cuts the target's HP in half. -->
+		<!-- Cute target's HP in half. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -755,7 +721,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15340" toLevel="1" name="Trouble Heal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores the target's HP. -->
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
@@ -771,8 +736,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15341" toLevel="1" name="Crane Strike">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful attack on the target. -->
+		<!-- Launches a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -791,7 +755,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15343" toLevel="1" name="Trouble Ability">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk./ M. Atk. + 30%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -817,7 +780,6 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15344" toLevel="1" name="Rake Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Rushes to the target to inflict damage. -->
 		<icon>icon.skill6041</icon>
 		<operateType>DA1</operateType>
@@ -838,8 +800,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15345" toLevel="1" name="Spanner Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful attack on the target. -->
+		<!-- Launches a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -857,7 +818,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15347" toLevel="1" name="Spread Notice">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -878,7 +838,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15348" toLevel="1" name="Ally Spread">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill (range). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -895,7 +854,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15349" toLevel="1" name="Mental Collapse">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill (range). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -913,7 +871,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15350" toLevel="1" name="Arrow Fringe">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts ranged damage by shooting a rain of arrows. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -934,7 +891,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15351" toLevel="1" name="Life Extension">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Damages the target and restores your HP by 50%. -->
 		<icon>icon.skill1147</icon>
 		<operateType>A1</operateType>
@@ -952,8 +908,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15352" toLevel="1" name="Strife">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts powerful damage on targets within a fan-shaped range. -->
+		<!-- Powerful attack on enemies in a fan-shaped radius of you. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -973,7 +928,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15353" toLevel="1" name="Bleeding Range">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Bleed 10% to nearby targets. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1003,7 +957,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15354" toLevel="1" name="Stark Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a blow on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1022,7 +975,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15355" toLevel="1" name="Yoke">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Damages a target with Yoke. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -1050,7 +1002,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15356" toLevel="1" name="Slash Blast">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful damage on nearby targets. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1071,8 +1022,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15357" toLevel="1" name="Heavy Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts a powerful damage on a target. -->
+		<!-- Inflicts a powerful attack on a target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -1090,7 +1040,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15359" toLevel="1" name="Cornering Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Yokes a target. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -1118,7 +1067,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15360" toLevel="1" name="Tetanus">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Poisons the target. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1149,7 +1097,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15362" toLevel="1" name="Instant Recovery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 2000 HP of all party members. -->
 		<icon>icon.skill1402</icon>
 		<operateType>A1</operateType>
@@ -1172,7 +1119,6 @@
 		</effects>
 	</skill>
 	<skill id="15364" toLevel="1" name="Shock Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Paralyzed. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
@@ -1197,7 +1143,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15365" toLevel="1" name="Shoot Cannon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1217,8 +1162,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15366" toLevel="1" name="Cannon Fire">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Bleeding. -->
+		<!-- Bleeding -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -1247,7 +1191,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15368" toLevel="1" name="Massive Blow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill (range). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1266,7 +1209,6 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="15369" toLevel="1" name="Massive Blow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful attack and Bleed on nearby targets. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
@@ -1295,7 +1237,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15370" toLevel="1" name="Body Slice">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful blow on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1314,7 +1255,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15371" toLevel="1" name="Stun Rush">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Rushes to the target to inflict damage. -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
@@ -1338,7 +1278,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15372" toLevel="1" name="Zero Absorption">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Absorbs Zero's body. -->
 		<icon>icon.skill0000</icon>
 		<operateType>CA1</operateType>
@@ -1357,7 +1296,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15373" toLevel="1" name="Spell of Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Protected from preemptive monster attacks for 2 min. The status is cancelled if you take preemptive action. -->
 		<icon>icon.skill11562</icon>
 		<operateType>A2</operateType>
@@ -1380,7 +1318,6 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15389" toLevel="1" name="Focus Shot">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful attack on the target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1398,7 +1335,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15390" toLevel="1" name="Multiple Focus Shot">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a series of powerful attacks on targets within a 120 degree radius. -->
 		<icon>icon.skill0987</icon>
 		<operateType>A1</operateType>
@@ -1422,7 +1358,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15391" toLevel="1" name="Check Increase in Handicrafting">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill for increasing handicrafting. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1435,7 +1370,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15392" toLevel="1" name="Check Increase in Alterations">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill for increasing alterations. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1448,7 +1382,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15393" toLevel="1" name="Check Increase in Production">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill for increasing production. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1461,7 +1394,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15394" toLevel="1" name="Invincibility">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Becomes invincible. -->
 		<icon>icon.skill1427</icon>
 		<operateType>A2</operateType>
@@ -1479,7 +1411,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15395" toLevel="1" name="Repair Broken Toad Cannon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill used when the Repair Robot repairs the Toad Cannon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1492,7 +1423,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15396" toLevel="1" name="Skill Usage Restriction Area">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Cannot use all skills due to clan request progress, but Spd. and Atk. Spd. are increased. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -1514,7 +1444,6 @@
 		</effects>
 	</skill>
 	<skill id="15397" toLevel="1" name="Detonate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill used to attack the Guardian Robot whose Repair Robot is broken. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1541,7 +1470,6 @@
 		</conditions>
 	</skill>
 	<skill id="15398" toLevel="1" name="Flame Throw">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Skill used when the Destroyer Robot is attacking the Broken Toad Cannon. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -1568,7 +1496,6 @@
 		</conditions>
 	</skill>
 	<skill id="15399" toLevel="1" name="Cursed Blow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Presentation Skill for destroying the cocoon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
 		<!-- Confirmed CT2.5 -->
@@ -66,7 +66,7 @@
 				<item id="297" min="1" max="1" chance="5.546" /> <!-- Glaive -->
 				<item id="188" min="1" max="1" chance="5.505" /> <!-- Ghost Staff -->
 				<item id="159" min="1" max="1" chance="5.493" /> <!-- Bonebreaker -->
-				<item id="280" min="1" max="1" chance="5.487" /> <!-- Light Bow -->
+				<item id="280" min="1" max="1" chance="5.487" /> <!-- Light Crossbow -->
 				<item id="225" min="1" max="1" chance="5.467" /> <!-- Mithril Dagger -->
 				<item id="262" min="1" max="1" chance="4.998" /> <!-- Scallop Jamadhr -->
 				<item id="57" min="140000" max="1170000" chance="100" /> <!-- Adena -->
@@ -1385,72 +1385,72 @@
 		<dropLists>
 			<drop>
 				<item id="6657" min="1" max="1" chance="20.96" /> <!-- Valakas' Necklace -->
-				<item id="17439" min="1" max="3" chance="19.72" /> <!-- Eternal Leather Gloves -->
-				<item id="17440" min="1" max="3" chance="19.43" /> <!-- Eternal Leather Boots -->
-				<item id="17438" min="1" max="3" chance="19.32" /> <!-- Eternal Leather Leggings -->
-				<item id="17437" min="1" max="3" chance="19.21" /> <!-- Eternal Leather Armor -->
-				<item id="17436" min="1" max="3" chance="19.18" /> <!-- Eternal Leather Helmet -->
-				<item id="17434" min="1" max="3" chance="17.46" /> <!-- Eternal Boots -->
-				<item id="17433" min="1" max="3" chance="17.41" /> <!-- Eternal Gauntlets -->
-				<item id="17442" min="1" max="3" chance="17.31" /> <!-- Eternal Tunic -->
-				<item id="17446" min="1" max="3" chance="17.305" /> <!-- Eternal Sigil -->
-				<item id="17432" min="1" max="3" chance="17.06" /> <!-- Eternal Gaiters -->
-				<item id="17443" min="1" max="3" chance="16.62" /> <!-- Eternal Stockings -->
-				<item id="17441" min="1" max="3" chance="16.61" /> <!-- Eternal Circlet -->
-				<item id="17444" min="1" max="3" chance="16.41" /> <!-- Eternal Gloves -->
-				<item id="17445" min="1" max="3" chance="16.36" /> <!-- Eternal Shoes -->
-				<item id="17435" min="1" max="3" chance="16.23" /> <!-- Eternal Shield -->
-				<item id="17431" min="1" max="3" chance="15.93" /> <!-- Eternal Breastplate -->
-				<item id="17430" min="1" max="3" chance="15.85" /> <!-- Eternal Helmet -->
-				<item id="17422" min="1" max="3" chance="9.16" /> <!-- Helios Thrower -->
-				<item id="17418" min="1" max="3" chance="9.151" /> <!-- Helios Slasher -->
-				<item id="17416" min="1" max="3" chance="9.133" /> <!-- Helios Shaper -->
-				<item id="17419" min="1" max="3" chance="9.116" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="3" chance="9.107" /> <!-- Helios Fighter -->
-				<item id="17417" min="1" max="3" chance="9.107" /> <!-- Helios Cutter -->
-				<item id="17421" min="1" max="3" chance="9.1" /> <!-- Helios Stormer -->
-				<item id="17426" min="1" max="3" chance="9.09" /> <!-- Helios Retributer -->
-				<item id="17424" min="1" max="3" chance="9.068" /> <!-- Helios Buster -->
-				<item id="17423" min="1" max="3" chance="9.051" /> <!-- Helios Shooter -->
-				<item id="17425" min="1" max="3" chance="9.039" /> <!-- Helios Caster -->
-				<item id="36432" min="1" max="1" chance="0.075" /> <!-- Valakas Caster (Fragment) -->
-				<item id="36431" min="1" max="1" chance="0.075" /> <!-- Valakas Buster (Fragment) -->
-				<item id="36430" min="1" max="1" chance="0.075" /> <!-- Valakas Thrower (Fragment) -->
-				<item id="36429" min="1" max="1" chance="0.075" /> <!-- Valakas Slasher (Fragment) -->
-				<item id="36428" min="1" max="1" chance="0.075" /> <!-- Valakas Cutter (Fragment) -->
-				<item id="36427" min="1" max="1" chance="0.075" /> <!-- Valakas Shaper (Fragment) -->
-				<item id="36433" min="1" max="1" chance="0.075" /> <!-- Valakas Retributer (Fragment) -->
+				<item id="17439" min="1" max="3" chance="19.72" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17440" min="1" max="3" chance="19.43" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="17438" min="1" max="3" chance="19.32" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17437" min="1" max="3" chance="19.21" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17436" min="1" max="3" chance="19.18" /> <!-- Eternal Leather Helmet - Light Armor -->
+				<item id="17434" min="1" max="3" chance="17.46" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17433" min="1" max="3" chance="17.41" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17442" min="1" max="3" chance="17.31" /> <!-- Eternal Tunic - Robe -->
+				<item id="17446" min="1" max="3" chance="17.305" /> <!-- Eternal Sigil - Robe -->
+				<item id="17432" min="1" max="3" chance="17.06" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17443" min="1" max="3" chance="16.62" /> <!-- Eternal Stockings - Robe -->
+				<item id="17441" min="1" max="3" chance="16.61" /> <!-- Eternal Circlet - Robe -->
+				<item id="17444" min="1" max="3" chance="16.41" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="3" chance="16.36" /> <!-- Eternal Shoes - Robe -->
+				<item id="17435" min="1" max="3" chance="16.23" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17431" min="1" max="3" chance="15.93" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17430" min="1" max="3" chance="15.85" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17422" min="1" max="3" chance="9.16" /> <!-- Amaranthine Thrower -->
+				<item id="17418" min="1" max="3" chance="9.151" /> <!-- Amaranthine Slasher -->
+				<item id="17416" min="1" max="3" chance="9.133" /> <!-- Amaranthine Shaper -->
+				<item id="17419" min="1" max="3" chance="9.116" /> <!-- Amaranthine Avenger -->
+				<item id="17420" min="1" max="3" chance="9.107" /> <!-- Amaranthine Fighter -->
+				<item id="17417" min="1" max="3" chance="9.107" /> <!-- Amaranthine Cutter -->
+				<item id="17421" min="1" max="3" chance="9.1" /> <!-- Amaranthine Stormer -->
+				<item id="17426" min="1" max="3" chance="9.09" /> <!-- Amaranthine Retributer -->
+				<item id="17424" min="1" max="3" chance="9.068" /> <!-- Amaranthine Buster -->
+				<item id="17423" min="1" max="3" chance="9.051" /> <!-- Amaranthine Shooter -->
+				<item id="17425" min="1" max="3" chance="9.039" /> <!-- Amaranthine Caster -->
+				<item id="36432" min="1" max="1" chance="0.075" /> <!-- Valakas Caster - Fragment -->
+				<item id="36431" min="1" max="1" chance="0.075" /> <!-- Valakas Buster - Fragment -->
+				<item id="36430" min="1" max="1" chance="0.075" /> <!-- Valakas Thrower - Fragment -->
+				<item id="36429" min="1" max="1" chance="0.075" /> <!-- Valakas Slasher - Fragment -->
+				<item id="36428" min="1" max="1" chance="0.075" /> <!-- Valakas Cutter - Fragment -->
+				<item id="36427" min="1" max="1" chance="0.075" /> <!-- Valakas Shaper - Fragment -->
+				<item id="36433" min="1" max="1" chance="0.075" /> <!-- Valakas Retributer - Fragment -->
 				<item id="36414" min="1" max="1" chance="100" /> <!-- Dragon Claw -->
 				<item id="19466" min="2" max="2" chance="100" /> <!-- Bottle of Valakas' Soul -->
 				<item id="37781" min="1" max="1" chance="51.15" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-				<item id="35568" min="1" max="1" chance="51.11" /> <!-- Bloody Helios Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="51.11" /> <!-- Bloody Amaranthine Enhancement Stone -->
 				<item id="37772" min="1" max="1" chance="50.31" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 				<item id="19448" min="10" max="10" chance="31.19" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36389" min="10" max="10" chance="29.11" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="10" max="10" chance="20.22" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 				<item id="19447" min="10" max="10" chance="19.5" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="36162" min="1" max="1" chance="19.09" /> <!-- Scroll of Blessing: (R99-grade) -->
-				<item id="17704" min="1" max="1" chance="17.36" /> <!-- Lv. 5 Ancient DEX Dye -->
-				<item id="17713" min="1" max="1" chance="17.31" /> <!-- Lv. 5 Legendary WIT Dye -->
-				<item id="17714" min="1" max="1" chance="17.23" /> <!-- Lv. 5 Legendary MEN Dye -->
-				<item id="17699" min="1" max="1" chance="17.21" /> <!-- Lv. 5 Giant CON Dye -->
-				<item id="17709" min="1" max="1" chance="17.19" /> <!-- Lv. 5 Legendary STR Dye -->
-				<item id="17702" min="1" max="1" chance="17.17" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="36162" min="1" max="1" chance="19.09" /> <!-- Scroll of Blessing (R99-grade) -->
+				<item id="17704" min="1" max="1" chance="17.36" /> <!-- Lv. 5 Ancient DEX Dye - DEX + 5 / Earth Resistance + 25 -->
+				<item id="17713" min="1" max="1" chance="17.31" /> <!-- Lv. 5 Legendary WIT Dye - WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
+				<item id="17714" min="1" max="1" chance="17.23" /> <!-- Lv. 5 Legendary MEN Dye - MEN + 5 / INT + 1 / Holy Resistance + 25 -->
+				<item id="17699" min="1" max="1" chance="17.21" /> <!-- Lv. 5 Giant CON Dye - CON + 5 -->
+				<item id="17709" min="1" max="1" chance="17.19" /> <!-- Lv. 5 Legendary STR Dye - STR + 5 / DEX + 1 / Fire Resistance + 25 -->
+				<item id="17702" min="1" max="1" chance="17.17" /> <!-- Lv. 5 Giant MEN Dye - Men + 5 -->
 				<item id="39484" min="1" max="1" chance="17.05" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="17697" min="1" max="1" chance="16.85" /> <!-- Lv. 5 Giant STR Dye -->
-				<item id="17700" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17697" min="1" max="1" chance="16.85" /> <!-- Lv. 5 Giant STR Dye - STR + 5 -->
+				<item id="17700" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Giant INT Dye - INT + 5 -->
 				<item id="39483" min="1" max="1" chance="16.73" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="17698" min="1" max="1" chance="16.61" /> <!-- Lv. 5 Giant DEX Dye -->
-				<item id="17708" min="1" max="1" chance="16.54" /> <!-- Lv. 5 Ancient MEN Dye -->
-				<item id="17710" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Legendary DEX Dye -->
-				<item id="17705" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17698" min="1" max="1" chance="16.61" /> <!-- Lv. 5 Giant DEX Dye - DEX + 5 -->
+				<item id="17708" min="1" max="1" chance="16.54" /> <!-- Lv. 5 Ancient MEN Dye - MEN + 5 / Holy Resistance + 25 -->
+				<item id="17710" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Legendary DEX Dye - DEX + 5 / CON + 1 / Earth Resistance + 25 -->
+				<item id="17705" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Ancient CON Dye - CON + 5 / Dark Resistance + 25 -->
 				<item id="39485" min="1" max="1" chance="16.45" /> <!-- Alchemic Tome: Dye -->
-				<item id="17712" min="1" max="1" chance="16.32" /> <!-- Lv. 5 Legendary INT Dye -->
-				<item id="17711" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Legendary CON Dye -->
-				<item id="17701" min="1" max="1" chance="16.08" /> <!-- Lv. 5 Giant WIT Dye -->
-				<item id="17706" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient INT Dye -->
-				<item id="17703" min="1" max="1" chance="16.05" /> <!-- Lv. 5 Ancient STR Dye -->
-				<item id="17707" min="1" max="1" chance="16" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="17712" min="1" max="1" chance="16.32" /> <!-- Lv. 5 Legendary INT Dye - INT + 5 / WIT + 1 / Water Resistance + 25 -->
+				<item id="17711" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Legendary CON Dye - CON + 5 / STR + 1 / Dark Resistance + 25 -->
+				<item id="17701" min="1" max="1" chance="16.08" /> <!-- Lv. 5 Giant WIT Dye - Wit + 5 -->
+				<item id="17706" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient INT Dye - INT + 5 / Water Resistance + 25 -->
+				<item id="17703" min="1" max="1" chance="16.05" /> <!-- Lv. 5 Ancient STR Dye - STR + 5 / Fire Resistance + 25 -->
+				<item id="17707" min="1" max="1" chance="16" /> <!-- Lv. 5 Ancient WIT Dye - WIT + 5 / Wind Resistance + 25 -->
 			</drop>
 			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2997,9 +2997,9 @@
 				<item id="2392" min="1" max="1" chance="1.35200000000001" /> <!-- Leather Armor of Doom -->
 				<item id="4082" min="4" max="12" chance="33.65" /> <!-- Blue Wolf Leather Armor Texture -->
 				<item id="4083" min="8" max="22" chance="18.9699999999999" /> <!-- Leather Armor of Doom Design -->
-				<item id="4618" min="1" max="1" chance="44.8600000000003" /> <!-- Greater DEX Dye (Dex + 4 CON - 4) -->
-				<item id="4616" min="1" max="3" chance="22.3800000000003" /> <!-- Greater CON Dye (Con + 4 DEX - 4) -->
-				<item id="4617" min="2" max="4" chance="14.7100000000003" /> <!-- Greater DEX Dye (Dex + 4 Str - 4) -->
+				<item id="4618" min="1" max="1" chance="44.8600000000003" /> <!-- Greater DEX Dye <Dex + 4 CON - 4> -->
+				<item id="4616" min="1" max="3" chance="22.3800000000003" /> <!-- Greater CON Dye <Con + 4 DEX - 4> -->
+				<item id="4617" min="2" max="4" chance="14.7100000000003" /> <!-- Greater DEX Dye <Dex + 4 Str - 4> -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="70.92" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3121,14 +3121,14 @@
 				<item id="36281" min="1" max="1" chance="1.61200000000001" /> <!-- Pagan Devil Circlet -->
 				<item id="36389" min="1" max="1" chance="32.221598653091" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="7.9571875250541" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="17691" min="1" max="1" chance="6.8908843101098" /> <!-- Lv. 4 Legendary STR Dye STR + 5 / DEX - 1 / Fire Resistance + 20 -->
-				<item id="17692" min="1" max="1" chance="6.8026938186483" /> <!-- Lv. 4 Legendary DEX Dye DEX + 5 / CON - 1 / Earth Resistance + 20 -->
-				<item id="17696" min="1" max="1" chance="6.7906678425399" /> <!-- Lv. 4 Legendary MEN Dye MEN + 5 / INT - 1 / Holy Resistance + 20 -->
+				<item id="17691" min="1" max="1" chance="6.8908843101098" /> <!-- Lv. 4 Legendary STR Dye - STR + 5 / DEX - 1 / Fire Resistance + 20 -->
+				<item id="17692" min="1" max="1" chance="6.8026938186483" /> <!-- Lv. 4 Legendary DEX Dye - DEX + 5 / CON - 1 / Earth Resistance + 20 -->
+				<item id="17696" min="1" max="1" chance="6.7906678425399" /> <!-- Lv. 4 Legendary MEN Dye - MEN + 5 / INT - 1 / Holy Resistance + 20 -->
 				<item id="19467" min="1" max="1" chance="6.7505812555119" /> <!-- Yellow Soul Crystal Fragment (R99-grade) -->
-				<item id="17693" min="1" max="1" chance="6.7024773510783" /> <!-- Lv. 4 Legendary CON Dye CON + 5 / STR - 1 / Dark Resistance + 20 -->
-				<item id="17694" min="1" max="1" chance="6.5461396616692" /> <!-- Lv. 4 Legendary INT Dye INT + 5 / WIT - 1 / Water Resistance + 20 -->
+				<item id="17693" min="1" max="1" chance="6.7024773510783" /> <!-- Lv. 4 Legendary CON Dye - CON + 5 / STR - 1 / Dark Resistance + 20 -->
+				<item id="17694" min="1" max="1" chance="6.5461396616692" /> <!-- Lv. 4 Legendary INT Dye - INT + 5 / WIT - 1 / Water Resistance + 20 -->
 				<item id="19468" min="1" max="1" chance="6.510061733344" /> <!-- Teal Soul Crystal Fragment (R99-grade) -->
-				<item id="17695" min="1" max="1" chance="6.4579491702076" /> <!-- Lv. 4 Legendary WIT Dye WIT + 5 / MEN - 1 / Wind Resistance + 20 -->
+				<item id="17695" min="1" max="1" chance="6.4579491702076" /> <!-- Lv. 4 Legendary WIT Dye - WIT + 5 / MEN - 1 / Wind Resistance + 20 -->
 				<item id="19469" min="1" max="1" chance="6.3697586787461" /> <!-- Purple Soul Crystal Fragment (R99-grade) -->
 			</drop>
 			<lucky>
@@ -3448,76 +3448,76 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17440" min="1" max="3" chance="20.84" /> <!-- Eternal Leather Boots -->
-				<item id="17436" min="1" max="3" chance="20.73" /> <!-- Eternal Leather Helmet -->
-				<item id="17438" min="1" max="3" chance="20.51" /> <!-- Eternal Leather Leggings -->
+				<item id="17440" min="1" max="3" chance="20.84" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="17436" min="1" max="3" chance="20.73" /> <!-- Eternal Leather Helmet - Light Armor -->
+				<item id="17438" min="1" max="3" chance="20.51" /> <!-- Eternal Leather Leggings - Light Armor -->
 				<item id="6656" min="1" max="1" chance="20.01" /> <!-- Antharas' Earring -->
-				<item id="17437" min="1" max="3" chance="19.57" /> <!-- Eternal Leather Armor -->
-				<item id="17439" min="1" max="3" chance="19.53" /> <!-- Eternal Leather Gloves -->
-				<item id="17430" min="1" max="3" chance="17.46" /> <!-- Eternal Helmet -->
-				<item id="17445" min="1" max="3" chance="17.44" /> <!-- Eternal Shoes -->
-				<item id="17443" min="1" max="3" chance="17.37" /> <!-- Eternal Stockings -->
-				<item id="17435" min="1" max="3" chance="17.3" /> <!-- Eternal Shield -->
-				<item id="17446" min="1" max="3" chance="17.125" /> <!-- Eternal Sigil -->
-				<item id="17433" min="1" max="3" chance="17.07" /> <!-- Eternal Gauntlets -->
-				<item id="17432" min="1" max="3" chance="17.05" /> <!-- Eternal Gaiters -->
-				<item id="17444" min="1" max="3" chance="16.9" /> <!-- Eternal Gloves -->
-				<item id="17431" min="1" max="3" chance="16.81" /> <!-- Eternal Breastplate -->
-				<item id="17441" min="1" max="3" chance="16.58" /> <!-- Eternal Circlet -->
-				<item id="17434" min="1" max="3" chance="16.55" /> <!-- Eternal Boots -->
-				<item id="17442" min="1" max="3" chance="15.84" /> <!-- Eternal Tunic -->
-				<item id="17417" min="1" max="3" chance="9.143" /> <!-- Helios Cutter -->
-				<item id="17424" min="1" max="3" chance="9.143" /> <!-- Helios Buster -->
-				<item id="17423" min="1" max="3" chance="9.142" /> <!-- Helios Shooter -->
-				<item id="17420" min="1" max="3" chance="9.133" /> <!-- Helios Fighter -->
-				<item id="17422" min="1" max="3" chance="9.126" /> <!-- Helios Thrower -->
-				<item id="17426" min="1" max="3" chance="9.123" /> <!-- Helios Retributer -->
-				<item id="17425" min="1" max="3" chance="9.107" /> <!-- Helios Caster -->
-				<item id="17416" min="1" max="3" chance="9.082" /> <!-- Helios Shaper -->
-				<item id="17418" min="1" max="3" chance="9.07" /> <!-- Helios Slasher -->
-				<item id="17421" min="1" max="3" chance="9.063" /> <!-- Helios Stormer -->
-				<item id="17419" min="1" max="3" chance="9.056" /> <!-- Helios Avenger -->
-				<item id="36425" min="1" max="1" chance="0.03" /> <!-- Antharas Dual Blunt Weapon (Fragment) -->
-				<item id="36424" min="1" max="1" chance="0.03" /> <!-- Antharas Avenger (Fragment) -->
-				<item id="36423" min="1" max="1" chance="0.03" /> <!-- Antharas Fighter (Fragment) -->
-				<item id="36422" min="1" max="1" chance="0.03" /> <!-- Antharas Stormer (Fragment) -->
-				<item id="36421" min="1" max="1" chance="0.03" /> <!-- Antharas Cutter (Fragment) -->
-				<item id="36420" min="1" max="1" chance="0.03" /> <!-- Antharas Buster (Fragment) -->
-				<item id="36419" min="1" max="1" chance="0.03" /> <!-- Antharas Thrower (Fragment) -->
-				<item id="36418" min="1" max="1" chance="0.03" /> <!-- Antharas Slasher (Fragment) -->
-				<item id="36417" min="1" max="1" chance="0.03" /> <!-- Antharas Shaper (Fragment) -->
-				<item id="36426" min="1" max="1" chance="0.03" /> <!-- Antharas Dualsword (Fragment) -->
+				<item id="17437" min="1" max="3" chance="19.57" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17439" min="1" max="3" chance="19.53" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17430" min="1" max="3" chance="17.46" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17445" min="1" max="3" chance="17.44" /> <!-- Eternal Shoes - Robe -->
+				<item id="17443" min="1" max="3" chance="17.37" /> <!-- Eternal Stockings - Robe -->
+				<item id="17435" min="1" max="3" chance="17.3" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17446" min="1" max="3" chance="17.125" /> <!-- Eternal Sigil - Robe -->
+				<item id="17433" min="1" max="3" chance="17.07" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17432" min="1" max="3" chance="17.05" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17444" min="1" max="3" chance="16.9" /> <!-- Eternal Gloves - Robe -->
+				<item id="17431" min="1" max="3" chance="16.81" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17441" min="1" max="3" chance="16.58" /> <!-- Eternal Circlet - Robe -->
+				<item id="17434" min="1" max="3" chance="16.55" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17442" min="1" max="3" chance="15.84" /> <!-- Eternal Tunic - Robe -->
+				<item id="17417" min="1" max="3" chance="9.143" /> <!-- Amaranthine Cutter -->
+				<item id="17424" min="1" max="3" chance="9.143" /> <!-- Amaranthine Buster -->
+				<item id="17423" min="1" max="3" chance="9.142" /> <!-- Amaranthine Shooter -->
+				<item id="17420" min="1" max="3" chance="9.133" /> <!-- Amaranthine Fighter -->
+				<item id="17422" min="1" max="3" chance="9.126" /> <!-- Amaranthine Thrower -->
+				<item id="17426" min="1" max="3" chance="9.123" /> <!-- Amaranthine Retributer -->
+				<item id="17425" min="1" max="3" chance="9.107" /> <!-- Amaranthine Caster -->
+				<item id="17416" min="1" max="3" chance="9.082" /> <!-- Amaranthine Shaper -->
+				<item id="17418" min="1" max="3" chance="9.07" /> <!-- Amaranthine Slasher -->
+				<item id="17421" min="1" max="3" chance="9.063" /> <!-- Amaranthine Stormer -->
+				<item id="17419" min="1" max="3" chance="9.056" /> <!-- Amaranthine Avenger -->
+				<item id="36425" min="1" max="1" chance="0.03" /> <!-- Antharas Dual Blunt Weapon - Fragment -->
+				<item id="36424" min="1" max="1" chance="0.03" /> <!-- Antharas Avenger - Fragment -->
+				<item id="36423" min="1" max="1" chance="0.03" /> <!-- Antharas Fighter - Fragment -->
+				<item id="36422" min="1" max="1" chance="0.03" /> <!-- Antharas Stormer - Fragment -->
+				<item id="36421" min="1" max="1" chance="0.03" /> <!-- Antharas Cutter - Fragment -->
+				<item id="36420" min="1" max="1" chance="0.03" /> <!-- Antharas Buster - Fragment -->
+				<item id="36419" min="1" max="1" chance="0.03" /> <!-- Antharas Thrower - Fragment -->
+				<item id="36418" min="1" max="1" chance="0.03" /> <!-- Antharas Slasher - Fragment -->
+				<item id="36417" min="1" max="1" chance="0.03" /> <!-- Antharas Shaper - Fragment -->
+				<item id="36426" min="1" max="1" chance="0.03" /> <!-- Antharas Dualsword - Fragment -->
 				<item id="36414" min="1" max="1" chance="100" /> <!-- Dragon Claw -->
 				<item id="19465" min="1" max="1" chance="100" /> <!-- Bottle of Antharas' Soul -->
-				<item id="35568" min="1" max="1" chance="50.19" /> <!-- Bloody Helios Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="50.19" /> <!-- Bloody Amaranthine Enhancement Stone -->
 				<item id="37781" min="1" max="1" chance="49.11" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
 				<item id="37772" min="1" max="1" chance="48.83" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 				<item id="36389" min="10" max="10" chance="29.92" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="19448" min="10" max="10" chance="29.25" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="10" max="10" chance="19.79" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="36162" min="1" max="1" chance="19.31" /> <!-- Scroll of Blessing: (R99-grade) -->
+				<item id="36162" min="1" max="1" chance="19.31" /> <!-- Scroll of Blessing (R99-grade) -->
 				<item id="36386" min="10" max="10" chance="19.19" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="17703" min="1" max="1" chance="17.29" /> <!-- Lv. 5 Ancient STR Dye -->
-				<item id="17714" min="1" max="1" chance="17.2" /> <!-- Lv. 5 Legendary MEN Dye -->
-				<item id="17705" min="1" max="1" chance="17.11" /> <!-- Lv. 5 Ancient CON Dye -->
-				<item id="17707" min="1" max="1" chance="16.92" /> <!-- Lv. 5 Ancient WIT Dye -->
-				<item id="17711" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Legendary CON Dye -->
-				<item id="17709" min="1" max="1" chance="16.79" /> <!-- Lv. 5 Legendary STR Dye -->
-				<item id="17713" min="1" max="1" chance="16.69" /> <!-- Lv. 5 Legendary WIT Dye -->
-				<item id="17697" min="1" max="1" chance="16.63" /> <!-- Lv. 5 Giant STR Dye -->
-				<item id="17706" min="1" max="1" chance="16.54" /> <!-- Lv. 5 Ancient INT Dye -->
-				<item id="17710" min="1" max="1" chance="16.43" /> <!-- Lv. 5 Legendary DEX Dye -->
+				<item id="17703" min="1" max="1" chance="17.29" /> <!-- Lv. 5 Ancient STR Dye - STR + 5 / Fire Resistance + 25 -->
+				<item id="17714" min="1" max="1" chance="17.2" /> <!-- Lv. 5 Legendary MEN Dye - MEN + 5 / INT + 1 / Holy Resistance + 25 -->
+				<item id="17705" min="1" max="1" chance="17.11" /> <!-- Lv. 5 Ancient CON Dye - CON + 5 / Dark Resistance + 25 -->
+				<item id="17707" min="1" max="1" chance="16.92" /> <!-- Lv. 5 Ancient WIT Dye - WIT + 5 / Wind Resistance + 25 -->
+				<item id="17711" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Legendary CON Dye - CON + 5 / STR + 1 / Dark Resistance + 25 -->
+				<item id="17709" min="1" max="1" chance="16.79" /> <!-- Lv. 5 Legendary STR Dye - STR + 5 / DEX + 1 / Fire Resistance + 25 -->
+				<item id="17713" min="1" max="1" chance="16.69" /> <!-- Lv. 5 Legendary WIT Dye - WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
+				<item id="17697" min="1" max="1" chance="16.63" /> <!-- Lv. 5 Giant STR Dye - STR + 5 -->
+				<item id="17706" min="1" max="1" chance="16.54" /> <!-- Lv. 5 Ancient INT Dye - INT + 5 / Water Resistance + 25 -->
+				<item id="17710" min="1" max="1" chance="16.43" /> <!-- Lv. 5 Legendary DEX Dye - DEX + 5 / CON + 1 / Earth Resistance + 25 -->
 				<item id="39485" min="1" max="1" chance="16.29" /> <!-- Alchemic Tome: Dye -->
-				<item id="17701" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Giant WIT Dye -->
-				<item id="17708" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Ancient MEN Dye -->
-				<item id="17700" min="1" max="1" chance="16.21" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17701" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Giant WIT Dye - Wit + 5 -->
+				<item id="17708" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Ancient MEN Dye - MEN + 5 / Holy Resistance + 25 -->
+				<item id="17700" min="1" max="1" chance="16.21" /> <!-- Lv. 5 Giant INT Dye - INT + 5 -->
 				<item id="39484" min="1" max="1" chance="16.2" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="17704" min="1" max="1" chance="16.14" /> <!-- Lv. 5 Ancient DEX Dye -->
-				<item id="17712" min="1" max="1" chance="15.98" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="17704" min="1" max="1" chance="16.14" /> <!-- Lv. 5 Ancient DEX Dye - DEX + 5 / Earth Resistance + 25 -->
+				<item id="17712" min="1" max="1" chance="15.98" /> <!-- Lv. 5 Legendary INT Dye - INT + 5 / WIT + 1 / Water Resistance + 25 -->
 				<item id="39483" min="1" max="1" chance="15.97" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="17702" min="1" max="1" chance="15.96" /> <!-- Lv. 5 Giant MEN Dye -->
-				<item id="17698" min="1" max="1" chance="15.95" /> <!-- Lv. 5 Giant DEX Dye -->
-				<item id="17699" min="1" max="1" chance="15.92" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17702" min="1" max="1" chance="15.96" /> <!-- Lv. 5 Giant MEN Dye - Men + 5 -->
+				<item id="17698" min="1" max="1" chance="15.95" /> <!-- Lv. 5 Giant DEX Dye - DEX + 5 -->
+				<item id="17699" min="1" max="1" chance="15.92" /> <!-- Lv. 5 Giant CON Dye - CON + 5 -->
 			</drop>
 			<lucky>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

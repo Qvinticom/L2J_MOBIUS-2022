@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33503" name="Hero's Blessed Buff Scroll" type="EtcItem">
-		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate + 20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->
+		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hr. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="33504" name="Hero's Blessed Buff Scroll 5-unit Pack" type="EtcItem">
-		<!-- Contains 5 scrolls that have the following effects for 1 hour: HP Recovery Bonus, Max MP, and Critical Atk. Rate + 20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration. -->
+		<!-- Contains 5 scrolls that have the following effects for 1 hr.: HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -100,7 +100,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33505" name="Scroll: Noblesse Blessing" type="EtcItem">
-		<!-- For 60 minutes, maintains buffs upon death. -->
+		<!-- For 60 min., maintains buffs upon death. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -139,7 +139,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33507" name="Scroll: Mount Kukuru" type="EtcItem">
-		<!-- Scroll for mounting a kukuru. When used by a character who is level 40 or above, he/she can mount a Kukuru. -->
+		<!-- Scroll for mounting a kukuru. When used by a character who is level 40 or above, he/ she can mount a Kukuru. -->
 		<set name="icon" val="icon.scroll_of_kukur_event" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -159,7 +159,7 @@
 		</skills>
 	</item>
 	<item id="33508" name="Scroll: Mount Kukuru 30-unit Pack" type="EtcItem">
-		<!-- Scroll for mounting a kukuru. When used by a character who is level 40 or above, he/she can mount a Kukuru. Contains 30 scrolls that allow 10 minutes of mounting. -->
+		<!-- Scroll for mounting a kukuru. When used by a character who is level 40 or above, he/ she can mount a Kukuru. Contains 30 scrolls that allow 10 min. of mounting. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -178,7 +178,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33509" name="Returning Hero's Shirt" type="Armor">
-		<!-- T-shirt for a returning hero. When equipped, STR + 1 and Int + 1. -->
+		<!-- Shirt for a returning hero. When equipped, STR +1 and Int +1. -->
 		<set name="icon" val="icon.shirt_of_destination_event" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -200,7 +200,7 @@
 		</stats>
 	</item>
 	<item id="33510" name="Returning Hero's Belt" type="Armor">
-		<!-- Belt for a returning hero. When equipped, Weight Gauge + 5000. -->
+		<!-- Belt for a returning hero. When equipped, Weight Gauge +5000. -->
 		<set name="icon" val="icon.belt_of_destination_event" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -235,7 +235,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33512" name="Returning Hero's Vitality Replenishing Juice" type="EtcItem">
-		<!-- Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the Birthday Vitality buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
+		<!-- Recovers Vitality while acquiring XP through hunting for 4 hr. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -256,7 +256,7 @@
 		</skills>
 	</item>
 	<item id="33513" name="Returning Hero's Vitality Replenishing Juice 5-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 5 Vitality Recovering Cakes (4-hour) that recover Vitality of nearby party members while acquiring XP through hunting. -->
+		<!-- Double-click to obtain 5 Vitality Recovering Cakes (4-hr.) that recover Vitality of nearby party members while acquiring XP through hunting. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -355,7 +355,7 @@
 		</skills>
 	</item>
 	<item id="33519" name="Scroll: Enchant Weapon (R-grade)" additionalName="Campaign" type="EtcItem">
-		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases starting at + 4. All amounts are increased for blessed weapons. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -376,7 +376,7 @@
 		</skills>
 	</item>
 	<item id="33520" name="Scroll: Enchant Armor (R-grade)" additionalName="Campaign" type="EtcItem">
-		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. Greatly increased starting at + 4. Can be enhanced safely to + 3. When enhanced + 4 or more, HP also increases according to the enchant value. -->
+		<!-- When enchanted, P. Def. +2 for R-grade armor and accessories. Greatly increased starting at +4. Can be enhanced safely to +3. When enhanced +4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -430,7 +430,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33523" name="Talisman - M. Critical (Passive)" additionalName="Campaign" type="Armor">
-		<!-- M. Critical Rate + 2% when equipped. Shadow weapon. -->
+		<!-- M. Critical Rate +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -450,7 +450,7 @@
 		</skills>
 	</item>
 	<item id="33524" name="Talisman - P. Accuracy (Passive)" additionalName="Campaign" type="Armor">
-		<!-- Accuracy + 2 when equipped. Shadow weapon. -->
+		<!-- Accuracy +2 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_ph_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -470,7 +470,7 @@
 		</skills>
 	</item>
 	<item id="33525" name="Talisman - M. Accuracy (Passive)" additionalName="Campaign" type="Armor">
-		<!-- M. Accuracy + 2 when equipped. Shadow weapon. -->
+		<!-- M. Accuracy +2 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mh_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -490,7 +490,7 @@
 		</skills>
 	</item>
 	<item id="33526" name="Talisman - Evasion (Passive)" additionalName="Campaign" type="Armor">
-		<!-- Evasion + 2 when equipped. Shadow weapon. -->
+		<!-- Evasion +2 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_pm_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -510,7 +510,7 @@
 		</skills>
 	</item>
 	<item id="33527" name="Talisman - M. Evasion (Passive)" additionalName="Campaign" type="Armor">
-		<!-- M. Evasion + 2 when equipped. Shadow weapon. -->
+		<!-- M. Evasion +2 when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mm_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -530,7 +530,7 @@
 		</skills>
 	</item>
 	<item id="33528" name="Talisman - P. Critical Rate (Passive)" additionalName="Campaign" type="Armor">
-		<!-- P. Critical Rate + 2% when equipped. Shadow weapon. -->
+		<!-- P. Critical Rate +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_cr_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -550,7 +550,7 @@
 		</skills>
 	</item>
 	<item id="33529" name="Talisman - Critical Evasion (Passive)" additionalName="Campaign" type="Armor">
-		<!-- The rate of receiving a physical Critical Attacks - 2% when equipped. Shadow weapon. -->
+		<!-- The rate of receiving a physical Critical Attacks -2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_cm_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -570,7 +570,7 @@
 		</skills>
 	</item>
 	<item id="33530" name="Talisman - M. Critical (Active)" additionalName="Campaign" type="Armor">
-		<!-- M. Critical Rate + 4% when used. Shadow weapon. -->
+		<!-- M. Critical Rate +4% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mc_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -591,7 +591,7 @@
 		</skills>
 	</item>
 	<item id="33531" name="Talisman - P. Accuracy (Active)" additionalName="Campaign" type="Armor">
-		<!-- Accuracy + 4 when used. Shadow weapon. -->
+		<!-- Accuracy +4 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_ph_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -612,7 +612,7 @@
 		</skills>
 	</item>
 	<item id="33532" name="Talisman - M. Accuracy (Active)" additionalName="Campaign" type="Armor">
-		<!-- M. Accuracy + 4 when used. Shadow weapon. -->
+		<!-- M. Accuracy +4 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mh_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -633,7 +633,7 @@
 		</skills>
 	</item>
 	<item id="33533" name="Talisman - Evasion (Active)" additionalName="Campaign" type="Armor">
-		<!-- Evasion + 4 when used. Shadow weapon. -->
+		<!-- Evasion +4 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_pm_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -654,7 +654,7 @@
 		</skills>
 	</item>
 	<item id="33534" name="Talisman - M. Evasion (Active)" additionalName="Campaign" type="Armor">
-		<!-- M. Evasion + 4 when used. Shadow weapon. -->
+		<!-- M. Evasion +4 when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mm_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -675,7 +675,7 @@
 		</skills>
 	</item>
 	<item id="33535" name="Talisman - P. Critical Rate (Active)" additionalName="Campaign" type="Armor">
-		<!-- P. Critical Rate + 4% when used. Shadow weapon. -->
+		<!-- P. Critical Rate +4% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_cr_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -696,7 +696,7 @@
 		</skills>
 	</item>
 	<item id="33536" name="Talisman - Critical Evasion (Active)" additionalName="Campaign" type="Armor">
-		<!-- The rate of receiving a physical Critical Attacks - 4% when used. Shadow weapon. -->
+		<!-- The rate of receiving a physical Critical Attacks -4% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_cm_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -717,7 +717,7 @@
 		</skills>
 	</item>
 	<item id="33537" name="Basic Talisman - P. Atk. Spd." additionalName="Campaign" type="Armor">
-		<!-- P. Atk. Spd. + 2% when equipped. Shadow weapon. -->
+		<!-- P. Atk. Spd. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -737,7 +737,7 @@
 		</skills>
 	</item>
 	<item id="33538" name="Basic Talisman - P. Atk." additionalName="Campaign" type="Armor">
-		<!-- P. Atk. + 2% when equipped. Shadow weapon. -->
+		<!-- P. Atk. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -757,7 +757,7 @@
 		</skills>
 	</item>
 	<item id="33539" name="Basic Talisman - P. Def." additionalName="Campaign" type="Armor">
-		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
+		<!-- P. Def. +3% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -777,7 +777,7 @@
 		</skills>
 	</item>
 	<item id="33540" name="Basic Talisman - Casting Spd." additionalName="Campaign" type="Armor">
-		<!-- Casting Spd. + 2% when equipped. Shadow weapon. -->
+		<!-- Casting Spd. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -797,7 +797,7 @@
 		</skills>
 	</item>
 	<item id="33541" name="Basic Talisman - M. Def." additionalName="Campaign" type="Armor">
-		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
+		<!-- P. Def. +3% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -817,7 +817,7 @@
 		</skills>
 	</item>
 	<item id="33542" name="Basic Talisman - M. Atk." additionalName="Campaign" type="Armor">
-		<!-- M. Atk. + 2% when equipped. Shadow weapon. -->
+		<!-- M. Atk. +2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -837,7 +837,7 @@
 		</skills>
 	</item>
 	<item id="33543" name="Bound Samurai Long Sword*Samurai Long Sword" additionalName="Event" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. No Soul Crystal option. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Atk. Spd. by 4%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -870,7 +870,7 @@
 		</stats>
 	</item>
 	<item id="33544" name="Unidentified Samurai Long Sword*Samurai Long Sword" type="EtcItem">
-		<!-- Samurai Long Sword*Samurai Long Sword in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dualsword) -->
+		<!-- Samurai Long Sword*Samurai Long Sword in an unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. -->
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -878,7 +878,7 @@
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 	</item>
 	<item id="33545" name="Bound Tallum Blade*Damascus" additionalName="Event" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. No Soul Crystal option. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Atk. Spd. by 8%. Inflicts more damage during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -912,7 +912,7 @@
 		</stats>
 	</item>
 	<item id="33546" name="Unidentified Tallum Blade*Damascus" type="EtcItem">
-		<!-- Tallum blade*Damascus in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / dualsword) -->
+		<!-- Tallum Blade*Damascus in an unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. -->
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1408,7 +1408,7 @@
 		</stats>
 	</item>
 	<item id="33561" name="Bound Dynasty Knife - Critical Damage" additionalName="Event" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +559 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1443,7 +1443,7 @@
 		</stats>
 	</item>
 	<item id="33562" name="Bound Dynasty Halberd - Anger" additionalName="Event" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1550,7 +1550,7 @@
 		</stats>
 	</item>
 	<item id="33565" name="Bound Dynasty Cudgel - Anger" additionalName="Event" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1971,7 +1971,7 @@
 		</stats>
 	</item>
 	<item id="33577" name="Bound Dynasty Crusher - Anger" additionalName="Event" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- <Special Option>. P. Atk. +78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2076,7 +2076,7 @@
 		</stats>
 	</item>
 	<item id="33580" name="Bound Dynasty Dual Dagger" additionalName="Event" type="Weapon">
-		<!-- When enchanted, P. Atk. of a Dual Dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP. Can be equipped by Dagger Masters level 81 and higher. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2112,7 +2112,7 @@
 		</stats>
 	</item>
 	<item id="33581" name="Bound Dynasty Dualsword" additionalName="Event" type="Weapon">
-		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases the damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Critical by 109 and Max HP by 10%. Inflicts more damage during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2147,7 +2147,7 @@
 		</stats>
 	</item>
 	<item id="33582" name="Bound Dynasty Rapier - Focus" additionalName="Event" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2183,7 +2183,7 @@
 		</stats>
 	</item>
 	<item id="33583" name="Bound Dynasty Rapier - Health" additionalName="Event" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2219,7 +2219,7 @@
 		</stats>
 	</item>
 	<item id="33584" name="Bound Dynasty Rapier - Light Armor" additionalName="Event" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2471,7 +2471,6 @@
 		</stats>
 	</item>
 	<item id="33591" name="Bound Dynasty Breastplate" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2494,7 +2493,6 @@
 		</stats>
 	</item>
 	<item id="33592" name="Bound Dynasty Gaiters" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2517,7 +2515,6 @@
 		</stats>
 	</item>
 	<item id="33593" name="Bound Dynasty Helmet" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2538,7 +2535,6 @@
 		</stats>
 	</item>
 	<item id="33594" name="Bound Dynasty Gauntlets" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2560,7 +2556,6 @@
 		</stats>
 	</item>
 	<item id="33595" name="Bound Dynasty Boots" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2582,7 +2577,6 @@
 		</stats>
 	</item>
 	<item id="33596" name="Bound Dynasty Shield" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -2606,7 +2600,6 @@
 		</stats>
 	</item>
 	<item id="33597" name="Bound Dynasty Leather Armor" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2629,7 +2622,6 @@
 		</stats>
 	</item>
 	<item id="33598" name="Bound Dynasty Leather Leggings" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2652,7 +2644,6 @@
 		</stats>
 	</item>
 	<item id="33599" name="Bound Dynasty Leather Helmet" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

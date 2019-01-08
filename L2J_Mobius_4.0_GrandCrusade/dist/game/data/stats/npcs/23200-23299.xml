@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23200" level="97" type="L2Monster" name="Turan the Severed Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -45,7 +45,7 @@
 			<drop>
 				<item id="57" min="6815" max="15909" chance="70" /> <!-- Adena -->
 				<item id="35296" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Fragment -->
-				<item id="35420" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35420" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Shaper (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="23.18" /> <!-- Synthetic Braid -->
@@ -110,10 +110,10 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17401" min="1" max="1" chance="0.03" /> <!-- Seraph Shield -->
+				<item id="17401" min="1" max="1" chance="0.03" /> <!-- Seraph Shield - Heavy Armor -->
 				<item id="57" min="6454" max="15051" chance="70" /> <!-- Adena -->
 				<item id="35312" min="1" max="1" chance="0.75" /> <!-- Seraph Shield Ingredient -->
-				<item id="35436" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35436" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Shield (60%) -->
 			</drop>
 			<spoil>
 				<item id="36558" min="1" max="1" chance="10.43" /> <!-- Accessory Gem (Mid-grade) -->
@@ -249,7 +249,7 @@
 				<item id="17386" min="1" max="1" chance="0.003" /> <!-- Specter Fighter -->
 				<item id="57" min="6454" max="15051" chance="70" /> <!-- Adena -->
 				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Fragment -->
-				<item id="35424" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35424" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Fighter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36558" min="1" max="1" chance="10.14" /> <!-- Accessory Gem (Mid-grade) -->
@@ -314,10 +314,10 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17405" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Gloves -->
+				<item id="17405" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Gloves - Light Armor -->
 				<item id="57" min="6454" max="15051" chance="70" /> <!-- Adena -->
 				<item id="35316" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35440" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35440" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
 			</drop>
 			<spoil>
 				<item id="36559" min="1" max="1" chance="1.832" /> <!-- Accessory Gem (High-grade) -->
@@ -382,7 +382,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6815" max="15909" chance="70" /> <!-- Adena -->
-				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36558" min="1" max="1" chance="20.88" /> <!-- Accessory Gem (Mid-grade) -->
@@ -446,10 +446,10 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
+				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil - Robe -->
 				<item id="57" min="6815" max="15909" chance="70" /> <!-- Adena -->
 				<item id="35323" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35447" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35447" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Sigil (60%) -->
 			</drop>
 			<spoil>
 				<item id="36558" min="1" max="1" chance="21.55" /> <!-- Accessory Gem (Mid-grade) -->
@@ -842,7 +842,7 @@
 			<drop>
 				<item id="57" min="6815" max="15909" chance="70" /> <!-- Adena -->
 				<item id="35324" min="1" max="1" chance="0.3" /> <!-- Seraph Necklace Gem -->
-				<item id="35448" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35448" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Necklace (60%) -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="2.143" /> <!-- Durable Braid -->
@@ -1059,7 +1059,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7524" max="17534" chance="70" /> <!-- Adena -->
-				<item id="17434" min="1" max="1" chance="0.0055" /> <!-- Eternal Boots -->
+				<item id="17434" min="1" max="1" chance="0.0055" /> <!-- Eternal Boots - Heavy Armor -->
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
 				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
 			</drop>
@@ -1134,7 +1134,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7524" max="17534" chance="70" /> <!-- Adena -->
-				<item id="17434" min="1" max="1" chance="0.0055" /> <!-- Eternal Boots -->
+				<item id="17434" min="1" max="1" chance="0.0055" /> <!-- Eternal Boots - Heavy Armor -->
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
 				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
 			</drop>
@@ -1423,8 +1423,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6989" max="16280" chance="70" /> <!-- Adena -->
-				<item id="35334" min="1" max="1" chance="0.3" /> <!-- Helios Shooter Fragment -->
-				<item id="35458" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Shooter (60%) -->
+				<item id="35334" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shooter Fragment -->
+				<item id="35458" min="1" max="1" chance="0.0075" /> <!-- Recipe: Amaranthine Shooter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="13" /> <!-- Synthetic Braid -->
@@ -1499,7 +1499,7 @@
 				<item id="36558" min="1" max="1" chance="1.83" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
-				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36558" min="1" max="1" chance="7.185" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1575,7 +1575,7 @@
 				<item id="36558" min="1" max="1" chance="1.832" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
-				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
 				<item id="36558" min="1" max="1" chance="3.695" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1720,8 +1720,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4059" max="9454" chance="70" /> <!-- Adena -->
-				<item id="35328" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Fragment -->
-				<item id="35452" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35328" min="1" max="1" chance="0.3" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35452" min="1" max="1" chance="0.003" /> <!-- Recipe: Amaranthine Cutter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="14.19" /> <!-- Synthetic Braid -->
@@ -1790,8 +1790,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4059" max="9454" chance="70" /> <!-- Adena -->
-				<item id="35330" min="1" max="1" chance="0.3" /> <!-- Helios Avenger Fragment -->
-				<item id="35454" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Avenger (60%) -->
+				<item id="35330" min="1" max="1" chance="0.3" /> <!-- Amaranthine Avenger Fragment -->
+				<item id="35454" min="1" max="1" chance="0.003" /> <!-- Recipe: Amaranthine Avenger (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="13.99" /> <!-- Synthetic Braid -->
@@ -1860,8 +1860,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4059" max="9454" chance="70" /> <!-- Adena -->
-				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Helios Retributer Fragment -->
-				<item id="35461" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35461" min="1" max="1" chance="0.003" /> <!-- Recipe: Amaranthine Retributer (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="13.24" /> <!-- Synthetic Braid -->
@@ -2067,7 +2067,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="10020" max="23350" chance="70" /> <!-- Adena -->
-				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
+				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots - Heavy Armor -->
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
 				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
 			</drop>
@@ -2137,7 +2137,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7533" max="17555" chance="70" /> <!-- Adena -->
-				<item id="17434" min="1" max="1" chance="0.0055" /> <!-- Eternal Boots -->
+				<item id="17434" min="1" max="1" chance="0.0055" /> <!-- Eternal Boots - Heavy Armor -->
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
 				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
 			</drop>
@@ -2903,10 +2903,10 @@
 		<ai aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17407" min="1" max="1" chance="0.03" /> <!-- Seraph Circlet -->
+				<item id="17407" min="1" max="1" chance="0.03" /> <!-- Seraph Circlet - Robe -->
 				<item id="57" min="8860" max="20682" chance="70" /> <!-- Adena -->
 				<item id="35318" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35442" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35442" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Circlet (60%) -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="2.825" /> <!-- Durable Braid -->
@@ -2965,10 +2965,10 @@
 		<ai aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17396" min="1" max="1" chance="0.03" /> <!-- Seraph Helmet -->
+				<item id="17396" min="1" max="1" chance="0.03" /> <!-- Seraph Helmet - Heavy Armor -->
 				<item id="57" min="8860" max="20682" chance="70" /> <!-- Adena -->
 				<item id="35307" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35431" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="60.12" /> <!-- Synthetic Braid -->
@@ -3028,7 +3028,7 @@
 			<drop>
 				<item id="57" min="8759" max="20446" chance="70" /> <!-- Adena -->
 				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35444" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Stockings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="30.02" /> <!-- Synthetic Braid -->
@@ -3094,7 +3094,7 @@
 			<drop>
 				<item id="57" min="8670" max="20247" chance="70" /> <!-- Adena -->
 				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35443" min="1" max="1" chance="0.0075" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35443" min="1" max="1" chance="0.0075" /> <!-- Recipe: Seraph Tunic (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="28.53" /> <!-- Synthetic Braid -->
@@ -4099,7 +4099,7 @@
 		<ai clanHelpRange="300" aggroRange="450" />
 		<dropLists>
 			<drop>
-				<item id="17338" min="1" max="1" chance="0.0075" /> <!-- Twilight Helmet -->
+				<item id="17338" min="1" max="1" chance="0.0075" /> <!-- Twilight Helmet - Heavy Armor -->
 				<item id="57" min="1044" max="2436" chance="20" /> <!-- Adena -->
 				<item id="36836" min="1" max="1" chance="1.287" /> <!-- Twilight Helmet Ingredient -->
 				<item id="36774" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Helmet (60%) -->
@@ -4256,7 +4256,7 @@
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17341" min="1" max="1" chance="0.03" /> <!-- Twilight Gauntlets -->
+				<item id="17341" min="1" max="1" chance="0.03" /> <!-- Twilight Gauntlets - Heavy Armor -->
 				<item id="57" min="1288" max="3006" chance="20" /> <!-- Adena -->
 				<item id="36839" min="1" max="1" chance="2.139" /> <!-- Twilight Gauntlet Ingredient -->
 				<item id="36777" min="1" max="1" chance="0.3" /> <!-- Recipe: Twilight Gauntlets (60%) -->
@@ -4330,7 +4330,7 @@
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17342" min="1" max="1" chance="0.03" /> <!-- Twilight Boots -->
+				<item id="17342" min="1" max="1" chance="0.03" /> <!-- Twilight Boots - Heavy Armor -->
 				<item id="57" min="1140" max="2660" chance="20" /> <!-- Adena -->
 				<item id="36840" min="1" max="1" chance="1.933" /> <!-- Twilight Boot Ingredient -->
 				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
@@ -4404,7 +4404,7 @@
 		<ai clanHelpRange="300" aggroRange="450" />
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield - Heavy Armor -->
 				<item id="57" min="1072" max="2504" chance="20" /> <!-- Adena -->
 				<item id="36841" min="1" max="1" chance="1.775" /> <!-- Twilight Shield Ingredient -->
 				<item id="36779" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Shield (60%) -->
@@ -4928,12 +4928,12 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17406" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Boots -->
+				<item id="17406" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Boots - Light Armor -->
 				<item id="57" min="1597" max="3732" chance="20" /> <!-- Adena -->
 				<item id="36528" min="1" max="1" chance="1.835" /> <!-- Metallic Fiber -->
 				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
 				<item id="35317" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35441" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35441" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Boots (60%) -->
 			</drop>
 			<spoil>
 				<item id="36528" min="1" max="1" chance="10.9" /> <!-- Metallic Fiber -->
@@ -5006,7 +5006,7 @@
 			<drop>
 				<item id="57" min="1645" max="3838" chance="20" /> <!-- Adena -->
 				<item id="35302" min="1" max="1" chance="0.075" /> <!-- Specter Thrower Fragment -->
-				<item id="35426" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35426" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="17.63" /> <!-- Thin Braid -->
@@ -5076,10 +5076,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17400" min="1" max="1" chance="0.003" /> <!-- Seraph Boots -->
+				<item id="17400" min="1" max="1" chance="0.003" /> <!-- Seraph Boots - Heavy Armor -->
 				<item id="57" min="1537" max="3586" chance="20" /> <!-- Adena -->
 				<item id="35311" min="1" max="1" chance="0.075" /> <!-- Seraph Boot Ingredient -->
-				<item id="35435" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35435" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Boots (60%) -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="16.38" /> <!-- Thin Braid -->
@@ -5300,7 +5300,7 @@
 				<item id="17384" min="1" max="1" chance="0.0009" /> <!-- Specter Slasher -->
 				<item id="57" min="1883" max="4395" chance="20" /> <!-- Adena -->
 				<item id="35298" min="1" max="1" chance="0.03" /> <!-- Specter Slasher Fragment -->
-				<item id="35422" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35422" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Slasher (60%) -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="19.13" /> <!-- Thin Braid -->
@@ -5370,10 +5370,10 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17399" min="1" max="1" chance="0.003" /> <!-- Seraph Gauntlets -->
+				<item id="17399" min="1" max="1" chance="0.003" /> <!-- Seraph Gauntlets - Heavy Armor -->
 				<item id="57" min="1765" max="4117" chance="20" /> <!-- Adena -->
 				<item id="35310" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35434" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35434" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gauntlets (60%) -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="18.65" /> <!-- Thin Braid -->
@@ -5449,7 +5449,7 @@
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -5516,13 +5516,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy Armor -->
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="35341" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlet Ingredient -->
 				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
 			</drop>
 			<spoil>
 				<item id="36523" min="1" max="1" chance="1.959" /> <!-- Adamantite -->
@@ -5618,10 +5618,10 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -5694,10 +5694,10 @@
 				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="6.907" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="6.907" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -5768,13 +5768,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
-				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Helios Slasher Fragment -->
+				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Amaranthine Slasher Fragment -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Slasher (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="6.903" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="6.903" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -5838,7 +5838,7 @@
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Helios Fragment -->
+				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
@@ -5923,7 +5923,7 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
@@ -5996,11 +5996,11 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
-				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Amaranthine Thrower Fragment -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -6323,7 +6323,7 @@
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35350" min="1" max="1" chance="0.0075" /> <!-- Eternal Tunic Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35474" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35474" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Tunic (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6377,10 +6377,10 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet -->
+				<item id="17441" min="1" max="1" chance="0.0009" /> <!-- Eternal Circlet - Robe -->
 				<item id="57" min="632" max="1475" chance="20" /> <!-- Adena -->
 				<item id="35349" min="1" max="1" chance="0.0075" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35473" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35473" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Circlet (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6437,10 +6437,10 @@
 			<drop>
 				<item id="57" min="632" max="1475" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
-				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
+				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Amaranthine Buster Fragment -->
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
+				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Buster (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6548,7 +6548,7 @@
 				<item id="35351" min="1" max="1" chance="0.03" /> <!-- Eternal Stocking Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35475" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35475" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Stockings (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6609,7 +6609,7 @@
 				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35467" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35467" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shield (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6726,13 +6726,13 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
 				<item id="57" min="639" max="1491" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
 				<item id="35352" min="1" max="1" chance="0.03" /> <!-- Eternal Glove Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35476" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35476" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gloves (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -6846,12 +6846,12 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil -->
+				<item id="17446" min="1" max="1" chance="0.0009" /> <!-- Eternal Sigil - Robe -->
 				<item id="57" min="955" max="2229" chance="20" /> <!-- Adena -->
 				<item id="35354" min="1" max="1" chance="0.03" /> <!-- Eternal Sigil Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35478" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35478" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Sigil (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->

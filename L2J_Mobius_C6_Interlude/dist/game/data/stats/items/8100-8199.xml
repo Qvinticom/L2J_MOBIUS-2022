@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8100" type="EtcItem" name="Destroyed Golem Shards">
+		<!-- Shards obtained from hunting the Golem. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -15,6 +16,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="8101" type="EtcItem" name="Dwarf's Favor">
+		<!-- Letter of introduction to Yumita, written by Head Blacksmith Newyear of Schuttgart Village. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -29,6 +31,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8102" type="Weapon" name="Pa'agrian Sword - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 77. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1980"/>
@@ -76,6 +79,7 @@
 		</for>
 	</item>
 	<item id="8103" type="Weapon" name="Pa'agrian Sword - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1980"/>
@@ -123,6 +127,7 @@
 		</for>
 	</item>
 	<item id="8104" type="Weapon" name="Pa'agrian Sword - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from a target when one makes a critical attack. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1980"/>
@@ -170,6 +175,7 @@
 		</for>
 	</item>
 	<item id="8105" type="Weapon" name="Guardian Sword - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 8 HP from a target when one makes a critical attack. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -217,6 +223,7 @@
 		</for>
 	</item>
 	<item id="8106" type="Weapon" name="Guardian Sword - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -264,6 +271,7 @@
 		</for>
 	</item>
 	<item id="8107" type="Weapon" name="Guardian Sword - Critical Bleed">
+		<!-- <Soul Crystal Enhancement>. When launching a regular critical attack, it causes the target to bleed with a success rate of 24%. Effect 7. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -311,6 +319,7 @@
 		</for>
 	</item>
 	<item id="8108" type="Weapon" name="Infernal Master - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -335,7 +344,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3037"/>
+		<set name="item_skill_id" val="3037"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="6"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -358,6 +367,7 @@
 		</for>
 	</item>
 	<item id="8109" type="Weapon" name="Infernal Master - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. Inflicts additional damage during a critical attack by 297. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -382,7 +392,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3066"/>
+		<set name="item_skill_id" val="3066"/> <!-- Special Ability: Critical Damage -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -403,6 +413,7 @@
 		</for>
 	</item>
 	<item id="8110" type="Weapon" name="Infernal Master - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 61. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -427,7 +438,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3050"/>
+		<set name="item_skill_id" val="3050"/> <!-- Special Ability: Focus -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -450,6 +461,7 @@
 		</for>
 	</item>
 	<item id="8111" type="Weapon" name="Mysterious Sword - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1430"/>
@@ -474,7 +486,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -496,6 +508,7 @@
 		</for>
 	</item>
 	<item id="8112" type="Weapon" name="Mysterious Sword - Magic Power">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15% and M. Atk. by 75. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1430"/>
@@ -544,6 +557,7 @@
 		</for>
 	</item>
 	<item id="8113" type="Weapon" name="Mysterious Sword - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with an 8% chance of success when using bad magic. Effect 3. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1430"/>
@@ -572,7 +586,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1164"/>
+		<set name="onCast_skill_id" val="1164"/> <!-- Curse: Weakness -->
 		<set name="onCast_skill_lvl" val="6"/>
 		<set name="onCast_skill_chance" val="8"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -589,6 +603,7 @@
 		</for>
 	</item>
 	<item id="8114" type="Weapon" name="Ecliptic Sword - Empower">
+		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 26. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -636,6 +651,7 @@
 		</for>
 	</item>
 	<item id="8115" type="Weapon" name="Ecliptic Sword - Magic Power">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15% and M. Atk. by 112. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -684,6 +700,7 @@
 		</for>
 	</item>
 	<item id="8116" type="Weapon" name="Ecliptic Sword - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. When using bad magic on a target, it silences the target with a success rate of 10%. Effect 1. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -731,6 +748,7 @@
 		</for>
 	</item>
 	<item id="8117" type="Weapon" name="Wizard's Tear - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -755,7 +773,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -777,6 +795,7 @@
 		</for>
 	</item>
 	<item id="8118" type="Weapon" name="Wizard's Tear - Magic Power">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15% and M. Atk. by 139. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -825,6 +844,7 @@
 		</for>
 	</item>
 	<item id="8119" type="Weapon" name="Wizard's Tear - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -849,7 +869,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3048"/>
+		<set name="item_skill_id" val="3048"/> <!-- Special Ability: Conversion -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -874,6 +894,7 @@
 		</for>
 	</item>
 	<item id="8120" type="Weapon" name="Dwarven Hammer - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2010"/>
@@ -921,6 +942,7 @@
 		</for>
 	</item>
 	<item id="8121" type="Weapon" name="Dwarven Hammer - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases maximum HP by 15% and increases P. Atk. by 26. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2010"/>
@@ -969,6 +991,7 @@
 		</for>
 	</item>
 	<item id="8122" type="Weapon" name="Dwarven Hammer - Critical Bleed">
+		<!-- <Soul Crystal Enhancement>. During a critical attack, it causes the enemy to start to bleed with a success rate of 42%. Effect 5. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2010"/>
@@ -1016,6 +1039,7 @@
 		</for>
 	</item>
 	<item id="8123" type="Weapon" name="Karik Horn - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 77. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2020"/>
@@ -1063,6 +1087,7 @@
 		</for>
 	</item>
 	<item id="8124" type="Weapon" name="Karik Horn - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 7%. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2020"/>
@@ -1110,6 +1135,7 @@
 		</for>
 	</item>
 	<item id="8125" type="Weapon" name="Karik Horn - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from a target when one makes a critical attack. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2020"/>
@@ -1157,6 +1183,7 @@
 		</for>
 	</item>
 	<item id="8126" type="Weapon" name="Destroyer Hammer - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1910"/>
@@ -1181,7 +1208,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="4"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1202,6 +1229,7 @@
 		</for>
 	</item>
 	<item id="8127" type="Weapon" name="Destroyer Hammer - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Sp.d by 6%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1910"/>
@@ -1226,7 +1254,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3037"/>
+		<set name="item_skill_id" val="3037"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="6"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1249,6 +1277,7 @@
 		</for>
 	</item>
 	<item id="8128" type="Weapon" name="Destroyer Hammer - Critical Drain">
+		<!-- <Soul Crystal Enhancement>. Absorbs 18 HP from a target when one makes a critical attack. Increases the amount of damage one inflicts during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1910"/>
@@ -1280,7 +1309,7 @@
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3022"/>
+		<set name="onCrit_skill_id" val="3022"/> <!-- Special Ability: Critical Drain -->
 		<set name="onCrit_skill_lvl" val="5"/>
 		<set name="onCrit_skill_chance" val="10"/>
 		<for>
@@ -1294,6 +1323,7 @@
 		</for>
 	</item>
 	<item id="8129" type="Weapon" name="Ice Storm Hammer - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 68. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1950"/>
@@ -1341,6 +1371,7 @@
 		</for>
 	</item>
 	<item id="8130" type="Weapon" name="Ice Storm Hammer - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases Maximum HP 15% and increases P. Atk. by 28. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1950"/>
@@ -1389,6 +1420,7 @@
 		</for>
 	</item>
 	<item id="8131" type="Weapon" name="Ice Storm Hammer - Critical Bleed">
+		<!-- <Soul Crystal Enhancement>. During a regular critical attack, it causes the enemy to start to bleed with a success rate of 41%. Effect 5. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1950"/>
@@ -1436,6 +1468,7 @@
 		</for>
 	</item>
 	<item id="8132" type="Weapon" name="Star Buster - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -1483,6 +1516,7 @@
 		</for>
 	</item>
 	<item id="8133" type="Weapon" name="Star Buster - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -1530,6 +1564,7 @@
 		</for>
 	</item>
 	<item id="8134" type="Weapon" name="Star Buster - Rsk. Focus">
+		<!-- <Soul Crystal Enhancement>. Critical attack rate increases by 99 when the character's HP falls to 60% or below. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -1581,6 +1616,7 @@
 		</for>
 	</item>
 	<item id="8135" type="Weapon" name="Doom Crusher - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -1605,7 +1641,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="3"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1626,6 +1662,7 @@
 		</for>
 	</item>
 	<item id="8136" type="Weapon" name="Doom Crusher - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases maximum HP by 15% and increases P. Atk. by 11% and damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -1650,7 +1687,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3057"/>
+		<set name="item_skill_id" val="3057"/> <!-- Special Ability: Anger -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1671,6 +1708,7 @@
 		</for>
 	</item>
 	<item id="8137" type="Weapon" name="Doom Crusher - Rsk. Haste">
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by 11% when HP falls to 60% or below. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -1695,7 +1733,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3032"/>
+		<set name="item_skill_id" val="3032"/> <!-- Special Ability: Rsk. Haste -->
 		<set name="item_skill_lvl" val="4"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1722,6 +1760,7 @@
 		</for>
 	</item>
 	<item id="8138" type="Weapon" name="Ecliptic Axe - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 60% and decreases maximum HP by 40%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1640"/>
@@ -1746,7 +1785,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3048"/>
+		<set name="item_skill_id" val="3048"/> <!-- Special Ability: Conversion -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1771,6 +1810,7 @@
 		</for>
 	</item>
 	<item id="8139" type="Weapon" name="Ecliptic Axe - Magic Power">
+		<!-- <Soul Crystal Enhancement>. When using magic, increases MP Consumption by 15%, and M. Atk. by 112. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1640"/>
@@ -1819,6 +1859,7 @@
 		</for>
 	</item>
 	<item id="8140" type="Weapon" name="Ecliptic Axe - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. When using bad magic, casting Dryad Root is done at the rate of 10% probability. Effect 1. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1640"/>
@@ -1847,7 +1888,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1201"/>
+		<set name="onCast_skill_id" val="1201"/> <!-- Dryad Root -->
 		<set name="onCast_skill_lvl" val="23"/>
 		<set name="onCast_skill_chance" val="10"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -1864,6 +1905,7 @@
 		</for>
 	</item>
 	<item id="8141" type="Weapon" name="Spell Breaker - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd by 15%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1620"/>
@@ -1888,7 +1930,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -1910,6 +1952,7 @@
 		</for>
 	</item>
 	<item id="8142" type="Weapon" name="Spell Breaker - Magic Mental Shield">
+		<!-- <Soul Crystal Enhancement>. Casts Mental Shield against the target with 50% chance of success when using good magic. Effect 4. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1620"/>
@@ -1938,7 +1981,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1035"/>
+		<set name="onCast_skill_id" val="1035"/> <!-- Mental Shield -->
 		<set name="onCast_skill_lvl" val="4"/>
 		<set name="onCast_skill_chance" val="50"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -1957,6 +2000,7 @@
 		</for>
 	</item>
 	<item id="8143" type="Weapon" name="Spell Breaker - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Casts Dryad Root against the target with 10% chance of success when using bad magic. Effect 1. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1620"/>
@@ -1985,7 +2029,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1201"/>
+		<set name="onCast_skill_id" val="1201"/> <!-- Dryad Root -->
 		<set name="onCast_skill_lvl" val="23"/>
 		<set name="onCast_skill_chance" val="10"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -2002,6 +2046,7 @@
 		</for>
 	</item>
 	<item id="8144" type="Weapon" name="Kaim Vanul's Bones - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1570"/>
@@ -2026,7 +2071,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3014"/>
+		<set name="item_skill_id" val="3014"/> <!-- Special Ability: Mana Up -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -2047,6 +2092,7 @@
 		</for>
 	</item>
 	<item id="8145" type="Weapon" name="Kaim Vanul's Bones - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Casts Silence against the target with 10% chance of success when using bad magic. Effect 1. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1570"/>
@@ -2094,6 +2140,7 @@
 		</for>
 	</item>
 	<item id="8146" type="Weapon" name="Kaim Vanul's Bones - Conversion">
+		<!-- <Soul Crystal Enhancement>. Increases the maximum MP by 60% and decreases the maximum HP by 40%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1570"/>
@@ -2118,7 +2165,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3048"/>
+		<set name="item_skill_id" val="3048"/> <!-- Special Ability: Conversion -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -2143,6 +2190,7 @@
 		</for>
 	</item>
 	<item id="8147" type="Weapon" name="Spiritual Eye - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1550"/>
@@ -2167,7 +2215,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3014"/>
+		<set name="item_skill_id" val="3014"/> <!-- Special Ability: Mana Up -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -2188,6 +2236,7 @@
 		</for>
 	</item>
 	<item id="8148" type="Weapon" name="Spiritual Eye - Magic Poison">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Poison against the target with an X% chance of success when using bad magic. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1550"/>
@@ -2216,7 +2265,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1168"/>
+		<set name="onCast_skill_id" val="1168"/> <!-- Curse: Poison -->
 		<set name="onCast_skill_lvl" val="6"/>
 		<set name="onCast_skill_chance" val="10"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -2233,6 +2282,7 @@
 		</for>
 	</item>
 	<item id="8149" type="Weapon" name="Spiritual Eye - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1550"/>
@@ -2257,7 +2307,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -2279,6 +2329,7 @@
 		</for>
 	</item>
 	<item id="8150" type="Weapon" name="Flaming Dragon Skull - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1530"/>
@@ -2303,7 +2354,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -2325,6 +2376,7 @@
 		</for>
 	</item>
 	<item id="8151" type="Weapon" name="Flaming Dragon Skull - Magic Power">
+		<!-- <Soul Crystal Enhancement>. Increases MP Consumption by 15%, M. Atk. by 167 and damage inflicted during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1530"/>
@@ -2349,7 +2401,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3073"/>
+		<set name="item_skill_id" val="3073"/> <!-- Special Ability: Magic Power -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -2370,6 +2422,7 @@
 		</for>
 	</item>
 	<item id="8152" type="Weapon" name="Flaming Dragon Skull - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. Casts Silence against the target with 10% chance of success when using bad magic. Effect 1. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1530"/>
@@ -2398,7 +2451,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="3074"/>
+		<set name="onCast_skill_id" val="3074"/> <!-- Special Ability: Magic Silence -->
 		<set name="onCast_skill_lvl" val="1"/>
 		<set name="onCast_skill_chance" val="10"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -2415,6 +2468,7 @@
 		</for>
 	</item>
 	<item id="8153" type="EtcItem" name="Adventurer's Guide Book">
+		<!-- An essential read for adventurers. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2429,6 +2483,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8154" type="EtcItem" name="Herb of Life">
+		<!-- Recovers a certain amount of HP immediately. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2443,6 +2498,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8155" type="EtcItem" name="Herb of Mana">
+		<!-- Recovers a certain amount of MP immediately. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2457,6 +2513,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8156" type="EtcItem" name="Herb of Power">
+		<!-- Increases P. Atk for a certain period of time. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2471,6 +2528,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8157" type="EtcItem" name="Herb of Magic">
+		<!-- Instantly increases M. Atk. for a certain period of time. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2485,6 +2543,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8158" type="EtcItem" name="Skull of the Dead: C-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2499,6 +2558,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8159" type="EtcItem" name="Skull of the Dead: B-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2513,6 +2573,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8160" type="EtcItem" name="Skull of the Dead: A-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2527,6 +2588,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8161" type="EtcItem" name="Dragon's Heart: C-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2541,6 +2603,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8162" type="EtcItem" name="Dragon's Heart: B-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2555,6 +2618,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8163" type="EtcItem" name="Dragon's Heart: A-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2569,6 +2633,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8164" type="EtcItem" name="Egg of Earth: C-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2583,6 +2648,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8165" type="EtcItem" name="Egg of Earth: B-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2597,6 +2663,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8166" type="EtcItem" name="Egg of Earth: A-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2611,6 +2678,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8167" type="EtcItem" name="False Nucleus of Life: C-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2625,6 +2693,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8168" type="EtcItem" name="False Nucleus of Life: B-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2639,6 +2708,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8169" type="EtcItem" name="False Nucleus of Life: A-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2653,6 +2723,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8170" type="EtcItem" name="Angel's Soul: C-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2667,6 +2738,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8171" type="EtcItem" name="Angel's Soul: B-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2681,6 +2753,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8172" type="EtcItem" name="Angel's Soul: A-Grade">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2695,6 +2768,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8173" type="EtcItem" name="Cradle of Creation: C-Grade (Not used)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2709,6 +2783,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8174" type="EtcItem" name="Cradle of Creation: B-Grade (Not used)">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2723,6 +2798,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8175" type="EtcItem" name="Cradle of Creation">
+		<!-- Win this item by gambling and exchange it for an A-Grade item. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2737,6 +2813,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8176" type="EtcItem" name="Destruction Tombstone">
+		<!-- Obtained by attacking a Raid Boss. You can assemble this Life Crystal and trade it for something useful. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -2751,6 +2828,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8177" type="Armor" name="Raid Challenger's Circlet">
+		<!-- Beginner's Raid Challenger Circlet. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2774,6 +2852,7 @@
 		</for>
 	</item>
 	<item id="8178" type="Armor" name="Raid Adventurer's Circlet">
+		<!-- Intermediate Raid Adventurer Circlet -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2797,6 +2876,7 @@
 		</for>
 	</item>
 	<item id="8179" type="Armor" name="Raid Master's Circlet">
+		<!-- Advanced Raid Master Circlet. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2820,6 +2900,7 @@
 		</for>
 	</item>
 	<item id="8180" type="Armor" name="Circlet of Ice Fairy Sirra">
+		<!-- Circlet obtained by attacking the Ice Fairy Sirra. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2843,6 +2924,7 @@
 		</for>
 	</item>
 	<item id="8181" type="Armor" name="Academy Circlet">
+		<!-- Circlet awarded to graduates of the Academy. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2866,6 +2948,7 @@
 		</for>
 	</item>
 	<item id="8182" type="Armor" name="Circlet of Rune">
+		<!-- Rose Circlet. Can be worn by the lord of Rune Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2882,13 +2965,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3633"/>
+		<set name="item_skill_id" val="3633"/> <!-- Residential Shock Immunity -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="0" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="8183" type="Armor" name="Circlet of Schuttgart">
+		<!-- Hammer and Torch Circlet. Can be worn by the lord of Schuttgart Castle and clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2905,13 +2989,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3633"/>
+		<set name="item_skill_id" val="3633"/> <!-- Residential Shock Immunity -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="0" order="0x10" stat="pDef"/>
 		</for>
 	</item>
 	<item id="8184" type="Armor" name="Party Hat">
+		<!-- A funky hair accessory which uses 2 hair accessory slots. -->
 		<set name="bodypart" val="dhair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2935,6 +3020,7 @@
 		</for>
 	</item>
 	<item id="8185" type="Armor" name="Feathered Hat">
+		<!-- A wide-brimmed hat with a feather. Uses 2 accessory slots. -->
 		<set name="bodypart" val="dhair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2958,6 +3044,7 @@
 		</for>
 	</item>
 	<item id="8186" type="Armor" name="Artisan's Goggles">
+		<!-- Eye protection that uses 2 accessory slots. -->
 		<set name="bodypart" val="dhair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -2981,6 +3068,7 @@
 		</for>
 	</item>
 	<item id="8187" type="Armor" name="Demon Horns">
+		<!-- A hair accessory for the 2006 Halloween Event. -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -3004,6 +3092,7 @@
 		</for>
 	</item>
 	<item id="8188" type="Armor" name="Little Angel Wings">
+		<!-- A wing-shaped hair accessory. -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -3027,6 +3116,7 @@
 		</for>
 	</item>
 	<item id="8189" type="Armor" name="Fairy Antennae">
+		<!-- Cute antennae hair accessory with stars. -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -3050,6 +3140,7 @@
 		</for>
 	</item>
 	<item id="8190" type="Weapon" name="Demonic Sword Zariche">
+		<!-- A deadly and powerful magical sword that was once wielded by the devil Bremnon himself. It is always thirsty for blood. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1840"/>
@@ -3095,6 +3186,7 @@
 		</for>
 	</item>
 	<item id="8191" type="Armor" name="Frintezza's Necklace">
+		<!-- Increases resistance to Sleep by 30%, to Poison by 50%, to Bleed by 50%, to Paralysis by 30%, to Shock by 30%. Decreases Re-use Delay. Also produces the effects of Damange Shield, and enhanced ability to defend against dark attacks. -->
 		<set name="bodypart" val="neck"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -3111,7 +3203,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3604"/>
+		<set name="item_skill_id" val="3604"/> <!-- Frintezza's Necklace -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="95" order="0x10" stat="mDef"/>
@@ -3120,6 +3212,7 @@
 		</for>
 	</item>
 	<item id="8192" type="EtcItem" name="Breaking Arrow">
+		<!-- Double-click the arrow to temporarily stop Frintezza's musical performance. This gets deleted when one enters the Tomb of the Last Emperor. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="3"/>
@@ -3134,6 +3227,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8193" type="EtcItem" name="Fisherman's Potion - Green">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a green fish (level 1~3 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -3148,6 +3242,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8194" type="EtcItem" name="Fisherman's Potion - Jade">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a jade fish (level 4~6 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -3162,6 +3257,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8195" type="EtcItem" name="Fisherman's Potion - Blue">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a blue fish (level 7~9 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -3176,6 +3272,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8196" type="EtcItem" name="Fisherman's Potion - Yellow">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a yellow fish (level 10~12 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -3190,6 +3287,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8197" type="EtcItem" name="Fisherman's Potion - Orange">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch an orange fish (level 13~15 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -3204,6 +3302,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8198" type="EtcItem" name="Fisherman's Potion - Purple">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a purple fish (level 16~18 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -3218,6 +3317,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="8199" type="EtcItem" name="Fisherman's Potion - Red">
+		<!-- By lowering one's fishing skill level, this potion allows one to catch a red fish (level 19~21 fish). If one uses a potion that is designed for a higher fishing skill level than one's own, the potion will have no effect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>

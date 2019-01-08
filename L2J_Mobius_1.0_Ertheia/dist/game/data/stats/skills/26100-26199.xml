@@ -1,27 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="26100" toLevel="1" name="Tears Dualsword Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26101" toLevel="1" name="Tears Dual Dagger Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26102" toLevel="1" name="Tears Dual Blunt Weapon Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26103" toLevel="1" name="Tears Shield Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26104" toLevel="1" name="Tears Sigil Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -58,7 +53,6 @@
 		</effects>
 	</skill>
 	<skill id="26107" toLevel="1" name="Angel Cat's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60min., P. Atk. + 5%, M. Atk. + 20%, Atk. Spd. + 5%, Casting Spd. + 5%, and SP/XP gain through hunt + 30%. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A2</operateType>
@@ -67,7 +61,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="26108" toLevel="1" name="Returning Hero's Wondrous Cubic">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>-1000</reuseDelay>
@@ -146,28 +139,25 @@
 		</effects>
 	</skill>
 	<skill id="26112" toLevel="1" name="Kamaloka Secret Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26113" toLevel="1" name="Kamaloka Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26114" toLevel="1" name="Daily PC Support">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., STR/DEX/CON/INT/WIT/MEN + 3, Attack Attribute Bonus + 30, and Attribute Resistance + 30. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="26115" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26116" toLevel="6" name="Zodiac Agathion Stat Boost">
+		<!-- MEN + 1. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -397,7 +387,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="26120" toLevel="12" name="Scale of Life">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Equalizes entire party's HP and restores 333 HP/second for 15 sec. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A2</operateType>
@@ -441,7 +430,6 @@
 		</effects>
 	</skill>
 	<skill id="26121" toLevel="12" name="Rocky Camouflage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A2</operateType>
@@ -488,7 +476,6 @@
 		</effects>
 	</skill>
 	<skill id="26122" toLevel="12" name="Mad Cow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., P./M. Atk., and Atk./Casting Spd. x 2. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_skill_i00</icon>
 		<operateType>A2</operateType>
@@ -584,7 +571,6 @@
 		</effects>
 	</skill>
 	<skill id="26124" toLevel="12" name="Bountiful Resurrection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resurrect from death with full health restored. Buff/Debuffs remain after death. Noblesse Blessing and Lucky Charm are an exception. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_may_skill_i00</icon>
 		<operateType>A2</operateType>
@@ -621,7 +607,6 @@
 		</effects>
 	</skill>
 	<skill id="26125" toLevel="12" name="Scorpion's Mass Exile">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose 282 HP/second. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A2</operateType>
@@ -682,7 +667,6 @@
 		</effects>
 	</skill>
 	<skill id="26126" toLevel="12" name="Mass Binding Flood">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Thrusts target and nearby enemies into the air and immobilizes them for 10 sec., inflicting 100 damage/second. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A1</operateType>
@@ -760,7 +744,6 @@
 		</effects>
 	</skill>
 	<skill id="26127" toLevel="12" name="Slippery Scale">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., defends against debuffs 5 times. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A2</operateType>
@@ -783,7 +766,6 @@
 		</reuseDelay>
 	</skill>
 	<skill id="26128" toLevel="12" name="Archer's Call">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons all party members to you. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A1</operateType>
@@ -806,7 +788,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="26129" toLevel="12" name="Exoskeletal Shield">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Reflects 20% of received damage. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_june_skill_i00</icon>
 		<operateType>A2</operateType>
@@ -828,7 +809,6 @@
 		</reuseDelay>
 	</skill>
 	<skill id="26130" toLevel="1" name="Dark Assassin's Move">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Goes into Hide state for 10 seconds. -->
 		<icon>BranchIcon.Icon.dark_assassin</icon>
 		<operateType>A2</operateType>
@@ -838,222 +818,178 @@
 		<reuseDelay>180000</reuseDelay>
 	</skill>
 	<skill id="26131" toLevel="1" name="Appearance Stone: Dark Assassin Suit">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26132" toLevel="1" name="Lucky Day Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26133" toLevel="1" name="Blessed Amaranthine Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26134" toLevel="1" name="Blessed Eternal Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26135" toLevel="1" name="Luck Box 1">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26136" toLevel="1" name="Luck Box 2">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26137" toLevel="1" name="Luck Box 3">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26138" toLevel="1" name="Agathion - Virgo Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26139" toLevel="1" name="Agathion - Virgo Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26140" toLevel="1" name="Agathion - Virgo Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26141" toLevel="1" name="Agathion - Capricorn Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26142" toLevel="1" name="Agathion - Capricorn Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26143" toLevel="1" name="Agathion - Capricorn Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26144" toLevel="1" name="Agathion - Libra Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26145" toLevel="1" name="Agathion - Libra Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26146" toLevel="1" name="Agathion - Libra Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26147" toLevel="1" name="Agathion - Aries Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26148" toLevel="1" name="Agathion - Aries Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26149" toLevel="1" name="Agathion - Aries Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26150" toLevel="1" name="Agathion - Taurus Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26151" toLevel="1" name="Agathion - Taurus Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26152" toLevel="1" name="Agathion - Taurus Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26153" toLevel="1" name="Agathion - Leo Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26154" toLevel="1" name="Agathion - Leo Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26155" toLevel="1" name="Agathion - Leo Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26156" toLevel="1" name="Agathion - Gemini Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26157" toLevel="1" name="Agathion - Gemini Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26158" toLevel="1" name="Agathion - Gemini Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26159" toLevel="1" name="Agathion - Scorpio Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26160" toLevel="1" name="Agathion - Scorpio Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26161" toLevel="1" name="Agathion - Scorpio Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26162" toLevel="1" name="Agathion - Aquarius Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26163" toLevel="1" name="Agathion - Aquarius Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26164" toLevel="1" name="Agathion - Aquarius Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26165" toLevel="1" name="Agathion - Pisces Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26166" toLevel="1" name="Agathion - Pisces Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26167" toLevel="1" name="Agathion - Pisces Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26168" toLevel="1" name="Agathion - Sagittarius Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26169" toLevel="1" name="Agathion - Sagittarius Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26170" toLevel="1" name="Agathion - Sagittarius Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26171" toLevel="1" name="Agathion - Cancer Pack (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26172" toLevel="1" name="Agathion - Cancer Pack (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26173" toLevel="1" name="Agathion - Cancer Pack (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26174" toLevel="1" name="Easter Egg">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1071,7 +1007,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8582</npcId>
+				<npcId>8582</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -1089,7 +1025,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8584</npcId>
+				<npcId>8584</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -1107,7 +1043,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8587</npcId>
+				<npcId>8587</npcId> <!-- Libra -->
 			</effect>
 		</effects>
 	</skill>
@@ -1125,7 +1061,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8583</npcId>
+				<npcId>8583</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -1143,7 +1079,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8590</npcId>
+				<npcId>8590</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -1161,7 +1097,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8586</npcId>
+				<npcId>8586</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -1179,7 +1115,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8585</npcId>
+				<npcId>8585</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -1197,7 +1133,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8589</npcId>
+				<npcId>8589</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -1215,7 +1151,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8580</npcId>
+				<npcId>8580</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -1233,7 +1169,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8579</npcId>
+				<npcId>8579</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -1251,7 +1187,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8588</npcId>
+				<npcId>8588</npcId> <!-- Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -1269,7 +1205,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8581</npcId>
+				<npcId>8581</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
@@ -1287,7 +1223,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8594</npcId>
+				<npcId>8594</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
@@ -1305,7 +1241,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8584</npcId>
+				<npcId>8584</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
@@ -1323,7 +1259,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8589</npcId>
+				<npcId>8589</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -1341,7 +1277,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8595</npcId>
+				<npcId>8595</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
@@ -1359,7 +1295,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8602</npcId>
+				<npcId>8602</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
@@ -1377,7 +1313,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8598</npcId>
+				<npcId>8598</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
@@ -1395,7 +1331,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8597</npcId>
+				<npcId>8597</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
@@ -1413,7 +1349,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8601</npcId>
+				<npcId>8601</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
@@ -1431,7 +1367,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8592</npcId>
+				<npcId>8592</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -1449,7 +1385,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8591</npcId>
+				<npcId>8591</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
@@ -1467,7 +1403,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8600</npcId>
+				<npcId>8600</npcId> <!-- Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
@@ -1485,7 +1421,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8593</npcId>
+				<npcId>8593</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
@@ -1503,7 +1439,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>8606</npcId>
+				<npcId>8606</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>

@@ -46,7 +46,7 @@
 		</skills>
 	</item>
 	<item id="5703" name="Lucky Charm (No-grade)" type="EtcItem">
-		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/ raid war, his/ her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -89,7 +89,7 @@
 		</stats>
 	</item>
 	<item id="5705" name="Keshanberk*Damascus" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -119,7 +119,7 @@
 		</stats>
 	</item>
 	<item id="5706" name="Damascus*Damascus" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

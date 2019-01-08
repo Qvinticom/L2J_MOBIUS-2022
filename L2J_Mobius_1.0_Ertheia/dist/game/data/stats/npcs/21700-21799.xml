@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21797" level="55" type="L2Monster" name="Timiniel's Spirit">
 		<!-- Confirmed CT2.5 -->
@@ -59,22 +59,22 @@
 				<item id="2966" min="1" max="1" chance="0.403229309779644" /> <!-- Full Plate Shield Fragment -->
 				<item id="2414" min="1" max="1" chance="0.00357204771852493" /> <!-- Full Plate Helmet -->
 				<item id="2959" min="1" max="1" chance="0.254895644057751" /> <!-- Full Plate Helmet Design -->
-				<item id="1869" min="1" max="1" chance="2.67955147268486" /> <!-- Iron Ore -->
-				<item id="1870" min="1" max="1" chance="2.67955147268486" /> <!-- Coal -->
-				<item id="1871" min="1" max="1" chance="2.67955147268486" /> <!-- Charcoal -->
-				<item id="1872" min="1" max="1" chance="3.57272508477974" /> <!-- Animal Bone -->
-				<item id="1867" min="1" max="1" chance="3.57272508477974" /> <!-- Animal Skin -->
-				<item id="4175" min="1" max="1" chance="0.0516223343753815" /> <!-- Recipe: Sealed Avadon Boots (100%) -->
+				<item id="1869" min="1" max="1" chance="2.67955147268486" /> <!-- Corroded Iron Ore -->
+				<item id="1870" min="1" max="1" chance="2.67955147268486" /> <!-- Corroded Coal -->
+				<item id="1871" min="1" max="1" chance="2.67955147268486" /> <!-- Corroded Charcoal -->
+				<item id="1872" min="1" max="1" chance="3.57272508477974" /> <!-- Corroded Animal Bone Fragment -->
+				<item id="1867" min="1" max="1" chance="3.57272508477974" /> <!-- Corroded Animal Skin -->
+				<item id="4175" min="1" max="1" chance="0.0516223343753815" /> <!-- Recipe: Sealed Avadon Boots -->
 				<item id="4972" min="1" max="1" chance="0.00309427642250061" /> <!-- Recipe: Great Axe (60%) -->
-				<item id="8726" min="1" max="1" chance="0.0620233922510147" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0155020185127258" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00154713821125031" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.000306364002227783" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.0620233922510147" /> <!-- Life Stone - Lv. 55 -->
+				<item id="8736" min="1" max="1" chance="0.0155020185127258" /> <!-- Mid-grade Life Stone - Lv. 55 -->
+				<item id="8746" min="1" max="1" chance="0.00154713821125031" /> <!-- High-grade Life Stone - Lv. 55 -->
+				<item id="8756" min="1" max="1" chance="0.000306364002227783" /> <!-- Top-grade Life Stone - Lv. 55 -->
 			</drop>
 			<spoil>
-				<item id="2961" min="1" max="1" chance="4.3468" /> <!-- Full Plate Boots Part -->
-				<item id="1867" min="1" max="3" chance="53.219" /> <!-- Animal Skin -->
-				<item id="1869" min="1" max="1" chance="79.8286" /> <!-- Iron Ore -->
+				<item id="2961" min="1" max="1" chance="4.3468" /> <!-- Full Plate Boot Fragment -->
+				<item id="1867" min="1" max="3" chance="53.219" /> <!-- Corroded Animal Skin -->
+				<item id="1869" min="1" max="1" chance="79.8286" /> <!-- Corroded Iron Ore -->
 			</spoil>
 		</dropLists>
 		<collision>

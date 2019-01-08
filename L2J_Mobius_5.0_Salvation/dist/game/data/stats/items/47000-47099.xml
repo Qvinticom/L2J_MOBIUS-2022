@@ -67,7 +67,7 @@
 		</stats>
 	</item>
 	<item id="47003" name="Paulina's Dynasty Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Dynasty Ring imbued with the energy of Paulina. P./M. Critical Damage +7%. -->
+		<!-- A Dynasty Ring imbued with the energy of Paulina. P./ M. Critical Damage +7%. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -89,7 +89,7 @@
 		</stats>
 	</item>
 	<item id="47004" name="Paulina's Dynasty Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Dynasty Ring imbued with the energy of Paulina. P./M. Critical Rate +20. -->
+		<!-- A Dynasty Ring imbued with the energy of Paulina. P./ M. Critical Rate +20. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -111,7 +111,7 @@
 		</stats>
 	</item>
 	<item id="47005" name="Old Elemental Shirt" type="Armor">
-		<!-- A gift from Tulesir the Minstrel to heroes of the future having safely completed 10 days of adventure. Though old, its performance is on par with a new one. Enchantment not possible. When equipped, STR +1 , DEX +1, CON +1, INT +1, WIT +1, MEN +1, Max HP/MP +510, Movement Speed +7, 6 Defensive Attributes +6. -->
+		<!-- A magical shirt imbued with Einhasad's energy. Though old, its performance is on par with a new one. Enchantment not possible. When equipped, STR +1 , DEX +1, CON +1, INT +1, WIT +1, MEN +1, Max HP/ MP +510, Movement Speed +7, 6 Defensive Attributes +6. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -445,7 +445,7 @@
 		</stats>
 	</item>
 	<item id="47018" name="Paulina's Apocalypse Dualsword" type="Weapon">
-		<!-- An Apocalypse Dualsword imbued with the energy of Paulina. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
+		<!-- An Apocalypse dual sword imbued with the energy of Paulina. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -623,7 +623,7 @@
 		</stats>
 	</item>
 	<item id="47026" name="Paulina's Twilight Shield" additionalName="Heavy Armor" type="Armor">
-		<!-- A Twilight Shield imbued with the energy of Paulina. -->
+		<!-- A Twilight Shield imbued with Paulina's energy. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -934,7 +934,7 @@
 		</stats>
 	</item>
 	<item id="47041" name="Paulina's Twilight Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Twilight Ring imbued with the energy of Paulina. MP +29, P./M. Critical Damage +15%. -->
+		<!-- A Twilight Ring imbued with the energy of Paulina. MP +29, P./ M. Critical Damage +15%. -->
 		<set name="icon" val="icon.r2_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -957,7 +957,7 @@
 		</stats>
 	</item>
 	<item id="47042" name="Paulina's Twilight Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Twilight Ring imbued with the energy of Paulina. MP +29, P./M. Critical Rate +40. -->
+		<!-- A Twilight Ring imbued with the energy of Paulina. MP +29, P./ M. Critical Rate +40. -->
 		<set name="icon" val="icon.r2_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -980,7 +980,7 @@
 		</stats>
 	</item>
 	<item id="47043" name="Beloa's Supply Items" type="EtcItem">
-		<!-- Supply Items given by the Dimensional Tracker Beloa to agents who have completed Exploring the Dimension - 30-day Search Operation. -->
+		<!-- Supply Items given by the Dimensional Tracker Beloa to agents who have completed "Exploring the Dimension - 30-day Search Operation". -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -999,7 +999,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47044" name="Commando Belt" type="Armor">
-		<!-- The Commando Belt is the symbol of the Dimensional Commandos, and is given to elite veterans who have completed Exploring the Dimension - Sealing the Dimension. Damage +2%, Damage Received -2%, Weight +12800, Inventory Slots +18. -->
+		<!-- The Commando Belt is the symbol of the Dimensional Commandos, and is given to elite veterans who have completed "Exploring the Dimension - Sealing the Dimension". Damage +2%, Damage Received -2%, Weight +12800, Inventory Slots +18. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1321,7 +1321,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47072" name="Blessed Paulina's Specter Dualsword Box" additionalName="30-day" type="EtcItem">
-		<!-- Dimensional Item. Double click to obtain a 30-day Specter Dualsword which can be equipped from Lv. 85 upwards. -->
+		<!-- Dimensional Item. Double click to obtain a 30-day Specter dual sword which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1488,7 +1488,7 @@
 		<capsuled_items>
 			<item id="36152" min="1" max="1" chance="33" /> <!-- Kaliel's Energy Box -->
 			<item id="47085" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex Box -->
-			<item id="47086" min="1" max="1" chance="33" /> <!-- Venir's Talisman Box) -->
+			<item id="47086" min="1" max="1" chance="33" /> <!-- Venir's Talisman Box -->
 		</capsuled_items>
 	</item>
 	<item id="47085" name="Superior Giant's Codex Box" type="EtcItem">
@@ -1520,9 +1520,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="39634" min="1" max="1" chance="60" /> <!-- Venir's Talisman Level 1 -->
-			<item id="39635" min="1" max="1" chance="35" /> <!-- Venir's Talisman Level 2 -->
-			<item id="39636" min="1" max="1" chance="5" /> <!-- Venir's Talisman Level 3 -->
+			<item id="39634" min="1" max="1" chance="60" /> <!-- Venir's Talisman - Stage 1 -->
+			<item id="39635" min="1" max="1" chance="35" /> <!-- Venir's Talisman - Stage 2 -->
+			<item id="39636" min="1" max="1" chance="5" /> <!-- Venir's Talisman - Stage 3 -->
 		</capsuled_items>
 	</item>
 	<item id="47087" name="Jewelry Box" type="EtcItem">

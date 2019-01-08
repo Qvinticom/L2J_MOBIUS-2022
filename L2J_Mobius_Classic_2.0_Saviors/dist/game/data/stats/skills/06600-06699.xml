@@ -1327,7 +1327,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6618" toLevel="7" name="Maguen Strike">
-		<!-- Moving Spd. Is decreased by 50% for 10 seconds. -->
+		<!-- For $s1, decreases Speed by $s2. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1383,7 +1383,7 @@
 		</effects>
 	</skill>
 	<skill id="6619" toLevel="7" name="Maguen Power Strike">
-		<!-- Moving Spd. Is decreased by 90% for 10 seconds. -->
+		<!-- For $s1, decreases Speed by $s2. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1439,6 +1439,7 @@
 		</effects>
 	</skill>
 	<skill id="6620" toLevel="7" name="Maguen Plasma">
+		<!-- P. Atk. and M. Atk. are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1486,6 +1487,7 @@
 		</effects>
 	</skill>
 	<skill id="6621" toLevel="7" name="Maguen Plasma">
+		<!-- P. Atk. and M. Atk. are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1533,7 +1535,7 @@
 		</effects>
 	</skill>
 	<skill id="6622" toLevel="1" name="Stun">
-		<!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+		<!-- Stunned and unable to move for 20 seconds. The chance of receiving Critical Damage + 50%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1579,7 +1581,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6624" toLevel="1" name="Stun">
-		<!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
+		<!-- Stunned and unable to move for 9 seconds. The chance of receiving Critical Damage + 50%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1617,7 +1619,6 @@
 		</effects>
 	</skill>
 	<skill id="6626" toLevel="1" name="Major Energy of Life">
-		<!-- This skill only has one level, 2. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -1637,7 +1638,6 @@
 		</effects>
 	</skill>
 	<skill id="6627" toLevel="1" name="Superior Energy of Life">
-		<!-- This skill only has one level, 3. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -1676,7 +1676,6 @@
 		</effects>
 	</skill>
 	<skill id="6629" toLevel="1" name="Major Energy of Mana">
-		<!-- This skill only has one level, 2. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -1696,7 +1695,6 @@
 		</effects>
 	</skill>
 	<skill id="6630" toLevel="1" name="Superior Energy of Mana">
-		<!-- This skill only has one level, 3. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -1716,6 +1714,7 @@
 		</effects>
 	</skill>
 	<skill id="6631" toLevel="1" name="Energy of Strength">
+		<!-- Increases P. Atk. temporarily. Effect 3. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1743,6 +1742,7 @@
 		</effects>
 	</skill>
 	<skill id="6632" toLevel="1" name="Energy of Magic">
+		<!-- Increases M. Atk. temporarily. Effect 3. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1764,6 +1764,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6633" toLevel="1" name="Energy of Atk. Spd.">
+		<!-- Increases Speed. temporarily. Effect 2. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1791,6 +1792,7 @@
 		</effects>
 	</skill>
 	<skill id="6634" toLevel="1" name="Energy of Casting Spd.">
+		<!-- Increases Casting Spd. temporarily. Effect 3. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1812,6 +1814,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6635" toLevel="1" name="Energy of Crtical Attack">
+		<!-- Increases Critical attack rate temporarily. Effect 3. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1839,6 +1842,7 @@
 		</effects>
 	</skill>
 	<skill id="6636" toLevel="1" name="Energy of Speed">
+		<!-- Increases Speed. temporarily. Effect 2. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1866,7 +1870,7 @@
 		</effects>
 	</skill>
 	<skill id="6637" toLevel="1" name="Energy of HP Drain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1898,6 +1902,7 @@
 		</effects>
 	</skill>
 	<skill id="6638" toLevel="1" name="Mysterious Aura">
+		<!-- The target's head is enlarged. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1935,6 +1940,7 @@
 		</effects>
 	</skill>
 	<skill id="6639" toLevel="1" name="Energy of Crtical Rate: Damage">
+		<!-- Increases Critical P. Atk. temporarily. Effect 3. -->
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1962,8 +1968,6 @@
 		</effects>
 	</skill>
 	<skill id="6641" toLevel="1" name="Holy Ball">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Jinia Skills -->
 		<castRange>650</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1989,8 +1993,6 @@
 		</effects>
 	</skill>
 	<skill id="6642" toLevel="1" name="Dash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Kegor Skills -->
 		<castRange>650</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
@@ -2018,8 +2020,6 @@
 		</effects>
 	</skill>
 	<skill id="6643" toLevel="1" name="Holy Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Kegor Skills -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -2042,14 +2042,14 @@
 		</effects>
 	</skill>
 	<skill id="6644" toLevel="1" name="Ice Queen Freya">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Once known as friendly and kind, Princess Felicia was the darling of the kingdom. until she was betrayed and exiled for crimes she did not commit. Through the trickery of those rebels who would see her kingdom fall, Felicia was touched by the power of ice and was henceforth known as Freya. Fueled by hatred, she now maliciously wields the power of ice in hopes of destroying the land she once called home. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6645" toLevel="1" name="Cooker Invincibility On">
+		<!-- Invincible against standard targets and skills and buffs/debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -2095,6 +2095,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
+		<!-- All actions are sealed by Tacrakahn's special ability. Impossible to dispel. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -2114,6 +2115,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6651" toLevel="1" name="Dopagen's Alienation">
+		<!-- All actions are sealed by Dopagen's special ability. Impossible to dispel. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -2133,18 +2135,21 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6652" toLevel="1" name="Raid Boss (Lv. 89)">
+		<!-- Head of the Bistakon, a race that is one of Istina's numerous descendants. He became the head of the race through physical strength and superior power. They are enemies with the Kokracon and Reptilikon races, maintaining the balance of power. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6653" toLevel="1" name="Raid Boss (Lv. 89)">
+		<!-- Head of the Leptilikon, a race that is one of Istina's numerous descendants. He boasts perfect defense, but is weak against Treykan. They are enemies with the Kokracon and Bistakon races, maintaining the balance of power. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6654" toLevel="1" name="Raid Boss (Lv. 89)">
+		<!-- Head of the Kokracon, a race that is one of Istina's numerous descendants. He has exceptional intelligence among his race. They are enemies with the Bistakon and Leptilikon races, maintaining the balance of power. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2186,36 +2191,35 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6658" toLevel="1" name="Raid Boss (Lv. 84)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Raid Boss Darnel -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6659" toLevel="1" name="Raid Boss (Lv. 84)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Raid Boss Kechi -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6660" toLevel="1" name="Raid Boss (Lv. 84)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Raid Boss Tears -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6661" toLevel="1" name="Raid Boss (Lv. 85)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Ice warrior created by blowing life into Freya's crystal fragment. It has no understanding of self and only obeys the commands of its master Freya. It will even walk into death if it is her will. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6662" toLevel="2" name="Freeze">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills (Triggered from 6274, 6275, 6299, 6300) -->
+		<!-- All actions are prohibited for $s1, and you lose $s2 HP per second. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2256,20 +2260,20 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6302</skillId>
+				<skillId>6302</skillId> <!-- Icy Air -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="6663" toLevel="1" name="Raid Boss (Lv. 76)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6664" toLevel="1" name="Raid Boss (Lv. 84)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2315,7 +2319,7 @@
 		</effects>
 	</skill>
 	<skill id="6667" toLevel="1" name="Feral Wind Walk">
-		<!-- Increases Moving Spd. by 33 for 5 minutes. -->
+		<!-- For 5 minutes, Speed + 33. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -2342,7 +2346,7 @@
 		</effects>
 	</skill>
 	<skill id="6668" toLevel="1" name="Feral Death Whisper">
-		<!-- Increases critical attack power by 35% for 5 minutes. -->
+		<!-- Increases critical attack effect by 35% for 5 minutes. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -2396,7 +2400,7 @@
 		</effects>
 	</skill>
 	<skill id="6670" toLevel="1" name="Feral Vampiric Rage">
-		<!-- For 5 minutes, 9% of the standard short-range physical damage inflicted on the enemy is converted to HP for you. -->
+		<!-- For 5 minutes, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -2423,7 +2427,7 @@
 		</effects>
 	</skill>
 	<skill id="6671" toLevel="1" name="Feral Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Moving Spd. by 8 for 5 minutes. -->
+		<!-- P. Def. decreases momentarily. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 5 minutes. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -2583,6 +2587,7 @@
 		</effects>
 	</skill>
 	<skill id="6677" toLevel="1" name="Hold">
+		<!-- Inflicted with Hold and unable to move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2653,7 +2658,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6681" toLevel="1" name="Maguen Wind Walk">
-		<!-- Moving Spd. increases by 40 for 20 minutes. -->
+		<!-- For 20 minutes, Speed + 40. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -2682,7 +2687,7 @@
 		</effects>
 	</skill>
 	<skill id="6682" toLevel="1" name="Elite Maguen Wind Walk">
-		<!-- Moving Spd. increases by 45 for 20 minutes. -->
+		<!-- For 20 minutes, Speed + 45. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -2713,7 +2718,6 @@
 		</effects>
 	</skill>
 	<skill id="6683" toLevel="1" name="Maguen Return">
-		<!-- Confirmed CT2.5 -->
 		<castRange>400</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>900</effectRange>
@@ -2737,7 +2741,6 @@
 		</effects>
 	</skill>
 	<skill id="6684" toLevel="1" name="Maguen Party Return">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>1000</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>100</effectPoint>
@@ -2763,8 +2766,6 @@
 		</effects>
 	</skill>
 	<skill id="6686" toLevel="1" name="Cancel Holy Protection">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>200</affectRange>
 		<effectPoint>1</effectPoint>
 		<magicLvl>83</magicLvl>
@@ -2781,8 +2782,7 @@
 		</effects>
 	</skill>
 	<skill id="6687" toLevel="1" name="Patience">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
+		<!-- Skill Power is increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>PATIENCE</abnormalType>
@@ -2805,8 +2805,7 @@
 		</effects>
 	</skill>
 	<skill id="6688" toLevel="1" name="Awful Soup">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Atk. Spd. increases by 20% and HP decreases 0.5% per second for 3 minutes. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -2860,6 +2859,7 @@
 		</effects>
 	</skill>
 	<skill id="6690" toLevel="1" name="Hold">
+		<!-- Inflicted with Hold and unable to move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -3000,8 +3000,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6697" toLevel="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<affectRange>3000</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
@@ -3025,14 +3023,13 @@
 				<power>45257</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>6698</skillId>
+				<skillId>6698</skillId> <!-- Freeze -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6698" toLevel="1" name="Freeze">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills (Triggered from 6698) -->
+		<!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5% per second. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>FREEZING</abnormalType>
@@ -3066,13 +3063,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6302</skillId>
+				<skillId>6302</skillId> <!-- Icy Air -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="6699" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- See Agathion's cute trick. -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>

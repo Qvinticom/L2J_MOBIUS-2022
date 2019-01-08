@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="49100" name="Teleport: Floran" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Floran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to Floran Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -12,7 +12,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49101" name="Teleport: Giran" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Giran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to Town of Giran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -23,7 +23,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49102" name="Teleport: Oren" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Oren. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to Town of Oren. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -34,7 +34,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49103" name="Teleport: Ivory Tower" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -45,7 +45,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49104" name="Teleport: Hunter's Village" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -56,7 +56,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49105" name="Teleport: Entrance to Cruma Tower" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -67,7 +67,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49106" name="Teleport: Entrance to Dragon Valley" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Dragon Valley. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to the Entrance to Dragon Valley. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -78,7 +78,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49107" name="Teleport: Dragon Valley Bridge" type="EtcItem">
-		<!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_capture_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -89,21 +89,21 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49108" name="Beauty Chest" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Dye Potion Pack / Facelifting Potion Pack / Mystic Potion. -->
+		<!-- Double-click the chest to get one of the next items: Dye Potion Pack/ Facelifting Potion Pack/ Mystic Potion. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49109" name="Buff Scrolls Chest" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Scroll: Empower / Scroll: Might / Scroll: Defence. -->
+		<!-- Double-click the chest to get one of the next items: Scroll: Empower/ Scroll: Might/ Scroll: Defence. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49110" name="High-Quality Dye Chest" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Greater Dye of STR / Greater Dye of CON / Greater Dye of DEX / Greater Dye of INT / Greater Dye of WIT / Greater Dye of MEN. -->
+		<!-- Double-click the chest to get one of the next items: Greater Dye of STR/ Greater Dye of CON/ Greater Dye of DEX/ Greater Dye of INT/ Greater Dye of WIT/ Greater Dye of MEN. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -115,7 +115,7 @@
 		</skills>
 	</item>
 	<item id="49111" name="Dye Chest" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Dye of STR / Dye of CON / Dye of DEX / Dye of INT / Dye of WIT / Dye of MEN. -->
+		<!-- Double-click the chest to get one of the next items: Dye of STR/ Dye of CON/ Dye of DEX/ Dye of INT/ Dye of WIT/ Dye of MEN. -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -127,49 +127,49 @@
 		</skills>
 	</item>
 	<item id="49112" name="Staff Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
+		<!-- Double-click the chest to get one of the next items: Cursed Staff/ Crystal Staff/ Sage's Staff/ Demon's Staff. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49113" name="Fist Weapon Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Knuckle Duster / Chakram / Fisted Blade / Great Pata. -->
+		<!-- Double-click the chest to get one of the next items: Knuckle Duster/ Chakram/ Fisted Blade/ Great Pata. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49114" name="Spear Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
+		<!-- Double-click the chest to get one of the next items: Bec de Corbin/ Orcish Glaive/ Poleaxe/ Orcish Poleaxe. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49115" name="Blunt Weapon Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
+		<!-- Double-click the chest to get one of the next items: Dwarven War Hammer/ Heavy Doom Hammer/ War Axe/ Yaksa Mace. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49116" name="Dagger Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
+		<!-- Double-click the chest to get one of the next items: Stiletto/ Cursed Dagger/ Dark Screamer/ Crystal Dagger. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49117" name="One-Handed Sword Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
+		<!-- Double-click the chest to get one of the next items: Katana/ Stormbringer/ Sword of Delusion/ Samurai Long Sword. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49118" name="Bow Chest" additionalName="Grade C" type="EtcItem">
-		<!-- Double-click the chest to get one of the next items: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
+		<!-- Double-click the chest to get one of the next items: Elemental Bow/ Crystallized Ice Bow/ Akat Longbow/ Eminence Bow. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -297,7 +297,7 @@
 		</stats>
 	</item>
 	<item id="49128" name="Souvenir Box" type="EtcItem">
-		<!-- Reward for participation in the even. Double-click the chest to receive one of the following items: High-Quality Dye Chest, Dye Chest, Beauty Chest, Buff Scrolls Chest, Major Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- A gift box received from the cute pig Tulio as a reward for release. Double-click to get one of the following items: High-Quality Dye Chest, Dye Chest, Beauty Chest, Buff Scroll Chest, or Major Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Deleted after event. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -307,7 +307,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49129" name="11th Anniversary Coin" type="EtcItem">
-		<!-- Coin used to exchange special items during the 11th Sale. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- Coin used to purchase special items during the Holiday Fair. Cannot be exchanged, dropped, destroyed, or sold. Can be shared within account. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Deleted after event. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -318,7 +318,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49130" name="Summon Scroll: Byo" type="EtcItem">
-		<!-- Double-click the item to summon Byo. Summoned Byo names a random number from 1 to 6. If your number is bigger than Byo's, you can receive the Adena. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- Double-click the item to summon Piero. Summoned Piero names a random number from 1 to 6. If your number is bigger than Piero's, you can receive the Adena. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Deleted after event. -->
 		<set name="icon" val="icon.etc_11th_event_solo" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -328,7 +328,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49131" name="Magic Number Cube" type="EtcItem">
-		<!-- Double-click the item to choose a random number from 1 to 6. All characters who own a Cube can participate in this event. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- A Magic Number Cube that will allow you to participate in the gift giveaway. Use it on Captive Tulio, which is summoned at 9 AM and 9 PM in the Elven Village and Dark Elf Village to participate in the gift giveaway. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Deleted after event. -->
 		<set name="icon" val="icon.etc_11th_event_group" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -409,7 +409,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="49137" name="Venetian Fleece Chest (Low Level)" type="EtcItem">
-		<!-- Double-click the chest to receive 1 15-day Venetian Fleece (Low Level). The Fleece can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
+		<!-- Double-click the chest to receive 1 15-day Venetian Fleece (Low Level). The Fleece can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. This item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -423,7 +423,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49138" name="Venetian Fleece Chest (High Level)" type="EtcItem">
-		<!-- Double-click the chest to receive 15-day Venetian Fleece Chest (High Level, 1 pc.). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- Double-click the chest to receive 15-day Venetian Fleece Chest (High Level, 1 pc.). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -437,7 +437,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49139" name="Dual Sword Gift Chest" type="EtcItem">
-		<!-- Double-click the chest to receive 15-day Dual Candle Sword.  Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- Double-click the chest to receive 15-day Dual Candle Sword. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -451,7 +451,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49140" name="Horn of Glory" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +46. -->
 		<set name="icon" val="icon.weapon_horn_of_glory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -563,7 +563,7 @@
 		</stats>
 	</item>
 	<item id="49145" name="Pata" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +260 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -630,7 +630,7 @@
 		</stats>
 	</item>
 	<item id="49148" name="Bastard Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -696,7 +696,7 @@
 		</stats>
 	</item>
 	<item id="49151" name="Saber" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_saber_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -762,7 +762,7 @@
 		</stats>
 	</item>
 	<item id="49154" name="Spinebone Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_spinebone_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -828,7 +828,7 @@
 		</stats>
 	</item>
 	<item id="49157" name="Artisan's Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_artisans_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -894,7 +894,7 @@
 		</stats>
 	</item>
 	<item id="49160" name="Crimson Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_crimson_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -960,7 +960,7 @@
 		</stats>
 	</item>
 	<item id="49163" name="Knight's Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_knights_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1026,7 +1026,7 @@
 		</stats>
 	</item>
 	<item id="49166" name="Sword of Revolution" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_sword_of_revolution_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1092,7 +1092,7 @@
 		</stats>
 	</item>
 	<item id="49169" name="Elven Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_elven_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1158,7 +1158,7 @@
 		</stats>
 	</item>
 	<item id="49172" name="Elven Long Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1226,7 +1226,7 @@
 		</stats>
 	</item>
 	<item id="49175" name="Tomahawk" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_tomahawk_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1295,7 +1295,7 @@
 		</stats>
 	</item>
 	<item id="49178" name="Morning Star" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_morning_star_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1364,7 +1364,7 @@
 		</stats>
 	</item>
 	<item id="49181" name="Hand Axe" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_hand_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1433,7 +1433,7 @@
 		</stats>
 	</item>
 	<item id="49184" name="Spiked Club" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_spike_club_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1502,7 +1502,7 @@
 		</stats>
 	</item>
 	<item id="49187" name="Tarbar" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_tarbar_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1571,7 +1571,7 @@
 		</stats>
 	</item>
 	<item id="49190" name="Bonebreaker" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1640,7 +1640,7 @@
 		</stats>
 	</item>
 	<item id="49193" name="Heavy Mace" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_heavy_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1709,7 +1709,7 @@
 		</stats>
 	</item>
 	<item id="49196" name="Scalpel" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_scalpel_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1778,7 +1778,7 @@
 		</stats>
 	</item>
 	<item id="49199" name="Work Hammer" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +136 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_work_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

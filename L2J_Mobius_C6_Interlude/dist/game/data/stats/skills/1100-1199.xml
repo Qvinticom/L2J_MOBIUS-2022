@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1100" levels="2" name="Chill Flame">
+		<!-- Freezing flames that continuously drain enemy's HP. Effect 1. -->
 		<table name="#magicLvl">7 14</table>
 		<table name="#dmg">20 30</table>
 		<table name="#mpConsume_Init">3 5</table>
@@ -26,6 +27,7 @@
 		</for>
 	</skill>
 	<skill id="1101" levels="2" name="Blaze Quake">
+		<!-- A protective ring of fire that continuously reduces HP of surrounding enemies. Effect 3. -->
 		<table name="#magicLvl">25 35</table>
 		<table name="#dmg">44 60</table>
 		<table name="#mpConsume_Init">10 14</table>
@@ -51,6 +53,7 @@
 		</for>
 	</skill>
 	<skill id="1102" levels="6" name="Aura Sink">
+		<!-- Slowly drains enemy's MP. Power 16. Effect 3. -->
 		<table name="#mpConsume_Init">7 9 12 15 18 20</table>
 		<table name="#mpConsume">27 36 47 55 71 78</table>
 		<table name="#magicLvl">25 35 44 52 64 70</table>
@@ -76,6 +79,7 @@
 		</for>
 	</skill>
 	<skill id="1104" levels="14" name="Seal of Winter" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly decreases Atk. Spd. of surrounding enemies. Effect 3. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -109,6 +113,7 @@
 		</for>
 	</skill>
 	<skill id="1105" levels="18" name="Madness">
+		<!-- Confuses the enemy into attacking random targets. -->
 		<table name="#mpConsume_Init">4 5 6 6 7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">16 18 21 24 28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -129,6 +134,7 @@
 		</for>
 	</skill>
 	<skill id="1107" levels="2" name="Frost Flame">
+		<!-- Freezing flames that continuously drain enemy's HP. Effect 3. -->
 		<table name="#dmg">44 60</table>
 		<table name="#mpConsume_Init">6 8</table>
 		<table name="#mpConsume">23 32</table>
@@ -154,6 +160,7 @@
 		</for>
 	</skill>
 	<skill id="1108" levels="4" name="Seal of Flame">
+		<!-- A protective ring of fire that continuously reduces HP of surrounding enemies. Effect 5. -->
 		<table name="#dmg">77 94 108 118</table>
 		<table name="#mpConsume_Init">20 23 29 31</table>
 		<table name="#mpConsume">77 92 113 122</table>
@@ -177,6 +184,7 @@
 		</for>
 	</skill>
 	<skill id="1111" levels="18" name="Summon Kat the Cat" enchantLevels1="30">
+		<!-- Summons Kat the Cat, who provides an additional supply of MP. Requires 3 Crystals: D-Grade. While active, 30% of earned Exp will be consumed. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchKattheCat">14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158</table>
@@ -185,9 +193,9 @@
 		<table name="#reuseDelay">21600000 21600000 21600000 21600000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000 20000</table>
 		<table name="#itemConsumeCount">3 4 1 3 5 3 4 4 5 6 6 7 5 6 7 9 7 8</table>
 		<table name="#itemConsumeCountOT">0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6</table>
-		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeId" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="itemConsumeIdOT" val="1458"/>
+		<set name="itemConsumeIdOT" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
 		<set name="itemConsumeSteps" val="4"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
@@ -211,6 +219,7 @@
 		<enchant1 name="npcId" val="#enchKattheCat"/>
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantLevels1="30" enchantLevels2="30">
+		<!-- Recovers a Servitor's MP. Power 41. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -238,6 +247,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1127" levels="45" name="Servitor Heal" enchantLevels1="30" enchantLevels2="30">
+		<!-- Recovers servitor's HP. Power 145. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -265,6 +275,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1128" levels="18" name="Summon Shadow" enchantLevels1="30">
+		<!-- Summons a Shadow. Requires 3 Crystals: D-Grade. 30% of acquired Exp will be consumed. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchShadow">14497 14498 14499 14500 14501 14502 14503 14504 14505 14506 14507 14508 14509 14510 14511 14512 14513 14514 14515 14516 14517 14518 14519 14520 14521 14522 14523 14524 14525 14526</table>
@@ -276,9 +287,9 @@
 		<table name="#itemConsumeCountOT">0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeId" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="itemConsumeIdOT" val="1458"/>
+		<set name="itemConsumeIdOT" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
 		<set name="itemConsumeSteps" val="4"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
@@ -300,6 +311,7 @@
 		<enchant1 name="npcId" val="#enchShadow"/>
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantLevels1="30">
+		<!-- Summons a Reanimated Man from a corpse. Requires 2 Crystals: C-Grade. While active, 15% of earned Exp will be consumed, along with 1 additional crystal at 4 regular intervals. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchReanimatedMan">14008 14009 14010 14011 14012 14013 14014 14015 14016 14017 14018 14019 14020 14021 14022 14023 14024 14025 14026 14027 14028 14029 14030 14031 14032 14033 14034 14035 14036 14037</table>
@@ -309,9 +321,9 @@
 		<table name="#itemConsumeCountOT">1 1 2 3 3 4 4</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1459"/>
+		<set name="itemConsumeId" val="1459"/> <!-- Crystal: C-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="itemConsumeIdOT" val="1459"/>
+		<set name="itemConsumeIdOT" val="1459"/> <!-- Crystal: C-Grade -->
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
 		<set name="itemConsumeSteps" val="4"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
@@ -333,6 +345,7 @@
 		<enchant1 name="npcId" val="#enchReanimatedMan"/>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases servitor's M. Def. Effect 2. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -368,6 +381,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1140" levels="3" name="Servitor Physical Shield" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases servitor's P. Def. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -403,6 +417,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1141" levels="2" name="Servitor Haste" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases servitor's Atk. Spd. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -438,6 +453,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1144" levels="2" name="Fast Servitor" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases servitor's movement speed. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -473,6 +489,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1145" levels="3" name="Bright Servitor" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases servitor's M. Atk. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -508,6 +525,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1146" levels="3" name="Mighty Servitor" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases servitor's P. Atk. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -543,6 +561,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1147" levels="6" name="Vampiric Touch">
+		<!-- Absorbs HP. Power 18. -->
 		<table name="#mpConsume_Init">5 6 7 7 8 8</table>
 		<table name="#mpConsume">20 22 25 28 30 32</table>
 		<table name="#magicLvl">11 14 17 20 23 25</table>
@@ -564,6 +583,7 @@
 		<!-- absorbs 40% of damage -->
 	</skill>
 	<skill id="1148" levels="13" name="Death Spike" enchantLevels1="30" enchantLevels2="30">
+		<!-- Damages an enemy by throwing a bone. Power 58. 1 Cursed Bone needed. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -576,7 +596,7 @@
 		<table name="#ench1Power">108 109 109 110 110 110 111 111 111 112 112 112 113 113 113 114 114 114 115 115 116 116 116 117 117 117 118 118 118 119</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="2508"/>
+		<set name="itemConsumeId" val="2508"/> <!-- Cursed Bone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="magicLvl" val="#magicLvl"/>
 		<set name="power" val="#power"/>
@@ -594,6 +614,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1151" levels="16" name="Corpse Life Drain" enchantLevels1="30" enchantLevels2="30">
+		<!-- Absorbs HP from a corpse to regenerate one's HP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -626,6 +647,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantLevels1="30">
+		<!-- Summons a Corrupted Man from a corpse. Requires 3 Crystals: D-Grade. 90% of acquired Exp will be consumed. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchCorruptedMan">14044 14045 14046 14047 14048 14049 14050 14051 14052 14053 14054 14055 14056 14057 14058 14059 14060 14061 14062 14063 14064 14065 14066 14067 14068 14069 14070 14071 14072 14073</table>
@@ -635,7 +657,7 @@
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="itemConsumeCount" val="3"/>
-		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeId" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeSteps" val="0"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
 		<set name="summonTimeLostIdle" val="500"/>
@@ -656,6 +678,7 @@
 		<enchant1 name="npcId" val="#enchCorruptedMan"/>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantLevels1="30" enchantLevels2="30">
+		<!-- Causes a nearby corpse to suddenly explode. Power 61. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -684,6 +707,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1156" levels="13" name="Forget">
+		<!-- Takes away the enemy's will to attack. -->
 		<table name="#mpConsume_Init">8 9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -701,6 +725,7 @@
 		<set name="effectRange" val="900"/>
 	</skill>
 	<skill id="1157" levels="5" name="Body To Mind">
+		<!-- Sacrifices HP to regenerate MP. -->
 		<table name="#hpConsume">131 209 280 318 366</table>
 		<table name="#power">22 35 47 53 61</table>
 		<table name="#aggro">243 379 495 549 611</table>
@@ -717,6 +742,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantLevels1="30" enchantLevels2="30">
+		<!-- Transfers one's pain to the enemy. The lower one's HP, the greater its power. Power 68. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -748,6 +774,7 @@
 		</for>
 	</skill>
 	<skill id="1160" levels="15" name="Slow" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly reduces enemy's Speed. Effect 2. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -783,6 +810,7 @@
 		</for>
 	</skill>
 	<skill id="1163" levels="14" name="Curse Discord">
+		<!-- Confuses an enemy to attack its ally. -->
 		<table name="#mpInitialConsume">7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -804,6 +832,7 @@
 		</for>
 	</skill>
 	<skill id="1164" levels="19" name="Curse: Weakness" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantaneous curse that reduces target's P. Atk. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -839,6 +868,7 @@
 		</for>
 	</skill>
 	<skill id="1167" levels="6" name="Poisonous Cloud">
+		<!-- Instantaneous poison cloud attack. Effect 3. -->
 		<table name="#mpConsume_Init">7 9 13 16 18 21</table>
 		<table name="#mpConsume">27 36 52 61 71 82</table>
 		<table name="#magicLvl">25 35 48 56 64 74</table>
@@ -868,6 +898,7 @@
 		</for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
+		<!-- Instantaneous poisonous curse. Effect 1. -->
 		<table name="#mpConsume_Init">2 4 6 8 10 12 14</table>
 		<table name="#mpConsume">8 16 21 31 38 46 53</table>
 		<table name="#magicLvl">7 20 30 44 52 62 72</table>
@@ -896,6 +927,7 @@
 		</for>
 	</skill>
 	<skill id="1169" levels="14" name="Curse Fear">
+		<!-- Frightens a monster, causing it to flee. -->
 		<table name="#mpConsume_Init">7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -918,6 +950,7 @@
 		</for>
 	</skill>
 	<skill id="1170" levels="13" name="Anchor" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly paralyzes an enemy. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -951,6 +984,7 @@
 		</for>
 	</skill>
 	<skill id="1171" levels="19" name="Blazing Circle" enchantLevels1="30" enchantLevels2="30">
+		<!-- Sends out a ring of flames around oneself. Power 29. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -980,6 +1014,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1172" levels="8" name="Aura Burn">
+		<!-- A short range magical attack. Power 19. -->
 		<table name="#mpConsume_Init">4 4 5 5 5 6 6 6</table>
 		<table name="#mpConsume">14 16 17 18 20 21 23 24</table>
 		<table name="#magicLvl">17 20 23 25 28 30 33 35</table>
@@ -998,6 +1033,7 @@
 		<set name="effectRange" val="650"/>
 	</skill>
 	<skill id="1174" levels="22" name="Frost Wall" enchantLevels1="30" enchantLevels2="30">
+		<!-- Attacks your target with a wall of ice. Power 48. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1027,6 +1063,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1175" levels="8" name="Aqua Swirl">
+		<!-- Attacks target with a burst of water. Power 23. -->
 		<table name="#mpConsume_Init">4 4 5 5 5 6 6 6</table>
 		<table name="#mpConsume">14 16 17 18 20 21 23 24</table>
 		<table name="#magicLvl">17 20 23 25 28 30 33 35</table>
@@ -1046,6 +1083,7 @@
 		<set name="effectRange" val="1250"/>
 	</skill>
 	<skill id="1176" levels="15" name="Tempest" enchantLevels1="30" enchantLevels2="30">
+		<!-- Calls forth a severe storm to attack multiple enemies. Power 31. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1075,6 +1113,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1177" levels="5" name="Wind Strike">
+		<!-- Blasts a target with violent winds. Power 12. -->
 		<table name="#mpConsume_Init">2 2 2 3 3</table>
 		<table name="#mpConsume">7 7 8 11 12</table>
 		<table name="#magicLvl">1 4 7 11 14</table>
@@ -1094,6 +1133,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="1178" levels="8" name="Twister">
+		<!-- Attacks target with a . Power 23. -->
 		<table name="#mpConsume_Init">4 4 5 5 5 6 6 6</table>
 		<table name="#mpConsume">14 16 17 18 20 21 23 24</table>
 		<table name="#magicLvl">17 20 23 25 28 30 33 35</table>
@@ -1113,6 +1153,7 @@
 		<set name="effectRange" val="1250"/>
 	</skill>
 	<skill id="1181" levels="3" name="Flame Strike">
+		<!-- Toss flame that causes wide area to catch fire. Power 13. -->
 		<table name="#mpConsume_Init">6 7 8</table>
 		<table name="#mpConsume">23 27 32</table>
 		<table name="#magicLvl">20 25 30</table>
@@ -1133,6 +1174,7 @@
 		<set name="effectRange" val="1000"/>
 	</skill>
 	<skill id="1182" levels="3" name="Resist Aqua" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases tolerance to attack by water. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1168,6 +1210,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1183" levels="4" name="Freezing Shackle">
+		<!-- Powerful freezing attack that reduces enemy's HP while in effect. Effect 5. -->
 		<table name="#dmg">77 94 108 118</table>
 		<table name="#mpConsume_Init">12 14 18 21</table>
 		<table name="#mpConsume">47 56 71 82</table>
@@ -1193,6 +1236,7 @@
 		</for>
 	</skill>
 	<skill id="1184" levels="6" name="Ice Bolt">
+		<!-- Freezes an enemy, instantly reducing their speed. Effect 2. Power 8. -->
 		<table name="#mpConsume_Init">2 2 3 3 4 4</table>
 		<table name="#mpConsume">7 8 11 12 14 16</table>
 		<table name="#magicLvl">4 7 11 14 17 20</table>
@@ -1220,6 +1264,7 @@
 		</for>
 	</skill>
 	<skill id="1189" levels="3" name="Resist Wind" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases resistance to attack by wind. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1255,6 +1300,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1191" levels="3" name="Resist Fire" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases resistance to attacks by fire. Effect 1. -->
 		<table name="#ench1time">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400</table>
 		<table name="#ench2MpConsume">30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15</table>
 		<table name="#ench2MpConsume_Init">7 7 7 7 7 7 7 6 6 6 6 6 6 6 6 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4</table>

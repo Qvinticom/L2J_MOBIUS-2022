@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25800" level="25" type="L2RaidBoss" name="Mammon Collector Talos" title="Lord of Destruction">
 		<!-- TODO: Must be confirmed -->
@@ -25,22 +25,22 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
-			<skill id="4197" level="2" /> <!--Hold -->
-			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4494" level="1" /> <!--Raid Boss -->
-			<skill id="4983" level="1" /> <!--Raid Boss - Level 25 -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4197" level="2" /> <!-- Hold -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4983" level="1" /> <!-- Raid Boss - Level 25 -->
 		</skillList>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
@@ -56,7 +56,6 @@
 				<item id="1938" min="60" max="180" chance="16.4578510346" /> <!-- Mithril Banded Mail Material -->
 				<item id="1939" min="28" max="84" chance="46.0776635407" /> <!-- Mithril Banded Gaiters Material -->
 				<item id="2028" min="27" max="81" chance="6.4637854247" /> <!-- Shilen Knife Edge -->
-				<item id="22229" min="1" max="1" chance="12.6939" /> <!-- Scroll: Enchant Weapon of Destruction (D-Grade) - Event -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -84,20 +83,20 @@
 			</speed>
 		</stats>
 		<skillList>
-			<skill id="4045" level="1" /> <!--Resist Full Magic Attack -->
-			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="3" /> <!--Light Armor Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4743" level="2" /> <!--BOSS Strike -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4743" level="2" /> <!-- BOSS Strike -->
 		</skillList>
 		<ai clanHelpRange="300" />
 		<collision>

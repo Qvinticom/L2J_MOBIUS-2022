@@ -146,7 +146,7 @@
 		</skills>
 	</item>
 	<item id="9207" name="Quick Healing Potion (Event)" type="EtcItem">
-		<!-- Magic potion that instantly restores HP. Instant effect with no duration. Event item. Cannot be used when HP is full. -->
+		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Event item. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -789,7 +789,7 @@
 		</stats>
 	</item>
 	<item id="9227" name="Cranequin" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Light Crossbow Conversion. -->
+		<!-- Kamael-exclusive Weapon: Light Bow Conversion. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -822,7 +822,7 @@
 		</stats>
 	</item>
 	<item id="9228" name="Soldat Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer Conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Stormbringer Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -967,7 +967,7 @@
 		</stats>
 	</item>
 	<item id="9232" name="Schlager" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge Conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Flamberge Conversion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1104,7 +1104,7 @@
 		</stats>
 	</item>
 	<item id="9236" name="Arbalest" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow\\Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow\Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1242,7 +1242,7 @@
 		</stats>
 	</item>
 	<item id="9240" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Shamshir. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1385,7 +1385,7 @@
 		</stats>
 	</item>
 	<item id="9244" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Katana. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1528,7 +1528,7 @@
 		</stats>
 	</item>
 	<item id="9248" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1672,7 +1672,7 @@
 		</stats>
 	</item>
 	<item id="9252" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1817,7 +1817,7 @@
 		</stats>
 	</item>
 	<item id="9256" name="Ballista" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1953,7 +1953,7 @@
 		</stats>
 	</item>
 	<item id="9260" name="Ballista" type="Weapon">
-		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2092,7 +2092,7 @@
 		</stats>
 	</item>
 	<item id="9264" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Caliburs. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2235,7 +2235,7 @@
 		</stats>
 	</item>
 	<item id="9268" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2378,7 +2378,7 @@
 		</stats>
 	</item>
 	<item id="9272" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tsurugi. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2521,7 +2521,7 @@
 		</stats>
 	</item>
 	<item id="9276" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2664,7 +2664,7 @@
 		</stats>
 	</item>
 	<item id="9280" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increases P. Atk., M. Atk., and the amount of received heal, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increases P. Atk., M. Atk., and the amount of received heal, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2808,7 +2808,7 @@
 		</stats>
 	</item>
 	<item id="9284" name="Immortal Edge" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2945,7 +2945,7 @@
 		</stats>
 	</item>
 	<item id="9288" name="Tathlum" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Akat Longbow. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Akat Longbow. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3084,7 +3084,7 @@
 		</stats>
 	</item>
 	<item id="9292" name="Admiral's Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3227,7 +3227,7 @@
 		</stats>
 	</item>
 	<item id="9296" name="Saber Tooth" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />

@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6300" levels="1" name="Self-Destruction">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="350" />
 		<set name="effectPoint" val="-574" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -23,8 +21,7 @@
 		</for>
 	</skill>
 	<skill id="6301" levels="2" name="Cold Mana's Fragment">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Recovers MP by 60 per second. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#mdot"> 60 30 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -47,8 +44,7 @@
 		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills (Triggered from 6662 and 6698) -->
+		<!-- Increase P. Def. and M. Def by 15%. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PD_UP" />
@@ -68,8 +64,6 @@
 		</for>
 	</skill>
 	<skill id="6303" levels="1" name="Trial of the Coup">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -89,8 +83,7 @@
 		</for>
 	</skill>
 	<skill id="6304" levels="1" name="Shock">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Momentarily causes shock and stuns the enemy for 2 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
@@ -119,8 +112,6 @@
 		</for>
 	</skill>
 	<skill id="6305" levels="1" name="Sacred Gnosis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -139,8 +130,7 @@
 		</for>
 	</skill>
 	<skill id="6306" levels="1" name="Solina Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Causes profuse bleeding for 10 seconds, causing 139 HP damage per second. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -172,8 +162,6 @@
 		</for>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -196,8 +184,6 @@
 		</for>
 	</skill>
 	<skill id="6308" levels="1" name="Opus of the Wave">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -220,8 +206,6 @@
 		</for>
 	</skill>
 	<skill id="6309" levels="1" name="Pain of the Ascetic">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -244,8 +228,6 @@
 		</for>
 	</skill>
 	<skill id="6310" levels="1" name="Loss of Quest">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
@@ -267,8 +249,6 @@
 		</for>
 	</skill>
 	<skill id="6311" levels="1" name="Solina Thrust">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -288,8 +268,6 @@
 		</for>
 	</skill>
 	<skill id="6312" levels="1" name="Launch Sacred Sword Energy">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -310,8 +288,6 @@
 		</for>
 	</skill>
 	<skill id="6313" levels="1" name="Solina Bless">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -337,8 +313,6 @@
 		</for>
 	</skill>
 	<skill id="6314" levels="1" name="Sacred Judgement">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -362,8 +336,6 @@
 		</for>
 	</skill>
 	<skill id="6315" levels="1" name="Sacred Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -383,8 +355,6 @@
 		</for>
 	</skill>
 	<skill id="6316" levels="1" name="Accomplish of Authority">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
@@ -404,8 +374,6 @@
 		</for>
 	</skill>
 	<skill id="6317" levels="1" name="Sacred Tacit">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -428,8 +396,7 @@
 		</for>
 	</skill>
 	<skill id="6318" levels="1" name="Divine Shield Protection">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Increases P. Def. by 10% for 3 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PD_UP" />
@@ -452,8 +419,7 @@
 		</for>
 	</skill>
 	<skill id="6319" levels="1" name="Sacred Magic Protection">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Increases M. Def. by 10% for 3 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MD_UP" />
@@ -476,8 +442,7 @@
 		</for>
 	</skill>
 	<skill id="6320" levels="1" name="Summon Sacred Magic Force">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Decreases enemy's P.Def. by 23% for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -504,8 +469,6 @@
 		</for>
 	</skill>
 	<skill id="6321" levels="1" name="Divine Flash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -528,8 +491,6 @@
 		</for>
 	</skill>
 	<skill id="6322" levels="1" name="Divine Impact">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -552,8 +513,6 @@
 		</for>
 	</skill>
 	<skill id="6323" levels="1" name="Divine Bolt">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
@@ -570,8 +529,6 @@
 		</for>
 	</skill>
 	<skill id="6324" levels="1" name="Divine Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -592,8 +549,6 @@
 		</for>
 	</skill>
 	<skill id="6325" levels="1" name="Divine Nova">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -614,8 +569,6 @@
 		</for>
 	</skill>
 	<skill id="6326" levels="1" name="Martyr's Happiness">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-574" />
@@ -634,8 +587,6 @@
 		</for>
 	</skill>
 	<skill id="6327" levels="1" name="Sacred Worship">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -655,8 +606,6 @@
 		</for>
 	</skill>
 	<skill id="6328" levels="1" name="Fighter Judgement">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -679,8 +628,6 @@
 		</for>
 	</skill>
 	<skill id="6329" levels="1" name="Fighter Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -700,7 +647,6 @@
 		</for>
 	</skill>
 	<skill id="6330" levels="1" name="Salmon Porridge Attack">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -718,8 +664,6 @@
 		</for>
 	</skill>
 	<skill id="6331" levels="1" name="Camp Fire Tired">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -740,8 +684,6 @@
 		</for>
 	</skill>
 	<skill id="6332" levels="1" name="Camp Fire Full">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -763,8 +705,7 @@
 		</for>
 	</skill>
 	<skill id="6333" levels="1" name="Electric Bolt 1">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -796,8 +737,7 @@
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Momentarily causes shock and stuns the enemy for 4 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="STUN" />
@@ -826,8 +766,6 @@
 		</for>
 	</skill>
 	<skill id="6335" levels="1" name="Electric Rain 1">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -845,8 +783,6 @@
 		</for>
 	</skill>
 	<skill id="6336" levels="1" name="Electric Rain 2">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -864,8 +800,6 @@
 		</for>
 	</skill>
 	<skill id="6337" levels="1" name="Red Slash 1">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -883,8 +817,6 @@
 		</for>
 	</skill>
 	<skill id="6338" levels="1" name="Red Slash 2">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-574" />
@@ -902,8 +834,7 @@
 		</for>
 	</skill>
 	<skill id="6339" levels="1" name="Sacred Hammer Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -936,8 +867,7 @@
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Momentarily causes shock and stuns the enemy for 4 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4" />
 		<set name="abnormalType" val="STUN" />
@@ -999,7 +929,7 @@
 		</for>
 	</skill>
 	<skill id="6343" levels="2" name="Maguen Plasma - Power">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Wild Maguen blesses you with a buff that increases your M. Atk. and P. Atk. for 10 minutes. -->
 		<table name="#icons"> icon.skill6343_1 icon.skill6343_2 </table>
 		<table name="#mAtk"> 1.08 1.15 </table>
 		<table name="#pAtk"> 1.02 1.03 </table>
@@ -1028,7 +958,7 @@
 		</for>
 	</skill>
 	<skill id="6365" levels="2" name="Maguen Plasma - Speed">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Wild Maguen blesses you with a buff that increases your Speed, Atk. Spd. and Casting Speed for 10 minutes. -->
 		<table name="#icons"> icon.skill6365_1 icon.skill6365_2 </table>
 		<table name="#pmAtkSpd"> 1.04 1.08 </table>
 		<table name="#runSpd"> 5 10 </table>
@@ -1058,7 +988,7 @@
 		</for>
 	</skill>
 	<skill id="6366" levels="2" name="Maguen Plasma - Critical">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Wild Maguen blesses you with a buff that increases your Critical Rate and Critical Damage for 10 minutes. -->
 		<table name="#cAtk"> 1.05 1.1 </table>
 		<table name="#icons"> icon.skill6366_1 icon.skill6366_2 </table>
 		<table name="#mCritPower"> 1.02 1.04 </table>
@@ -1089,7 +1019,7 @@
 		</for>
 	</skill>
 	<skill id="6367" levels="3" name="Maguen Plasma - Bistakon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Level 1: The energy of Bistakon surrounds you. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#icons"> icon.skill6367_1 icon.skill6367_2 icon.skill6367_3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1112,7 +1042,7 @@
 		</for>
 	</skill>
 	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Level 1: The energy of Cokrakon surrounds you. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#icons"> icon.skill6368_1 icon.skill6368_2 icon.skill6368_3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1135,7 +1065,7 @@
 		</for>
 	</skill>
 	<skill id="6369" levels="3" name="Maguen Plasma - Reptilikon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Level 1: The energy of Reptilikon surrounds you. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#icons"> icon.skill6369_1 icon.skill6369_2 icon.skill6369_3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1158,6 +1088,7 @@
 		</for>
 	</skill>
 	<skill id="6370" levels="1" name="Thunderbolt">
+		<!-- Receive 8 times the normal damage. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
@@ -1173,6 +1104,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6371" levels="1" name="Invincibility">
+		<!-- Invincible against standard targets, skills and buffs/debuffs. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -1185,6 +1117,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6372" levels="10" name="Power Up">
+		<!-- 2% of Atk. Spd. And 100% of Physical Skill Damage are increased. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
@@ -1198,6 +1131,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6373" levels="1" name="Thunderbolt">
+		<!-- Receive 8 times the normal damage. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
@@ -1231,6 +1165,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
+		<!-- For 5 minutes, 10% of max HP, 10% of max MP and 20 HP per second decrease from Dopagen's Sonic Strike. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -1244,6 +1179,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6377" levels="10" name="Assault Boost">
+		<!-- Atk. Spd. Increases by 5%. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
@@ -1257,6 +1193,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6378" levels="1" name="Earth Shift">
+		<!-- The ground below your feet shakes, making concentration difficult. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="VIBRATION" />
@@ -1293,6 +1230,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6380" levels="1" name="Bistakon Roar">
+		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
@@ -1320,6 +1258,7 @@
 		</for>
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
+		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
@@ -1348,6 +1287,7 @@
 		</for>
 	</skill>
 	<skill id="6382" levels="1" name="Bistakon Rolling Claw">
+		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1377,6 +1317,7 @@
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
+		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
@@ -1422,6 +1363,7 @@
 		</for>
 	</skill>
 	<skill id="6385" levels="1" name="Bistakon Critical Claw">
+		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1452,6 +1394,7 @@
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
+		<!-- Momentarily causes shock and stuns the enemy for 3 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1516,6 +1459,7 @@
 		</for>
 	</skill>
 	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
+		<!-- Speed is decreased by 50%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1538,6 +1482,7 @@
 		</for>
 	</skill>
 	<skill id="6390" levels="1" name="Cokrakon Sonic Explosion">
+		<!-- Casting Speed is decreased by 50%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
@@ -1562,6 +1507,7 @@
 		</for>
 	</skill>
 	<skill id="6391" levels="1" name="Cokrakon Sonic Slash">
+		<!-- Momentarily causes shock and stuns the enemy for 5 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
@@ -1651,6 +1597,7 @@
 		</for>
 	</skill>
 	<skill id="6395" levels="1" name="Cokrakon Dreadful Clow">
+		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1680,6 +1627,7 @@
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">
+		<!-- Frightens the enemy and causes him to flee for 6 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -1707,6 +1655,7 @@
 		</for>
 	</skill>
 	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
+		<!-- Momentarily causes shock and stuns the enemy for 3 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1735,6 +1684,7 @@
 		</for>
 	</skill>
 	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
+		<!-- Frightens the enemy and causes him to flee for 3 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />

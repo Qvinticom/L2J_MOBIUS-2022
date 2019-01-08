@@ -325,7 +325,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34831" name="Squash Ring (Wizard)" additionalName="Event" type="Armor">
-		<!-- Squash ring for wizards. Increases M. Critical Rate by 2% and M. Accuracy by 2. 15-day. Wearing 2 of these rings will give the effect of 1. -->
+		<!-- Squash ring for wizards. Increases M. Critical Rate by 2% and M. Accuracy by 2. 15-day. Only one effect is applied when two identical rings are worn. -->
 		<set name="icon" val="icon.accessory_ring_of_gourd_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -558,7 +558,7 @@
 		</skills>
 	</item>
 	<item id="34846" name="Bard's Gift" type="EtcItem">
-		<!-- Wrapped Pack containing Bard's heart. -->
+		<!-- Double-click to obtain a Bard's heart. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -596,7 +596,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34847" name="Pirate Elixir (2-hour)" type="EtcItem">
-		<!-- When used, you can temporarily feel the Vitality recovery herb's effect for 2 hours. No effect applies when used while the Birthday Vitality buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- When used, you can temporarily feel the Vitality recovery herb's effect for 2 hr. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -761,7 +761,7 @@
 		</skills>
 	</item>
 	<item id="34859" name="Enhanced Istina's Bracelet" type="Armor">
-		<!-- Istina's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Con + 1, and Men + 1. -->
+		<!-- Istina's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP +216, Con +1, and Men +1. -->
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -780,7 +780,7 @@
 		</skills>
 	</item>
 	<item id="34860" name="Enhanced Octavis' Bracelet" type="Armor">
-		<!-- Octavis' Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, and Wit + 1. -->
+		<!-- Octavis' Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP +216, Dex +1, and Wit +1. -->
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -812,7 +812,7 @@
 		</skills>
 	</item>
 	<item id="34862" name="Lavish Decoration Paper" type="EtcItem">
-		<!-- It says You only get one lift in angma language. -->
+		<!-- It says "You only get one lift" in angma language. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1380,7 +1380,7 @@
 		</skills>
 	</item>
 	<item id="34896" name="Rabbit Ears" additionalName="Campaign" type="Armor">
-		<!-- When equipped, STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1. -->
+		<!-- When equipped, STR +3, DEX +1, CON +1, P. Evasion +1, and M. Evasion +1. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1400,7 +1400,7 @@
 		</skills>
 	</item>
 	<item id="34897" name="Angel Circlet" additionalName="Campaign" type="Armor">
-		<!-- Increases INT + 3, WIT + 1, MEN + 1, Physical Attack Resistance + 1, and Mental Attack Resistance + 1. -->
+		<!-- Increases INT +3, WIT +1, MEN +1, Physical Attack Resistance +1, and Mental Attack Resistance +1. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1420,7 +1420,7 @@
 		</skills>
 	</item>
 	<item id="34898" name="Proof of Survival" type="EtcItem">
-		<!-- Someone who possesses the Proof of Survival can be suddenly challenged by the rare monster Scaldisect of Hellfire. Always be prepared for the attack. -->
+		<!-- Someone who possesses the Proof of Survival can be suddenly challenged by the rare monster "Scaldisect of Hellfire." Always be prepared for the attack. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

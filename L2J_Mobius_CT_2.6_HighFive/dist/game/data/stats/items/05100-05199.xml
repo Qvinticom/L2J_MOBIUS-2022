@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5100" type="EtcItem" name="Mature Desert Coda">
 		<set name="icon" val="icon.etc_coda_i05" />
@@ -192,6 +192,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5125" type="EtcItem" name="Harvester">
+		<!-- Used to harvest the crop from the corpse of the monster on which a seed was sown. Most successful when character and target are not more than 5 levels apart. -->
 		<set name="icon" val="icon.etc_reaper_i00" />
 		<set name="default_action" val="HARVEST" />
 		<set name="etcitem_type" val="HARVEST" />
@@ -199,9 +200,10 @@
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
 		<set name="handler" val="Harvester" />
-		<set name="item_skill" val="2098-1" />
+		<set name="item_skill" val="2098-1" /> <!-- Harvesting -->
 	</item>
 	<item id="5126" type="EtcItem" name="Dualsword Craft Stamp">
+		<!-- Certificate obtained from a shop or quest. Essential component for making dualswords of B-Grade and higher. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
@@ -376,6 +378,7 @@
 		</for>
 	</item>
 	<item id="5133" type="Weapon" name="Chrono Unitus">
+		<!-- Chronicle II Souvenir!!! -->
 		<set name="icon" val="icon.weapon_chrono_tambourine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -395,6 +398,7 @@
 		</for>
 	</item>
 	<item id="5134" type="EtcItem" name="Compressed Package of Soulshots: No Grade">
+		<!-- 300 compressed soulshots. No Grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -402,9 +406,10 @@
 		<set name="weight" val="600" />
 		<set name="price" val="2300" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2078-1" />
+		<set name="item_skill" val="2078-1" /> <!-- Compressed Package of Soulshots: No Grade -->
 	</item>
 	<item id="5135" type="EtcItem" name="Compressed Package of Soulshots (D-Grade)">
+		<!-- 300 compressed soulshots. D-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -412,9 +417,10 @@
 		<set name="weight" val="450" />
 		<set name="price" val="3300" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2079-1" />
+		<set name="item_skill" val="2079-1" /> <!-- Compressed Package of Soulshots: D-grade -->
 	</item>
 	<item id="5136" type="EtcItem" name="Compressed Package of Soulshots (C-Grade)">
+		<!-- 300 compressed soulshots. C-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -422,9 +428,10 @@
 		<set name="weight" val="450" />
 		<set name="price" val="4950" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2080-1" />
+		<set name="item_skill" val="2080-1" /> <!-- Compressed Package of Soulshots: C-grade -->
 	</item>
 	<item id="5137" type="EtcItem" name="Compressed Package of Soulshots (B-Grade)">
+		<!-- 300 compressed soulshots. B-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -432,9 +439,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="16500" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2081-1" />
+		<set name="item_skill" val="2081-1" /> <!-- Compressed Package of Soulshots: B-grade -->
 	</item>
 	<item id="5138" type="EtcItem" name="Compressed Package of Soulshots (A-Grade)">
+		<!-- 300 compressed soulshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -442,9 +450,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="26400" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2082-1" />
+		<set name="item_skill" val="2082-1" /> <!-- Compressed Package of Soulshots: A-grade -->
 	</item>
 	<item id="5139" type="EtcItem" name="Compressed Package of Soulshots (S-Grade)">
+		<!-- 300 compressed soulshots. S-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -452,9 +461,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="33000" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2083-1" />
+		<set name="item_skill" val="2083-1" /> <!-- Compressed Package of Soulshots: S-grade -->
 	</item>
 	<item id="5140" type="EtcItem" name="Compressed Package of Spiritshots: No Grade">
+		<!-- 300 compressed spiritshots. No Grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -462,9 +472,10 @@
 		<set name="weight" val="750" />
 		<set name="price" val="4950" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2084-1" />
+		<set name="item_skill" val="2084-1" /> <!-- Compressed Package of Spiritshots: No Grade -->
 	</item>
 	<item id="5141" type="EtcItem" name="Compressed Package of Spiritshots (D-Grade)">
+		<!-- 300 compressed spiritshots. D-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -472,9 +483,10 @@
 		<set name="weight" val="750" />
 		<set name="price" val="5940" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2085-1" />
+		<set name="item_skill" val="2085-1" /> <!-- Compressed Package of Spiritshots: D-grade -->
 	</item>
 	<item id="5142" type="EtcItem" name="Compressed Package of Spiritshots (C-Grade)">
+		<!-- 300 compressed spiritshots. C-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -482,9 +494,10 @@
 		<set name="weight" val="450" />
 		<set name="price" val="11550" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2086-1" />
+		<set name="item_skill" val="2086-1" /> <!-- Compressed Package of Spiritshots: C-grade -->
 	</item>
 	<item id="5143" type="EtcItem" name="Compressed Package of Spiritshots (B-Grade)">
+		<!-- 300 compressed spiritshots. B-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -492,9 +505,10 @@
 		<set name="weight" val="450" />
 		<set name="price" val="33000" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2087-1" />
+		<set name="item_skill" val="2087-1" /> <!-- Compressed Package of Spiritshots: B-grade -->
 	</item>
 	<item id="5144" type="EtcItem" name="Compressed Package of Spiritshots (A-Grade)">
+		<!-- 300 compressed spiritshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -502,9 +516,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="39600" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2088-1" />
+		<set name="item_skill" val="2088-1" /> <!-- Compressed Package of Spiritshots: A-grade -->
 	</item>
 	<item id="5145" type="EtcItem" name="Compressed Package of Spiritshots (S-Grade)">
+		<!-- 300 compressed spiritshots. S-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -512,9 +527,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="49500" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2089-1" />
+		<set name="item_skill" val="2089-1" /> <!-- Compressed Package of Spiritshots: S-grade -->
 	</item>
 	<item id="5146" type="EtcItem" name="Compressed Package of Blessed Spiritshots: No Grade">
+		<!-- 300 compressed blessed spiritshots. No Grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -522,9 +538,10 @@
 		<set name="weight" val="750" />
 		<set name="price" val="11550" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2090-1" />
+		<set name="item_skill" val="2090-1" /> <!-- Compressed Package of Blessed Spiritshots: No Grade -->
 	</item>
 	<item id="5147" type="EtcItem" name="Compressed Package of Blessed Spiritshots (D-Grade)">
+		<!-- 300 compressed blessed spiritshots. D-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -532,9 +549,10 @@
 		<set name="weight" val="750" />
 		<set name="price" val="14850" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2091-1" />
+		<set name="item_skill" val="2091-1" /> <!-- Compressed Package of Blessed Spiritshots: D-grade -->
 	</item>
 	<item id="5148" type="EtcItem" name="Compressed Package of Blessed Spiritshots (C-Grade)">
+		<!-- 300 compressed blessed spiritshots. C-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -542,9 +560,10 @@
 		<set name="weight" val="450" />
 		<set name="price" val="29700" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2092-1" />
+		<set name="item_skill" val="2092-1" /> <!-- Compressed Package of Blessed Spiritshots: C-grade -->
 	</item>
 	<item id="5149" type="EtcItem" name="Compressed Package of Blessed Spiritshots (B-Grade)">
+		<!-- 300 compressed blessed spiritshots. B-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -552,9 +571,10 @@
 		<set name="weight" val="450" />
 		<set name="price" val="80850" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2093-1" />
+		<set name="item_skill" val="2093-1" /> <!-- Compressed Package of Blessed Spiritshots: B-grade -->
 	</item>
 	<item id="5150" type="EtcItem" name="Compressed Package of Blessed Spiritshots (A-Grade)">
+		<!-- 300 compressed blessed spiritshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -562,9 +582,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="95700" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2094-1" />
+		<set name="item_skill" val="2094-1" /> <!-- Compressed Package of Blessed Spiritshots: A-grade -->
 	</item>
 	<item id="5151" type="EtcItem" name="Compressed Package of Blessed Spiritshots (S-Grade)">
+		<!-- 300 compressed blessed spiritshots. S-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -572,9 +593,10 @@
 		<set name="weight" val="300" />
 		<set name="price" val="115500" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2095-1" />
+		<set name="item_skill" val="2095-1" /> <!-- Compressed Package of Blessed Spiritshots: S-grade -->
 	</item>
 	<item id="5152" type="EtcItem" name="Magic Compressor">
+		<!-- A magic tool needed to compress soulshots, spiritshots etc. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -582,6 +604,7 @@
 		<set name="price" val="100" />
 	</item>
 	<item id="5153" type="EtcItem" name="Recipe: Soulshot (D) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Soulshots: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -594,6 +617,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5154" type="EtcItem" name="Recipe: Soulshot (C) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Soulshots: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -606,6 +630,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5155" type="EtcItem" name="Recipe: Soulshot (B) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Soulshots: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -618,6 +643,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5156" type="EtcItem" name="Recipe: Soulshot (A) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Soulshots: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -630,6 +656,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5157" type="EtcItem" name="Recipe: Soulshot (S) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Soulshots: Grade S. Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -642,6 +669,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5158" type="EtcItem" name="Recipe: Spiritshot (D) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Spiritshots: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -654,6 +682,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5159" type="EtcItem" name="Recipe: Spiritshot (C) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Spiritshots: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -666,6 +695,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5160" type="EtcItem" name="Recipe: Spiritshot (B) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Spiritshots: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -678,6 +708,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5161" type="EtcItem" name="Recipe: Spiritshot (A) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Spiritshots: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -690,6 +721,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5162" type="EtcItem" name="Recipe: Spiritshot (S) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Spiritshots: Grade S. Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -702,6 +734,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5163" type="EtcItem" name="Recipe: Blessed Spiritshot (D) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -714,6 +747,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5164" type="EtcItem" name="Recipe: Blessed Spiritshot (C) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -726,6 +760,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5165" type="EtcItem" name="Recipe: Blessed Spiritshot (B) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -738,6 +773,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5166" type="EtcItem" name="Recipe: Blessed Spiritshot (A) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -750,6 +786,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5167" type="EtcItem" name="Recipe: Blessed Spiritshot (S) Compressed Package (100%)">
+		<!-- For Dwarves only. The recipe for the Compressed Package of Blessed Spiritshots: Grade S. Requires Create Item Skill Level 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -762,6 +799,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5168" type="EtcItem" name="Food for Strider">
+		<!-- When the hunger gauge of a Strider reaches 55% or below, its food will be consumed automatically. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -771,13 +809,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
-		<set name="item_skill" val="2101-1" />
+		<set name="item_skill" val="2101-1" /> <!-- Feed: General Strider -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player categoryType="STRIDER" />
 		</cond>
 	</item>
 	<item id="5169" type="EtcItem" name="Deluxe Food for Strider">
+		<!-- When the hunger gauge of a Strider reaches 55% or below, its food will be consumed automatically. Food consumption efficiency improves while riding a Strider. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -787,13 +826,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
-		<set name="item_skill" val="2102-1" />
+		<set name="item_skill" val="2102-1" /> <!-- Feed: Clan Hall Strider -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player categoryType="STRIDER" />
 		</cond>
 	</item>
 	<item id="5170" type="Armor" name="Mithril Panzer Coat">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i08" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -812,6 +852,7 @@
 		</for>
 	</item>
 	<item id="5171" type="Armor" name="Brigadine Panzer Coat">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -830,6 +871,7 @@
 		</for>
 	</item>
 	<item id="5172" type="Armor" name="Draconic Panzer Coat">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -848,6 +890,7 @@
 		</for>
 	</item>
 	<item id="5173" type="Armor" name="Blood Panzer Coat">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -866,6 +909,7 @@
 		</for>
 	</item>
 	<item id="5174" type="Armor" name="Ophidian Panzer Coat">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -884,6 +928,7 @@
 		</for>
 	</item>
 	<item id="5175" type="Armor" name="Inferno Panzer Coat">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_armor_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -902,6 +947,7 @@
 		</for>
 	</item>
 	<item id="5176" type="Weapon" name="Serpentine Spike">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i08" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -925,6 +971,7 @@
 		</for>
 	</item>
 	<item id="5177" type="Weapon" name="Drake Horn">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -948,6 +995,7 @@
 		</for>
 	</item>
 	<item id="5178" type="Weapon" name="Assault Alicorn">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i09" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -971,6 +1019,7 @@
 		</for>
 	</item>
 	<item id="5179" type="Weapon" name="Draconic Slicer">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -994,6 +1043,7 @@
 		</for>
 	</item>
 	<item id="5180" type="Weapon" name="Ohpdian Lance">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1017,6 +1067,7 @@
 		</for>
 	</item>
 	<item id="5181" type="Weapon" name="Diamond Drill">
+		<!-- Double-click to wear. Exclusively used by a Strider. -->
 		<set name="icon" val="icon.etc_pet_arms_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1040,6 +1091,7 @@
 		</for>
 	</item>
 	<item id="5182" type="Armor" name="Hatchling's Gorgon Coat">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1058,6 +1110,7 @@
 		</for>
 	</item>
 	<item id="5183" type="Armor" name="Hatchling's Ophidian Plate">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1076,6 +1129,7 @@
 		</for>
 	</item>
 	<item id="5184" type="Armor" name="Hatchling's Crimson Plate">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1094,6 +1148,7 @@
 		</for>
 	</item>
 	<item id="5185" type="Armor" name="Hatchling's Draconic Plate">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1112,6 +1167,7 @@
 		</for>
 	</item>
 	<item id="5186" type="Armor" name="Hatchling's Inferno Plate">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_armor_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1130,6 +1186,7 @@
 		</for>
 	</item>
 	<item id="5187" type="Weapon" name="Serpentine Grinder">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1153,6 +1210,7 @@
 		</for>
 	</item>
 	<item id="5188" type="Weapon" name="Fang of Dahak">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1176,6 +1234,7 @@
 		</for>
 	</item>
 	<item id="5189" type="Weapon" name="Crimson Blood Fang">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1199,6 +1258,7 @@
 		</for>
 	</item>
 	<item id="5190" type="Weapon" name="Draconic Chopper">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1222,6 +1282,7 @@
 		</for>
 	</item>
 	<item id="5191" type="Weapon" name="Diabolic Grinder">
+		<!-- Double-click to wear. Exclusively used by a Hatchling. -->
 		<set name="icon" val="icon.etc_pet_arms_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1245,6 +1306,7 @@
 		</for>
 	</item>
 	<item id="5192" type="EtcItem" name="Rope of Magic (D-Grade)">
+		<!-- A rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1253,6 +1315,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5193" type="EtcItem" name="Rope of Magic (C-Grade)">
+		<!-- A rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1261,6 +1324,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5194" type="EtcItem" name="Rope of Magic (B-Grade)">
+		<!-- A rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1269,6 +1333,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5195" type="EtcItem" name="Rope of Magic (A-Grade)">
+		<!-- A rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1277,6 +1342,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5196" type="EtcItem" name="Rope of Magic (S-Grade)">
+		<!-- A rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1285,6 +1351,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5197" type="EtcItem" name="Chest Key - Grade 8">
+		<!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1293,9 +1360,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2065-1" />
+		<set name="item_skill" val="2065-1" /> <!-- Box Key -->
 	</item>
 	<item id="5198" type="EtcItem" name="Chest Key - Grade 7">
+		<!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1304,9 +1372,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2065-2" />
+		<set name="item_skill" val="2065-2" /> <!-- Box Key -->
 	</item>
 	<item id="5199" type="EtcItem" name="Chest Key - Grade 6">
+		<!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1315,6 +1384,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2065-3" />
+		<set name="item_skill" val="2065-3" /> <!-- Box Key -->
 	</item>
 </list>

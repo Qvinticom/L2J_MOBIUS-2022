@@ -57,7 +57,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="26304" name="Campfire Flint" type="EtcItem">
-		<!-- You can start a campfire by using this flint. The warmth of the bonfire will decrease Skill Cooldown by 10%, increase PVE Damage by 10%, and bestow the Vampirig Rage effect. It will be effective only when the fire is started at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
+		<!-- You can start a campfire by using this flint. For 10 min. for you and your party members: Skill Cooldown -10%, PvE Damage +10%, Vampiric Rage effect 5%. It will be effective only when the fire is started at a certain distance away from the village. Cannot be stacked with the Christmas Tree effect. Can be stacked with the Warmth of Kotatsu effect. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="price" val="1" />
 		<set name="is_commissionable" val="false" />
@@ -66,7 +66,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26305" name="Kotatsu" type="EtcItem">
-		<!-- Increases Speed by 20, and reduces Skill MP Consumption by 20% and PvE Damage by 10%. It will be effective only when summoned at a certain distance away from the village. It lasts 10 minutes. Does not stack with the Christmas Tree effect. -->
+		<!-- For 10 min. for you and your party members: Speed +20, Skill MP Consumption -20%, received PvE Damage -10%. It will be effective only when summoned at a certain distance away from the village. Can be stacked with the Campfire's Warmth effect. -->
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
@@ -371,7 +371,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="26338" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">
-		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/ MP/ CP +510, P. Def. +971, M. Def. +552, P. Evasion/ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +15%, M. Atk. +15%, Skill Power +15%, Skill Critical Rate +15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -384,7 +384,7 @@
 		</skills>
 	</item>
 	<item id="26339" name="Talisman - Abundance Lv. 2 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/ MP/ CP +531, P. Def. +1051, M. Def. +609, P. Evasion/ M. Evasion +8, Attribute Resistance +17, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +16%, M. Atk. +16%, Skill Power +16%, Skill Critical Rate +16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="26340" name="Talisman - Abundance Lv. 3 (High-grade)" type="Armor">
-		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/ MP/ CP +563, P. Def. +1184, M. Def. +706, P. Evasion/ M. Evasion +9, Attribute Resistance +20, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +17%, M. Atk. +17%, Skill Power +17%, Skill Critical Rate +17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -410,7 +410,7 @@
 		</skills>
 	</item>
 	<item id="26341" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25,  Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/ MP/ CP +591, P. Def. +1307, M. Def. +799, P. Evasion/ M. Evasion +10, Attribute Resistance +25, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +20%, M. Atk. +20%, Skill Power +20%, Skill Critical Rate +20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="26350" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. + 5 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. +5 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -523,7 +523,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. +1 for armor and accessories (A-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -538,7 +538,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26352" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. + 6 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. +6 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -553,7 +553,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26353" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (S-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1069,7 +1069,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26388" name="Anakim Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of Anakim for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of Anakim Outfit for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />

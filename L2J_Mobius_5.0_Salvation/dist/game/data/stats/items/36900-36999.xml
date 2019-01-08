@@ -420,7 +420,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="36946" name="Lindvior's Earring" type="Armor">
-		<!-- MP +59, P./M. Critical Damage +10%, Movement Speed +5, DEX/WIT +3, Wind/Dark Attack Def. +30, Petrify Atk./Def. Success Rate +50%, Knock Back/Knock Down/Pull Atk./Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/Knock Down effects when used, and gives Knock Back/Knock Down Resistance for 5 seconds. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attack Def. +30, Petrify Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/ Knock Down effects when used, and gives Knock Back/ Knock Down Resistance for 5 seconds. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -527,7 +527,7 @@
 		</skills>
 	</item>
 	<item id="36953" name="Support Box" type="EtcItem">
-		<!-- Box that helps new/dormant heroes. Double-click to receive an item appropriate for the PC's class/level. -->
+		<!-- Box that helps new/ dormant heroes. Double-click to receive an item appropriate for the PC's class/ level. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -883,7 +883,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36978" name="Scroll: Enchant Hair Accessory" type="EtcItem">
-		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->
+		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at +4. Can be safely enchanted to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -914,7 +914,7 @@
 		</skills>
 	</item>
 	<item id="36981" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - STR" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. STR + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. STR +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -925,7 +925,7 @@
 		</skills>
 	</item>
 	<item id="36982" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - DEX" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. DEX + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. DEX +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -936,7 +936,7 @@
 		</skills>
 	</item>
 	<item id="36983" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - CON" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. CON + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. CON +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -947,7 +947,7 @@
 		</skills>
 	</item>
 	<item id="36984" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - MEN" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. MEN + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. MEN +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -958,7 +958,7 @@
 		</skills>
 	</item>
 	<item id="36985" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - INT" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. INT + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. INT +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -969,7 +969,7 @@
 		</skills>
 	</item>
 	<item id="36986" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - WIT" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. WIT + 3 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. WIT +3 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -980,7 +980,7 @@
 		</skills>
 	</item>
 	<item id="36987" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Rate" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Rate + 50 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Rate +50 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -991,7 +991,7 @@
 		</skills>
 	</item>
 	<item id="36988" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Damage" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Damage +90 and M. Critical Damage +68 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1002,7 +1002,7 @@
 		</skills>
 	</item>
 	<item id="36989" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Def." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Def. + 5% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Def. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="36990" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Def." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Def. + 5% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Def. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1024,7 +1024,7 @@
 		</skills>
 	</item>
 	<item id="36991" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Evasion" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Evasion + 5 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Evasion +5 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1035,7 +1035,7 @@
 		</skills>
 	</item>
 	<item id="36992" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Atk." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Atk. + 5% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Atk. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1046,7 +1046,7 @@
 		</skills>
 	</item>
 	<item id="36993" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Atk." type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Atk. + 10% when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Atk. +10% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1057,7 +1057,7 @@
 		</skills>
 	</item>
 	<item id="36994" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Accuracy" type="Armor">
-		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Accuracy + 5 when equipped. -->
+		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Accuracy +5 when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1124,7 +1124,7 @@
 		<set name="time" val="7200" />
 	</item>
 	<item id="36999" name="9th Anniversary Cube (30-day) (Event)" type="EtcItem">
-		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5700" toLevel="7" name="Decrease M. Def.">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- M. Def. is decreased. Effect $s1. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
@@ -30,13 +24,7 @@
 		</effects>
 	</skill>
 	<skill id="5701" toLevel="7" name="P. Atk. Decrease">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- P. Atk. is decreased. Effect $s1. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -59,7 +47,6 @@
 		</effects>
 	</skill>
 	<skill id="5702" toLevel="2" name="Adiantum Round Fighter">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>400</affectRange>
 		<castRange>
 			<value level="1">0</value>
@@ -149,6 +136,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5706" toLevel="1" name="Poison">
+		<!-- HP decreases from Poison momentarily. The body is paralyzed after a set amount of time. Effect 7. -->
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -175,6 +163,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5707" toLevel="1" name="Paralysis">
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -280,6 +269,7 @@
 		</effects>
 	</skill>
 	<skill id="5711" toLevel="1" name="Power of Rage">
+		<!-- P. Atk. is greatly increased because of rage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -299,6 +289,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5712" toLevel="1" name="Energy Ditch">
+		<!-- Delivers one's own energy to Lematan. The delivery status is cancelled when damage is incurred. -->
 		<castRange>1300</castRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>15000</hitTime>
@@ -310,7 +301,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1700</effectRange>
-		<channelingSkillId>5713</channelingSkillId>
+		<channelingSkillId>5713</channelingSkillId> <!-- Energy Ditch -->
 		<channelingStart>3.6</channelingStart>
 		<mpPerChanneling>15</mpPerChanneling>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -323,6 +314,7 @@
 		</effects>
 	</skill>
 	<skill id="5713" toLevel="5" name="Energy Ditch">
+		<!-- Has been given minions' M. Atk. Recovery bonus increased. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -360,7 +352,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="5715" toLevel="1" name="Electric Flame">
-		<!-- Confirmed CT2.5 -->
+		<!-- Incurring continuous flame damage and has decreased Speed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
@@ -399,6 +391,7 @@
 		</effects>
 	</skill>
 	<skill id="5716" toLevel="1" name="Stun">
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -443,6 +436,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5718" toLevel="1" name="Anger">
+		<!-- P. Def. is decreased and P. Atk. is greatly increased because of rage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -478,8 +472,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5720" toLevel="6" name="Blade Cut">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -521,8 +513,6 @@
 		</effects>
 	</skill>
 	<skill id="5721" toLevel="6" name="Blade Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -564,8 +554,6 @@
 		</effects>
 	</skill>
 	<skill id="5722" toLevel="6" name="Hammer Assault">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -606,8 +594,6 @@
 		</effects>
 	</skill>
 	<skill id="5723" toLevel="6" name="Hammer Swing">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<castRange>100</castRange>
 		<effectPoint>-100</effectPoint>
@@ -650,8 +636,6 @@
 		</effects>
 	</skill>
 	<skill id="5724" toLevel="6" name="Broom Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -692,8 +676,6 @@
 		</effects>
 	</skill>
 	<skill id="5725" toLevel="6" name="Broom Thrust">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -734,8 +716,6 @@
 		</effects>
 	</skill>
 	<skill id="5726" toLevel="6" name="Scissors Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -776,8 +756,6 @@
 		</effects>
 	</skill>
 	<skill id="5727" toLevel="6" name="Scissors Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -818,8 +796,6 @@
 		</effects>
 	</skill>
 	<skill id="5728" toLevel="6" name="Shovel Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -860,8 +836,6 @@
 		</effects>
 	</skill>
 	<skill id="5729" toLevel="6" name="Shovel Whirlwind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -902,8 +876,6 @@
 		</effects>
 	</skill>
 	<skill id="5730" toLevel="6" name="Made Fireball">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -955,8 +927,6 @@
 		</effects>
 	</skill>
 	<skill id="5731" toLevel="6" name="Incense of Death">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1006,8 +976,6 @@
 		</effects>
 	</skill>
 	<skill id="5732" toLevel="6" name="Flame Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>500</affectRange>
 		<castRange>500</castRange>
@@ -1070,8 +1038,7 @@
 		</effects>
 	</skill>
 	<skill id="5733" toLevel="6" name="Fear of Steward">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1134,8 +1101,6 @@
 		</effects>
 	</skill>
 	<skill id="5734" toLevel="6" name="Gust of Wind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1187,8 +1152,7 @@
 		</effects>
 	</skill>
 	<skill id="5735" toLevel="6" name="Curse of Steward">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Momentarily inflicts Sleep on the target. Decrease probability of additional sleep state while effects last. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -1261,8 +1225,6 @@
 		</effects>
 	</skill>
 	<skill id="5736" toLevel="6" name="Katar Trusting">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
@@ -1303,8 +1265,6 @@
 		</effects>
 	</skill>
 	<skill id="5737" toLevel="6" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1345,8 +1305,6 @@
 		</effects>
 	</skill>
 	<skill id="5738" toLevel="6" name="Power Roar">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1387,8 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="5739" toLevel="1" name="Invincibility">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Recently resurrected and temporarily immobile. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -1416,8 +1373,6 @@
 		</effects>
 	</skill>
 	<skill id="5740" toLevel="1" name="Pet Regeneration">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1442,8 +1397,6 @@
 		</effects>
 	</skill>
 	<skill id="5741" toLevel="1" name="Mental Pot">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1487,6 +1440,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5744" toLevel="1" name="Invincibility">
+		<!-- Temporarily invincible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -1505,6 +1459,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5745" toLevel="12" name="Death Blow">
+		<!-- Draws on your HP to summon your strength and unleash a punishing attack. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-206</value>
@@ -1591,6 +1546,7 @@
 		</effects>
 	</skill>
 	<skill id="5746" toLevel="12" name="Double Attack">
+		<!-- Inflicts 2 devastatingly rapid attacks. Power $s1. -->
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -1664,6 +1620,7 @@
 		</effects>
 	</skill>
 	<skill id="5747" toLevel="12" name="Spin Attack">
+		<!-- Damages and stuns the target simultaneously. Power $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1748,6 +1705,7 @@
 		</effects>
 	</skill>
 	<skill id="5748" toLevel="12" name="Meteor Shower">
+		<!-- Drops meteors to attack surrounding enemies. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1791,6 +1749,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5749" toLevel="12" name="Thunder Bolt">
+		<!-- Pours forth the power of thunder upon the enemy. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -1881,6 +1840,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5750" toLevel="12" name="Blaze">
+		<!-- Inflicts a swift magic attack upon contacted enemies nearby. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -1972,6 +1932,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5751" toLevel="12" name="Lightning Wave">
+		<!-- Inflicts the power of thunder upon surrounding enemies. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -2063,6 +2024,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5752" toLevel="12" name="Blaze">
+		<!-- Consumes one's own HP to inflict powerful magic on the enemy. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -2232,7 +2194,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
-		<channelingSkillId>5713</channelingSkillId>
+		<channelingSkillId>5713</channelingSkillId> <!-- Energy Ditch -->
 		<channelingStart>3.6</channelingStart>
 		<mpPerChanneling>15</mpPerChanneling>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -2262,6 +2224,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5760" toLevel="9" name="Critical Blow">
+		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2288,6 +2251,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5761" toLevel="2" name="Power Fake Attack">
+		<!-- Strong pounding attack. -->
 		<castRange>40</castRange>
 		<effectPoint>-574</effectPoint>
 		<effectRange>400</effectRange>
@@ -2313,6 +2277,7 @@
 		</effects>
 	</skill>
 	<skill id="5762" toLevel="1" name="Blessing of Pathfinder">
+		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -2332,6 +2297,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5763" toLevel="1" name="Wink">
+		<!-- See Agathion's cute trick. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2347,6 +2313,7 @@
 		</conditions>
 	</skill>
 	<skill id="5764" toLevel="1" name="Terror of the Pumpkin Ghost">
+		<!-- Curse of the Pumpkin Ghost. Causes spontaneous movement. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2509,6 +2476,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5771" toLevel="1" name="Buff Control">
+		<!-- Limits to prevent a buff upon the master. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
@@ -2527,6 +2495,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5772" toLevel="1" name="Surrender to Fire">
+		<!-- Fire Resistance decreases and Water Resistance increases momentarily. Effect 4. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
@@ -2546,6 +2515,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5773" toLevel="1" name="Surrender to Water">
+		<!-- Fire Resistance decreases and Water Resistance increases momentarily. Effect 4. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
@@ -2565,6 +2535,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5775" toLevel="1" name="Greater Blessing of Pathfinder">
+		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -2584,21 +2555,21 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5776" toLevel="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost Warden: Kamaloka - Leader of those who watch over the Labyrinth of the Abyss. He watches over those inside Kamaloka to make sure they properly perform their roles. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5777" toLevel="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost Captain: Kamaloka - Leader of those who guard the Labyrinth of the Abyss. They protect Kamaloka from all enemies to try to infiltrate Kamaloka. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5778" toLevel="1" name="Invincible After-effect">
-		<!-- skill after ct2.3 not used -->
+		<!-- Temporarily unable to receive invincible effect. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -2617,6 +2588,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5779" toLevel="42" name="Transform Effect">
+		<!-- Transforms both your physical form and abilities. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>
 			<value level="1">7</value>
@@ -2740,7 +2712,6 @@
 		</passiveConditions>
 	</skill>
 	<skill id="5781" toLevel="1" name="Presentation - Lindvior Approach">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>17000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2751,7 +2722,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5782" toLevel="1" name="Presentation - Lindvior Gust">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>10000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2762,7 +2732,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5783" toLevel="1" name="Presentation - Lindvior Descent">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2773,7 +2742,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5784" toLevel="1" name="Presentation - Lindvior Dust">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>5000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2784,7 +2752,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5785" toLevel="1" name="Presentation - Dimensional Door">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2794,7 +2761,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5786" toLevel="1" name="Presentation - Ekimus Separation">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>22000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -2806,7 +2772,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5787" toLevel="1" name="Presentation - Ekimus Approach">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>11000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -2818,7 +2783,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5788" toLevel="1" name="Presentation - Ekimus Blood Hail">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>2100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -2830,7 +2794,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5789" toLevel="1" name="Presentation - Ekimus Sneer">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>13000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -2842,7 +2805,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5790" toLevel="1" name="Presentation - Ekimus Aftereffect">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2852,7 +2814,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5791" toLevel="1" name="Presentation - Magyun's Entrance">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>4200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -2864,7 +2825,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5792" toLevel="1" name="Presentation - Summon Banshee Queen Boomeye">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2875,7 +2835,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5793" toLevel="1" name="Presentation - Summon Boomeye">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2886,6 +2845,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5794" toLevel="1" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2911,6 +2871,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5795" toLevel="1" name="Poison">
+		<!-- Poisons the target, causing them to lose 66 HP every second for 30 seconds. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2936,6 +2897,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5796" toLevel="1" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3000,6 +2962,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5799" toLevel="1" name="Bleed">
+		<!-- Causes the target to bleed and lose 78 HP every second for 20 seconds. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>

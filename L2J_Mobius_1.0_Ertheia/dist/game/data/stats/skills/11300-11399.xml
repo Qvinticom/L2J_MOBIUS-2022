@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily immobilized midair. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -43,8 +42,6 @@
 		</effects>
 	</skill>
 	<skill id="11301" toLevel="8" name="Dimension Storm">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Attack nearby enemies with 152 Power added to M. Atk. -->
 		<icon>icon.skill0005</icon>
 		<affectRange>300</affectRange>
@@ -87,8 +84,6 @@
 		</effects>
 	</skill>
 	<skill id="11302" toLevel="11" name="Servitor Major Heal">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Heals the servitor with 1637 Power. -->
 		<icon>icon.skill1127</icon>
 		<operateType>A1</operateType>
@@ -142,8 +137,6 @@
 		</effects>
 	</skill>
 	<skill id="11303" toLevel="1" name="Mass Servitor Magic Barrier">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitors' M. Def. by 30% for 30 minutes. -->
 		<icon>icon.skill1139</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -174,8 +167,6 @@
 		</effects>
 	</skill>
 	<skill id="11304" toLevel="1" name="Mass Servitor Haste">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitors' Atk. Spd. by 34% for 30 minutes. -->
 		<icon>icon.skill1141</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -206,8 +197,6 @@
 		</effects>
 	</skill>
 	<skill id="11305" toLevel="1" name="Mass Servitor Shield">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitors' P. Def. by 15% for 30 minutes. -->
 		<icon>icon.skill1140</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -238,8 +227,6 @@
 		</effects>
 	</skill>
 	<skill id="11306" toLevel="1" name="Mass Servitor Empower">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitors' M. Atk. by 79% for 30 minutes. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -270,8 +257,6 @@
 		</effects>
 	</skill>
 	<skill id="11307" toLevel="1" name="Mass Servitor Might">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitors' P. Atk. by 17% for 30 minutes. -->
 		<icon>icon.skill1146</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -302,8 +287,6 @@
 		</effects>
 	</skill>
 	<skill id="11308" toLevel="1" name="Mass Servitor Wind Walk">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitors' Speed by 34 for 30 minutes. -->
 		<icon>icon.skill1144</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -334,8 +317,6 @@
 		</effects>
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Dispels debuffs on all servitors. -->
 		<abnormalTime>5</abnormalTime>
 		<icon>icon.skill1301</icon>
@@ -399,8 +380,6 @@
 		</effects>
 	</skill>
 	<skill id="11310" toLevel="2" name="Mass Servitor Ultimate Defense">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases all servitor's P. Def. by 4680 and M. Def. by 4212 for 60 seconds. -->
 		<icon>icon.skill1299</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -451,8 +430,6 @@
 		</effects>
 	</skill>
 	<skill id="11311" toLevel="3" name="Naviarope Strike">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts 20633 damage. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
@@ -484,8 +461,6 @@
 		</effects>
 	</skill>
 	<skill id="11312" toLevel="3" name="Naviarope Flame">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts 18758 ranged damage. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
@@ -517,8 +492,6 @@
 		</effects>
 	</skill>
 	<skill id="11313" toLevel="3" name="Naviarope Explosion">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts 18758 damage to nearby enemies. -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectRange>200</affectRange> <!-- Guessed -->
@@ -550,8 +523,6 @@
 		</effects>
 	</skill>
 	<skill id="11314" toLevel="3" name="Corpse Blast">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Detonates a corpse to inflict damage on nearby enemies. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<affectRange>150</affectRange>
@@ -590,8 +561,6 @@
 		</effects>
 	</skill>
 	<skill id="11315" toLevel="1" name="Summon Defense">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Increases Bow/Crossbow Resistance + 50 and M. Def. + 50%. -->
 		<icon>icon.skill11253</icon>
 		<operateType>P</operateType>
@@ -610,8 +579,6 @@
 		</effects>
 	</skill>
 	<skill id="11316" toLevel="1" name="Summon Soulshots">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Summons 1900 Beast Soulshots. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill11316</icon>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -641,8 +608,6 @@
 		</effects>
 	</skill>
 	<skill id="11317" toLevel="8" name="Servitor Group Heal">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Restores all servitors' HP by 1191. Not in Use. -->
 		<icon>icon.skill1027</icon>
 		<operateType>A1</operateType>
@@ -695,7 +660,6 @@
 		</effects>
 	</skill>
 	<skill id="11320" toLevel="8" name="Summon Wynn Kai the Cat">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Kai the Cat. Consumes 2 summon points. -->
 		<icon>icon.skill11844</icon>
 		<operateType>A1</operateType>
@@ -738,7 +702,6 @@
 		</effects>
 	</skill>
 	<skill id="11321" toLevel="8" name="Summon Wynn Feline King">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Feline King. Consumes 2 summon points. -->
 		<icon>icon.skill11845</icon>
 		<operateType>A1</operateType>
@@ -781,7 +744,6 @@
 		</effects>
 	</skill>
 	<skill id="11322" toLevel="8" name="Summon Wynn Feline Queen">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Feline Queen. Consumes 2 summon points. -->
 		<icon>icon.skill11846</icon>
 		<operateType>A1</operateType>
@@ -824,7 +786,6 @@
 		</effects>
 	</skill>
 	<skill id="11323" toLevel="8" name="Feline Aggression">
-		<!-- Updated to IO -->
 		<!-- Provokes nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -859,7 +820,6 @@
 		</effects>
 	</skill>
 	<skill id="11324" toLevel="8" name="Feline Stun">
-		<!-- Updated to IO -->
 		<!-- Temporarily Stuns nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -894,7 +854,6 @@
 		</effects>
 	</skill>
 	<skill id="11325" toLevel="8" name="Feline Bite">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
@@ -932,7 +891,6 @@
 		</effects>
 	</skill>
 	<skill id="11326" toLevel="8" name="Feline Pounce">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
@@ -997,7 +955,6 @@
 		</effects>
 	</skill>
 	<skill id="11327" toLevel="8" name="Feline Touch">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
@@ -1034,7 +991,6 @@
 		</effects>
 	</skill>
 	<skill id="11328" toLevel="8" name="Feline Power">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
@@ -1073,7 +1029,6 @@
 		</effects>
 	</skill>
 	<skill id="11329" toLevel="8" name="Summon Wynn Merrow">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Merrow. Consumes 2 summon points. -->
 		<icon>icon.skill11847</icon>
 		<operateType>A1</operateType>
@@ -1116,7 +1071,6 @@
 		</effects>
 	</skill>
 	<skill id="11330" toLevel="8" name="Summon Wynn Magnus">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Magnus. Consumes 2 summon points. -->
 		<icon>icon.skill11848</icon>
 		<operateType>A1</operateType>
@@ -1159,7 +1113,6 @@
 		</effects>
 	</skill>
 	<skill id="11331" toLevel="8" name="Summon Wynn Seraphim">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Seraphim. Consumes 2 summon points. -->
 		<icon>icon.skill11849</icon>
 		<operateType>A1</operateType>
@@ -1202,7 +1155,6 @@
 		</effects>
 	</skill>
 	<skill id="11332" toLevel="8" name="Unicorn's Aggression">
-		<!-- Updated to IO -->
 		<!-- Provokes nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1237,7 +1189,6 @@
 		</effects>
 	</skill>
 	<skill id="11333" toLevel="8" name="Unicorn's Stun">
-		<!-- Updated to IO -->
 		<!-- Temporarily Stuns nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1272,7 +1223,6 @@
 		</effects>
 	</skill>
 	<skill id="11334" toLevel="8" name="Unicorn's Bite">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
@@ -1310,7 +1260,6 @@
 		</effects>
 	</skill>
 	<skill id="11335" toLevel="8" name="Unicorn's Pounce">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
@@ -1375,7 +1324,6 @@
 		</effects>
 	</skill>
 	<skill id="11336" toLevel="8" name="Unicorn's Touch">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
@@ -1412,7 +1360,6 @@
 		</effects>
 	</skill>
 	<skill id="11337" toLevel="8" name="Unicorn's Power">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
@@ -1451,7 +1398,6 @@
 		</effects>
 	</skill>
 	<skill id="11338" toLevel="8" name="Summon Wynn Nightshade">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Nightshade. Consumes 2 summon points. -->
 		<icon>icon.skill11850</icon>
 		<operateType>A1</operateType>
@@ -1494,7 +1440,6 @@
 		</effects>
 	</skill>
 	<skill id="11339" toLevel="8" name="Summon Wynn Spectral Lord">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Spectral Lord. Consumes 2 summon points. -->
 		<icon>icon.skill11851</icon>
 		<operateType>A1</operateType>
@@ -1537,7 +1482,6 @@
 		</effects>
 	</skill>
 	<skill id="11340" toLevel="8" name="Summon Wynn Soulless">
-		<!-- Updated to IO -->
 		<!-- Summons Wynn Soulless. Consumes 2 summon points. -->
 		<icon>icon.skill11852</icon>
 		<operateType>A1</operateType>
@@ -1580,7 +1524,6 @@
 		</effects>
 	</skill>
 	<skill id="11341" toLevel="8" name="Phantom Aggression">
-		<!-- Updated to IO -->
 		<!-- Provokes nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1615,7 +1558,6 @@
 		</effects>
 	</skill>
 	<skill id="11342" toLevel="8" name="Phantom Stun">
-		<!-- Updated to IO -->
 		<!-- Temporarily Stuns nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1650,7 +1592,6 @@
 		</effects>
 	</skill>
 	<skill id="11343" toLevel="8" name="Phantom Bite">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
@@ -1688,7 +1629,6 @@
 		</effects>
 	</skill>
 	<skill id="11344" toLevel="8" name="Phantom Pounce">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
@@ -1753,7 +1693,6 @@
 		</effects>
 	</skill>
 	<skill id="11345" toLevel="8" name="Phantom Touch">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
@@ -1790,7 +1729,6 @@
 		</effects>
 	</skill>
 	<skill id="11346" toLevel="8" name="Phantom Power">
-		<!-- Updated to IO -->
 		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
@@ -1829,7 +1767,6 @@
 		</effects>
 	</skill>
 	<skill id="11347" toLevel="4" name="Greater Servitor Haste">
-		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' Atk. Spd. + 10%. -->
 		<icon>icon.skill11347</icon>
 		<abnormalLvl>
@@ -1887,7 +1824,6 @@
 		</effects>
 	</skill>
 	<skill id="11348" toLevel="4" name="Servitor Death Whisper">
-		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' Critical Damage + 10%. -->
 		<icon>icon.skill11348</icon>
 		<abnormalLvl>
@@ -1945,7 +1881,6 @@
 		</effects>
 	</skill>
 	<skill id="11349" toLevel="4" name="Greater Servitor Might">
-		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' P. Atk. + 10%. -->
 		<icon>icon.skill11349</icon>
 		<abnormalLvl>
@@ -2003,7 +1938,6 @@
 		</effects>
 	</skill>
 	<skill id="11350" toLevel="7" name="Arcane Rage">
-		<!-- Updated to IO -->
 		<!-- Use Arcana Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
 		<icon>icon.skill11350</icon>
 		<operateType>A1</operateType>
@@ -2075,7 +2009,6 @@
 		</effects>
 	</skill>
 	<skill id="11351" toLevel="5" name="Arcane Link">
-		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
 		<icon>icon.skill11351</icon>
 		<abnormalLvl>
@@ -2130,7 +2063,6 @@
 	</skill>
 	<skill id="11352" toLevel="4" name="Arcane Ability">
 		<!-- Atk. Spd., P. Def. + 3%, and PvP Damage - 3%. -->
-		<!-- TODO: get proper values -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2188,7 +2120,6 @@
 		</effects>
 	</skill>
 	<skill id="11353" toLevel="7" name="Elemental Rage">
-		<!-- Updated to IO -->
 		<!-- Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
 		<icon>icon.skill11353</icon>
 		<operateType>A1</operateType>
@@ -2260,7 +2191,6 @@
 		</effects>
 	</skill>
 	<skill id="11354" toLevel="5" name="Elemental Link">
-		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
 		<icon>icon.skill11354</icon>
 		<abnormalLvl>
@@ -2314,7 +2244,6 @@
 		</effects>
 	</skill>
 	<skill id="11355" toLevel="4" name="Elemental Ability">
-		<!-- Updated to IO -->
 		<!-- Critical Damage + 5%. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
@@ -2331,7 +2260,6 @@
 		</effects>
 	</skill>
 	<skill id="11356" toLevel="7" name="Spectral Rage">
-		<!-- Updated to IO -->
 		<!-- Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
 		<icon>icon.skill11356</icon>
 		<operateType>A1</operateType>
@@ -2403,7 +2331,6 @@
 		</effects>
 	</skill>
 	<skill id="11357" toLevel="5" name="Spectral Link">
-		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
 		<icon>icon.skill11357</icon>
 		<abnormalLvl>
@@ -2457,7 +2384,6 @@
 		</effects>
 	</skill>
 	<skill id="11358" toLevel="4" name="Spectral Ability">
-		<!-- Updated to IO -->
 		<!-- P. Atk. + 3%, and PvP Damage - 3%. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
@@ -2501,7 +2427,6 @@
 		</effects>
 	</skill>
 	<skill id="11359" toLevel="3" name="Summon Protection Stone">
-		<!-- Updated to IO -->
 		<!-- Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores. -->
 		<icon>icon.skill11359</icon>
 		<itemConsumeCount>15</itemConsumeCount>
@@ -2534,7 +2459,6 @@
 		</effects>
 	</skill>
 	<skill id="11360" toLevel="3" name="Arcane Protection">
-		<!-- Updated to IO -->
 		<!-- For 30 sec., Received P./M. Critical Rate - 5%, Pull Resistance and Knock Back / Knock Down Resistance - 5. Debuff Resistance + 5%, HP/MP Recovery Bonus + 5%. -->
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
@@ -2614,7 +2538,6 @@
 		</effects>
 	</skill>
 	<skill id="11361" toLevel="3" name="Summon Moving Portal">
-		<!-- Updated to IO -->
 		<!-- Summons an instant Moving Portal for 30 sec. Consumes 5 Spirit Ores. -->
 		<icon>icon.skill11361</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -2628,7 +2551,7 @@
 		<reuseDelay>50000</reuseDelay>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>13426</npcId>
+				<npcId>13426</npcId> <!-- Instant Portal -->
 				<npcCount>1</npcCount>
 				<despawnDelay>
 					<value level="1">30000</value>
@@ -2640,7 +2563,6 @@
 		</effects>
 	</skill>
 	<skill id="11362" toLevel="3" name="Summon Moving Portal">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- An instant Moving Portal is summoned. -->
 		<icon>icon.skill11361</icon>
 		<operateType>A1</operateType>
@@ -2648,7 +2570,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="11363" toLevel="3" name="Instant Teleport">
-		<!-- Updated to IO -->
 		<!-- Teleports using the Moving Portal summoned. Consumes 1 Spirit Ore. -->
 		<icon>icon.skill11363</icon>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2667,17 +2588,16 @@
 			<condition name="OpCallPc" />
 			<condition name="OpCanEscape" />
 			<condition name="OpHaveSummonedNpc">
-				<npcId>13426</npcId>
+				<npcId>13426</npcId> <!-- Instant Portal -->
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="TeleportToNpc">
-				<npcId>13426</npcId>
+				<npcId>13426</npcId> <!-- Instant Portal -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11364" toLevel="3" name="Elemental Dash">
-		<!-- Updated to IO -->
 		<!-- Party's Speed + 15. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2702,7 +2622,6 @@
 		</effects>
 	</skill>
 	<skill id="11365" toLevel="4" name="Summon Demonic Crucifix">
-		<!-- Updated to IO -->
 		<!-- Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores. -->
 		<icon>icon.skill11365</icon>
 		<abnormalLvl>
@@ -2765,7 +2684,6 @@
 		</effects>
 	</skill>
 	<skill id="11366" toLevel="3" name="Spectral Curse">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Temporarily renders nearby enemies helpless. -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
@@ -2777,7 +2695,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11367" toLevel="3" name="Arcane Protection">
-		<!-- Updated to IO -->
 		<!-- For 30 sec., Received P./M. Critical Rate - 7%, Pull Resistance and Knock Back / Knock Down Resistance - 10. Debuff Resistance + 10%, HP/MP Recovery Bonus + 10%. -->
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
@@ -2857,7 +2774,6 @@
 		</effects>
 	</skill>
 	<skill id="11368" toLevel="3" name="Arcane Protection">
-		<!-- Updated to IO -->
 		<!-- For 30 sec., Debuff Resistance + 15%, Pull Resistance + 15%, Knock Back / Knock Down Resistance + 15%, HP/MP Recovery Bonus + 15%. Received P./M. Critical Rate - 10%. -->
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>

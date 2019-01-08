@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2100" levels="1" name="Escape: 1 second">
 		<set name="target" val="TARGET_SELF"/>
@@ -13,7 +13,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BEAST_FEED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5168"/>
+		<set name="itemConsumeId" val="5168"/> <!-- Food for Strider -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="400"/>
@@ -23,12 +23,13 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BEAST_FEED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5169"/>
+		<set name="itemConsumeId" val="5169"/> <!-- Deluxe Food for Strider -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="2103" levels="1" name="Mystery Potion">
+		<!-- Enlarges the user's head. -->
 		<set name="isPotion" val="true"/>
 		<set name="magicLvl" val="1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -39,9 +40,9 @@
 		</for>
 	</skill>
 	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
-		<set name="itemConsumeId" val="5250"/>
+		<set name="itemConsumeId" val="5250"/> <!-- Greater Compressed Package of Soulshots: No-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1835"/>
+		<set name="create_item_id" val="1835"/> <!-- Soulshot: No Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -51,9 +52,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2105" levels="1" name="Greater Compressed Package of Soulshots:  D-grade">
-		<set name="itemConsumeId" val="5251"/>
+		<set name="itemConsumeId" val="5251"/> <!-- Greater Compressed Package of Soulshots: D-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1463"/>
+		<set name="create_item_id" val="1463"/> <!-- Soulshot: D-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -63,9 +64,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2106" levels="1" name="Greater Compressed Package of Soulshots:  C-grade">
-		<set name="itemConsumeId" val="5252"/>
+		<set name="itemConsumeId" val="5252"/> <!-- Greater Compressed Package of Soulshots: C-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1464"/>
+		<set name="create_item_id" val="1464"/> <!-- Soulshot: C-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -75,9 +76,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2107" levels="1" name="Greater Compressed Package of Soulshots:  B-grade">
-		<set name="itemConsumeId" val="5253"/>
+		<set name="itemConsumeId" val="5253"/> <!-- Greater Compressed Package of Soulshots: B-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1465"/>
+		<set name="create_item_id" val="1465"/> <!-- Soulshot: B-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -87,9 +88,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2108" levels="1" name="Greater Compressed Package of Soulshots:  A-grade">
-		<set name="itemConsumeId" val="5254"/>
+		<set name="itemConsumeId" val="5254"/> <!-- Greater Compressed Package of Soulshots: A-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1466"/>
+		<set name="create_item_id" val="1466"/> <!-- Soulshot: A-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -99,9 +100,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2109" levels="1" name="Greater Compressed Package of Soulshots: S-grade">
-		<set name="itemConsumeId" val="5255"/>
+		<set name="itemConsumeId" val="5255"/> <!-- Greater Compressed Package of Soulshots: S-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="1467"/>
+		<set name="create_item_id" val="1467"/> <!-- Soulshot: S-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -111,9 +112,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2110" levels="1" name="Greater Compressed Package of Spiritshots:  No-grade">
-		<set name="itemConsumeId" val="5256"/>
+		<set name="itemConsumeId" val="5256"/> <!-- Greater Compressed Package of Spiritshots: No-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="2509"/>
+		<set name="create_item_id" val="2509"/> <!-- Spiritshot: No Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -123,9 +124,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2111" levels="1" name="Greater Compressed Package of Spiritshots:  D-grade">
-		<set name="itemConsumeId" val="5257"/>
+		<set name="itemConsumeId" val="5257"/> <!-- Greater Compressed Package of Spiritshots: D-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="2510"/>
+		<set name="create_item_id" val="2510"/> <!-- Spiritshot: D-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -135,9 +136,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2112" levels="1" name="Greater Compressed Package of Spiritshots:  C-grade">
-		<set name="itemConsumeId" val="5258"/>
+		<set name="itemConsumeId" val="5258"/> <!-- Greater Compressed Package of Spiritshots: C-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="2511"/>
+		<set name="create_item_id" val="2511"/> <!-- Spiritshot: C-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -147,9 +148,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2113" levels="1" name="Greater Compressed Package of Spiritshots:  B-grade">
-		<set name="itemConsumeId" val="5259"/>
+		<set name="itemConsumeId" val="5259"/> <!-- Greater Compressed Package of Spiritshots: B-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="2512"/>
+		<set name="create_item_id" val="2512"/> <!-- Spiritshot: B-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -159,9 +160,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2114" levels="1" name="Greater Compressed Package of Spiritshots: A-grade">
-		<set name="itemConsumeId" val="5260"/>
+		<set name="itemConsumeId" val="5260"/> <!-- Greater Compressed Package of Spiritshots: A-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="2513"/>
+		<set name="create_item_id" val="2513"/> <!-- Spiritshot: A-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -171,9 +172,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2115" levels="1" name="Greater Compressed Package of Spiritshots: S-grade">
-		<set name="itemConsumeId" val="5261"/>
+		<set name="itemConsumeId" val="5261"/> <!-- Greater Compressed Package of Spiritshots: S-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="2514"/>
+		<set name="create_item_id" val="2514"/> <!-- Spiritshot: S-grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -183,9 +184,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2116" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  No-grade">
-		<set name="itemConsumeId" val="5262"/>
+		<set name="itemConsumeId" val="5262"/> <!-- Greater Compressed Package of Blessed Spiritshots: No-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="3947"/>
+		<set name="create_item_id" val="3947"/> <!-- Blessed Spiritshot: No Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -195,9 +196,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2117" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  D-grade">
-		<set name="itemConsumeId" val="5263"/>
+		<set name="itemConsumeId" val="5263"/> <!-- Greater Compressed Package of Blessed Spiritshots: D-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="3948"/>
+		<set name="create_item_id" val="3948"/> <!-- Blessed Spiritshot: D-Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -207,9 +208,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2118" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  C-grade">
-		<set name="itemConsumeId" val="5264"/>
+		<set name="itemConsumeId" val="5264"/> <!-- Greater Compressed Package of Blessed Spiritshots: C-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="3949"/>
+		<set name="create_item_id" val="3949"/> <!-- Blessed Spiritshot: C-Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -219,9 +220,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2119" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  B-grade">
-		<set name="itemConsumeId" val="5265"/>
+		<set name="itemConsumeId" val="5265"/> <!-- Greater Compressed Package of Blessed Spiritshots: B-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="3950"/>
+		<set name="create_item_id" val="3950"/> <!-- Blessed Spiritshot: B-Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -231,9 +232,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2120" levels="1" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
-		<set name="itemConsumeId" val="5266"/>
+		<set name="itemConsumeId" val="5266"/> <!-- Greater Compressed Package of Blessed Spiritshots: A-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="3951"/>
+		<set name="create_item_id" val="3951"/> <!-- Blessed Spiritshot: A-Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -243,9 +244,9 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2121" levels="1" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
-		<set name="itemConsumeId" val="5267"/>
+		<set name="itemConsumeId" val="5267"/> <!-- Greater Compressed Package of Blessed Spiritshots: S-grade -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="3952"/>
+		<set name="create_item_id" val="3952"/> <!-- Blessed Spiritshot: S Grade -->
 		<set name="create_item_count" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CREATE_ITEM"/>
@@ -255,7 +256,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2122" levels="1" name="Facelifting Potion">
-		<set name="itemConsumeId" val="5235"/>
+		<set name="itemConsumeId" val="5235"/> <!-- Facelifting Potion - A -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="500"/>
@@ -266,7 +267,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2123" levels="1" name="Facelifting Potion">
-		<set name="itemConsumeId" val="5236"/>
+		<set name="itemConsumeId" val="5236"/> <!-- Facelifting Potion - B -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="500"/>
@@ -277,7 +278,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2124" levels="1" name="Facelifting Potion">
-		<set name="itemConsumeId" val="5237"/>
+		<set name="itemConsumeId" val="5237"/> <!-- Facelifting Potion - C -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="500"/>
@@ -292,7 +293,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5238"/>
+		<set name="itemConsumeId" val="5238"/> <!-- Dye Potion - A -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -303,7 +304,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5239"/>
+		<set name="itemConsumeId" val="5239"/> <!-- Dye Potion - B -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -314,7 +315,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5240"/>
+		<set name="itemConsumeId" val="5240"/> <!-- Dye Potion - C -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -325,7 +326,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5241"/>
+		<set name="itemConsumeId" val="5241"/> <!-- Dye Potion - D -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -336,7 +337,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5242"/>
+		<set name="itemConsumeId" val="5242"/> <!-- Hair Style Change Potion - A -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -347,7 +348,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5243"/>
+		<set name="itemConsumeId" val="5243"/> <!-- Hair Style Change Potion - B -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -358,7 +359,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5244"/>
+		<set name="itemConsumeId" val="5244"/> <!-- Hair Style Change Potion - C -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -369,7 +370,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5245"/>
+		<set name="itemConsumeId" val="5245"/> <!-- Hair Style Change Potion - D -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -380,7 +381,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5246"/>
+		<set name="itemConsumeId" val="5246"/> <!-- Hair Style Change Potion - E -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -391,7 +392,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5247"/>
+		<set name="itemConsumeId" val="5247"/> <!-- Hair Style Change Potion - F -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -402,7 +403,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5248"/>
+		<set name="itemConsumeId" val="5248"/> <!-- Hair Style Change Potion - G -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -410,7 +411,7 @@
 	</skill>
 	<skill id="2136" levels="1" name="Rice Cake">
 		<set name="itemConsumeCount" val="1"/>
-		<set name="itemConsumeId" val="5283"/>
+		<set name="itemConsumeId" val="5283"/> <!-- Rice Cake -->
 		<set name="magicLvl" val="1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="power" val="3"/>
@@ -423,9 +424,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5560"/>
+		<set name="itemConsumeId" val="5560"/> <!-- Christmas Tree -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="npcId" val="13006"/>
+		<set name="npcId" val="13006"/> <!-- Christmas Tree -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -436,9 +437,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5561"/>
+		<set name="itemConsumeId" val="5561"/> <!-- Special Christmas Tree -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="npcId" val="13007"/>
+		<set name="npcId" val="13007"/> <!-- Special Christmas Tree -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -446,7 +447,7 @@
 		<set name="hitTime" val="6000"/>
 	</skill>
 	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
-		<!-- Done by DJ MELERIX -->
+		<!-- Produces a special Holiday Tree during the Holiday event. Increases HP and MP regeneration. -->
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -466,7 +467,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5562"/>
+		<set name="itemConsumeId" val="5562"/> <!-- Echo Crystal - 1st Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -477,7 +478,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5563"/>
+		<set name="itemConsumeId" val="5563"/> <!-- Echo Crystal - 2nd Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -488,7 +489,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5564"/>
+		<set name="itemConsumeId" val="5564"/> <!-- Echo Crystal - 3rd Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -499,7 +500,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5565"/>
+		<set name="itemConsumeId" val="5565"/> <!-- Echo Crystal - 4th Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -510,7 +511,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5566"/>
+		<set name="itemConsumeId" val="5566"/> <!-- Echo Crystal - 5th Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -521,7 +522,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5583"/>
+		<set name="itemConsumeId" val="5583"/> <!-- Echo Crystal - 6th Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -532,7 +533,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5584"/>
+		<set name="itemConsumeId" val="5584"/> <!-- Echo Crystal - 7th Carol -->
 		<set name="hitTime" val="500"/>
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
@@ -543,7 +544,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5585"/>
+		<set name="itemConsumeId" val="5585"/> <!-- Echo Crystal - 8th Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -554,7 +555,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5586"/>
+		<set name="itemConsumeId" val="5586"/> <!-- Echo Crystal - 9th Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -565,7 +566,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5587"/>
+		<set name="itemConsumeId" val="5587"/> <!-- Echo Crystal - 10th Carol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="hitTime" val="500"/>
 		<set name="castRange" val="-1"/>
@@ -582,7 +583,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="1463"/>
+		<set name="itemConsumeId" val="1463"/> <!-- Soulshot: D-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2151" levels="1" name="Soulshot: C Grade">
@@ -595,7 +596,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="1464"/>
+		<set name="itemConsumeId" val="1464"/> <!-- Soulshot: C-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2152" levels="1" name="Soulshot: B Grade">
@@ -608,7 +609,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="1465"/>
+		<set name="itemConsumeId" val="1465"/> <!-- Soulshot: B-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2153" levels="1" name="Soulshot: A Grade">
@@ -621,7 +622,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="1466"/>
+		<set name="itemConsumeId" val="1466"/> <!-- Soulshot: A-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2154" levels="1" name="Soulshot: S Grade">
@@ -634,7 +635,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="1467"/>
+		<set name="itemConsumeId" val="1467"/> <!-- Soulshot: S-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2155" levels="1" name="Spiritshot: D Grade">
@@ -647,7 +648,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="2510"/>
+		<set name="itemConsumeId" val="2510"/> <!-- Spiritshot: D-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2156" levels="1" name="Spiritshot: C Grade">
@@ -660,7 +661,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="2511"/>
+		<set name="itemConsumeId" val="2511"/> <!-- Spiritshot: C-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2157" levels="1" name="Spiritshot: B Grade">
@@ -673,7 +674,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="2512"/>
+		<set name="itemConsumeId" val="2512"/> <!-- Spiritshot: B-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2158" levels="1" name="Spiritshot: A Grade">
@@ -686,7 +687,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="2513"/>
+		<set name="itemConsumeId" val="2513"/> <!-- Spiritshot: A-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2159" levels="1" name="Spiritshot: S Grade">
@@ -699,7 +700,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="2514"/>
+		<set name="itemConsumeId" val="2514"/> <!-- Spiritshot: S-grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2160" levels="1" name="Blessed Spiritshot: D Grade">
@@ -712,7 +713,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="3948"/>
+		<set name="itemConsumeId" val="3948"/> <!-- Blessed Spiritshot: D-Grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2161" levels="1" name="Blessed Spiritshot: C Grade">
@@ -725,7 +726,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="3949"/>
+		<set name="itemConsumeId" val="3949"/> <!-- Blessed Spiritshot: C-Grade -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2162" levels="1" name="Blessed Spiritshot: B Grade">
@@ -738,7 +739,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="3940"/>
+		<set name="itemConsumeId" val="3940"/> <!-- Blueprint: Summon Siege Golem -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2163" levels="1" name="Blessed Spiritshot: A Grade">
@@ -751,7 +752,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="3941"/>
+		<set name="itemConsumeId" val="3941"/> <!-- Spellbook: Mass Resurrection -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2164" levels="1" name="Blessed Spiritshot: S Grade">
@@ -764,11 +765,11 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="3942"/>
+		<set name="itemConsumeId" val="3942"/> <!-- Spellbook: Party Return -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2165" levels="1" name="Energy Stone">
-		<set name="itemConsumeId" val="5589"/>
+		<set name="itemConsumeId" val="5589"/> <!-- Energy Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CHARGE"/>
@@ -806,12 +807,7 @@
 		<set name="target" val="TARGET_SELF"/>
 	</skill>
 	<skill id="2168" levels="6" name="Raid Blessing">
-		<!--
-          Description(s):
-            Blessing which grants an exemption from the death penalty if you are killed by Boss/Raid Monsters.
-            LvL1: Effect 1
-            LvL6: Effect 6
-        -->
+		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/Raid Monsters. Effect 1. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="2000"/>
 		<set name="skillType" val="BUFF"/>
@@ -824,6 +820,7 @@
 		</for>
 	</skill>
 	<skill id="2169" levels="2" name="Magic Haste Potion">
+		<!-- Increases Casting Spd. Effect 2. -->
 		<table name="#mAtkSpd">1.23 1.3</table>
 		<!-- <table name="#itemConsumeId">6035 6036</table> -->
 		<set name="target" val="TARGET_SELF"/>
@@ -857,7 +854,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="5916"/>
+		<set name="itemConsumeId" val="5916"/> <!-- Spellbook Page -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2172" levels="1" name="Scroll of Giants">
@@ -867,7 +864,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="5944"/>
+		<set name="itemConsumeId" val="5944"/> <!-- Ancient Parchment -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2173" levels="1" name="Book of Giants">
@@ -877,7 +874,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="5955"/>
+		<set name="itemConsumeId" val="5955"/> <!-- Ancient Titan Book -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2174" levels="3" name="Ingredient Bag">
@@ -898,7 +895,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="6010"/>
+		<set name="itemConsumeId" val="6010"/> <!-- Reagent Box -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2176" levels="4" name="Ancient Papyrus">
@@ -913,7 +910,7 @@
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2177" levels="1" name="Blessed Scroll of Escape: Clan Hall">
-		<set name="itemConsumeId" val="5858"/>
+		<set name="itemConsumeId" val="5858"/> <!-- Blessed Scroll of Escape: Clan Hall -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="clanhall" val="true"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -925,7 +922,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2178" levels="1" name="Blessed Scroll of Escape: Castle">
-		<set name="itemConsumeId" val="5859"/>
+		<set name="itemConsumeId" val="5859"/> <!-- Blessed Scroll of Escape: Castle -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castle" val="true"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -944,7 +941,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="400"/>
 		<set name="effectRange" val="600"/>
-		<set name="itemConsumeId" val="6387"/>
+		<set name="itemConsumeId" val="6387"/> <!-- Blessed Scroll of Resurrection for Pets -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="magicLvl" val="1"/>
 	</skill>
@@ -953,13 +950,13 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BEAST_FEED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="5168"/>
+		<set name="itemConsumeId" val="5168"/> <!-- Food for Strider -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="2181" levels="1" name="Item - Fishing Shot">
-		<set name="itemConsumeId" val="6535"/>
+		<set name="itemConsumeId" val="6535"/> <!-- Fishing Shot: non-grade -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -969,7 +966,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2182" levels="1" name="Item - Fishing Shot">
-		<set name="itemConsumeId" val="6536"/>
+		<set name="itemConsumeId" val="6536"/> <!-- Fishing Shot: D-grade -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -979,7 +976,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2183" levels="1" name="Item - Fishing Shot">
-		<set name="itemConsumeId" val="3537"/>
+		<set name="itemConsumeId" val="3537"/> <!-- Delivery Goods 16 -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -989,7 +986,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2184" levels="1" name="Item - Fishing Shot">
-		<set name="itemConsumeId" val="6538"/>
+		<set name="itemConsumeId" val="6538"/> <!-- Fishing Shot: B-grade -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -999,7 +996,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2185" levels="1" name="Item - Fishing Shot">
-		<set name="itemConsumeId" val="6539"/>
+		<set name="itemConsumeId" val="6539"/> <!-- Fishing Shot: A-grade -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -1009,7 +1006,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2186" levels="1" name="Item - Fishing Shot">
-		<set name="itemConsumeId" val="6540"/>
+		<set name="itemConsumeId" val="6540"/> <!-- Fishing Shot: S-grade -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -1019,7 +1016,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2187" levels="1" name="Item - Special Sound Crystal">
-		<set name="itemConsumeId" val="6903"/>
+		<set name="itemConsumeId" val="6903"/> <!-- Music Box M -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -1033,7 +1030,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BEAST_FEED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="6643"/>
+		<set name="itemConsumeId" val="6643"/> <!-- Golden Spice -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="400"/>
@@ -1043,7 +1040,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BEAST_FEED"/>
-		<set name="itemConsumeId" val="6644"/>
+		<set name="itemConsumeId" val="6644"/> <!-- Crystal Spice -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="40"/>

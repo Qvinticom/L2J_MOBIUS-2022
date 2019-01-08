@@ -174,7 +174,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4218" name="L2 Day - Scroll: Mana Regeneration" type="EtcItem">
-		<!-- Increases MP Recovery Rate. -->
+		<!-- Increases MP Recovery Bonus Rate. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -512,7 +512,7 @@
 		<set name="handler" val="RollingDice" />
 	</item>
 	<item id="4233" name="Knuckle Duster" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When enchanted, P. Atk. of a dual sword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27400" level="51" type="L2Monster" name="Shilen's Evil Thoughts">
 		<!-- Confirmed CT2.5 -->
@@ -2157,8 +2157,8 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
-				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
+				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
 				<item id="57" min="1218" max="2842" chance="20" /> <!-- Adena -->
 				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
@@ -2166,8 +2166,8 @@
 				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
 				<item id="36876" min="1" max="1" chance="0.003" /> <!-- Recipe: Metallic Fiber - Upgrade -->
 				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
-				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -2305,7 +2305,7 @@
 				<item id="36517" min="1" max="1" chance="4.243" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
-				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) -->
 				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
 			</drop>
 			<spoil>
@@ -2355,7 +2355,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
+				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield - Heavy Armor -->
 				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
 				<item id="36810" min="1" max="1" chance="5.397" /> <!-- Immortal Shield Ingredient -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
@@ -2460,7 +2460,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
+				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots - Heavy Armor -->
 				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
 				<item id="36809" min="1" max="1" chance="3.898" /> <!-- Immortal Boot Ingredient -->
 				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
@@ -3148,7 +3148,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
+				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield - Heavy Armor -->
 				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
 				<item id="36810" min="1" max="1" chance="4.661" /> <!-- Immortal Shield Ingredient -->
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
@@ -3213,7 +3213,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
+				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots - Heavy Armor -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
 				<item id="36809" min="1" max="1" chance="3.182" /> <!-- Immortal Boot Ingredient -->
 				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
@@ -3277,7 +3277,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet -->
+				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet - Light Armor -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
 				<item id="36517" min="1" max="1" chance="2.599" /> <!-- Leather -->
 				<item id="36811" min="1" max="1" chance="2.244" /> <!-- Immortal Leather Helmet Ingredient -->
@@ -3343,7 +3343,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets -->
+				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets - Heavy Armor -->
 				<item id="57" min="916" max="2136" chance="20" /> <!-- Adena -->
 				<item id="36808" min="1" max="1" chance="4.826" /> <!-- Immortal Gauntlet Ingredient -->
 				<item id="36746" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Gauntlets (60%) -->
@@ -3400,7 +3400,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet -->
+				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet - Heavy Armor -->
 				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
 				<item id="36517" min="1" max="1" chance="2.509" /> <!-- Leather -->
 				<item id="36805" min="1" max="1" chance="2.038" /> <!-- Immortal Helmet Ingredient -->
@@ -4182,8 +4182,8 @@
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
 				<item id="35305" min="1" max="1" chance="0.0075" /> <!-- Specter Caster Fragment -->
 				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="35429" min="1" max="1" chance="0.0009" /> <!-- Recipe: Specter Caster (60%) -->
-				<item id="35450" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35429" min="1" max="1" chance="0.0009" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35450" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Ring (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->

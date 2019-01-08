@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22200" level="80" type="L2Monster" name="Ornithomimus">
 		<!-- Confirmed CT2.5 -->
@@ -3050,27 +3050,27 @@
 				<item id="66" min="1" max="1" chance="0.0188638804346323" /> <!-- Gladius -->
 				<item id="1333" min="1" max="1" chance="0.0188638804346323" /> <!-- Brandish -->
 				<item id="2010" min="1" max="1" chance="0.152672243517637" /> <!-- Brandish Blade -->
-				<item id="1867" min="1" max="1" chance="5.23158360530949" /> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="5.23158360530949" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="1" chance="5.23158360530949" /> <!-- Corroded Animal Skin -->
+				<item id="1872" min="1" max="1" chance="5.23158360530949" /> <!-- Corroded Animal Bone Fragment -->
 				<item id="736" min="1" max="1" chance="1.96183298011589" /> <!-- Scroll of Escape -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
@@ -3131,33 +3131,33 @@
 				<item id="9" min="1" max="1" chance="0.0195673130314797" /> <!-- Cedar Staff -->
 				<item id="2008" min="1" max="1" chance="0.158365379301459" /> <!-- Cedar Staff Head -->
 				<item id="154" min="1" max="1" chance="0.0195673130314797" /> <!-- Dwarven Mace -->
-				<item id="1864" min="1" max="1" chance="8.14002682832336" /> <!-- Stem -->
-				<item id="1869" min="1" max="1" chance="4.07001341416168" /> <!-- Iron Ore -->
+				<item id="1864" min="1" max="1" chance="8.14002682832336" /> <!-- Corroded Stem -->
+				<item id="1869" min="1" max="1" chance="4.07001341416168" /> <!-- Corroded Iron Ore -->
 				<item id="1792" min="1" max="1" chance="0.299259989448547" /> <!-- Recipe: Short Spear -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1921" min="1" max="1" chance="13.3342" /> <!-- Leather Shoes Texture -->
-				<item id="1869" min="1" max="1" chance="20.668" /> <!-- Iron Ore -->
-				<item id="1878" min="1" max="1" chance="8.2672" /> <!-- Braided Hemp -->
+				<item id="1921" min="1" max="1" chance="13.3342" /> <!-- Leather Shoe Texture -->
+				<item id="1869" min="1" max="1" chance="20.668" /> <!-- Corroded Iron Ore -->
+				<item id="1878" min="1" max="1" chance="8.2672" /> <!-- Corroded Durable Braid -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3216,27 +3216,27 @@
 			<drop>
 				<item id="57" min="138" max="196" chance="70" /> <!-- Adena -->
 				<item id="271" min="1" max="1" chance="0.0746999979019165" /> <!-- Hunting Bow -->
-				<item id="1871" min="1" max="1" chance="5.18027928877258" /> <!-- Charcoal -->
-				<item id="1866" min="1" max="1" chance="3.45352253074837" /> <!-- Suede -->
+				<item id="1871" min="1" max="1" chance="5.18027928877258" /> <!-- Corroded Charcoal -->
+				<item id="1866" min="1" max="1" chance="3.45352253074837" /> <!-- Corroded Suede -->
 				<item id="1793" min="1" max="1" chance="0.380898116392136" /> <!-- Recipe: Sword of Reflection -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
@@ -3298,32 +3298,32 @@
 				<item id="66" min="1" max="1" chance="0.0207363971527666" /> <!-- Gladius -->
 				<item id="1333" min="1" max="1" chance="0.0207363971527666" /> <!-- Brandish -->
 				<item id="2010" min="1" max="1" chance="0.167827202189714" /> <!-- Brandish Blade -->
-				<item id="1870" min="1" max="1" chance="3.23476468283653" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="3.23476468283653" /> <!-- Varnish -->
+				<item id="1870" min="1" max="1" chance="3.23476468283653" /> <!-- Corroded Coal -->
+				<item id="1865" min="1" max="1" chance="3.23476468283653" /> <!-- Corroded Varnish -->
 				<item id="1794" min="1" max="1" chance="0.237851697273254" /> <!-- Recipe: Forest Bow -->
 				<item id="1831" min="1" max="1" chance="8.62601870969772" /> <!-- Antidote -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1923" min="1" max="1" chance="8.9762" /> <!-- Leather Stockings Pattern -->
+				<item id="1923" min="1" max="1" chance="8.9762" /> <!-- Leather Stocking Pattern -->
 				<item id="1798" min="1" max="1" chance="21.4725" /> <!-- Recipe: Leather Helmet -->
 				<item id="2008" min="1" max="1" chance="0.8522" /> <!-- Cedar Staff Head -->
 			</spoil>
@@ -3379,34 +3379,34 @@
 			<drop>
 				<item id="57" min="115" max="175" chance="70" /> <!-- Adena -->
 				<item id="23" min="1" max="1" chance="0.14732925100708" /> <!-- Wooden Breastplate -->
-				<item id="30" min="1" max="1" chance="0.236035386703491" /> <!-- Hard Leather Pants -->
+				<item id="30" min="1" max="1" chance="0.236035386703491" /> <!-- Durable Leather Pants -->
 				<item id="2386" min="1" max="1" chance="0.236035386703491" /> <!-- Wooden Gaiters -->
-				<item id="1868" min="1" max="1" chance="9.01664089953518" /> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="1.80332208394718" /> <!-- Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="9.01664089953518" /> <!-- Corroded Thread -->
+				<item id="1873" min="1" max="1" chance="1.80332208394718" /> <!-- Corroded Silver Nugget -->
 				<item id="1798" min="1" max="1" chance="4.41993665183258" /> <!-- Recipe: Leather Helmet -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1868" min="1" max="1" chance="45.7876" /> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="9.1575" /> <!-- Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="45.7876" /> <!-- Corroded Thread -->
+				<item id="1873" min="1" max="1" chance="9.1575" /> <!-- Corroded Silver Nugget -->
 				<item id="1833" min="1" max="1" chance="61.0501" /> <!-- Bandage -->
 			</spoil>
 		</dropLists>
@@ -3459,28 +3459,28 @@
 				<item id="57" min="116" max="181" chance="70" /> <!-- Adena -->
 				<item id="38" min="1" max="1" chance="0.177511457259655" /> <!-- Low Boots -->
 				<item id="50" min="1" max="1" chance="0.177511457259655" /> <!-- Leather Gloves -->
-				<item id="1925" min="1" max="1" chance="3.03227709997654" /> <!-- Leather Gloves Lining -->
-				<item id="1870" min="1" max="1" chance="4.62417581083775" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="4.62417581083775" /> <!-- Varnish -->
+				<item id="1925" min="1" max="1" chance="3.03227709997654" /> <!-- Leather Glove Lining -->
+				<item id="1870" min="1" max="1" chance="4.62417581083775" /> <!-- Corroded Coal -->
+				<item id="1865" min="1" max="1" chance="4.62417581083775" /> <!-- Corroded Varnish -->
 				<item id="1800" min="1" max="1" chance="1.45414872164726" /> <!-- Recipe: Piece Bone Breastplate -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
@@ -3541,33 +3541,33 @@
 				<item id="57" min="119" max="190" chance="70" /> <!-- Adena -->
 				<item id="176" min="1" max="1" chance="0.0137000000104308" /> <!-- Apprentice's Staff -->
 				<item id="2501" min="1" max="1" chance="0.0137000000104308" /> <!-- Bone Club -->
-				<item id="1870" min="1" max="1" chance="4.78987625251007" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="4.78987625251007" /> <!-- Varnish -->
+				<item id="1870" min="1" max="1" chance="4.78987625251007" /> <!-- Corroded Coal -->
+				<item id="1865" min="1" max="1" chance="4.78987625251007" /> <!-- Corroded Varnish -->
 				<item id="1801" min="1" max="1" chance="2.41304725389099" /> <!-- Recipe: Piece Bone Gaiters -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="1801" min="1" max="1" chance="12.2537" /> <!-- Recipe: Piece Bone Gaiters -->
-				<item id="1925" min="1" max="1" chance="15.9499" /> <!-- Leather Gloves Lining -->
-				<item id="1870" min="1" max="1" chance="24.3236" /> <!-- Coal -->
+				<item id="1925" min="1" max="1" chance="15.9499" /> <!-- Leather Glove Lining -->
+				<item id="1870" min="1" max="1" chance="24.3236" /> <!-- Corroded Coal -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3624,32 +3624,32 @@
 				<item id="1924" min="1" max="1" chance="1.19266252997875" /> <!-- Leather Helmet Design -->
 				<item id="102" min="1" max="1" chance="0.135183606364131" /> <!-- Round Shield -->
 				<item id="945" min="1" max="1" chance="0.280095297646523" /> <!-- Skeleton Buckler -->
-				<item id="1870" min="1" max="1" chance="4.92958616260529" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="4.92958616260529" /> <!-- Varnish -->
-				<item id="1817" min="1" max="1" chance="0.98592807762146" /> <!-- Recipe: Cord -->
+				<item id="1870" min="1" max="1" chance="4.92958616260529" /> <!-- Corroded Coal -->
+				<item id="1865" min="1" max="1" chance="4.92958616260529" /> <!-- Corroded Varnish -->
+				<item id="1817" min="1" max="1" chance="0.98592807762146" /> <!-- Recipe: Corroded Cord -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1865" min="1" max="1" chance="25.033" /> <!-- Varnish -->
-				<item id="734" min="1" max="1" chance="4.1722" /> <!-- Haste Potion -->
+				<item id="1865" min="1" max="1" chance="25.033" /> <!-- Corroded Varnish -->
+				<item id="734" min="1" max="1" chance="4.1722" /> <!-- Wind Walk Potion -->
 				<item id="2011" min="1" max="1" chance="0.5711" /> <!-- Short Spear Edge -->
 			</spoil>
 		</dropLists>
@@ -3717,47 +3717,47 @@
 			<drop>
 				<item id="57" min="1771" max="3615" chance="70" /> <!-- Adena -->
 				<item id="12221" min="1" max="1" chance="0.0708082055865526" /> <!-- Common Item - Sealed Dark Crystal Gloves -->
-				<item id="5508" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Dark Crystal Gloves Design -->
+				<item id="5508" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Dark Crystal Glove Design -->
 				<item id="12224" min="1" max="1" chance="0.0708082055865526" /> <!-- Common Item - Sealed Dark Crystal Boots -->
-				<item id="5496" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Dark Crystal Boots Lining -->
+				<item id="5496" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Dark Crystal Boot Lining -->
 				<item id="12229" min="1" max="1" chance="0.0708082055865526" /> <!-- Common Item - Sealed Tallum Gloves -->
-				<item id="5509" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Tallum Gloves Design -->
+				<item id="5509" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Tallum Glove Design -->
 				<item id="12231" min="1" max="1" chance="0.0708082055865526" /> <!-- Common Item - Sealed Tallum Boots -->
-				<item id="5497" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Tallum Boots Lining -->
-				<item id="1873" min="1" max="1" chance="4.72730848312378" /> <!-- Silver Nugget -->
-				<item id="1868" min="1" max="1" chance="23.6365079097176" /> <!-- Thread -->
-				<item id="1876" min="1" max="1" chance="2.36365424156189" /> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="1" chance="3.37664398710251" /> <!-- Metallic Fiber -->
-				<item id="4042" min="1" max="1" chance="0.196959684829712" /> <!-- Enria -->
-				<item id="1808" min="1" max="1" chance="0.00524489700317383" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.0820550333786011" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0205310112953186" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00203584817886353" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000414070816040039" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="5497" min="1" max="1" chance="0.381016787308574" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="1873" min="1" max="1" chance="4.72730848312378" /> <!-- Corroded Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="23.6365079097176" /> <!-- Corroded Thread -->
+				<item id="1876" min="1" max="1" chance="2.36365424156189" /> <!-- Corroded Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="3.37664398710251" /> <!-- Corroded Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.196959684829712" /> <!-- Corroded Enria -->
+				<item id="1808" min="1" max="1" chance="0.00524489700317383" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.0820550333786011" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.0205310112953186" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9575" min="1" max="1" chance="0.00203584817886353" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.000414070816040039" /> <!-- Top-grade Life Stone - Lv. 80 -->
 				<item id="9546" min="1" max="1" chance="0.0945461696624756" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="0.77" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="1.5799" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="0.1565" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.1565" /> <!-- Recipe: Soulshot (S-grade) -->
 				<item id="5481" min="1" max="1" chance="1.5799" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -3828,36 +3828,36 @@
 				<item id="5546" min="1" max="1" chance="0.0671490484934747" /> <!-- Sword of Miracles Edge -->
 				<item id="11964" min="1" max="1" chance="0.00396138260522485" /> <!-- Common Item - Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.0611333994373977" /> <!-- Dark Legion's Edge Blade -->
-				<item id="1894" min="1" max="1" chance="0.781915442333222" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="0.742820198316574" /> <!-- Mold Glue -->
-				<item id="4041" min="1" max="1" chance="0.193778378539085" /> <!-- Mold Hardener -->
-				<item id="4044" min="1" max="1" chance="0.742820198316574" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.000892489023208618" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="1894" min="1" max="1" chance="0.781915442333222" /> <!-- Corroded Quality Leather -->
+				<item id="4039" min="1" max="1" chance="0.742820198316574" /> <!-- Corroded Mold Glue -->
+				<item id="4041" min="1" max="1" chance="0.193778378539085" /> <!-- Corroded Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="0.742820198316574" /> <!-- Corroded Thons -->
+				<item id="959" min="1" max="1" chance="0.000892489023208618" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<item id="9546" min="1" max="1" chance="0.178273362135887" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="0.77" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="3036" min="1" max="1" chance="0.1206" /> <!-- Recipe: Spiritshot S -->
+				<item id="3036" min="1" max="1" chance="0.1206" /> <!-- Recipe: Spiritshot (S-grade) -->
 				<item id="5487" min="1" max="1" chance="1.2222" /> <!-- Sealed Robe of Nightmare Fabric -->
-				<item id="1894" min="1" max="1" chance="9.5236" /> <!-- Crafted Leather -->
+				<item id="1894" min="1" max="1" chance="9.5236" /> <!-- Corroded Quality Leather -->
 			</spoil>
 		</dropLists>
 		<collision>

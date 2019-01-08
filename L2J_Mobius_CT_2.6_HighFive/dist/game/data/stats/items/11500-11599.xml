@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11500" type="Armor" name="Sealed Imperial Crusader Gauntlet">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t88_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -21,6 +22,7 @@
 		</for>
 	</item>
 	<item id="11501" type="Armor" name="Sealed Imperial Crusader Boots">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t88_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -41,6 +43,7 @@
 		</for>
 	</item>
 	<item id="11502" type="Armor" name="Sealed Imperial Crusader Shield">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -62,6 +65,7 @@
 		</for>
 	</item>
 	<item id="11503" type="Armor" name="Sealed Imperial Crusader Helmet">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -82,6 +86,7 @@
 		</for>
 	</item>
 	<item id="11504" type="Armor" name="Sealed Imperial Crusader Breastplate">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t88_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -103,6 +108,7 @@
 		</for>
 	</item>
 	<item id="11505" type="Armor" name="Imperial Crusader Gaiters">
+		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -115,7 +121,7 @@
 		<set name="price" val="7988000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3783-1" />
+		<set name="item_skill" val="3783-1" /> <!-- Imperial Crusader Gaiters -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -125,6 +131,7 @@
 		</for>
 	</item>
 	<item id="11506" type="Armor" name="Imperial Crusader Gauntlet">
+		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -136,7 +143,7 @@
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3784-1" />
+		<set name="item_skill" val="3784-1" /> <!-- Imperial Crusader Gauntlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -146,6 +153,7 @@
 		</for>
 	</item>
 	<item id="11507" type="Armor" name="Imperial Crusader Boots">
+		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -157,7 +165,7 @@
 		<set name="price" val="3195000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3785-1" />
+		<set name="item_skill" val="3785-1" /> <!-- Imperial Crusader Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -167,6 +175,7 @@
 		</for>
 	</item>
 	<item id="11508" type="Armor" name="Imperial Crusader Shield">
+		<!-- Masterwork Item that increases M. Def. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -177,7 +186,7 @@
 		<set name="weight" val="1170" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3786-1" />
+		<set name="item_skill" val="3786-1" /> <!-- Imperial Crusader Shield -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -189,6 +198,7 @@
 		</for>
 	</item>
 	<item id="11509" type="Armor" name="Imperial Crusader Helmet">
+		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -200,7 +210,7 @@
 		<set name="price" val="4793000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3787-1" />
+		<set name="item_skill" val="3787-1" /> <!-- Imperial Crusader Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -210,6 +220,7 @@
 		</for>
 	</item>
 	<item id="11510" type="Armor" name="Imperial Crusader Breastplate">
+		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -222,7 +233,7 @@
 		<set name="price" val="12781000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3788-1" />
+		<set name="item_skill" val="3788-1" /> <!-- Imperial Crusader Breastplate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -232,6 +243,7 @@
 		</for>
 	</item>
 	<item id="11511" type="Armor" name="Great Wolf Orichalcum Armor">
+		<!-- A Masterwork Item. -->
 		<set name="icon" val="icon.etc_wolf_r_a_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -248,6 +260,7 @@
 		</for>
 	</item>
 	<item id="11512" type="Armor" name="Dynasty Gaiters">
+		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -260,7 +273,7 @@
 		<set name="price" val="15248000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3790-1" />
+		<set name="item_skill" val="3790-1" /> <!-- Dynasty Gaiters -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -270,6 +283,7 @@
 		</for>
 	</item>
 	<item id="11513" type="Armor" name="Dynasty Gauntlet">
+		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -281,7 +295,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3791-1" />
+		<set name="item_skill" val="3791-1" /> <!-- Dynasty Gauntlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -291,6 +305,7 @@
 		</for>
 	</item>
 	<item id="11514" type="Armor" name="Dynasty Gloves">
+		<!-- Masterwork Item that increases Max MP/M. Atk./Resistance to Dark -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -302,7 +317,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3801-1" />
+		<set name="item_skill" val="3801-1" /> <!-- Dynasty Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -312,6 +327,7 @@
 		</for>
 	</item>
 	<item id="11515" type="Armor" name="Dynasty Leather Gloves">
+		<!-- Masterwork Item that increases Accuracy/evasion/Max HP/Atk. Spd./Resistance to Dark -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -323,13 +339,14 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3866-1" />
+		<set name="item_skill" val="3866-1" /> <!-- Dynasty Leather Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11516" type="Armor" name="Dynasty Leather Leggings">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -342,13 +359,14 @@
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3796-1" />
+		<set name="item_skill" val="3796-1" /> <!-- Dynasty Leather Leggings -->
 		<for>
 			<add order="0" stat="pDef" val="106" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11517" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy/evasion/Max HP/Atk. Spd./Resistance to Dark -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -361,13 +379,14 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3795-1" />
+		<set name="item_skill" val="3795-1" /> <!-- Dynasty Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="170" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11518" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -389,6 +408,7 @@
 		</for>
 	</item>
 	<item id="11519" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -410,6 +430,7 @@
 		</for>
 	</item>
 	<item id="11520" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -434,6 +455,7 @@
 		</for>
 	</item>
 	<item id="11521" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -458,6 +480,7 @@
 		</for>
 	</item>
 	<item id="11522" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -479,6 +502,7 @@
 		</for>
 	</item>
 	<item id="11523" type="Armor" name="Dynasty Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -500,6 +524,7 @@
 		</for>
 	</item>
 	<item id="11524" type="Armor" name="Dynasty Leather Boots">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -511,13 +536,14 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3797-1" />
+		<set name="item_skill" val="3797-1" /> <!-- Dynasty Leather Boots -->
 		<for>
 			<add order="0" stat="pDef" val="61" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11525" type="Armor" name="Dynasty Leather Helmet">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -529,13 +555,14 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3798-1" />
+		<set name="item_skill" val="3798-1" /> <!-- Dynasty Leather Helmet -->
 		<for>
 			<add order="0" stat="pDef" val="92" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11526" type="Armor" name="Dynasty Boots">
+		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -547,7 +574,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3792-1" />
+		<set name="item_skill" val="3792-1" /> <!-- Dynasty Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -557,6 +584,7 @@
 		</for>
 	</item>
 	<item id="11527" type="Armor" name="Dynasty Breastplate">
+		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -569,7 +597,7 @@
 		<set name="price" val="24398000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3789-1" />
+		<set name="item_skill" val="3789-1" /> <!-- Dynasty Breastplate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -579,6 +607,7 @@
 		</for>
 	</item>
 	<item id="11528" type="Armor" name="Dynasty Breastplate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -603,6 +632,7 @@
 		</for>
 	</item>
 	<item id="11529" type="Armor" name="Dynasty Breastplate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -627,6 +657,7 @@
 		</for>
 	</item>
 	<item id="11530" type="Armor" name="Dynasty Breastplate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -651,6 +682,7 @@
 		</for>
 	</item>
 	<item id="11531" type="Armor" name="Dynasty Breastplate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -675,6 +707,7 @@
 		</for>
 	</item>
 	<item id="11532" type="Armor" name="Dynasty Shield">
+		<!-- Masterwork Item with a M. Def. effect -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -685,7 +718,7 @@
 		<set name="weight" val="1390" />
 		<set name="price" val="6404000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3793-1" />
+		<set name="item_skill" val="3793-1" /> <!-- Dynasty Shield -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -697,6 +730,7 @@
 		</for>
 	</item>
 	<item id="11533" type="Armor" name="Dynasty Shoes">
+		<!-- Masterwork Item that increases Max MP, Resistance to Dark, and M. Atk. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -708,7 +742,7 @@
 		<set name="price" val="6099000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3802-1" />
+		<set name="item_skill" val="3802-1" /> <!-- Dynasty Shoes -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -718,6 +752,7 @@
 		</for>
 	</item>
 	<item id="11534" type="Armor" name="Dynasty Silver Satin Tunic">
+		<!-- Masterwork Item that has increased Casting Spd. effect -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -730,7 +765,7 @@
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3804-1" />
+		<set name="item_skill" val="3804-1" /> <!-- Dynasty Silver Satin Tunic -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -741,6 +776,7 @@
 		</for>
 	</item>
 	<item id="11535" type="Armor" name="Dynasty Silver Satin Tunic">
+		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -766,6 +802,7 @@
 		</for>
 	</item>
 	<item id="11536" type="Armor" name="Dynasty Silver Satin Tunic">
+		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -791,6 +828,7 @@
 		</for>
 	</item>
 	<item id="11537" type="Armor" name="Dynasty Silver Satin Tunic">
+		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -816,6 +854,7 @@
 		</for>
 	</item>
 	<item id="11538" type="Armor" name="Dynasty Silver Satin Tunic">
+		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -841,6 +880,7 @@
 		</for>
 	</item>
 	<item id="11539" type="Armor" name="Dynasty Circlet">
+		<!-- Masterwork Item that increases Max MP, Resistance to Dark, and M. Atk. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -852,7 +892,7 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3803-1" />
+		<set name="item_skill" val="3803-1" /> <!-- Dynasty Circlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -862,6 +902,7 @@
 		</for>
 	</item>
 	<item id="11540" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max MP, Resistance to Dark, and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -874,13 +915,14 @@
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3805-1" />
+		<set name="item_skill" val="3805-1" /> <!-- Dynasty Jewel Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="170" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11541" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -902,6 +944,7 @@
 		</for>
 	</item>
 	<item id="11542" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -923,6 +966,7 @@
 		</for>
 	</item>
 	<item id="11543" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -944,6 +988,7 @@
 		</for>
 	</item>
 	<item id="11544" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -965,6 +1010,7 @@
 		</for>
 	</item>
 	<item id="11545" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -986,6 +1032,7 @@
 		</for>
 	</item>
 	<item id="11546" type="Armor" name="Dynasty Jewel Leather Armor">
+		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1007,6 +1054,7 @@
 		</for>
 	</item>
 	<item id="11547" type="Armor" name="Dynasty Tunic">
+		<!-- Masterwork Item that has increased Casting Spd. effect -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1019,7 +1067,7 @@
 		<set name="price" val="18298000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3799-1" />
+		<set name="item_skill" val="3799-1" /> <!-- Dynasty Tunic -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1130,6 +1178,7 @@
 		</for>
 	</item>
 	<item id="11552" type="Armor" name="Dynasty Platinum Plate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1142,7 +1191,7 @@
 		<set name="price" val="33673000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3806-1" />
+		<set name="item_skill" val="3806-1" /> <!-- Dynasty Platinum Plate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1152,6 +1201,7 @@
 		</for>
 	</item>
 	<item id="11553" type="Armor" name="Dynasty Platinum Plate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1176,6 +1226,7 @@
 		</for>
 	</item>
 	<item id="11554" type="Armor" name="Dynasty Platinum Plate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1200,6 +1251,7 @@
 		</for>
 	</item>
 	<item id="11555" type="Armor" name="Dynasty Platinum Plate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1224,6 +1276,7 @@
 		</for>
 	</item>
 	<item id="11556" type="Armor" name="Dynasty Platinum Plate">
+		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1248,6 +1301,7 @@
 		</for>
 	</item>
 	<item id="11557" type="Armor" name="Dynasty Helmet">
+		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1259,7 +1313,7 @@
 		<set name="price" val="9149000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3794-1" />
+		<set name="item_skill" val="3794-1" /> <!-- Dynasty Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1269,6 +1323,7 @@
 		</for>
 	</item>
 	<item id="11558" type="Armor" name="Dynasty Stockings">
+		<!-- Masterwork Item that increases Max MP/M. Atk./Resistance to Dark -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1281,7 +1336,7 @@
 		<set name="price" val="11436000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3800-1" />
+		<set name="item_skill" val="3800-1" /> <!-- Dynasty Stockings -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1292,6 +1347,7 @@
 		</for>
 	</item>
 	<item id="11559" type="Armor" name="Sealed Dynasty Gaiters">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t91_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1313,6 +1369,7 @@
 		</for>
 	</item>
 	<item id="11560" type="Armor" name="Sealed Dynasty Gauntlet">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t91_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1333,6 +1390,7 @@
 		</for>
 	</item>
 	<item id="11561" type="Armor" name="Sealed Dynasty Gloves">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t93_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1353,6 +1411,7 @@
 		</for>
 	</item>
 	<item id="11562" type="Armor" name="Sealed Dynasty Leather Gloves">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t92_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1370,6 +1429,7 @@
 		</for>
 	</item>
 	<item id="11563" type="Armor" name="Sealed Dynasty Leather Leggings">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t92_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1388,6 +1448,7 @@
 		</for>
 	</item>
 	<item id="11564" type="Armor" name="Sealed Dynasty Leather Armor">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t92_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1406,6 +1467,7 @@
 		</for>
 	</item>
 	<item id="11565" type="Armor" name="Sealed Dynasty Leather Boots">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t92_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1423,6 +1485,7 @@
 		</for>
 	</item>
 	<item id="11566" type="Armor" name="Sealed Dynasty Leather Helmet">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1440,6 +1503,7 @@
 		</for>
 	</item>
 	<item id="11567" type="Armor" name="Sealed Dynasty Boots">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t91_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1460,6 +1524,7 @@
 		</for>
 	</item>
 	<item id="11568" type="Armor" name="Sealed Dynasty Breastplate">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t91_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1481,6 +1546,7 @@
 		</for>
 	</item>
 	<item id="11569" type="Armor" name="Sealed Dynasty Shield">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.shield_dynasty_shield_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1502,6 +1568,7 @@
 		</for>
 	</item>
 	<item id="11570" type="Armor" name="Sealed Dynasty Shoes">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t93_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1522,6 +1589,7 @@
 		</for>
 	</item>
 	<item id="11571" type="Armor" name="Sealed Dynasty Circlet">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1542,6 +1610,7 @@
 		</for>
 	</item>
 	<item id="11572" type="Armor" name="Sealed Dynasty Tunic">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t93_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1564,6 +1633,7 @@
 		</for>
 	</item>
 	<item id="11573" type="Armor" name="Sealed Dynasty Helmet">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1584,6 +1654,7 @@
 		</for>
 	</item>
 	<item id="11574" type="Armor" name="Sealed Dynasty Stockings">
+		<!-- Sealed Masterwork Item -->
 		<set name="icon" val="icon.armor_t93_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1606,6 +1677,7 @@
 		</for>
 	</item>
 	<item id="11575" type="Armor" name="Adamantite Earring">
+		<!-- Masterwork Item that increases Max MP. -->
 		<set name="icon" val="icon.accessary_adamantite_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1616,13 +1688,14 @@
 		<set name="weight" val="150" />
 		<set name="price" val="465900" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3807-1" />
+		<set name="item_skill" val="3807-1" /> <!-- Adamantite Earring -->
 		<for>
 			<add order="0" stat="mDef" val="51" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11576" type="Armor" name="Adamantite Necklace">
+		<!-- Masterwork Item that increases Resistance to Stun. -->
 		<set name="icon" val="icon.accessary_adamantite_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1633,13 +1706,14 @@
 		<set name="weight" val="150" />
 		<set name="price" val="621200" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3808-1" />
+		<set name="item_skill" val="3808-1" /> <!-- Adamantite Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="68" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11577" type="Armor" name="Adamantite Ring">
+		<!-- Masterwork Item that increases MP Recovery Rate. -->
 		<set name="icon" val="icon.accessary_adamantite_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1650,13 +1724,14 @@
 		<set name="weight" val="150" />
 		<set name="price" val="310600" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3809-1" />
+		<set name="item_skill" val="3809-1" /> <!-- Adamantite Ring -->
 		<for>
 			<add order="0" stat="mDef" val="34" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11578" type="Armor" name="Earring of Black Ore">
+		<!-- Masterwork Item that increases dark resistance. -->
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1667,13 +1742,14 @@
 		<set name="weight" val="150" />
 		<set name="price" val="711000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3810-1" />
+		<set name="item_skill" val="3810-1" /> <!-- Earring of Black Ore -->
 		<for>
 			<add order="0" stat="mDef" val="54" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11579" type="Armor" name="Necklace of Black Ore">
+		<!-- Masterwork Item that increases Resistance to Stun. -->
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1684,13 +1760,14 @@
 		<set name="weight" val="150" />
 		<set name="price" val="948000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3811-1" />
+		<set name="item_skill" val="3811-1" /> <!-- Necklace of Black Ore -->
 		<for>
 			<add order="0" stat="mDef" val="72" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11580" type="Armor" name="Ring of Black Ore">
+		<!-- Masterwork Item that increases Max MP. -->
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1701,13 +1778,14 @@
 		<set name="weight" val="150" />
 		<set name="price" val="474000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3812-1" />
+		<set name="item_skill" val="3812-1" /> <!-- Ring of Black Ore -->
 		<for>
 			<add order="0" stat="mDef" val="36" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11581" type="Armor" name="Sealed Phoenix Necklace">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 26 and Max MP +21 when the seal is broken. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1724,6 +1802,7 @@
 		</for>
 	</item>
 	<item id="11582" type="Armor" name="Sealed Phoenix Ring">
+		<!-- Sealed Masterwork Item that has the effect of MP +13 and MP Recovery Rate +0.71% when the seal is broken. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1740,6 +1819,7 @@
 		</for>
 	</item>
 	<item id="11583" type="Armor" name="Sealed Phoenix Earring">
+		<!-- Sealed Masterwork Item that has the effect of MP +20 and M. Def +1% when the seal is broken. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1756,6 +1836,7 @@
 		</for>
 	</item>
 	<item id="11584" type="Armor" name="Phoenix Necklace">
+		<!-- Masterwork Item that has the effect of MP +26 and Max MP +21 -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1766,7 +1847,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1340000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3813-1" />
+		<set name="item_skill" val="3813-1" /> <!-- Phoenix Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="80" />
 			<add stat="maxMp" val="26" />
@@ -1774,6 +1855,7 @@
 		</for>
 	</item>
 	<item id="11585" type="Armor" name="Phoenix Ring">
+		<!-- Masterwork Item that has the effect of MP +13 and MP Recovery Rate +0.71% -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1784,7 +1866,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="670000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3814-1" />
+		<set name="item_skill" val="3814-1" /> <!-- Phoenix Ring -->
 		<for>
 			<add order="0" stat="mDef" val="40" />
 			<add stat="maxMp" val="13" />
@@ -1792,6 +1874,7 @@
 		</for>
 	</item>
 	<item id="11586" type="Armor" name="Phoenix Earring">
+		<!-- Masterwork Item that has the effect of MP +20 and M. Def. +1% -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1802,7 +1885,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1005000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3815-1" />
+		<set name="item_skill" val="3815-1" /> <!-- Phoenix Earring -->
 		<for>
 			<add order="0" stat="mDef" val="60" />
 			<add stat="maxMp" val="20" />
@@ -1810,6 +1893,7 @@
 		</for>
 	</item>
 	<item id="11587" type="Armor" name="Majestic Necklace">
+		<!-- Masterwork Item that has the effect of MP +33 and M. Def. +1% -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1820,7 +1904,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1998000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3816-1" />
+		<set name="item_skill" val="3816-1" /> <!-- Majestic Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="85" />
 			<add stat="maxMp" val="33" />
@@ -1828,6 +1912,7 @@
 		</for>
 	</item>
 	<item id="11588" type="Armor" name="Majestic Ring">
+		<!-- Masterwork Item that has the effect of MP +17 and Max MP +11 -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1838,7 +1923,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="999000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3817-1" />
+		<set name="item_skill" val="3817-1" /> <!-- Majestic Ring -->
 		<for>
 			<add order="0" stat="mDef" val="42" />
 			<add stat="maxMp" val="17" />
@@ -1846,6 +1931,7 @@
 		</for>
 	</item>
 	<item id="11589" type="Armor" name="Majestic Earring">
+		<!-- Masterwork Item that has the effect of MP +25 and Resistance to poison +5.71. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1856,7 +1942,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1498000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3818-1" />
+		<set name="item_skill" val="3818-1" /> <!-- Majestic Earring -->
 		<for>
 			<add order="0" stat="mDef" val="63" />
 			<add stat="maxMp" val="25" />
@@ -1864,6 +1950,7 @@
 		</for>
 	</item>
 	<item id="11590" type="Armor" name="Sealed Majestic Necklace">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 33 and M. Def. +1% when the seal is broken. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1880,6 +1967,7 @@
 		</for>
 	</item>
 	<item id="11591" type="Armor" name="Sealed Majestic Ring">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 17 and Max MP +11 when the seal is broken. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1896,6 +1984,7 @@
 		</for>
 	</item>
 	<item id="11592" type="Armor" name="Sealed Majestic Earring">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 25 and Resistance to Poison +5.71 when the seal is broken. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1912,6 +2001,7 @@
 		</for>
 	</item>
 	<item id="11593" type="Armor" name="Sealed Tateossian Necklace">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 42 and Resistance to Poison +7.61 when the seal is broken. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1928,6 +2018,7 @@
 		</for>
 	</item>
 	<item id="11594" type="Armor" name="Sealed Tateossian Ring">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 21 and Terrain Resistance +1.14 when the seal is broken. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1944,6 +2035,7 @@
 		</for>
 	</item>
 	<item id="11595" type="Armor" name="Sealed Tateossian Earring">
+		<!-- Sealed Masterwork Item that has the effect of MP+ 31 and Max MP +20 when seal is broken. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1960,6 +2052,7 @@
 		</for>
 	</item>
 	<item id="11596" type="Armor" name="Tateossian Necklace">
+		<!-- Masterwork Item that has the effect of MP +42 and Resistance to bleed +7.61. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1970,7 +2063,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4361000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3819-1" />
+		<set name="item_skill" val="3819-1" /> <!-- Tateossian Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
@@ -1978,6 +2071,7 @@
 		</for>
 	</item>
 	<item id="11597" type="Armor" name="Tateossian Ring">
+		<!-- Masterwork Item that has the effect of MP +21 and Resistance to earth +1.14. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1988,7 +2082,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="2180000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3820-1" />
+		<set name="item_skill" val="3820-1" /> <!-- Tateossian Ring -->
 		<for>
 			<add order="0" stat="mDef" val="48" />
 			<add stat="maxMp" val="21" />
@@ -1996,6 +2090,7 @@
 		</for>
 	</item>
 	<item id="11598" type="Armor" name="Tateossian Earring">
+		<!-- Masterwork Item that has the effect of MP +31 and Max MP +20 -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2006,7 +2101,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3270000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3821-1" />
+		<set name="item_skill" val="3821-1" /> <!-- Tateossian Earring -->
 		<for>
 			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
@@ -2014,6 +2109,7 @@
 		</for>
 	</item>
 	<item id="11599" type="Armor" name="Dynasty Necklace">
+		<!-- Masterwork Item that has the effect of MP +46 and Max MP +30 -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2024,7 +2120,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3822-1" />
+		<set name="item_skill" val="3822-1" /> <!-- Dynasty Necklace -->
 		<for>
 			<add order="0" stat="mDef" val="106" />
 			<add stat="maxMp" val="46" />

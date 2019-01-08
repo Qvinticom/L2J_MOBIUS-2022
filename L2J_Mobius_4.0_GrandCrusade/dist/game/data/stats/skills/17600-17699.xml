@@ -1,37 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17600" toLevel="1" name="Starfish Appearance Stone: Sigil">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17601" toLevel="1" name="Turtle Appearance Stone: Shield">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17602" toLevel="1" name="Blue Mackerel Appearance Stone: Dualsword">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17603" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17604" toLevel="1" name="Trumpetfish Appearance Stone: Dual Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17605" toLevel="1" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17606" toLevel="1" name="Entrance Pass: Fantasy Fishing Dock (1-hour)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 1hr., and remains after death. While the buff is active, you can reenter without using another pass. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A2</operateType>
@@ -39,7 +32,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17607" toLevel="1" name="Entrance Pass: Fantasy Fishing Dock (2-hour)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 2hr., and remains after death. While the buff is active, you can reenter without using another pass. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A2</operateType>
@@ -47,21 +39,19 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17608" toLevel="1" name="Fantastical Energy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Fantastical energy of the fishing dock. Quickly attracts fish, and has an increased chance of meeting Goldeen. Restores Vitality if you stay at the dock for some time. Additional damage when reeling/ pumping. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17609" toLevel="1" name="Fishing Rod's Power (Hero)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use the heroic energy to activate Lethal Strike when reeling/ pumping, even when doing so without success. -->
 		<icon>icon.weapon_fishing_rod_i04</icon>
 		<operateType>P</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17610" toLevel="1" name="Release Agathion's Seal - Virgo">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Virgo seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -72,12 +62,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13410</npcId>
+				<npcId>13410</npcId> <!-- Virgo -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17611" toLevel="1" name="Release Agathion's Seal - Capricorn">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Capricorn Seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -88,12 +78,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId>
+				<npcId>13412</npcId> <!-- Capricorn -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17612" toLevel="1" name="Release Agathion's Seal - Libra">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Libra seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -104,12 +94,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13415</npcId>
+				<npcId>13415</npcId> <!-- Libra -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17613" toLevel="1" name="Release Agathion's Seal - Aries">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Aries seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -119,12 +109,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId>
+				<npcId>13411</npcId> <!-- Aries -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17614" toLevel="1" name="Release Agathion's Seal - Taurus">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Taurus seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -134,12 +124,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13418</npcId>
+				<npcId>13418</npcId> <!-- Taurus -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17615" toLevel="1" name="Release Agathion's Seal - Leo">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Leo seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -149,12 +139,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13414</npcId>
+				<npcId>13414</npcId> <!-- Leo -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17616" toLevel="1" name="Release Agathion's Seal - Gemini">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Gemini seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -164,12 +154,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13413</npcId>
+				<npcId>13413</npcId> <!-- Gemini -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17617" toLevel="1" name="Release Agathion's Seal - Scorpio">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Scorpio seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -179,12 +169,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13417</npcId>
+				<npcId>13417</npcId> <!-- Scorpio -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17618" toLevel="1" name="Release Agathion's Seal - Aquarius">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Aquarius seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -194,12 +184,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13408</npcId>
+				<npcId>13408</npcId> <!-- Aquarius -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17619" toLevel="1" name="Release Agathion's Seal - Pisces">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Pisces seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -209,12 +199,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13407</npcId>
+				<npcId>13407</npcId> <!-- Pisces -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17620" toLevel="1" name="Release Agathion's Seal - Saggitarius">
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Sagittarius seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -224,13 +214,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13416</npcId>
+				<npcId>13416</npcId> <!-- Sagittarius -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17621" toLevel="1" name="Release Agathion's Seal - Cancer">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Release Agathion's Seal. -->
+		<!-- The Agathion - Cancer seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -240,89 +229,77 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13409</npcId>
+				<npcId>13409</npcId> <!-- Cancer -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17622" toLevel="1" name="Agathion Cute Trick - Virgo">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17623" toLevel="1" name="Agathion Cute Trick - Capricorn">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17624" toLevel="1" name="Agathion Cute Trick - Libra">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17625" toLevel="1" name="Agathion Cute Trick - Aries">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17626" toLevel="1" name="Agathion Cute Trick - Taurus">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17627" toLevel="1" name="Agathion Cute Trick - Leo">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17628" toLevel="1" name="Agathion Cute Trick - Gemini">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17629" toLevel="1" name="Agathion Cute Trick - Scorpio">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17630" toLevel="1" name="Agathion Cute Trick - Aquarius">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17631" toLevel="1" name="Agathion Cute Trick - Pisces">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17632" toLevel="1" name="Agathion Cute Trick - Sagittarius">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17633" toLevel="1" name="Agathion Cute Trick - Cancer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -581,7 +558,6 @@
 		</effects>
 	</skill>
 	<skill id="17646" toLevel="1" name="Virgo Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -589,7 +565,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17647" toLevel="1" name="Capricorn Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -597,7 +572,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17648" toLevel="1" name="Libra Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -605,7 +579,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17649" toLevel="1" name="Aries Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -613,7 +586,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17650" toLevel="1" name="Taurus Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -621,7 +593,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17651" toLevel="1" name="Leo Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -629,7 +600,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17652" toLevel="1" name="Gemini Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -637,7 +607,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17653" toLevel="1" name="Scorpio Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -645,7 +614,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17654" toLevel="1" name="Aquarius Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -653,7 +621,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17655" toLevel="1" name="Pisces Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -661,7 +628,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17656" toLevel="1" name="Sagittarius Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -669,7 +635,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17657" toLevel="1" name="Cancer Agathion Teleport: Town of Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -677,7 +642,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17658" toLevel="1" name="Virgo Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -685,7 +649,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17659" toLevel="1" name="Capricorn Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -693,7 +656,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17660" toLevel="1" name="Libra Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -701,7 +663,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17661" toLevel="1" name="Aries Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -709,7 +670,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17662" toLevel="1" name="Taurus Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -717,7 +677,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17663" toLevel="1" name="Leo Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -725,7 +684,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17664" toLevel="1" name="Gemini Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -733,7 +691,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17665" toLevel="1" name="Scorpio Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -741,7 +698,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17666" toLevel="1" name="Aquarius Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -749,7 +705,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17667" toLevel="1" name="Pisces Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -757,7 +712,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17668" toLevel="1" name="Sagittarius Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -765,7 +719,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17669" toLevel="1" name="Cancer Agathion Teleport: Town of Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -773,7 +726,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17670" toLevel="1" name="Virgo Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -781,7 +733,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17671" toLevel="1" name="Capricorn Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -789,7 +740,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17672" toLevel="1" name="Libra Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -797,7 +747,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17673" toLevel="1" name="Aries Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -805,7 +754,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17674" toLevel="1" name="Taurus Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -813,7 +761,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17675" toLevel="1" name="Leo Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -821,7 +768,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17676" toLevel="1" name="Gemini Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -829,7 +775,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17677" toLevel="1" name="Scorpio Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -837,7 +782,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17678" toLevel="1" name="Aquarius Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -845,7 +789,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17679" toLevel="1" name="Pisces Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -853,7 +796,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17680" toLevel="1" name="Sagittarius Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -861,7 +803,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17681" toLevel="1" name="Cancer Agathion Teleport: Heine">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -869,30 +810,25 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="17682" toLevel="1" name="Fishing Rod (Hero) - Inkill">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill1011</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="17683" toLevel="1" name="Steel Weapon Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17684" toLevel="1" name="Steel Armor Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17685" toLevel="1" name="Lara's Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="17686" toLevel="4" name="Lara's Random Buff">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- XP/SP gain + 30% when hunting, P./M. Atk. + 5%. Received damage - 5%. -->
+		<!-- XP/SP gain + $s1 when hunting, P./M. Atk. + $s2. Received damage - $s3. -->
 		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -905,14 +841,12 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17687" toLevel="1" name="Lara's Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="17688" toLevel="4" name="Lara's Random Buff">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- XP/SP gain + 30% when hunting, P./M. Atk. + 5%. Received damage - 5%. -->
+		<!-- XP/SP gain + $s1 when hunting, P./M. Atk. + $s2. Received damage - $s3. -->
 		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -925,17 +859,14 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17689" toLevel="1" name="Lara's Secret Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17690" toLevel="1" name="Lara's Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17691" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)">
-		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -965,7 +896,6 @@
 		</conditions>
 	</skill>
 	<skill id="17692" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)">
-		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -991,7 +921,6 @@
 		</conditions>
 	</skill>
 	<skill id="17693" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)">
-		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1021,7 +950,6 @@
 		</conditions>
 	</skill>
 	<skill id="17694" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)">
-		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1047,7 +975,6 @@
 		</conditions>
 	</skill>
 	<skill id="17695" toLevel="1" name="Summon Squash">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->
 		<icon>icon.skill17695</icon>
 		<operateType>A1</operateType>
@@ -1056,7 +983,6 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="17696" toLevel="1" name="Summon Large Squash">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->
 		<icon>icon.skill17696</icon>
 		<operateType>A1</operateType>

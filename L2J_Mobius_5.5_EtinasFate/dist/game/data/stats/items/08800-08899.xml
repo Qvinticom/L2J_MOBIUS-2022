@@ -32,7 +32,7 @@
 		</stats>
 	</item>
 	<item id="8801" name="Naga Storm" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1528,7 +1528,7 @@
 		</stats>
 	</item>
 	<item id="8848" name="Shadow Item: StormBringer*StormBringer" type="Weapon">
-		<!-- This Shadow Item contains the mirrored power of a StormBringer. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- This Shadow Item contains the mirrored power of a Stormbringer. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

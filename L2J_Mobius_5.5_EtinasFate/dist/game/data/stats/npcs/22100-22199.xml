@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22100" level="58" type="L2Monster" name="Freya's Gardener">
 		<!-- Confirmed CT2.5 -->
@@ -73,7 +73,7 @@
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -147,7 +147,7 @@
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -224,7 +224,7 @@
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -295,7 +295,7 @@
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -373,7 +373,7 @@
 				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -999,7 +999,7 @@
 				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1434,7 +1434,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1513,7 +1513,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1582,20 +1582,20 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light Armor -->
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35468" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35468" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="7.439" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1676,13 +1676,13 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy Armor -->
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="35341" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlet Ingredient -->
 				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
 			</drop>
 			<spoil>
 				<item id="36523" min="1" max="1" chance="1.959" /> <!-- Adamantite -->
@@ -1690,7 +1690,7 @@
 				<item id="19447" min="1" max="1" chance="9" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1776,14 +1776,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1856,7 +1856,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35455" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Fighter (60%) -->
+				<item id="35455" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Fighter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -1864,7 +1864,7 @@
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1937,7 +1937,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -1945,7 +1945,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2031,14 +2031,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2118,7 +2118,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2200,14 +2200,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2281,7 +2281,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2365,14 +2365,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2460,14 +2460,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2534,14 +2534,14 @@
 				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.907" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2617,14 +2617,14 @@
 				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Helios Slasher Fragment -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.903" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2705,7 +2705,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -2713,7 +2713,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2788,7 +2788,7 @@
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
 				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
@@ -2796,7 +2796,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2882,14 +2882,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2964,14 +2964,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3049,14 +3049,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3142,7 +3142,7 @@
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
 				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
@@ -3150,7 +3150,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3225,14 +3225,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3309,7 +3309,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -3317,7 +3317,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3395,14 +3395,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3493,7 +3493,7 @@
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
 				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
@@ -3501,7 +3501,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3575,14 +3575,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3661,14 +3661,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3744,14 +3744,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3837,7 +3837,7 @@
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
 				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
@@ -3845,7 +3845,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3924,14 +3924,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4008,7 +4008,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -4016,7 +4016,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4090,14 +4090,14 @@
 				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4188,7 +4188,7 @@
 				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
 				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
@@ -4196,7 +4196,7 @@
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4273,7 +4273,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -4281,7 +4281,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4360,14 +4360,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4446,14 +4446,14 @@
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4533,14 +4533,14 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4617,14 +4617,14 @@
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4706,14 +4706,14 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4788,14 +4788,14 @@
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4883,7 +4883,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -4891,7 +4891,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4961,14 +4961,14 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5046,14 +5046,14 @@
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5129,14 +5129,14 @@
 				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
 				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5290,7 +5290,7 @@
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
@@ -5298,7 +5298,7 @@
 				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -5383,7 +5383,7 @@
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5461,7 +5461,7 @@
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5551,7 +5551,7 @@
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5641,7 +5641,7 @@
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>

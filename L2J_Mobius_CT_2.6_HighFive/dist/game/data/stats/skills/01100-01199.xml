@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1100" levels="2" name="Chill Flame">
+		<!-- Strikes the target with magical cold flame, causing loss of 27 HP per second for 15 seconds. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#dot"> 27 40 </table>
 		<table name="#effectPoints"> -121 -162 </table>
@@ -37,6 +38,7 @@
 		</for>
 	</skill>
 	<skill id="1101" levels="2" name="Blaze Quake">
+		<!-- Ignites nearby enemies, causing loss of 58 HP per second for 15 seconds. -->
 		<table name="#abnormalLvls"> 3 4 </table>
 		<table name="#dot"> 58 79 </table>
 		<table name="#effectPoints"> -243 -331 </table>
@@ -73,6 +75,7 @@
 		</for>
 	</skill>
 	<skill id="1102" levels="6" name="Aura Sink">
+		<!-- Consumes the enemy's MP with 16 Power added to M. Atk. and addtioanlly causes loss of 8 MP per second for 15 seconds. -->
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 </table>
 		<table name="#effectPoints"> -243 -331 -418 -495 -597 -635 </table>
 		<table name="#magicLvl"> 25 35 44 52 64 70 </table>
@@ -110,6 +113,7 @@
 		</for>
 	</skill>
 	<skill id="1104" levels="14" name="Seal of Winter" enchantGroup1="1" enchantGroup2="1">
+		<!-- Decreases Atk. Spd. of nearby enemies by 23% for 30 seconds. -->
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 42 47 52 56 61 64 66 69 71 74 76 78 80 82 </table>
@@ -152,6 +156,7 @@
 		</for>
 	</skill>
 	<skill id="1105" levels="18" name="Madness">
+		<!-- Confuses the enemy into attacking random targets. -->
 		<table name="#effectPoints"> -204 -243 -285 -331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 16 18 21 24 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
@@ -176,6 +181,7 @@
 		</for>
 	</skill>
 	<skill id="1107" levels="2" name="Frost Flame">
+		<!-- Strikes the target with magical cold flame, causing loss of 58 HP per second for 15 seconds. -->
 		<table name="#abnormalLvls"> 3 4 </table>
 		<table name="#dot"> 58 79 </table>
 		<table name="#effectPoints"> -204 -285 </table>
@@ -212,6 +218,7 @@
 		</for>
 	</skill>
 	<skill id="1108" levels="4" name="Seal of Flame">
+		<!-- Ignites mystical flames that causes loss of 60 HP per second for 15 seconds. -->
 		<table name="#abnormalLvls"> 5 6 7 8 </table>
 		<table name="#dot"> 60 73 84 92 </table>
 		<table name="#effectPoints"> -286 -333 -390 -409 </table>
@@ -246,6 +253,7 @@
 		</for>
 	</skill>
 	<skill id="1111" levels="18" name="Summon Kat the Cat" enchantGroup1="1">
+		<!-- Summons Kat the Cat. Consumes 1 Spirit Ore when summoning. -->
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
@@ -261,7 +269,7 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -286,6 +294,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantGroup1="2" enchantGroup2="2">
+		<!-- Recovers the servitor's MP with up to 41 Power depending on the servitor's level. -->
 		<table name="#amount"> 41 44 49 52 57 60 66 70 73 77 81 86 90 94 98 102 104 106 108 110 113 115 116 118 120 122 124 126 128 129 131 133 134 136 </table>
 		<table name="#effectPoints"> 227 243 268 285 313 331 360 379 399 418 438 457 477 495 514 532 541 549 558 566 574 582 590 597 604 611 617 624 630 635 641 646 650 655 </table>
 		<table name="#magicLvl"> 23 25 28 30 33 35 38 40 42 44 46 48 50 52 54 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -324,7 +333,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1127" levels="45" name="Servitor Heal" enchantGroup1="2" enchantGroup2="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Recovers the servitor's HP with 169 Power. -->
 		<table name="#amount"> 169 189 211 247 259 272 313 328 343 389 405 421 472 489 507 542 561 579 616 635 654 692 711 730 768 786 805 824 842 860 878 896 913 931 947 964 980 996 1011 1026 1040 1054 1067 1080 1092 </table>
 		<table name="#effectPoints"> 121 135 151 176 185 195 224 234 245 278 289 301 337 349 362 388 401 414 440 454 467 494 508 521 549 562 575 589 602 615 628 640 653 665 677 689 700 711 722 733 743 753 763 772 780 </table>
 		<table name="#magicLvl"> 16 18 20 23 24 25 28 29 30 33 34 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -363,6 +372,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1128" levels="18" name="Summon Shadow" enchantGroup1="1">
+		<!-- Summons a Shadow. Requires 1 Spirit Ore. -->
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
@@ -378,7 +388,7 @@
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -403,6 +413,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantGroup1="1">
+		<!-- Summons a Reanimated Man. Requires 11 Spirit Ore. -->
 		<table name="#itemConsumeCount"> 11 13 6 9 9 6 9 </table>
 		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 </table>
 		<table name="#itemConsumeSteps"> 0 0 14 14 14 14 14 </table>
@@ -417,7 +428,7 @@
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -442,6 +453,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the servitor's M. Def. by 23% for 20 minutes. -->
 		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#effectPoints"> 418 495 </table>
 		<table name="#mDef"> 1.23 1.3 </table>
@@ -478,6 +490,7 @@
 		</for>
 	</skill>
 	<skill id="1140" levels="3" name="Servitor Physical Shield" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the servitor's P. Def. by 8% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 379 457 532 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
@@ -514,6 +527,7 @@
 		</for>
 	</skill>
 	<skill id="1141" levels="2" name="Servitor Haste" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the servitor's Atk. Spd. by 15% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 418 495 </table>
 		<table name="#mpConsume"> 31 38 </table>
@@ -550,6 +564,7 @@
 		</for>
 	</skill>
 	<skill id="1144" levels="2" name="Servitor Wind Walk" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the servitor's Speed by 20 for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 331 457 </table>
 		<table name="#mpConsume"> 24 36 </table>
@@ -586,6 +601,7 @@
 		</for>
 	</skill>
 	<skill id="1145" levels="3" name="Bright Servitor" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the servitor's M. Atk. by 55% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 331 457 532 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
@@ -622,6 +638,7 @@
 		</for>
 	</skill>
 	<skill id="1146" levels="3" name="Mighty Servitor" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the servitor's P. Atk. by 8% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 331 457 532 </table>
 		<table name="#mpConsume"> 24 36 42 </table>
@@ -658,6 +675,7 @@
 		</for>
 	</skill>
 	<skill id="1147" levels="6" name="Vampiric Touch">
+		<!-- Inflicts dark damage with 18 Power added to M. Atk. Absorbs 40% of the damage as HP. -->
 		<table name="#effectPoints"> -143 -162 -182 -204 -227 -243 </table>
 		<table name="#magicLvl"> 11 14 17 20 23 25 </table>
 		<table name="#mpConsume"> 20 22 25 28 30 32 </table>
@@ -686,6 +704,7 @@
 		</for>
 	</skill>
 	<skill id="1148" levels="13" name="Death Spike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Throws a bone to inflict dark damage on the enemy with 58 Power added to M. Atk. -->
 		<table name="#effectPoints"> -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 19 22 24 28 29 31 32 33 35 36 37 38 40 </table>
@@ -726,6 +745,7 @@
 		</for>
 	</skill>
 	<skill id="1151" levels="16" name="Corpse Life Drain" enchantGroup1="2" enchantGroup2="2">
+		<!-- Absorbs residual life energy from a corpse to restore the user's HP. -->
 		<table name="#drain"> 260 299 347 384 426 467 509 529 550 571 590 609 628 645 662 678 </table>
 		<table name="#magicLvl"> 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
@@ -771,6 +791,7 @@
 		</enchant2selfEffects>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
+		<!-- Summons a Corrupted Man. Requires 1 Spirit Ore. Consumes 90% of acquired Exp. points. -->
 		<table name="#itemConsumeCount"> 3 3 3 3 3 3 </table>
 		<table name="#mpConsume"> 56 69 82 92 98 104 </table>
 		<table name="#mpInitialConsume"> 14 18 21 23 25 26 </table>
@@ -808,6 +829,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantGroup1="2" enchantGroup2="2">
+		<!-- Detonates a corpse to inflict dark damage on the enemies using 61 Power added to M. Atk. -->
 		<table name="#effectPoints"> -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 33 35 36 38 39 41 43 44 46 48 49 51 52 53 55 </table>
@@ -847,6 +869,7 @@
 		</for>
 	</skill>
 	<skill id="1156" levels="13" name="Forget">
+		<!-- Takes away the enemy's will to attack. -->
 		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
 		<table name="#mpInitialConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
@@ -870,6 +893,7 @@
 		</for>
 	</skill>
 	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Sacrifices the user's HP to regenerate MP by 22. -->
 		<table name="#amount"> 22 35 47 53 61 </table>
 		<table name="#effectPoints"> 243 379 495 549 611 </table>
 		<table name="#hpConsume"> 131 209 280 318 366 </table>
@@ -906,6 +930,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">
+		<!-- Transfers user's pain, using 68 Power to inflict dark damage on the enemy. Power increases as HP decreases. -->
 		<table name="#effectPoints"> -477 -495 -514 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 </table>
 		<table name="#magicLvl"> 50 52 54 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 36 38 39 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 </table>
@@ -943,6 +968,7 @@
 		</for>
 	</skill>
 	<skill id="1160" levels="15" name="Slow" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Decreases the enemy's Speed by 20% for 1 minute. -->
 		<table name="#abnormalLvls"> 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#effectPoints"> -331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -995,6 +1021,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="1163" levels="14" name="Curse Discord">
+		<!-- Confuses the enemy to attack its ally. -->
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
@@ -1020,6 +1047,7 @@
 		</for>
 	</skill>
 	<skill id="1164" levels="19" name="Curse: Weakness" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
+		<!-- Decreases the enemy's P. Atk. by 17% for 30 seconds. -->
 		<table name="#abnormalLvls"> 1 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#effectPoints"> -162 -204 -243 -285 -331 -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 14 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -1080,6 +1108,7 @@
 		</enchant4for>
 	</skill>
 	<skill id="1167" levels="6" name="Poisonous Cloud" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Creates a poison cloud around the enemy, causing loss of 24 HP per second for 30 seconds. -->
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 </table>
 		<table name="#dot"> 24 32 41 50 58 63 </table>
 		<table name="#effectPoints"> -243 -331 -457 -532 -597 -655 </table>
@@ -1133,6 +1162,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
+		<!-- Poisons the enemy for 30 seconds, causing loss of 21 HP every second. -->
 		<table name="#abnormalLvls"> 1 3 4 5 6 7 8 </table>
 		<table name="#dot"> 11 24 32 41 50 58 63 </table>
 		<table name="#effectPoints"> -121 -204 -285 -418 -495 -582 -646 </table>
@@ -1168,6 +1198,7 @@
 		</for>
 	</skill>
 	<skill id="1169" levels="14" name="Curse Fear" enchantGroup1="2" enchantGroup2="2">
+		<!-- Frightens the enemy into fleeing for 10 seconds. -->
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 28 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
@@ -1210,7 +1241,7 @@
 		</for>
 	</skill>
 	<skill id="1170" levels="13" name="Anchor" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Causes the enemy's body to go completely rigid for 5 seconds and causes paralysis for 5 seconds. -->
 		<table name="#effectPoints"> -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 31 35 38 41 43 44 46 48 49 51 52 53 55 </table>
@@ -1259,6 +1290,7 @@
 		</endEffects>
 	</skill>
 	<skill id="1171" levels="19" name="Blazing Circle" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Spreads ring-shaped flames to inflict Fire damage on nearby enemies with 29 Power added to M. Atk. -->
 		<table name="#effectPoints"> -180 -190 -200 -209 -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 40 42 44 47 49 52 54 56 59 61 64 66 69 71 74 76 78 80 82 </table>
@@ -1299,6 +1331,7 @@
 		</for>
 	</skill>
 	<skill id="1172" levels="8" name="Aura Burn">
+		<!-- Inflicts non-attribute damage on the enemy with 19 Power added to M. Atk. -->
 		<table name="#effectPoints"> -146 -163 -181 -194 -214 -228 -250 -265 </table>
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 </table>
 		<table name="#mpConsume"> 14 16 17 18 20 21 23 24 </table>
@@ -1323,6 +1356,7 @@
 		</for>
 	</skill>
 	<skill id="1174" levels="22" name="Frost Wall" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Raises a wall of ice that inflicts Water damage on enemies with 48 Power added to M. Atk. -->
 		<table name="#effectPoints"> -286 -297 -309 -319 -325 -330 -335 -340 -345 -349 -354 -358 -363 -367 -371 -374 -378 -381 -385 -388 -390 -393 </table>
 		<table name="#magicLvl"> 50 52 54 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 54 56 59 61 63 64 65 66 68 69 70 71 72 74 75 76 77 78 79 80 81 82 </table>
@@ -1366,6 +1400,7 @@
 		</for>
 	</skill>
 	<skill id="1175" levels="8" name="Aqua Swirl">
+		<!-- Supplements the user's M. Atk. with 23 Power to create a powerful vortex of Water that inflicts Water damage on the enemy. -->
 		<table name="#effectPoints"> -182 -204 -227 -243 -268 -285 -313 -331 </table>
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 </table>
 		<table name="#mpConsume"> 14 16 17 18 20 21 23 24 </table>
@@ -1392,6 +1427,7 @@
 		</for>
 	</skill>
 	<skill id="1176" levels="15" name="Tempest" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
+		<!-- Stirs up a hurricane that inflicts Wind damage near the enemy with 31 Power added to M. Atk. -->
 		<table name="#effectPoints"> -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 49 52 54 56 59 61 64 66 69 71 74 76 78 80 82 </table>
@@ -1432,6 +1468,7 @@
 		</for>
 	</skill>
 	<skill id="1177" levels="5" name="Wind Strike">
+		<!-- Supplements the user's M. Atk. with 12 Power to create a powerful hurricane that inflicts Wind damage on the enemy. -->
 		<table name="#effectPoints"> -92 -106 -121 -143 -162 </table>
 		<table name="#magicLvl"> 1 4 7 11 14 </table>
 		<table name="#mpConsume"> 7 7 8 11 12 </table>
@@ -1458,6 +1495,7 @@
 		</for>
 	</skill>
 	<skill id="1178" levels="8" name="Twister">
+		<!-- Supplements the user's M. Atk. with 23 Power to create a powerful cyclone that inflicts Wind damage on the enemy. -->
 		<table name="#effectPoints"> -182 -204 -227 -243 -268 -285 -313 -331 </table>
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 </table>
 		<table name="#mpConsume"> 14 16 17 18 20 21 23 24 </table>
@@ -1484,6 +1522,7 @@
 		</for>
 	</skill>
 	<skill id="1181" levels="3" name="Flame Strike">
+		<!-- Supplements the user's M. Atk. with 13 Power to launch a flaming swath of energy that inflicts Fire damage on the enemy. -->
 		<table name="#effectPoints"> -204 -243 -285 </table>
 		<table name="#magicLvl"> 20 25 30 </table>
 		<table name="#mpConsume"> 23 27 32 </table>
@@ -1512,6 +1551,7 @@
 		</for>
 	</skill>
 	<skill id="1182" levels="3" name="Resist Aqua" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Increases Resistance to Water by 10 for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 243 379 418 </table>
 		<table name="#mpConsume"> 18 28 31 </table>
@@ -1566,6 +1606,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="1183" levels="4" name="Freezing Shackle">
+		<!-- Freezes the enemy with a powerful cold wind, causing loss of 102 HP per second for 15 seconds. -->
 		<table name="#abnormalLvls"> 5 6 7 8 </table>
 		<table name="#dot"> 102 125 144 157 </table>
 		<table name="#effectPoints"> -523 -619 -746 -818 </table>
@@ -1602,6 +1643,7 @@
 		</for>
 	</skill>
 	<skill id="1184" levels="6" name="Ice Bolt">
+		<!-- Supplements the user's M. Atk. with 8 Power to temporarily freeze the surrounding air, inflicting Water damage on the enemy and decreasing their Speed by 20% for 1 minute. -->
 		<table name="#effectPoints"> -106 -121 -143 -162 -182 -204 </table>
 		<table name="#magicLvl"> 4 7 11 14 17 20 </table>
 		<table name="#mpConsume"> 7 8 11 12 14 16 </table>
@@ -1639,6 +1681,7 @@
 		</for>
 	</skill>
 	<skill id="1189" levels="3" name="Resist Wind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Increases Resistance to Wind by 10 for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 331 379 418 </table>
 		<table name="#mpConsume"> 24 28 31 </table>
@@ -1694,6 +1737,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="1191" levels="3" name="Resist Fire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Increases Resistance to Fire by 10 for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 285 379 418 </table>
 		<table name="#mpConsume"> 21 28 31 </table>

@@ -63,7 +63,7 @@
 		</stats>
 	</item>
 	<item id="6309" name="Ultimate Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +191 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -94,7 +94,7 @@
 		</stats>
 	</item>
 	<item id="6310" name="Sword of Whispering Death" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +46. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -187,7 +187,7 @@
 		</stats>
 	</item>
 	<item id="6313" name="Homunkulus' Sword" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +46. -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -759,7 +759,7 @@
 		</stats>
 	</item>
 	<item id="6349" name="Berserker Blade" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 242 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +242 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -828,7 +828,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6356" name="Needle Wolverine" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Characteristic>. P. Crit. Attack +70 -->
+		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 70. -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -890,7 +890,7 @@
 		</stats>
 	</item>
 	<item id="6358" name="Needle Wolverine" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
+		<!-- <Soul Crystal Enhancement> Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -921,7 +921,7 @@
 		</stats>
 	</item>
 	<item id="6359" name="Demon's Dagger" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 160 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +160 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -962,7 +962,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6388" name="Lord's Certificate of Approval" type="EtcItem">
-		<!-- This certificate allows the bearer to join the Lords of Dawn without belonging to a castle-owning clan. -->
+		<!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1075,7 +1075,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6399" name="Rabbit Crest" type="EtcItem">
-		<!-- The crest indicating that its bearer's event collector is rabbit. Without this badge, one cannot prove one's grade. \0 -->
+		<!-- The crest indicating that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

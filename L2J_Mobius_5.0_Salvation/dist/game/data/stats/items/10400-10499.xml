@@ -207,7 +207,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10415" name="Icarus Dualsword" type="Weapon">
-		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons increases more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When enchanted, P. Atk. of dual swords, two-handed swords, two-handed blunt weapons and fist weapons increases more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="10416" name="Blue Talisman - Explosion" type="Armor">
-		<!-- Increases P. Atk./Atk. Spd. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases P. Atk./ Atk. Spd. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -2121,7 +2121,7 @@
 		</skills>
 	</item>
 	<item id="10483" name="Life Stone - Lv. 82" type="EtcItem">
-		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2134,7 +2134,7 @@
 		</cond>
 	</item>
 	<item id="10484" name="Mid-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- Mid-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- Mid-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2147,7 +2147,7 @@
 		</cond>
 	</item>
 	<item id="10485" name="High-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- High-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- High-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2160,7 +2160,7 @@
 		</cond>
 	</item>
 	<item id="10486" name="Top-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- Top-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- Top-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2265,7 +2265,7 @@
 		</stats>
 	</item>
 	<item id="10491" name="Silk Shirt" additionalName="HP" type="Armor">
-		<!-- Increases Max HP by 118 when enchanted to + 4 or higher. -->
+		<!-- Increases Max HP by 118 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2285,7 +2285,7 @@
 		</stats>
 	</item>
 	<item id="10492" name="Silk Shirt" additionalName="MP" type="Armor">
-		<!-- Increases Max MP by 51 when enchanted to + 4 or higher. -->
+		<!-- Increases Max MP by 51 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2305,7 +2305,7 @@
 		</stats>
 	</item>
 	<item id="10493" name="Silk Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 354 when enchanted to + 4 or higher. -->
+		<!-- Increases Max CP by 354 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2325,7 +2325,7 @@
 		</stats>
 	</item>
 	<item id="10494" name="Thin Leather Shirt" additionalName="HP" type="Armor">
-		<!-- Increases Max HP by 147 when enchanted to + 4 or higher. -->
+		<!-- Increases Max HP by 147 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2345,7 +2345,7 @@
 		</stats>
 	</item>
 	<item id="10495" name="Thin Leather Shirt" additionalName="MP" type="Armor">
-		<!-- Increases Max MP by 72 when enchanted to + 4 or higher. -->
+		<!-- Increases Max MP by 72 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2365,7 +2365,7 @@
 		</stats>
 	</item>
 	<item id="10496" name="Thin Leather Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 441 when enchanted to + 4 or higher. -->
+		<!-- Increases Max CP by 441 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_b_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2385,7 +2385,7 @@
 		</stats>
 	</item>
 	<item id="10497" name="Scale Shirt" additionalName="HP" type="Armor">
-		<!-- Increases Max HP by 172 when enchanted to + 4 or higher. -->
+		<!-- Increases Max HP by 172 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2405,7 +2405,7 @@
 		</stats>
 	</item>
 	<item id="10498" name="Scale Shirt" additionalName="MP" type="Armor">
-		<!-- Increases Max MP by 85 when enchanted to + 4 or higher. -->
+		<!-- Increases Max MP by 85 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2425,7 +2425,7 @@
 		</stats>
 	</item>
 	<item id="10499" name="Scale Shirt" additionalName="CP" type="Armor">
-		<!-- Increases Max CP by 516 when enchanted to + 4 or higher. -->
+		<!-- Increases Max CP by 516 when enchanted to +4 or higher. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

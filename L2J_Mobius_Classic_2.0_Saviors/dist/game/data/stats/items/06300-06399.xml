@@ -890,7 +890,7 @@
 		</stats>
 	</item>
 	<item id="6358" name="Needle Wolverine" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
+		<!-- <Soul Crystal Enhancement> Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1075,7 +1075,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6399" name="Rabbit Crest" type="EtcItem">
-		<!-- The crest indicating that its bearer's event collector is rabbit. Without this badge, one cannot prove one's grade. \0 -->
+		<!-- The crest indicating that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

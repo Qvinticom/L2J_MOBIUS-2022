@@ -801,7 +801,7 @@
 		</stats>
 	</item>
 	<item id="36643" name="Emerald Weapon: Dualsword" type="Weapon">
-		<!-- Emerald Weapon. Dualsword style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald Weapon. dual sword style. Initial Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1119,7 +1119,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36659" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of an Emerald dualsword. 7-day. -->
+		<!-- Changes the appearance of a dual sword to that of an Emerald dual sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />

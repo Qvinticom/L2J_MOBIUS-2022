@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11746" toLevel="3" name="Superior Inquisition">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%. -->
+		<!-- Damage inflicted on monsters +$s1, and M. Skill MP Consumption +$s2. -->
 		<icon>icon.skill1520</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -47,16 +45,13 @@
 		</effects>
 	</skill>
 	<skill id="11747" toLevel="1" name="Enchanter - Individual Passive">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="11748" toLevel="1" name="Enchanter - Individual">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<!-- Atk. Spd. +30% for 5 sec. -->
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
@@ -82,7 +77,6 @@
 		</effects>
 	</skill>
 	<skill id="11749" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -113,7 +107,6 @@
 		</effects>
 	</skill>
 	<skill id="11750" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
@@ -143,8 +136,7 @@
 		</effects>
 	</skill>
 	<skill id="11751" toLevel="10" name="Superior Magic Weapon Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- M. Atk. + 24%, Additional M. Atk. + 981, M. Critical Rate + 6%. INT + 2. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<!-- M. Atk. +$s1, Additional M. Atk. +$s2, M. Critical Rate +$s3. INT +$s4. Depending on your INT, the Cooldown resets or the duration increases by $s5 times. -->
 		<icon>icon.skill11251</icon>
 		<magicLevel>
 			<value level="1">85</value>
@@ -195,8 +187,6 @@
 		</effects>
 	</skill>
 	<skill id="11752" toLevel="11" name="Sustain">
-		<!-- Glory Days confirmed -->
-		<!-- For 15 seconds, Heals the selected party member by 172 per second. Further increases incoming Healing power by 10%. Also increases your Healing power. -->
 		<abnormalTime>15</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
@@ -315,15 +305,14 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Sustain -->
-				<skillId>11753</skillId>
+				<skillId>11753</skillId> <!-- Sustain -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="11753" toLevel="3" name="Sustain">
-		<!-- Glory Days confirmed -->
-		<!-- For 10 seconds, increases Healing power by 50. If triggered again, the effect will increase. -->
+		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<abnormalTime>15</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -350,8 +339,6 @@
 		</effects>
 	</skill>
 	<skill id="11754" toLevel="5" name="Fairy of Life">
-		<!-- Glory Days confirmed -->
-		<!-- Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">60</value>
 			<value fromLevel="4" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -424,7 +411,7 @@
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>10</minDamage>
-				<skillId>11807</skillId>
+				<skillId>11807</skillId> <!-- Miracle of Fairy -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -446,8 +433,6 @@
 		</effects>
 	</skill>
 	<skill id="11755" toLevel="11" name="Radiant Heal">
-		<!-- Glory Days confirmed -->
-		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -549,8 +534,6 @@
 		</effects>
 	</skill>
 	<skill id="11756" toLevel="11" name="Panic Heal">
-		<!-- Glory Days confirmed -->
-		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
 		<icon>icon.skill11756</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -638,8 +621,6 @@
 		</effects>
 	</skill>
 	<skill id="11757" toLevel="11" name="Brilliant Heal">
-		<!-- Glory Days confirmed -->
-		<!-- Heals yourself and nearby party members with 1191 Power added to M. Atk. If HP is full, CP is restored. -->
 		<icon>icon.skill11757</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -715,9 +696,6 @@
 		</effects>
 	</skill>
 	<skill id="11758" toLevel="1" name="Celestial Protection">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Renders the selected party member invincible for 10 seconds. -->
 		<icon>icon.skill11758</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -788,10 +766,6 @@
 		</effects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Skill does not remove on action -->
-		<!-- Renders all party members invincible for 10 seconds. -->
 		<icon>icon.skill11759</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -855,8 +829,6 @@
 		</effects>
 	</skill>
 	<skill id="11760" toLevel="11" name="Radiant Recharge">
-		<!-- Glory Days confirmed -->
-		<!-- Instantly recovers target's MP with a maximum of 166 Power depending on target's level. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>MP_RECOVER</abnormalType>
 		<abnormalTime>10</abnormalTime>
@@ -934,11 +906,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpSkillAcquire">
-				<skillId>11760</skillId>
+				<skillId>11760</skillId> <!-- Radiant Recharge -->
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkillAcquire">
-				<skillId>1013</skillId>
+				<skillId>1013</skillId> <!-- Recharge -->
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
@@ -979,8 +951,6 @@
 		</effects>
 	</skill>
 	<skill id="11761" toLevel="8" name="Brilliant Recharge">
-		<!-- Glory Days confirmed -->
-		<!-- Instantly recovers party members' MP with a maximum of 700 Power depending on their level. Also, for 10 seconds, recovers 50 MP per second. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>MP_RECOVER</abnormalType>
 		<abnormalTime>10</abnormalTime>
@@ -1093,8 +1063,6 @@
 		</effects>
 	</skill>
 	<skill id="11762" toLevel="1" name="Balance Heal">
-		<!-- Glory Days confirmed -->
-		<!-- Equalizes all party members' HP and restores 333 HP every second for 15 seconds. -->
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
 		<effectPoint>1844</effectPoint>
@@ -1133,8 +1101,6 @@
 		</effects>
 	</skill>
 	<skill id="11763" toLevel="1" name="Radiant Purge">
-		<!-- Glory Days confirmed -->
-		<!-- Dispels target's debuffs. Allies only. -->
 		<castRange>600</castRange>
 		<effectPoint>867</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1184,8 +1150,6 @@
 		</effects>
 	</skill>
 	<skill id="11764" toLevel="1" name="Brilliant Purge">
-		<!-- Glory Days confirmed -->
-		<!-- Cancels all party members' debuffs and makes them immune to debuffs for 7 seconds. -->
 		<abnormalTime>7</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
@@ -1242,8 +1206,6 @@
 		</effects>
 	</skill>
 	<skill id="11765" toLevel="7" name="Crystal Regeneration">
-		<!-- Glory Days confirmed -->
-		<!-- Crystallize yourself and become immune to damage and debuffs for 10 seconds. Recover 266 HP and 74 MP every second. -->
 		<abnormalTime>10</abnormalTime>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">10</value>
@@ -1333,9 +1295,6 @@
 		</effects>
 	</skill>
 	<skill id="11766" toLevel="11" name="Dark Blast">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Attacks target with 153 Power added to M. Atk. -->
 		<icon>icon.skill11766</icon>
 		<effectPoint>
 			<value level="1">-867</value>
@@ -1423,9 +1382,6 @@
 		</effects>
 	</skill>
 	<skill id="11767" toLevel="11" name="Mass Dark Veil">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Inflicts damage on target and nearby enemies with 117 Power and decreases aggression toward yourself. -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<icon>icon.skill11767</icon>
@@ -1519,8 +1475,6 @@
 		</effects>
 	</skill>
 	<skill id="11768" toLevel="1" name="Rebirth">
-		<!-- Glory Days confirmed -->
-		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
 		<icon>icon.skill11768</icon>
 		<affectRange>1000</affectRange>
 		<operateType>A1</operateType>
@@ -1560,8 +1514,6 @@
 		</effects>
 	</skill>
 	<skill id="11769" toLevel="9" name="Dark Backfire">
-		<!-- Glory Days confirmed -->
-		<!-- For 30 sec., target's MP Consumption + 50%, and Casting Spd. and Atk. Spd. - 20%. -->
 		<activateRate>
 			<value fromLevel="1" toLevel="9">80</value>
 			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
@@ -1717,9 +1669,6 @@
 		</effects>
 	</skill>
 	<skill id="11770" toLevel="1" name="Dissolve">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Removes the aggression of nearby enemies toward you and increases speed by 100. -->
 		<icon>icon.skill11770</icon>
 		<affectRange>500</affectRange>
 		<operateType>A1</operateType>
@@ -1742,7 +1691,7 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>11835</skillId>
+				<skillId>11835</skillId> <!-- Dissolve -->
 				<skillLevel>1</skillLevel>
 				<skillSubLevel>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{1000 + subIndex}</value>
@@ -1752,7 +1701,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="11771" toLevel="1" name="Wise Retainer of Lights">
-		<!-- Glory Days confirmed -->
 		<!-- Finally! Causes Lakcis, the giant of light, to materialize. Protects allies near the giant and attacks the enemies. Continuously decreases HP. -->
 		<icon>icon.skill1349</icon>
 		<operateType>A1</operateType>
@@ -1771,14 +1719,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>13300</npcId>
+				<npcId>13300</npcId> <!-- Wise Retainer of Lights -->
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11772" toLevel="7" name="Giant's Favor">
-		<!-- Glory Days confirmed -->
-		<!-- Performs an ancient secret technique of the Giants to increase P. Def., M. Def., and Healing power by 1000 for 30 seconds. -->
 		<abnormalTime>30</abnormalTime>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
@@ -1872,7 +1818,6 @@
 		</effects>
 	</skill>
 	<skill id="11773" toLevel="2" name="Lakcis Disc">
-		<!-- Glory Days confirmed -->
 		<!-- Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
 		<icon>icon.skill11773</icon>
 		<operateType>AU</operateType>
@@ -1894,7 +1839,7 @@
 			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Elegance of Light -->
-				<skillId>11808</skillId>
+				<skillId>11808</skillId> <!-- Elegance of Light -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1903,7 +1848,7 @@
 			</effect>
 			<effect name="CallSkillOnActionTime">
 				<!-- Elegance of Light -->
-				<skillId>11809</skillId>
+				<skillId>11809</skillId> <!-- Elegance of Light -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1913,8 +1858,7 @@
 		</effects>
 	</skill>
 	<skill id="11774" toLevel="4" name="Summon Tree of Life">
-		<!-- Glory Days confirmed -->
-		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
+		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for $s1. Can also cast a debuff canceling blessing. -->
 		<icon>icon.skill11774</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1965,8 +1909,7 @@
 		</effects>
 	</skill>
 	<skill id="11775" toLevel="1" name="Return">
-		<!-- Glory Days confirmed -->
-		<!-- Moves to the summoned entity. Cannot be used beyond 1000 range. -->
+		<!-- Moves to the summoned entity. Cannot be used beyond $s1 range. -->
 		<icon>icon.skill11775</icon>
 		<operateType>A1</operateType>
 		<mpConsume>60</mpConsume>
@@ -1988,8 +1931,6 @@
 		</effects>
 	</skill>
 	<skill id="11776" toLevel="4" name="Summon Lumi">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Summons a Spirit of Light. -->
 		<icon>icon.skill11776</icon>
 		<operateType>A1</operateType>
@@ -2033,9 +1974,6 @@
 		</effects>
 	</skill>
 	<skill id="11777" toLevel="8" name="Mark of Lumi">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by 10%, and consumes 113 HP every second for 60 seconds. -->
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>MARK_OF_LUMI</abnormalType>
@@ -2142,8 +2080,6 @@
 		</effects>
 	</skill>
 	<skill id="11778" toLevel="9" name="Fatal Sleep">
-		<!-- Updated to IO -->
-		<!-- For 20 seconds, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by 50%. -->
 		<icon>icon.skill11778</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2215,15 +2151,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>11779</skillId>
+				<skillId>11779</skillId> <!-- Yoked status -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="11779" toLevel="8" name="Yoked status">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Decreases Speed, Atk. Spd. and Casting Spd. by 50%. -->
+		<!-- Decreases Speed, Atk. Spd. and Casting Spd. by $s1. -->
 		<icon>icon.skill1394</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -2293,9 +2227,6 @@
 		</effects>
 	</skill>
 	<skill id="11780" toLevel="9" name="Dark Devour">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Decreases target's Recovery by 50%. -->
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -2392,7 +2323,6 @@
 		</effects>
 	</skill>
 	<skill id="11781" toLevel="6" name="Dark Devour">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill1367</icon>
 		<operateType>A1</operateType>
 		<castRange>0</castRange>
@@ -2421,9 +2351,7 @@
 		</effects>
 	</skill>
 	<skill id="11782" toLevel="2" name="Frantic Healing">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Casting Spd. + 30% when equipped with a Robe/ Light Armor. MP is continuously consumed. -->
+		<!-- Casting Spd. +$s1 when equipped with a Robe/ Light Armor. MP is continuously consumed. -->
 		<icon>icon.skill11782</icon>
 		<magicLvl>
 			<value level="1">93</value>
@@ -2453,8 +2381,6 @@
 		</effects>
 	</skill>
 	<skill id="11783" toLevel="1" name="Reset">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
 		<!-- Restarts target's debuff timers. -->
 		<icon>icon.skill11783</icon>
 		<operateType>A1</operateType>
@@ -2474,8 +2400,7 @@
 		</effects>
 	</skill>
 	<skill id="11784" toLevel="4" name="Blessed Resurrection">
-		<!-- Glory Days confirmed -->
-		<!-- Resurrects a dead target and restores 85% of the XP lost. -->
+		<!-- Resurrects a dead target and restores $s1 of the XP lost. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<hitTime>2000</hitTime>
@@ -2519,9 +2444,7 @@
 		</effects>
 	</skill>
 	<skill id="11785" toLevel="3" name="Party Resurrection">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Resurrects all dead party members and restores 80% of the XP lost. -->
+		<!-- Resurrects every party member who died near you and recovers $s1 XP. -->
 		<icon>icon.skill11785</icon>
 		<affectLimit>
 			<value level="1">0-0</value>
@@ -2575,9 +2498,7 @@
 		</effects>
 	</skill>
 	<skill id="11786" toLevel="1" name="Debuff Immunity">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- Immune to debuffs for 5 seconds. -->
+		<!-- Immune to debuffs for 5 sec. -->
 		<icon>icon.skill1411</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
@@ -2597,8 +2518,7 @@
 		</effects>
 	</skill>
 	<skill id="11787" toLevel="10" name="Superior Armor Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- Max HP + 4299, P. Def. + 1212, M. Def + 10%, HP Recovery Bonus + 2.8, MP Recovery Bonus + 3.6 when equipped with a Robe/Light Armor. INT + 2.. -->
+		<!-- Max HP +$s1, P. Def. +$s2, M. Def +$s3, HP Recovery Bonus +$s4, MP Recovery Bonus +$s5 when equipped with a Robe/ Light Armor. INT +$s6. -->
 		<icon>icon.skill11787</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2687,8 +2607,7 @@
 		</effects>
 	</skill>
 	<skill id="11788" toLevel="10" name="Superior Casting Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- Max MP + 313, Casting Spd. + 23%, MP Consumption for magic skills - 15%, and Cooldown - 25%. INT + 2. -->
+		<!-- Max MP +$s1, Casting Spd. +$s2, Skill Cooldown -$s3, MP Consumption for magic skills -$s4 and INT +$s5 -->
 		<icon>icon.skill11788</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2741,8 +2660,7 @@
 		</effects>
 	</skill>
 	<skill id="11789" toLevel="10" name="Superior Anti Magic">
-		<!-- Glory Days confirmed -->
-		<!-- M. Def. + 862, Attack Magic Resistance + 35%. INT + 2. -->
+		<!-- M. Def. +$s1, Magic Damage Resistance +$s2. INT +$s3. -->
 		<icon>icon.skill10004</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2785,8 +2703,7 @@
 		</effects>
 	</skill>
 	<skill id="11790" toLevel="10" name="Superior Elemental Resistance">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2. Increases Fire/Water/Wind/Earth Resistance by 20. -->
+		<!-- Fire/ Water/ Wind/ Earth Resistance +$s1. INT +$s2. -->
 		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2870,8 +2787,7 @@
 		</effects>
 	</skill>
 	<skill id="11791" toLevel="1" name="Superior Sigil Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2. Increases MP Recovery Bonus by 20 and power of recovery skills by 40 when equipped with a Sigil. -->
+		<!-- Increases MP Recovery Bonus by 20%, and power of recovery skills by 40 when equipped with a Sigil. INT +2. -->
 		<icon>icon.skill11791</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
@@ -2898,9 +2814,7 @@
 		</effects>
 	</skill>
 	<skill id="11792" toLevel="10" name="Superior Mental Attack Resistance">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attacks, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker. -->
+		<!-- Resistance +$s1 to Hold/ Sleep/ Paralysis/ Mental Attacks/ Poison/ Bleed/ Stun. INT +$s2. In addition, has a $s3 chance of reflecting P./ M. abnormal states back to the attacker. -->
 		<icon>icon.skill10005</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3019,9 +2933,7 @@
 		</effects>
 	</skill>
 	<skill id="11793" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
+		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER</abnormalType>
@@ -3070,16 +2982,14 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Sustain -->
-				<skillId>11794</skillId>
+				<skillId>11794</skillId> <!-- Sustain -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="11794" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days confirmed -->
-		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
+		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -3106,8 +3016,7 @@
 		</effects>
 	</skill>
 	<skill id="11795" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
+		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<abnormalTime>15</abnormalTime>
 		<castRange>600</castRange>
@@ -3159,15 +3068,14 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>11796</skillId>
+				<skillId>11796</skillId> <!-- Sustain -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="11796" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
+		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -3194,9 +3102,7 @@
 		</effects>
 	</skill>
 	<skill id="11797" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<!-- Custom -->
+		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<abnormalTime>15</abnormalTime>
 		<castRange>600</castRange>
@@ -3248,15 +3154,14 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>11798</skillId>
+				<skillId>11798</skillId> <!-- Sustain -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="11798" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
+		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
 		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -3283,9 +3188,7 @@
 		</effects>
 	</skill>
 	<skill id="11799" toLevel="3" name="Sustain">
-		<!-- Updated to Ertheia -->
-		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<!-- Custom -->
+		<!-- For $s1, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<icon>icon.skill1217</icon>
 		<abnormalTime>15</abnormalTime>
 		<castRange>600</castRange>
@@ -3337,7 +3240,7 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>11800</skillId>
+				<skillId>11800</skillId> <!-- Sustain -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>

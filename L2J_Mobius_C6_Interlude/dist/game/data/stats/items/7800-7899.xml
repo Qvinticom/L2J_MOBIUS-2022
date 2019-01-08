@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7800" type="EtcItem" name="Small Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -15,6 +16,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7801" type="EtcItem" name="Black Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -29,6 +31,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7802" type="EtcItem" name="Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -43,6 +46,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7803" type="EtcItem" name="Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -57,6 +61,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7804" type="EtcItem" name="Large Black Nimble Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -71,6 +76,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7805" type="EtcItem" name="Large Black Ugly Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -85,6 +91,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7806" type="EtcItem" name="Large Black Fat Fish - For Beginners">
+		<!-- Double-click to randomly change into another item. The changed item can be used as a regular ingredient to make other items. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="100"/>
@@ -99,6 +106,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7807" type="EtcItem" name="Green Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fast moving fish. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="lure"/>
 		<set name="weight" val="5"/>
@@ -113,6 +121,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7808" type="EtcItem" name="Purple Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by fat fish. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="lure"/>
 		<set name="weight" val="5"/>
@@ -127,6 +136,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7809" type="EtcItem" name="Yellow Colored Lure - For Beginners">
+		<!-- A lure used by beginners. Since only the fish intended for beginners take the bait, a player can easily learn how to fish. This bait is preferred by ugly fish. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="lure"/>
 		<set name="weight" val="5"/>
@@ -141,6 +151,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7810" type="Weapon" name="Soulfire Dirk - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="750"/>
@@ -165,7 +176,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3014"/>
+		<set name="item_skill_id" val="3014"/> <!-- Special Ability: Mana Up -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -186,6 +197,7 @@
 		</for>
 	</item>
 	<item id="7811" type="Weapon" name="Soulfire Dirk - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Casts Dryad Root magic against the target with a 10% chance of success when using bad magic. Effect 1. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="750"/>
@@ -214,7 +226,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1201"/>
+		<set name="onCast_skill_id" val="1201"/> <!-- Dryad Root -->
 		<set name="onCast_skill_lvl" val="23"/>
 		<set name="onCast_skill_chance" val="10"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -231,6 +243,7 @@
 		</for>
 	</item>
 	<item id="7812" type="Weapon" name="Soulfire Dirk - Magic Silence">
+		<!-- <Soul Crystal Enhancement>. When using bad magic against a target, casts Silence upon target with a 10% chance of success. Effect 1. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="750"/>
@@ -278,6 +291,7 @@
 		</for>
 	</item>
 	<item id="7813" type="Weapon" name="Hell Knife - Magic Regeneration">
+		<!-- <Soul Crystal Enhancement>. Casts HP Regeneration magic upon the target with a 30% chance of success when using good magic. Effect 3. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="740"/>
@@ -306,7 +320,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1044"/>
+		<set name="onCast_skill_id" val="1044"/> <!-- Regeneration -->
 		<set name="onCast_skill_lvl" val="3"/>
 		<set name="onCast_skill_chance" val="30"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -325,6 +339,7 @@
 		</for>
 	</item>
 	<item id="7814" type="Weapon" name="Hell Knife - Mental Shield">
+		<!-- <Soul Crystal Enhancement>. Casts Mental Shield magic upon the target with a 50% chance of success when using good magic. Effect 4. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="740"/>
@@ -353,7 +368,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1035"/>
+		<set name="onCast_skill_id" val="1035"/> <!-- Mental Shield -->
 		<set name="onCast_skill_lvl" val="4"/>
 		<set name="onCast_skill_chance" val="50"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -370,6 +385,7 @@
 		</for>
 	</item>
 	<item id="7815" type="Weapon" name="Hell Knife - Magic Weakness">
+		<!-- <Soul Crystal Enhancement>. Casts Curse Weakness against the target with a 7% chance of success when using bad magic. Effect 3. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="740"/>
@@ -398,7 +414,7 @@
 		<set name="item_skill_lvl" val="0"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
-		<set name="onCast_skill_id" val="1164"/>
+		<set name="onCast_skill_id" val="1164"/> <!-- Curse: Weakness -->
 		<set name="onCast_skill_lvl" val="3"/>
 		<set name="onCast_skill_chance" val="7"/>
 		<set name="onCrit_skill_id" val="0"/>
@@ -415,6 +431,7 @@
 		</for>
 	</item>
 	<item id="7816" type="Weapon" name="Apprentice Adventurer's Staff">
+		<!-- Apprentice Adventurer's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1070"/>
@@ -460,6 +477,7 @@
 		</for>
 	</item>
 	<item id="7817" type="Weapon" name="Apprentice Adventurer's Bone Club">
+		<!-- Apprentice Adventurer's Bone Club. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1850"/>
@@ -505,6 +523,7 @@
 		</for>
 	</item>
 	<item id="7818" type="Weapon" name="Apprentice Adventurer's Knife">
+		<!-- Apprentice Adventurer's Knife. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1120"/>
@@ -550,6 +569,7 @@
 		</for>
 	</item>
 	<item id="7819" type="Weapon" name="Apprentice Adventurer's Cestus">
+		<!-- Apprentice Adventurer's Cestus. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1570"/>
@@ -595,6 +615,7 @@
 		</for>
 	</item>
 	<item id="7820" type="Weapon" name="Apprentice Adventurer's Bow">
+		<!-- Apprentice Adventurer's Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1900"/>
@@ -640,6 +661,7 @@
 		</for>
 	</item>
 	<item id="7821" type="Weapon" name="Apprentice Adventurer's Long Sword">
+		<!-- Apprentice Adventurer's Long Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1560"/>
@@ -685,6 +707,7 @@
 		</for>
 	</item>
 	<item id="7822" type="Weapon" name="Traveler's Mace">
+		<!-- Traveler's Mace. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -730,6 +753,7 @@
 		</for>
 	</item>
 	<item id="7823" type="Weapon" name="Traveler's Dark Elven Bow">
+		<!-- Traveler's Dark Elven Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1830"/>
@@ -775,6 +799,7 @@
 		</for>
 	</item>
 	<item id="7824" type="Weapon" name="Traveler's Long Bow">
+		<!-- Traveler's Long Bow. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1830"/>
@@ -820,6 +845,7 @@
 		</for>
 	</item>
 	<item id="7825" type="Weapon" name="Traveler's Staff">
+		<!-- Traveler's Staff. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1040"/>
@@ -865,6 +891,7 @@
 		</for>
 	</item>
 	<item id="7826" type="Weapon" name="Traveler's Bastard Sword">
+		<!-- Traveler's Bastard Sword. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1510"/>
@@ -910,6 +937,7 @@
 		</for>
 	</item>
 	<item id="7827" type="Weapon" name="Traveler's Wand">
+		<!-- Traveler's Wand. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="570"/>
@@ -955,6 +983,7 @@
 		</for>
 	</item>
 	<item id="7828" type="Weapon" name="Traveler's Jamadhr">
+		<!-- Traveler's Jamadhr. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1550"/>
@@ -1000,6 +1029,7 @@
 		</for>
 	</item>
 	<item id="7829" type="Weapon" name="Traveler's Tomahawk">
+		<!-- Traveler's Tomahawk. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1780"/>
@@ -1045,6 +1075,7 @@
 		</for>
 	</item>
 	<item id="7830" type="Weapon" name="Traveler's Poniard Dagger">
+		<!-- Traveler's Poniard Dagger. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1090"/>
@@ -1090,6 +1121,7 @@
 		</for>
 	</item>
 	<item id="7831" type="Weapon" name="Traveler's Pike">
+		<!-- Traveler's Pike. This item cannot be exchanged, dropped, crystallized, or enchanted. If one's PK count is 1 or more, it cannot be used. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="2090"/>
@@ -1136,6 +1168,7 @@
 		</for>
 	</item>
 	<item id="7832" type="EtcItem" name="Apprentice Adventurer's Weapon Exchange Coupon">
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="1"/>
@@ -1150,6 +1183,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="7833" type="EtcItem" name="Adventurer's Weapon Exchange Coupon">
+		<!-- An exchange coupon that is needed to borrow weapons for apprentice adventurers from the Adventurers' Guild. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="1"/>
@@ -1209,6 +1243,7 @@
 		</for>
 	</item>
 	<item id="7835" type="EtcItem" name="Amulet: Seal of Disease">
+		<!-- Amulet required for the Seal of Disease spell. Used by Dominators. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -1223,6 +1258,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7836" type="Armor" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. It uses 2 hair accessory slots. -->
 		<set name="bodypart" val="dhair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1246,6 +1282,7 @@
 		</for>
 	</item>
 	<item id="7837" type="Armor" name="Sayha's White Mask">
+		<!-- 2006 Lineage II Epic Collection Souvenir. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1269,6 +1306,7 @@
 		</for>
 	</item>
 	<item id="7838" type="EtcItem" name="Santa's Hat">
+		<!-- A Santa Claus hat that was created to celebrate the holiday. This hat can be worn only during the end of year holiday season. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1283,6 +1321,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7839" type="Armor" name="Gran Kain's Black Mask">
+		<!-- 2007 Lineage II Limited Edition Souvenir. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1306,6 +1345,7 @@
 		</for>
 	</item>
 	<item id="7840" type="Armor" name="Rabbit Ears (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1329,6 +1369,7 @@
 		</for>
 	</item>
 	<item id="7841" type="Armor" name="Racoon Ears (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1352,6 +1393,7 @@
 		</for>
 	</item>
 	<item id="7842" type="Armor" name="Cat Ears (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1375,6 +1417,7 @@
 		</for>
 	</item>
 	<item id="7843" type="Armor" name="Pirate's Eyepatch (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1398,6 +1441,7 @@
 		</for>
 	</item>
 	<item id="7844" type="Armor" name="Monocle (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1421,6 +1465,7 @@
 		</for>
 	</item>
 	<item id="7845" type="Armor" name="Outlaw's Eyepatch (Event)">
+		<!-- Purple eyepatch accessory. It cannot be exchanged for an event item and can't be dropped. -->
 		<set name="bodypart" val="face"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1444,6 +1489,7 @@
 		</for>
 	</item>
 	<item id="7846" type="Armor" name="Lady's Hairpin (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1467,6 +1513,7 @@
 		</for>
 	</item>
 	<item id="7847" type="Armor" name="Noblewoman's Hairpin (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1490,6 +1537,7 @@
 		</for>
 	</item>
 	<item id="7848" type="Armor" name="Forget-me-not Hairpin (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1513,6 +1561,7 @@
 		</for>
 	</item>
 	<item id="7849" type="Armor" name="Daisy Hairpin (Event)">
+		<!-- for Japan -->
 		<set name="bodypart" val="hair"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1560,6 +1609,7 @@
 		</for>
 	</item>
 	<item id="7851" type="Armor" name="Clan Oath Armor">
+		<!-- Full body armor. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="heavy"/>
@@ -1632,6 +1682,7 @@
 		</for>
 	</item>
 	<item id="7854" type="Armor" name="Clan Oath Brigandine">
+		<!-- Full body armor. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="light"/>
@@ -1704,6 +1755,7 @@
 		</for>
 	</item>
 	<item id="7857" type="Armor" name="Clan Oath Aketon">
+		<!-- Full body armor. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="magic"/>
@@ -1777,6 +1829,7 @@
 		</for>
 	</item>
 	<item id="7860" type="Armor" name="Apella Helm">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="head"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1801,6 +1854,7 @@
 		</for>
 	</item>
 	<item id="7861" type="Armor" name="Apella Plate Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="heavy"/>
@@ -1825,6 +1879,7 @@
 		</for>
 	</item>
 	<item id="7862" type="Armor" name="Apella Gauntlet - Heavy Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1849,6 +1904,7 @@
 		</for>
 	</item>
 	<item id="7863" type="Armor" name="Apella Solleret - Heavy Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1873,6 +1929,7 @@
 		</for>
 	</item>
 	<item id="7864" type="Armor" name="Apella Brigandine">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="light"/>
@@ -1897,6 +1954,7 @@
 		</for>
 	</item>
 	<item id="7865" type="Armor" name="Apella Leather Gloves - Light Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1921,6 +1979,7 @@
 		</for>
 	</item>
 	<item id="7866" type="Armor" name="Apella Boots - Light Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1945,6 +2004,7 @@
 		</for>
 	</item>
 	<item id="7867" type="Armor" name="Apella Doublet">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Full body armor used by clan members. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="magic"/>
@@ -1970,6 +2030,7 @@
 		</for>
 	</item>
 	<item id="7868" type="Armor" name="Apella Silk Gloves - Robe">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1994,6 +2055,7 @@
 		</for>
 	</item>
 	<item id="7869" type="Armor" name="Apella Sandals - Robe">
+		<!-- May be worn by a Baron or a higher level Aristocrat. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2018,6 +2080,7 @@
 		</for>
 	</item>
 	<item id="7870" type="Armor" name="Sealed Apella Helm">
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="head"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2042,6 +2105,7 @@
 		</for>
 	</item>
 	<item id="7871" type="Armor" name="Sealed Apella Plate Armor">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Plate Armor. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="heavy"/>
@@ -2066,6 +2130,7 @@
 		</for>
 	</item>
 	<item id="7872" type="Armor" name="Sealed Apella Gauntlet">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Gauntlet. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2090,6 +2155,7 @@
 		</for>
 	</item>
 	<item id="7873" type="Armor" name="Sealed Apella Solleret">
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2114,6 +2180,7 @@
 		</for>
 	</item>
 	<item id="7874" type="Armor" name="Sealed Apella Brigandine">
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="light"/>
@@ -2138,6 +2205,7 @@
 		</for>
 	</item>
 	<item id="7875" type="Armor" name="Sealed Apella Leather Gloves">
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2162,6 +2230,7 @@
 		</for>
 	</item>
 	<item id="7876" type="Armor" name="Sealed Apella Boots">
+		<!-- May be worn by a Baron or a higher level Aristocrat. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2186,6 +2255,7 @@
 		</for>
 	</item>
 	<item id="7877" type="Armor" name="Sealed Apella Doublet">
+		<!-- May be worn by a Baron or a higher level Aristocrat. It can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="magic"/>
@@ -2211,6 +2281,7 @@
 		</for>
 	</item>
 	<item id="7878" type="Armor" name="Sealed Apella Silk Gloves">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Silk Gloves. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2235,6 +2306,7 @@
 		</for>
 	</item>
 	<item id="7879" type="Armor" name="Sealed Apella Sandals">
+		<!-- May be worn by a Baron or a higher level Aristocrat. Sealed Apella Sandals. They can be opened with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2349,6 +2421,7 @@
 		</for>
 	</item>
 	<item id="7882" type="Weapon" name="Pa'agrian Sword">
+		<!-- Bestows one of the following functions: Focus, Health or Critical Drain. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1980"/>
@@ -2394,6 +2467,7 @@
 		</for>
 	</item>
 	<item id="7883" type="Weapon" name="Guardian Sword">
+		<!-- Bestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -2439,6 +2513,7 @@
 		</for>
 	</item>
 	<item id="7884" type="Weapon" name="Infernal Master">
+		<!-- Bestows either Haste, Critical Damage, or Focus. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -2574,6 +2649,7 @@
 		</for>
 	</item>
 	<item id="7887" type="Weapon" name="Mysterious Sword">
+		<!-- Bestows either Acumen, Magic Power, or Magic Weakness. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1430"/>
@@ -2619,6 +2695,7 @@
 		</for>
 	</item>
 	<item id="7888" type="Weapon" name="Ecliptic Sword">
+		<!-- Bestows either Empower, Magic Power, or Magic Silence." -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -2664,6 +2741,7 @@
 		</for>
 	</item>
 	<item id="7889" type="Weapon" name="Wizard's Tear">
+		<!-- Bestows either Acumen, Magic Power, or Conversion. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -2754,6 +2832,7 @@
 		</for>
 	</item>
 	<item id="7891" type="Weapon" name="Ecliptic Axe">
+		<!-- Bestows one of the following functions: Conversion, Magic Power or Magic Hold. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1640"/>
@@ -2799,6 +2878,7 @@
 		</for>
 	</item>
 	<item id="7892" type="Weapon" name="Spell Breaker">
+		<!-- Bestows either Acumen, Magic Mental Shield or Magic Hold. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1620"/>
@@ -2844,6 +2924,7 @@
 		</for>
 	</item>
 	<item id="7893" type="Weapon" name="Kaim Vanul's Bones">
+		<!-- Bestows either Mana Up, Magic Silence, or Conversion. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1570"/>
@@ -2889,6 +2970,7 @@
 		</for>
 	</item>
 	<item id="7894" type="Weapon" name="Spiritual Eye">
+		<!-- Bestows either Mana Up, Magic Poison, or Acumen. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1550"/>
@@ -2934,6 +3016,7 @@
 		</for>
 	</item>
 	<item id="7895" type="Weapon" name="Flaming Dragon Skull">
+		<!-- Bestows one of the following functions: Acumen, Magic Power or Magic Silence. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1530"/>
@@ -3024,6 +3107,7 @@
 		</for>
 	</item>
 	<item id="7897" type="Weapon" name="Dwarven Hammer">
+		<!-- Bestows either Health, Anger, or Critical Bleed. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2010"/>
@@ -3069,6 +3153,7 @@
 		</for>
 	</item>
 	<item id="7898" type="Weapon" name="Karik Horn">
+		<!-- Bestows either Focus, Haste, or Critical Drain. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2020"/>
@@ -3114,6 +3199,7 @@
 		</for>
 	</item>
 	<item id="7899" type="Weapon" name="Destroyer Hammer">
+		<!-- Bestows either Health, Haste, or Critical Drain. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1910"/>

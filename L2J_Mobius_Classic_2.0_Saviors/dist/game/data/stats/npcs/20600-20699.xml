@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20600" level="40" type="L2Monster" name="Karul Bugbear">
 		<parameters>
@@ -1789,8 +1789,8 @@
 				<item id="4111" min="1" max="1" chance="0.75" /> <!-- Arthro Nail Blade -->
 				<item id="4988" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
 				<item id="4041" min="1" max="1" chance="0.3" /> <!-- Mold Hardener -->
-				<item id="4613" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR   4 CON - 4) -->
-				<item id="4622" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN (Men   4 Wit - 4) -->
+				<item id="4613" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR + 4 CON - 4> - 2nd Class Transfer -->
+				<item id="4622" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN <Men + 4 Wit - 4> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="4998" min="1" max="1" chance="23.97" /> <!-- Recipe: Sealed Blue Wolf Gloves (60%) -->
@@ -1866,8 +1866,8 @@
 				<item id="4958" min="1" max="1" chance="1.033" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
 				<item id="4974" min="1" max="1" chance="0.75" /> <!-- Recipe: Black Ore Ring (70%) -->
 				<item id="4940" min="1" max="1" chance="0.3" /> <!-- Recipe: Zubei's Breastplate (60%) -->
-				<item id="4614" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR   4 DEX - 4) -->
-				<item id="4616" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con   4 DEX - 4) -->
+				<item id="4614" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR + 4 DEX - 4> - 2nd Class Transfer -->
+				<item id="4616" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con + 4 DEX - 4> - 2nd Class Transfer -->
 				<item id="5001" min="1" max="1" chance="0.03" /> <!-- Recipe: Lance (60%) -->
 			</drop>
 			<spoil>
@@ -2034,7 +2034,7 @@
 				<item id="5007" min="1" max="1" chance="0.03" /> <!-- Recipe: Bow of Peril (60%) -->
 				<item id="4964" min="1" max="1" chance="0.03" /> <!-- Recipe: Heavy War Axe (60%) -->
 				<item id="4963" min="1" max="1" chance="0.03" /> <!-- Recipe: Great Sword (60%) -->
-				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4993" min="1" max="1" chance="27.18" /> <!-- Recipe: Sealed Doom Gloves (60%) -->
@@ -2114,7 +2114,7 @@
 				<item id="4980" min="1" max="1" chance="0.75" /> <!-- Recipe: Doom Shield (60%) -->
 				<item id="4041" min="1" max="1" chance="0.3" /> <!-- Mold Hardener -->
 				<item id="4972" min="1" max="1" chance="0.075" /> <!-- Recipe: Great Axe (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4980" min="1" max="1" chance="18.63" /> <!-- Recipe: Doom Shield (60%) -->
@@ -2183,28 +2183,28 @@
 			<drop>
 				<item id="2398" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Tunic -->
 				<item id="2403" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Stockings -->
-				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
-				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Doom Helmet -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
 				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
 				<item id="57" min="3399" max="7931" chance="70" /> <!-- Adena -->
 				<item id="1882" min="1" max="1" chance="11.73" /> <!-- Leather -->
 				<item id="1872" min="4" max="12" chance="9.041" /> <!-- Animal Bone -->
 				<item id="1881" min="1" max="1" chance="7.179" /> <!-- Coarse Bone Powder -->
-				<item id="4089" min="1" max="1" chance="6.633" /> <!-- Sealed Doom Helmet Design -->
+				<item id="4089" min="1" max="1" chance="6.633" /> <!-- Doom Helmet Pattern -->
 				<item id="1867" min="7" max="21" chance="4.74" /> <!-- Animal Skin -->
 				<item id="4086" min="1" max="1" chance="4.011" /> <!-- Blue Wolf Stocking Pattern -->
 				<item id="1875" min="1" max="1" chance="3.582" /> <!-- Stone of Purity -->
-				<item id="4088" min="1" max="3" chance="3.265" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="4088" min="1" max="3" chance="3.265" /> <!-- Blue Wolf Helmet Design -->
 				<item id="4084" min="1" max="1" chance="3.019" /> <!-- Blue Wolf Tunic Fabric -->
 				<item id="4950" min="1" max="1" chance="0.75" /> <!-- Recipe: Stockings of Zubei (60%) -->
 				<item id="4118" min="1" max="1" chance="0.75" /> <!-- Evil Spirit Head -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
 				<item id="4989" min="1" max="1" chance="0.3" /> <!-- Recipe: Stockings of Doom (60%) -->
-				<item id="4623" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit   4 Int - 4) -->
-				<item id="4624" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit   4 Men - 4) -->
+				<item id="4623" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit + 4 Int - 4> - 2nd Class Transfer -->
+				<item id="4624" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit + 4 Men - 4> - 2nd Class Transfer -->
 				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4964" min="1" max="1" chance="1.911" /> <!-- Recipe: Heavy War Axe (60%) -->
@@ -4790,8 +4790,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4871,19 +4871,19 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="503" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Helmet -->
-				<item id="2415" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Circlet -->
-				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
-				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
+				<item id="503" min="1" max="1" chance="0.03" /> <!-- Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.03" /> <!-- Avadon Circlet -->
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Doom Helmet -->
 				<item id="57" min="814" max="1899" chance="70" /> <!-- Adena -->
 				<item id="1870" min="1" max="1" chance="37" /> <!-- Coal -->
-				<item id="4072" min="1" max="1" chance="2.847" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="1" chance="2.769" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4089" min="1" max="1" chance="2.41" /> <!-- Sealed Doom Helmet Design -->
+				<item id="4072" min="1" max="1" chance="2.847" /> <!-- Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="1" chance="2.769" /> <!-- Zubei's Helmet Design -->
+				<item id="4089" min="1" max="1" chance="2.41" /> <!-- Doom Helmet Pattern -->
 				<item id="1875" min="1" max="1" chance="2.379" /> <!-- Stone of Purity -->
 				<item id="1874" min="1" max="1" chance="2.318" /> <!-- Oriharukon Ore -->
-				<item id="4088" min="1" max="1" chance="2.31" /> <!-- Sealed Blue Wolf Helmet Design -->
-				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
+				<item id="4088" min="1" max="1" chance="2.31" /> <!-- Blue Wolf Helmet Design -->
+				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="9" chance="75.89" /> <!-- Coal -->
@@ -4992,8 +4992,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->

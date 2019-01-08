@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="21900" name="Totem of Spirit" type="EtcItem">
-		<!-- Summons a totem that increases MP Recovery Rate by 15%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
+		<!-- Summons a totem that increases MP Recovery Bonus Rate by 15%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -20,7 +20,7 @@
 		</skills>
 	</item>
 	<item id="21901" name="Totem of Courage" type="EtcItem">
-		<!-- Summons a totem that P. Def. + 15% and cancels fear at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
+		<!-- Summons a totem that P. Def. +15% and cancels fear at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -39,7 +39,7 @@
 		</skills>
 	</item>
 	<item id="21902" name="Totem of Fortitude" type="EtcItem">
-		<!-- Summons a totem that M. Def. + 25% and cancels petrification at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
+		<!-- Summons a totem that M. Def. +25% and cancels petrification at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -331,7 +331,7 @@
 		</skills>
 	</item>
 	<item id="21919" name="Hellblade" type="Weapon">
-		<!-- Sword used by Darion. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Sword used by Darion. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -609,7 +609,7 @@
 		</stats>
 	</item>
 	<item id="21927" name="Hellblade - Lightning" type="Weapon">
-		<!-- Masterwork Item that increases the P. Critical Rate. Sword used by Darion. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases the P. Critical Rate. Sword used by Darion. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -895,7 +895,7 @@
 		</stats>
 	</item>
 	<item id="21935" name="Butcher Blades" type="Weapon">
-		<!-- Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81.Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81.Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -981,7 +981,7 @@
 		</stats>
 	</item>
 	<item id="21937" name="Butcher Blades - Confusion" type="Weapon">
-		<!-- Masterwork Item that raises Evasion. Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that raises Evasion. Dual Daggers used by Doll Blader. Bestows a special power upon the wielder. Increases P. Atk. more than that for regular one-handed swords when enchanted. Can be equipped by Dagger Masters above level 81. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1069,7 +1069,7 @@
 		</stats>
 	</item>
 	<item id="21939" name="Claw of Destruction" type="Weapon">
-		<!-- Blunt weapon used by Tiat. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Blunt weapon used by Tiat. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1316,7 +1316,7 @@
 		</stats>
 	</item>
 	<item id="21946" name="Claw of Destruction {PvP} - HP Regeneration" type="Weapon">
-		<!-- <Special Option>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Bonus Rate. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1355,7 +1355,7 @@
 		</stats>
 	</item>
 	<item id="21947" name="Claw of Destruction - Landslide" type="Weapon">
-		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="21954" name="Claw of Destruction - Landslide {PvP} - HP Regeneration" type="Weapon">
-		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Bonus Rate. Increases damage inflicted during PvP and has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1649,7 +1649,7 @@
 		</stats>
 	</item>
 	<item id="21955" name="Blades of Delusion" type="Weapon">
-		<!-- Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- dual sword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dual swords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1682,7 +1682,7 @@
 		</stats>
 	</item>
 	<item id="21956" name="Blades of Delusion {PvP}" type="Weapon">
-		<!-- Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. When enchanted to 4 or more, increases P. Critical Rate by 109. Increases Max HP by 10%. Increases damage inflicted during PvP. Has a chance of decreasing bow/crossbow range during an attack. No Soul Crystal option. -->
+		<!-- dual sword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dual swords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. When enchanted to 4 or more, increases P. Critical Rate by 109. Increases Max HP by 10%. Increases damage inflicted during PvP. Has a chance of decreasing bow/ crossbow range during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1720,7 +1720,7 @@
 		</stats>
 	</item>
 	<item id="21957" name="Blades of Delusion - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Max HP. dual sword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dual swords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1754,7 +1754,7 @@
 		</stats>
 	</item>
 	<item id="21958" name="Blades of Delusion - Earth {PvP}" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Dualsword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. When enchanted to 4 or more, increases P. Critical Rate by 109. Increases Max HP by 10%. Increases damage inflicted during PvP. Has a chance of decreasing bow/crossbow range during an attack. -->
+		<!-- Masterwork Item that increases Max HP. dual sword used by Aenkinel. Bestows a special power upon the wielder. When enchanted, increases P. Atk. of dual swords, two-handed swords, two-handed blunt weapons and fist weapons more than that of one-handed swords. When enchanted to 4 or more, increases P. Critical Rate by 109. Increases Max HP by 10%. Increases damage inflicted during PvP. Has a chance of decreasing bow/ crossbow range during an attack. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_astarot_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1793,7 +1793,7 @@
 		</stats>
 	</item>
 	<item id="21959" name="Blood Brother" type="Weapon">
-		<!-- Two-handed sword used by Yehan Klanikus. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Two-handed sword used by Yehan Klanikus. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2035,7 +2035,7 @@
 		</stats>
 	</item>
 	<item id="21966" name="Blood Brother - Great Gale" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. Two-handed sword used by Yehan Klanikus. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Atk. Spd. Two-handed sword used by Yehan Klanikus. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2284,7 +2284,7 @@
 		</stats>
 	</item>
 	<item id="21973" name="Mardil's Fan" type="Weapon">
-		<!-- Magic fan used by Mardil. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Magic fan used by Mardil. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2411,7 +2411,7 @@
 		</stats>
 	</item>
 	<item id="21977" name="Mardil's Fan - Holy Spirit" type="Weapon">
-		<!-- Masterwork Item that increases Heal Amount. Magic fan used by Mardil. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Heal Amount. Magic fan used by Mardil. Bestows a special power upon the wielder. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

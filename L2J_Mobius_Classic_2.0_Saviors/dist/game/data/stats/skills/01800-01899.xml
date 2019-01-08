@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1800" toLevel="1" name="Pirate">
+		<!-- This pirate once ruled ancient lands of Giran. His own crew excited a riot, but didn t manage to cope with their captain that became even more powerful with the dark forces. Zaken killed all the remaining rebels and disappeared. (Consumes 1 Elemental Stone.) -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -70,6 +71,7 @@
 		</effects>
 	</skill>
 	<skill id="1801" toLevel="1" name="Dark Assassin">
+		<!-- This is an organization of assassins created by Mercenary Captain Sieghardt Ein for making contract murders and carrying out secret orders. Sieghardt Ein, having become a member of Dawn, has disappeared without a trace, but the organization created by him still leads its shadowy deals. (Consumes 1 Elemental Stone.) -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -139,6 +141,7 @@
 		</effects>
 	</skill>
 	<skill id="1802" toLevel="1" name="White Assassin">
+		<!-- Rune noble Erica Ken Weber is the right hand of Sieghardt Ein. She wasn t influenced by the organizations of dark assassins. For her quest she created an organization of white assassins, continuing to be an informer. (Consumes 2 Elemental Stones.) -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -208,101 +211,102 @@
 		</effects>
 	</skill>
 	<skill id="1810" toLevel="1" name="Cadmus - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases P. Atk. by 15% for 20 minutes -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1811" toLevel="1" name="Cadmus - Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, P. Def. +15%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1812" toLevel="1" name="Cadmus - Wind Walk">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Speed +33 for 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1813" toLevel="1" name="Cadmus - Return">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1814" toLevel="1" name="Cadmus - Focus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases critical attack rate by 30% for 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1815" toLevel="1" name="Cadmus - Death Whisper">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases critical attack effect by 35% for 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1816" toLevel="1" name="Cadmus - Guidance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Accuracy + +4. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1817" toLevel="1" name="Cadmus - Heal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Restores HP with 301 Power. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1818" toLevel="1" name="Cadmus - Haste">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Atk. Spd. by 33% for 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1819" toLevel="1" name="Cadmus - Acumen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Casting Spd. by 30% for 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1820" toLevel="1" name="Cadmus - Vampiric Rage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1821" toLevel="1" name="Cadmus - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases M. Atk. power by 75% for 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1822" toLevel="1" name="Cadmus - Clarity">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, MP Consumption for physical skills -20%, MP Consumption for magical skills -10%, and song/dance skill's MP consumption -20%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1823" toLevel="1" name="Cadmus - Agility">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Evasion +4. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1824" toLevel="1" name="Cadmus - Lightness">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases weight limit up to 9000 for 20 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1825" toLevel="1" name="Cadmus - Recharge">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Recovers MP up to 94 power depending on the target's Lv.. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1826" toLevel="1" name="Cadmus - Greater Heal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Immediately restores the target's HP with 506 Power. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1827" toLevel="1" name="Transformation Block">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- You cannot attack while transformed. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1828" toLevel="1" name="Transformation Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. Enhance at Transformation. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1829" toLevel="1" name="Spell Master">
+		<!-- Casting Spd. +10%, M. Critical Rate +10. -->
 		<icon>icon.skill1829</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -318,6 +322,7 @@
 		</effects>
 	</skill>
 	<skill id="1830" toLevel="1" name="Spell Master">
+		<!-- Casting Spd. +13%, M. Critical Rate +10. -->
 		<icon>icon.skill1830</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -333,6 +338,7 @@
 		</effects>
 	</skill>
 	<skill id="1831" toLevel="1" name="Spell Master">
+		<!-- Casting Spd. +9%, M. Critical Rate +10. -->
 		<icon>icon.skill1831</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -348,6 +354,7 @@
 		</effects>
 	</skill>
 	<skill id="1832" toLevel="1" name="Spell Master">
+		<!-- Casting Spd. +5%, M. Critical Rate +10. -->
 		<icon>icon.skill1832</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -363,6 +370,7 @@
 		</effects>
 	</skill>
 	<skill id="1833" toLevel="1" name="Mount Golden Lion">
+		<!-- Allows to mount a Golden Lion. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -392,6 +400,7 @@
 		</effects>
 	</skill>
 	<skill id="1834" toLevel="1" name="Mount Pegasus">
+		<!-- Allows to mount a Pegasus. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -421,6 +430,7 @@
 		</effects>
 	</skill>
 	<skill id="1835" toLevel="1" name="Mount Saber Tooth Cougar">
+		<!-- Allows to mount a Saber Tooth Cougar. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -450,6 +460,7 @@
 		</effects>
 	</skill>
 	<skill id="1836" toLevel="1" name="Mount Kukuru">
+		<!-- Mount Kukuru -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -479,6 +490,7 @@
 		</effects>
 	</skill>
 	<skill id="1837" toLevel="1" name="Mount Black Bear">
+		<!-- Allows to mount a Black Bear. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -508,137 +520,137 @@
 		</effects>
 	</skill>
 	<skill id="1838" toLevel="1" name="PA Cadmus - Prophecy of Water">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 5 minutes, for a party member MP Recovery +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. MP Consumption for skill use -3%. Consumes 20 Spirit Ore. For PC clubs only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1839" toLevel="1" name="PA Cadmus - Prophecy of Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 5 minutes, for a party member Max HP +10%, HP Recovery +10%, P. Atk +10%, P. Def. +10%, Speed +5%, Debuff Resistance +10%. Consumes 20 Spirit Ore. For PC clubs only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1840" toLevel="1" name="PA Cadmus - Prophecy of Wind">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For a member of a party Evasion +3, Accuracy +3, Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10% for 5 min. Consumes 20 Spirit Ore. For computer clubs. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1841" toLevel="1" name="PA Cadmus - Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, P. Atk +15%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1842" toLevel="1" name="PA Cadmus - Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, P.Def +15%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1843" toLevel="1" name="PA Cadmus - Wind Walk">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Speed +33. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1844" toLevel="1" name="PA Cadmus - Return">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1845" toLevel="1" name="PA Cadmus - Focus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, P. Critical Rate +30%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1846" toLevel="1" name="PA Cadmus - Death Whisper">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Critical Damage +35%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1847" toLevel="1" name="PA Cadmus - Guidance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Accuracy +4. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1848" toLevel="1" name="PA Cadmus - Heal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Immediately restores the target's HP with 301 Power. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1849" toLevel="1" name="PA Cadmus - Haste">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Atk. Spd +33%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1850" toLevel="1" name="PA Cadmus - Acumen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Casting Spd +30%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1851" toLevel="1" name="PA Cadmus - Vampiric Rage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1852" toLevel="1" name="PA Cadmus - Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, M. Atk +75%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1853" toLevel="1" name="PA Cadmus - Clarity">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 60 minutes, MP Consumption for physical skills -20%, MP Consumption for magical skills -10%, and song/dance skill's MP consumption -20%. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1854" toLevel="1" name="PA Cadmus - Agility">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Evasion +4. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1855" toLevel="1" name="PA Cadmus - Lightness">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases weight limit up to 9000 for 20 min. Can be used in computer clubs only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1856" toLevel="1" name="PA Cadmus - Recharge">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Recovers MP up to 136 power depending on the target's Lv.. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1857" toLevel="1" name="PA Cadmus - Greater Heal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Immediately restores the target's HP with 506 Power. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1858" toLevel="1" name="PA Cadmus - Blessed Body">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Max HP by $s2 for $s1. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1859" toLevel="1" name="PA Cadmus - Blessed Soul">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Max MP by $s2 for $s1. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1860" toLevel="1" name="PA Cadmus - Stun Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Stun Resistance by $s2 for $s1. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1861" toLevel="1" name="PA Cadmus - Advanced Block">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Shield Defense by $s2 for $s1. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1862" toLevel="1" name="PA Cadmus - Wild Magic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, increases by $s2 the damage rate of magic. PA only. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1863" toLevel="1" name="PA Cadmus - Stigma of Shilen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Short-range Weapon Resistance -$s2 for $s1. For PA. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1864" toLevel="1" name="PA Cadmus - Berserker Spirit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Decreases a party member's P. Def. by $s2, M. Def. by $s3 and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8 and Speed by $s9 for $s1. PA only -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

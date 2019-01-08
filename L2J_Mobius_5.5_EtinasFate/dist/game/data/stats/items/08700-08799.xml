@@ -213,7 +213,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8716" name="Naga Storm Piece" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make Naga Storm. It can be sold at a regular store. -->
+		<!-- Essential ingredient needed by a Dwarf to make Naga's Storm. It can be sold at a regular store. -->
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1171,7 +1171,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8786" name="Primeval Potion" type="EtcItem">
-		<!-- Increases Poison/Anesthesia Resistance. -->
+		<!-- Increases Poison/ Anesthesia Resistance. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1188,7 +1188,7 @@
 		</skills>
 	</item>
 	<item id="8787" name="Sprigant's Fruit" type="EtcItem">
-		<!-- This fruit, dropped by Sprigants, increases Poison/Anesthesia Resistance. -->
+		<!-- This fruit, dropped by Sprigants, increases Poison/ Anesthesia Resistance. -->
 		<set name="icon" val="icon.etc_fruit_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1546,7 +1546,7 @@
 		</stats>
 	</item>
 	<item id="8799" name="Behemoth' Tuning Fork" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

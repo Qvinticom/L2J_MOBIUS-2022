@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20500" level="25" type="L2Monster" name="Turek Orc Sentinel">
 		<parameters>
@@ -139,10 +139,10 @@
 				<item id="1881" min="1" max="1" chance="0.75" /> <!-- Coarse Bone Powder -->
 				<item id="2153" min="1" max="1" chance="0.75" /> <!-- Recipe: Tiger's Eye -->
 				<item id="1875" min="1" max="1" chance="0.3" /> <!-- Stone of Purity -->
-				<item id="4473" min="1" max="1" chance="0.03" /> <!-- Dye of DEX (Dex  1 Str -1) -->
-				<item id="4474" min="1" max="1" chance="0.03" /> <!-- Dye of DEX (Dex  1 CON -1) -->
-				<item id="4475" min="1" max="1" chance="0.03" /> <!-- Dye of INT (Int  1 Men -1) -->
-				<item id="4476" min="1" max="1" chance="0.03" /> <!-- Dye of INT (Int  1 Wit -1) -->
+				<item id="4473" min="1" max="1" chance="0.03" /> <!-- Dye of DEX <Dex +1 Str -1> - 1st Class Transfer -->
+				<item id="4474" min="1" max="1" chance="0.03" /> <!-- Dye of DEX <Dex +1 CON -1> - 1st Class Transfer -->
+				<item id="4475" min="1" max="1" chance="0.03" /> <!-- Dye of INT <Int +1 Men -1> - 1st Class Transfer -->
+				<item id="4476" min="1" max="1" chance="0.03" /> <!-- Dye of INT <Int +1 Wit -1> - 1st Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="3" chance="91.29" /> <!-- Coal -->
@@ -2400,15 +2400,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2426,7 +2426,7 @@
 				<item id="1872" min="1" max="1" chance="3.582" /> <!-- Animal Bone -->
 				<item id="1882" min="1" max="1" chance="0.75" /> <!-- Leather -->
 				<item id="2139" min="1" max="1" chance="0.537" /> <!-- Recipe: Steel Mold -->
-				<item id="6037" min="1" max="1" chance="5.374" /> <!-- Waking Scroll -->
+				<item id="6037" min="1" max="1" chance="5.374" /> <!-- Scroll: Cancel Sleep -->
 			</drop>
 			<spoil>
 				<item id="2252" min="1" max="1" chance="0.932" /> <!-- Recipe: Iron Hammer -->
@@ -2666,7 +2666,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="76" max="176" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="8.318" /> <!-- Thread -->
@@ -2803,7 +2803,7 @@
 		<dropLists>
 			<drop>
 				<item id="83" min="1" max="1" chance="0.0075" /> <!-- Sword of Magic -->
-				<item id="124" min="1" max="1" chance="0.0075" /> <!-- Two-handed Sword -->
+				<item id="124" min="1" max="1" chance="0.0075" /> <!-- Two-Handed Sword -->
 				<item id="127" min="1" max="1" chance="0.0075" /> <!-- Crimson Sword -->
 				<item id="130" min="1" max="1" chance="0.0075" /> <!-- Elven Sword -->
 				<item id="144" min="1" max="1" chance="0.0075" /> <!-- Sword of Occult -->
@@ -3277,8 +3277,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3346,8 +3346,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3480,8 +3480,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3547,8 +3547,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3613,8 +3613,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bug -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3683,8 +3683,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5817,8 +5817,8 @@
 				<item id="1916" min="1" max="1" chance="2.518" /> <!-- Necklace of Mermaid Teardrop -->
 				<item id="1875" min="1" max="1" chance="0.75" /> <!-- Stone of Purity -->
 				<item id="1874" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
-				<item id="4589" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR  2 CON -2) -->
-				<item id="4590" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR  2 DEX -2) -->
+				<item id="4589" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR +2 CON -2> - 2nd Class Transfer -->
+				<item id="4590" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR +2 DEX -2> - 2nd Class Transfer -->
 				<item id="8388" min="1" max="1" chance="0.03" /> <!-- Spellbook: Greater Might -->
 				<item id="8389" min="1" max="1" chance="0.03" /> <!-- Spellbook: Greater Shield -->
 			</drop>
@@ -5892,8 +5892,8 @@
 				<item id="1984" min="1" max="1" chance="1.076" /> <!-- Theca Leather Armor Pattern -->
 				<item id="1988" min="1" max="1" chance="0.75" /> <!-- Divine Tunic Fabric -->
 				<item id="1987" min="1" max="1" chance="0.75" /> <!-- Drake Leather Armor Texture -->
-				<item id="4591" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con  2 Str -2) -->
-				<item id="4592" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con  2 DEX -2) -->
+				<item id="4591" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con +2 Str -2> - 2nd Class Transfer -->
+				<item id="4592" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con +2 DEX -2> - 2nd Class Transfer -->
 				<item id="6350" min="1" max="1" chance="0.075" /> <!-- Amulet: Pa'agrio's Honor -->
 				<item id="49429" min="1" max="1" chance="0.03" /> <!-- Spellbook: Hide -->
 				<item id="49568" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sonic Move -->
@@ -5970,8 +5970,8 @@
 				<item id="2118" min="1" max="1" chance="0.3" /> <!-- Demon's Staff Head -->
 				<item id="2117" min="1" max="1" chance="0.3" /> <!-- Ghoul's Staff Head -->
 				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="4593" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex  2 Str -2) -->
-				<item id="4594" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex  2 CON -2) -->
+				<item id="4593" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex +2 Str -2> - 2nd Class Transfer -->
+				<item id="4594" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex +2 CON -2> - 2nd Class Transfer -->
 				<item id="49562" min="1" max="1" chance="0.075" /> <!-- Spellbook: Spirit Sharing -->
 			</drop>
 			<spoil>
@@ -6040,8 +6040,8 @@
 				<item id="2959" min="1" max="1" chance="2.022" /> <!-- Full Plate Helmet Design -->
 				<item id="1874" min="1" max="1" chance="1.208" /> <!-- Oriharukon Ore -->
 				<item id="1986" min="1" max="1" chance="0.75" /> <!-- Full Plate Armor Temper -->
-				<item id="4595" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int  2 Men -2) -->
-				<item id="4596" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int  2 Wit -2) -->
+				<item id="4595" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +2 Men -2> - 2nd Class Transfer -->
+				<item id="4596" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +2 Wit -2> - 2nd Class Transfer -->
 				<item id="5811" min="1" max="1" chance="0.03" /> <!-- Spellbook: Mass Slow -->
 				<item id="49425" min="1" max="1" chance="0.03" /> <!-- Spellbook: Immortal Life -->
 			</drop>
@@ -6113,8 +6113,8 @@
 				<item id="1874" min="1" max="1" chance="1.015" /> <!-- Oriharukon Ore -->
 				<item id="1875" min="1" max="1" chance="0.973" /> <!-- Stone of Purity -->
 				<item id="1986" min="1" max="1" chance="0.75" /> <!-- Full Plate Armor Temper -->
-				<item id="4597" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN (Men  2 Int -2) -->
-				<item id="4598" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN (Men  2 Wit -2) -->
+				<item id="4597" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN <Men +2 Int -2> - 2nd Class Transfer -->
+				<item id="4598" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN <Men +2 Wit -2> - 2nd Class Transfer -->
 				<item id="6351" min="1" max="1" chance="0.075" /> <!-- Amulet: Ritual of Life -->
 				<item id="49430" min="1" max="1" chance="0.075" /> <!-- Spellbook: Mystic Immunity -->
 			</drop>
@@ -6190,8 +6190,8 @@
 				<item id="4107" min="1" max="1" chance="0.3" /> <!-- Keshanberk Blade -->
 				<item id="4104" min="1" max="1" chance="0.3" /> <!-- Great Sword Blade -->
 				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="4599" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit  2 Int -2) -->
-				<item id="4600" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit  2 Men -2) -->
+				<item id="4599" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +2 Int -2> - 2nd Class Transfer -->
+				<item id="4600" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +2 Men -2> - 2nd Class Transfer -->
 				<item id="49571" min="1" max="1" chance="0.03" /> <!-- Spellbook: Clear Mind -->
 			</drop>
 			<spoil>

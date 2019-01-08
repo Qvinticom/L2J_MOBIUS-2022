@@ -1,32 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11200" toLevel="1" name="Elemental Destruction: Water">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11201" toLevel="1" name="Elemental Destruction: Wind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11202" toLevel="1" name="Elemental Destruction: Earth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Attribute -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11203" toLevel="1" name="Elemental Destruction: Double Casting">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Elements -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="11224" toLevel="4" name="Gloomy Soul">
-		<!-- Updated to IO -->
-		<!-- Instantly paralyzes nearby enemies for 3 sec. and decreases their heal amount by 20%. -->
+		<!-- Instantly paralyzes nearby enemies for $s1 and decreases their heal amount by $s2. -->
 		<icon>icon.skill11868</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -68,8 +63,7 @@
 		</effects>
 	</skill>
 	<skill id="11225" toLevel="7" name="Physical Soul Barrier">
-		<!-- Updated to IO -->
-		<!-- For 20 sec., P. Def. + 5000. -->
+		<!-- For $s1, P. Def. + $s2. -->
 		<icon>icon.skill11869</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -116,7 +110,7 @@
 		</effects>
 	</skill>
 	<skill id="11226" toLevel="4" name="Superior Wizardry">
-		<!-- M. Critical Rate + 5% and PvP damage + 5%. -->
+		<!-- M. Critical Rate + $s1 and PvP damage + $s2. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -147,8 +141,7 @@
 		</effects>
 	</skill>
 	<skill id="11241" toLevel="1" name="Shadow Snare">
-		<!-- Glory Days confirmed -->
-		<!-- Pulls nearby enemies to the center. -->
+		<!-- Pulls enemies in a selected area to the center. -->
 		<icon>icon.skill1469</icon>
 		<operateType>A1</operateType>
 		<mpConsume>21</mpConsume>
@@ -166,13 +159,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>13307</npcId>
+				<npcId>13307</npcId> <!-- Ant Hell -->
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11242" toLevel="1" name="Shadow Snare Zone">
-		<!-- Glory Days confirmed -->
 		<!-- Pulls nearby enemies to the center. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -205,7 +197,6 @@
 		</effects>
 	</skill>
 	<skill id="11245" toLevel="1" name="Sampling">
-		<!-- Glory Days confirmed -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -239,7 +230,6 @@
 		</effects>
 	</skill>
 	<skill id="11247" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<icon>icon.skill10317</icon>
@@ -272,7 +262,6 @@
 		</effects>
 	</skill>
 	<skill id="11248" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -305,9 +294,7 @@
 		</effects>
 	</skill>
 	<skill id="11249" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
-		<!-- Feoh Storm Screamer Hell Binding (11150) attack -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -338,7 +325,6 @@
 		</effects>
 	</skill>
 	<skill id="11250" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -370,9 +356,7 @@
 		</effects>
 	</skill>
 	<skill id="11251" toLevel="10" name="Superior Weapon Mastery">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- M. Atk. + 24%, additional M. Atk. + 1079, Casting Spd. + 23%, M. Critical Rate + 6. P. Atk. + 105%, Additional P. Atk. + 822, P. Accuracy + 4 when a dual blunt weapon is equipped. INT + 2. Depending on your INT, the Cooldown resets or the duration increases by 2 times. -->
+		<!-- M. Atk. + $s1, additional M. Atk. + $s2, Casting Spd. + $s3, M. Critical Rate + $s4. P. Atk. + $s5, Additional P. Atk. + $s6, P. Accuracy + $s7 when a two-handed blunt weapon is equipped. INT + $s8. Depending on your INT, the Cooldown resets or the duration increases by $s9 times. -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -455,8 +439,7 @@
 		</effects>
 	</skill>
 	<skill id="11252" toLevel="10" name="Superior Robe Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2. Max HP + 4151, P. Def. + 845, and Casting Spd. + 5% when equipped with a Robe. -->
+		<!-- Max HP + $s1, P. Def. + $s2, and M. Def. + $s3 when equipped with a Robe. INT + $s4. -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -509,8 +492,7 @@
 		</effects>
 	</skill>
 	<skill id="11253" toLevel="10" name="Superior Magic Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- M. Def. + 862, Magic Attack Resistance + 35%, Magic skill Cooldown - 25%, MP Consumption - 10%. INT +2 -->
+		<!-- M. Def. + $s1, Magic Attack Resistance + $s2, Magic skill Cooldown - $s3, MP Consumption - $s4. INT + $s5. -->
 		<skillType>BUFF</skillType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -564,8 +546,7 @@
 		</effects>
 	</skill>
 	<skill id="11254" toLevel="4" name="Superior Summon Mastery">
-		<!-- TODO : Check me -->
-		<!-- INT + 2. Can summon a servitor within 4 summon points. Use Rage to transfer the effects onto your servitor. -->
+		<!-- Can summon a servitor within $s1 summon points. INT + $s2. Use Rage to transfer the effects onto your servitor. -->
 		<icon>icon.skill11254</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -611,8 +592,7 @@
 		</effects>
 	</skill>
 	<skill id="11255" toLevel="1" name="Superior Spirit Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2 and Hold/Sleep/Bleed/Poison/Mental Attack Resistance + 30. -->
+		<!-- Poison/Bleed/Hold/Sleep/Mind Attack Resistance + 30%. INT +2. -->
 		<magicLvl>85</magicLvl>
 		<icon>icon.skill11255</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -632,9 +612,7 @@
 		</effects>
 	</skill>
 	<skill id="11256" toLevel="8" name="Summon Cute Bear">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Summons a fearless Cute Bear from the fairy dimension. Consumes 2 summon points. -->
+		<!-- Summons a fearless Cute Bear from the fairy dimension. Consumes $s1 summon points. -->
 		<icon>icon.skill11256</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -688,9 +666,7 @@
 		</effects>
 	</skill>
 	<skill id="11257" toLevel="8" name="Summon Saber Tooth Cougar">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes 2 summon points. -->
+		<!-- Summons a dauntless Saber Tooth Cougar from the beast dimension. Consumes $s1 summon points. -->
 		<icon>icon.skill11257</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -744,9 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="11258" toLevel="8" name="Summon Grim Reaper">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Summons a nefarious Grim Reaper from the demonic dimension. Consumes 2 summon points. -->
+		<!-- Summons a nefarious Grim Reaper from the demonic dimension. Consumes $s1 summon points. -->
 		<icon>icon.skill11258</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -800,9 +774,7 @@
 		</effects>
 	</skill>
 	<skill id="11259" toLevel="11" name="Mark of Weakness">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- For 10 sec., inflict damage with 85 Power added to M. Atk. Additionally, decrease target's P. Def./M. Def. -->
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, decrease target's P. Def./M. Def. -->
 		<icon>icon.skill11259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -907,8 +879,7 @@
 		</effects>
 	</skill>
 	<skill id="11260" toLevel="8" name="Mark of Void">
-		<!-- Updated to IO -->
-		<!-- Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 326 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, recover HP/MP. -->
 		<icon>icon.skill11260</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -998,8 +969,7 @@
 		</effects>
 	</skill>
 	<skill id="11261" toLevel="9" name="Mark of Plague">
-		<!-- Updated to IO -->
-		<!-- Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 326 every second and decreases the power of incoming Heals. -->
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, decrease heal amount of target. -->
 		<icon>icon.skill11261</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1090,8 +1060,7 @@
 		</effects>
 	</skill>
 	<skill id="11262" toLevel="9" name="Mark of Trick">
-		<!-- Updated to IO -->
-		<!-- Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 326 every second. Has a 25% of causing target to fail to use a skill. -->
+		<!-- For $s1, inflict damage with $s2 Power added to M. Atk. Additionally, interrupt target's skill casting. -->
 		<icon>icon.skill11262</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1182,9 +1151,7 @@
 		</effects>
 	</skill>
 	<skill id="11263" toLevel="10" name="Invoke">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 147 power. -->
+		<!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with $s1 power. -->
 		<icon>icon.skill11263</icon>
 		<operateType>A1</operateType>
 		<affectRange>200</affectRange>
@@ -1286,9 +1253,7 @@
 		</effects>
 	</skill>
 	<skill id="11264" toLevel="4" name="Strong Will">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Consume HP to recover 200 MP. Dispels debuffs and escapes immobility. -->
+		<!-- Consume HP to recover $s1 MP. Dispels debuffs and escapes immobility. -->
 		<icon>icon.skill11264</icon>
 		<canCastWhleDisabled>true</canCastWhleDisabled>
 		<operateType>A1</operateType>
@@ -1340,8 +1305,6 @@
 		</effects>
 	</skill>
 	<skill id="11265" toLevel="1" name="Summon Team Mate">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Summons the selected party member to your location. -->
 		<icon>icon.skill11265</icon>
 		<effectRange>-2</effectRange>
@@ -1370,9 +1333,7 @@
 		</effects>
 	</skill>
 	<skill id="11266" toLevel="4" name="Summon Death Gate">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
+		<!-- Creates a Danger Zone for $s1. The summoned Danger Zone continuously inflicts damage and Hold on nearby enemies. -->
 		<icon>icon.skill11266</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1415,9 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="11267" toLevel="3" name="Spirit of Naviarope">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Transform into Naviarope. For 5 minutes, M. Def. and P. Def. + 50%; and Bow/Crossbow Resistance + 50% using his powerful skills. -->
+		<!-- Transform into Naviarope. For $s1, M. Def. and P. Def. + $s2 -->
 		<icon>icon.skill11267</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1495,7 +1454,6 @@
 		</effects>
 	</skill>
 	<skill id="11268" toLevel="11" name="Summon Avenging Cubic">
-		<!-- Updated to IO -->
 		<!-- Summons an Avenging cubic. The summoned cubic cancels the summoner's debuffs. Additionally, it cancels the buffs of the summoner's target and inflicts Hold. -->
 		<icon>icon.skill11268</icon>
 		<operateType>A1</operateType>
@@ -1556,8 +1514,7 @@
 		</effects>
 	</skill>
 	<skill id="11269" toLevel="7" name="Mass Servitor Heal">
-		<!-- Updated to IO -->
-		<!-- Consumes your MP to restore servitors' HP by 1308. -->
+		<!-- Consumes your MP to restore servitors' HP by $s1. -->
 		<icon>icon.skill11269</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1606,9 +1563,7 @@
 		</effects>
 	</skill>
 	<skill id="11270" toLevel="4" name="Ultimate Transfer Pain">
-		<!-- Updated to IO -->
-		<!-- Transfers 70% of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
-		<!-- TODO check if works only with first summoned. -->
+		<!-- Transfers $s1 of the damage received to your first summoned servitor. MP is continuously consumed according to your level. -->
 		<icon>icon.skill11270</icon>
 		<operateType>T</operateType>
 		<magicLvl>
@@ -1638,8 +1593,6 @@
 		</effects>
 	</skill>
 	<skill id="11271" toLevel="11" name="Mark Retriever">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
 		<icon>icon.skill11271</icon>
 		<operateType>A1</operateType>
@@ -1816,7 +1769,6 @@
 		</effects>
 	</skill>
 	<skill id="11272" toLevel="1" name="Replace">
-		<!-- Updated to IO -->
 		<!-- Switches locations with target servitor. -->
 		<icon>icon.skill11272</icon>
 		<operateType>A1</operateType>
@@ -1880,9 +1832,7 @@
 		</effects>
 	</skill>
 	<skill id="11273" toLevel="8" name="Exile">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 353 per second. -->
+		<!-- Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by $s1 per second. -->
 		<icon>icon.skill11273</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1975,8 +1925,6 @@
 		</effects>
 	</skill>
 	<skill id="11274" toLevel="4" name="Summon Barrier">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Becomes invincible with energy from your servitor. Increases HP Recovery Bonus while skill is in effect. Requires a servitor. -->
 		<icon>icon.skill11274</icon>
 		<abnormalLvl>
@@ -2110,7 +2058,6 @@
 		</effects>
 	</skill>
 	<skill id="11275" toLevel="2" name="Mark Flare">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts powerful magic damage on target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
@@ -2146,8 +2093,7 @@
 		</effects>
 	</skill>
 	<skill id="11276" toLevel="6" name="Dimensional Binding">
-		<!-- Glory Days confirmed -->
-		<!-- Binds target midair in another dimension. -->
+		<!-- Binds target midair in another dimension. P./M. Def - $s1. -->
 		<icon>icon.skill11276</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="6">100</value>
@@ -2223,8 +2169,7 @@
 		</effects>
 	</skill>
 	<skill id="11277" toLevel="4" name="Sense of Loyalty">
-		<!-- Glory Days confirmed -->
-		<!-- Servitor's Fury. P. Atk. + 35%, M. Atk. + 75%, P. Critical Rate + 30%, and P. Critical Damage by 35%. -->
+		<!-- Servitor's Fury. P. Atk. + $s1, M. Atk. + $s2, P. Critical Rate + $s3, and P. Critical Damage by $s4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2291,8 +2236,6 @@
 		</effects>
 	</skill>
 	<skill id="11278" toLevel="9" name="Bear Claw">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Provokes the enemy and inflicts damage. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
@@ -2376,8 +2319,6 @@
 		</effects>
 	</skill>
 	<skill id="11279" toLevel="9" name="Bear Tumbling">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
@@ -2462,8 +2403,6 @@
 		</effects>
 	</skill>
 	<skill id="11280" toLevel="9" name="Cougar Bite">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Bites target to inflict damage. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
@@ -2527,9 +2466,7 @@
 		</effects>
 	</skill>
 	<skill id="11281" toLevel="9" name="Cougar Pounce">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Jumps to inflict damage on targets within a certain range. Speed - 100. Can be used when below 200 grids. -->
+		<!-- Jumps to inflict damage on targets within a certain range. Speed - $s1. Can be used when below 200 grids. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2597,9 +2534,7 @@
 		</effects>
 	</skill>
 	<skill id="11282" toLevel="9" name="Reaper Touch">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Inflicts damage on the enemy and absorbs 20% of damage as HP. -->
+		<!-- Inflicts damage on the enemy and absorbs $s1 of damage as HP. -->
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2663,8 +2598,6 @@
 		</effects>
 	</skill>
 	<skill id="11283" toLevel="9" name="Reaper Power">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Creates a death space near the enemy to inflict damage. -->
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange>
@@ -2731,7 +2664,6 @@
 		</effects>
 	</skill>
 	<skill id="11284" toLevel="4" name="Naviarope Smash">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful attack on target. -->
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
@@ -2775,7 +2707,6 @@
 		</effects>
 	</skill>
 	<skill id="11285" toLevel="4" name="Naviarope Power">
-		<!-- Glory Days confirmed -->
 		<!-- Uses the authority of Naviarope to inflict powerful damage on nearby targets. -->
 		<icon>icon.skill0121</icon>
 		<affectRange>200</affectRange>
@@ -2819,7 +2750,6 @@
 		</effects>
 	</skill>
 	<skill id="11286" toLevel="1" name="Forced Summon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- (Not in Use) All servitors being summoned within a short period of time are doubled. -->
 		<icon>icon.skill1349</icon>
 		<operateType>A2</operateType>
@@ -2838,8 +2768,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="11287" toLevel="10" name="Superior Resistance">
-		<!-- Glory Days confirmed -->
-		<!-- Fire/Water/Wind/Earth Resistance + 20. INT + 2. -->
+		<!-- Fire/Water/Wind/Earth Resistance + $s1. INT + $s2. -->
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2923,8 +2852,7 @@
 		</effects>
 	</skill>
 	<skill id="11288" toLevel="4" name="Ultimate Servitor Share">
-		<!-- Glory Days confirmed -->
-		<!-- For 30 min., shares the following with your servitor (s): 60% of P. Atk., 50% of P. Def., 30% of M. Def., 15% of Max HP/MP, 10% of Atk. Spd., 30% of P. Critical Rate, 15% of P. Critical Damage. -->
+		<!-- For $s1, shares the following with your servitor (s): $s2 of P. Atk., $s3 of P. Def., $s4 of M. Def., $s5 of Max HP/MP, $s6 of Atk. Spd., $s7 of P. Critical Rate, $s8 of P. Critical Damage. -->
 		<icon>icon.skill11288</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2986,8 +2914,6 @@
 		</effects>
 	</skill>
 	<skill id="11289" toLevel="4" name="Gate Root">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Temporarily stops nearby enemies from moving. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3017,7 +2943,6 @@
 		</effects>
 	</skill>
 	<skill id="11290" toLevel="1" name="Summon Hodling">
-		<!-- Glory Days confirmed -->
 		<!-- Summons Hodling. -->
 		<icon>icon.skill1349</icon>
 		<operateType>A1</operateType>
@@ -3037,14 +2962,12 @@
 		<effects>
 			<effect name="SummonNpc">
 				<!-- Hodling -->
-				<npcId>14928</npcId>
+				<npcId>14928</npcId> <!-- Hodling -->
 				<npcCount>3</npcCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11291" toLevel="4" name="Gate Vortex">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts magic damage on nearby enemies. -->
 		<icon>icon.skill0028</icon>
 		<affectLimit>6-12</affectLimit>
@@ -3075,8 +2998,6 @@
 		</effects>
 	</skill>
 	<skill id="11292" toLevel="8" name="Cubic Cleanse">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
 		<!-- Cancels debuffs on you. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -3117,7 +3038,6 @@
 		</effects>
 	</skill>
 	<skill id="11293" toLevel="8" name="Cubic Cancellation">
-		<!-- Glory Days confirmed -->
 		<!-- Cancels the enemy's buff. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -3158,7 +3078,6 @@
 		</effects>
 	</skill>
 	<skill id="11294" toLevel="11" name="Cubic Root">
-		<!-- Glory Days confirmed -->
 		<!-- Temporarily stops the enemy from moving. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3200,8 +3119,7 @@
 		</effects>
 	</skill>
 	<skill id="11295" toLevel="10" name="Superior Light Armor Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- INT + 2. Max HP + 4151 and P. Def. + 1155 when equipped with Light Armor. -->
+		<!-- Max HP + $s1, P. Def. + $s2 when equipped with Light Armor. -->
 		<icon>icon.skill10254</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3250,9 +3168,7 @@
 		</effects>
 	</skill>
 	<skill id="11296" toLevel="9" name="Mass Exile">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
+		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose $s1 HP/second. -->
 		<icon>icon.skill11296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3344,9 +3260,7 @@
 		</effects>
 	</skill>
 	<skill id="11297" toLevel="4" name="Blessing of the Giants">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- For 30 minutes, increases the servitor's Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases received Critical Damage by 30% and speed by 15%. -->
+		<!-- For $s1, increases the servitor's Max MP by $s2, HP Recovery Bonus by $s3, M. Critical Rate by $s4, Critical Damage during a normal attack by $s5, P. Atk. by $s6, P. Def. by $s7, Atk. Spd. by $s8, M. Atk. by $s9, M. Def. by $s10, Casting Spd. by $s11, and Debuff Resistance by $s12. Decreases received Critical Damage by $s13 and Speed by $s14. -->
 		<icon>icon.skill11297</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3443,9 +3357,7 @@
 		</effects>
 	</skill>
 	<skill id="11298" toLevel="11" name="Mark of Fire">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
-		<!-- Carves a burning mark on target to inflict damage with 168 Power added to M. Atk. -->
+		<!-- Carves a burning mark on target to inflict damage with $s1 Power added to M. Atk. and reduces Speed by $s2. -->
 		<icon>icon.skill11298</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -3533,7 +3445,6 @@
 		</effects>
 	</skill>
 	<skill id="11299" toLevel="2" name="Servitor Balance Life">
-		<!-- Glory Days confirmed -->
 		<!-- Balances you and your servitor's HP. -->
 		<icon>icon.skill11299</icon>
 		<affectRange>1000</affectRange>

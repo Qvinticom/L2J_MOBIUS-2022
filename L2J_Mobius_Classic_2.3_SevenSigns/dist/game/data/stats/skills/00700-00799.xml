@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="700" toLevel="1" name="Divine Healer Group Heal">
+		<!-- Restores HP of a party member by 400 power and causes 27 HP recovery every sec. for 15 sec. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
@@ -31,6 +32,7 @@
 		</effects>
 	</skill>
 	<skill id="701" toLevel="1" name="Divine Healer Resurrection">
+		<!-- Resurrects a corpse. Restores XP by about 70 percent additionally. -->
 		<castRange>400</castRange>
 		<effectPoint>661</effectPoint>
 		<effectRange>900</effectRange>
@@ -55,6 +57,7 @@
 		</effects>
 	</skill>
 	<skill id="702" toLevel="1" name="Divine Healer Clans">
+		<!-- Cancel all the debuffs of the target. -->
 		<castRange>600</castRange>
 		<effectPoint>676</effectPoint>
 		<effectRange>1100</effectRange>
@@ -78,7 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="703" toLevel="1" name="Sacrifice Healer">
-		<!-- Confirmed CT2.5 -->
+		<!-- Regenerate party member's HP and MP by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<affectRange>300</affectRange>
 		<effectPoint>676</effectPoint>
 		<hitTime>4000</hitTime>
@@ -109,12 +112,13 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>5602</skillId>
+				<skillId>5602</skillId> <!-- Transform Sacrifice -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="704" toLevel="1" name="Divine Enchanter Water Spirit">
+		<!-- For 2 min., receives help from a great spirit to get a party member's chance of prominent magic damage +2, MP Recovery Bonus +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20% and Skill MP Consumption -5%. Consumes 10 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -189,6 +193,7 @@
 		</effects>
 	</skill>
 	<skill id="705" toLevel="1" name="Divine Enchanter Fire Spirit">
+		<!-- For 2 min., receives help from a great spirit to get a party member's Max MP +20%, HP Recovery Bonus +20%, the chance of prominent magic damage +2, Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Consumes 10 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -270,6 +275,7 @@
 		</effects>
 	</skill>
 	<skill id="706" toLevel="1" name="Divine Enchanter Wind Spirit">
+		<!-- For 2 min., receives help from a great spirit to get a party member's Max HP +20%, Critical Rate +20%, rate of Prominent Damage through magic damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of recovering 5% of physical damage inflicted on the enemy as HP. Consumes 10 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -347,6 +353,7 @@
 		</effects>
 	</skill>
 	<skill id="707" toLevel="1" name="Divine Enchanter Hero Spirit">
+		<!-- For 2 min., receives help from a great spirit to get a party member's Max MP +20%, the chance of prominent magic damage +2, Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Consumes 10 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -424,6 +431,7 @@
 		</effects>
 	</skill>
 	<skill id="708" toLevel="1" name="Divine Enchanter Mass Binding">
+		<!-- Momentarily apply Hold to surrounding enemies. Additional Hold is not available while effects last. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -456,7 +464,7 @@
 		</effects>
 	</skill>
 	<skill id="709" toLevel="1" name="Sacrifice Enchanter">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increase all the party member's abilities by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE</abnormalType>
@@ -525,12 +533,13 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>5602</skillId>
+				<skillId>5602</skillId> <!-- Transform Sacrifice -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="710" toLevel="1" name="Divine Summoner Summon Divine Beast">
+		<!-- Summons a Holy Wild Beat. Requires 2 A-grade Crystals. -->
 		<hitTime>15000</hitTime>
 		<icon>icon.skill_transform_etc</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -550,15 +559,16 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14870</npcId>
+				<npcId>14870</npcId> <!-- Divine Beast -->
 				<lifeTime>3600</lifeTime>
-				<consumeItemId>1461</consumeItemId>
+				<consumeItemId>1461</consumeItemId> <!-- Crystal (A-grade) -->
 				<consumeItemCount>1</consumeItemCount>
 				<expMultiplier>0.7</expMultiplier>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="711" toLevel="1" name="Divine Summoner Transfer Pain">
+		<!-- Transfers some of the player's damage to the summoner. Consumes MP continuously. -->
 		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>80</magicLvl>
 		<mpInitialConsume>72</mpInitialConsume>
@@ -577,6 +587,7 @@
 		</effects>
 	</skill>
 	<skill id="712" toLevel="1" name="Divine Summoner Final Servitor">
+		<!-- Temporarily causes the summoner to be possessed with the spirit of an ancient hero. Consumes 20 Spirit Ore. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -651,6 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="713" toLevel="1" name="Divine Summoner Servitor Hill">
+		<!-- Restores the servitor's HP by 991 power. -->
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
@@ -672,7 +684,7 @@
 		</effects>
 	</skill>
 	<skill id="714" toLevel="1" name="Sacrifice Summoner">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increase the party member's critical abilities by sacrificing yourself. Usable only when MP is under 10 percent. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE</abnormalType>
@@ -709,13 +721,13 @@
 		</effects>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>5602</skillId>
+				<skillId>5602</skillId> <!-- Transform Sacrifice -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="715" toLevel="4" name="Zaken Energy Drain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Exhausts enemy's HP/ MP and absorbs some of HP. -->
 		<affectRange>100</affectRange>
 		<castRange>600</castRange>
 		<coolTime>2000</coolTime>
@@ -772,7 +784,7 @@
 		</effects>
 	</skill>
 	<skill id="716" toLevel="4" name="Zaken Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -815,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="717" toLevel="4" name="Zaken Concentrated Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Focuses on one specific place and attacks. Over-hit. Power $s1. -->
 		<castRange>50</castRange>
 		<coolTime>900</coolTime>
 		<effectPoint>
@@ -858,7 +870,7 @@
 		</effects>
 	</skill>
 	<skill id="718" toLevel="4" name="Zaken Dancing Sword">
-		<!-- Confirmed CT2.5 -->
+		<!-- Uses Dancing Swords to attack all at once. Over-hit. Power $s1. -->
 		<affectRange>100</affectRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>
@@ -901,7 +913,7 @@
 		</effects>
 	</skill>
 	<skill id="719" toLevel="1" name="Zaken Vampiric Rage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Recovers as HP a part of the physical damage inflicted on the enemy with a certain probability. Effect 4. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -929,7 +941,7 @@
 		</effects>
 	</skill>
 	<skill id="720" toLevel="2" name="Anakim Holy Light Burst">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strong pound attack. Over-hit. Power $s1. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -967,7 +979,7 @@
 		</effects>
 	</skill>
 	<skill id="721" toLevel="2" name="Anakim Energy Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Concentrates energy and Fires it. Power $s1. -->
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1005,7 +1017,7 @@
 		</effects>
 	</skill>
 	<skill id="722" toLevel="2" name="Anakim Divine Beam">
-		<!-- Confirmed CT2.5 -->
+		<!-- Launch beam. Power $s1. -->
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1043,7 +1055,7 @@
 		</effects>
 	</skill>
 	<skill id="723" toLevel="1" name="Anakim Sunshine">
-		<!-- Confirmed CT2.5 -->
+		<!-- Instantly recover the party member's HP. Power 1340. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>789</effectPoint>
 		<hitTime>4000</hitTime>
@@ -1067,7 +1079,7 @@
 		</effects>
 	</skill>
 	<skill id="724" toLevel="1" name="Anakim Clans">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cancel all of your debuffs. -->
 		<effectPoint>659</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill_transform_etc</icon>
@@ -1090,7 +1102,7 @@
 		</effects>
 	</skill>
 	<skill id="725" toLevel="2" name="Venom Power Smash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Unleashes a powerful strike. Over-hit. Power $s1. -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-342</effectPoint>
@@ -1119,7 +1131,7 @@
 		</effects>
 	</skill>
 	<skill id="726" toLevel="2" name="Venom Sonic Storm">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack the surrounding area by detonating the Momentum. Power $s1. -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-342</effectPoint>
@@ -1148,7 +1160,7 @@
 		</effects>
 	</skill>
 	<skill id="727" toLevel="1" name="Venom Disillusion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases P. Atk. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1174,7 +1186,7 @@
 		</effects>
 	</skill>
 	<skill id="728" toLevel="1" name="Gordon Beast Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicts a beast attack. Over-hit. Power 2957. -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-342</effectPoint>
@@ -1197,7 +1209,7 @@
 		</effects>
 	</skill>
 	<skill id="729" toLevel="1" name="Gordon Sword Stab">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemies in front of the player. Over-hit. Power 2957. -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-342</effectPoint>
@@ -1221,7 +1233,7 @@
 		</effects>
 	</skill>
 	<skill id="730" toLevel="1" name="Gordon Press">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily decreases Spd./ Atk. Spd./ Casting Spd. of surrounding enemies. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -1261,7 +1273,7 @@
 		</effects>
 	</skill>
 	<skill id="731" toLevel="1" name="Ranku Dark Explosion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack by detonating the devil's energy. Power 162. -->
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1287,7 +1299,7 @@
 		</effects>
 	</skill>
 	<skill id="732" toLevel="1" name="Ranku Stun Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes damage and shock simultaneously. Momentarily stuns the enemy. Over-hit. Power 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1321,7 +1333,7 @@
 		</effects>
 	</skill>
 	<skill id="733" toLevel="1" name="Kechi Double Cutter">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks by crossing a sword. Over-hit. Power 2957. -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-342</effectPoint>
@@ -1344,7 +1356,7 @@
 		</effects>
 	</skill>
 	<skill id="734" toLevel="1" name="Kechi Air Blade">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strikes a distant enemy by using Momentum. Critical. Over-hit. Power 1812. -->
 		<castRange>600</castRange>
 		<effectPoint>-342</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1366,7 +1378,7 @@
 		</effects>
 	</skill>
 	<skill id="735" toLevel="1" name="Devil Spinning Weapon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack surrounding enemies by swinging the weapon. Power 162. -->
 		<affectRange>200</affectRange>
 		<effectPoint>-342</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -1391,7 +1403,7 @@
 		</effects>
 	</skill>
 	<skill id="736" toLevel="1" name="Devil Seed">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP decreases momentarily. Critical Damage will be inflicted by the full grown seed if it is not removed. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DARK_SEED</abnormalType>
@@ -1426,13 +1438,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5248</skillId>
+				<skillId>5248</skillId> <!-- Seed Explosion -->
 				<skillLevel>9</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="737" toLevel="1" name="Devil Ultimate Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -1465,7 +1477,7 @@
 		</effects>
 	</skill>
 	<skill id="738" toLevel="3" name="Heretic Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Instantly recovers the target's HP. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>575</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1496,7 +1508,7 @@
 		</effects>
 	</skill>
 	<skill id="739" toLevel="3" name="Heretic Battle Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Immediately restores the target's HP with $s1 Power. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">595</value>
@@ -1539,7 +1551,7 @@
 		</effects>
 	</skill>
 	<skill id="740" toLevel="3" name="Heretic Resurrection">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resurrects a corpse. In addition, restores about $s1 of XP. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">595</value>
@@ -1587,7 +1599,7 @@
 		</effects>
 	</skill>
 	<skill id="741" toLevel="3" name="Heretic Heal Side Effect">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cause side effects of the heal. Momentarily make the enemy addicted. Effect $s1 -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -1637,7 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="742" toLevel="3" name="Veil Master Bursting Flame">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack the enemy by unleashing dark flames. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>-92</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1679,7 +1691,7 @@
 		</effects>
 	</skill>
 	<skill id="743" toLevel="3" name="Veil Master Dark Explosion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Detonate the soul to attack surrounding enemies. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1727,7 +1739,7 @@
 		</effects>
 	</skill>
 	<skill id="744" toLevel="3" name="Veil Master Dark Flare">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack a large number of enemies by creating huge explosion. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-275</effectPoint>
@@ -1770,7 +1782,7 @@
 		</effects>
 	</skill>
 	<skill id="745" toLevel="3" name="Veil Master Dark Cure">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cancel all the debuffs of the target. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">635</value>
@@ -1811,7 +1823,7 @@
 		</effects>
 	</skill>
 	<skill id="746" toLevel="3" name="Saber Tooth Tiger Bite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Bites ferociously. Over-hit. Power $s1. -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>
@@ -1847,7 +1859,7 @@
 		</effects>
 	</skill>
 	<skill id="747" toLevel="3" name="Saber Tooth Tiger Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicts damage on surrounding enemies and causes them to flee. Over-hit. Power $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1897,7 +1909,7 @@
 		</effects>
 	</skill>
 	<skill id="748" toLevel="1" name="Saber Tooth Tiger Sprint">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases your Spd. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -1923,7 +1935,7 @@
 		</effects>
 	</skill>
 	<skill id="749" toLevel="3" name="Oel Mahum Stun Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit. $s1 power. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1973,7 +1985,7 @@
 		</effects>
 	</skill>
 	<skill id="750" toLevel="1" name="Oel Mahum Ultimate Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -2006,7 +2018,7 @@
 		</effects>
 	</skill>
 	<skill id="751" toLevel="3" name="Oel Mahum Arm Flourish">
-		<!-- Confirmed CT2.5 -->
+		<!-- Flourish weapons to attack surrounding enemy. Over-hit. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
@@ -2050,7 +2062,7 @@
 		</effects>
 	</skill>
 	<skill id="752" toLevel="3" name="Doll Blader Sting">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit. Power $s1. Effect $s2 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -2104,7 +2116,7 @@
 		</effects>
 	</skill>
 	<skill id="753" toLevel="3" name="Doll Blader Throwing Knife">
-		<!-- Confirmed CT2.5 -->
+		<!-- Throw a dagger to attack enemy in the distance. Over-hit. Power $s1. -->
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -2143,7 +2155,7 @@
 		</effects>
 	</skill>
 	<skill id="754" toLevel="1" name="Doll Blader Clairvoyance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Critical attack rate temporarily. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -2171,7 +2183,7 @@
 		</effects>
 	</skill>
 	<skill id="755" toLevel="1" name="Protection of Rune">
-		<!-- Confirmed CT2.5 -->
+		<!-- M. Def. +15%. When damage is incurred, has a chance of additionally increasing M. Def. and Attribute Resistance momentarily. -->
 		<icon>icon.skill0755</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2185,7 +2197,7 @@
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
-				<skillId>5556</skillId>
+				<skillId>5556</skillId> <!-- Protection Power -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MagicalDefence">
@@ -2195,7 +2207,7 @@
 		</effects>
 	</skill>
 	<skill id="756" toLevel="1" name="Protection of Elemental">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistance to elemental attributes +20. When damage is incurred, has a chance of additionally increasing M. Def. and Resistance to elemental attributes momentarily. -->
 		<icon>icon.skill0756</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2209,7 +2221,7 @@
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
-				<skillId>5556</skillId>
+				<skillId>5556</skillId> <!-- Protection Power -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceAttribute">
@@ -2231,7 +2243,7 @@
 		</effects>
 	</skill>
 	<skill id="757" toLevel="1" name="Protection of Alignment">
-		<!-- Confirmed CT2.5 -->
+		<!-- Holy/ Dark Attack Resistance +20. When damage is incurred, has a chance of additionally increasing M. Def. and Resistance to elemental attributes. -->
 		<icon>icon.skill0757</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2245,7 +2257,7 @@
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
-				<skillId>5556</skillId>
+				<skillId>5556</skillId> <!-- Protection Power -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceAttribute">
@@ -2259,7 +2271,7 @@
 		</effects>
 	</skill>
 	<skill id="758" toLevel="1" name="Fighter's Will">
-		<!-- Confirmed CT2.5 -->
+		<!-- When using a short-range weapon, P. Atk. +100 and Atk. Spd. +10%. When attacking, has a chance to increases physical skills' Power and Critical Rate. -->
 		<icon>icon.skill0758</icon>
 		<magicLvl>81</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2275,7 +2287,7 @@
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>SWORD,BLUNT,DUAL,DUALFIST,DAGGER,DUALDAGGER,POLE,ANCIENTSWORD,RAPIER</allowWeapons>
-				<skillId>5559</skillId>
+				<skillId>5559</skillId> <!-- Physical Pose -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
@@ -2311,7 +2323,7 @@
 		</effects>
 	</skill>
 	<skill id="759" toLevel="1" name="Archer's Will">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a bow/ crossbow is used, Accuracy +8 and range +50. When attacking, the physical skill's power and Critical Rate are increased at a fixed rate. -->
 		<icon>icon.skill0759</icon>
 		<magicLvl>81</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2327,7 +2339,7 @@
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>CROSSBOW,BOW</allowWeapons>
-				<skillId>5559</skillId>
+				<skillId>5559</skillId> <!-- Physical Pose -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="Accuracy">
@@ -2349,6 +2361,7 @@
 		</effects>
 	</skill>
 	<skill id="760" toLevel="1" name="Anti Magic Armor">
+		<!-- For 30 sec., M. Def. +5000. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -2373,7 +2386,7 @@
 		</effects>
 	</skill>
 	<skill id="761" toLevel="1" name="Seed of Revenge">
-		<!-- Confirmed CT2.5 -->
+		<!-- One sows a seed of wrath himself. There is a chance that the Seed of Wrath will grow when being attacked. P. Atk. increases with growth. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
@@ -2400,7 +2413,7 @@
 				<chance>8</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5561</skillId>
+				<skillId>5561</skillId> <!-- Seed of Revenge -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
@@ -2410,6 +2423,7 @@
 		</effects>
 	</skill>
 	<skill id="762" toLevel="1" name="Insane Crusher">
+		<!-- Unleashes a powerful strike with 8409 Power added to P. Atk. and Dark Curse to surrounding enemies when rage reaches its peak. Cancels at least one of the enemy's buffs, and temporarily decreases Max CP significantly. Decreases Debuff Resistance, and effectiveness of receiving HP recovery. Requires a sword or blunt weapon. Ignores shield defense. Critical and Over-hit are possible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
@@ -2469,7 +2483,7 @@
 		</effects>
 	</skill>
 	<skill id="763" toLevel="1" name="Hell Scream">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Roars with the voice of hell. For 8 sec., nearby enemies' P. Def. -30%, M. Def. -30%, Speed -30%. Inflicts fear and causes them to flee. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2512,6 +2526,7 @@
 		</effects>
 	</skill>
 	<skill id="764" toLevel="1" name="Song of Windstorm">
+		<!-- All party members' resistance to bow attacks +10 and crossbow attacks +5 for 2 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_WINDSTORM</abnormalType>
@@ -2538,6 +2553,7 @@
 		</effects>
 	</skill>
 	<skill id="765" toLevel="1" name="Dance of Blade Storm">
+		<!-- Party member s resistance to bow attacks +45, crossbow attacks +25 and M. Atk. +99% for 15 sec. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. Requires dual swords to be equipped. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DANCE_OF_BLADESTORM</abnormalType>
@@ -2576,6 +2592,7 @@
 		</effects>
 	</skill>
 	<skill id="766" toLevel="1" name="Sixth Sense">
+		<!-- When stamina is at its limit, sensation reaches its peak to get Evasion +15 when HP is below 30%. -->
 		<icon>icon.skill0766</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2589,7 +2606,7 @@
 		</effects>
 	</skill>
 	<skill id="767" toLevel="1" name="Expose Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Gives flesh and takes a bone. Decreases the enemy's P. Def. by momentarily exposing his weakness when receiving the enemy's attack. Increases the critical hit rate of general attacks. -->
 		<icon>icon.skill0767</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2603,12 +2620,13 @@
 				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5565</skillId>
+				<skillId>5565</skillId> <!-- Expose Vulnerability -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="768" toLevel="1" name="Exciting Adventure">
+		<!-- Feels extreme excitement during a melee. For 30 sec., Speed +10, P. Evasion +10, vital points attacks success rate +15%, P. skill Evasion Rate + 40%, and Buff-canceling Attack Resistance +90. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
@@ -2649,6 +2667,7 @@
 		</effects>
 	</skill>
 	<skill id="769" toLevel="1" name="Wind Riding">
+		<!-- Storms the battleground riding the Wind. For 30 sec., Speed +30, Evasion +15, vital points attacks success rate +10%, physical skill Evasion Rate +60%, and Buff-canceling Attack Resistance +80. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
@@ -2689,6 +2708,7 @@
 		</effects>
 	</skill>
 	<skill id="770" toLevel="1" name="Ghost Walking">
+		<!-- Infiltrates the battleground like a ghost. For 30 sec., Speed +20, P. Evasion +10, vital points attacks success rate +20%, P. Skills Evasion +50%, and Buff-canceling Attack Resistance +80. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
@@ -2729,6 +2749,7 @@
 		</effects>
 	</skill>
 	<skill id="771" toLevel="1" name="Flame Hawk">
+		<!-- Fires an arrow full of phoenix energy, attacking the target and enemies at the front with 8049 Power added to P. Atk. For 10 sec., inflicts 150 damage every sec. Requires a bow. Over-hit. Critical. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<castRange>900</castRange>
@@ -2761,12 +2782,13 @@
 				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>23298</skillId>
+				<skillId>23298</skillId> <!-- Flame Hawk -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="772" toLevel="1" name="Arrow Rain">
+		<!-- Causes arrows to rain down from the sky, attacking the target and nearby enemies with 7043 Power added to P. Atk. For 10 sec., inflicts 150 damage every sec. Requires a bow. Over-hit. Critical. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>600</castRange>
@@ -2798,12 +2820,13 @@
 				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>23299</skillId>
+				<skillId>23299</skillId> <!-- Arrow Rain -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="773" toLevel="1" name="Ghost Piercing">
+		<!-- Shoots an arrow mixed with the energy of a ghost, attacking the target and enemies at the front with 8452 Power added to P. Atk. For 10 sec., inflicts 150 damage every sec. Requires a bow. Over-hit. Critical. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<castRange>900</castRange>
@@ -2836,13 +2859,13 @@
 				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>23300</skillId>
+				<skillId>23300</skillId> <!-- Ghost Piercing -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="774" toLevel="1" name="Dread Pool">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fear spreads around the area. Nearby enemies' Speed -33%, P. Def. -33%, and Evasion -10. Inflicts fear and causes them to flee for 8 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2885,7 +2908,7 @@
 		</effects>
 	</skill>
 	<skill id="775" toLevel="1" name="Weapon Blockade">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cancels the enemy's weapon with a dazzling movement for 5 sec. Need to recharge Momentum level 2. Requires a dual sword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -2930,7 +2953,7 @@
 		</effects>
 	</skill>
 	<skill id="776" toLevel="1" name="Force of Destruction">
-		<!-- Glory Days Confirmed -->
+		<!-- Attacks the enemy with 4500 Power added to P. Atk. and penetrates the target with destructive energy. Momentum level 2 recharge needed. Requires a fist weapon. Over-hit. Critical. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>FORCE_OF_DESTRUCTION</abnormalType>
@@ -2976,6 +2999,7 @@
 		</effects>
 	</skill>
 	<skill id="777" toLevel="1" name="Demolition Impact">
+		<!-- Unleashes a shock of destruction to attack enemy with 5980 Power added to P. Atk. For 10 sec. P. Def. -30%, M. Def. -30%. Requires a sword/ blunt weapon/ two-handed sword/ two-handed blunt weapon. Over-hit. Critical. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3024,7 +3048,7 @@
 		</effects>
 	</skill>
 	<skill id="779" toLevel="1" name="Summon Smart Cubic">
-		<!-- Eva Templar's Smart Cubic -->
+		<!-- Summons Smart Cubic. Cancels all the bad abnormal conditions which were cast on the master, and uses useful skills additionally. Consumes 38 Spirit Ore when summoning. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0779</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3050,7 +3074,7 @@
 		</effects>
 	</skill>
 	<skill id="780" toLevel="1" name="Summon Smart Cubic">
-		<!-- Shillien Templar's Smart Cubic -->
+		<!-- Summons Smart Cubic. Cancels all the bad abnormal conditions which were cast on the master, and uses useful skills additionally. Consumes 38 Spirit Ore when summoning. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0779</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3076,7 +3100,7 @@
 		</effects>
 	</skill>
 	<skill id="781" toLevel="1" name="Summon Smart Cubic">
-		<!-- Arcana Lord's Smart Cubic -->
+		<!-- Summons Smart Cubic. Cancels all the bad abnormal conditions which were cast on the master, and uses useful skills additionally. Consumes 38 Spirit Ore when summoning. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0779</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3102,7 +3126,7 @@
 		</effects>
 	</skill>
 	<skill id="782" toLevel="1" name="Summon Smart Cubic">
-		<!-- Elemental Master's Smart Cubic -->
+		<!-- Summons Smart Cubic. Cancels all the bad abnormal conditions which were cast on the master, and uses useful skills additionally. Consumes 38 Spirit Ore when summoning. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0779</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3128,7 +3152,7 @@
 		</effects>
 	</skill>
 	<skill id="783" toLevel="1" name="Summon Smart Cubic">
-		<!-- Spectral Master's Smart Cubic -->
+		<!-- Summons Smart Cubic. Cancels all the bad abnormal conditions which were cast on the master, and uses useful skills additionally. Consumes 38 Spirit Ore when summoning. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0779</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3154,7 +3178,7 @@
 		</effects>
 	</skill>
 	<skill id="784" toLevel="1" name="Spirit of the Phoenix">
-		<!-- Confirmed CT2.5 -->
+		<!-- Share Phoenix's spirit and yours. There is a chance that the Spirit of the Phoenix will expand when being attacked. Additional effects appear as it expands. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
@@ -3181,7 +3205,7 @@
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5562</skillId>
+				<skillId>5562</skillId> <!-- Spirit of the Phoenix -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -3191,7 +3215,7 @@
 		</effects>
 	</skill>
 	<skill id="785" toLevel="1" name="Flame Archon">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Receives the will of the phoenix to drastically increase the fighting ability of party members. For 1 min., Debuff Resistance +40%, P. Def. +50%, M. Def. +50%, Atk. Spd. +30%, Accuracy +6, Speed +30, and Buff-canceling Attack Resistance +40%. Effectiveness of received recovery magic -80%. When a sword is equipped, Critical Rate +100. When a blunt is equipped, Critical Damage +100%. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION_SPECIAL</abnormalType>
@@ -3266,7 +3290,7 @@
 		</effects>
 	</skill>
 	<skill id="786" toLevel="1" name="Eva's Will">
-		<!-- Confirmed CT2.5 -->
+		<!-- Show Will of Eva through yourself. There is a chance that the Will of Eva will expand when being attacked. Additional effects appear with growth. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
@@ -3293,7 +3317,7 @@
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5563</skillId>
+				<skillId>5563</skillId> <!-- Eva's Will -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MagicalDefence">
@@ -3303,9 +3327,7 @@
 		</effects>
 	</skill>
 	<skill id="787" toLevel="1" name="Touch of Eva">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="castRange" val="40" / -->
-		<!-- set name="effectRange" val="400" / -->
+		<!-- Restores HP of party members by 50%. For 1 min., Buff-canceling Attack Resistance +100%, Healing power received +30%, and received HP Recovery Magic Power +30%. Restores 50 HP every sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_LIFE</abnormalType>
@@ -3357,7 +3379,7 @@
 		</effects>
 	</skill>
 	<skill id="788" toLevel="1" name="Pain of Shilen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Shilen's pain becomes your own. Shilen's suffering wracks your body, having a chance to increase when you are being attacked. Additional effects appear with each increase. When level 3 is achieved, you can then use the Spirit of Shilen. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SEED_OF_KNIGHT</abnormalType>
@@ -3384,7 +3406,7 @@
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5564</skillId>
+				<skillId>5564</skillId> <!-- Pain of Shilen -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CriticalDamage">
@@ -3394,7 +3416,7 @@
 		</effects>
 	</skill>
 	<skill id="789" toLevel="1" name="Spirit of Shilen">
-		<!-- Confirmed CT2.5 and Update to H5 -->
+		<!-- Receives the will of Shilen to drastically increase the fighting ability of party members. For 1 min., P. Atk. +30%, Speed +30, Atk. Spd. +30%, Critical Rate when a sword is equipped +100, and Critical Damage when a blunt weapon is equipped +100%. Recovers as HP 40% of the damage inflicted on the enemy with a certain probability. Healing power received -80%. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION_SPECIAL</abnormalType>
@@ -3461,7 +3483,7 @@
 		</effects>
 	</skill>
 	<skill id="790" toLevel="1" name="Wild Shot">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Fires bolt at random to attack enemies in front with 7475 Power added to P. Atk. Requires a crossbow. Over-hit. Critical. Increases Power upon the consumption of up to 5 souls. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<castRange>900</castRange>
@@ -3498,7 +3520,7 @@
 		</effects>
 	</skill>
 	<skill id="791" toLevel="8" name="Lightning Shock">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Sends an electric current to attack nearby enemies with $s1 Power added to M. Atk. Paralyzes for $s2. Received HP Recovery Rate -$s3. Over-hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3592,13 +3614,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6092</skillId>
+				<skillId>6092</skillId> <!-- Lightning Shock -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="792" toLevel="1" name="Betrayal Mark">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stamps the Mark of Betrayal on the enemy for 30 sec. When attacking the enemy that has the mark, inflicts damage to the enemy's party with a fixed rate. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BETRAYAL_MARK</abnormalType>
@@ -3631,13 +3653,13 @@
 				<chance>10</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5600</skillId>
+				<skillId>5600</skillId> <!-- Betrayal Mark -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="793" toLevel="8" name="Rush Impact">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Rushes forward to attack enemies at the front with $s1 Power added to P. Atk. Inflicts Stun for $s2. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3744,7 +3766,7 @@
 		</effects>
 	</skill>
 	<skill id="794" toLevel="1" name="Mass Disarm">
-		<!-- Confirmed CT2.5 -->
+		<!-- Disarms nearby enemies for 5 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -3778,6 +3800,7 @@
 		</effects>
 	</skill>
 	<skill id="795" toLevel="1" name="Divine Knight Brandish">
+		<!-- Attacks the enemies in front by flourishing an ax. Over-hit. Power 2322. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -3804,6 +3827,7 @@
 		</effects>
 	</skill>
 	<skill id="796" toLevel="1" name="Divine Knight Explosion Attack">
+		<!-- Detonates the floor by striking it hard. Power 1900. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
@@ -3826,6 +3850,7 @@
 		</effects>
 	</skill>
 	<skill id="797" toLevel="1" name="Divine Rogue Piercing Attack">
+		<!-- Attacks all enemies, even the enemies behind you, with a strong thrust. Over-hit. Power 2111. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
 		<castRange>40</castRange>
@@ -3852,6 +3877,7 @@
 		</effects>
 	</skill>
 	<skill id="798" toLevel="1" name="Divine Warrior Crippling Attack">
+		<!-- Poisons the enemy with an unexpected poison attack. Power 1689. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3888,7 +3914,7 @@
 		</effects>
 	</skill>
 	<skill id="799" toLevel="3" name="Master Ability: Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. -->
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0142</icon>
 		<magicLvl>75</magicLvl>

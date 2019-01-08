@@ -437,7 +437,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49139" name="Dual Sword Gift Chest" type="EtcItem">
-		<!-- Double-click the chest to receive 15-day Dual Candle Sword.  Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- Double-click the chest to receive 15-day Dual Candle Sword. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

@@ -102,7 +102,7 @@
 		</stats>
 	</item>
 	<item id="30503" name="Bound Bow of Peril" additionalName="Guidance" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Accuracy by 3. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Accuracy by 3. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -138,7 +138,7 @@
 		</stats>
 	</item>
 	<item id="30504" name="Bound Bow of Peril" additionalName="Quick Recovery" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases cooldown by about 13%. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases cooldown by about 13%. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -171,7 +171,7 @@
 		</stats>
 	</item>
 	<item id="30505" name="Bound Bow of Peril" additionalName="Cheap Shot" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Has a 42% chance of decreasing MP consumption to 1 during a standard attack. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Has a 42% chance of decreasing MP consumption to 1 during a standard attack. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -497,7 +497,7 @@
 		</stats>
 	</item>
 	<item id="30516" name="Bound Fisted Blade" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Evasion by 6 when HP drops to 60% or below. -->
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -532,7 +532,7 @@
 		</stats>
 	</item>
 	<item id="30517" name="Bound Fisted Blade" additionalName="Rsk. Haste" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -567,7 +567,7 @@
 		</stats>
 	</item>
 	<item id="30518" name="Bound Fisted Blade" additionalName="Haste" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -602,7 +602,7 @@
 		</stats>
 	</item>
 	<item id="30519" name="Bound Peacemaker" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion Bestows one of the following functions: Evasion, Critical Bleed or Miser. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion. Bestows one of the following functions: Evasion, Critical Bleed or Miser. -->
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -635,7 +635,7 @@
 		</stats>
 	</item>
 	<item id="30520" name="Bound Peacemaker" additionalName="Evasion" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow Conversion (Soul Crystal Enhancement) Increases Evasion by 2. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow Conversion. <Soul Crystal Enhancement>. Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -671,7 +671,7 @@
 		</stats>
 	</item>
 	<item id="30521" name="Bound Peacemaker" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion. Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -707,7 +707,7 @@
 		</stats>
 	</item>
 	<item id="30522" name="Bound Peacemaker" additionalName="Miser" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion (Soul Crystal Enhancement)) Has a 19% chance of reducing the number of Soulshots consumed to 1 during an attack. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion. <Soul Crystal Enhancement>>. Has a 19% chance of reducing the number of Soulshots consumed to 1 during an attack. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1252,7 +1252,7 @@
 		</stats>
 	</item>
 	<item id="30543" name="Bound Flamberge" additionalName="Critical Damage" type="Weapon">
-		<!-- (Soul Crystal Enhancement) P. Atk. + 174 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1286,7 +1286,7 @@
 		</stats>
 	</item>
 	<item id="30544" name="Bound Flamberge" additionalName="Focus" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Critical by 86. -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1320,7 +1320,7 @@
 		</stats>
 	</item>
 	<item id="30545" name="Bound Flamberge" additionalName="Light Armor" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1840,7 +1840,7 @@
 		</stats>
 	</item>
 	<item id="30567" name="Bound Poleaxe" additionalName="Critical Stun" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1876,7 +1876,7 @@
 		</stats>
 	</item>
 	<item id="30568" name="Bound Poleaxe" additionalName="Long Blow" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases the attack range. -->
+		<!-- <Soul Crystal Enhancement>. Increases the attack range. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1911,7 +1911,7 @@
 		</stats>
 	</item>
 	<item id="30569" name="Bound Poleaxe" additionalName="Wide Blow" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Broadens the angle of attack. -->
+		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1978,7 +1978,7 @@
 		</stats>
 	</item>
 	<item id="30571" name="Bound Forgotten Blade" additionalName="Haste" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2013,7 +2013,7 @@
 		</stats>
 	</item>
 	<item id="30572" name="Bound Forgotten Blade" additionalName="Health" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2048,7 +2048,7 @@
 		</stats>
 	</item>
 	<item id="30573" name="Bound Forgotten Blade" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 84. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2083,7 +2083,7 @@
 		</stats>
 	</item>
 	<item id="30574" name="Bound Divine Pain" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion. Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2115,7 +2115,7 @@
 		</stats>
 	</item>
 	<item id="30575" name="Bound Divine Pain" additionalName="Haste" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2150,7 +2150,7 @@
 		</stats>
 	</item>
 	<item id="30576" name="Bound Divine Pain" additionalName="Critical Damage" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master Conversion (Soul Crystal Enhancement) P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master Conversion. <Soul Crystal Enhancement>. P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2185,7 +2185,7 @@
 		</stats>
 	</item>
 	<item id="30577" name="Bound Divine Pain" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2253,7 +2253,7 @@
 		</stats>
 	</item>
 	<item id="30579" name="Bound Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 30% chance of casting Regeneration on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 30% chance of casting Regeneration on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2288,7 +2288,7 @@
 		</stats>
 	</item>
 	<item id="30580" name="Bound Paradia Staff" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 50% chance of casting Mental Shield on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2323,7 +2323,7 @@
 		</stats>
 	</item>
 	<item id="30581" name="Bound Paradia Staff" additionalName="Magic Hold" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 6% chance of casting Dryad Root on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2427,7 +2427,7 @@
 		</stats>
 	</item>
 	<item id="30584" name="Bound Pa'agrio Hammer" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Evasion by 6 when HP drops to 60% or below. -->
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2462,7 +2462,7 @@
 		</stats>
 	</item>
 	<item id="30585" name="Bound Pa'agrio Hammer" additionalName="Magic Poison" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 7% chance of casting Curse Poison on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Poison on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2497,7 +2497,7 @@
 		</stats>
 	</item>
 	<item id="30586" name="Bound Pa'agrio Hammer" additionalName="Magic Weakness" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 7% chance of casting Curse Weakness on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2565,7 +2565,7 @@
 		</stats>
 	</item>
 	<item id="30588" name="Bound Pa'agrio Axe" additionalName="Mana Up" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2600,7 +2600,7 @@
 		</stats>
 	</item>
 	<item id="30589" name="Bound Pa'agrio Axe" additionalName="Magic Weakness" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 7% chance of casting Curse Weakness on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2635,7 +2635,7 @@
 		</stats>
 	</item>
 	<item id="30590" name="Bound Pa'agrio Axe" additionalName="Magic Chaos" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 7% chance of casting Curse Chaos on the target during magic use. -->
+		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Chaos on the target during magic use. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2735,7 +2735,7 @@
 		</stats>
 	</item>
 	<item id="30593" name="Bound Destroyer Hammer" additionalName="Health" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2770,7 +2770,7 @@
 		</stats>
 	</item>
 	<item id="30594" name="Bound Destroyer Hammer" additionalName="Haste" type="Weapon">
-		<!-- Bound Item. Cannot be exchanged or dropped (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. Cannot be exchanged or dropped. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2805,7 +2805,7 @@
 		</stats>
 	</item>
 	<item id="30595" name="Bound Destroyer Hammer" additionalName="Critical Drain" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Absorbs 18 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Absorbs 18 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2872,7 +2872,7 @@
 		</stats>
 	</item>
 	<item id="30597" name="Bound Wizard's Tear" additionalName="Acumen" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Casting Spd. by 15%. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2906,7 +2906,7 @@
 		</stats>
 	</item>
 	<item id="30598" name="Bound Wizard's Tear" additionalName="M. Atk." type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases MP consumption by 15% and M. Atk. by 139 during magic use. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 139 during magic use. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2940,7 +2940,7 @@
 		</stats>
 	</item>
 	<item id="30599" name="Bound Wizard's Tear" additionalName="Conversion" type="Weapon">
-		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. -->
+		<!-- Bound Item. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

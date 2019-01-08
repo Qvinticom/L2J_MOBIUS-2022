@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25800" level="99" type="L2RaidBoss" name="Michaela" title="Grand Judge">
 		<!-- TODO: Must be confirmed -->
@@ -66,33 +66,33 @@
 			<drop>
 				<item id="17527" min="1" max="1" chance="78.22" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="19.71" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack -->
-				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack -->
-				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack -->
-				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack -->
-				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack -->
-				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack -->
-				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack -->
-				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack -->
-				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack -->
-				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack -->
-				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack -->
-				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack -->
-				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack -->
-				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack -->
-				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack -->
-				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack -->
-				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Box - Heavy Armor -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 				<item id="35317" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boot Ingredient -->
 				<item id="35316" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Glove Ingredient -->
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
@@ -106,13 +106,13 @@
 				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
 				<item id="35318" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Ingredient -->
 				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
 				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
 				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
 				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
@@ -154,7 +154,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -211,9 +211,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17311" min="1" max="1" chance="6.444" /> <!-- Immortal Leather Armor -->
-				<item id="17305" min="1" max="1" chance="4.846" /> <!-- Immortal Breastplate -->
-				<item id="17316" min="1" max="1" chance="1.906" /> <!-- Immortal Tunic -->
+				<item id="17311" min="1" max="1" chance="6.444" /> <!-- Immortal Leather Armor - Light Armor -->
+				<item id="17305" min="1" max="1" chance="4.846" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17316" min="1" max="1" chance="1.906" /> <!-- Immortal Tunic - Robe -->
 				<item id="17527" min="3" max="9" chance="17.66" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="2" chance="8.39" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="46504" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -238,7 +238,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -297,7 +297,7 @@
 				<item id="36533" min="1" max="1" chance="1.426" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -424,13 +424,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
 				<item id="57" min="639" max="1491" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
 				<item id="35352" min="1" max="1" chance="0.03" /> <!-- Eternal Glove Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35476" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35476" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gloves (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -446,7 +446,7 @@
 				<item id="36533" min="1" max="1" chance="2.608" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -492,13 +492,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves -->
+				<item id="17444" min="1" max="1" chance="0.0009" /> <!-- Eternal Gloves - Robe -->
 				<item id="57" min="639" max="1491" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
 				<item id="35352" min="1" max="1" chance="0.03" /> <!-- Eternal Glove Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35476" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35476" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gloves (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -514,7 +514,7 @@
 				<item id="36533" min="1" max="1" chance="2.608" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -742,7 +742,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.39" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.39" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -816,7 +816,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.39" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.39" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -856,7 +856,7 @@
 				<item id="5314" min="1" max="1" chance="4.893" /> <!-- Sealed Boots of Nightmare -->
 				<item id="5311" min="1" max="1" chance="1.571" /> <!-- Sealed Armor of Nightmare -->
 				<item id="8679" min="1" max="1" chance="0.3" /> <!-- Sword of Ipos -->
-				<item id="8682" min="1" max="1" chance="0.3" /> <!-- Naga Storm -->
+				<item id="8682" min="1" max="1" chance="0.3" /> <!-- Naga's Storm -->
 				<item id="730" min="1" max="1" chance="18.55" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -885,7 +885,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="78.86" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="78.86" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -988,7 +988,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="80.53" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="80.53" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1060,7 +1060,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.71" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.71" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1134,7 +1134,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.71" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.71" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1204,7 +1204,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.31" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.31" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1308,7 +1308,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="81.85" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="81.85" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1500,17 +1500,17 @@
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack - Robe -->
 				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack -->
-				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack -->
-				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack - Robe -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack -->
-				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack - Robe -->
 				<item id="38022" min="1" max="1" chance="0.075" /> <!-- Specter Retributer Crafting Pack -->
 				<item id="38021" min="1" max="1" chance="0.075" /> <!-- Specter Caster Crafting Pack -->
 				<item id="38020" min="1" max="1" chance="0.075" /> <!-- Specter Buster Crafting Pack -->
@@ -1522,17 +1522,17 @@
 				<item id="38014" min="1" max="1" chance="0.075" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38013" min="1" max="1" chance="0.075" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38012" min="1" max="1" chance="0.075" /> <!-- Specter Shaper Crafting Pack -->
-				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack -->
-				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack -->
-				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Pack -->
-				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack -->
-				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack -->
-				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack -->
-				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack -->
-				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack -->
-				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack -->
-				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack -->
-				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Box - Heavy Armor -->
+				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
 				<item id="46493" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
@@ -1552,7 +1552,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1622,17 +1622,17 @@
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack - Robe -->
 				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack -->
-				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack -->
-				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack - Robe -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack -->
-				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack - Robe -->
 				<item id="38022" min="1" max="1" chance="0.075" /> <!-- Specter Retributer Crafting Pack -->
 				<item id="38021" min="1" max="1" chance="0.075" /> <!-- Specter Caster Crafting Pack -->
 				<item id="38020" min="1" max="1" chance="0.075" /> <!-- Specter Buster Crafting Pack -->
@@ -1644,17 +1644,17 @@
 				<item id="38014" min="1" max="1" chance="0.075" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38013" min="1" max="1" chance="0.075" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38012" min="1" max="1" chance="0.075" /> <!-- Specter Shaper Crafting Pack -->
-				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack -->
-				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack -->
-				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Pack -->
-				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack -->
-				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack -->
-				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack -->
-				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack -->
-				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack -->
-				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack -->
-				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack -->
-				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Box - Heavy Armor -->
+				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
 				<item id="46493" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
@@ -1674,7 +1674,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1764,7 +1764,7 @@
 				<item id="36542" min="1" max="1" chance="2.689" /> <!-- Silver Wire -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1806,7 +1806,7 @@
 				<item id="6573" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="59.85" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="59.85" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1877,7 +1877,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield - Heavy Armor -->
 				<item id="57" min="1072" max="2504" chance="20" /> <!-- Adena -->
 				<item id="36841" min="1" max="1" chance="1.775" /> <!-- Twilight Shield Ingredient -->
 				<item id="36779" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Shield (60%) -->
@@ -1896,7 +1896,7 @@
 				<item id="36532" min="1" max="1" chance="22.75" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2014,8 +2014,8 @@
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -2023,7 +2023,7 @@
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2075,15 +2075,15 @@
 				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
 				<item id="35301" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Fragment -->
 				<item id="35309" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
 				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2136,8 +2136,8 @@
 				<item id="35303" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Fragment -->
 				<item id="35314" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Armor Ingredient -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -2145,7 +2145,7 @@
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2193,12 +2193,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate -->
-				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings -->
-				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic -->
+				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic - Robe -->
 				<item id="57" min="3237" max="7559" chance="70" /> <!-- Adena -->
 				<item id="9555" min="1" max="1" chance="0.075" /> <!-- Wind Crystal -->
-				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="3.66" /> <!-- Synthetic Braid -->
@@ -2296,7 +2296,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2378,7 +2378,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2430,16 +2430,16 @@
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
 				<item id="17527" min="1" max="1" chance="50.7" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
-				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
-				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
-				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
-				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
-				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
-				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
-				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
-				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
 				<item id="35296" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Fragment -->
 				<item id="35298" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Fragment -->
 				<item id="35299" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Fragment -->
@@ -2450,7 +2450,7 @@
 				<item id="35304" min="1" max="1" chance="0.3" /> <!-- Specter Buster Fragment -->
 				<item id="35305" min="1" max="1" chance="0.3" /> <!-- Specter Caster Fragment -->
 				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
-				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2463,7 +2463,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2525,23 +2525,23 @@
 			<drop>
 				<item id="36574" min="1" max="1" chance="30.17" /> <!-- Scroll: Modify Weapon (R-grade) -->
 				<item id="17526" min="1" max="1" chance="1.989" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="38001" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Gloves Crafting Pack -->
-				<item id="38002" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Boots Crafting Pack -->
-				<item id="38003" min="1" max="1" chance="0.75" /> <!-- Twilight Circlet Crafting Pack -->
-				<item id="38004" min="1" max="1" chance="0.75" /> <!-- Twilight Tunic Crafting Pack -->
-				<item id="38005" min="1" max="1" chance="0.75" /> <!-- Twilight Stockings Crafting Pack -->
-				<item id="38006" min="1" max="1" chance="0.75" /> <!-- Twilight Gloves Crafting Pack -->
-				<item id="38007" min="1" max="1" chance="0.75" /> <!-- Twilight Shoes Crafting Pack -->
-				<item id="38000" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Leggings Crafting Pack -->
-				<item id="37999" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Armor Crafting Pack -->
-				<item id="37998" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Helmet Crafting Pack -->
-				<item id="37997" min="1" max="1" chance="0.75" /> <!-- Twilight Shield Crafting Pack -->
-				<item id="37996" min="1" max="1" chance="0.75" /> <!-- Twilight Boots Crafting Pack -->
-				<item id="37995" min="1" max="1" chance="0.75" /> <!-- Twilight Gauntlets Crafting Pack -->
-				<item id="37994" min="1" max="1" chance="0.75" /> <!-- Twilight Gaiters Crafting Pack -->
-				<item id="37993" min="1" max="1" chance="0.75" /> <!-- Twilight Breastplate Crafting Pack -->
-				<item id="37992" min="1" max="1" chance="0.75" /> <!-- Twilight Helmet Crafting Pack -->
-				<item id="38008" min="1" max="1" chance="0.75" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38002" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Boots Crafting Pack - Light Armor -->
+				<item id="38003" min="1" max="1" chance="0.75" /> <!-- Twilight Circlet Crafting Pack - Robe -->
+				<item id="38004" min="1" max="1" chance="0.75" /> <!-- Twilight Tunic Crafting Pack - Robe -->
+				<item id="38005" min="1" max="1" chance="0.75" /> <!-- Twilight Stockings Crafting Pack - Robe -->
+				<item id="38006" min="1" max="1" chance="0.75" /> <!-- Twilight Gloves Crafting Pack - Robe -->
+				<item id="38007" min="1" max="1" chance="0.75" /> <!-- Twilight Shoes Crafting Pack - Robe -->
+				<item id="38000" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Leggings Crafting Pack - Light Armor -->
+				<item id="37999" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Armor Crafting Pack - Light Armor -->
+				<item id="37998" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Helmet Crafting Pack - Light Armor -->
+				<item id="37997" min="1" max="1" chance="0.75" /> <!-- Twilight Shield Crafting Box - Heavy Armor -->
+				<item id="37996" min="1" max="1" chance="0.75" /> <!-- Twilight Boots Crafting Pack - Heavy Armor -->
+				<item id="37995" min="1" max="1" chance="0.75" /> <!-- Twilight Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="37994" min="1" max="1" chance="0.75" /> <!-- Twilight Gaiters Crafting Pack - Heavy Armor -->
+				<item id="37993" min="1" max="1" chance="0.75" /> <!-- Twilight Breastplate Crafting Pack - Heavy Armor -->
+				<item id="37992" min="1" max="1" chance="0.75" /> <!-- Twilight Helmet Crafting Pack - Heavy Armor -->
+				<item id="38008" min="1" max="1" chance="0.75" /> <!-- Twilight Sigil Crafting Pack - Robe -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2554,7 +2554,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2615,16 +2615,16 @@
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
 				<item id="17527" min="1" max="1" chance="80.75" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
 				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
 				<item id="35311" min="1" max="1" chance="0.3" /> <!-- Seraph Boot Ingredient -->
 				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
@@ -2635,7 +2635,7 @@
 				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
 				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
 				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2648,7 +2648,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2763,14 +2763,14 @@
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="35315" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
 				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
 				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
@@ -2781,7 +2781,7 @@
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -2795,7 +2795,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2868,14 +2868,14 @@
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="35315" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
 				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
 				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
@@ -2886,7 +2886,7 @@
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -2900,7 +2900,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2957,14 +2957,14 @@
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="35315" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
 				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
 				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
@@ -2975,7 +2975,7 @@
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -2989,7 +2989,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -3053,17 +3053,17 @@
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
 				<item id="17527" min="1" max="1" chance="51.04" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<item id="35308" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Ingredient -->
 				<item id="35320" min="1" max="1" chance="0.3" /> <!-- Seraph Stocking Ingredient -->
 				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3076,7 +3076,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3172,37 +3172,37 @@
 				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
 				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
 				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
 				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
 				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
@@ -3237,7 +3237,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3330,37 +3330,37 @@
 				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
 				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
 				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
 				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
 				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
@@ -3395,7 +3395,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3441,7 +3441,7 @@
 				<item id="17414" min="1" max="1" chance="0.3" /> <!-- Seraph Earring -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3490,7 +3490,7 @@
 				<item id="17414" min="1" max="1" chance="0.300000000000004" /> <!-- Seraph Earring -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3580,8 +3580,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17347" min="1" max="1" chance="5.395" /> <!-- Twilight Leather Gloves -->
-				<item id="17352" min="1" max="1" chance="5.314" /> <!-- Twilight Gloves -->
+				<item id="17347" min="1" max="1" chance="5.395" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17352" min="1" max="1" chance="5.314" /> <!-- Twilight Gloves - Robe -->
 				<item id="17330" min="1" max="1" chance="0.3" /> <!-- Apocalypse Thrower -->
 				<item id="17334" min="1" max="1" chance="0.3" /> <!-- Apocalypse Retributer -->
 				<item id="17526" min="1" max="1" chance="5.631" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -3617,7 +3617,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3847,7 +3847,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="58.79" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="58.79" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -3908,7 +3908,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="60.33" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="60.33" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4065,12 +4065,12 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17318" min="1" max="1" chance="4.284" /> <!-- Immortal Gloves -->
-				<item id="17308" min="1" max="1" chance="4.27" /> <!-- Immortal Boots -->
-				<item id="17304" min="1" max="1" chance="2.865" /> <!-- Immortal Helmet -->
-				<item id="17310" min="1" max="1" chance="2.854" /> <!-- Immortal Leather Helmet -->
-				<item id="17313" min="1" max="1" chance="2.088" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="1" max="1" chance="1.357" /> <!-- Immortal Shoes -->
+				<item id="17318" min="1" max="1" chance="4.284" /> <!-- Immortal Gloves - Robe -->
+				<item id="17308" min="1" max="1" chance="4.27" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17304" min="1" max="1" chance="2.865" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="2.854" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17313" min="1" max="1" chance="2.088" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="1" max="1" chance="1.357" /> <!-- Immortal Shoes - Robe -->
 				<item id="17300" min="1" max="1" chance="0.3" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
 				<item id="17291" min="1" max="1" chance="0.3" /> <!-- Requiem Cutter -->
@@ -4109,7 +4109,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4205,37 +4205,37 @@
 				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
 				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
 				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
 				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
 				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
@@ -4270,7 +4270,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4363,37 +4363,37 @@
 				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
 				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
 				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
 				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
 				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
@@ -4428,7 +4428,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4494,7 +4494,7 @@
 				<item id="36533" min="1" max="1" chance="1.362" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4540,12 +4540,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17318" min="1" max="1" chance="4.284" /> <!-- Immortal Gloves -->
-				<item id="17308" min="1" max="1" chance="4.27" /> <!-- Immortal Boots -->
-				<item id="17304" min="1" max="1" chance="2.865" /> <!-- Immortal Helmet -->
-				<item id="17310" min="1" max="1" chance="2.854" /> <!-- Immortal Leather Helmet -->
-				<item id="17313" min="1" max="1" chance="2.088" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="1" max="1" chance="1.357" /> <!-- Immortal Shoes -->
+				<item id="17318" min="1" max="1" chance="4.284" /> <!-- Immortal Gloves - Robe -->
+				<item id="17308" min="1" max="1" chance="4.27" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17304" min="1" max="1" chance="2.865" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="2.854" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17313" min="1" max="1" chance="2.088" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="1" max="1" chance="1.357" /> <!-- Immortal Shoes - Robe -->
 				<item id="17300" min="1" max="1" chance="0.3" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
 				<item id="17291" min="1" max="1" chance="0.3" /> <!-- Requiem Cutter -->
@@ -4584,7 +4584,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4808,7 +4808,7 @@
 				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
@@ -4945,7 +4945,7 @@
 				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5083,7 +5083,7 @@
 				<item id="46448" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 5 -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5144,23 +5144,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17405" min="1" max="1" chance="1.81" /> <!-- Seraph Leather Gloves -->
-				<item id="17396" min="1" max="1" chance="1.808" /> <!-- Seraph Helmet -->
-				<item id="17407" min="1" max="1" chance="1.801" /> <!-- Seraph Circlet -->
-				<item id="17411" min="1" max="1" chance="1.776" /> <!-- Seraph Shoes -->
-				<item id="17409" min="1" max="1" chance="1.774" /> <!-- Seraph Stockings -->
-				<item id="17400" min="1" max="1" chance="1.761" /> <!-- Seraph Boots -->
-				<item id="17410" min="1" max="1" chance="1.755" /> <!-- Seraph Gloves -->
-				<item id="17401" min="1" max="1" chance="1.741" /> <!-- Seraph Shield -->
-				<item id="17397" min="1" max="1" chance="1.74" /> <!-- Seraph Breastplate -->
-				<item id="17399" min="1" max="1" chance="1.737" /> <!-- Seraph Gauntlets -->
-				<item id="17408" min="1" max="1" chance="1.733" /> <!-- Seraph Tunic -->
-				<item id="17412" min="1" max="1" chance="1.726" /> <!-- Seraph Sigil -->
-				<item id="17402" min="1" max="1" chance="1.72" /> <!-- Seraph Leather Helmet -->
-				<item id="17398" min="1" max="1" chance="1.717" /> <!-- Seraph Gaiters -->
-				<item id="17403" min="1" max="1" chance="1.708" /> <!-- Seraph Leather Armor -->
-				<item id="17406" min="1" max="1" chance="1.7" /> <!-- Seraph Leather Boots -->
-				<item id="17404" min="1" max="1" chance="1.698" /> <!-- Seraph Leather Leggings -->
+				<item id="17405" min="1" max="1" chance="1.81" /> <!-- Seraph Leather Gloves - Light Armor -->
+				<item id="17396" min="1" max="1" chance="1.808" /> <!-- Seraph Helmet - Heavy Armor -->
+				<item id="17407" min="1" max="1" chance="1.801" /> <!-- Seraph Circlet - Robe -->
+				<item id="17411" min="1" max="1" chance="1.776" /> <!-- Seraph Shoes - Robe -->
+				<item id="17409" min="1" max="1" chance="1.774" /> <!-- Seraph Stockings - Robe -->
+				<item id="17400" min="1" max="1" chance="1.761" /> <!-- Seraph Boots - Heavy Armor -->
+				<item id="17410" min="1" max="1" chance="1.755" /> <!-- Seraph Gloves - Robe -->
+				<item id="17401" min="1" max="1" chance="1.741" /> <!-- Seraph Shield - Heavy Armor -->
+				<item id="17397" min="1" max="1" chance="1.74" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17399" min="1" max="1" chance="1.737" /> <!-- Seraph Gauntlets - Heavy Armor -->
+				<item id="17408" min="1" max="1" chance="1.733" /> <!-- Seraph Tunic - Robe -->
+				<item id="17412" min="1" max="1" chance="1.726" /> <!-- Seraph Sigil - Robe -->
+				<item id="17402" min="1" max="1" chance="1.72" /> <!-- Seraph Leather Helmet - Light Armor -->
+				<item id="17398" min="1" max="1" chance="1.717" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17403" min="1" max="1" chance="1.708" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17406" min="1" max="1" chance="1.7" /> <!-- Seraph Leather Boots - Light Armor -->
+				<item id="17404" min="1" max="1" chance="1.698" /> <!-- Seraph Leather Leggings - Light Armor -->
 				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
 				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
 				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
@@ -5177,12 +5177,12 @@
 				<item id="45937" min="1" max="1" chance="24.4" /> <!-- Hair Accessory Spirit Stone -->
 				<item id="37780" min="1" max="1" chance="24.18" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
 				<item id="19447" min="1" max="1" chance="19.2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="17706" min="1" max="1" chance="17.22" /> <!-- Lv. 5 Ancient INT Dye -->
-				<item id="17707" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Ancient WIT Dye -->
-				<item id="17704" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Ancient DEX Dye -->
-				<item id="17703" min="1" max="1" chance="16.78" /> <!-- Lv. 5 Ancient STR Dye -->
-				<item id="17708" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Ancient MEN Dye -->
-				<item id="17705" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17706" min="1" max="1" chance="17.22" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17707" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17704" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17703" min="1" max="1" chance="16.78" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17708" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17705" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
 				<item id="37771" min="1" max="1" chance="5.999" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 				<item id="46474" min="1" max="1" chance="1.216" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="1.21" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -5221,7 +5221,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -5319,8 +5319,8 @@
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
-				<item id="35450" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
+				<item id="35450" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Ring (60%) -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
@@ -5330,36 +5330,36 @@
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
 				<item id="46478" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
 				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35426" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Thrower (60%) -->
-				<item id="35425" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35424" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Fighter (60%) -->
-				<item id="35423" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Avenger (60%) -->
-				<item id="35422" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Slasher (60%) -->
-				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35448" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Necklace (60%) -->
-				<item id="35427" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35428" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Buster (60%) -->
-				<item id="35429" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Caster (60%) -->
-				<item id="35430" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Retributer (60%) -->
-				<item id="35432" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
-				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35439" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35426" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35425" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35424" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35423" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35422" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35448" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35427" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -5372,7 +5372,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5473,8 +5473,8 @@
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
-				<item id="35450" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
+				<item id="35450" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Ring (60%) -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
@@ -5484,36 +5484,36 @@
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
 				<item id="46478" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
 				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35426" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Thrower (60%) -->
-				<item id="35425" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35424" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Fighter (60%) -->
-				<item id="35423" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Avenger (60%) -->
-				<item id="35422" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Slasher (60%) -->
-				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35448" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Necklace (60%) -->
-				<item id="35427" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35428" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Buster (60%) -->
-				<item id="35429" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Caster (60%) -->
-				<item id="35430" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Retributer (60%) -->
-				<item id="35432" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35443" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
-				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35439" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35426" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35425" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35424" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35423" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35422" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35448" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35427" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -5526,7 +5526,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5786,23 +5786,23 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17405" min="1" max="1" chance="1.81" /> <!-- Seraph Leather Gloves -->
-				<item id="17396" min="1" max="1" chance="1.808" /> <!-- Seraph Helmet -->
-				<item id="17407" min="1" max="1" chance="1.801" /> <!-- Seraph Circlet -->
-				<item id="17411" min="1" max="1" chance="1.776" /> <!-- Seraph Shoes -->
-				<item id="17409" min="1" max="1" chance="1.774" /> <!-- Seraph Stockings -->
-				<item id="17400" min="1" max="1" chance="1.761" /> <!-- Seraph Boots -->
-				<item id="17410" min="1" max="1" chance="1.755" /> <!-- Seraph Gloves -->
-				<item id="17401" min="1" max="1" chance="1.741" /> <!-- Seraph Shield -->
-				<item id="17397" min="1" max="1" chance="1.74" /> <!-- Seraph Breastplate -->
-				<item id="17399" min="1" max="1" chance="1.737" /> <!-- Seraph Gauntlets -->
-				<item id="17408" min="1" max="1" chance="1.733" /> <!-- Seraph Tunic -->
-				<item id="17412" min="1" max="1" chance="1.726" /> <!-- Seraph Sigil -->
-				<item id="17402" min="1" max="1" chance="1.72" /> <!-- Seraph Leather Helmet -->
-				<item id="17398" min="1" max="1" chance="1.717" /> <!-- Seraph Gaiters -->
-				<item id="17403" min="1" max="1" chance="1.708" /> <!-- Seraph Leather Armor -->
-				<item id="17406" min="1" max="1" chance="1.7" /> <!-- Seraph Leather Boots -->
-				<item id="17404" min="1" max="1" chance="1.698" /> <!-- Seraph Leather Leggings -->
+				<item id="17405" min="1" max="1" chance="1.81" /> <!-- Seraph Leather Gloves - Light Armor -->
+				<item id="17396" min="1" max="1" chance="1.808" /> <!-- Seraph Helmet - Heavy Armor -->
+				<item id="17407" min="1" max="1" chance="1.801" /> <!-- Seraph Circlet - Robe -->
+				<item id="17411" min="1" max="1" chance="1.776" /> <!-- Seraph Shoes - Robe -->
+				<item id="17409" min="1" max="1" chance="1.774" /> <!-- Seraph Stockings - Robe -->
+				<item id="17400" min="1" max="1" chance="1.761" /> <!-- Seraph Boots - Heavy Armor -->
+				<item id="17410" min="1" max="1" chance="1.755" /> <!-- Seraph Gloves - Robe -->
+				<item id="17401" min="1" max="1" chance="1.741" /> <!-- Seraph Shield - Heavy Armor -->
+				<item id="17397" min="1" max="1" chance="1.74" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17399" min="1" max="1" chance="1.737" /> <!-- Seraph Gauntlets - Heavy Armor -->
+				<item id="17408" min="1" max="1" chance="1.733" /> <!-- Seraph Tunic - Robe -->
+				<item id="17412" min="1" max="1" chance="1.726" /> <!-- Seraph Sigil - Robe -->
+				<item id="17402" min="1" max="1" chance="1.72" /> <!-- Seraph Leather Helmet - Light Armor -->
+				<item id="17398" min="1" max="1" chance="1.717" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17403" min="1" max="1" chance="1.708" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17406" min="1" max="1" chance="1.7" /> <!-- Seraph Leather Boots - Light Armor -->
+				<item id="17404" min="1" max="1" chance="1.698" /> <!-- Seraph Leather Leggings - Light Armor -->
 				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
 				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
 				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
@@ -5819,12 +5819,12 @@
 				<item id="45937" min="1" max="1" chance="24.4" /> <!-- Hair Accessory Spirit Stone -->
 				<item id="37780" min="1" max="1" chance="24.18" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
 				<item id="19447" min="1" max="1" chance="19.2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="17706" min="1" max="1" chance="17.22" /> <!-- Lv. 5 Ancient INT Dye -->
-				<item id="17707" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Ancient WIT Dye -->
-				<item id="17704" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Ancient DEX Dye -->
-				<item id="17703" min="1" max="1" chance="16.78" /> <!-- Lv. 5 Ancient STR Dye -->
-				<item id="17708" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Ancient MEN Dye -->
-				<item id="17705" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17706" min="1" max="1" chance="17.22" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17707" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17704" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17703" min="1" max="1" chance="16.78" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17708" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17705" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
 				<item id="37771" min="1" max="1" chance="5.999" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 				<item id="46474" min="1" max="1" chance="1.216" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="1.21" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -5863,7 +5863,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -5966,23 +5966,23 @@
 			<drop>
 				<item id="36574" min="1" max="1" chance="30.17" /> <!-- Scroll: Modify Weapon (R-grade) -->
 				<item id="17526" min="1" max="1" chance="1.989" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="38001" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Gloves Crafting Pack -->
-				<item id="38002" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Boots Crafting Pack -->
-				<item id="38003" min="1" max="1" chance="0.75" /> <!-- Twilight Circlet Crafting Pack -->
-				<item id="38004" min="1" max="1" chance="0.75" /> <!-- Twilight Tunic Crafting Pack -->
-				<item id="38005" min="1" max="1" chance="0.75" /> <!-- Twilight Stockings Crafting Pack -->
-				<item id="38006" min="1" max="1" chance="0.75" /> <!-- Twilight Gloves Crafting Pack -->
-				<item id="38007" min="1" max="1" chance="0.75" /> <!-- Twilight Shoes Crafting Pack -->
-				<item id="38000" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Leggings Crafting Pack -->
-				<item id="37999" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Armor Crafting Pack -->
-				<item id="37998" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Helmet Crafting Pack -->
-				<item id="37997" min="1" max="1" chance="0.75" /> <!-- Twilight Shield Crafting Pack -->
-				<item id="37996" min="1" max="1" chance="0.75" /> <!-- Twilight Boots Crafting Pack -->
-				<item id="37995" min="1" max="1" chance="0.75" /> <!-- Twilight Gauntlets Crafting Pack -->
-				<item id="37994" min="1" max="1" chance="0.75" /> <!-- Twilight Gaiters Crafting Pack -->
-				<item id="37993" min="1" max="1" chance="0.75" /> <!-- Twilight Breastplate Crafting Pack -->
-				<item id="37992" min="1" max="1" chance="0.75" /> <!-- Twilight Helmet Crafting Pack -->
-				<item id="38008" min="1" max="1" chance="0.75" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="38001" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38002" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Boots Crafting Pack - Light Armor -->
+				<item id="38003" min="1" max="1" chance="0.75" /> <!-- Twilight Circlet Crafting Pack - Robe -->
+				<item id="38004" min="1" max="1" chance="0.75" /> <!-- Twilight Tunic Crafting Pack - Robe -->
+				<item id="38005" min="1" max="1" chance="0.75" /> <!-- Twilight Stockings Crafting Pack - Robe -->
+				<item id="38006" min="1" max="1" chance="0.75" /> <!-- Twilight Gloves Crafting Pack - Robe -->
+				<item id="38007" min="1" max="1" chance="0.75" /> <!-- Twilight Shoes Crafting Pack - Robe -->
+				<item id="38000" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Leggings Crafting Pack - Light Armor -->
+				<item id="37999" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Armor Crafting Pack - Light Armor -->
+				<item id="37998" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Helmet Crafting Pack - Light Armor -->
+				<item id="37997" min="1" max="1" chance="0.75" /> <!-- Twilight Shield Crafting Box - Heavy Armor -->
+				<item id="37996" min="1" max="1" chance="0.75" /> <!-- Twilight Boots Crafting Pack - Heavy Armor -->
+				<item id="37995" min="1" max="1" chance="0.75" /> <!-- Twilight Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="37994" min="1" max="1" chance="0.75" /> <!-- Twilight Gaiters Crafting Pack - Heavy Armor -->
+				<item id="37993" min="1" max="1" chance="0.75" /> <!-- Twilight Breastplate Crafting Pack - Heavy Armor -->
+				<item id="37992" min="1" max="1" chance="0.75" /> <!-- Twilight Helmet Crafting Pack - Heavy Armor -->
+				<item id="38008" min="1" max="1" chance="0.75" /> <!-- Twilight Sigil Crafting Pack - Robe -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -5995,7 +5995,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>

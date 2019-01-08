@@ -41,8 +41,6 @@
 		</effects>
 	</skill>
 	<skill id="2003" toLevel="1" name="Cloned Squash Seed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summer Squash Event Skill -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -60,15 +58,13 @@
 		</conditions>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>12774</npcId>
+				<npcId>12774</npcId> <!-- Young Squash -->
 				<npcCount>1</npcCount>
 				<despawnDelay>180000</despawnDelay>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2004" toLevel="1" name="Cloned Large Squash Seed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summer Squash Event Skill -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -86,15 +82,13 @@
 		</conditions>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>12777</npcId>
+				<npcId>12777</npcId> <!-- Large Young Squash -->
 				<npcCount>1</npcCount>
 				<despawnDelay>180000</despawnDelay>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2005" toLevel="1" name="Nectar">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summer Squash Event Skill -->
 		<castRange>200</castRange>
 		<effectPoint>-150</effectPoint>
 		<effectRange>300</effectRange>
@@ -186,6 +180,7 @@
 		</effects>
 	</skill>
 	<skill id="2011" toLevel="1" name="Wind Walk Potion">
+		<!-- Increases Speed. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -207,6 +202,7 @@
 		</effects>
 	</skill>
 	<skill id="2012" toLevel="1" name="Haste Potion">
+		<!-- Increases Atk. Spd. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -228,7 +224,6 @@
 		</effects>
 	</skill>
 	<skill id="2013" toLevel="1" name="Scroll of Escape">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -390,7 +385,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2027" toLevel="1" name="Blessed Scroll: Enchant Weapon (A-grade)">
-		<!-- Blessed Enchant -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -401,7 +395,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2028" toLevel="1" name="Blessed Scroll: Enchant Weapon (B-grade)">
-		<!-- Blessed Enchant -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -412,7 +405,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2029" toLevel="1" name="Blessed Scroll: Enchant Weapon (C-grade)">
-		<!-- Blessed Enchant -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -423,7 +415,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2030" toLevel="1" name="Blessed Scroll: Enchant Weapon (D-grade)">
-		<!-- Blessed Enchant -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -434,6 +425,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2031" toLevel="1" name="Healing Potion">
+		<!-- Greatly increases HP recovery bonus. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
@@ -456,6 +448,7 @@
 		</effects>
 	</skill>
 	<skill id="2032" toLevel="1" name="Greater Healing Potion">
+		<!-- Greatly increases HP recovery bonus. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
@@ -488,6 +481,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2034" toLevel="1" name="Greater Wind Walk Potion">
+		<!-- Increases Speed. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -509,6 +503,7 @@
 		</effects>
 	</skill>
 	<skill id="2035" toLevel="1" name="Greater Haste Potion">
+		<!-- Increases Atk. Spd. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -530,7 +525,6 @@
 		</effects>
 	</skill>
 	<skill id="2036" toLevel="2" name="Blessed Scroll of Escape">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -555,6 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="2037" toLevel="1" name="Major Healing Potion">
+		<!-- Greatly increases HP recovery bonus. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
@@ -603,7 +598,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2040" toLevel="1" name="Scroll of Escape: Clan Hall">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -624,7 +618,6 @@
 		</effects>
 	</skill>
 	<skill id="2041" toLevel="1" name="Scroll of Escape: Castle">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -749,7 +742,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2048" toLevel="1" name="Wolf Food">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -791,6 +783,7 @@
 		</effects>
 	</skill>
 	<skill id="2050" toLevel="1" name="Scroll: Guidance">
+		<!-- For 20 minutes, Accuracy +2. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -814,6 +807,7 @@
 		</effects>
 	</skill>
 	<skill id="2051" toLevel="1" name="Scroll: Death Whisper">
+		<!-- For 20 minutes, P. Critical Damage +25%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -837,6 +831,7 @@
 		</effects>
 	</skill>
 	<skill id="2052" toLevel="1" name="Scroll: Focus">
+		<!-- For 20 minutes, P. Critical Chance +20%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -860,6 +855,7 @@
 		</effects>
 	</skill>
 	<skill id="2053" toLevel="1" name="Scroll: Acumen">
+		<!-- Increases Casting Spd. by 15% for 20 minutes. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -883,6 +879,7 @@
 		</effects>
 	</skill>
 	<skill id="2054" toLevel="1" name="Scroll: Haste">
+		<!-- For 20 min., Atk. Spd. + 15%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -906,6 +903,7 @@
 		</effects>
 	</skill>
 	<skill id="2055" toLevel="1" name="Scroll: Agility">
+		<!-- For 20 minutes, Speed +20. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
@@ -929,6 +927,7 @@
 		</effects>
 	</skill>
 	<skill id="2056" toLevel="1" name="Scroll: Empower">
+		<!-- For 20 minutes, M. Atk. +55%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -952,6 +951,7 @@
 		</effects>
 	</skill>
 	<skill id="2057" toLevel="1" name="Scroll: Might">
+		<!-- Increases P. Atk. by 15% for 20 minutes -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -975,6 +975,7 @@
 		</effects>
 	</skill>
 	<skill id="2058" toLevel="1" name="Scroll: Wind Walk">
+		<!-- For 20 minutes, Speed +20. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -998,6 +999,7 @@
 		</effects>
 	</skill>
 	<skill id="2059" toLevel="1" name="Scroll: Shield">
+		<!-- For 20 minutes, P. Def. +15%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -1021,7 +1023,6 @@
 		</effects>
 	</skill>
 	<skill id="2060" toLevel="1" name="Healing Medicine">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1071,7 +1072,6 @@
 		</effects>
 	</skill>
 	<skill id="2063" toLevel="1" name="Hatchling Food">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1089,6 +1089,7 @@
 		</effects>
 	</skill>
 	<skill id="2064" toLevel="1" name="Scroll: Mana Regeneration">
+		<!-- Increases MP Regeneration. Effect 4 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
@@ -1227,7 +1228,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2074" toLevel="1" name="Potion of Critical Escape">
-		<!-- Confirmed CT2.5 -->
+		<!-- Misdirects enemy attacks and decreases your Speed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1273,6 +1274,7 @@
 		</effects>
 	</skill>
 	<skill id="2076" toLevel="1" name="Blessing of Eva">
+		<!-- Increase lung capacity. Effect 1. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>400</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
@@ -1294,7 +1296,7 @@
 		</effects>
 	</skill>
 	<skill id="2077" toLevel="1" name="Potion of Revenge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases P. Def. and reflects a certain amount of damage back to the enemy. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
@@ -1320,7 +1322,6 @@
 		</effects>
 	</skill>
 	<skill id="2078" toLevel="1" name="Soulshot Compressed Package (No-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1343,7 +1344,6 @@
 		</effects>
 	</skill>
 	<skill id="2079" toLevel="1" name="Soulshot Compressed Package (D-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1366,7 +1366,6 @@
 		</effects>
 	</skill>
 	<skill id="2080" toLevel="1" name="Soulshot Compressed Package (C-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1389,7 +1388,6 @@
 		</effects>
 	</skill>
 	<skill id="2081" toLevel="1" name="Soulshot Compressed Package (B-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1412,7 +1410,6 @@
 		</effects>
 	</skill>
 	<skill id="2082" toLevel="1" name="Soulshot Compressed Package (A-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1435,7 +1432,6 @@
 		</effects>
 	</skill>
 	<skill id="2084" toLevel="1" name="Spiritshot Compressed Package (No-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1458,7 +1454,6 @@
 		</effects>
 	</skill>
 	<skill id="2085" toLevel="1" name="Spiritshot Compressed Package (D-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1481,7 +1476,6 @@
 		</effects>
 	</skill>
 	<skill id="2086" toLevel="1" name="Spiritshot Compressed Package (C-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1504,7 +1498,6 @@
 		</effects>
 	</skill>
 	<skill id="2087" toLevel="1" name="Spiritshot Compressed Package (B-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1527,7 +1520,6 @@
 		</effects>
 	</skill>
 	<skill id="2088" toLevel="1" name="Spiritshot Compressed Package (A-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1550,7 +1542,6 @@
 		</effects>
 	</skill>
 	<skill id="2090" toLevel="1" name="Blessed Spiritshot Compressed Package (No-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1573,7 +1564,6 @@
 		</effects>
 	</skill>
 	<skill id="2091" toLevel="1" name="Blessed Spiritshot Compressed Package (D-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1596,7 +1586,6 @@
 		</effects>
 	</skill>
 	<skill id="2092" toLevel="1" name="Blessed Spiritshot Compressed Package (C-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1619,7 +1608,6 @@
 		</effects>
 	</skill>
 	<skill id="2093" toLevel="1" name="Blessed Spiritshot Compressed Package (B-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1642,7 +1630,6 @@
 		</effects>
 	</skill>
 	<skill id="2094" toLevel="1" name="Blessed Spiritshot Compressed Package (A-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>

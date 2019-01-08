@@ -42,7 +42,7 @@
 		</stats>
 	</item>
 	<item id="49803" name="Dandy’s Uniform" type="Armor">
-		<!-- Makes your armor look like Dandy�s Uniform. Allows using the Excellent Hit and Excellent Serve skills. When equipped, the armor you previously wore becomes unavailable. However, hair accessories, weapons, and magical armor are not taken off. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Makes your armor look like Dandy? Uniform. Allows using the Excellent Hit and Excellent Serve skills. When equipped, the armor you previously wore becomes unavailable. However, hair accessories, weapons, and magical armor are not taken off. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -545,7 +545,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49467" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10" />
+			<item id="49467" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10" /> <!-- Fire Dragon Pendant -->
 		</capsuled_items>
 	</item>
 	<item id="49849" name="Land Dragon Pendant +10" type="EtcItem">
@@ -569,11 +569,11 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39187" level="1"/> <!--Ornament Supply Box (A-grade)-->
+			<skill id="39187" level="1"/> <!-- Ornament Supply Box (A-grade) -->
 		</skills>
 	</item>
 	<item id="49851" name="Sayha's Gust" type="EtcItem">
-		<!-- Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Reuse Time: 10 minutes. Available when more than one slot of the bar of Sayha�s Grace points is filled. Cannot be dropped or sold in the grocery store. -->
+		<!-- Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Reuse Time: 10 minutes. Available when more than one slot of the bar of Sayha? Grace points is filled. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.skill11137" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

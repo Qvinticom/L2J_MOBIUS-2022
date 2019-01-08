@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46100" name="Treasure Map - High Priest Raymond" type="EtcItem">
-		<!-- A map showing the location of some treasure. It says For the High Priest, so it's probably a gift for the temple. -->
+		<!-- A map showing the location of some treasure. It says "For the High Priest", so it's probably a gift for the temple. -->
 		<set name="icon" val="icon.etc_map_yellow_i04" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -14,7 +14,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46101" name="Treasure Map - Turek Orc's Legacy" type="EtcItem">
-		<!-- A map showing the location of some treasure. It says, Glory to the Turek Orcs. It looks like it is related to the Turek Orcs. -->
+		<!-- A map showing the location of some treasure. It says, "Glory to the Turek Orcs". It looks like it is related to the Turek Orcs. -->
 		<set name="icon" val="icon.etc_map_yellow_i05" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -689,28 +689,28 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +11~+20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46151" name="Superior Giant's Codex - Mastery Chapter 1" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 11~+ 20 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for +21~+30 blessed skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46152" name="Superior Giant's Codex - Discipline Chapter 1" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 11~+ 20 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +11~+20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46153" name="Immortal Scroll Chapter 1" type="EtcItem">
-		<!-- Enchants a skill between + 11~+ 20 to the next grade with a success rate of 100% without consuming extra materials. -->
+		<!-- Enchants a skill between +11~+20 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -724,28 +724,28 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46154" name="Superior Giant's Codex Chapter 2" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 21~+ 30 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46155" name="Superior Giant's Codex - Mastery Chapter 2" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 21~+ 30 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for +21~+30 blessed skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46156" name="Superior Giant's Codex - Discipline Chapter 2" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 21~+ 30 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46157" name="Immortal Scroll Chapter 2" type="EtcItem">
-		<!-- Enchants a skill between + 21~+ 30 to the next grade with a success rate of 100% without consuming extra materials. -->
+		<!-- Enchants a skill between +21~+30 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1025,7 +1025,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46178" name="Heavenly Cocktail" type="EtcItem">
-		<!-- For 60 minutes, it receives the following level 2 effects: Horn Melody, Lute Melody, Pipe Organ Melody, Guitar Melody, Harp Melody, and Drum Melody. Cooldown is 60 min. -->
+		<!-- For 60 minutes, it receives the following level 2 effects: Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1097,7 +1097,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
-		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakim Spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
@@ -1114,7 +1114,7 @@
 		</skills>
 	</item>
 	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
-		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakim Spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1136,7 +1136,7 @@
 		</skills>
 	</item>
 	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Anakim Holy Barrier (30-day). -->
+		<!-- Wrapped Pack containing Holy Barrier Agathion Charm (30-day). -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1147,11 +1147,11 @@
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion - Anakim Holy Barrier (30-day) -->
+			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion - Anakim Holy Barrier - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
-		<!-- Wrapped Pack containing an Agathion - Anakim Holy Barrier (30-day) or an Agathion - Anakim Holy Barrier. -->
+		<!-- Wrapped Pack containing an Anakim Holy Barrier Agathion Charm (30-day) or an Agathion Charm - Anakim Holy Barrier. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1273,7 +1273,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37718" min="1" max="1" chance="100" /> <!-- Shiny Elemental T-shirt -->
+			<item id="37718" min="1" max="1" chance="100" /> <!-- Shiny Elemental Shirt -->
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
@@ -1285,7 +1285,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46193" min="1" max="1" chance="100" /> <!-- Reflect Attack T-shirt -->
+			<item id="46193" min="1" max="1" chance="100" /> <!-- Physical Reflect Shirt -->
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
@@ -1297,7 +1297,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46194" min="1" max="1" chance="100" /> <!-- Reflect Magic T-shirt -->
+			<item id="46194" min="1" max="1" chance="100" /> <!-- Magical Reflect Shirt -->
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>

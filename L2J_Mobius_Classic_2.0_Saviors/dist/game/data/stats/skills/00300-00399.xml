@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="301" toLevel="5" name="Summon Big Boom">
+		<!-- Summons a self-destructing Big Boom. Requires $s1 D-grade Crystals. Takes away $s2 of acquired XP. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0301</icon>
 		<itemConsumeCount>
@@ -44,13 +45,14 @@
 					<value level="5">14706</value>
 				</npcId>
 				<lifeTime>1200</lifeTime>
-				<consumeItemId>1458</consumeItemId>
+				<consumeItemId>1458</consumeItemId> <!-- Crystal (D-grade) -->
 				<consumeItemCount>5</consumeItemCount>
 				<expMultiplier>0.7</expMultiplier>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="302" toLevel="11" name="Spoil Festival">
+		<!-- Causes Spoil around the enemy. -->
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -110,6 +112,7 @@
 		</effects>
 	</skill>
 	<skill id="303" toLevel="4" name="Soul of Sagittarius">
+		<!-- Increases Max MP by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -158,6 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="304" toLevel="1" name="Song of Vitality">
+		<!-- Increases all party members' Max HP by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_VITALITY</abnormalType>
@@ -184,6 +188,7 @@
 		</effects>
 	</skill>
 	<skill id="305" toLevel="1" name="Song of Vengeance">
+		<!-- For 2 minutes, gives a party member the ability to transfer 20% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
@@ -209,6 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="306" toLevel="1" name="Flame Guard's Song">
+		<!-- For 2 minutes increases party members' Fire Resistance by 30. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_FLAME_GUARD</abnormalType>
@@ -235,6 +241,7 @@
 		</effects>
 	</skill>
 	<skill id="307" toLevel="1" name="Dance of Aqua Guard">
+		<!-- Increases all party members' Dark resistance by 30 for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_AQUA_GUARD</abnormalType>
@@ -269,6 +276,7 @@
 		</effects>
 	</skill>
 	<skill id="308" toLevel="1" name="Storm Guard's Song">
+		<!-- Increases all party members' Dark resistance by 30 for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_STORM_GUARD</abnormalType>
@@ -295,6 +303,7 @@
 		</effects>
 	</skill>
 	<skill id="309" toLevel="1" name="Dance of Earth Guard">
+		<!-- Increases party members' Earth Resistance by 30 for 20 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_EARTH_GUARD</abnormalType>
@@ -329,6 +338,7 @@
 		</effects>
 	</skill>
 	<skill id="310" toLevel="1" name="Dance of the Vampire">
+		<!-- For 2 minutes, has a chance of giving all party members the ability to recover as HP 8% of any standard melee damage inflicted on the enemy. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
@@ -363,6 +373,7 @@
 		</effects>
 	</skill>
 	<skill id="311" toLevel="1" name="Dance of Protection">
+		<!-- For 2 minutes, gives all party members the ability to decrease by 30 any environment-related damage received. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_PROTECTION</abnormalType>
@@ -397,7 +408,7 @@
 		</effects>
 	</skill>
 	<skill id="312" toLevel="20" name="Vicious Stance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Critical Damage by $s1. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0312</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -480,6 +491,7 @@
 		</effects>
 	</skill>
 	<skill id="313" toLevel="8" name="Snipe">
+		<!-- For $s1, increases Accuracy by $s2, P. Atk. by $s3, range by $s4, and Critical Rate by $s5 when using a bow. Movement is impossible while skill is being used. Requires a bow. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -598,6 +610,7 @@
 		</effects>
 	</skill>
 	<skill id="314" toLevel="19" name="Fatal Counter">
+		<!-- Fires an agony-inducing arrow at the target with $s1 Power added to P. Atk. The power of the attack increases as your HP decreases. Requires a bow. Over-hit. -->
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -707,6 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="315" toLevel="16" name="Crush of Doom">
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
 		<effectPoint>
@@ -808,6 +822,7 @@
 		</effects>
 	</skill>
 	<skill id="316" toLevel="1" name="Aegis">
+		<!-- Enables Shield Defense in all directions. -->
 		<icon>icon.skill0316</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>P</operateType>
@@ -817,6 +832,7 @@
 		</effects>
 	</skill>
 	<skill id="317" toLevel="6" name="Focus Attack">
+		<!-- Attacks a single enemy when equipped with a spear. Additionally, P. Accuracy + $s1 and P. Critical Damage + $s2. -->
 		<icon>icon.skill0317</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -871,6 +887,7 @@
 		</effects>
 	</skill>
 	<skill id="318" toLevel="1" name="Aegis Stance">
+		<!-- Enables Shield Defense from all directions and decreases Shield Defense by 30%. -->
 		<icon>icon.skill0318</icon>
 		<magicLvl>46</magicLvl>
 		<mpInitialConsume>9</mpInitialConsume>
@@ -887,6 +904,7 @@
 		</effects>
 	</skill>
 	<skill id="319" toLevel="2" name="Agile Movement">
+		<!-- Increases Accuracy by $s1 and Speed by $s2 when equipped with light armor. -->
 		<icon>icon.skill0319</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -918,7 +936,7 @@
 		</effects>
 	</skill>
 	<skill id="320" toLevel="17" name="Wrath">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Swings a spear to decrease nearby enemies' CP by $s1. Requires a polearm to be equipped. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
@@ -1024,6 +1042,7 @@
 		</effects>
 	</skill>
 	<skill id="321" toLevel="10" name="Blinding Blow">
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. and turns his/her back to you. Increases Speed by $s2. Requires a dagger. Over-hit. Half-kill. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -1118,6 +1137,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="322" toLevel="6" name="Shield Fortress">
+		<!-- Increases Shield Defense by $s1. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0322</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -1158,6 +1178,7 @@
 		</effects>
 	</skill>
 	<skill id="325" toLevel="1" name="Strider Siege Assault">
+		<!-- Uses 15005 Power to attack a castle's gate. Can be used while mounted on a Strider. Consumes 5 Spirit Ore. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1182,6 +1203,7 @@
 		</effects>
 	</skill>
 	<skill id="326" toLevel="1" name="Build Advanced Headquarters">
+		<!-- Constructs a high quality encampment that possesses double HP of a standard encampment and assist clan member recovery and battle additions during castle sieges. Consumes 600 B-grade Gemstones. -->
 		<hitTime>4000</hitTime>
 		<icon>icon.skill0326</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1208,6 +1230,7 @@
 		</effects>
 	</skill>
 	<skill id="327" toLevel="1" name="Wyvern Aegis">
+		<!-- For 9 seconds, increases P. Def. by 7000, M. Def. by 6000 and Buff-canceling Attack Resistance by 100%. Can be used while mounted on a Wyvern. Consumes 20 Spirit Ore. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -1242,6 +1265,7 @@
 		</effects>
 	</skill>
 	<skill id="328" toLevel="1" name="Wisdom">
+		<!-- Resistance to sleep, mental attacks and hold +22. -->
 		<icon>icon.skill0328</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1255,6 +1279,7 @@
 		</effects>
 	</skill>
 	<skill id="329" toLevel="1" name="Health">
+		<!-- Resistance to poison and bleed +20. -->
 		<icon>icon.skill0329</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1267,6 +1292,7 @@
 		</effects>
 	</skill>
 	<skill id="330" toLevel="1" name="Skill Mastery">
+		<!-- Depending on your STR, resets Cooldown resets or doubles the duration. -->
 		<icon>icon.skill0330</icon>
 		<magicLvl>77</magicLvl>
 		<operateType>P</operateType>
@@ -1278,6 +1304,7 @@
 		</effects>
 	</skill>
 	<skill id="331" toLevel="1" name="Skill Mastery">
+		<!-- Depending on your INT, resets Cooldown resets or doubles the duration. -->
 		<icon>icon.skill0330</icon>
 		<magicLvl>77</magicLvl>
 		<operateType>P</operateType>
@@ -1289,7 +1316,7 @@
 		</effects>
 	</skill>
 	<skill id="332" toLevel="1" name="Extra Inventory">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases inventory slots by 1. -->
 		<icon>icon.skill0332</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1301,7 +1328,7 @@
 		</effects>
 	</skill>
 	<skill id="333" toLevel="1" name="Extra Sales Slots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases private store transaction slots by 1. -->
 		<icon>icon.skill0333</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1320,7 +1347,7 @@
 		</effects>
 	</skill>
 	<skill id="334" toLevel="1" name="Focus Skill Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Skill Mastery skill rate by 1000%. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0334</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1340,6 +1367,7 @@
 		</effects>
 	</skill>
 	<skill id="335" toLevel="1" name="Fortitude">
+		<!-- Increases Paralysis/Stun Resistance by 30. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0335</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -1359,6 +1387,7 @@
 		</effects>
 	</skill>
 	<skill id="336" toLevel="1" name="Arcane Wisdom">
+		<!-- Maximizes magic efficiency by decreasing MP Consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per second. -->
 		<icon>icon.skill0336</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1383,6 +1412,7 @@
 		</effects>
 	</skill>
 	<skill id="337" toLevel="1" name="Arcane Power">
+		<!-- Maximizes magic efficiency by increasing M. Atk. by 10% and MP Consumption by 5%. Every second, 30 HP is consumed. -->
 		<icon>icon.skill0337</icon>
 		<magicLvl>77</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1407,6 +1437,7 @@
 		</effects>
 	</skill>
 	<skill id="338" toLevel="1" name="Arcane Agility">
+		<!-- Maximizes magic efficiency by increasing MP Consumption by 10% and Casting Spd. by 20% and decreasing Cooldown time by 10%. 50 HP is consumed per second. -->
 		<icon>icon.skill0338</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1436,6 +1467,7 @@
 		</effects>
 	</skill>
 	<skill id="339" toLevel="1" name="Parry Stance">
+		<!-- Blocks an attack using a weapon. Increases P. Def. by 25% and M. Def. by 25%. Decreases Speed by 10%, Atk. Spd. by 20%, and Accuracy by -4. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0339</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1471,6 +1503,7 @@
 		</effects>
 	</skill>
 	<skill id="340" toLevel="1" name="Riposte Stance">
+		<!-- Parries and returns an attack using a weapon. Returns 30% of received damage back to the enemy, and reflects buff/de-buff with a 30% chance. Decreases Speed by 10%, Atk. Spd. by 20%, and Accuracy by 4. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0340</icon>
 		<magicLvl>77</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -1510,6 +1543,7 @@
 		</effects>
 	</skill>
 	<skill id="341" toLevel="1" name="Touch of Life">
+		<!-- Grants a divine blessing by sacrificing oneself. Restores HP by 30%, and for 2 minutes, Buff-canceling Attack Resistance +40%, Debuff Resistance +10%, Healing power received +10%. Restores 30 HP every second. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TOUCH_OF_LIFE</abnormalType>
@@ -1552,6 +1586,7 @@
 		</effects>
 	</skill>
 	<skill id="342" toLevel="1" name="Touch of Death">
+		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with 25% probability and consumes 50% CP. For 2 minutes, decreases Max CP by 50% and the Healing power received by 10%. Increases susceptibility to de-buff by 10%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
@@ -1599,6 +1634,7 @@
 		</effects>
 	</skill>
 	<skill id="343" toLevel="1" name="Lethal Shot">
+		<!-- Shoots an arrow at a vital spot. Attacks the enemy with 6503 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1632,6 +1668,7 @@
 		</effects>
 	</skill>
 	<skill id="344" toLevel="1" name="Lethal Blow">
+		<!-- Attacks the target's vital points with 5773 Power added to P. Atk. Over-hit. Requires a dagger. Critical. -->
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
@@ -1669,6 +1706,7 @@
 		</effects>
 	</skill>
 	<skill id="345" toLevel="3" name="Sonic Rage">
+		<!-- Attacks the target with a deadly energy storm with $s1 Power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, or dualsword. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1730,6 +1768,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="346" toLevel="3" name="Raging Force">
+		<!-- Attacks the target with a devastating burst of wind with $s1 Power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, spear or dualsword. -->
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1779,6 +1818,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="347" toLevel="1" name="Earthquake">
+		<!-- Attacks nearby enemies with a powerful strike with 3878 Power added to P. Atk. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target cancel is possible. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-679</effectPoint>
@@ -1817,6 +1857,7 @@
 		</effects>
 	</skill>
 	<skill id="348" toLevel="1" name="Spoil Crush">
+		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<castRange>40</castRange>
 		<coolTime>100</coolTime>
 		<effectPoint>-337</effectPoint>
@@ -1850,6 +1891,7 @@
 		</effects>
 	</skill>
 	<skill id="349" toLevel="1" name="Song of Renewal">
+		<!-- For 2 minutes, decreases all party members' physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_RENEWAL</abnormalType>
@@ -1892,6 +1934,7 @@
 		</effects>
 	</skill>
 	<skill id="350" toLevel="1" name="Physical Mirror">
+		<!-- For 5 minutes, reflects physical buffs/debuffs with 30% probability and magic buffs/debuffs with 10% probability. Requires a shield. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>REFLECT_ABNORMAL</abnormalType>
@@ -1929,6 +1972,7 @@
 		</effects>
 	</skill>
 	<skill id="351" toLevel="1" name="Magical Mirror">
+		<!-- For 5 minutes, reflects physical buffs/debuffs with 10% probability and magic buffs/debuffs with 30% probability. Requires a shield. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>REFLECT_ABNORMAL</abnormalType>
@@ -1966,6 +2010,7 @@
 		</effects>
 	</skill>
 	<skill id="352" toLevel="1" name="Shield Bash">
+		<!-- Attacks the enemy with shield, stunning them for 2 seconds. Requires a shield. Target cancel is possible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2000,6 +2045,7 @@
 		</effects>
 	</skill>
 	<skill id="353" toLevel="1" name="Shield Slam">
+		<!-- Attacks the enemy with shield, blocking the enemy's physical skills for 1 minute. Requires a shield. Target cancel is possible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
@@ -2034,6 +2080,7 @@
 		</effects>
 	</skill>
 	<skill id="354" toLevel="1" name="Hamstring Shot">
+		<!-- Shoots an arrow at the enemy with 1973 Power added to P. Atk., and decreases the enemy's Speed by 30% for 1 minute. Requires a bow. Over-hit. Critical. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2074,6 +2121,7 @@
 		</effects>
 	</skill>
 	<skill id="355" toLevel="1" name="Focus Death">
+		<!-- For $s1 Critical rate -$s2, frontal Critical Damage -$s3. Vital points attacks success rate +$s4, rear Critical Damage +$s5. Requires a dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -2118,6 +2166,7 @@
 		</effects>
 	</skill>
 	<skill id="356" toLevel="1" name="Focus Chance">
+		<!-- For 2 minutes, decreases frontal Critical Rate by 30%. Increases vital points attacks success rate by 20%, side Critical Rate by 30%, and rear Critical Rate by 60%. Requires a dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -2159,6 +2208,7 @@
 		</effects>
 	</skill>
 	<skill id="357" toLevel="1" name="Focus Power">
+		<!-- For $s1, decreases frontal Critical Damage by $s2. Increases side Critical Damage by $s3 and rear Critical Damage by $s4. Requires a dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -2200,7 +2250,7 @@
 		</effects>
 	</skill>
 	<skill id="358" toLevel="1" name="Bluff">
-		<!-- Confirmed CT2.5 -->
+		<!-- Deceives the enemy into turning his back, losing his urge to attack and becoming stunned for 9 seconds. Requires a dagger. Target cancel is possible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2245,6 +2295,7 @@
 		</effects>
 	</skill>
 	<skill id="359" toLevel="1" name="Eye of Hunter">
+		<!-- For 10 minutes increases P. Atk. for insects/plants/animals by 5%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
@@ -2269,6 +2320,7 @@
 		</effects>
 	</skill>
 	<skill id="360" toLevel="1" name="Eye of Slayer">
+		<!-- For 10 minutes, increases P. Atk. against monsters/magic creatures/giants/dragons by 5%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
@@ -2294,6 +2346,7 @@
 		</effects>
 	</skill>
 	<skill id="361" toLevel="2" name="Stun Blast">
+		<!-- Creates a powerful shock wave with 2486 Power added to P. Atk., inflicting damage and stunning the target and nearby enemies for 7 seconds. Decreases their P. Def. by 30% and M. Def. by 30%. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target cancel is possible. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2365,6 +2418,7 @@
 		</effects>
 	</skill>
 	<skill id="362" toLevel="1" name="Armor Crush">
+		<!-- Attacks the enemy with 3077 Power added to P. Atk. Stuns the enemy for 7 seconds, and decreases their P. Def. by 30% and M. Def. by 30%. Requires a sword, blunt weapon, two-handed sword or two-handed blunt weapon. Over-hit. Critical. Ignores Shield Defense. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2418,6 +2472,7 @@
 		</effects>
 	</skill>
 	<skill id="363" toLevel="1" name="Song of Meditation">
+		<!-- Increases all party members' MP Recovery bonus by 20% for 2 minutes and decreases Skill MP Consumption by 10%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_MEDITATION</abnormalType>
@@ -2449,6 +2504,7 @@
 		</effects>
 	</skill>
 	<skill id="364" toLevel="1" name="Champion Song">
+		<!-- For 2 minutes, decreases all party members' physical/sing/dance skill use MP Consumption by 20% and physical/sing/dance skill cooldown by 10%. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_CHAMPION</abnormalType>
@@ -2491,6 +2547,7 @@
 		</effects>
 	</skill>
 	<skill id="365" toLevel="1" name="Dance of Siren">
+		<!-- For 2 minutes, increases party members' M. Critical Rate by 50%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
@@ -2524,6 +2581,7 @@
 		</effects>
 	</skill>
 	<skill id="366" toLevel="1" name="Dance of Shadows">
+		<!-- For 2 minutes, decreases all party members' Speed by 50% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SHADOW</abnormalType>
@@ -2558,7 +2616,7 @@
 			<effect name="TriggerSkillByMagicType">
 				<!-- Cancel Shadow Move -->
 				<magicTypes>0;1;2;3;4;22</magicTypes>
-				<skillId>7097</skillId>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
@@ -2573,7 +2631,7 @@
 				<targetType>MY_PARTY</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
-				<skillId>7097</skillId>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -2584,7 +2642,7 @@
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
-				<skillId>7097</skillId>
+				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
 				<skillLevel>1</skillLevel>
 				<isCritical>false</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
@@ -2596,6 +2654,7 @@
 		</effects>
 	</skill>
 	<skill id="367" toLevel="1" name="Dance of Medusa">
+		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for $s1. Requires a dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -2651,6 +2710,7 @@
 		</effects>
 	</skill>
 	<skill id="368" toLevel="1" name="Vengeance">
+		<!-- Provokes nearby enemies to switch targets with 7985 Power. For 30 seconds, increases P. Def. by 5400, M. Def. by 4050, and Buff-canceling Attack Resistance by 50%. Speed -40%. Requires a shield. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -2700,6 +2760,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="369" toLevel="1" name="Evade Shot">
+		<!-- Attacks the enemy with 2020 Power added to P. Atk. and increases Evasion by 6 for 30 seconds. Requires a bow. Over-hit. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -2738,6 +2799,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="370" toLevel="5" name="Clan Body">
+		<!-- Increases clan members' Max HP by $s1. -->
 		<icon>icon.skill0370</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2756,6 +2818,7 @@
 		</effects>
 	</skill>
 	<skill id="371" toLevel="5" name="Clan Spirituality">
+		<!-- Increases clan members' Max CP by $s1. -->
 		<icon>icon.skill0371</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2774,6 +2837,7 @@
 		</effects>
 	</skill>
 	<skill id="372" toLevel="5" name="Clan Soul">
+		<!-- Increases clan members' Max MP by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0372</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2792,7 +2856,7 @@
 		</effects>
 	</skill>
 	<skill id="373" toLevel="5" name="Clan Regeneration">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' HP Recovery Rate by $s1. It only affects those who are of an Heir rank or higher. -->
 		<icon>icon.skill0373</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2811,7 +2875,7 @@
 		</effects>
 	</skill>
 	<skill id="374" toLevel="5" name="Clan Morale">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' CP regeneration by $s1. It only affects those who are of an Elder rank or higher. -->
 		<icon>icon.skill0374</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2830,7 +2894,7 @@
 		</effects>
 	</skill>
 	<skill id="375" toLevel="5" name="Clan Clarity">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' MP regeneration by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0375</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2849,7 +2913,7 @@
 		</effects>
 	</skill>
 	<skill id="376" toLevel="5" name="Clan Might">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' P. Atk. by $s1. It only affects those who are of a Knight rank or higher. -->
 		<icon>icon.skill0376</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2868,7 +2932,7 @@
 		</effects>
 	</skill>
 	<skill id="377" toLevel="5" name="Clan Shield">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' P. Def. by $s1. It only affects those who are of a Knight rank or higher. -->
 		<icon>icon.skill0377</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2887,7 +2951,7 @@
 		</effects>
 	</skill>
 	<skill id="378" toLevel="5" name="Clan Empower">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' M. Atk by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0378</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2906,7 +2970,7 @@
 		</effects>
 	</skill>
 	<skill id="379" toLevel="5" name="Clan M. Def.">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' M. Def. by $s1. It only affects those who are of an Heir rank or higher. -->
 		<icon>icon.skill0379</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2925,7 +2989,7 @@
 		</effects>
 	</skill>
 	<skill id="380" toLevel="5" name="Clan Guidance">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Accuracy by $s1. It only affects those who are of a Knight rank or higher. -->
 		<icon>icon.skill0380</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2944,7 +3008,7 @@
 		</effects>
 	</skill>
 	<skill id="381" toLevel="5" name="Clan Agility">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Evasion by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0381</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2963,7 +3027,7 @@
 		</effects>
 	</skill>
 	<skill id="382" toLevel="5" name="Clan Shield Defense">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Shield Defense by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0382</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2982,7 +3046,7 @@
 		</effects>
 	</skill>
 	<skill id="383" toLevel="5" name="Clan Shield Block">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Shield Defense by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0383</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3001,7 +3065,7 @@
 		</effects>
 	</skill>
 	<skill id="384" toLevel="5" name="Clan Cyclonic Resistance">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Water/Wind Resistance by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0384</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3030,7 +3094,7 @@
 		</effects>
 	</skill>
 	<skill id="385" toLevel="5" name="Clan Magmatic Resistance">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Fire/Earth Resistance by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0385</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3059,7 +3123,7 @@
 		</effects>
 	</skill>
 	<skill id="386" toLevel="5" name="Clan Stun Resistance">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Stun Resistance by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0386</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3077,7 +3141,7 @@
 		</effects>
 	</skill>
 	<skill id="387" toLevel="5" name="Clan Hold Resistance">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Hold Resistance by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0387</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3095,7 +3159,7 @@
 		</effects>
 	</skill>
 	<skill id="388" toLevel="5" name="Clan Sleep Resistance">
-		<!-- Updated to Ertheia -->
+		<!-- Increases clan members' Sleep Resistance by $s1. It only affects those who are of a Knight rank or higher. -->
 		<icon>icon.skill0388</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3113,7 +3177,7 @@
 		</effects>
 	</skill>
 	<skill id="389" toLevel="5" name="Clan Wind Walk">
-		<!-- Updated to Ertheia -->
+		<!-- For clan members Speed +$s1. -->
 		<icon>icon.skill0389</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3132,8 +3196,7 @@
 		</effects>
 	</skill>
 	<skill id="390" toLevel="5" name="Clan Luck">
-		<!-- Updated to Ertheia -->
-		<!-- Glory Days Confirmed -->
+		<!-- When killed by PC, the XP decrease rate and item drop rate are $s1. When killed by an ordinary monster, the XP decrease rate and item drop rate decrease to $s2. This effect applies to those who are heir rank or higher. -->
 		<icon>icon.skill0390</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3177,13 +3240,14 @@
 		</effects>
 	</skill>
 	<skill id="391" toLevel="1" name="Clan Imperium">
-		<!-- Confirmed CT2.5 -->
+		<!-- Grants the privilege of Command Channel formation. -->
 		<icon>icon.skill0391</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="392" toLevel="5" name="Clan Fortune">
+		<!-- Clan XP Gain + $s1. -->
 		<magicLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3214,19 +3278,17 @@
 		</effects>
 	</skill>
 	<skill id="393" toLevel="1" name="none">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="394" toLevel="1" name="none">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="395" toLevel="1" name="Heroic Miracle">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 sec., increases P. Def. by 5400, M. Def. by 4050, Buff-canceling Attack Resistance by 80, and Speed by 5. Consumes 40 Soulstone(s). -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
@@ -3267,7 +3329,7 @@
 		</effects>
 	</skill>
 	<skill id="396" toLevel="1" name="Heroic Berserker">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 2 minutes, increases Accuracy by 8, P. Atk. by 500, M. Atk. by 500, Atk. Spd. by 100, Casting Spd. by 100, Speed by 20, Buff-canceling Attack Resistance by 80, and Healing Power by 100%. In addition, becomes invincible from de-buff attacks. Decreases P. Def. by 25%, M. Def. by 25%, and Evasion by 8. Consumes 40 Soulstone(s). -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
@@ -3337,19 +3399,16 @@
 		</effects>
 	</skill>
 	<skill id="397" toLevel="1" name="none">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="398" toLevel="1" name="none">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="399" toLevel="1" name="none">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

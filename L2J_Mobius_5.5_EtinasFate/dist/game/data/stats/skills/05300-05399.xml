@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5300" toLevel="9" name="Burst Shot">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -55,7 +54,7 @@
 		</effects>
 	</skill>
 	<skill id="5301" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -117,7 +116,7 @@
 		</effects>
 	</skill>
 	<skill id="5302" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -202,7 +201,7 @@
 		</effects>
 	</skill>
 	<skill id="5303" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -287,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="5304" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -351,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="5305" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -426,7 +425,7 @@
 		</effects>
 	</skill>
 	<skill id="5306" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -489,7 +488,7 @@
 		</effects>
 	</skill>
 	<skill id="5307" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -550,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="5308" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -634,7 +633,7 @@
 		</effects>
 	</skill>
 	<skill id="5309" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -1787,7 +1786,7 @@
 		</effects>
 	</skill>
 	<skill id="5333" toLevel="9" name="Poison">
-		<!-- Glory Days confirmed -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -2861,7 +2860,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5362" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2923,7 +2922,7 @@
 		</effects>
 	</skill>
 	<skill id="5363" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3008,7 +3007,7 @@
 		</effects>
 	</skill>
 	<skill id="5364" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3093,7 +3092,7 @@
 		</effects>
 	</skill>
 	<skill id="5365" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3134,7 +3133,7 @@
 		</effects>
 	</skill>
 	<skill id="5366" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3209,7 +3208,7 @@
 		</effects>
 	</skill>
 	<skill id="5367" toLevel="9" name="Paralysis">
-		<!-- A temporary paralysis which prevents movement. -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3250,7 +3249,7 @@
 		</effects>
 	</skill>
 	<skill id="5368" toLevel="9" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3284,7 +3283,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5369" toLevel="9" name="Poison">
-		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3368,7 +3367,7 @@
 		</effects>
 	</skill>
 	<skill id="5370" toLevel="9" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3647,7 +3646,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5376" toLevel="9" name="Blazing Circle">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -4382,7 +4380,7 @@
 		</effects>
 	</skill>
 	<skill id="5394" toLevel="9" name="Poison">
-		<!-- TODO: Need to be Checked in Retail -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -4526,7 +4524,7 @@
 	</skill>
 	<skill id="5396" toLevel="1" name="Spell Stance">
 		<castRange>400</castRange>
-		<channelingSkillId>5397</channelingSkillId>
+		<channelingSkillId>5397</channelingSkillId> <!-- Spell Force -->
 		<channelingTickInterval>2</channelingTickInterval>
 		<hitTime>15000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -4585,8 +4583,7 @@
 		</effects>
 	</skill>
 	<skill id="5399" toLevel="1" name="Heat of Desert">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Condition causing target to decrease HP by heat of desert. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HOT_GROUND</abnormalType>

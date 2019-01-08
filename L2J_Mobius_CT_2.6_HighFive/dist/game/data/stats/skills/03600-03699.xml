@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3600" levels="10" name="Special Ability: Anger">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table>
 		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78.33 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -21,7 +21,7 @@
 		</for>
 	</skill>
 	<skill id="3601" levels="10" name="Special Ability: Haste">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 84 </table>
 		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 1.11 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -39,7 +39,7 @@
 		</for>
 	</skill>
 	<skill id="3602" levels="10" name="Special Ability: Guidance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Accuracy. Enables the character to attack multiple opponents. -->
 		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 84 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
@@ -58,6 +58,7 @@
 		</for>
 	</skill>
 	<skill id="3603" levels="10" name="Demon Sword Zariche">
+		<!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
 		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
 		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
 		<table name="#debuffVuln"> 85 86 87 88 89 90 91 92 93 94 </table>
@@ -105,8 +106,7 @@
 		</for>
 	</skill>
 	<skill id="3604" levels="1" name="Frintezza's Necklace">
-		<!-- Confirmed CT2.5 -->
-		<!-- Boss Jewel Skill -->
+		<!-- Increases Resistance to dark/poison/bleed/paralysis/shock/sleep attacks, and increases poison/bleed/paralysis/shock/sleep attack bonus. Decreases skill re-use time. Reflects some of the damage received back to the enemy. Excludes damage from skill or ranged attacks. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -135,7 +135,7 @@
 		</for>
 	</skill>
 	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases Atk. Spd. and damage of general attacks by 5%. -->
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -148,7 +148,7 @@
 		</for>
 	</skill>
 	<skill id="3606" levels="1" name="Clan Oath Light Armor Set">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases Atk. Spd. and Critical Damage by 5%. -->
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -161,7 +161,7 @@
 		</for>
 	</skill>
 	<skill id="3607" levels="1" name="Clan Oath Robe Set">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases MP Recovery Rate and Casting Spd. By 5% -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -174,7 +174,7 @@
 		</for>
 	</skill>
 	<skill id="3608" levels="3" name="Apella Heavy Armor Set">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max CP/CP recovery bonus, and decreases the skill player's death Exp. penalty. Increases one's own M. Def. when under attack. Decreases Critical Damage success rate. -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
@@ -202,7 +202,7 @@
 		</for>
 	</skill>
 	<skill id="3609" levels="3" name="Apella Light Armor Set">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max CP/CP recovery bonus, and decreases the player's death Exp. penalty. Increases Evasion when under attack. Decreases received Critical Damage. -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
@@ -230,7 +230,7 @@
 		</for>
 	</skill>
 	<skill id="3610" levels="3" name="Apella Robe Set">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max CP/CP recovery bonus, and decreases the player's death Exp. penalty. Increases Speed and P. Def. when under attack. -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
@@ -258,7 +258,7 @@
 		</for>
 	</skill>
 	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -280,6 +280,7 @@
 		</for>
 	</skill>
 	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -296,7 +297,7 @@
 		</for>
 	</skill>
 	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -311,7 +312,7 @@
 		</for>
 	</skill>
 	<skill id="3614" levels="1" name="Enchant Heavy Armor (Grade C)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -333,6 +334,7 @@
 		</for>
 	</skill>
 	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -349,6 +351,7 @@
 		</for>
 	</skill>
 	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -363,7 +366,7 @@
 		</for>
 	</skill>
 	<skill id="3617" levels="1" name="Enchant Heavy Armor (Grade B)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -385,6 +388,7 @@
 		</for>
 	</skill>
 	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -401,6 +405,7 @@
 		</for>
 	</skill>
 	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -415,7 +420,7 @@
 		</for>
 	</skill>
 	<skill id="3620" levels="1" name="Enchant Heavy Armor (Grade A)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -437,6 +442,7 @@
 		</for>
 	</skill>
 	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -453,6 +459,7 @@
 		</for>
 	</skill>
 	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -467,7 +474,7 @@
 		</for>
 	</skill>
 	<skill id="3623" levels="1" name="Enchant Heavy Armor (Grade S)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strengthens a set item to increase P. Def. and MP Recovery Bonus. -->
 		<set name="icon" val="icon.skill0231" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -489,6 +496,7 @@
 		</for>
 	</skill>
 	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
+		<!-- Increases M. Def. and Evasion by enchanting set items. -->
 		<set name="icon" val="icon.skill0233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -505,6 +513,7 @@
 		</for>
 	</skill>
 	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
+		<!-- Increases P. Def. and weight capacity by enchanting set items. -->
 		<set name="icon" val="icon.skill0234" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -519,6 +528,7 @@
 		</for>
 	</skill>
 	<skill id="3626" levels="1" name="Kabokula">
+		<!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="300" />
 		<set name="channelingSkillId" val="5106" />
@@ -540,6 +550,7 @@
 		</cond>
 	</skill>
 	<skill id="3627" levels="1" name="Tapirawa">
+		<!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="300" />
 		<set name="channelingSkillId" val="5107" />
@@ -561,6 +572,7 @@
 		</cond>
 	</skill>
 	<skill id="3628" levels="1" name="Shabonoba">
+		<!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="300" />
 		<set name="channelingSkillId" val="5108" />
@@ -582,6 +594,7 @@
 		</cond>
 	</skill>
 	<skill id="3629" levels="10" name="Blood Sword Akamanah">
+		<!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
 		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
 		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
 		<table name="#debuffVuln"> 85 86 87 88 89 90 91 92 93 94 </table>
@@ -629,6 +642,7 @@
 		</for>
 	</skill>
 	<skill id="3630" levels="1" name="Void Burst">
+		<!-- Discharges cursed energy to attack nearby enemies. -->
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -646,6 +660,7 @@
 		</for>
 	</skill>
 	<skill id="3631" levels="1" name="Void Flow">
+		<!-- Emits cursed energy to strike a distant enemy. -->
 		<set name="affectLimit" val="6-12" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1" />
@@ -664,7 +679,7 @@
 		</for>
 	</skill>
 	<skill id="3632" levels="1" name="Clan Gate">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -688,7 +703,7 @@
 		</for>
 	</skill>
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Active: Momentarily increases Resistance to shock attacks. -->
 		<table name="#trait_shock"> 80 100 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
@@ -706,7 +721,7 @@
 		</for>
 	</skill>
 	<skill id="3634" levels="1" name="Special Ability: Infinity Sword">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases critical rate/damage, Max HP, and Max CP. Inflicts additional damage during PvP. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -726,7 +741,7 @@
 		</for>
 	</skill>
 	<skill id="3635" levels="1" name="Special Ability: Infinity Shooter">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Decreases the enemy's Speed during a critical attack. Increases Max MP, Max CP, and damage inflicted during PvP. The skill re-use time is short. Has a chance to decrease MP consumption. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -742,7 +757,7 @@
 		</for>
 	</skill>
 	<skill id="3636" levels="1" name="Dynasty Platinum Plate - Shield Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def./Max HP/effectiveness of HP recovery magic/Resistance to Shock. -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -761,7 +776,7 @@
 		</for>
 	</skill>
 	<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk/Max HP/Critical Rate/Resistance to Dark/Critical Damage. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -778,7 +793,7 @@
 		</for>
 	</skill>
 	<skill id="3638" levels="1" name="Dynasty Platinum Plate - Bard">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def./Max HP/Resistance to Dark, and decreases MP consumption when using Song/Dance. -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -794,7 +809,7 @@
 		</for>
 	</skill>
 	<skill id="3639" levels="1" name="Dynasty Platinum Plate - Force Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -810,7 +825,7 @@
 		</for>
 	</skill>
 	<skill id="3640" levels="1" name="Dynasty Jewel Leather Mail Dagger Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion, Max HP, Atk. Spd., and Resistance to Hold. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -829,7 +844,7 @@
 		</for>
 	</skill>
 	<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail Bow Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Accuracy/Max MP/Atk. Spd./MP Recovery Rate/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -846,7 +861,7 @@
 		</for>
 	</skill>
 	<skill id="3642" levels="1" name="Dynasty Jeweled Leather Armor Force Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -862,7 +877,7 @@
 		</for>
 	</skill>
 	<skill id="3643" levels="1" name="Dynasty Jeweled Leather Armor Weapon Master">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk/Max HP/Critical Rate/Critical Damage/Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -879,7 +894,7 @@
 		</for>
 	</skill>
 	<skill id="3644" levels="1" name="Dynasty Jeweled Leather Armor Summoner">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk., P. Def, Max HP, Atk. Speed and Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -896,7 +911,7 @@
 		</for>
 	</skill>
 	<skill id="3645" levels="1" name="Dynasty Silver Satin Tunic Healer">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd./Max MP/Heal Power/Resistance to Dark, and decreases magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -913,7 +928,7 @@
 		</for>
 	</skill>
 	<skill id="3646" levels="1" name="Dynasty Silver Satin Tunic Enchanter">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd./Max MP/Resistance to Dark, and decreases MP Consumption/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -930,7 +945,7 @@
 		</for>
 	</skill>
 	<skill id="3647" levels="1" name="Dynasty Silver Satin Tunic Summoner">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd./Max MP/P. Atk./P. Def./Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -947,7 +962,7 @@
 		</for>
 	</skill>
 	<skill id="3648" levels="1" name="Dynasty Silver Satin Tunic Human Wizard">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd./Max MP/M. Atk./Resistance to Dark. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -963,8 +978,7 @@
 		</for>
 	</skill>
 	<skill id="3649" levels="1" name="Beleth's Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Boss Jewel Skill -->
+		<!-- Increases Resistance to Magic, Mental Attack Bonus, Resistance to Mental Attack, Max MP, and Darkness. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -986,7 +1000,7 @@
 		</for>
 	</skill>
 	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to recover CP when attacking. -->
 		<set name="icon" val="icon.skill1306" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1002,7 +1016,7 @@
 		</for>
 	</skill>
 	<skill id="3651" levels="1" name="PvP Weapon - Cancel">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to cancel 1 or more of the opponent's enhanced conditions when attacking. -->
 		<set name="icon" val="icon.skill1056" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1018,7 +1032,7 @@
 		</for>
 	</skill>
 	<skill id="3652" levels="1" name="PvP Weapon - Ignore Shield Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to decrease the opponent's shield defense when attacking. -->
 		<set name="icon" val="icon.skill1304" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1034,7 +1048,7 @@
 		</for>
 	</skill>
 	<skill id="3653" levels="1" name="PvP Weapon - Attack Chance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to inflict additional damage when attacking. -->
 		<set name="icon" val="icon.skill0005" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1050,7 +1064,7 @@
 		</for>
 	</skill>
 	<skill id="3654" levels="1" name="PvP Weapon - Casting">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. when under attack. -->
 		<set name="icon" val="icon.skill0228" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1065,7 +1079,7 @@
 		</for>
 	</skill>
 	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to increase bow/crossbow Atk. Spd. when attacking. -->
 		<set name="icon" val="icon.skill0413" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1081,7 +1095,7 @@
 		</for>
 	</skill>
 	<skill id="3656" levels="1" name="PvP Weapon - Decrease Range">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to decrease bow/crossbow range when attacking. -->
 		<set name="icon" val="icon.skill0486" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1097,7 +1111,7 @@
 		</for>
 	</skill>
 	<skill id="3657" levels="1" name="PvP Weapon - Decrease Resist">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to decrease attribute resistance when attacking. -->
 		<set name="icon" val="icon.skill0756" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1113,7 +1127,7 @@
 		</for>
 	</skill>
 	<skill id="3658" levels="1" name="PvP Shield - Reflect Damage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to reflect the enemy's attack when under attack. -->
 		<set name="icon" val="icon.skill0086" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1128,7 +1142,7 @@
 		</for>
 	</skill>
 	<skill id="3659" levels="1" name="PvP Armor - Damage Down">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases damage incurred when under attack. -->
 		<set name="icon" val="icon.skill1040" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1143,7 +1157,7 @@
 		</for>
 	</skill>
 	<skill id="3660" levels="1" name="PvP Armor - Critical Down">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases critical rate and Critical Damage when under attack. -->
 		<set name="icon" val="icon.skill1242" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1158,7 +1172,7 @@
 		</for>
 	</skill>
 	<skill id="3661" levels="1" name="PvP Armor - Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Adds an effect when Major Heal is used upon a player. -->
 		<set name="icon" val="icon.skill1011" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1172,7 +1186,7 @@
 		</for>
 	</skill>
 	<skill id="3662" levels="1" name="PvP Armor - Speed Down">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases all of the target's speeds when under attack. -->
 		<set name="icon" val="icon.skill1160" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1187,7 +1201,7 @@
 		</for>
 	</skill>
 	<skill id="3663" levels="1" name="PvP Armor - Mirage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to blow away the opponent's target when under attack. -->
 		<set name="icon" val="icon.skill0445" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1202,7 +1216,7 @@
 		</for>
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max CP and continuously recovers CP with the power of the talisman. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
@@ -1224,8 +1238,7 @@
 		</for>
 	</skill>
 	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
-		<!-- Confirmed CT2.5 -->
-		<!-- This skill only has one level, 2. -->
+		<!-- Drastically increases CP regeneration with the power of the talisman. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
@@ -1247,7 +1260,7 @@
 		</for>
 	</skill>
 	<skill id="3666" levels="1" name="Yellow Talisman - Increase Force">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases your own Force Level through the power of the Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1262,7 +1275,7 @@
 		</for>
 	</skill>
 	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transfers some of one's own damage to the servitor with the power of the talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
@@ -1274,6 +1287,7 @@
 		</for>
 	</skill>
 	<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
+		<!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_l_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1285,7 +1299,7 @@
 		</for>
 	</skill>
 	<skill id="3669" levels="1" name="Zubei's Leather Shirt">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1297,7 +1311,7 @@
 		</for>
 	</skill>
 	<skill id="3670" levels="1" name="Zubei's Gauntlet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1309,7 +1323,7 @@
 		</for>
 	</skill>
 	<skill id="3671" levels="1" name="Zubei's Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1321,7 +1335,7 @@
 		</for>
 	</skill>
 	<skill id="3672" levels="1" name="Zubei's Gaiters">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_l_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1334,7 +1348,7 @@
 		</for>
 	</skill>
 	<skill id="3673" levels="1" name="Zubei's Gauntlet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1347,7 +1361,7 @@
 		</for>
 	</skill>
 	<skill id="3674" levels="1" name="Zubei's Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1360,7 +1374,7 @@
 		</for>
 	</skill>
 	<skill id="3675" levels="1" name="Zubei's Helmet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1373,7 +1387,7 @@
 		</for>
 	</skill>
 	<skill id="3676" levels="1" name="Zubei's Breastplate">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1386,7 +1400,7 @@
 		</for>
 	</skill>
 	<skill id="3677" levels="1" name="Tunic of Zubei">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1398,7 +1412,7 @@
 		</for>
 	</skill>
 	<skill id="3678" levels="1" name="Stockings of Zubei">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1410,7 +1424,7 @@
 		</for>
 	</skill>
 	<skill id="3679" levels="1" name="Zubei's Gauntlet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1422,7 +1436,7 @@
 		</for>
 	</skill>
 	<skill id="3680" levels="1" name="Zubei's Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1434,7 +1448,7 @@
 		</for>
 	</skill>
 	<skill id="3681" levels="1" name="Zubei's Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1446,7 +1460,7 @@
 		</for>
 	</skill>
 	<skill id="3682" levels="1" name="Avadon Gloves">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1458,7 +1472,7 @@
 		</for>
 	</skill>
 	<skill id="3683" levels="1" name="Avadon Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1470,7 +1484,7 @@
 		</for>
 	</skill>
 	<skill id="3684" levels="1" name="Avadon Circlet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1482,7 +1496,7 @@
 		</for>
 	</skill>
 	<skill id="3685" levels="1" name="Avadon Gaiters">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_l_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1494,7 +1508,7 @@
 		</for>
 	</skill>
 	<skill id="3686" levels="1" name="Avadon Breastplate">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1506,7 +1520,7 @@
 		</for>
 	</skill>
 	<skill id="3687" levels="1" name="Avadon Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1518,7 +1532,7 @@
 		</for>
 	</skill>
 	<skill id="3688" levels="1" name="Avadon Circlet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1531,7 +1545,7 @@
 		</for>
 	</skill>
 	<skill id="3689" levels="1" name="Avadon Gloves">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1544,7 +1558,7 @@
 		</for>
 	</skill>
 	<skill id="3690" levels="1" name="Avadon Leather Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_t67_ul_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1557,7 +1571,7 @@
 		</for>
 	</skill>
 	<skill id="3691" levels="1" name="Avadon Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. and weight limit. -->
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1570,7 +1584,7 @@
 		</for>
 	</skill>
 	<skill id="3692" levels="1" name="Avadon Circlet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1582,7 +1596,7 @@
 		</for>
 	</skill>
 	<skill id="3693" levels="1" name="Avadon Gloves">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1594,7 +1608,7 @@
 		</for>
 	</skill>
 	<skill id="3694" levels="1" name="Avadon Robe">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. and Casting Spd. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1607,7 +1621,7 @@
 		</for>
 	</skill>
 	<skill id="3695" levels="1" name="Avadon Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
@@ -1619,7 +1633,7 @@
 		</for>
 	</skill>
 	<skill id="3696" levels="1" name="Doom Gloves">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -1632,7 +1646,7 @@
 		</for>
 	</skill>
 	<skill id="3697" levels="1" name="Doom Boots">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -1645,7 +1659,7 @@
 		</for>
 	</skill>
 	<skill id="3698" levels="1" name="Doom Plate Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -1658,7 +1672,7 @@
 		</for>
 	</skill>
 	<skill id="3699" levels="1" name="Doom Helmet">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max HP and lung capacity. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />

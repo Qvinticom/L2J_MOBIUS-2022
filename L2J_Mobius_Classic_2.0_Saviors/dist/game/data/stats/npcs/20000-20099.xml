@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20001" level="1" type="L2Monster" name="Gremlin">
 	<!-- L2wiki: https://l2wiki.com/classic/Gremlin -->
@@ -1082,7 +1082,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.579" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.579" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="2.496" /> <!-- Leather Shoes -->
 				<item id="57" min="47" max="112" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="10.62" /> <!-- Leather Shoe Texture -->
@@ -1428,7 +1428,7 @@
 		<dropLists>
 			<drop>
 				<item id="37" min="1" max="1" chance="2.797" /> <!-- Leather Shoes -->
-				<item id="49" min="1" max="1" chance="2.722" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.722" /> <!-- Gloves -->
 				<item id="57" min="52" max="120" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="11.25" /> <!-- Leather Shoe Texture -->
 				<item id="1831" min="1" max="1" chance="9.185" /> <!-- Antidote -->
@@ -3089,7 +3089,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
 				<item id="1930" min="1" max="1" chance="6.696" /> <!-- Boot Lining -->
@@ -3158,7 +3158,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="167" chance="70" /> <!-- Adena -->
 				<item id="1930" min="1" max="1" chance="6.712" /> <!-- Boot Lining -->
@@ -4197,15 +4197,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4310,15 +4310,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4423,15 +4423,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4472,8 +4472,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
@@ -4663,15 +4663,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4692,11 +4692,11 @@
 				<item id="1870" min="1" max="1" chance="7.2936" /> <!-- Coal -->
 				<item id="1865" min="1" max="1" chance="7.2936" /> <!-- Varnish -->
 				<item id="1874" min="1" max="1" chance="5.2196" /> <!-- Oriharukon Ore -->
-				<item id="955" min="1" max="1" chance="1.1932" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="955" min="1" max="1" chance="1.1932" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 			<spoil>
-				<item id="2153" min="1" max="1" chance="8.2578" /> <!-- Recipe: Tiger's Eye Earring -->
-				<item id="1933" min="1" max="1" chance="6.2468" /> <!-- Dark Stockings Fabric -->
+				<item id="2153" min="1" max="1" chance="8.2578" /> <!-- Recipe: Tiger's Eye -->
+				<item id="1933" min="1" max="1" chance="6.2468" /> <!-- Dark Stocking Fabric -->
 				<item id="2183" min="1" max="1" chance="3.4933" /> <!-- Recipe: Mithril Banded Mail -->
 			</spoil>
 		</dropLists>
@@ -5552,10 +5552,10 @@
 				<item id="2923" min="1" max="1" chance="1.497" /> <!-- Manticore Skin Boot Lining -->
 				<item id="1885" min="1" max="1" chance="0.75" /> <!-- High-grade Suede -->
 				<item id="2974" min="1" max="1" chance="0.3" /> <!-- Recipe: Elven Mithril Stockings -->
-				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR   1 CON - 1) -->
-				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR   1 DEX - 1) -->
-				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men   1 Int - 1) -->
-				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men   1 Wit - 1) -->
+				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR <STR + 1 CON - 1> - 1st Class Transfer -->
+				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR <STR + 1 DEX - 1> - 1st Class Transfer -->
+				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN <Men + 1 Int - 1> - 1st Class Transfer -->
+				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN <Men + 1 Wit - 1> - 1st Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1884" min="1" max="3" chance="66.35" /> <!-- Cord -->
@@ -5954,7 +5954,7 @@
 		<dropLists>
 			<drop>
 				<item id="37" min="1" max="1" chance="2.014" /> <!-- Leather Shoes -->
-				<item id="49" min="1" max="1" chance="2" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2" /> <!-- Gloves -->
 				<item id="57" min="37" max="87" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="8.549" /> <!-- Leather Shoe Texture -->
 				<item id="1864" min="1" max="1" chance="5.893" /> <!-- Stem -->

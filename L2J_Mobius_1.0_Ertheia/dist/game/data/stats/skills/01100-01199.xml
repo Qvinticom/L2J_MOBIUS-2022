@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1100" toLevel="2" name="Chill Flame">
+		<!-- Strikes the target with magical cold flame, causing loss of 27 HP per second for 15 seconds. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -52,6 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="1101" toLevel="2" name="Blaze Quake">
+		<!-- Ignites nearby enemies, causing loss of 58 HP per second for 15 seconds. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -104,6 +106,7 @@
 		</effects>
 	</skill>
 	<skill id="1102" toLevel="6" name="Aura Sink">
+		<!-- Consumes the enemy's MP with 16 Power added to M. Atk. and additionally causes loss of 8 MP per second for 15 seconds. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -189,6 +192,7 @@
 		</effects>
 	</skill>
 	<skill id="1104" toLevel="14" name="Seal of Winter">
+		<!-- Decreases Atk. Spd. of nearby enemies by 23% for 30 seconds. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -280,6 +284,7 @@
 		</effects>
 	</skill>
 	<skill id="1105" toLevel="18" name="Madness">
+		<!-- Confuses the enemy into attacking random targets. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-204</value>
@@ -379,6 +384,7 @@
 		</effects>
 	</skill>
 	<skill id="1107" toLevel="2" name="Frost Flame">
+		<!-- Strikes the target with magical cold flame, causing loss of 58 HP per second for 15 seconds. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -430,6 +436,7 @@
 		</effects>
 	</skill>
 	<skill id="1108" toLevel="4" name="Seal of Flame">
+		<!-- Ignites mystical flames that causes loss of 60 HP per second for 15 seconds. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -488,6 +495,7 @@
 		</effects>
 	</skill>
 	<skill id="1111" toLevel="18" name="Summon Kat the Cat">
+		<!-- Summons Kat the Cat. Consumes 1 Spirit Ore when summoning. -->
 		<icon>icon.skill1111</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<hitTime>
@@ -661,7 +669,7 @@
 					<value level="17">3600</value>
 					<value level="18">3600</value>
 				</lifeTime>
-				<consumeItemId>3031</consumeItemId>
+				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
 				<consumeItemCount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -686,6 +694,7 @@
 		</effects>
 	</skill>
 	<skill id="1126" toLevel="34" name="Servitor Recharge">
+		<!-- Recovers the servitor's MP with up to 41 Power depending on the servitor's level. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">227</value>
@@ -883,7 +892,7 @@
 		</effects>
 	</skill>
 	<skill id="1127" toLevel="45" name="Servitor Heal">
-		<!-- Confirmed CT2.5 -->
+		<!-- Recovers the servitor's HP with 169 Power. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">121</value>
@@ -1136,6 +1145,7 @@
 		</effects>
 	</skill>
 	<skill id="1128" toLevel="18" name="Summon Shadow">
+		<!-- Summons a Shadow. Requires 1 Spirit Ore. -->
 		<icon>icon.skill1128</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<!-- H5 hitTime -->
@@ -1310,7 +1320,7 @@
 					<value level="17">3600</value>
 					<value level="18">3600</value>
 				</lifeTime>
-				<consumeItemId>3031</consumeItemId>
+				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
 				<consumeItemCount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1335,6 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="1129" toLevel="16" name="Summon Reanimated Man">
+		<!-- Summons a Reanimated Man. Requires 3 Spirit Ores. -->
 		<hitTime>3500</hitTime>
 		<icon>icon.skill1129</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1443,7 +1454,7 @@
 					<value level="16">15199</value>
 				</npcId>
 				<lifeTime>3600</lifeTime>
-				<consumeItemId>3031</consumeItemId>
+				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
 				<consumeItemCount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1466,6 +1477,7 @@
 		</effects>
 	</skill>
 	<skill id="1139" toLevel="2" name="Servitor Magic Shield">
+		<!-- Increases the servitor's M. Def. by 23% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1511,6 +1523,7 @@
 		</effects>
 	</skill>
 	<skill id="1140" toLevel="3" name="Servitor Physical Shield">
+		<!-- Increases the servitor's P. Def. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1562,6 +1575,7 @@
 		</effects>
 	</skill>
 	<skill id="1141" toLevel="2" name="Servitor Haste">
+		<!-- Increases the servitor's Atk. Spd. by 15% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1607,6 +1621,7 @@
 		</effects>
 	</skill>
 	<skill id="1144" toLevel="2" name="Servitor Wind Walk">
+		<!-- Increases the servitor's Speed by 20 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1652,6 +1667,7 @@
 		</effects>
 	</skill>
 	<skill id="1145" toLevel="3" name="Servitor Magic Boost">
+		<!-- Increases the servitor's M. Atk. by 55% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1703,6 +1719,7 @@
 		</effects>
 	</skill>
 	<skill id="1146" toLevel="3" name="Mighty Servitor">
+		<!-- Increases the servitor's P. Atk. by 8% for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1754,6 +1771,7 @@
 		</effects>
 	</skill>
 	<skill id="1147" toLevel="6" name="Vampiric Touch">
+		<!-- Inflicts dark damage with 18 Power added to M. Atk. Absorbs 40% of the damage as HP. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-143</value>
@@ -1814,6 +1832,7 @@
 		</effects>
 	</skill>
 	<skill id="1148" toLevel="13" name="Death Spike">
+		<!-- Throws a bone to inflict dark damage on the enemy with 58 Power added to M. Atk. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -1909,6 +1928,7 @@
 		</effects>
 	</skill>
 	<skill id="1151" toLevel="16" name="Corpse Life Drain">
+		<!-- Absorbs residual life energy from a corpse to restore your own HP. -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
@@ -2002,6 +2022,7 @@
 		</effects>
 	</skill>
 	<skill id="1154" toLevel="6" name="Summon Corrupted Man">
+		<!-- Summons a Corrupted Man. Requires 1 Spirit Ore. -->
 		<icon>icon.skill1154</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<!-- set name="castRange" val="40" / -->
@@ -2060,6 +2081,7 @@
 		</effects>
 	</skill>
 	<skill id="1155" toLevel="15" name="Corpse Burst">
+		<!-- Detonates a corpse to inflict dark damage on the enemies using 61 Power added to M. Atk. -->
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -2170,6 +2192,7 @@
 		</effects>
 	</skill>
 	<skill id="1156" toLevel="13" name="Forget">
+		<!-- Takes away the enemy's will to attack. -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
@@ -2234,6 +2257,7 @@
 		</effects>
 	</skill>
 	<skill id="1157" toLevel="5" name="Body To Mind">
+		<!-- Sacrifices your own HP to regenerate MP by 22. -->
 		<effectPoint>
 			<value level="1">243</value>
 			<value level="2">379</value>
@@ -2278,6 +2302,7 @@
 		</effects>
 	</skill>
 	<skill id="1159" toLevel="22" name="Curse Death Link">
+		<!-- Transfers your pain. Inflicts Dark damage on the enemy with 68 Power added to M. Atk. Power increases as HP decreases. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-477</value>
@@ -2417,6 +2442,7 @@
 		</effects>
 	</skill>
 	<skill id="1160" toLevel="15" name="Decrease Speed">
+		<!-- Decreases the enemy's Speed by 20% for 1 minute. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2543,6 +2569,7 @@
 		</effects>
 	</skill>
 	<skill id="1163" toLevel="14" name="Curse Discord">
+		<!-- Confuses the enemy to attack its ally. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
@@ -2627,6 +2654,7 @@
 		</effects>
 	</skill>
 	<skill id="1164" toLevel="19" name="Curse Weakness">
+		<!-- Decreases the enemy's P. Atk. by 17% for 30 seconds. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2777,6 +2805,7 @@
 		</effects>
 	</skill>
 	<skill id="1167" toLevel="6" name="Poisonous Cloud">
+		<!-- Creates a poison cloud around the enemy, causing loss of 24 HP per second for 30 seconds. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -2855,6 +2884,7 @@
 		</effects>
 	</skill>
 	<skill id="1168" toLevel="7" name="Curse Poison">
+		<!-- Poisons the enemy For 30 sec., causing loss of 21 HP every second. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">3</value>
@@ -2936,6 +2966,7 @@
 		</effects>
 	</skill>
 	<skill id="1169" toLevel="14" name="Curse Fear">
+		<!-- Frightens the enemy into fleeing for 10 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -3026,7 +3057,7 @@
 		</effects>
 	</skill>
 	<skill id="1170" toLevel="13" name="Anchor">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Causes the enemy's body to go completely rigid for 5 seconds and causes paralysis for 5 seconds. -->
 		<abnormalTime>5</abnormalTime>
 		<activateRate>100</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -3122,12 +3153,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6091</skillId>
+				<skillId>6091</skillId> <!-- Anchor -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="1171" toLevel="19" name="Blazing Circle">
+		<!-- Spreads ring-shaped flames to inflict Fire damage on nearby enemies with 29 Power added to M. Atk. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -3253,6 +3285,7 @@
 		</effects>
 	</skill>
 	<skill id="1172" toLevel="8" name="Aura Burn">
+		<!-- Inflicts non-attribute damage on the enemy with 19 Power added to M. Atk. -->
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-146</value>
@@ -3320,6 +3353,7 @@
 		</effects>
 	</skill>
 	<skill id="1174" toLevel="22" name="Frost Wall">
+		<!-- Raises a wall of ice that inflicts Water damage on enemies with 48 Power added to M. Atk. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -3463,6 +3497,7 @@
 		</effects>
 	</skill>
 	<skill id="1175" toLevel="8" name="Aqua Swirl">
+		<!-- Creates a powerful vortex of water and inflicts Water damage on the enemy with 23 Power added to M. Atk. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -3533,6 +3568,7 @@
 		</effects>
 	</skill>
 	<skill id="1176" toLevel="15" name="Tempest">
+		<!-- Stirs up a hurricane that inflicts Wind damage near the enemy with 31 Power added to M. Atk. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -3640,6 +3676,7 @@
 		</effects>
 	</skill>
 	<skill id="1177" toLevel="5" name="Wind Strike">
+		<!-- Creates a powerful hurricane and inflicts Wind damage on the enemy with 12 Power added to M. Atk. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-92</value>
@@ -3700,6 +3737,7 @@
 		</effects>
 	</skill>
 	<skill id="1178" toLevel="8" name="Twister">
+		<!-- Creates a powerful cyclone and inflicts Wind damage on the enemy with 23 Power added to M. Atk. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -3769,6 +3807,7 @@
 		</effects>
 	</skill>
 	<skill id="1181" toLevel="3" name="Flame Strike">
+		<!-- Launches a flaming swath of energy and inflicts Fire damage on the enemy with 13 Power added to M. Atk. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -3816,6 +3855,7 @@
 		</effects>
 	</skill>
 	<skill id="1182" toLevel="3" name="Water Resistance">
+		<!-- Increases Water Resistance by 10 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3867,6 +3907,7 @@
 		</effects>
 	</skill>
 	<skill id="1183" toLevel="4" name="Freezing Shackle">
+		<!-- Freezes the enemy with a powerful cold wind, causing loss of 102 HP per second for 15 seconds. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -3930,6 +3971,7 @@
 		</effects>
 	</skill>
 	<skill id="1184" toLevel="6" name="Ice Bolt">
+		<!-- Temporarily freezes the surrounding air, inflicting Water damage on the enemy with 8 Power added to M. Atk., and decreasing their Speed by 20% for 1 minute. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4001,6 +4043,7 @@
 		</effects>
 	</skill>
 	<skill id="1189" toLevel="3" name="Wind Resistance">
+		<!-- Increases Wind Resistance by 10 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4052,6 +4095,7 @@
 		</effects>
 	</skill>
 	<skill id="1191" toLevel="3" name="Fire Resistance">
+		<!-- Increases Fire Resistance by 10 for 20 minutes. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6200" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Giran/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -10,6 +11,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6201" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Giran/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -19,6 +21,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6202" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Giran/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -28,6 +31,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6203" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Giran/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -37,6 +41,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6204" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Giran/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -46,6 +51,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6205" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Oren/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -55,6 +61,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6206" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Oren/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -64,6 +71,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6207" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Oren/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -73,6 +81,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6208" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Oren/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -82,6 +91,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6209" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Oren/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -91,6 +101,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6210" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Oren/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -100,6 +111,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6211" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Oren/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -109,6 +121,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6212" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Oren/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -118,6 +131,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6213" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Oren/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -127,6 +141,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6214" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Oren/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -136,6 +151,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6215" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Aden/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -145,6 +161,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6216" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Aden/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -154,6 +171,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6217" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Aden/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -163,6 +181,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6218" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Aden/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -172,6 +191,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6219" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Aden/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -181,6 +201,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6220" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Aden/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -190,6 +211,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6221" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Aden/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -199,6 +221,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6222" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Aden/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -208,6 +231,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6223" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Aden/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -217,6 +241,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6224" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Aden/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -226,6 +251,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6225" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Innadril/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -235,6 +261,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6226" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Innadril/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -244,6 +271,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6227" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Innadril/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -253,6 +281,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6228" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Innadril/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -262,6 +291,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6229" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Innadril/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -271,6 +301,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6230" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Innadril/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -280,6 +311,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6231" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Innadril/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -289,6 +321,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6232" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Innadril/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -298,6 +331,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6233" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Innadril/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -307,6 +341,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6234" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Innadril/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -316,6 +351,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6235" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Gludio/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -325,6 +361,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6236" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Gludio/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -334,6 +371,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6237" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Gludio/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -343,6 +381,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6238" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Gludio/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -352,6 +391,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6239" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Gludio/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -361,6 +401,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6240" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Gludio/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -370,6 +411,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6241" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Gludio/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -379,6 +421,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6242" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Gludio/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -388,6 +431,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6243" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Gludio/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -397,6 +441,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6244" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Gludio/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -406,6 +451,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6245" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Dion/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -415,6 +461,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6246" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Dion/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -424,6 +471,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6247" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Dion/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -433,6 +481,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6248" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Dion/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -442,6 +491,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6249" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Dion/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -451,6 +501,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6250" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Dion/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -460,6 +511,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6251" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Dion/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -469,6 +521,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6252" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Dion/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -478,6 +531,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6253" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Dion/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -487,6 +541,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6254" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Dion/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -496,6 +551,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6255" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Giran/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -505,6 +561,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6256" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Giran/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -514,6 +571,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6257" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Giran/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -523,6 +581,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6258" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Giran/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -532,6 +591,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6259" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Giran/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -541,6 +601,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6260" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Giran/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -550,6 +611,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6261" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Giran/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -559,6 +621,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6262" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Giran/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -568,6 +631,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6263" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Giran/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -577,6 +641,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6264" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Giran/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -586,6 +651,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6265" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Oren/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -595,6 +661,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6266" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Oren/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -604,6 +671,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6267" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Oren/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -613,6 +681,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6268" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Oren/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -622,6 +691,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6269" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Oren/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -631,6 +701,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6270" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Oren/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -640,6 +711,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6271" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Oren/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -649,6 +721,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6272" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Oren/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -658,6 +731,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6273" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Oren/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -667,6 +741,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6274" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Oren/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -676,6 +751,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6275" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Aden/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -685,6 +761,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6276" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Aden/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -694,6 +771,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6277" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Aden/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -703,6 +781,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6278" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Aden/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -712,6 +791,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6279" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Aden/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -721,6 +801,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6280" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Aden/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -730,6 +811,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6281" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Aden/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -739,6 +821,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6282" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Aden/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -748,6 +831,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6283" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Aden/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -757,6 +841,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6284" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Aden/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -766,6 +851,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6285" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Innadril/Sword/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -775,6 +861,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6286" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Innadril/Spear/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -784,6 +871,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6287" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Innadril/Bow/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -793,6 +881,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6288" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Innadril/Cleric/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -802,6 +891,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6289" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Innadril/Wizard/Stationary. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -811,6 +901,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6290" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Innadril/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -820,6 +911,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6291" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Innadril/Spear/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -829,6 +921,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6292" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Innadril/Bow/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -838,6 +931,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6293" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Innadril/Cleric/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -847,6 +941,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6294" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Innadril/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -856,6 +951,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6295" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Gludio/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -865,6 +961,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6296" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Gludio/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -874,6 +971,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6297" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Dion/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -883,6 +981,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6298" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Dion/Wizard/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -892,6 +991,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6299" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Giran/Sword/Mobile. Can only be used to place a mercenary when the seal of strife is possessed by the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

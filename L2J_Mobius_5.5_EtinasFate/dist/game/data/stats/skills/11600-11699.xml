@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11600" toLevel="1" name="Frenzied Prevailing Sonata">
-		<!-- Updated to IO -->
-		<!-- For 5 minutes, increases clan members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases MP Consumption for magic skills - 10% and the magic cancel rate. -->
 		<icon>icon.skill11600</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -57,8 +55,6 @@
 		</effects>
 	</skill>
 	<skill id="11601" toLevel="1" name="Frenzied Daring Sonata">
-		<!-- Updated to IO -->
-		<!-- For 5 minutes, increases clan members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
 		<icon>icon.skill11601</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -121,8 +117,6 @@
 		</effects>
 	</skill>
 	<skill id="11602" toLevel="1" name="Frenzied Refreshing Sonata">
-		<!-- Updated to IO -->
-		<!-- For 5 minutes, increases clan members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<icon>icon.skill11602</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -193,8 +187,7 @@
 		</effects>
 	</skill>
 	<skill id="11603" toLevel="4" name="Mass Restriction">
-		<!-- Updated to IO -->
-		<!-- During PvP, limits the CP, HP, and MP recovery of target and nearby enemies to maximum 60% for 30 seconds. -->
+		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
 		<icon>icon.skill11603</icon>
 		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
@@ -251,7 +244,6 @@
 		</effects>
 	</skill>
 	<skill id="11604" toLevel="7" name="Shocking Blow">
-		<!-- Updated to IO -->
 		<!-- Removes Invincibility of target and nearby enemies during PvP. -->
 		<icon>icon.skill11604</icon>
 		<affectLimit>10-10</affectLimit> <!-- Custom -->
@@ -295,8 +287,6 @@
 		</effects>
 	</skill>
 	<skill id="11605" toLevel="1" name="Shield Song">
-		<!-- Updated to IO -->
-		<!-- For 30 min., P. Def. + 5%, Attribute Def. + 20, Resistance to bows/crossbows + 10%, and Debuff Resistance + 10%. -->
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -334,8 +324,6 @@
 		</effects>
 	</skill>
 	<skill id="11606" toLevel="1" name="Dance of Might">
-		<!-- Updated to IO -->
-		<!-- For 30 min., P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 10, and Speed + 10. -->
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -369,7 +357,6 @@
 		</effects>
 	</skill>
 	<skill id="11607" toLevel="1" name="Prevailing Song">
-		<!-- For 5 minutes, increases party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases magic skill MP Consumption - 10% and the magic cancel rate. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -425,7 +412,6 @@
 		</effects>
 	</skill>
 	<skill id="11608" toLevel="1" name="Daring Song">
-		<!-- For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -493,7 +479,6 @@
 		</effects>
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
-		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -560,7 +545,6 @@
 		</effects>
 	</skill>
 	<skill id="11610" toLevel="1" name="Prevailing Dance">
-		<!-- For 5 minutes, increases party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases magic skill MP Consumption - 10% and the magic cancel rate. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -616,7 +600,6 @@
 		</effects>
 	</skill>
 	<skill id="11611" toLevel="1" name="Daring Dance">
-		<!-- For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -684,7 +667,6 @@
 		</effects>
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
-		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -751,8 +733,6 @@
 		</effects>
 	</skill>
 	<skill id="11613" toLevel="4" name="Song of Protection">
-		<!-- Updated to IO -->
-		<!-- For 30 sec., increases your P. Def. + 5000 and M. Def. + 5000. Restores 1000 HP. -->
 		<icon>icon.skill11613</icon>
 		<abnormalLvl>1</abnormalLvl> <!-- Guessed -->
 		<abnormalTime>
@@ -795,8 +775,6 @@
 		</effects>
 	</skill>
 	<skill id="11614" toLevel="4" name="Battle Rhapsody Dance">
-		<!-- Updated to IO -->
-		<!-- For 30 sec., increases your P. Atk./M. Atk./Atk. Spd./Casting Spd. + 50%. -->
 		<icon>icon.skill11614</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
@@ -856,8 +834,6 @@
 		</effects>
 	</skill>
 	<skill id="11615" toLevel="1" name="Battle Ditty">
-		<!-- Updated to IO -->
-		<!-- For 30 min., selected party member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11615</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -904,8 +880,6 @@
 		</effects>
 	</skill>
 	<skill id="11616" toLevel="1" name="Protective Ditty">
-		<!-- Updated to IO -->
-		<!-- For 30 min., selected party member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11616</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -953,8 +927,6 @@
 		</effects>
 	</skill>
 	<skill id="11617" toLevel="1" name="Frezied Battle Ditty">
-		<!-- Updated to IO -->
-		<!-- For 30 min., selected clan member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11617</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -1004,8 +976,6 @@
 		</effects>
 	</skill>
 	<skill id="11618" toLevel="1" name="Frenzied Protective Ditty">
-		<!-- Updated to IO -->
-		<!-- For 30 min., selected clan member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11618</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -1051,8 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="11619" toLevel="3" name="Soul Ditty">
-		<!-- Updated to IO -->
-		<!-- Entire party's P. Atk. + 3%, P. Critical Damage + 3%, Atk. Spd. + 2%, M. Atk. + 2%, Casting Spd. + 2%, P. Def. + 2%, M. Def. + 2%, Skill Power + 2%. -->
+		<!-- Increases entire party's P. Atk. by $s1, P. Critical Damage by $s2, Atk. Spd. by $s3, M. Atk. by $s4, Casting Spd. by $s5, P. Def. by $s6, M. Def. by $s7, and Skill Power by $s8. -->
 		<icon>icon.skill11529</icon>
 		<abnormalTime>1800</abnormalTime> <!-- Custom -->
 		<affectRange>1000</affectRange>
@@ -1135,8 +1104,7 @@
 		</effects>
 	</skill>
 	<skill id="11620" toLevel="10" name="Superior Shield Mastery">
-		<!-- Updated to IO -->
-		<!-- Shield Defense Success Rate + $s1, Shield Defense + $s2. -->
+		<!-- Shield Def. Success Rate +$s1, Shield Def. +$s2. -->
 		<icon>icon.skill10003</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -1175,8 +1143,7 @@
 		</effects>
 	</skill>
 	<skill id="11621" toLevel="1" name="Blessing Barrier">
-		<!-- Updated to IO -->
-		<!-- Has a chance to create a barrier that absorbs damage. -->
+		<!-- Creates a defense barrier that absorbs damage as much as $s2 of your P. Def. for $s1. -->
 		<icon>icon.skill11621</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1193,7 +1160,7 @@
 		</effects>
 	</skill>
 	<skill id="11622" toLevel="1" name="Blessing Barrier">
-		<!-- Protected by a barrier. It absorbs 20000 damage for 10 seconds. -->
+		<!-- The barrier absorbs 20000 damage for 10 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>

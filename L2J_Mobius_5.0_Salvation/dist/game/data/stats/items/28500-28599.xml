@@ -6,7 +6,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="28501" name="Noble Compassion Chocolate" type="EtcItem">
-		<!-- Double-click to apply 'Compassion' effect to all party members. STR + 2, INT + 2, Attribute Resistance + 20. Can be stacked with 'Devotion' and 'Longing' effects. -->
+		<!-- Double-click to apply 'Compassion' effect to all party members. XP/ SP +10%, STR +2, INT +2, Attribute Resistance +20. Can be stacked with 'Devotion' and 'Desire' effects. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -18,7 +18,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28502" name="Noble Devotion Candy" type="EtcItem">
-		<!-- Double-click to apply 'Devotion' effect to all party members. STR + 2, INT + 2, DEX + 2, WIT + 2. Can be stacked with 'Compassion' and 'Longing' effects. -->
+		<!-- Double-click to apply 'Devotion' effect to all party members. XP/ SP +10%, STR +2, INT +2, DEX +2, WIT +2. Can be stacked with 'Compassion' and 'Desire' effects. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -30,7 +30,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28503" name="Noble Longing Cookie" type="EtcItem">
-		<!-- Double-click to apply 'Longing' effect to all party members. STR + 2, INT + 2, CON + 2, MEN + 2. Can be stacked with 'Compassion' and 'Devotion' effects. -->
+		<!-- Double-click to apply 'Desire' effect to all party members. XP/ SP +10%, STR +2, INT +2, CON +2, MEN +2. Can be stacked with 'Compassion' and 'Devotion' effects. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -42,7 +42,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28504" name="Frintezza's Transformation Chocolate" type="EtcItem">
-		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform into Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -54,7 +54,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28505" name="Frintezza's Transformation Candy" type="EtcItem">
-		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform in to Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -66,7 +66,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28506" name="Frintezza's Transformation Cookie" type="EtcItem">
-		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform in to Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transforms you into Snow Man/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Angry Tow/ Sleepy Tow. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -78,7 +78,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28507" name="Frintezza's Friend Summon Chocolate" type="EtcItem">
-		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. -->
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. Target a party member and double-click to activate the skill. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -90,7 +90,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28508" name="Frintezza's Friend Summon Candy" type="EtcItem">
-		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. -->
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. Target a party member and double-click to activate the skill. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -102,7 +102,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28509" name="Frintezza's Friend Summon Cookie" type="EtcItem">
-		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. -->
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. Target a party member and double-click to activate the skill. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -114,7 +114,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28510" name="Red Noblesse Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-bod armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
+		<!-- Use to change the appearance of your upper or full-body armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -314,7 +314,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28525" name="Mysterious Dualsword 7-day Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped pack containing a Mysterious Dualsword (7-day). -->
+		<!-- Wrapped pack containing a Mysterious dual sword (7-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -378,7 +378,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28531" name="Top-grade Returning Hero's Support Box" type="EtcItem">
-		<!-- Double-click to obtain the following: Assassin's Bamboo Hat (Vitality - 30-day), XP Rune III (Lv. 1-100+) 100% Pack (7-day), Feather of Blessing x5, Returning Hero's Health Potion x100, La Vie En Rose's Noble Brooch, Lv. 3 Ruby/Sapphire/Emerald/Vital Stone (30-day). Lv. 95 or above. -->
+		<!-- Double-click to get Scroll: Enchant Weapon (R-grade) x4, Blessed Lucky Enchant Stone: Armor (R-grade) x5, Blessed Lucky Enchant Stone: Weapon Pack (R-grade) x1, Prestige Rune 100% Pack x1, Agathion - Matryoshka (30-day) x1, XP Rune III 100% Pack (7-day) x1, Feather of Blessing (Event) x5, Returning Hero's Health Potion x100, La Vie En Rose's Noble Brooch x1, Lv.3 Ruby/ Sapphire/ Emerald/ Vital Stone (30-day). Lv. 95 or above. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -423,7 +423,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28534" name="Emerald Lv. 3" additionalName="30-day" type="Armor">
-		<!-- When equipped, STR + 1, DEX + 1, CON + 1, INT + 1, WIT + 1, and MEN + 1. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, STR +1, DEX +1, CON +1, INT +1, WIT +1, and MEN +1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -497,7 +497,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28541" name="Secret Embryo Bait (85)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 85. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -506,7 +506,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28542" name="Secret Embryo Bait (95)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 95. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -515,7 +515,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28543" name="Secret Embryo Bait (99)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 99. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -524,7 +524,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28544" name="Secret Embryo Bait (102)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 102. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -533,7 +533,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28545" name="Secret Embryo Bait (105)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 105. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -542,7 +542,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28546" name="Secret Embryo Bait Coupon" type="EtcItem">
-		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<!-- Can be exchanged at NPC Peeves in Heine for a Secret Embryo Bait. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket2" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -566,7 +566,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28549" name="Secret Embryo Bait (85)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 85. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -575,7 +575,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28550" name="Secret Embryo Bait (95)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 95. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -584,7 +584,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28551" name="Secret Embryo Bait (99)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 99. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -593,7 +593,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28552" name="Secret Embryo Bait (102)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 102. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -602,7 +602,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28553" name="Secret Embryo Bait (105)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 105. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28558" name="Bloody Amaranthine Ingredient Set" type="EtcItem">
-		<!-- Double-click to obtain the ingredients for crafting Bloody Amaranthine. -->
+		<!-- Double-click to obtain the ingredients for crafting Bloody Helios. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -661,7 +661,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28560" name="Dark Amaranthine Ingredient Set" type="EtcItem">
-		<!-- Double-click to obtain the ingredients for crafting Dark Amaranthine. -->
+		<!-- Double-click to obtain the ingredients for crafting Dark Helios. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1256,7 +1256,7 @@
 		</skills>
 	</item>
 	<item id="28596" name="Legendary Scroll" type="EtcItem">
-		<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+		<!-- Exchange a Elmoreden/ Aden/ Elmore/ Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />

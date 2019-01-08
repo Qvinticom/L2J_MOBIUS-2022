@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23300" levels="1" name="Ghost Piercing">
+		<!-- Envelops with a specter to inflict 300 dark damage every second for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="GHOST_PIERCING" />
@@ -29,12 +30,10 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23303" levels="1" name="Move">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23304" levels="1" name="Move">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -134,37 +133,37 @@
 		</for>
 	</skill>
 	<skill id="23313" levels="5" name="Action Prohibit Immunity">
-		<!-- Increases resistance to action-inhibiting attacks by 100%. -->
+		<!-- Increases Resistance to action-inhibiting attacks by 20%. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23314" levels="5" name="Control Prohibit Immunity">
-		<!-- Increases resistance to control-inhibiting attacks by 100%. -->
+		<!-- Increases Resistance to control-inhibiting attacks by 20%. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23315" levels="5" name="Paralysis Immunity Enhance">
-		<!-- Increases resistance to paralysis attacks by 100%. -->
+		<!-- Increases Resistance to paralysis attacks by 20%. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23316" levels="5" name="Petrification Immunity Enhance">
-		<!-- Increases resistance to petrification attacks by 100%. -->
+		<!-- Increases Resistance to petrification attacks by 20%. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23317" levels="5" name="Fear Immunity Enhance">
-		<!-- Increases resistance to fear attacks by 100%. -->
+		<!-- Increases Resistance to fear attacks by 20%. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23318" levels="1" name="Cat the Ranger Boots">
-		<!-- "Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's resistance to debuff attacks by 80%, resistance to buff canceling attacks by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Reuse delay 10 minutes." -->
+		<!-- Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's Resistance to debuff attacks by 80%, Resistance to buff canceling attacks by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Reuse delay 10 minutes. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23319" levels="1" name="Blood Seeker">
-		<!-- Confirmed High Five -->
+		<!-- HP is decreased momentarily from bleeding. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -192,7 +191,7 @@
 		</for>
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
-		<!-- Confirmed High Five -->
+		<!-- HP is decreased momentarily from bleeding. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -218,7 +217,7 @@
 		</for>
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">
-		<!-- Confirmed High Five -->
+		<!-- Temporarily inflicted with fear and moves regardless of your own volition. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -246,7 +245,7 @@
 		</for>
 	</skill>
 	<skill id="23322" levels="1" name="Demonic Desire">
-		<!-- Confirmed High Five -->
+		<!-- P. Def. is temporarily decreased. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -273,7 +272,7 @@
 		</for>
 	</skill>
 	<skill id="23323" levels="1" name="Fury of Darkness">
-		<!-- Confirmed High Five -->
+		<!-- Temporarily, P. Def. is decreased and you cannot move due to shock. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -302,7 +301,7 @@
 		</for>
 	</skill>
 	<skill id="23324" levels="1" name="Jet Black Typhoon">
-		<!-- Confirmed High Five -->
+		<!-- Temporarily, Casting Spd. and wind type attack power are increased. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -362,22 +361,22 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23333" levels="1" name="Agathion's New Year's Wish">
-		<!-- Description: Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
+		<!-- Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23334" levels="1" name="Lantern Agathion Cute Trick">
-		<!-- Description: Able to see the summoned Lantern's perform cute tricks. -->
+		<!-- Able to see the summoned Lantern's perform cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23335" levels="1" name="Agathion's New Year's Wish">
-		<!-- Description: Vitality is maintained with the power of Juju Agathion. -->
+		<!-- Vitality is maintained with the power of Juju Agathion. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23336" levels="1" name="Juju Agathion Cute Trick">
-		<!-- Description: Summoned Juju performs cute tricks. -->
+		<!-- Summoned Juju performs cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>

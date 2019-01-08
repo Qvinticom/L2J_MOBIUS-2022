@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" levels="13" name="Gift of Queen">
+		<!-- Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#abnormalTime"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#accCombat"> 2 2 3 3 3 3 3 3 3 3 3 3 3 </table>
@@ -31,6 +32,7 @@
 		</for>
 	</skill>
 	<skill id="4701" levels="13" name="Cure of Queen">
+		<!-- Has a chance to remove curses that decrease Accuracy, P. Atk. and Atk. Spd. from all party members . -->
 		<table name="#effectPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mpConsume"> 62 79 98 102 104 107 108 110 113 115 117 119 122 </table>
@@ -52,6 +54,7 @@
 		</for>
 	</skill>
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
+		<!-- Buff magic used by the Unicorn Seraphim. Party members' MP regeneration bonus temporarily increased. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#abnormalTime"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#effectPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
@@ -80,6 +83,7 @@
 		</for>
 	</skill>
 	<skill id="4703" levels="13" name="Gift of Seraphim">
+		<!-- Unicorn Seraphim's buff magic temporarily reduces party members' magic skill recovery time. ?? 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#abnormalTime"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#effectPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
@@ -108,6 +112,7 @@
 		</for>
 	</skill>
 	<skill id="4704" levels="13" name="Cure of Seraphim">
+		<!-- Unicorn Seraphim's cure magic. Removes Sleep, Hold, Stun, Silence and Paralysis debuffs from party members. -->
 		<table name="#effectPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#mpConsume"> 62 79 98 102 104 107 108 110 113 115 117 119 122 </table>
@@ -129,8 +134,7 @@
 		</for>
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to instantly decrease their P. Def and M. Def. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#activateRates"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#effectPoints"> -1621 -1831 -1975 -1997 -2007 -2017 -2026 -2035 -2043 -2051 -2059 -2066 -2074 </table>
@@ -171,8 +175,7 @@
 		</for>
 	</skill>
 	<skill id="4706" levels="13" name="Mass Curse of Shade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Nightshade's debuff magic. Provokes nearby enemies and decreases P. Def and M. Def with curse. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#activateRates"> 40 40 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#effectPoints"> -1621 -1831 -1975 -1997 -2007 -2017 -2026 -2035 -2043 -2051 -2059 -2066 -2074 </table>
@@ -214,8 +217,7 @@
 		</for>
 	</skill>
 	<skill id="4707" levels="13" name="Shade Sacrifice">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Nightshade special HP recovery magic. Sacrifices one's own HP to regenerate HP of party members. Power 589. -->
 		<table name="#amount"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#effectPoints"> 589 700 789 804 810 816 826 835 844 852 860 867 874 </table>
 		<table name="#hpConsume"> 706 840 946 964 972 979 991 1002 1013 1023 1032 1041 1049 </table>
@@ -239,6 +241,7 @@
 		</for>
 	</skill>
 	<skill id="4708" levels="10" name="Cursed Strike">
+		<!-- Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046. -->
 		<table name="#effectPoints"> -279 -296 -311 -323 -328 -333 -337 -340 -341 -342 </table>
 		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 </table>
 		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 </table>
@@ -270,6 +273,7 @@
 		</for>
 	</skill>
 	<skill id="4709" levels="10" name="Cursed Blow">
+		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 1249. -->
 		<table name="#effectPoints"> -279 -296 -311 -323 -328 -333 -337 -340 -341 -342 </table>
 		<table name="#magicLvl"> 58 62 66 70 72 74 76 78 79 80 </table>
 		<table name="#mpConsume"> 58 62 67 71 73 75 77 78 79 80 </table>
@@ -292,6 +296,7 @@
 		</for>
 	</skill>
 	<skill id="4710" levels="12" name="Wild Stun">
+		<!-- De-buff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 16. -->
 		<table name="#effectPoints"> -49 -73 -102 -135 -170 -202 -226 -235 -240 -243 -246 -248 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 3 5 7 9 12 14 17 18 18 19 20 20 </table>
@@ -324,6 +329,7 @@
 		</for>
 	</skill>
 	<skill id="4711" levels="12" name="Wild Defense">
+		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def and M. Def significantly while greatly reducing Atk. Spd. and Speed. -->
 		<table name="#activateRates"> -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 15 </table>
 		<table name="#effectPoints"> 138 204 285 379 477 566 635 659 676 689 700 709 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -352,6 +358,7 @@
 		</for>
 	</skill>
 	<skill id="4712" levels="12" name="Bright Burst">
+		<!-- Star Hatchling/Strider's attack skill. Power 6. -->
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -635 -659 -676 -689 -700 -709 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 6 6 7 7 8 8 9 9 10 10 11 11 </table>
@@ -374,6 +381,7 @@
 		</for>
 	</skill>
 	<skill id="4713" levels="12" name="Bright Heal">
+		<!-- Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33. -->
 		<table name="#amount"> 33 61 98 145 198 251 298 316 330 338 341 342 </table>
 		<table name="#effectPoints"> 33 61 98 145 198 251 298 316 331 347 358 366 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -396,27 +404,28 @@
 		</for>
 	</skill>
 	<skill id="4714" levels="1" name="Twilight Dragon">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- An active dragon with fast moving feet. -->
 		<set name="icon" val="icon.skill1373" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4715" levels="1" name="Wind Dragon">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
 		<set name="icon" val="icon.skill1373" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4716" levels="1" name="Star Dragon">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases. -->
 		<set name="icon" val="icon.skill1373" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4717" levels="12" name="Heal Trick">
+		<!-- A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9. -->
 		<table name="#effectPoints"> 9 16 25 37 50 63 75 79 83 87 90 92 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 5 8 12 17 20 25 29 32 33 33 34 34 </table>
@@ -440,6 +449,7 @@
 		</for>
 	</skill>
 	<skill id="4718" levels="12" name="Greater Heal Trick">
+		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power 37. -->
 		<table name="#effectPoints"> 62 113 184 272 371 471 558 592 620 651 672 685 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 33 59 88 122 162 195 228 242 252 259 262 262 </table>
@@ -463,7 +473,6 @@
 		</for>
 	</skill>
 	<skill id="4719" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796 </table>
@@ -483,7 +492,6 @@
 		</for>
 	</skill>
 	<skill id="4720" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860 </table>
@@ -503,7 +511,6 @@
 		</for>
 	</skill>
 	<skill id="4721" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349 </table>
@@ -523,7 +530,6 @@
 		</for>
 	</skill>
 	<skill id="4722" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430 </table>
@@ -543,7 +549,6 @@
 		</for>
 	</skill>
 	<skill id="4723" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512 </table>
@@ -563,6 +568,7 @@
 		</for>
 	</skill>
 	<skill id="4724" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
@@ -592,6 +598,7 @@
 		</for>
 	</skill>
 	<skill id="4725" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
@@ -621,6 +628,7 @@
 		</for>
 	</skill>
 	<skill id="4726" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
@@ -650,6 +658,7 @@
 		</for>
 	</skill>
 	<skill id="4727" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
@@ -679,6 +688,7 @@
 		</for>
 	</skill>
 	<skill id="4728" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
@@ -708,7 +718,6 @@
 		</for>
 	</skill>
 	<skill id="4729" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 168 453 1251 3265 7446 16511 25566 30178 34864 39544 44350 49193 </table>
@@ -729,7 +738,6 @@
 		</for>
 	</skill>
 	<skill id="4730" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 142 382 1056 2760 7131 13935 21585 25467 29565 34048 38806 43290 </table>
@@ -750,7 +758,6 @@
 		</for>
 	</skill>
 	<skill id="4731" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 76 204 563 1473 3804 7437 11500 13555 15724 18112 20667 23023 </table>
@@ -771,7 +778,6 @@
 		</for>
 	</skill>
 	<skill id="4732" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 71 191 528 1382 3566 6977 10793 12734 14783 17044 19381 21645 </table>
@@ -792,7 +798,6 @@
 		</for>
 	</skill>
 	<skill id="4733" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 67 179 494 1287 3327 6516 10085 11913 13841 15937 18140 20268 </table>
@@ -813,7 +818,6 @@
 		</for>
 	</skill>
 	<skill id="4734" levels="12" name="BOSS Spinning Slash">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
@@ -832,7 +836,6 @@
 		</for>
 	</skill>
 	<skill id="4735" levels="12" name="BOSS Spinning Slash">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
@@ -851,7 +854,6 @@
 		</for>
 	</skill>
 	<skill id="4736" levels="12" name="BOSS Spinning Slash">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
@@ -870,7 +872,6 @@
 		</for>
 	</skill>
 	<skill id="4737" levels="12" name="BOSS Spinning Slash">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
@@ -889,7 +890,6 @@
 		</for>
 	</skill>
 	<skill id="4738" levels="12" name="BOSS Spinning Slash">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
@@ -908,7 +908,6 @@
 		</for>
 	</skill>
 	<skill id="4739" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796 </table>
@@ -928,7 +927,6 @@
 		</for>
 	</skill>
 	<skill id="4740" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860 </table>
@@ -948,7 +946,6 @@
 		</for>
 	</skill>
 	<skill id="4741" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349 </table>
@@ -968,7 +965,6 @@
 		</for>
 	</skill>
 	<skill id="4742" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430 </table>
@@ -988,7 +984,6 @@
 		</for>
 	</skill>
 	<skill id="4743" levels="12" name="BOSS Strike">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512 </table>
@@ -1008,6 +1003,7 @@
 		</for>
 	</skill>
 	<skill id="4744" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
@@ -1037,6 +1033,7 @@
 		</for>
 	</skill>
 	<skill id="4745" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430 </table>
@@ -1066,6 +1063,7 @@
 		</for>
 	</skill>
 	<skill id="4746" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675 </table>
@@ -1095,6 +1093,7 @@
 		</for>
 	</skill>
 	<skill id="4747" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215 </table>
@@ -1124,6 +1123,7 @@
 		</for>
 	</skill>
 	<skill id="4748" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756 </table>
@@ -1153,7 +1153,6 @@
 		</for>
 	</skill>
 	<skill id="4749" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 280 755 2084 5441 14076 27518 42610 50296 58107 65907 73917 81989 </table>
@@ -1174,7 +1173,6 @@
 		</for>
 	</skill>
 	<skill id="4750" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 236 637 1761 4600 11884 23226 35974 42445 49275 56746 64677 72150 </table>
@@ -1195,7 +1193,6 @@
 		</for>
 	</skill>
 	<skill id="4751" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 126 339 937 2455 6339 12395 19166 22591 26206 30185 34445 38371 </table>
@@ -1216,7 +1213,6 @@
 		</for>
 	</skill>
 	<skill id="4752" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 118 319 879 2303 5942 11627 17987 21223 24638 28406 32302 36075 </table>
@@ -1237,7 +1233,6 @@
 		</for>
 	</skill>
 	<skill id="4753" levels="12" name="BOSS Mortal Blow">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#power"> 111 298 824 2145 5545 10860 16808 19855 23069 26561 30232 33780 </table>
@@ -1258,7 +1253,6 @@
 		</for>
 	</skill>
 	<skill id="4754" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 327 882 2435 6357 16445 32150 49783 58763 67888 77001 86359 95790 </table>
@@ -1277,7 +1271,6 @@
 		</for>
 	</skill>
 	<skill id="4755" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 275 744 2057 5374 13885 27135 42030 49590 57569 66298 75565 84295 </table>
@@ -1296,7 +1289,6 @@
 		</for>
 	</skill>
 	<skill id="4756" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 147 396 1095 2868 7407 14481 22392 26393 30618 35267 40244 44830 </table>
@@ -1315,7 +1307,6 @@
 		</for>
 	</skill>
 	<skill id="4757" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 138 372 1027 2691 6943 13584 21015 24795 28785 33188 37739 42148 </table>
@@ -1334,7 +1325,6 @@
 		</for>
 	</skill>
 	<skill id="4758" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 129 348 962 2506 6479 12688 19638 23198 26952 31032 35321 39466 </table>
@@ -1353,6 +1343,7 @@
 		</for>
 	</skill>
 	<skill id="4759" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895 </table>
@@ -1381,6 +1372,7 @@
 		</for>
 	</skill>
 	<skill id="4760" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148 </table>
@@ -1409,6 +1401,7 @@
 		</for>
 	</skill>
 	<skill id="4761" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415 </table>
@@ -1437,6 +1430,7 @@
 		</for>
 	</skill>
 	<skill id="4762" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074 </table>
@@ -1465,6 +1459,7 @@
 		</for>
 	</skill>
 	<skill id="4763" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733 </table>
@@ -1493,7 +1488,6 @@
 		</for>
 	</skill>
 	<skill id="4764" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 327 882 2435 6357 16445 32150 49783 58763 67888 77001 86359 95790 </table>
@@ -1512,7 +1506,6 @@
 		</for>
 	</skill>
 	<skill id="4765" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 275 744 2057 5374 13885 27135 42030 49590 57569 66298 75565 84295 </table>
@@ -1531,7 +1524,6 @@
 		</for>
 	</skill>
 	<skill id="4766" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 147 396 1095 2868 7407 14481 22392 26393 30618 35267 40244 44830 </table>
@@ -1550,7 +1542,6 @@
 		</for>
 	</skill>
 	<skill id="4767" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 138 372 1027 2691 6943 13584 21015 24795 28785 33188 37739 42148 </table>
@@ -1569,7 +1560,6 @@
 		</for>
 	</skill>
 	<skill id="4768" levels="12" name="BOSS Power Shot">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 129 348 962 2506 6479 12688 19638 23198 26952 31032 35321 39466 </table>
@@ -1588,6 +1578,7 @@
 		</for>
 	</skill>
 	<skill id="4769" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895 </table>
@@ -1616,6 +1607,7 @@
 		</for>
 	</skill>
 	<skill id="4770" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148 </table>
@@ -1644,6 +1636,7 @@
 		</for>
 	</skill>
 	<skill id="4771" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415 </table>
@@ -1672,6 +1665,7 @@
 		</for>
 	</skill>
 	<skill id="4772" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074 </table>
@@ -1700,6 +1694,7 @@
 		</for>
 	</skill>
 	<skill id="4773" levels="12" name="Stun">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733 </table>
@@ -1728,7 +1723,6 @@
 		</for>
 	</skill>
 	<skill id="4774" levels="12" name="BOSS Spear Attack">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
@@ -1747,7 +1741,6 @@
 		</for>
 	</skill>
 	<skill id="4775" levels="12" name="BOSS Spear Attack">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
@@ -1766,7 +1759,6 @@
 		</for>
 	</skill>
 	<skill id="4776" levels="12" name="BOSS Spear Attack">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
@@ -1785,7 +1777,6 @@
 		</for>
 	</skill>
 	<skill id="4777" levels="12" name="BOSS Spear Attack">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
@@ -1804,7 +1795,6 @@
 		</for>
 	</skill>
 	<skill id="4778" levels="12" name="BOSS Spear Attack">
-		<!-- Boss Skill -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
@@ -1823,7 +1813,6 @@
 		</for>
 	</skill>
 	<skill id="4779" levels="12" name="BOSS Heal">
-		<!-- Boss Skill -->
 		<table name="#amount"> 1640 2824 4501 6612 9334 11649 12865 13406 13624 13544 13303 13157 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
@@ -1844,7 +1833,6 @@
 		</for>
 	</skill>
 	<skill id="4780" levels="12" name="BOSS Heal">
-		<!-- Boss Skill -->
 		<table name="#amount"> 1382 2381 3802 5590 7881 9832 10862 11314 11553 11661 11640 11578 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
@@ -1865,7 +1853,6 @@
 		</for>
 	</skill>
 	<skill id="4781" levels="12" name="BOSS Heal">
-		<!-- Boss Skill -->
 		<table name="#amount"> 736 1267 2024 2983 4204 5247 5787 6022 6144 6203 6199 6158 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
@@ -1886,7 +1873,6 @@
 		</for>
 	</skill>
 	<skill id="4782" levels="12" name="BOSS Heal">
-		<!-- Boss Skill -->
 		<table name="#amount"> 691 1191 1899 2799 3941 4922 5431 5657 5777 5838 5813 5789 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
@@ -1907,7 +1893,6 @@
 		</for>
 	</skill>
 	<skill id="4783" levels="12" name="BOSS Heal">
-		<!-- Boss Skill -->
 		<table name="#amount"> 647 1115 1778 2607 3677 4597 5075 5293 5409 5458 5441 5421 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
@@ -1928,7 +1913,6 @@
 		</for>
 	</skill>
 	<skill id="4784" levels="12" name="BOSS Chant of Life">
-		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<table name="#hot"> 167 210 315 507 784 1026 1195 1283 1358 1427 951 940 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1954,7 +1938,6 @@
 		</for>
 	</skill>
 	<skill id="4785" levels="12" name="BOSS Chant of Life">
-		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<table name="#hot"> 141 177 266 428 662 866 1009 1083 1152 1229 832 827 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -1980,7 +1963,6 @@
 		</for>
 	</skill>
 	<skill id="4786" levels="12" name="BOSS Chant of Life">
-		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<table name="#hot"> 75 94 142 229 353 463 538 576 613 654 443 440 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -2006,7 +1988,6 @@
 		</for>
 	</skill>
 	<skill id="4787" levels="12" name="BOSS Chant of Life">
-		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<table name="#hot"> 71 89 133 215 331 434 505 542 576 615 416 414 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -2032,7 +2013,6 @@
 		</for>
 	</skill>
 	<skill id="4788" levels="12" name="BOSS Chant of Life">
-		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<table name="#hot"> 66 83 125 200 309 405 472 507 539 576 389 388 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -2071,70 +2051,70 @@
 		</for>
 	</skill>
 	<skill id="4790" levels="1" name="Raid Boss - Level 23">
-		<!-- Confirmed CT2.5 -->
+		<!-- A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in Gludio. He waits for an opportunity to return to his country. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4791" levels="1" name="Raid Boss - Level 30">
-		<!-- Confirmed CT2.5 -->
+		<!-- The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4792" levels="1" name="Raid Boss - Level 42">
-		<!-- Confirmed CT2.5 -->
+		<!-- A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by the magic power of the Wastelands. The Spider was forced to retreat to this place. It swears that someday it will feed on the Ants and destroy them. It quietly grows in power while sharpening its fangs for vengeance. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4793" levels="1" name="Raid Boss - Level 55">
-		<!-- Confirmed CT2.5 -->
+		<!-- A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, and the desire for revenge. Gripped by his anger, he is still at war against all humans and mystics. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4794" levels="1" name="Raid Boss - Level 50">
-		<!-- Confirmed CT2.5 -->
+		<!-- One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came back to life. But the devil's bargain turned his once noble ideals towards loathing, turning him into a monster with the power of evil magic. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4795" levels="1" name="Raid Boss - Level 60">
-		<!-- Confirmed CT2.5 -->
+		<!-- A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Eva, made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafurion's troops, or invaders threatening the garden. The dwarven master made two other golems, but this third and final one was the strongest. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4796" levels="1" name="Raid Boss - Level 25">
-		<!-- Confirmed CT2.5 -->
+		<!-- A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after suffering cruel attacks from both sides, but Pay Dryad still remains here waiting for the golden age of peace to return. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4797" levels="1" name="Raid Boss - Level 34">
-		<!-- Confirmed CT2.5 -->
+		<!-- An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He grows in power, and uses summoning magic learned from the Dark Elves to harness powerful servitors and minions. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4798" levels="1" name="Raid Boss - Level 34">
-		<!-- Confirmed CT2.5 -->
+		<!-- She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates and even her own children. The Queen yearns to build a kingdom for Marsh Stakatos someday. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4799" levels="1" name="Raid Boss - Level 49">
-		<!-- Confirmed CT2.5 -->
+		<!-- He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He greatly detests the Silenos as well as humans, and is a formidable enemy. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />

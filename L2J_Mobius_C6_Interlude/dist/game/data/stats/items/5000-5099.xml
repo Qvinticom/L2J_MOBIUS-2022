@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5000" type="EtcItem" name="Recipe: Sword of Damascus (60%)">
+		<!-- For Dwarves only. The recipe for a Sword of Damascus. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -15,6 +16,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5001" type="EtcItem" name="Recipe: Lance (60%)">
+		<!-- For Dwarves only. The recipe for a Lance. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -29,6 +31,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5002" type="EtcItem" name="Recipe: Deadman's Glory (60%)">
+		<!-- For Dwarves only. The recipe for the Deadman's Glory. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -43,6 +46,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5003" type="EtcItem" name="Recipe: Art of Battle Axe (60%)">
+		<!-- For Dwarves only. The recipe for the Art of Battle Axe. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -57,6 +61,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5004" type="EtcItem" name="Recipe: Staff of Evil Spirits (60%)">
+		<!-- For Dwarves only. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -71,6 +76,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5005" type="EtcItem" name="Recipe: Demon Dagger (60%)">
+		<!-- For Dwarves only. The recipe for the Demon Dagger. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -85,6 +91,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5006" type="EtcItem" name="Recipe: Bellion Cestus (60%)">
+		<!-- For Dwarves only. The recipe for the Bellion Cestus. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -99,6 +106,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5007" type="EtcItem" name="Recipe: Bow of Peril (60%)">
+		<!-- For Dwarves only. The recipe for a Bow of Peril. Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -113,6 +121,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5008" type="EtcItem" name="Recipe: Pata (60%)">
+		<!-- For Dwarves only. The recipe for a Pata. Requires Create Item - Skill Level 6. The success rate is 60%. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="recipe"/>
 		<set name="weight" val="30"/>
@@ -127,6 +136,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5009" type="EtcItem" name="Trophy of Alliance">
+		<!-- A mark that is needed to participate in a clan hall war. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -141,6 +151,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="5010" type="EtcItem" name="Echo Crystal - Theme of Victory">
+		<!-- An echo crystal that plays the theme music of victory. Will work once and then disappear. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -155,6 +166,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5011" type="EtcItem" name="Star of Destiny">
+		<!-- Accessory that Maestro Reorin created after receiving a request from a woman of unknown identity. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -169,6 +181,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="5012" type="EtcItem" name="Leikan's Letter">
+		<!-- A letter received from Guard Leikan. Take it to Piotur at the farm east of the Orc Barracks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -183,6 +196,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5013" type="EtcItem" name="Spellbook: Elemental Assault">
+		<!-- Spellbook needed to learn Elemental Assault. Used by Sorcerers and Sorceresses. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -197,6 +211,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5014" type="EtcItem" name="Spellbook: Elemental Symphony">
+		<!-- Spellbook needed to learn Elemental Symphony. Used by Spellsingers. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -211,6 +226,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5015" type="EtcItem" name="Spellbook: Elemental Storm">
+		<!-- Spellbook needed to learn Elemental Storm. Used by Spellhowlers. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -225,6 +241,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5016" type="EtcItem" name="Seed: Dark Coda">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the dark coda. For best results, a level 5-15 character should plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -239,6 +256,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5017" type="EtcItem" name="Seed: Red Coda">
+		<!-- Plant this seed onto a monster in the Gludio area-it will bear the fruit of the Red Coda. For best results, a level 8-18 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -253,6 +271,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5018" type="EtcItem" name="Seed: Chilly Coda">
+		<!-- Plant this seed onto a monster in the Gludio area-it will bear the fruit of the Chilly Coda. For best results, a level 11-21 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -267,6 +286,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5019" type="EtcItem" name="Seed: Blue Coda">
+		<!-- Plant this seed onto a monster in the Gludio area-it will bear the fruit of the Blue Coda. For best results, a level 14-24 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -281,6 +301,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5020" type="EtcItem" name="Seed: Golden Coda">
+		<!-- Plant this seed onto a monster in the Gludio area-it will bear the fruit of the Golden Coda. For best results, a level 17-27 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -295,6 +316,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5021" type="EtcItem" name="Seed: Lute Coda">
+		<!-- Plant this seed onto a monster in the Gludio area-it will bear the fruit of the Lute Coda. For best results, a level 20-30 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -309,6 +331,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5022" type="EtcItem" name="Seed: Desert Coda">
+		<!-- Plant this seed onto a monster in the Gludio area-it will bear the fruit of the Desert Coda. For best results, a level 23-33 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -323,6 +346,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5023" type="EtcItem" name="Seed: Blue Cobol">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -337,6 +361,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5024" type="EtcItem" name="Seed: Blue Coda">
+		<!-- Plant this seed onto a monster in the Dion area-it will bear the fruit of the Blue Coda. For best results, a level 14-24 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -351,6 +376,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5025" type="EtcItem" name="Seed: Golden Coda">
+		<!-- Plant this seed onto a monster in the Dion area-it will bear the fruit of the Golden Coda. For best results, a level 17-27 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -365,6 +391,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5026" type="EtcItem" name="Seed: Lute Coda">
+		<!-- Plant this seed onto a monster in the Dion area-it will bear the fruit of the Lute Coda. For best results, a level 20-30 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -379,6 +406,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5027" type="EtcItem" name="Seed: Desert Coda">
+		<!-- Plant this seed onto a monster in the Dion area-it will bear the fruit of the Desert Coda. For best results, a level 23-33 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -393,6 +421,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5028" type="EtcItem" name="Seed: Red Cobol">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -407,6 +436,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5029" type="EtcItem" name="Seed: Chilly Cobol">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -421,6 +451,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5030" type="EtcItem" name="Seed: Thorn Cobol">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -435,6 +466,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5031" type="EtcItem" name="Seed: Golden Cobol">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -449,6 +481,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5032" type="EtcItem" name="Seed: Great Cobol">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -463,6 +496,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5033" type="EtcItem" name="Seed: Red Cobol">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -477,6 +511,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5034" type="EtcItem" name="Seed: Chilly Cobol">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -491,6 +526,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5035" type="EtcItem" name="Seed: Blue Cobol">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -505,6 +541,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5036" type="EtcItem" name="Seed: Thorn Cobol">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -519,6 +556,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5037" type="EtcItem" name="Seed: Golden Cobol">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -533,6 +571,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5038" type="EtcItem" name="Seed: Great Cobol">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -547,6 +586,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5039" type="EtcItem" name="Seed: Red Codran">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -561,6 +601,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5040" type="EtcItem" name="Seed: Twin Codran">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -575,6 +616,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5041" type="EtcItem" name="Seed: Desert Codran">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -589,6 +631,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5042" type="EtcItem" name="Seed: Dark Coda">
+		<!-- Plant this seed onto a monster in the Oren area-it will bear the fruit of the Dark Coda. For best results, a level 5-15 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -603,6 +646,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5043" type="EtcItem" name="Seed: Red Coda">
+		<!-- Plant this seed onto a monster in the Oren area-it will bear the fruit of the Red Coda. For best results, a level 8-18 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -617,6 +661,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5044" type="EtcItem" name="Seed: Blue Coda">
+		<!-- Plant this seed onto a monster in the Oren area-it will bear the fruit of the Blue Coda. For best results, a level 14-24 character must plant it on a monster within the same level range. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -631,6 +676,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5045" type="EtcItem" name="Seed: Red Cobol">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Red Cobol. For best results, a level 26-36 character must plant it on a level 26-36 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -645,6 +691,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5046" type="EtcItem" name="Seed: Chilly Cobol">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Chilly Cobol. For best results, a level 29-39 character must plant it on a level 29-39 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -659,6 +706,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5047" type="EtcItem" name="Seed: Blue Cobol">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Blue Cobol. For best results, a level 32-42 character must plant it on a level 32-42 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -673,6 +721,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5048" type="EtcItem" name="Seed: Thorn Cobol">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -687,6 +736,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5049" type="EtcItem" name="Seed: Sea Codran">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Sea Codran. For best results, a level 45-55 character must plant it on a level 45-55 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -701,6 +751,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5050" type="EtcItem" name="Seed: Chilly Codran">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -715,6 +766,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5051" type="EtcItem" name="Seed: Blue Codran">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -729,6 +781,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5052" type="EtcItem" name="Seed: Twin Codran">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -743,6 +796,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5053" type="EtcItem" name="Seed: Thorn Cobol">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Thorn Cobol. For best results, a level 35-45 character must plant it on a level 35-45 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -757,6 +811,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5054" type="EtcItem" name="Seed: Golden Cobol">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Golden Cobol. For best results, a level 38-48 character must plant it on a level 38-48 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -771,6 +826,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5055" type="EtcItem" name="Seed: Great Cobol">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Great Cobol. For best results, a level 41-51 character must plant it on a level 41-51 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -785,6 +841,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5056" type="EtcItem" name="Seed: Red Codran">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Red Codran. For best results, a level 44-54 character must plant it on a level 44-54 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -799,6 +856,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5057" type="EtcItem" name="Seed: Chilly Codran">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Chilly Codran. For best results, a level 47-57 character must plant it on a level 47-57 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -813,6 +871,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5058" type="EtcItem" name="Seed: Blue Codran">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Blue Codran. For best results, a level 50-60 character must plant it on a level 50-60 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -827,6 +886,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5059" type="EtcItem" name="Seed: Twin Codran">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Twin Codran. For best results, a level 53-63 character must plant it on a level 53-63 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -841,6 +901,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5060" type="EtcItem" name="Seed: Great Codran">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Great Codran. For best results, a level 56-66 character must plant it on a level 56-66 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>
@@ -855,6 +916,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="5061" type="EtcItem" name="Seed: Desert Codran">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Desert Codran. For best results, a level 59-69 character must plant it on a level 59-69 monster. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="seed"/>
 		<set name="weight" val="1"/>

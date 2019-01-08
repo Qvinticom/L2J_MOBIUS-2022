@@ -89,7 +89,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="40305" min="1" max="1" chance="100" /> <!-- Dual Expertise Rune (R99-grade) -->
+			<item id="40305" min="1" max="1" chance="100" /> <!-- Dual Expertise Rune (R99-grade) - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="40307" name="Dynamic Dual Master Gift Pack" type="EtcItem">
@@ -340,7 +340,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="40332" name="Mother Tree's Branch of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -367,7 +367,7 @@
 		</stats>
 	</item>
 	<item id="40333" name="Foundation Staff of Evil Spirits of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -394,7 +394,7 @@
 		</stats>
 	</item>
 	<item id="40334" name="Inferno Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -447,7 +447,7 @@
 		</stats>
 	</item>
 	<item id="40336" name="Imperial Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) M. Atk. + 60. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 60. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -474,7 +474,7 @@
 		</stats>
 	</item>
 	<item id="40337" name="Dynasty Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -561,7 +561,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40343" name="Mother Tree's Branch of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -588,7 +588,7 @@
 		</stats>
 	</item>
 	<item id="40344" name="Foundation Staff of Evil Spirits of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -615,7 +615,7 @@
 		</stats>
 	</item>
 	<item id="40345" name="Inferno Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -668,7 +668,7 @@
 		</stats>
 	</item>
 	<item id="40347" name="Imperial Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) M. Atk. + 60. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 60. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -695,7 +695,7 @@
 		</stats>
 	</item>
 	<item id="40348" name="Dynasty Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -770,7 +770,7 @@
 		<set name="time" val="14400" />
 	</item>
 	<item id="40353" name="Mother Tree's Branch of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -797,7 +797,7 @@
 		</stats>
 	</item>
 	<item id="40354" name="Foundation Staff of Evil Spirits of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
+		<!-- <Soul Crystal Enhancement>. Has a 6% chance of inflicting Curse Poison on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -824,7 +824,7 @@
 		</stats>
 	</item>
 	<item id="40355" name="Inferno Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -877,7 +877,7 @@
 		</stats>
 	</item>
 	<item id="40357" name="Imperial Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) M. Atk. + 60. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 60. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -904,7 +904,7 @@
 		</stats>
 	</item>
 	<item id="40358" name="Dynasty Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -970,7 +970,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
-		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad.  (Passive Skill) 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death.  (Active Skill) 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. . <Passive Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. . <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1015,35 +1015,35 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="22887" min="1" max="1" chance="0.82" /> <!-- Unicorn Bracelet -->
-			<item id="22265" min="1" max="1" chance="0.82" /> <!-- Diadem from the Pegasus Horn Event -->
+			<item id="22887" min="1" max="1" chance="0.82" /> <!-- Mount - Unicorn -->
+			<item id="22265" min="1" max="1" chance="0.82" /> <!-- Unicorn Horn Circlet - Event -->
 			<item id="39738" min="1" max="1" chance="0.82" /> <!-- Rune Stone -->
-			<item id="37008" min="1" max="1" chance="11" /> <!-- Strawberry Cake (HP Elixir) -->
-			<item id="37009" min="1" max="1" chance="11" /> <!-- Blueberry Cake (Elixir of MP) -->
-			<item id="37010" min="1" max="1" chance="11" /> <!-- Cheesecake (Elixir CP) -->
-			<item id="39381" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 1 -->
-			<item id="39382" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 2 -->
-			<item id="39383" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 3 -->
-			<item id="39384" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 4 -->
-			<item id="39385" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 5 -->
-			<item id="39386" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 1 -->
-			<item id="39387" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 2 -->
-			<item id="39388" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 3 -->
-			<item id="39389" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 4 -->
-			<item id="39390" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 5 -->
-			<item id="40063" min="1" max="1" chance="6" /> <!-- A fragment of the Ancient Book of Secrets -->
-			<item id="23861" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23862" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23863" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23864" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23865" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23866" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23867" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="36513" min="1" max="1" chance="0.82" /> <!-- Elsium Power -->
-			<item id="3936" min="1" max="1" chance="21" /> <!-- Scroll of Resurrection -->
-			<item id="1538" min="1" max="1" chance="21" /> <!-- Scroll of Teleport -->
-			<item id="23860" min="1" max="1" chance="0.82" /> <!-- Chest with Raid Boss Soul -->
-			<item id="23977" min="1" max="1" chance="0.82" /> <!-- Packing: Agathion Pegasus -->
+			<item id="37008" min="1" max="1" chance="11" /> <!-- Strawberry Cake (HP) -->
+			<item id="37009" min="1" max="1" chance="11" /> <!-- Blueberry Cake (MP) -->
+			<item id="37010" min="1" max="1" chance="11" /> <!-- Cheese Cake (CP) -->
+			<item id="39381" min="1" max="1" chance="0.82" /> <!-- Lv. 1 Windy CHA Dye - CHA + 1 -->
+			<item id="39382" min="1" max="1" chance="0.82" /> <!-- Lv. 2 Windy CHA Dye - CHA + 2 -->
+			<item id="39383" min="1" max="1" chance="0.82" /> <!-- Lv. 3 Windy CHA Dye - CHA + 3 -->
+			<item id="39384" min="1" max="1" chance="0.82" /> <!-- Lv. 4 Windy CHA Dye - CHA + 4 -->
+			<item id="39385" min="1" max="1" chance="0.82" /> <!-- Lv. 5 Windy CHA Dye - CHA + 5 -->
+			<item id="39386" min="1" max="1" chance="0.82" /> <!-- Lv. 1 Windy LUC Dye - LUC + 1 -->
+			<item id="39387" min="1" max="1" chance="0.82" /> <!-- Lv. 2 Windy LUC Dye - LUC + 2 -->
+			<item id="39388" min="1" max="1" chance="0.82" /> <!-- Lv. 3 Windy LUC Dye - LUC + 3 -->
+			<item id="39389" min="1" max="1" chance="0.82" /> <!-- Lv. 4 Windy LUC Dye - LUC + 4 -->
+			<item id="39390" min="1" max="1" chance="0.82" /> <!-- Lv. 5 Windy LUC Dye - LUC + 5 -->
+			<item id="40063" min="1" max="1" chance="6" /> <!-- Secret Ancient Tome Fragment -->
+			<item id="23861" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Valakas' Soul -->
+			<item id="23862" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Antharas' Soul -->
+			<item id="23863" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Baium's Soul -->
+			<item id="23864" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Orfen's Soul -->
+			<item id="23865" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Queen Ant's Soul -->
+			<item id="23866" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Frintezza's Soul -->
+			<item id="23867" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Freya's Soul -->
+			<item id="36513" min="1" max="1" chance="0.82" /> <!-- Elcyum Powder -->
+			<item id="3936" min="1" max="1" chance="21" /> <!-- Blessed Scroll of Resurrection -->
+			<item id="1538" min="1" max="1" chance="21" /> <!-- Blessed Scroll of Escape -->
+			<item id="23860" min="1" max="1" chance="0.82" /> <!-- Raid Boss' Soul Pack -->
+			<item id="23977" min="1" max="1" chance="0.82" /> <!-- Agathion - Pegasus Pack -->
 		</capsuled_items>
 	</item>
 	<item id="40366" name="Galup's Gift Pouch" type="EtcItem">
@@ -1127,7 +1127,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40372" name="Agathion - Three-headed Dragon" additionalName="30-day" type="Armor">
-		<!-- Can summon Pisces when equipped.  (Active Skill) 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.)  (Passive Skill) 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
+		<!-- Can summon Pisces when equipped. . <Active Skill>. 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.). . <Passive Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />

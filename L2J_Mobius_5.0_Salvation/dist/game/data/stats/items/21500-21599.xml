@@ -1556,7 +1556,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21580" name="Power Shirt" type="Armor">
-		<!-- Special shirt that was handcrafted by the best weavers of Aden. Can be enchanted up to + 10 with Power Shirt exclusive enchant scrolls. Each enchant level bestows the shirt with special additional bonuses. -->
+		<!-- Special shirt that was handcrafted by the best weavers of Aden. Can be enchanted up to +10 with Power Shirt exclusive enchant scrolls. Each enchant level bestows the shirt with special additional bonuses. -->
 		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1576,7 +1576,7 @@
 		</stats>
 	</item>
 	<item id="21581" name="Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1594,7 +1594,7 @@
 		</skills>
 	</item>
 	<item id="21582" name="Blessed Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />

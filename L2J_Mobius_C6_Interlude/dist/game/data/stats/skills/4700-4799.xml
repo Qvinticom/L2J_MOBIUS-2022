@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" levels="13" name="Gift of Queen">
+		<!-- Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1. -->
 		<table name="#mpConsume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
 		<table name="#pAtk">1.06 1.08 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1</table>
 		<table name="#accCombat">2 2 3 3 3 3 3 3 3 3 3 3 3</table>
@@ -25,6 +26,7 @@
 		</for>
 	</skill>
 	<skill id="4701" levels="13" name="Cure of Queen">
+		<!-- Has a chance to remove curses that decrease Accuracy, P. Atk. and Atk. Spd. from all party members . -->
 		<table name="#mpConsume">62 79 98 102 104 107 108 110 113 115 117 119 122</table>
 		<table name="#power">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -42,6 +44,7 @@
 		<set name="aggroPoints" val="#power"/>
 	</skill>
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
+		<!-- Unicorn Seraphim's buff magic temporarily increases party members' MP regeneration. Effect 1. -->
 		<table name="#mpConsume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
 		<table name="#regMp">1.3 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35</table>
 		<table name="#time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
@@ -64,6 +67,7 @@
 		</for>
 	</skill>
 	<skill id="4703" levels="13" name="Gift of Seraphim">
+		<!-- Unicorn Seraphim's buff magic temporarily reduces party members' magic skill recovery time. ?? 1. -->
 		<table name="#mpConsume">122 157 194 202 207 212 215 220 224 229 233 237 242</table>
 		<table name="#mReuse">0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65</table>
 		<table name="#time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
@@ -86,6 +90,7 @@
 		</for>
 	</skill>
 	<skill id="4704" levels="13" name="Cure of Seraphim">
+		<!-- Unicorn Seraphim's cure magic. Removes Sleep, Hold, Shock, Silence and Paralysis debuffs from party members. -->
 		<table name="#mpConsume">62 79 98 102 104 107 108 110 113 115 117 119 122</table>
 		<table name="#power">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -102,6 +107,7 @@
 		<set name="aggroPoints" val="#power"/>
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">
+		<!-- Nightshade's debuff magic. Provokes an enemy to attack and then casts a curse to instantly decrease their P. Def and M. Def. Effect 1. -->
 		<table name="#mpConsume">53 62 69 70 72 73 73 73 74 74 75 75 75</table>
 		<table name="#pDef">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
 		<table name="#mDef">0.95 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
@@ -123,6 +129,7 @@
 		</for>
 	</skill>
 	<skill id="4706" levels="13" name="Mass Curse of Shade">
+		<!-- Nightshade's debuff magic. Provokes nearby enemies and decreases P. Def and M. Def with curse. Effect 1. -->
 		<table name="#mpConsume">79 93 104 105 107 108 109 109 110 112 112 113 113</table>
 		<table name="#pDef">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
 		<table name="#mDef">0.95 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
@@ -146,6 +153,7 @@
 		</for>
 	</skill>
 	<skill id="4707" levels="13" name="Shade Sacrifice">
+		<!-- Nightshade special ability. Sacrifice HP in order to regenerate the HP of a selected target. Power 588. -->
 		<table name="#hpConsume">706 840 946 964 973 980 988 994 1000 1005 1010 1014 1017</table>
 		<table name="#effectPoint">588 700 789 804 811 817 823 828 833 838 842 845 848</table>
 		<table name="#power">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
@@ -163,6 +171,7 @@
 		<set name="aggroPoints" val="#power" />
 	</skill>
 	<skill id="4708" levels="10" name="Cursed Strike">
+		<!-- Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046. -->
 		<table name="#mpConsume">65 69 74 79 81 83 85 87 88 89</table>
 		<table name="#power">1046 1230 1425 1626 1727 1827 1925 2020 2067 2112</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -180,6 +189,7 @@
 		</for>
 	</skill>
 	<skill id="4709" levels="10" name="Cursed Blow">
+		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 1249. -->
 		<table name="#mpConsume">65 69 74 79 81 83 85 87 88 89</table>
 		<table name="#power">4181 4920 5700 6503 6906 7305 7698 8079 8265. 8447</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -195,6 +205,7 @@
 		<set name="effectRange" val="200"/>
 	</skill>
 	<skill id="4710" levels="12" name="Wild Stun">
+		<!-- De-buff attack used by Hatchling of Wind/Strider. Inflicts damage and shock simultaneously. Power 16. -->
 		<table name="#mpConsume">3 5 7 9 12 14 17 18 18 19 20 20</table>
 		<table name="#power">16 35 73 138 238 375 537 619 697 766 821 864</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -215,6 +226,7 @@
 		</for>
 	</skill>
 	<skill id="4711" levels="12" name="Wild Defense">
+		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def and M. Def significantly while greatly reducing Atk. Spd. and Speed. -->
 		<table name="#mpConsume">46 76 104 139 179 220 258 275 288 298 305 309</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<table name="#aggro">138 204 285 379 477 566 635 659 676 689 700 709</table>
@@ -238,6 +250,7 @@
 		</for>
 	</skill>
 	<skill id="4712" levels="12" name="Bright Burst">
+		<!-- Star Hatchling/Strider's attack skill. Power 6. -->
 		<table name="#mpConsume">6 6 7 7 8 8 9 9 10 10 11 11</table>
 		<table name="#power">6 9 13 17 23 28 34 36 39 41 42 43</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -254,6 +267,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="4713" levels="12" name="Bright Heal">
+		<!-- Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33. -->
 		<table name="#mpConsume">5 9 11 15 19 23 27 28 30 30 32 32</table>
 		<table name="#power">33 61 98 145 198 251 298 316 330 338 341 342</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -272,24 +286,28 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="4714" levels="1" name="Twilight Dragon">
+		<!-- An active dragon with fast moving feet. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4715" levels="1" name="Wind Dragon">
+		<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4716" levels="1" name="Star Dragon">
+		<!-- A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4717" levels="12" name="Heal Trick">
+		<!-- A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9. -->
 		<table name="#mpConsume">5 8 12 17 20 25 29 32 33 33 34 34</table>
 		<table name="#power">9 16 25 37 50 63 75 79 83 85 86 86</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -308,6 +326,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="4718" levels="12" name="Greater Heal Trick">
+		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power 37. -->
 		<table name="#mpConsume">33 59 88 122 162 195 228 242 252 259 262 262</table>
 		<table name="#power">62 113 184 272 371 471 558 592 617 634 640 640</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -385,6 +404,7 @@
 		<set name="effectRange" val="200"/>
 	</skill>
 	<skill id="4724" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -401,6 +421,7 @@
 		</for>
 	</skill>
 	<skill id="4725" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -417,6 +438,7 @@
 		</for>
 	</skill>
 	<skill id="4726" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -434,6 +456,7 @@
 		</for>
 	</skill>
 	<skill id="4727" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -451,6 +474,7 @@
 		</for>
 	</skill>
 	<skill id="4728" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -649,6 +673,7 @@
 		<set name="effectRange" val="200"/>
 	</skill>
 	<skill id="4744" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -665,6 +690,7 @@
 		</for>
 	</skill>
 	<skill id="4745" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -682,6 +708,7 @@
 		</for>
 	</skill>
 	<skill id="4746" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -699,6 +726,7 @@
 		</for>
 	</skill>
 	<skill id="4747" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -716,6 +744,7 @@
 		</for>
 	</skill>
 	<skill id="4748" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
 		<table name="#mpConsume">18 25 35 47 59 72 83 88 91 93 95 96</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -849,6 +878,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="4759" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -865,6 +895,7 @@
 		</for>
 	</skill>
 	<skill id="4760" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -881,6 +912,7 @@
 		</for>
 	</skill>
 	<skill id="4761" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -897,6 +929,7 @@
 		</for>
 	</skill>
 	<skill id="4762" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -913,6 +946,7 @@
 		</for>
 	</skill>
 	<skill id="4763" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -989,6 +1023,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="4769" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -1005,6 +1040,7 @@
 		</for>
 	</skill>
 	<skill id="4770" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28785 33149 37783 42148</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -1021,6 +1057,7 @@
 		</for>
 	</skill>
 	<skill id="4771" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -1037,6 +1074,7 @@
 		</for>
 	</skill>
 	<skill id="4772" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -1053,6 +1091,7 @@
 		</for>
 	</skill>
 	<skill id="4773" levels="12" name="Shock">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -1292,60 +1331,70 @@
 		</for>
 	</skill>
 	<skill id="4790" levels="1" name="Raid Boss - Level 23">
+		<!-- A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracia Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in Gludio. He waits for an opportunity to return to his country. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4791" levels="1" name="Raid Boss - Level 30">
+		<!-- The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4792" levels="1" name="Raid Boss - Level 42">
+		<!-- A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by the magic power of the Wastelands. The Spider was forced to retreat to this place. It swears that someday it will feed on the Ants and destroy them. It quietly grows in power while sharpening its fangs for vengeance. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4793" levels="1" name="Raid Boss - Level 55">
+		<!-- A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, and the desire for revenge. Gripped by his anger, he is still at war against all humans and mystics. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4794" levels="1" name="Raid Boss - Level 50">
+		<!-- One of the leaders of the peasants who resisted the merciless rule of Lord Ashton.He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came back to life. But the devil's bargain turned his once noble ideals towards loathing, turning him into a monster with the power of evil magic. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4795" levels="1" name="Raid Boss - Level 60">
+		<!-- A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations.This golem was created to protect the Garden of Eva, made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafurion's troops, or invaders threatening the garden. The dwarven master made two other golems, but this third and final one was the strongest. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4796" levels="1" name="Raid Boss - Level 25">
+		<!-- A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after suffering cruel attacks from both sides, but Pay Dryad still remains here waiting for the golden age of peace to return. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4797" levels="1" name="Raid Boss - Level 34">
+		<!-- An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He grows in power, and uses summoning magic learned from the Dark Elves to harness powerful servitors and minions. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4798" levels="1" name="Raid Boss - Level 34">
+		<!-- She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mecilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates and even her own children. The Queen yearns to build a kingdom for Marsh Stakatos someday. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4799" levels="1" name="Raid Boss - Level 49">
+		<!-- He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He greatly detests the Silenos as well as humans, and is a formidable enemy. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>

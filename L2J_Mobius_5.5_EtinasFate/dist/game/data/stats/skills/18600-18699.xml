@@ -134,7 +134,7 @@
 						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35336" count="1" /> <!-- Helios Retributer Fragment -->
+						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
@@ -183,7 +183,7 @@
 						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35336" count="1" /> <!-- Helios Retributer Fragment -->
+						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
@@ -232,7 +232,7 @@
 						<item id="35331" count="1" /> <!-- Helios Fighter Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35336" count="1" /> <!-- Helios Retributer Fragment -->
+						<item id="35336" count="1" /> <!-- Helios Caster Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35327" count="1" /> <!-- Helios Shaper Fragment -->
@@ -345,7 +345,6 @@
 		</effects>
 	</skill>
 	<skill id="18603" toLevel="3" name="Basic Supply Box">
-		<!-- Lower Level -->
 		<icon>icon.skill18603</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -569,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="18604" toLevel="1" name="Key Card to the Controller Room">
-		<!-- A key card that is necessary in order to enter the room containing the controller -->
+		<!-- A key card that is necessary in order to enter the room containing the controller. -->
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -600,77 +599,74 @@
 		</effects>
 	</skill>
 	<skill id="18605" toLevel="1" name="Fish Chilli Stew - WIT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable WIT +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18606" toLevel="1" name="Fish Chilli Stew - INT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable INT +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18607" toLevel="1" name="Fish Chilli Stew - MEN">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable MEN +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18608" toLevel="1" name="Fish Chilli Stew - DEX">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable DEX +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18609" toLevel="1" name="Fish Chilli Stew - STR">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable STR +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18610" toLevel="1" name="Fish Chilli Stew - CON">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable CON +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18611" toLevel="1" name="Fish Cream Stew - WIT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable WIT +3 and CHA +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18612" toLevel="1" name="Fish Cream Stew - INT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable INT +3 and CHA +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18613" toLevel="1" name="Fish Cream Stew - MEN">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable MEN +3 and CHA +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18614" toLevel="1" name="Fish Cream Stew - DEX">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable DEX +3 and CHA +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18615" toLevel="1" name="Fish Cream Stew - STR">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable STR +3 and CHA +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18616" toLevel="1" name="Fish Cream Stew - CON">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to enable CON +3 and CHA +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18617" toLevel="1" name="Histie's Reward Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18618" toLevel="10" name="Scroll of Escape: Blackbird Campsite">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18619" toLevel="3" name="Basic Supply Box">
-		<!--  Phantasmal Ridge --> -->
 		<icon>icon.skill18619</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -733,7 +729,6 @@
 		</effects>
 	</skill>
 	<skill id="18620" toLevel="3" name="Basic Supply Box">
-		<!--  Giant's Cave Upper Level -->
 		<icon>icon.skill18620</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -765,7 +760,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="1.15">
-						<item id="35342" count="1" /> <!-- Eternal Boots Ingredient -->
+						<item id="35342" count="1" /> <!-- Eternal Boot Ingredient -->
 					</item>
 					<item chance="1.15">
 						<item id="35339" count="1" /> <!-- Eternal Breastplate Ingredient -->
@@ -774,13 +769,13 @@
 						<item id="35349" count="1" /> <!-- Eternal Circlet Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35340" count="1" /> <!-- Eternal Gaiters Ingredient -->
+						<item id="35340" count="1" /> <!-- Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35341" count="1" /> <!-- Eternal Gauntlets Ingredient -->
+						<item id="35341" count="1" /> <!-- Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35352" count="1" /> <!-- Eternal Gloves Ingredient -->
+						<item id="35352" count="1" /> <!-- Eternal Glove Ingredient -->
 					</item>
 					<item chance="1.15">
 						<item id="35338" count="1" /> <!-- Eternal Helmet Ingredient -->
@@ -789,28 +784,28 @@
 						<item id="35345" count="1" /> <!-- Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35348" count="1" /> <!-- Eternal Leather Boots Ingredient -->
+						<item id="35348" count="1" /> <!-- Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35347" count="1" /> <!-- Eternal Leather Gloves Ingredient -->
+						<item id="35347" count="1" /> <!-- Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="1.15">
 						<item id="35344" count="1" /> <!-- Eternal Leather Helmet Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35346" count="1" /> <!-- Eternal Leather Leggings Ingredient -->
+						<item id="35346" count="1" /> <!-- Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="1.15">
 						<item id="35343" count="1" /> <!-- Eternal Shield Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35353" count="1" /> <!-- Eternal Shoes Ingredient -->
+						<item id="35353" count="1" /> <!-- Eternal Shoe Ingredient -->
 					</item>
 					<item chance="1.15">
 						<item id="35354" count="1" /> <!-- Eternal Sigil Ingredient -->
 					</item>
 					<item chance="1.15">
-						<item id="35351" count="1" /> <!-- Eternal Stockings Ingredient -->
+						<item id="35351" count="1" /> <!-- Eternal Stocking Ingredient -->
 					</item>
 					<item chance="1.15">
 						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
@@ -866,13 +861,13 @@
 						<item id="35339" count="1" /> <!-- Eternal Breastplate Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35340" count="1" /> <!-- Eternal Gaiters Ingredient -->
+						<item id="35340" count="1" /> <!-- Eternal Gaiter Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35341" count="1" /> <!-- Eternal Gauntlets Ingredient -->
+						<item id="35341" count="1" /> <!-- Eternal Gauntlet Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35342" count="1" /> <!-- Eternal Boots Ingredient -->
+						<item id="35342" count="1" /> <!-- Eternal Boot Ingredient -->
 					</item>
 					<item chance="1.5">
 						<item id="35343" count="1" /> <!-- Eternal Shield Ingredient -->
@@ -884,13 +879,13 @@
 						<item id="35345" count="1" /> <!-- Eternal Leather Armor Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35346" count="1" /> <!-- Eternal Leather Leggings Ingredient -->
+						<item id="35346" count="1" /> <!-- Eternal Leather Legging Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35347" count="1" /> <!-- Eternal Leather Gloves Ingredient -->
+						<item id="35347" count="1" /> <!-- Eternal Leather Glove Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35348" count="1" /> <!-- Eternal Leather Boots Ingredient -->
+						<item id="35348" count="1" /> <!-- Eternal Leather Boot Ingredient -->
 					</item>
 					<item chance="1.5">
 						<item id="35349" count="1" /> <!-- Eternal Circlet Ingredient -->
@@ -899,13 +894,13 @@
 						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35351" count="1" /> <!-- Eternal Stockings Ingredient -->
+						<item id="35351" count="1" /> <!-- Eternal Stocking Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35352" count="1" /> <!-- Eternal Gloves Ingredient -->
+						<item id="35352" count="1" /> <!-- Eternal Glove Ingredient -->
 					</item>
 					<item chance="1.5">
-						<item id="35353" count="1" /> <!-- Eternal Shoes Ingredient -->
+						<item id="35353" count="1" /> <!-- Eternal Shoe Ingredient -->
 					</item>
 					<item chance="1.5">
 						<item id="35354" count="1" /> <!-- Eternal Sigil Ingredient -->
@@ -915,32 +910,26 @@
 		</effects>
 	</skill>
 	<skill id="18622" toLevel="6" name="+8 Bloody Eternal Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18623" toLevel="8" name="Red Noblesse Appearance Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18624" toLevel="2" name="Royal Save Ticket Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18625" toLevel="2" name="High-grade Wind Dye Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18626" toLevel="1" name="Superior Giant's Codex Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18627" toLevel="2" name="Blessed Lucky Weapon Enchant Stone Chest - R">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -967,32 +956,32 @@
 		</effects>
 	</skill>
 	<skill id="18629" toLevel="1" name="Balthus Knight Disguise">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Perhaps no one will notice you? -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18630" toLevel="1" name="Balthus Knight Disguise">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Perhaps no one will notice you? -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18631" toLevel="1" name="Balthus Knight Disguise">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Perhaps no one will notice you? -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18632" toLevel="1" name="Balthus Knight Disguise">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Perhaps no one will notice you? -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18633" toLevel="1" name="Balthus Knight Disguise">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Perhaps no one will notice you? -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18634" toLevel="1" name="Duo - Freya Wind">
-		<!-- Vitality +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Will be deleted when the event ends. -->
+		<!-- Acquired XP/ SP +$s1, Vitality consumption doubled. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1020,7 +1009,7 @@
 		</effects>
 	</skill>
 	<skill id="18635" toLevel="1" name="Duo - Prophecy">
-		<!-- For 5 min, all party members' P. Atk. and M. Atk. +$s2. Can be used by characters with Lv. 85 and above. -->
+		<!-- For $s1, all party members' P. Atk. and M. Atk. +$s2. Can be used by characters with Lv. 85 and above. -->
 		<icon>icon.skill0837</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1057,7 +1046,7 @@
 		</effects>
 	</skill>
 	<skill id="18636" toLevel="2" name="Duo - Energy of Blessing">
-		<!-- For 3 hours, XP gained when hunting monsters increases by 30%. When the buff ends, the ‘Duo's Gift' item can be gained. Gift cannot be received when dead. Can be used by characters with Lv. 85 and above. -->
+		<!-- For 3 hr., XP gained when hunting monsters increases by 30%. When the buff ends, the 'Duo's Gift' item can be gained. Gift cannot be received when dead. Can be used by characters with Lv. 85 and above. -->
 		<icon>icon.skill10101</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1092,7 +1081,7 @@
 		</effects>
 	</skill>
 	<skill id="18637" toLevel="1" name="Duo Vital Compression Stone">
-		<!-- When used, bonus XP gained in Vitality Status is boosted by 20%. Cannot be used together with Dandy's Home Run Ball/Fall of the Dragon Buff/Nevit's Hourglass. -->
+		<!-- When used, Vitality Bonus +20%. Cannot be used together with Dandy's Home Run Ball/ Fall of the Dragon Buff/ Nevit's Hourglass. -->
 		<icon>icon.etc_capture_stone_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1109,46 +1098,44 @@
 		</effects>
 	</skill>
 	<skill id="18638" toLevel="1" name="PC Cafe Points Coupon (200 points)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- 200 PA Points obtained -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18639" toLevel="3" name="Scroll of Experience - Lv1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use to obtain XP (TBD) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18640" toLevel="1" name="Duo Growth Rune 30%">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- XP and SP gained through hunting increased +30%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18641" toLevel="1" name="Balthus Knights Supply Items">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18642" toLevel="9" name="Insanity/Longing/Hellfire Talisman Supply Items">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18643" toLevel="1" name="Duo's Gift">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18644" toLevel="1" name="Freya's Luxury Shopping Bag">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double click the luxury shopping bag to obtain Freya's Frozen Scroll x1, Freya's Art of Seduction x1, Freya's Recovery Potion x1. In addition, there is the chance that you will obtain one of the following: Freya/ Sirra/ Snowman Gift Box, Freya's Vital Rune (30 min.) Box, Freya's Recovery Potion. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18645" toLevel="1" name="Black Freya's Kindness">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double click to receive a random item that allows you to change the appearance into that of a Dark/ White Assassin Suit, Red/ White Noblesse Garment, Red Pirate Shipmate Garment, or Purple Cowboy Garment. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18646" toLevel="1" name="Freya's Scroll of Storm">
+		<!-- Vitality Consumption +$s1 and Acquired XP/ SP +$s2. Remains after death. Duration is 10 min. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1175,7 +1162,7 @@
 		</effects>
 	</skill>
 	<skill id="18647" toLevel="1" name="Freya's Bloody Rune">
-		<!-- Damage dealt to NPCs is increased by 15% when having it in your inventory. -->
+		<!-- Damage dealt to NPCs is increased by $s1 when in your inventory. -->
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
@@ -1193,7 +1180,7 @@
 		</effects>
 	</skill>
 	<skill id="18648" toLevel="1" name="Freya's Rune">
-		<!-- Boosts STR/DEX/CON/INT/WIT/MEN by 1 and increases MEN/Paralysis Resistance by 10% when having it in your inventory. -->
+		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +$s1 and Mental/ Paralysis Resistance +$s2 when in your inventory. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1227,7 +1214,7 @@
 		</effects>
 	</skill>
 	<skill id="18649" toLevel="1" name="Freya's Vital Rune">
-		<!-- Bonus XP gained in Vitality state is boosted by 50% when having it in your inventory (Does not apply to Boss Monsters) -->
+		<!-- Vitality Bonus +$s1 when in your inventory (Does not apply to Boss Monsters) -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1238,167 +1225,161 @@
 		</effects>			
 	</skill>
 	<skill id="18650" toLevel="1" name="Mysterious Talisman - Attribute Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Equipping this Talisman increases Attribute Resistance by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18651" toLevel="10" name="+7 T-shirt Box (Shining/Attack/Magic)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to obtain one of Shiny Elemental enchanted by +7/ Reflect Attack/ Reflect Magic Shirt. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18652" toLevel="1" name="Shining Scroll: Enchant Elemental Shirt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18653" toLevel="1" name="Lias Supply Items">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18654" toLevel="1" name="Craft Effect - Body">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18655" toLevel="1" name="Craft Effect - Mind">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Skill Cooldown -$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18656" toLevel="1" name="Craft Effect - Barrier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Fixed Damage Resistance +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18657" toLevel="1" name="Craft Effect - Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18658" toLevel="1" name="Craft Effect - Earth">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18659" toLevel="1" name="Craft Effect - Pure">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- 6 Major Attributes Def. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18660" toLevel="1" name="Craft Effect - STR">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18661" toLevel="1" name="Craft Effect - INT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- INT +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18662" toLevel="1" name="Craft Effect - CON">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- CON +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18663" toLevel="4" name="Blueish Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double click to obtain a special item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18664" toLevel="7" name="Reward for Defeating the Giant Monsters">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double click to obtain the reward for Defeating the Giant Monsters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18665" toLevel="2" name="Santiago??s Reward Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double click to obtain Santiago's reward. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18666" toLevel="1" name="Player Commendation Treasure Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double click to obtain a special item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18667" toLevel="1" name="Royal Blue Save Card (R-grade) - Armor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18668" toLevel="1" name="Royal Blue Save Card (R95-grade) - Armor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18669" toLevel="1" name="Royal Blue Save Card (R99-grade) - Armor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18670" toLevel="1" name="Gran Kain's Miraculous Medicine">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18671" toLevel="1" name="Prophecy of Might - PC Cafe exclusive">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, Standard and Skill Attack Critical Rate and Damage +$s2. PA exclusive skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18672" toLevel="1" name="Christmas Party Herb">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Christmas Party Herb. P. Atk./ M. Atk./ P./ M. Def. are increased by $s2, and you're turned into Santa for $s1. Effect disappears when restarted. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18673" toLevel="1" name="Transformation Scroll: Tow">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Tow -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18674" toLevel="1" name="Transformation Scroll: Lady Tow">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Lady Tow -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18675" toLevel="1" name="Transformation Scroll: Angry Tow">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Angry Tow -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18676" toLevel="1" name="Transformation Scroll: Sleepy Tow">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Sleepy Tow -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18677" toLevel="1" name="Transformation Scroll: Pig">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into a pig -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18678" toLevel="1" name="Transformation Scroll: Rabbit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into a rabbit -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18679" toLevel="1" name="Transformation Scroll: Queen Ant">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into a Queen Ant -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18680" toLevel="1" name="Transformation Scroll: Orfen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Orfen -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18681" toLevel="1" name="Transformation Scroll: Anakim">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Anakim -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18682" toLevel="1" name="Transformation Scroll: Lilith">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed into Lilith -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1469,57 +1450,57 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18689" toLevel="1" name="Chef Monkeys' Banana Herb">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Chef Monkeys' Banana Herb. P. Atk./ M. Atk./ P. Def./ M. Def. +$s2 for $s1, and Acquired XP/ SP +$s3. Effect disappears when restarted. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18690" toLevel="1" name="Chef Monkey's Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Chef Monkey's Treasure Chest, caught using the Banana Bait. Use to obtain various items.To be deleted at the time of the scheduled server check on Wednesday, February 17, 2016. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18691" toLevel="2" name="Angler??s Shining Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- A treasure box by Chef Monkey caught with a banana bait. Use this to obtain various kinds of items. Scheduled for batch deletion during regular maintenance on February 17, 2016 (Wed.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18692" toLevel="1" name="Royal Purple Save Ticket (R)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using an R-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18693" toLevel="1" name="Royal Purple Save Ticket (R95)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using an R95-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18694" toLevel="1" name="Royal Purple Save Ticket (R99)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using an R99-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18695" toLevel="1" name="Potion of Protection: Pull">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use this to increase the defense rate against Pull by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18696" toLevel="1" name="Potion of Protection: Danger Zone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use this to increase the defense rate in the Danger Zone by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18697" toLevel="1" name="Potion of Protection: Seduction">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use this to increase the defense rate against Seduction by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18698" toLevel="1" name="Potion of Protection: Bluff">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use this to increase the defense rate against Bluff by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18699" toLevel="1" name="Potion of Protection: Faint">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Use this to increase the defense rate against Faint by $s1. It also decreases damage received by $s2 during PvP. Unavailable to use in Olympiad. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

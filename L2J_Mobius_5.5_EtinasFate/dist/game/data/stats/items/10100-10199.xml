@@ -634,7 +634,7 @@
 		</skills>
 	</item>
 	<item id="10140" name="Blessed Ring of Escape" type="Armor">
-		<!-- Makes Blessed Scroll of Escape available for up to 250 minutes, with a 60-second cooldown for Escape. Only one effect is applied, even if you wear 2 identical rings. -->
+		<!-- Makes Blessed Scroll of Escape available for up to 250 min., with a 60-second cooldown for Escape. Only one effect is applied when two identical rings are worn. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -968,7 +968,7 @@
 		</skills>
 	</item>
 	<item id="10155" name="Mental Strengthening Potion" type="EtcItem">
-		<!-- Increases Hold/Sleep Resistance for a certain period of time. Can only be used in Castle and Fortress Sieges. -->
+		<!-- Increases Hold/ Sleep Resistance for a certain period of time. Can only be used in Castle and Fortress Sieges. -->
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1244,7 +1244,7 @@
 		</cond>
 	</item>
 	<item id="10170" name="Baylor's Earring" type="Armor">
-		<!-- Dark Resistance + 30, MP + 31. -->
+		<!-- Dark Resistance +30, MP +31. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />

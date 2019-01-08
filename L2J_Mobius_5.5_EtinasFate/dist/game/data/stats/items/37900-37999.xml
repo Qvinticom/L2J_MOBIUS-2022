@@ -33,7 +33,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<capsuled_items>
-			<item id="37897" min="1" max="1" chance="100" /> <!-- SP Rune (High-grade) -->
+			<item id="37897" min="1" max="1" chance="100" /> <!-- SP Rune (High-grade) - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="37904" name="Scroll: 1,000,000,000 SP" type="EtcItem">
@@ -71,7 +71,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="37906" name="Kat the Cat's Box of Roses" type="EtcItem">
-		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. -->
+		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hr.) and 150 Rose Essences. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -79,7 +79,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37907" name="Pig Lollipop Appearance Stone: One-handed Sword" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Pig Lollipop. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Pig Lollipop. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -89,7 +89,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37908" name="Chrono Cithara Appearance Stone: One-handed Sword" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -129,7 +129,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37912" name="Chrono Maracas Appearance Stone: Dualsword" type="EtcItem">
-		<!-- Changes the appearance of a dualsword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
+		<!-- Changes the appearance of a dual sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -159,7 +159,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37915" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic sword into that of a Scarecrow Sword. -->
+		<!-- Changes the appearance of a magic sword to that of a Scarecrow Magic Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -203,7 +203,7 @@
 		</stats>
 	</item>
 	<item id="37918" name="Scarecrow Sword" type="Weapon">
-		<!-- Cute, scarecrow-shaped one-handed magic sword. -->
+		<!-- Cute, scarecrow-shaped magic sword. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
@@ -218,7 +218,7 @@
 		</stats>
 	</item>
 	<item id="37919" name="Pig Lollipop Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Pig Lollipop. 15-day. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Pig Lollipop. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -229,7 +229,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37920" name="Chrono Cithara Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -240,7 +240,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37921" name="Chrono Unitus Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
+		<!-- Changes the appearance of a fist weapon sword into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -251,7 +251,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37922" name="Chrono Campana Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
+		<!-- Changes the appearance of a spear into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -262,7 +262,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37923" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
+		<!-- Changes the appearance of a two-handed blunt weapon into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -273,7 +273,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37924" name="Chrono Maracas Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
+		<!-- Changes the appearance of a dual sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -306,7 +306,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37927" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic sword into that of a Scarecrow Sword. 15-day. -->
+		<!-- Changes the appearance of a magic sword to that of a Scarecrow Sword. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -317,7 +317,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37928" name="Player Commendation - Art of Seduction" type="EtcItem">
-		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30% for 30 minutes. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/ M. Def 30% for 30 min. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -338,7 +338,7 @@
 		</skills>
 	</item>
 	<item id="37929" name="Awakened Warrior's Blade (7-day)" additionalName="Haste" type="Weapon">
-		<!-- Awakened warrior's weapon. One-handed sword. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a Rapier. Cannot be used by Chaotic characters. -->
+		<!-- Awakened Warrior's weapon. When equipped, this one-handed sword increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into a rapier with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -363,7 +363,7 @@
 		</stats>
 	</item>
 	<item id="37930" name="Awakened Warrior's Cleaver (7-day)" additionalName="Haste" type="Weapon">
-		<!-- Awakened warrior's weapon. Two-handed Sword. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into an Ancient Sword. Cannot be used by Chaotic characters. -->
+		<!-- Awakened Warrior's weapon. When equipped, this two-handed sword increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into an ancient sword with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -414,7 +414,7 @@
 		</stats>
 	</item>
 	<item id="37932" name="Awakened Warrior's Rod (7-day)" additionalName="Acumen" type="Weapon">
-		<!-- Awakened warrior's weapon. One-handed Magic Blunt Weapon. Increases Casting Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
+		<!-- Awakened Warrior's weapon. When equipped, this one-handed staff increases Casting Spd. Limited time item (7-day). Cannot be used in Olympiad. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -466,7 +466,7 @@
 		</stats>
 	</item>
 	<item id="37934" name="Awakened Warrior's Scepter (7-day)" additionalName="Acumen" type="Weapon">
-		<!-- Awakened warrior's weapon. Two-handed Magic Blunt Weapon. Increases Casting Spd. 7-day. Cannot be used in the Olympiad. Cannot be used by Chaotic characters. -->
+		<!-- Awakened Warrior's weapon. When equipped, this two-handed staff increases Casting Spd. Limited time item (7-day). Cannot be used in Olympiad. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -625,7 +625,7 @@
 		</stats>
 	</item>
 	<item id="37940" name="Awakened Warrior's Rapier (7-day)" additionalName="Haste" type="Weapon">
-		<!-- Awakened warrior's weapon. Rapier. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a one-handed sword. Cannot be used by Chaotic characters. -->
+		<!-- Awakened Warrior's weapon. When equipped, this rapier increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into a one-handed sword with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 		</stats>
 	</item>
 	<item id="37941" name="Awakened Warrior's Sword (7-day)" additionalName="Haste" type="Weapon">
-		<!-- Awakened warrior's weapon. Ancient Sword. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a two-handed sword. Cannot be used by Chaotic characters. -->
+		<!-- Awakened Warrior's weapon. When equipped, this ancient sword increases attack speed. Limited time item (7-day). Cannot be used in Olympiad. Kamaels can use it by transmuting it into a two-handed sword with the Change Weapon skill. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -820,7 +820,7 @@
 		</stats>
 	</item>
 	<item id="37950" name="Requiem Shaper Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shaper. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -828,54 +828,54 @@
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36732" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36794" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36732" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Shaper (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36794" min="10" max="10" chance="100" /> <!-- Requiem Shaper Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37951" name="Requiem Cutter Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36733" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36795" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36733" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Cutter (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36795" min="10" max="10" chance="100" /> <!-- Requiem Cutter Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37952" name="Requiem Slasher Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Slasher. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36734" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36796" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36734" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Slasher (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36796" min="10" max="10" chance="100" /> <!-- Requiem Slasher Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37953" name="Requiem Avenger Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Avenger. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -883,36 +883,36 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36735" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36797" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36735" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Avenger (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36797" min="10" max="10" chance="100" /> <!-- Requiem Avenger Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37954" name="Requiem Fighter Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36736" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36798" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36736" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Fighter (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36798" min="10" max="10" chance="100" /> <!-- Requiem Fighter Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37955" name="Requiem Stormer Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Stormer. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -920,90 +920,90 @@
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36737" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36799" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36737" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Stormer (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36799" min="10" max="10" chance="100" /> <!-- Requiem Stormer Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37956" name="Requiem Thrower Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36738" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36800" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36738" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Thrower (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36800" min="10" max="10" chance="100" /> <!-- Requiem Thrower Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37957" name="Requiem Shooter Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shooter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36739" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36801" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36739" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Shooter (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36801" min="10" max="10" chance="100" /> <!-- Requiem Shooter Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37958" name="Requiem Buster Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Buster. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36740" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36802" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36740" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Buster (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36802" min="10" max="10" chance="100" /> <!-- Requiem Buster Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37959" name="Requiem Caster Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Caster. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36741" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36803" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36741" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Caster (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36803" min="10" max="10" chance="100" /> <!-- Requiem Caster Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37960" name="Requiem Retributer Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Retributer. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Requiem Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1011,36 +1011,36 @@
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="28" max="28" chance="100" />
-			<item id="36543" min="13" max="13" chance="100" />
-			<item id="17371" min="181" max="181" chance="100" />
-			<item id="36742" min="1" max="1" chance="100" />
-			<item id="19440" min="4" max="4" chance="100" />
-			<item id="36563" min="9" max="9" chance="100" />
-			<item id="36548" min="11" max="11" chance="100" />
-			<item id="36804" min="10" max="10" chance="100" />
+			<item id="36523" min="28" max="28" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="13" max="13" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="181" max="181" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36742" min="1" max="1" chance="100" /> <!-- Recipe: Requiem Retributer (60%) -->
+			<item id="19440" min="4" max="4" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="9" max="9" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="11" max="11" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36804" min="10" max="10" chance="100" /> <!-- Requiem Retributer Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Helmet. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="4" max="4" chance="100" />
-			<item id="36543" min="2" max="2" chance="100" />
-			<item id="17371" min="23" max="23" chance="100" />
-			<item id="36805" min="10" max="10" chance="100" />
-			<item id="36743" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="2" max="2" chance="100" />
+			<item id="36523" min="4" max="4" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="2" max="2" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="23" max="23" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36805" min="10" max="10" chance="100" /> <!-- Immortal Helmet Ingredient -->
+			<item id="36743" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Helmet (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="2" max="2" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37962" name="Immortal Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Breastplate. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1048,72 +1048,72 @@
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="9" max="9" chance="100" />
-			<item id="36543" min="5" max="5" chance="100" />
-			<item id="17371" min="59" max="59" chance="100" />
-			<item id="36806" min="10" max="10" chance="100" />
-			<item id="36744" min="1" max="1" chance="100" />
-			<item id="19440" min="2" max="2" chance="100" />
-			<item id="36563" min="3" max="3" chance="100" />
-			<item id="36553" min="4" max="4" chance="100" />
+			<item id="36523" min="9" max="9" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="5" max="5" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="59" max="59" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36806" min="10" max="10" chance="100" /> <!-- Immortal Breastplate Ingredient -->
+			<item id="36744" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Breastplate (60%) -->
+			<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="3" max="3" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="4" max="4" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gaiter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="6" max="6" chance="100" />
-			<item id="36543" min="3" max="3" chance="100" />
-			<item id="17371" min="37" max="37" chance="100" />
-			<item id="36807" min="10" max="10" chance="100" />
-			<item id="36745" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="2" max="2" chance="100" />
-			<item id="36553" min="2" max="2" chance="100" />
+			<item id="36523" min="6" max="6" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="3" max="3" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="37" max="37" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36807" min="10" max="10" chance="100" /> <!-- Immortal Gaiter Ingredient -->
+			<item id="36745" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Gaiters (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="2" max="2" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="2" max="2" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37964" name="Immortal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gauntlets. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="3" max="3" chance="100" />
-			<item id="36543" min="2" max="2" chance="100" />
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36808" min="10" max="10" chance="100" />
-			<item id="36746" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="36523" min="3" max="3" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="2" max="2" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36808" min="10" max="10" chance="100" /> <!-- Immortal Gauntlet Ingredient -->
+			<item id="36746" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Gauntlets (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37965" name="Immortal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Boots. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="3" max="3" chance="100" />
-			<item id="36543" min="2" max="2" chance="100" />
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36809" min="10" max="10" chance="100" />
-			<item id="36747" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="36523" min="3" max="3" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="2" max="2" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36809" min="10" max="10" chance="100" /> <!-- Immortal Boot Ingredient -->
+			<item id="36747" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Boots (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37966" name="Immortal Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shield. -->
+		<!-- Wrapped Box containing all ingredients needed for crafting Immortal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1121,36 +1121,36 @@
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="3" max="3" chance="100" />
-			<item id="36543" min="2" max="2" chance="100" />
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36810" min="10" max="10" chance="100" />
-			<item id="36748" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="36523" min="3" max="3" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="2" max="2" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36810" min="10" max="10" chance="100" /> <!-- Immortal Shield Ingredient -->
+			<item id="36748" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Shield (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Helmet. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="23" max="23" chance="100" />
-			<item id="36811" min="10" max="10" chance="100" />
-			<item id="36538" min="3" max="3" chance="100" />
-			<item id="36749" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36518" min="9" max="9" chance="100" />
-			<item id="36553" min="2" max="2" chance="100" />
+			<item id="17371" min="23" max="23" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36811" min="10" max="10" chance="100" /> <!-- Immortal Leather Helmet Ingredient -->
+			<item id="36538" min="3" max="3" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36749" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="9" max="9" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="2" max="2" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37968" name="Immortal Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Armor. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1158,54 +1158,54 @@
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="59" max="59" chance="100" />
-			<item id="36812" min="10" max="10" chance="100" />
-			<item id="36538" min="6" max="6" chance="100" />
-			<item id="36750" min="1" max="1" chance="100" />
-			<item id="19440" min="2" max="2" chance="100" />
-			<item id="36563" min="3" max="3" chance="100" />
-			<item id="36518" min="24" max="24" chance="100" />
-			<item id="36553" min="4" max="4" chance="100" />
+			<item id="17371" min="59" max="59" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36812" min="10" max="10" chance="100" /> <!-- Immortal Leather Armor Ingredient -->
+			<item id="36538" min="6" max="6" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36750" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Leather Armor (60%) -->
+			<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="3" max="3" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="24" max="24" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="4" max="4" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Leggings. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="37" max="37" chance="100" />
-			<item id="36813" min="10" max="10" chance="100" />
-			<item id="36538" min="4" max="4" chance="100" />
-			<item id="36751" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="2" max="2" chance="100" />
-			<item id="36518" min="15" max="15" chance="100" />
-			<item id="36553" min="2" max="2" chance="100" />
+			<item id="17371" min="37" max="37" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36813" min="10" max="10" chance="100" /> <!-- Immortal Leather Legging Ingredient -->
+			<item id="36538" min="4" max="4" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36751" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="2" max="2" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="15" max="15" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="2" max="2" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37970" name="Immortal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Gloves. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36814" min="10" max="10" chance="100" />
-			<item id="36538" min="2" max="2" chance="100" />
-			<item id="36752" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36518" min="6" max="6" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36814" min="10" max="10" chance="100" /> <!-- Immortal Leather Glove Ingredient -->
+			<item id="36538" min="2" max="2" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36752" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="6" max="6" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37971" name="Immortal Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Boots. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1213,72 +1213,72 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36815" min="10" max="10" chance="100" />
-			<item id="36538" min="2" max="2" chance="100" />
-			<item id="36753" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36518" min="6" max="6" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36815" min="10" max="10" chance="100" /> <!-- Immortal Leather Boot Ingredient -->
+			<item id="36538" min="2" max="2" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36753" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="6" max="6" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37972" name="Immortal Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Circlet. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="23" max="23" chance="100" />
-			<item id="36816" min="10" max="10" chance="100" />
-			<item id="36528" min="10" max="10" chance="100" />
-			<item id="36754" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36533" min="3" max="3" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="2" max="2" chance="100" />
+			<item id="17371" min="23" max="23" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36816" min="10" max="10" chance="100" /> <!-- Immortal Circlet Ingredient -->
+			<item id="36528" min="10" max="10" chance="100" /> <!-- Metallic Fiber -->
+			<item id="36754" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Circlet (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36533" min="3" max="3" chance="100" /> <!-- Synthetic Braid -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="2" max="2" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37973" name="Immortal Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Tunic. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="59" max="59" chance="100" />
-			<item id="36817" min="10" max="10" chance="100" />
-			<item id="36528" min="26" max="26" chance="100" />
-			<item id="36755" min="1" max="1" chance="100" />
-			<item id="19440" min="2" max="2" chance="100" />
-			<item id="36533" min="8" max="8" chance="100" />
-			<item id="36563" min="3" max="3" chance="100" />
-			<item id="36553" min="4" max="4" chance="100" />
+			<item id="17371" min="59" max="59" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36817" min="10" max="10" chance="100" /> <!-- Immortal Tunic Ingredient -->
+			<item id="36528" min="26" max="26" chance="100" /> <!-- Metallic Fiber -->
+			<item id="36755" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Tunic (60%) -->
+			<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36533" min="8" max="8" chance="100" /> <!-- Synthetic Braid -->
+			<item id="36563" min="3" max="3" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="4" max="4" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37974" name="Immortal Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Stockings. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="37" max="37" chance="100" />
-			<item id="36818" min="10" max="10" chance="100" />
-			<item id="36528" min="16" max="16" chance="100" />
-			<item id="36756" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36533" min="5" max="5" chance="100" />
-			<item id="36563" min="2" max="2" chance="100" />
-			<item id="36553" min="2" max="2" chance="100" />
+			<item id="17371" min="37" max="37" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36818" min="10" max="10" chance="100" /> <!-- Immortal Stocking Ingredient -->
+			<item id="36528" min="16" max="16" chance="100" /> <!-- Metallic Fiber -->
+			<item id="36756" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Stockings (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36533" min="5" max="5" chance="100" /> <!-- Synthetic Braid -->
+			<item id="36563" min="2" max="2" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="2" max="2" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37975" name="Immortal Gloves Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gloves. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1286,18 +1286,18 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36819" min="10" max="10" chance="100" />
-			<item id="36528" min="7" max="7" chance="100" />
-			<item id="36757" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36533" min="2" max="2" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36819" min="10" max="10" chance="100" /> <!-- Immortal Glove Ingredient -->
+			<item id="36528" min="7" max="7" chance="100" /> <!-- Metallic Fiber -->
+			<item id="36757" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Gloves (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36533" min="2" max="2" chance="100" /> <!-- Synthetic Braid -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37976" name="Immortal Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shoes. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1305,18 +1305,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36820" min="10" max="10" chance="100" />
-			<item id="36528" min="7" max="7" chance="100" />
-			<item id="36758" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36533" min="2" max="2" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36820" min="10" max="10" chance="100" /> <!-- Immortal Shoe Ingredient -->
+			<item id="36528" min="7" max="7" chance="100" /> <!-- Metallic Fiber -->
+			<item id="36758" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Shoes (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36533" min="2" max="2" chance="100" /> <!-- Synthetic Braid -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37977" name="Immortal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Sigil. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1324,69 +1324,69 @@
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36821" min="10" max="10" chance="100" />
-			<item id="36538" min="2" max="2" chance="100" />
-			<item id="36759" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
-			<item id="36518" min="7" max="7" chance="100" />
-			<item id="36553" min="1" max="1" chance="100" />
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36821" min="10" max="10" chance="100" /> <!-- Immortal Sigil Ingredient -->
+			<item id="36538" min="2" max="2" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36759" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Sigil (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="7" max="7" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37978" name="Immortal Necklace Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="6" max="6" chance="100" />
-			<item id="36822" min="10" max="10" chance="100" />
-			<item id="17371" min="20" max="20" chance="100" />
-			<item id="36760" min="1" max="1" chance="100" />
-			<item id="36558" min="4" max="4" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
+			<item id="36523" min="6" max="6" chance="100" /> <!-- Adamantite -->
+			<item id="36822" min="10" max="10" chance="100" /> <!-- Immortal Necklace Gem -->
+			<item id="17371" min="20" max="20" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36760" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Necklace (60%) -->
+			<item id="36558" min="4" max="4" chance="100" /> <!-- Accessory Gem (Mid-grade) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
 		</capsuled_items>
 	</item>
 	<item id="37979" name="Immortal Earring Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Earring. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="5" max="5" chance="100" />
-			<item id="36823" min="10" max="10" chance="100" />
-			<item id="17371" min="15" max="15" chance="100" />
-			<item id="36761" min="1" max="1" chance="100" />
-			<item id="36558" min="3" max="3" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
+			<item id="36523" min="5" max="5" chance="100" /> <!-- Adamantite -->
+			<item id="36823" min="10" max="10" chance="100" /> <!-- Immortal Earring Gem -->
+			<item id="17371" min="15" max="15" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36761" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Earring (60%) -->
+			<item id="36558" min="3" max="3" chance="100" /> <!-- Accessory Gem (Mid-grade) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
 		</capsuled_items>
 	</item>
 	<item id="37980" name="Immortal Ring Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Ring. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Immortal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="3" max="3" chance="100" />
-			<item id="36824" min="10" max="10" chance="100" />
-			<item id="17371" min="10" max="10" chance="100" />
-			<item id="36762" min="1" max="1" chance="100" />
-			<item id="36558" min="2" max="2" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="1" max="1" chance="100" />
+			<item id="36523" min="3" max="3" chance="100" /> <!-- Adamantite -->
+			<item id="36824" min="10" max="10" chance="100" /> <!-- Immortal Ring Gem -->
+			<item id="17371" min="10" max="10" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36762" min="1" max="1" chance="100" /> <!-- Recipe: Immortal Ring (60%) -->
+			<item id="36558" min="2" max="2" chance="100" /> <!-- Accessory Gem (Mid-grade) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="1" max="1" chance="100" /> <!-- Synthetic Cokes -->
 		</capsuled_items>
 	</item>
 	<item id="37981" name="Apocalypse Shaper Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shaper. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1394,18 +1394,18 @@
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36763" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36825" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36763" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Shaper (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36825" min="10" max="10" chance="100" /> <!-- Apocalypse Shaper Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37982" name="Apocalypse Cutter Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Cutter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1413,18 +1413,18 @@
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36764" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36826" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36764" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Cutter (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36826" min="10" max="10" chance="100" /> <!-- Apocalypse Cutter Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37983" name="Apocalypse Slasher Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Slasher. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1432,18 +1432,18 @@
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36765" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36827" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36765" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Slasher (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36827" min="10" max="10" chance="100" /> <!-- Apocalypse Slasher Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37984" name="Apocalypse Avenger Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Avenger. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1451,18 +1451,18 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36766" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36828" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36766" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36828" min="10" max="10" chance="100" /> <!-- Apocalypse Avenger Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37985" name="Apocalypse Fighter Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Fighter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1470,18 +1470,18 @@
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36767" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36829" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36767" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Fighter (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36829" min="10" max="10" chance="100" /> <!-- Apocalypse Fighter Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37986" name="Apocalypse Stormer Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Stormer. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1489,18 +1489,18 @@
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36768" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36830" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36768" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36830" min="10" max="10" chance="100" /> <!-- Apocalypse Stormer Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37987" name="Apocalypse Thrower Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Thrower. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1508,36 +1508,36 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36769" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36831" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36769" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Thrower (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36831" min="10" max="10" chance="100" /> <!-- Apocalypse Thrower Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37988" name="Apocalypse Shooter Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36770" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36832" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36770" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Shooter (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36832" min="10" max="10" chance="100" /> <!-- Apocalypse Shooter Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37989" name="Apocalypse Buster Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Buster. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1545,18 +1545,18 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36771" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36833" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36771" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Buster (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36833" min="10" max="10" chance="100" /> <!-- Apocalypse Buster Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37990" name="Apocalypse Caster Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Caster. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1564,36 +1564,36 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36772" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36834" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36772" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Caster (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36834" min="10" max="10" chance="100" /> <!-- Apocalypse Caster Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37991" name="Apocalypse Retributer Crafting Pack" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="75" max="75" chance="100" />
-			<item id="36543" min="35" max="35" chance="100" />
-			<item id="17371" min="492" max="492" chance="100" />
-			<item id="36773" min="1" max="1" chance="100" />
-			<item id="19440" min="9" max="9" chance="100" />
-			<item id="36563" min="22" max="22" chance="100" />
-			<item id="36548" min="30" max="30" chance="100" />
-			<item id="36835" min="10" max="10" chance="100" />
+			<item id="36523" min="75" max="75" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="35" max="35" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="492" max="492" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36773" min="1" max="1" chance="100" /> <!-- Recipe: Apocalypse Retributer (60%) -->
+			<item id="19440" min="9" max="9" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="22" max="22" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36548" min="30" max="30" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
+			<item id="36835" min="10" max="10" chance="100" /> <!-- Apocalypse Retributer Fragment -->
 		</capsuled_items>
 	</item>
 	<item id="37992" name="Twilight Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Helmet. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1601,18 +1601,18 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="10" max="10" chance="100" />
-			<item id="36543" min="5" max="5" chance="100" />
-			<item id="17371" min="60" max="60" chance="100" />
-			<item id="36836" min="10" max="10" chance="100" />
-			<item id="36774" min="1" max="1" chance="100" />
-			<item id="19440" min="2" max="2" chance="100" />
-			<item id="36563" min="3" max="3" chance="100" />
-			<item id="36553" min="4" max="4" chance="100" />
+			<item id="36523" min="10" max="10" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="5" max="5" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="60" max="60" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36836" min="10" max="10" chance="100" /> <!-- Twilight Helmet Ingredient -->
+			<item id="36774" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Helmet (60%) -->
+			<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="3" max="3" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="4" max="4" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37993" name="Twilight Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Breastplate. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1620,54 +1620,54 @@
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="25" max="25" chance="100" />
-			<item id="36543" min="12" max="12" chance="100" />
-			<item id="17371" min="160" max="160" chance="100" />
-			<item id="36837" min="10" max="10" chance="100" />
-			<item id="36775" min="1" max="1" chance="100" />
-			<item id="19440" min="3" max="3" chance="100" />
-			<item id="36563" min="8" max="8" chance="100" />
-			<item id="36553" min="9" max="9" chance="100" />
+			<item id="36523" min="25" max="25" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="12" max="12" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="160" max="160" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36837" min="10" max="10" chance="100" /> <!-- Twilight Breastplate Ingredient -->
+			<item id="36775" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Breastplate (60%) -->
+			<item id="19440" min="3" max="3" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="8" max="8" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="9" max="9" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gaiter. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="16" max="16" chance="100" />
-			<item id="36543" min="8" max="8" chance="100" />
-			<item id="17371" min="100" max="100" chance="100" />
-			<item id="36838" min="10" max="10" chance="100" />
-			<item id="36776" min="1" max="1" chance="100" />
-			<item id="19440" min="2" max="2" chance="100" />
-			<item id="36563" min="5" max="5" chance="100" />
-			<item id="36553" min="6" max="6" chance="100" />
+			<item id="36523" min="16" max="16" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="8" max="8" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="100" max="100" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36838" min="10" max="10" chance="100" /> <!-- Twilight Gaiter Ingredient -->
+			<item id="36776" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Gaiters (60%) -->
+			<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="5" max="5" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="6" max="6" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37995" name="Twilight Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gauntlets. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="7" max="7" chance="100" />
-			<item id="36543" min="3" max="3" chance="100" />
-			<item id="17371" min="40" max="40" chance="100" />
-			<item id="36839" min="10" max="10" chance="100" />
-			<item id="36777" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="2" max="2" chance="100" />
-			<item id="36553" min="3" max="3" chance="100" />
+			<item id="36523" min="7" max="7" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="3" max="3" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="40" max="40" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36839" min="10" max="10" chance="100" /> <!-- Twilight Gauntlet Ingredient -->
+			<item id="36777" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Gauntlets (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="2" max="2" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="3" max="3" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37996" name="Twilight Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Boots. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1675,18 +1675,18 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="7" max="7" chance="100" />
-			<item id="36543" min="3" max="3" chance="100" />
-			<item id="17371" min="2" max="2" chance="100" />
-			<item id="36840" min="10" max="10" chance="100" />
-			<item id="36778" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="2" max="2" chance="100" />
-			<item id="36553" min="3" max="3" chance="100" />
+			<item id="36523" min="7" max="7" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="3" max="3" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="2" max="2" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36840" min="10" max="10" chance="100" /> <!-- Twilight Boot Ingredient -->
+			<item id="36778" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Boots (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="2" max="2" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="3" max="3" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37997" name="Twilight Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Shield. -->
+		<!-- Wrapped Box containing all ingredients needed for crafting Twilight Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1694,18 +1694,18 @@
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36523" min="7" max="7" chance="100" />
-			<item id="36543" min="3" max="3" chance="100" />
-			<item id="17371" min="3" max="3" chance="100" />
-			<item id="36841" min="10" max="10" chance="100" />
-			<item id="36779" min="1" max="1" chance="100" />
-			<item id="19440" min="1" max="1" chance="100" />
-			<item id="36563" min="2" max="2" chance="100" />
-			<item id="36553" min="3" max="3" chance="100" />
+			<item id="36523" min="7" max="7" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="3" max="3" chance="100" /> <!-- Adamantite Wire -->
+			<item id="17371" min="3" max="3" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36841" min="10" max="10" chance="100" /> <!-- Twilight Shield Ingredient -->
+			<item id="36779" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Shield (60%) -->
+			<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="2" max="2" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36553" min="3" max="3" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37998" name="Twilight Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Helmet. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1713,18 +1713,18 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="60" max="60" chance="100" />
-			<item id="36842" min="10" max="10" chance="100" />
-			<item id="36538" min="6" max="6" chance="100" />
-			<item id="36780" min="1" max="1" chance="100" />
-			<item id="19440" min="2" max="2" chance="100" />
-			<item id="36563" min="3" max="3" chance="100" />
-			<item id="36518" min="24" max="24" chance="100" />
-			<item id="36553" min="4" max="4" chance="100" />
+			<item id="17371" min="60" max="60" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36842" min="10" max="10" chance="100" /> <!-- Twilight Leather Helmet Ingredient -->
+			<item id="36538" min="6" max="6" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36780" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+			<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="3" max="3" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="24" max="24" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="4" max="4" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="37999" name="Twilight Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Armor. -->
+		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1732,14 +1732,14 @@
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17371" min="160" max="160" chance="100" />
-			<item id="36843" min="10" max="10" chance="100" />
-			<item id="36538" min="16" max="16" chance="100" />
-			<item id="36781" min="1" max="1" chance="100" />
-			<item id="19440" min="3" max="3" chance="100" />
-			<item id="36563" min="8" max="8" chance="100" />
-			<item id="36518" min="64" max="64" chance="100" />
-			<item id="36553" min="9" max="9" chance="100" />
+			<item id="17371" min="160" max="160" chance="100" /> <!-- Crystal (R-grade) -->
+			<item id="36843" min="10" max="10" chance="100" /> <!-- Twilight Leather Armor Ingredient -->
+			<item id="36538" min="16" max="16" chance="100" /> <!-- Durable Leather Braid -->
+			<item id="36781" min="1" max="1" chance="100" /> <!-- Recipe: Twilight Leather Armor (60%) -->
+			<item id="19440" min="3" max="3" chance="100" /> <!-- Gemstone (R-grade) -->
+			<item id="36563" min="8" max="8" chance="100" /> <!-- Synthetic Cokes -->
+			<item id="36518" min="64" max="64" chance="100" /> <!-- Durable Leather -->
+			<item id="36553" min="9" max="9" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
 </list>

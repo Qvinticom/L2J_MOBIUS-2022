@@ -20,7 +20,7 @@
 		</skills>
 	</item>
 	<item id="29601" name="Newbie Kit - Lvl 1" type="EtcItem">
-		<!-- Double-click on the item to receive Mysterious Soulshot (No-grade, 5000 pcs.), Blessed Spiritshot (No-grade, 1000 pcs.), Scroll of Experience / SP - Normal (30 pcs.), Event Hair Accessory (30-day), Agathion - Singer and Dancer Pack (30-day), Healing Potion (50 pcs.), Scroll of Escape (30 pcs.), Wind Walk Potion (30 pcs.), Haste Potion (30 pcs.), Newbie Kit - Lv. 2. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click on the item to receive Mysterious Soulshot (No-grade, 5000 pcs.), Blessed Spiritshot (No-grade, 1000 pcs.), Scroll of Experience / SP - Normal (30 pcs.), Event Hair Accessory (30-day), Agathion - Singer & Dancer Pack (30-day), Healing Potion (50 pcs.), Scroll of Escape (30 pcs.), Wind Walk Potion (30 pcs.), Haste Potion (30 pcs.), Newbie Kit - Lv. 2. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -32,16 +32,16 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34603" min="5000" max="5000" chance="100" />
-			<item id="34610" min="1000" max="1000" chance="100" />
-			<item id="29648" min="30" max="30" chance="100" />
-			<item id="29600" min="1" max="1" chance="100" />
-			<item id="49000" min="1" max="1" chance="100" />
-			<item id="29651" min="50" max="50" chance="100" />
-			<item id="10650" min="30" max="30" chance="100" />
-			<item id="49036" min="30" max="30" chance="100" />
-			<item id="29653" min="30" max="30" chance="100" />
-			<item id="29602" min="1" max="1" chance="100" />
+			<item id="34603" min="5000" max="5000" chance="100" /> <!-- Mysterious No-grade Soulshot -->
+			<item id="34610" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+			<item id="29648" min="30" max="30" chance="100" /> <!-- XP/SP Scroll - Normal -->
+			<item id="29600" min="1" max="1" chance="100" /> <!-- Hair Accessory for the Event - 30 days -->
+			<item id="49000" min="1" max="1" chance="100" /> <!-- Agathion - Singer & Dancer - 30 days -->
+			<item id="29651" min="50" max="50" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="10650" min="30" max="30" chance="100" /> <!-- Scroll of Escape (Novice) -->
+			<item id="49036" min="30" max="30" chance="100" /> <!-- Wind Walk Potion (Novice) -->
+			<item id="29653" min="30" max="30" chance="100" /> <!-- Haste Potion -->
+			<item id="29602" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 2 -->
 		</capsuled_items>
 	</item>
 	<item id="29602" name="Newbie Kit - Lvl 2" type="EtcItem">
@@ -57,8 +57,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29603" min="1" max="1" chance="100" />
-			<item id="29654" min="30" max="30" chance="100" />
+			<item id="29603" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 3 -->
+			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="10" />
@@ -77,10 +77,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29604" min="1" max="1" chance="100" />
-			<item id="29608" min="1" max="1" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="34611" min="2000" max="2000" chance="100" />
+			<item id="29604" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 4 -->
+			<item id="29608" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (D-grade) -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="20" />
@@ -99,10 +99,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29529" min="1" max="1" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="29605" min="1" max="1" chance="100" />
+			<item id="29529" min="1" max="1" chance="100" /> <!-- Package: Magic Necklace Making -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29605" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 5 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="25" />
@@ -121,10 +121,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29530" min="1" max="1" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="29606" min="1" max="1" chance="100" />
+			<item id="29530" min="1" max="1" chance="100" /> <!-- Package: Tiger's Eye Making -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29606" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 6 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="30" />
@@ -143,10 +143,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29649" min="10" max="10" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="29607" min="1" max="1" chance="100" />
+			<item id="29649" min="10" max="10" chance="100" /> <!-- XP/SP Scroll - Medium -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29607" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 7 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="35" />
@@ -165,7 +165,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29609" min="1" max="1" chance="100" />
+			<item id="29609" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (C-grade) -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="40" />
@@ -803,9 +803,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="10649" min="1" max="1" chance="100" />
-			<item id="1539" min="5" max="5" chance="100" />
-			<item id="29520" min="100" max="100" chance="100" />
+			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
+			<item id="1539" min="5" max="5" chance="100" /> <!-- Major Healing Potion -->
+			<item id="29520" min="100" max="100" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29633" name="Daily Present - VIP 7" type="EtcItem">
@@ -822,10 +822,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="1538" min="1" max="1" chance="100" />
-			<item id="10649" min="1" max="1" chance="100" />
-			<item id="1539" min="3" max="3" chance="100" />
-			<item id="29520" min="150" max="150" chance="100" />
+			<item id="1538" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
+			<item id="1539" min="3" max="3" chance="100" /> <!-- Major Healing Potion -->
+			<item id="29520" min="150" max="150" chance="100" /> <!-- VIP Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29634" name="Newbie Kit - Lv. 1" type="EtcItem">
@@ -841,18 +841,18 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29653" min="30" max="30" chance="100" />
-			<item id="29651" min="50" max="50" chance="100" />
-			<item id="34610" min="1000" max="1000" chance="100" />
-			<item id="34603" min="5000" max="5000" chance="100" />
-			<item id="29635" min="1" max="1" chance="100" />
-			<item id="10650" min="30" max="30" chance="100" />
-			<item id="49036" min="30" max="30" chance="100" />
-			<item id="29648" min="30" max="30" chance="100" />
+			<item id="29653" min="30" max="30" chance="100" /> <!-- Haste Potion -->
+			<item id="29651" min="50" max="50" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="34610" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed No-grade Spiritshot -->
+			<item id="34603" min="5000" max="5000" chance="100" /> <!-- Mysterious No-grade Soulshot -->
+			<item id="29635" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 2 -->
+			<item id="10650" min="30" max="30" chance="100" /> <!-- Scroll of Escape (Novice) -->
+			<item id="49036" min="30" max="30" chance="100" /> <!-- Wind Walk Potion (Novice) -->
+			<item id="29648" min="30" max="30" chance="100" /> <!-- XP/SP Scroll - Normal -->
 		</capsuled_items>
 	</item>
 	<item id="29635" name="Newbie Kit - Lv. 2" type="EtcItem">
-		<!-- Double-click the item to get 1st Class Buff Scroll (30 pcs.), Newbie Kit - Lv.3. Available at level 10 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click on the item to get Normal Buff Scroll (30 pcs.), Newbie Kit - Lv. 3. Available at level 10 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -864,15 +864,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29654" min="30" max="30" chance="100" />
-			<item id="29636" min="1" max="1" chance="100" />
+			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
+			<item id="29636" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 3 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="10" />
 		</cond>
 	</item>
 	<item id="29636" name="Newbie Kit - Lv. 3" type="EtcItem">
-		<!-- Double-click the item to get a Saber*Elven Sword (30-day), Mysterious D-grade Soulshot (9000 pcs.), Mysterious Blessed D-grade Spiritshot (2000 pcs.), Newbie Kit - Lv.4. Available at level 20 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click the on item to get a Saber*Elven Sword (30-day), Mysterious Soulshot (D-grade, 9000 pcs.), Mysterious Blessed Spiritshot (D-grade, 2000 pcs.) Newbie Kit - Lv. 4. Available at level 20 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -884,10 +884,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="29637" min="1" max="1" chance="100" />
-			<item id="29527" min="1" max="1" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29637" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 4 -->
+			<item id="29527" min="1" max="1" chance="100" /> <!-- Saber*Elven Sword - 30 days -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="20" />
@@ -906,9 +906,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="29638" min="1" max="1" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29638" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 5 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="25" />
@@ -927,16 +927,16 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="29639" min="1" max="1" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29639" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 6 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="30" />
 		</cond>
 	</item>
 	<item id="29639" name="Newbie Kit - Lv. 6" type="EtcItem">
-		<!-- Double-click the item to get XP/SP Scroll - Medium (20 pcs.), Mysterious D-grade Soulshot (9000 pcs.), Mysterious Blessed D-grade Spiritshot (2000 pcs.), Newbie Kit - Lv.7. Available at level 35 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click on the item to get Scroll of Experience / SP (40%, 10 pcs.), Mysterious Soulshot (D-grade, 9000 pcs.), Mysterious Blessed Spiritshot (D-grade, 2000 pcs.), Newbie Kit - Lv. 7. Available at level 35 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -948,17 +948,17 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34611" min="2000" max="2000" chance="100" />
-			<item id="34604" min="9000" max="9000" chance="100" />
-			<item id="29640" min="1" max="1" chance="100" />
-			<item id="29649" min="20" max="20" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="34604" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29640" min="1" max="1" chance="100" /> <!-- Newbie Kit - Lv. 7 -->
+			<item id="29649" min="20" max="20" chance="100" /> <!-- XP/SP Scroll - Medium -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="35" />
 		</cond>
 	</item>
 	<item id="29640" name="Newbie Kit - Lv. 7" type="EtcItem">
-		<!-- Double-click the item to get 1 Black Samurai Long Sword*Black Samurai Long Sword (30-day). Available at level 40 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click the item to get Samurai Black Sword (30-day). Available since level 40. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -970,7 +970,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49573" min="1" max="1" chance="100" />
+			<item id="49573" min="1" max="1" chance="100" /> <!-- Samurai Black Long Sword - 30 days -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="40" />
@@ -1136,7 +1136,7 @@
 		</skills>
 	</item>
 	<item id="29651" name="Healing Potion" additionalName="Event" type="EtcItem">
-		<!-- Magic potion that slowly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1155,7 +1155,7 @@
 		</skills>
 	</item>
 	<item id="29652" name="Major Healing Potion" additionalName="Event" type="EtcItem">
-		<!-- Magic potion that slowly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1178,7 +1178,7 @@
 		</skills>
 	</item>
 	<item id="29653" name="Haste Potion" type="EtcItem">
-		<!-- Magic potion that increases Atk. Spd. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magical potion that increases Atk. Spd. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1202,7 +1202,7 @@
 		</skills>
 	</item>
 	<item id="29654" name="1st Class Buff Scroll" type="EtcItem">
-		<!-- For 20 minutes, provides the effects of Shield Lv.2, Might Lv.2, Concentration Lv.2, Acumen Lv.1, Wind Walk Lv.1, Focus Lv.1, Agility Lv.1, Empower Lv.1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- For 20 minutes gives Shield Lv.2, Might Lv.2, Concentration Lv.2, Acumen Lv.1, Wind Walk Lv.1, Focus Lv.1, Agility Lv.1, Empower Lv.1 Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1223,7 +1223,7 @@
 		</skills>
 	</item>
 	<item id="29655" name="2nd Class Buff Scroll" type="EtcItem">
-		<!-- For 20 minutes, provides the effects of Shield Lv.3, Might Lv.3, Acumen Lv.2, Wind Walk Lv.2, Focus Lv.2, Regeneration Lv.1, Guidance Lv.1, Death Whisper Lv.1, Magic Barrier Lv.1, Blessed Body Lv.1, Blessed Soul Lv.1, Haste Lv.1, Agility Lv.2, Empower Lv.2. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- For 20 minutes gives Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1256,15 +1256,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29025" min="5000" max="5000" chance="100" />
-			<item id="29026" min="1000" max="1000" chance="100" />
-			<item id="29648" min="30" max="30" chance="100" />
-			<item id="29600" min="1" max="1" chance="100" />
-			<item id="29651" min="50" max="50" chance="100" />
-			<item id="10650" min="30" max="30" chance="100" />
-			<item id="29653" min="30" max="30" chance="100" />
-			<item id="70102" min="30" max="30" chance="100" />
-			<item id="29657" min="1" max="1" chance="100" />
+			<item id="29025" min="5000" max="5000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29648" min="30" max="30" chance="100" /> <!-- XP/SP Scroll - Normal -->
+			<item id="29600" min="1" max="1" chance="100" /> <!-- Hair Accessory for the Event - 30 days -->
+			<item id="29651" min="50" max="50" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="10650" min="30" max="30" chance="100" /> <!-- Scroll of Escape (Novice) -->
+			<item id="29653" min="30" max="30" chance="100" /> <!-- Haste Potion -->
+			<item id="70102" min="30" max="30" chance="100" /> <!-- Adventurer? Potion - Atk. Spd. -->
+			<item id="29657" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 2 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="24" />
@@ -1283,8 +1283,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29643" min="1" max="1" chance="100" />
-			<item id="29608" min="1" max="1" chance="100" />
+			<item id="29643" min="1" max="1" chance="100" /> <!-- Mysterious Soulshot (D-grade) - Not in Use -->
+			<item id="29608" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (D-grade) -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="25" />
@@ -1303,8 +1303,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29654" min="30" max="30" chance="100" />
-			<item id="29659" min="1" max="1" chance="100" />
+			<item id="29654" min="30" max="30" chance="100" /> <!-- 1st Class Buff Scroll -->
+			<item id="29659" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 4 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="28" />
@@ -1323,10 +1323,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29693" min="1" max="1" chance="100" />
-			<item id="49745" min="4500" max="4500" chance="100" />
-			<item id="29026" min="1000" max="1000" chance="100" />
-			<item id="29660" min="1" max="1" chance="100" />
+			<item id="29693" min="1" max="1" chance="100" /> <!-- Chronicle Chest -->
+			<item id="49745" min="4500" max="4500" chance="100" /> <!-- Mysterious Blessed Soulshot (D-grade) -->
+			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29660" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 5 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="30" />
@@ -1345,11 +1345,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29693" min="1" max="1" chance="100" />
-			<item id="29025" min="4500" max="4500" chance="100" />
-			<item id="29026" min="1000" max="1000" chance="100" />
-			<item id="736" min="30" max="30" chance="100" />
-			<item id="29661" min="1" max="1" chance="100" />
+			<item id="29693" min="1" max="1" chance="100" /> <!-- Chronicle Chest -->
+			<item id="29025" min="4500" max="4500" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="736" min="30" max="30" chance="100" /> <!-- Scroll of Escape -->
+			<item id="29661" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 6 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="32" />
@@ -1368,11 +1368,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29693" min="1" max="1" chance="100" />
-			<item id="49745" min="4500" max="4500" chance="100" />
-			<item id="29026" min="1000" max="1000" chance="100" />
-			<item id="29651" min="50" max="50" chance="100" />
-			<item id="29662" min="1" max="1" chance="100" />
+			<item id="29693" min="1" max="1" chance="100" /> <!-- Chronicle Chest -->
+			<item id="49745" min="4500" max="4500" chance="100" /> <!-- Mysterious Blessed Soulshot (D-grade) -->
+			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29651" min="50" max="50" chance="100" /> <!-- Healing Potion - Event -->
+			<item id="29662" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 7 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="35" />
@@ -1391,10 +1391,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29649" min="20" max="20" chance="100" />
-			<item id="29025" min="4500" max="4500" chance="100" />
-			<item id="29026" min="1000" max="1000" chance="100" />
-			<item id="29662" min="1" max="1" chance="100" />
+			<item id="29649" min="20" max="20" chance="100" /> <!-- XP/SP Scroll - Medium -->
+			<item id="29025" min="4500" max="4500" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29026" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29662" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 7 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="38" />
@@ -1413,10 +1413,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29027" min="9000" max="9000" chance="100" />
-			<item id="29028" min="2000" max="2000" chance="100" />
-			<item id="29609" min="1" max="1" chance="100" />
-			<item id="29664" min="1" max="1" chance="100" />
+			<item id="29027" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (C-grade) -->
+			<item id="29028" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (C-grade) -->
+			<item id="29609" min="1" max="1" chance="100" /> <!-- Ticket: Temporary Weapon (C-grade) -->
+			<item id="29664" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 9 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="40" />
@@ -1435,10 +1435,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29695" min="3" max="3" chance="100" />
-			<item id="29649" min="20" max="20" chance="100" />
-			<item id="29693" min="1" max="1" chance="100" />
-			<item id="29665" min="1" max="1" chance="100" />
+			<item id="29695" min="3" max="3" chance="100" /> <!-- Quick Healing Potion - Event -->
+			<item id="29649" min="20" max="20" chance="100" /> <!-- XP/SP Scroll - Medium -->
+			<item id="29693" min="1" max="1" chance="100" /> <!-- Chronicle Chest -->
+			<item id="29665" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 10 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="42" />
@@ -1457,10 +1457,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29649" min="20" max="20" chance="100" />
-			<item id="29025" min="9000" max="9000" chance="100" />
-			<item id="29026" min="2000" max="2000" chance="100" />
-			<item id="29666" min="1" max="1" chance="100" />
+			<item id="29649" min="20" max="20" chance="100" /> <!-- XP/SP Scroll - Medium -->
+			<item id="29025" min="9000" max="9000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
+			<item id="29026" min="2000" max="2000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
+			<item id="29666" min="1" max="1" chance="100" /> <!-- Traveler's Package - Lvl 11 -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="45" />
@@ -1479,7 +1479,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29667" min="1" max="1" chance="100" />
+			<item id="29667" min="1" max="1" chance="100" /> <!-- Agathion - Griffin - 30 days -->
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="49" />
@@ -1609,7 +1609,7 @@
 		</skills>
 	</item>
 	<item id="29675" name="Blessed Castle Scroll of Escape" type="EtcItem">
-		<!-- Magical scroll that relocates you to the nearest village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magical scroll that relocates you to the the nearest town. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1774,7 +1774,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29668" min="1" max="1" chance="100" />
+			<item id="29668" min="1" max="1" chance="100" /> <!-- Castle Owners' Coin -->
 		</capsuled_items>
 	</item>
 	<item id="29684" name="Scroll: Shield" type="EtcItem">
@@ -1819,7 +1819,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 	</item>
 	<item id="29687" name="Scroll: Agility" type="EtcItem">
-		<!-- Increases Evasion by 2 for 20 minutes when used. -->
+		<!-- Increases P. Evasion by 2 for 20 minutes when used. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1869,7 +1869,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 	</item>
 	<item id="29692" name="LineageII Chest" type="EtcItem">
-		<!-- A reward box given for collecting all the letters of the word �Lineage II�. -->
+		<!-- A reward box given for collecting all the letters of the word ?ineage II? -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1881,7 +1881,7 @@
 		</skills>
 	</item>
 	<item id="29693" name="Chronicle Chest" type="EtcItem">
-		<!-- A reward box given for collecting all the letters of the word �Chronicle�. There must be something interesting in there! Double-click to find out. -->
+		<!-- A reward box given for collecting all the letters of the word ?hronicle? There must be something interesting in there! Double-click to find out. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1893,7 +1893,7 @@
 		</skills>
 	</item>
 	<item id="29694" name="Memories Chest" type="EtcItem">
-		<!-- A reward box given for collecting all the letters of the word �Memories�. There must be something interesting in there! Double-click to find out. -->
+		<!-- A reward box given for collecting all the letters of the word ?emories? There must be something interesting in there! Double-click to find out. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1950,7 +1950,7 @@
 		</skills>
 	</item>
 	<item id="29698" name="2nd Class Buff Scroll" additionalName="Event" type="EtcItem">
-		<!-- Provides the following positive effects for 10 min: Shield (Lvl 3), Might (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2)? Empower (Lvl2). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- For 10 minutes, provides the effects of Shield Lv.3, Might Lv.3, Acumen Lv.2, Wind Walk Lv.2, Focus Lv.2, Regeneration Lv.1, Guidance Lv.1, Death Whisper Lv.1, Magic Barrier Lv.1, Blessed Body Lv.1, Blessed Soul Lv.1, Haste Lv.1, Agility Lv.2, Empower Lv.2. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

@@ -92,7 +92,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38210" name="Blue Mackerel Appearance Stone: Dualsword" type="EtcItem">
-		<!-- Turns the appearance of a dualsword into that of a Blue Mackerel. -->
+		<!-- Turns the appearance of a dual sword into that of a Blue Mackerel. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -357,7 +357,7 @@
 		</stats>
 	</item>
 	<item id="38221" name="Blue Mackerel: Dualsword" type="Weapon">
-		<!-- Blue Mackerel-shaped weapon. Dualsword. -->
+		<!-- Blue Mackerel-shaped weapon. dual sword. -->
 		<set name="icon" val="icon.wp_fishing11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -383,7 +383,7 @@
 		</stats>
 	</item>
 	<item id="38222" name="Fish Stew" additionalName="WIT" type="EtcItem">
-		<!-- For 30 min., WIT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<!-- For 30 min., WIT +3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -399,7 +399,7 @@
 		</skills>
 	</item>
 	<item id="38223" name="Fish Stew" additionalName="INT" type="EtcItem">
-		<!-- For 30 min., INT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<!-- For 30 min., INT +3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -415,7 +415,7 @@
 		</skills>
 	</item>
 	<item id="38224" name="Fish Stew" additionalName="MEN" type="EtcItem">
-		<!-- For 30 min., MEN + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<!-- For 30 min., MEN +3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -431,7 +431,7 @@
 		</skills>
 	</item>
 	<item id="38225" name="Fish Stew" additionalName="DEX" type="EtcItem">
-		<!-- For 30 min., DEX + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<!-- For 30 min., DEX +3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +447,7 @@
 		</skills>
 	</item>
 	<item id="38226" name="Fish Stew" additionalName="STR" type="EtcItem">
-		<!-- For 30 min., STR + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<!-- For 30 min., STR +3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -463,7 +463,7 @@
 		</skills>
 	</item>
 	<item id="38227" name="Fish Stew" additionalName="CON" type="EtcItem">
-		<!-- For 30 min., CON + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
+		<!-- For 30 min., CON +3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -479,7 +479,7 @@
 		</skills>
 	</item>
 	<item id="38228" name="Lady's Hairpin" additionalName="STR" type="Armor">
-		<!-- STR + 3. Female only. -->
+		<!-- STR +3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -496,7 +496,7 @@
 		</skills>
 	</item>
 	<item id="38229" name="Lady's Hairpin" additionalName="DEX" type="Armor">
-		<!-- DEX + 3. Female only. -->
+		<!-- DEX +3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -513,7 +513,7 @@
 		</skills>
 	</item>
 	<item id="38230" name="Lady's Hairpin" additionalName="CON" type="Armor">
-		<!-- CON + 3. Female only. -->
+		<!-- CON +3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -530,7 +530,7 @@
 		</skills>
 	</item>
 	<item id="38231" name="Lady's Hairpin" additionalName="MEN" type="Armor">
-		<!-- MEN + 3. Female only. -->
+		<!-- MEN +3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -547,7 +547,7 @@
 		</skills>
 	</item>
 	<item id="38232" name="Lady's Hairpin" additionalName="INT" type="Armor">
-		<!-- INT + 3. Female only. -->
+		<!-- INT +3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -564,7 +564,7 @@
 		</skills>
 	</item>
 	<item id="38233" name="Lady's Hairpin" additionalName="WIT" type="Armor">
-		<!-- WIT + 3. Female only. -->
+		<!-- WIT +3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -581,7 +581,7 @@
 		</skills>
 	</item>
 	<item id="38234" name="Lady's Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate + 50. Female only. -->
+		<!-- Critical Rate +50. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -598,7 +598,7 @@
 		</skills>
 	</item>
 	<item id="38235" name="Lady's Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage + 90, M. Critical Damage + 68. Female only. -->
+		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="38236" name="Lady's Hairpin" additionalName="P. Def." type="Armor">
-		<!-- P. Def. + 5%. Female only. -->
+		<!-- P. Def. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -632,7 +632,7 @@
 		</skills>
 	</item>
 	<item id="38237" name="Lady's Hairpin" additionalName="M. Def." type="Armor">
-		<!-- M. Def. + 5%. Female only. -->
+		<!-- M. Def. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -649,7 +649,7 @@
 		</skills>
 	</item>
 	<item id="38238" name="Lady's Hairpin" additionalName="Evasion" type="Armor">
-		<!-- Evasion + 5. Female only. -->
+		<!-- Evasion +5. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -666,7 +666,7 @@
 		</skills>
 	</item>
 	<item id="38239" name="Lady's Hairpin" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. + 5%. Female only. -->
+		<!-- P. Atk. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -683,7 +683,7 @@
 		</skills>
 	</item>
 	<item id="38240" name="Lady's Hairpin" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. + 10%. Female only. -->
+		<!-- M. Atk. +10%. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -700,7 +700,7 @@
 		</skills>
 	</item>
 	<item id="38241" name="Lady's Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy + 5. Female only. -->
+		<!-- Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -717,7 +717,7 @@
 		</skills>
 	</item>
 	<item id="38242" name="Party Mask" additionalName="STR" type="Armor">
-		<!-- STR + 3. -->
+		<!-- STR +3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -731,7 +731,7 @@
 		</skills>
 	</item>
 	<item id="38243" name="Party Mask" additionalName="DEX" type="Armor">
-		<!-- DEX + 3. -->
+		<!-- DEX +3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -745,7 +745,7 @@
 		</skills>
 	</item>
 	<item id="38244" name="Party Mask" additionalName="CON" type="Armor">
-		<!-- CON + 3. -->
+		<!-- CON +3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -759,7 +759,7 @@
 		</skills>
 	</item>
 	<item id="38245" name="Party Mask" additionalName="MEN" type="Armor">
-		<!-- MEN + 3. -->
+		<!-- MEN +3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -773,7 +773,7 @@
 		</skills>
 	</item>
 	<item id="38246" name="Party Mask" additionalName="INT" type="Armor">
-		<!-- INT + 3. -->
+		<!-- INT +3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -787,7 +787,7 @@
 		</skills>
 	</item>
 	<item id="38247" name="Party Mask" additionalName="WIT" type="Armor">
-		<!-- WIT + 3. -->
+		<!-- WIT +3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -801,7 +801,7 @@
 		</skills>
 	</item>
 	<item id="38248" name="Party Mask" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate + 50. -->
+		<!-- Critical Rate +50. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -815,7 +815,7 @@
 		</skills>
 	</item>
 	<item id="38249" name="Party Mask" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage + 90, M. Critical Damage + 68. -->
+		<!-- Critical Damage +90, M. Critical Damage +68. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -829,7 +829,7 @@
 		</skills>
 	</item>
 	<item id="38250" name="Party Mask" additionalName="P. Def." type="Armor">
-		<!-- P. Def. + 5%. -->
+		<!-- P. Def. +5%. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -843,7 +843,7 @@
 		</skills>
 	</item>
 	<item id="38251" name="Party Mask" additionalName="M. Def." type="Armor">
-		<!-- M. Def. + 5%. -->
+		<!-- M. Def. +5%. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -857,7 +857,7 @@
 		</skills>
 	</item>
 	<item id="38252" name="Party Mask" additionalName="Evasion" type="Armor">
-		<!-- Evasion + 5. -->
+		<!-- Evasion +5. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -871,7 +871,7 @@
 		</skills>
 	</item>
 	<item id="38253" name="Party Mask" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. + 5%. -->
+		<!-- P. Atk. +5%. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -885,7 +885,7 @@
 		</skills>
 	</item>
 	<item id="38254" name="Party Mask" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. + 10%. -->
+		<!-- M. Atk. +10%. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -899,7 +899,7 @@
 		</skills>
 	</item>
 	<item id="38255" name="Party Mask" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy + 5. -->
+		<!-- Accuracy +5. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -913,7 +913,7 @@
 		</skills>
 	</item>
 	<item id="38256" name="Monocle" additionalName="STR" type="Armor">
-		<!-- STR + 3. -->
+		<!-- STR +3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -927,7 +927,7 @@
 		</skills>
 	</item>
 	<item id="38257" name="Monocle" additionalName="DEX" type="Armor">
-		<!-- DEX + 3. -->
+		<!-- DEX +3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -941,7 +941,7 @@
 		</skills>
 	</item>
 	<item id="38258" name="Monocle" additionalName="CON" type="Armor">
-		<!-- CON + 3. -->
+		<!-- CON +3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -955,7 +955,7 @@
 		</skills>
 	</item>
 	<item id="38259" name="Monocle" additionalName="MEN" type="Armor">
-		<!-- MEN + 3. -->
+		<!-- MEN +3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -969,7 +969,7 @@
 		</skills>
 	</item>
 	<item id="38260" name="Monocle" additionalName="INT" type="Armor">
-		<!-- INT + 3. -->
+		<!-- INT +3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -983,7 +983,7 @@
 		</skills>
 	</item>
 	<item id="38261" name="Monocle" additionalName="WIT" type="Armor">
-		<!-- WIT + 3. -->
+		<!-- WIT +3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -997,7 +997,7 @@
 		</skills>
 	</item>
 	<item id="38262" name="Monocle" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate + 50. -->
+		<!-- Critical Rate +50. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1011,7 +1011,7 @@
 		</skills>
 	</item>
 	<item id="38263" name="Monocle" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage + 90, M. Critical Damage + 68. -->
+		<!-- Critical Damage +90, M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1025,7 +1025,7 @@
 		</skills>
 	</item>
 	<item id="38264" name="Monocle" additionalName="P. Def." type="Armor">
-		<!-- P. Def. + 5%. -->
+		<!-- P. Def. +5%. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1039,7 +1039,7 @@
 		</skills>
 	</item>
 	<item id="38265" name="Monocle" additionalName="M. Def." type="Armor">
-		<!-- M. Def. + 5%. -->
+		<!-- M. Def. +5%. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1053,7 +1053,7 @@
 		</skills>
 	</item>
 	<item id="38266" name="Monocle" additionalName="Evasion" type="Armor">
-		<!-- Evasion + 5. -->
+		<!-- Evasion +5. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1067,7 +1067,7 @@
 		</skills>
 	</item>
 	<item id="38267" name="Monocle" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. + 5%. -->
+		<!-- P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1081,7 +1081,7 @@
 		</skills>
 	</item>
 	<item id="38268" name="Monocle" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. + 10%. -->
+		<!-- M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1095,7 +1095,7 @@
 		</skills>
 	</item>
 	<item id="38269" name="Monocle" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy + 5. -->
+		<!-- Accuracy +5. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1109,7 +1109,7 @@
 		</skills>
 	</item>
 	<item id="38270" name="Maiden's Hairpin" additionalName="STR" type="Armor">
-		<!-- STR + 3. Female only. -->
+		<!-- STR +3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1126,7 +1126,7 @@
 		</skills>
 	</item>
 	<item id="38271" name="Maiden's Hairpin" additionalName="DEX" type="Armor">
-		<!-- DEX + 3. Female only. -->
+		<!-- DEX +3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1143,7 +1143,7 @@
 		</skills>
 	</item>
 	<item id="38272" name="Maiden's Hairpin" additionalName="CON" type="Armor">
-		<!-- CON + 3. Female only. -->
+		<!-- CON +3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1160,7 +1160,7 @@
 		</skills>
 	</item>
 	<item id="38273" name="Maiden's Hairpin" additionalName="MEN" type="Armor">
-		<!-- MEN + 3. Female only. -->
+		<!-- MEN +3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1177,7 +1177,7 @@
 		</skills>
 	</item>
 	<item id="38274" name="Maiden's Hairpin" additionalName="INT" type="Armor">
-		<!-- INT + 3. Female only. -->
+		<!-- INT +3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1194,7 +1194,7 @@
 		</skills>
 	</item>
 	<item id="38275" name="Maiden's Hairpin" additionalName="WIT" type="Armor">
-		<!-- WIT + 3. Female only. -->
+		<!-- WIT +3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1211,7 +1211,7 @@
 		</skills>
 	</item>
 	<item id="38276" name="Maiden's Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate + 50. Female only. -->
+		<!-- Critical Rate +50. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1228,7 +1228,7 @@
 		</skills>
 	</item>
 	<item id="38277" name="Maiden's Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage + 90, M. Critical Damage + 68. Female only. -->
+		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1245,7 +1245,7 @@
 		</skills>
 	</item>
 	<item id="38278" name="Maiden's Hairpin" additionalName="P. Def." type="Armor">
-		<!-- P. Def. + 5%. Female only. -->
+		<!-- P. Def. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1262,7 +1262,7 @@
 		</skills>
 	</item>
 	<item id="38279" name="Maiden's Hairpin" additionalName="M. Def." type="Armor">
-		<!-- M. Def. + 5%. Female only. -->
+		<!-- M. Def. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1279,7 +1279,7 @@
 		</skills>
 	</item>
 	<item id="38280" name="Maiden's Hairpin" additionalName="Evasion" type="Armor">
-		<!-- Evasion + 5. Female only. -->
+		<!-- Evasion +5. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1296,7 +1296,7 @@
 		</skills>
 	</item>
 	<item id="38281" name="Maiden's Hairpin" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. + 5%. Female only. -->
+		<!-- P. Atk. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1313,7 +1313,7 @@
 		</skills>
 	</item>
 	<item id="38282" name="Maiden's Hairpin" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. + 10%. Female only. -->
+		<!-- M. Atk. +10%. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1330,7 +1330,7 @@
 		</skills>
 	</item>
 	<item id="38283" name="Maiden's Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy + 5. Female only. -->
+		<!-- Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1347,7 +1347,7 @@
 		</skills>
 	</item>
 	<item id="38284" name="Forget-me-not Hairpin" additionalName="STR" type="Armor">
-		<!-- STR + 3. Female only. -->
+		<!-- STR +3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1364,7 +1364,7 @@
 		</skills>
 	</item>
 	<item id="38285" name="Forget-me-not Hairpin" additionalName="DEX" type="Armor">
-		<!-- DEX + 3. Female only. -->
+		<!-- DEX +3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1381,7 +1381,7 @@
 		</skills>
 	</item>
 	<item id="38286" name="Forget-me-not Hairpin" additionalName="CON" type="Armor">
-		<!-- CON + 3. Female only. -->
+		<!-- CON +3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1398,7 +1398,7 @@
 		</skills>
 	</item>
 	<item id="38287" name="Forget-me-not Hairpin" additionalName="MEN" type="Armor">
-		<!-- MEN + 3. Female only. -->
+		<!-- MEN +3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1415,7 +1415,7 @@
 		</skills>
 	</item>
 	<item id="38288" name="Forget-me-not Hairpin" additionalName="INT" type="Armor">
-		<!-- INT + 3. Female only. -->
+		<!-- INT +3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1432,7 +1432,7 @@
 		</skills>
 	</item>
 	<item id="38289" name="Forget-me-not Hairpin" additionalName="WIT" type="Armor">
-		<!-- WIT + 3. Female only. -->
+		<!-- WIT +3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1449,7 +1449,7 @@
 		</skills>
 	</item>
 	<item id="38290" name="Forget-me-not Hairpin" additionalName="Critical Rate" type="Armor">
-		<!-- Critical Rate + 50. Female only. -->
+		<!-- Critical Rate +50. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1466,7 +1466,7 @@
 		</skills>
 	</item>
 	<item id="38291" name="Forget-me-not Hairpin" additionalName="Critical Damage" type="Armor">
-		<!-- Critical Damage + 90, M. Critical Damage + 68. Female only. -->
+		<!-- Critical Damage +90, M. Critical Damage +68. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1483,7 +1483,7 @@
 		</skills>
 	</item>
 	<item id="38292" name="Forget-me-not Hairpin" additionalName="P. Def." type="Armor">
-		<!-- P. Def. + 5%. Female only. -->
+		<!-- P. Def. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1500,7 +1500,7 @@
 		</skills>
 	</item>
 	<item id="38293" name="Forget-me-not Hairpin" additionalName="M. Def." type="Armor">
-		<!-- M. Def. + 5%. Female only. -->
+		<!-- M. Def. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1517,7 +1517,7 @@
 		</skills>
 	</item>
 	<item id="38294" name="Forget-me-not Hairpin" additionalName="Evasion" type="Armor">
-		<!-- Evasion + 5. Female only. -->
+		<!-- Evasion +5. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1534,7 +1534,7 @@
 		</skills>
 	</item>
 	<item id="38295" name="Forget-me-not Hairpin" additionalName="P. Atk." type="Armor">
-		<!-- P. Atk. + 5%. Female only. -->
+		<!-- P. Atk. +5%. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1551,7 +1551,7 @@
 		</skills>
 	</item>
 	<item id="38296" name="Forget-me-not Hairpin" additionalName="M. Atk." type="Armor">
-		<!-- M. Atk. + 10%. Female only. -->
+		<!-- M. Atk. +10%. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1568,7 +1568,7 @@
 		</skills>
 	</item>
 	<item id="38297" name="Forget-me-not Hairpin" additionalName="Accuracy" type="Armor">
-		<!-- Accuracy + 5. Female only. -->
+		<!-- Accuracy +5. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1585,7 +1585,7 @@
 		</skills>
 	</item>
 	<item id="38298" name="Daisy Hairpin" additionalName="STR" type="Armor">
-		<!-- STR + 3. Female only. -->
+		<!-- STR +3. Female only. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1602,7 +1602,7 @@
 		</skills>
 	</item>
 	<item id="38299" name="Daisy Hairpin" additionalName="DEX" type="Armor">
-		<!-- DEX + 3. Female only. -->
+		<!-- DEX +3. Female only. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />

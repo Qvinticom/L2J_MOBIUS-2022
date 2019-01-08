@@ -127,6 +127,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="809" type="EtcItem" name="Bone Fragment">
+		<!-- Bone fragments obtained from the undead skeletons. Collect ten of these and take to Tetrarch Kaitar. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -941,6 +942,7 @@
 		</for>
 	</item>
 	<item id="858" type="Armor" name="Tateossian Earring">
+		<!-- Tateossian Earring. Produces the effect of MP +31. -->
 		<set name="bodypart" val="rear,lear"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1038,6 +1040,7 @@
 		</for>
 	</item>
 	<item id="862" type="Armor" name="Majestic Earring">
+		<!-- Majestic Earring. Produces the effect of MP +25. -->
 		<set name="bodypart" val="rear,lear"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1255,6 +1258,7 @@
 		</for>
 	</item>
 	<item id="871" type="Armor" name="Phoenix Earring">
+		<!-- Phoenix Earring. Produces the effect of M. Def. +3 and MP +20. -->
 		<set name="bodypart" val="rear,lear"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1352,6 +1356,7 @@
 		</for>
 	</item>
 	<item id="875" type="Armor" name="Ring of Knowledge">
+		<!-- A gold ring with delicately engraved rune characters of knowledge. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1375,6 +1380,7 @@
 		</for>
 	</item>
 	<item id="876" type="Armor" name="Ring of Anguish">
+		<!-- A gold ring with engraved rune characters of anguish. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="false"/>
 		<set name="armor_type" val="none"/>
@@ -1684,6 +1690,7 @@
 		</for>
 	</item>
 	<item id="889" type="Armor" name="Tateossian Ring">
+		<!-- Tateossian Ring. Produces the effect of MP +21. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1781,6 +1788,7 @@
 		</for>
 	</item>
 	<item id="893" type="Armor" name="Majestic Ring">
+		<!-- Majestic Ring. Produces the effect of MP +17. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>

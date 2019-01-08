@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36100" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -30,7 +30,7 @@
 		</skills>
 	</item>
 	<item id="36101" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -208,7 +208,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36112" name="Kaliel's Token" type="EtcItem">
-		<!-- Kaliel's Token. Give it to Jolie (Event Manager) to receive a Gift Box or Soul Box. Deleted after event. -->
+		<!-- Kaliel's Token. Give it to Jolie (Event Manager) to receive a Gift Box or Soul Box. To be deleted on May 23rd when the event ends. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -316,7 +316,7 @@
 		<set name="weight" val="1190" />
 	</item>
 	<item id="36120" name="Clan Cloak - Clan Hall (Contestable)" type="Armor">
-		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a contestable Clan Hall. STR + 1 / INT + 1 effect. Can use a private warehouse. When S or S80-grade armor set is all equipped, or upper armor above R-grade is equipped, the sealed cloak slot opens. -->
+		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a contestable Clan Hall. STR +1/ INT +1 effect. Can use a private warehouse. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
@@ -345,7 +345,7 @@
 		</stats>
 	</item>
 	<item id="36121" name="Rabbit Ears: STR (3-day)" additionalName="Campaign" type="Armor">
-		<!-- STR + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<!-- STR +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -365,7 +365,7 @@
 		</skills>
 	</item>
 	<item id="36122" name="Rabbit Ears: DEX (3-day)" additionalName="Campaign" type="Armor">
-		<!-- DEX + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<!-- DEX +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -385,7 +385,7 @@
 		</skills>
 	</item>
 	<item id="36123" name="Rabbit Ears: WIT (3-day)" additionalName="Campaign" type="Armor">
-		<!-- WIT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<!-- WIT +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -405,7 +405,7 @@
 		</skills>
 	</item>
 	<item id="36124" name="Rabbit Ears: INT (3-day)" additionalName="Campaign" type="Armor">
-		<!-- INT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
+		<!-- INT +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -425,7 +425,7 @@
 		</skills>
 	</item>
 	<item id="36125" name="Angel Circlet - STR (7-day)" additionalName="Campaign" type="Armor">
-		<!-- STR + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<!-- STR +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -445,7 +445,7 @@
 		</skills>
 	</item>
 	<item id="36126" name="Angel Circlet - DEX (7-day)" additionalName="Campaign" type="Armor">
-		<!-- DEX + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<!-- DEX +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -465,7 +465,7 @@
 		</skills>
 	</item>
 	<item id="36127" name="Angel Circlet - WIT (7-day)" additionalName="Campaign" type="Armor">
-		<!-- WIT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<!-- WIT +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -485,7 +485,7 @@
 		</skills>
 	</item>
 	<item id="36128" name="Angel Circlet - INT (7-day)" additionalName="Campaign" type="Armor">
-		<!-- INT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
+		<!-- INT +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -631,7 +631,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17714" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary MEN Dye - MEN + 5 / INT + 1 / Holy Resistance + 25 -->
+			<item id="17714" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36138" name="Lv. 5 Legendary WIT Dye 10-unit Pack" type="EtcItem">
@@ -645,7 +645,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17713" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary WIT Dye - WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
+			<item id="17713" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36139" name="Lv. 5 Legendary DEX Dye 10-unit Pack" type="EtcItem">
@@ -659,7 +659,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17710" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary DEX Dye - DEX + 5 / CON + 1 / Earth Resistance + 25 -->
+			<item id="17710" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36140" name="Lv. 5 Legendary CON Dye 10-unit Pack" type="EtcItem">
@@ -673,7 +673,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17711" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary CON Dye - CON + 5 / STR + 1 / Dark Resistance + 25 -->
+			<item id="17711" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36141" name="Lv. 5 Legendary INT Dye 10-unit Pack" type="EtcItem">
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17712" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary INT Dye - INT + 5 / WIT + 1 / Water Resistance + 25 -->
+			<item id="17712" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36142" name="Lv. 5 Legendary STR Dye 10-unit Pack" type="EtcItem">
@@ -701,11 +701,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17709" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary STR Dye - STR + 5 / DEX + 1 / Fire Resistance + 25 -->
+			<item id="17709" min="10" max="10" chance="100" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
 		</capsuled_items>
 	</item>
 	<item id="36143" name="Double Crystal Enhancement Reward: Amaranthine Box (Physical)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Amaranthine Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Blessed Helios Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -719,7 +719,7 @@
 		</skills>
 	</item>
 	<item id="36144" name="Double Crystal Enhancement Reward: Amaranthine Box (Magical)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Amaranthine Buster, Caster, and Retributer. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Blessed Helios Buster, Caster, and Retributer. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -733,7 +733,7 @@
 		</skills>
 	</item>
 	<item id="36145" name="Double Crystal Enhancement Reward: Amaranthine Box (Dual Weapons)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Amaranthine Dualsword, Dual Dagger, and Dual Blunt. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Blessed Helios Dual Sword, Dual Dagger, and Dual Blunt. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -747,7 +747,7 @@
 		</skills>
 	</item>
 	<item id="36146" name="Bloody Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to receive one of the Bloody Amaranthine Weapons. -->
+		<!-- Double-click to receive one of the Bloody Helios Weapons. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -761,7 +761,7 @@
 		</skills>
 	</item>
 	<item id="36147" name="Dark Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to receive one of the Dark Amaranthine Weapons. -->
+		<!-- Double-click to receive one of the Dark Helios Weapons. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -785,7 +785,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Fog of Blood Region -->
+			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Bloody Swampland -->
 			<item id="36171" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Isle of Souls Harbor -->
 			<item id="36172" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Ruins of Ye Sagira -->
 			<item id="36173" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Guillotine Fortress -->
@@ -794,7 +794,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36149" name="Kaliel's Soul Bottle Box" type="EtcItem">
-		<!-- Double-click to receive an XP Bottle (10-hour). The obtained XP Bottle cannot be exchanged, dropped or sold in a store. -->
+		<!-- Double-click to receive an XP Bottle (10-hr.). The obtained XP Bottle cannot be exchanged, dropped or sold in a store. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -804,11 +804,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34743" min="1" max="1" chance="100" /> <!-- Agathion - XP Bottle (10-hour) -->
+			<item id="34743" min="1" max="1" chance="100" /> <!-- Agathion - XP Bottle (10-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="36150" name="Kaliel's Hourglass" type="EtcItem">
-		<!-- Increases XP obtained through hunting by 50% for 1 hour. -->
+		<!-- Increases XP obtained through hunting by 50% for 1 hr. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -837,7 +837,7 @@
 		</skills>
 	</item>
 	<item id="36152" name="Kaliel's Energy Box" type="EtcItem">
-		<!-- Box containing Kaliel's Energy that prevents Seed Talismans from weakening when they fail to be enchanted. Double-click to receive one of the following: Kaliel's Energy - Annihilation/Hellfire/Desire. -->
+		<!-- Box containing Kaliel's Energy that prevents Seed Talismans from weakening when they fail to be enchanted. Double-click to receive one of the following: Kaliel's Energy - Annihilation/ Hellfire/ Desire. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -964,7 +964,7 @@
 		<set name="icon" val="icon.bless_scroll_r95" />
 	</item>
 	<item id="36162" name="Scroll of Blessing: (R99-grade)" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Amaranthine or Eternal equipment for Blessed equipment for you. Small fee is charged. -->
+		<!-- The Blacksmith of Mammon can exchange standard Helios or Eternal equipment for Blessed equipment for you. Small fee is charged. -->
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -972,7 +972,7 @@
 		<set name="icon" val="icon.bless_scroll_r99" />
 	</item>
 	<item id="36163" name="Giant's Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons when enchanted. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases at + 4. All amounts are increased for blessed weapons. Randomly adds between + 1 and + 3 enchant value. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -988,7 +988,7 @@
 		</skills>
 	</item>
 	<item id="36164" name="Giant's Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. Randomly adds between + 1 and + 3 enchant value. -->
+		<!-- P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. Randomly adds between +1 and +3 enchant value. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
@@ -1178,7 +1178,7 @@
 		</skills>
 	</item>
 	<item id="36176" name="2012 World Olympiad Hero's Accessory" additionalName="Sigel Knight" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Jowangshin. Mark of the strongest Sigel Knight in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Jowangshin. Mark of the strongest Sigel Knight in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1196,7 +1196,7 @@
 		</skills>
 	</item>
 	<item id="36177" name="2012 World Olympiad Hero's Accessory" additionalName="Yul Archer" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, NangmanNalppi. Mark of the strongest Yul Archer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, NangmanNalppi. Mark of the strongest Yul Archer in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1214,7 +1214,7 @@
 		</skills>
 	</item>
 	<item id="36178" name="2012 World Olympiad Hero's Accessory" additionalName="Tyrr Warrior" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Gumsungs. Mark of the strongest Tyrr Warrior in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Gumsungs. Mark of the strongest Tyrr Warrior in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1232,7 +1232,7 @@
 		</skills>
 	</item>
 	<item id="36179" name="2012 World Olympiad Hero's Accessory" additionalName="Othell Rogue" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Matdongsan. Mark of the strongest Othell Rogue in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Matdongsan. Mark of the strongest Othell Rogue in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1250,7 +1250,7 @@
 		</skills>
 	</item>
 	<item id="36180" name="2012 World Olympiad Hero's Accessory" additionalName="Iss Enchanter" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Akinsihoo. Mark of the strongest Iss Enchanter in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Akinsihoo. Mark of the strongest Iss Enchanter in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1268,7 +1268,7 @@
 		</skills>
 	</item>
 	<item id="36181" name="2012 World Olympiad Hero's Accessory" additionalName="Wynn Summoner" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Isisunarang. Mark of the strongest Wynn Summoner in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Isisunarang. Mark of the strongest Wynn Summoner in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1286,7 +1286,7 @@
 		</skills>
 	</item>
 	<item id="36182" name="2012 World Olympiad Hero's Accessory" additionalName="Aeore Healer" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Shinudambi. Mark of the strongest Aeore Healer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Shinudambi. Mark of the strongest Aeore Healer in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1304,7 +1304,7 @@
 		</skills>
 	</item>
 	<item id="36183" name="2012 World Olympiad Hero's Accessory" additionalName="Feoh Wizard" type="Armor">
-		<!-- Hair accessory of 2012 World Olympiad Winner, Chunhagun. Mark of the strongest Feoh Wizard in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
+		<!-- Hair accessory of 2012 World Olympiad Winner, Chunhagun. Mark of the strongest Feoh Wizard in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1435,7 +1435,7 @@
 		</stats>
 	</item>
 	<item id="36191" name="Kaliel's Wish" type="EtcItem">
-		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hour. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/Dual Class change. Temporary event item. -->
+		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hr. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/ Dual Class change. Temporary event item. -->
 		<set name="icon" val="icon.etc_blessed_kalie_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1475,7 +1475,7 @@
 		</skills>
 	</item>
 	<item id="36193" name="Shaper Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1509,7 +1509,7 @@
 		</stats>
 	</item>
 	<item id="36194" name="Cutter Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 		</stats>
 	</item>
 	<item id="36195" name="Slasher Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1575,7 +1575,7 @@
 		</stats>
 	</item>
 	<item id="36196" name="Avenger Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="36197" name="Fighter Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1643,7 +1643,7 @@
 		</stats>
 	</item>
 	<item id="36198" name="Stormer Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 		</stats>
 	</item>
 	<item id="36199" name="Thrower Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed inside. You can acquire a weapon imbued with heroes' power if you have a scroll imbued with heroes' power. Can be used at all levels. Must use No-grade Soulshots/Spiritshots/Blessed Spiritshots. Cannot be used in the Olympiad. 1-day. Temporary event item. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />

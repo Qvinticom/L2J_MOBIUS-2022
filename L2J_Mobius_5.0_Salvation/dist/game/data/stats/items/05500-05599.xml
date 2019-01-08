@@ -673,7 +673,7 @@
 		</skills>
 	</item>
 	<item id="5561" name="Special Holiday Tree" type="EtcItem">
-		<!-- Summons a Holiday Tree that increases HP and MP Recovery Rate. This effect is only produced if the Special Holiday Tree is summoned a certain distance away from the village. -->
+		<!-- Summons a Holiday Tree that increases HP and MP Recovery Bonus Rate. This effect is only produced if the Special Holiday Tree is summoned a certain distance away from the village. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

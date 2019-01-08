@@ -277,7 +277,7 @@
 		</skills>
 	</item>
 	<item id="34618" name="Player Commendation - Enhanced Cocktail" additionalName="PC-exclusive" type="EtcItem">
-		<!-- Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody, Lute Melody, Pipe Organ Melody, Guitar Melody, Harp Melody, and Drum Melody. -->
+		<!-- Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -303,7 +303,7 @@
 		</skills>
 	</item>
 	<item id="34619" name="Player Commendation Points Coupon" additionalName="PC-exclusive" type="EtcItem">
-		<!-- Click on the item to acquire PC Points. -->
+		<!-- Click on the item to acquire PA Points. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -322,7 +322,7 @@
 		</skills>
 	</item>
 	<item id="34620" name="Heavenly Cocktail" type="EtcItem">
-		<!-- For 60 minutes, it receives the following level 1 effects: Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, and Drum Melody. Cooldown is 60 min. -->
+		<!-- For 60 minutes, it receives the following level 1 effects: Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -432,7 +432,7 @@
 		</stats>
 	</item>
 	<item id="34625" name="Eva's Shirt" type="Armor">
-		<!-- Magic shirt filled with the power of Eva, the goddess of water. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use HP/MP/CP recovering skills. -->
+		<!-- Magic shirt filled with the power of Eva, the goddess of water. Can be enchanted to +10 using Elemental Shirt Enchant Scrolls. When enchanted to +7 or above, can use HP/ MP/ CP recovering skills. -->
 		<set name="icon" val="icon.pi_shirt_of_wolf_2nd_water" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -473,7 +473,7 @@
 		</stats>
 	</item>
 	<item id="34627" name="Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant scroll for t-shirts. When enchanted, increases P. Def. and M. Def. by 1. P. Def. + 3 starting from + 4. Can be safely enchanted to + 3 and up to a maximum of + 10. From + 4, basic abilities (CON, MEN, STR, INT, DEX, WT) are raised in stages. Depending on the shirt type, various additional options can be applied from + 4 to + 10. -->
+		<!-- Enchant scroll for shirts. When enchanted, increases P. Def. and M. Def. by 1. P. Def. + 3 starting from + 4. Can be safely enchanted to + 3 and up to a maximum of + 10. From + 4, basic abilities (CON, MEN, STR, INT, DEX, WIT) are raised in stages. Depending on the shirt type, various additional options can be applied from + 4 to + 10. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -679,7 +679,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="34649" name="Fire Stone Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the fire attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the fire attribute. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -694,7 +694,7 @@
 		</skills>
 	</item>
 	<item id="34650" name="Water Stone Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the water attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the water attribute. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -709,7 +709,7 @@
 		</skills>
 	</item>
 	<item id="34651" name="Wind Stone Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the wind attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the wind attribute. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -724,7 +724,7 @@
 		</skills>
 	</item>
 	<item id="34652" name="Earth Stone Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the earth attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the earth attribute. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -739,7 +739,7 @@
 		</skills>
 	</item>
 	<item id="34653" name="Holy Stone Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the holy attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the holy attribute. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -754,7 +754,7 @@
 		</skills>
 	</item>
 	<item id="34654" name="Dark Stone Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the dark attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the dark attribute. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000" />
@@ -769,7 +769,7 @@
 		</skills>
 	</item>
 	<item id="34655" name="Fire Crystal Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the fire attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the fire attribute. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="4000" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="34656" name="Water Crystal Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the water attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the water attribute. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="4000" />
@@ -799,7 +799,7 @@
 		</skills>
 	</item>
 	<item id="34657" name="Wind Crystal Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the wind attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the wind attribute. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="4000" />
@@ -814,7 +814,7 @@
 		</skills>
 	</item>
 	<item id="34658" name="Earth Crystal Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the earth attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the earth attribute. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="4000" />
@@ -829,7 +829,7 @@
 		</skills>
 	</item>
 	<item id="34659" name="Holy Crystal Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the holy attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the holy attribute. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="4000" />
@@ -844,7 +844,7 @@
 		</skills>
 	</item>
 	<item id="34660" name="Dark Crystal Fragment" type="EtcItem">
-		<!-- Can infuse a bound item or item acquired through mentor/mentee with the dark attribute. -->
+		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the dark attribute. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="weight" val="1" />
 		<set name="price" val="4000" />
@@ -1377,7 +1377,7 @@
 		</skills>
 	</item>
 	<item id="34698" name="Hero's Attribute Crystal Pack" type="EtcItem">
-		<!-- Box containing attribute crystal or stone (Super - 60/150). -->
+		<!-- Box containing attribute crystal or stone (Super - 60/ 150). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />

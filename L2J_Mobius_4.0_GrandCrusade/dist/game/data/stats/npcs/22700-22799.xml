@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22701" level="81" type="L2Monster" name="Varangka's Dre Vanul">
 		<!-- Confirmed CT2.5 -->
@@ -3099,7 +3099,7 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="0.075" /> <!-- Immortal Leather Gloves -->
+				<item id="17313" min="1" max="1" chance="0.075" /> <!-- Immortal Leather Gloves - Light Armor -->
 				<item id="57" min="3021" max="7050" chance="20" /> <!-- Adena -->
 				<item id="36814" min="1" max="1" chance="16.64" /> <!-- Immortal Leather Glove Ingredient -->
 				<item id="36527" min="1" max="1" chance="13.45" /> <!-- Synthetic Fiber -->
@@ -3180,7 +3180,7 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
+				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots - Light Armor -->
 				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
 				<item id="36815" min="1" max="3" chance="10.58" /> <!-- Immortal Leather Boot Ingredient -->
 				<item id="36753" min="1" max="1" chance="1.026" /> <!-- Recipe: Immortal Leather Boots (60%) -->
@@ -3421,7 +3421,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Gloves -->
+				<item id="17313" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Gloves - Light Armor -->
 				<item id="57" min="3156" max="7365" chance="20" /> <!-- Adena -->
 				<item id="36814" min="1" max="1" chance="16.13" /> <!-- Immortal Leather Glove Ingredient -->
 				<item id="36527" min="1" max="1" chance="11.34" /> <!-- Synthetic Fiber -->
@@ -3509,7 +3509,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
+				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots - Light Armor -->
 				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
 				<item id="36815" min="1" max="3" chance="13.96" /> <!-- Immortal Leather Boot Ingredient -->
 				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
@@ -3920,7 +3920,7 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17320" min="1" max="1" chance="0.075" /> <!-- Immortal Sigil -->
+				<item id="17320" min="1" max="1" chance="0.075" /> <!-- Immortal Sigil - Robe -->
 				<item id="57" min="3021" max="7050" chance="20" /> <!-- Adena -->
 				<item id="36821" min="1" max="1" chance="15.32" /> <!-- Immortal Sigil Ingredient -->
 				<item id="36759" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Sigil (60%) -->
@@ -4177,7 +4177,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17320" min="1" max="1" chance="0.3" /> <!-- Immortal Sigil -->
+				<item id="17320" min="1" max="1" chance="0.3" /> <!-- Immortal Sigil - Robe -->
 				<item id="57" min="3156" max="7365" chance="20" /> <!-- Adena -->
 				<item id="36821" min="1" max="1" chance="16.39" /> <!-- Immortal Sigil Ingredient -->
 				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
@@ -4598,7 +4598,7 @@
 				<item id="36823" min="1" max="3" chance="15.54" /> <!-- Immortal Earring Gem -->
 				<item id="36761" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Earring (60%) -->
 				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="30424" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="30424" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (R-grade) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="10.84" /> <!-- Synthetic Braid -->
@@ -4783,7 +4783,7 @@
 				<item id="30297" min="1" max="2" chance="86.48" /> <!-- Superior Giant's Codex -->
 				<item id="17527" min="2" max="3" chance="81.35" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="2" chance="19.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex Chapter 1 -->
 				<item id="30298" min="1" max="1" chance="2.554" /> <!-- Superior Giant's Codex - Mastery -->
 				<item id="46151" min="1" max="1" chance="2.544" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 				<item id="39738" min="1" max="1" chance="2.494" /> <!-- Rune Stone -->

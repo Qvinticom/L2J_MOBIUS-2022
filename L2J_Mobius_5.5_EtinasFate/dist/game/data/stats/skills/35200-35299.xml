@@ -1,133 +1,159 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="35227" toLevel="1" name="Artifact Set Effect - Level 1">
+		<!-- Damage +$s1, Received Damage -$s2 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35228" toLevel="1" name="Artifact Set Effect - Level 2">
+		<!-- Damage +$s1, Received Damage -$s2 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35229" toLevel="1" name="Artifact Set Effect - Level 3">
+		<!-- Damage +$s1, Received Damage -$s2, All Basic Stats +$s3 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35230" toLevel="11" name="Artifact P. Atk.">
+		<!-- P. Atk. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35231" toLevel="11" name="Artifact M. Atk.">
+		<!-- M. Atk. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35232" toLevel="11" name="Artifact Atk. Spd.">
+		<!-- Atk. Spd. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35233" toLevel="11" name="Artifact Casting Spd.">
+		<!-- Casting Spd. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35234" toLevel="11" name="Artifact P. Def.">
+		<!-- P. Def. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35235" toLevel="11" name="Artifact M. Def.">
+		<!-- M. Def. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35236" toLevel="11" name="Artifact Max HP">
+		<!-- Max HP increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35237" toLevel="11" name="Artifact Max MP">
+		<!-- Max MP increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35238" toLevel="11" name="Artifact  XP Gain">
+		<!-- Acquired XP increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35239" toLevel="11" name="Artifact HP Absorption">
+		<!-- Vampiric Rage increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35240" toLevel="11" name="Artifact Speed">
+		<!-- Speed increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35241" toLevel="11" name="Artifact Received Heal Amount">
+		<!-- Received Healing increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35242" toLevel="11" name="Artifact P. Atk.">
+		<!-- P. Atk. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35243" toLevel="11" name="Artifact M. Atk.">
+		<!-- M. Atk. increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35244" toLevel="11" name="Artifact P. Accuracy">
+		<!-- P. Accuracy increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35245" toLevel="11" name="Artifact M. Accuracy">
+		<!-- M. Accuracy increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35246" toLevel="11" name="Artifact P. Critical">
+		<!-- P. Critical Rate increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35247" toLevel="11" name="Artifact P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35248" toLevel="11" name="Artifact M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35249" toLevel="11" name="Artifact Potion / Elixir Effect Bonus">
+		<!-- Potion / Elixir Effect Bonus increased when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 
 	<skill id="35250" toLevel="11" name="Received Damage When Imobilized">
+		<!-- Received Damage When Immobilized reduced when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 
 	<skill id="35251" toLevel="11" name="Artifact Fixed Damage Reduction">
+		<!-- Fixed Damage reduced when upgraded -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 	<skill id="35252" toLevel="1" name="Artifact Attack Attribute">
+		<!-- Attack Attribute +$s1 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
@@ -159,6 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="35253" toLevel="1" name="Artifact Defense Attribute">
+		<!-- Attribute Resistance +$s1 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
@@ -190,6 +217,7 @@
 		</effects>
 	</skill>
 	<skill id="35254" toLevel="1" name="Artifact Received Damage When Imobilized">
+		<!-- Received Damage When Immobilized -$s1 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
@@ -215,6 +243,7 @@
 		</effects>
 	</skill>
 	<skill id="35255" toLevel="1" name="Artifact P. Skill Power">
+		<!-- P. Skill Power +$s1 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
@@ -226,6 +255,7 @@
 		</effects>
 	</skill>
 	<skill id="35256" toLevel="1" name="Artifact M. Skill Power">
+		<!-- M. Skill Power +$s1 -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>

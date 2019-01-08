@@ -1,86 +1,83 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55400" toLevel="1" name="Commemorative Olympiad Bracelet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Activates 2 Talisman slots, Max. HP/MP/CP + 3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55401" toLevel="1" name="Olympiad Warrior's Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. / M. Skill Critical Damage +7%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55402" toLevel="1" name="Olympiad Warrior's Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +15, weight limit + 2000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55403" toLevel="1" name="Agathion - Cheerleader Mae">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Removes the Agathion's seal. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55404" toLevel="1" name="Agathion Cute Trick - Cheerleader Mae">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55405" toLevel="1" name="Cheerleader Mae's Support">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. / M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P. / M. Critical Damage + 3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55406" toLevel="1" name="For victory in Tryout - XP/SP">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Buff, given to the server, to which belongs a warrior, gained the greatest number of victories during the Tryout. XP/SP +30%. Cannot be stacked with Blessing of Light. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55407" toLevel="1" name="For victory in Tryout - 2nd class transfer effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55408" toLevel="1" name="Expertise Rune (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When possessed, you get Expertise A skill -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55409" toLevel="1" name="Kusto's Support Box: Enhance Weapon (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55410" toLevel="1" name="Kusto's Support Box: Enhance Weapon (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55411" toLevel="1" name="Kusto's Support Box: Enhance Weapon (?-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55412" toLevel="2" name="Transformation Scroll: Pirate">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55413" toLevel="2" name="Transformation Scroll: Dark Assassin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Remains even after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55414" toLevel="2" name="Transformation Scroll: White Assassin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains even after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55415" toLevel="1" name="Scroll: Enchant Armor (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55416" toLevel="1" name="Release Agathion's Seal - One-eyed Bat Drove">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -93,11 +90,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1513</npcId>
+				<npcId>1513</npcId> <!-- One-eyed Bat Drove Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55417" toLevel="1" name="Release Agathion's Seal - Zaken's Spirit Swords">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -110,11 +108,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1595</npcId>
+				<npcId>1595</npcId> <!-- Zaken's Spirit Swords Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55418" toLevel="1" name="Release Agathion's Seal - Pegasus">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -127,11 +126,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1514</npcId>
+				<npcId>1514</npcId> <!-- Pegasus Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55419" toLevel="1" name="Release Agathion's Seal - Guangong">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -144,11 +144,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1551</npcId>
+				<npcId>1551</npcId> <!-- Guangong Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55420" toLevel="1" name="Release Agathion's Seal - God of Fortune">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -161,11 +162,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1523</npcId>
+				<npcId>1523</npcId> <!-- God of Fortune -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55421" toLevel="1" name="Release Agathion's Seal - Phoenix">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -178,11 +180,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1574</npcId>
+				<npcId>1574</npcId> <!-- Phoenix -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55422" toLevel="1" name="Release Agathion's Seal - Saerom">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -195,11 +198,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>16063</npcId>
+				<npcId>16063</npcId> <!-- Saerom -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55423" toLevel="1" name="Release Agathion's Seal - Gwanseum Nyang">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -212,11 +216,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1552</npcId>
+				<npcId>1552</npcId> <!-- Gwanseum Nyang Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55424" toLevel="1" name="Release Agathion's Seal - Blue Opera">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -229,11 +234,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1553</npcId>
+				<npcId>1553</npcId> <!-- Blue Opera Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55425" toLevel="1" name="Release Agathion's Seal - Red Opera">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -246,11 +252,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1554</npcId>
+				<npcId>1554</npcId> <!-- Red Opera Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55426" toLevel="1" name="Release Agathion's Seal - Miss Chipao">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -263,11 +270,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1556</npcId>
+				<npcId>1556</npcId> <!-- Miss Chipao Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55427" toLevel="1" name="Release Agathion's Seal - Flower Fairy Spirit">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -280,11 +288,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1586</npcId>
+				<npcId>1586</npcId> <!-- Flower Fairy Spirit -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55428" toLevel="1" name="Release Agathion's Seal - Iken">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -297,11 +306,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1539</npcId>
+				<npcId>1539</npcId> <!-- Iken Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55429" toLevel="1" name="Release Agathion's Seal - Lanya">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -314,11 +324,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1540</npcId>
+				<npcId>1540</npcId> <!-- Lanya Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55430" toLevel="1" name="Release Agathion's Seal - Gnosian">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -331,11 +342,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1541</npcId>
+				<npcId>1541</npcId> <!-- Gnosian Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55431" toLevel="1" name="Release Agathion's Seal - Cheerleader Orodriel">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -348,11 +360,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1542</npcId>
+				<npcId>1542</npcId> <!-- Cheerleader Orodriel Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55432" toLevel="1" name="Release Agathion's Seal - Lakinos">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -365,11 +378,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1543</npcId>
+				<npcId>1543</npcId> <!-- Lakinos Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55433" toLevel="1" name="Release Agathion's Seal - Mortia">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -382,11 +396,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1544</npcId>
+				<npcId>1544</npcId> <!-- Mortia Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55434" toLevel="1" name="Release Agathion's Seal - Heintz">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -399,11 +414,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1545</npcId>
+				<npcId>1545</npcId> <!-- Heintz Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55435" toLevel="1" name="Release Agathion's Seal - Meruril">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -416,11 +432,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1546</npcId>
+				<npcId>1546</npcId> <!-- Meruril Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55436" toLevel="1" name="Release Agathion's Seal - Taman Zu Rapatui">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -433,11 +450,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1547</npcId>
+				<npcId>1547</npcId> <!-- Taman Zu Rapatui Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55437" toLevel="1" name="Release Agathion's Seal - Kaurin">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -450,11 +468,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1548</npcId>
+				<npcId>1548</npcId> <!-- Kaurin Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55438" toLevel="1" name="Release Agathion's Seal - Ahertbein">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -467,11 +486,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1549</npcId>
+				<npcId>1549</npcId> <!-- Ahertbein Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55439" toLevel="1" name="Release Agathion's Seal - Naonin">
+		<!-- Removes the Agathion's seal. -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -484,11 +504,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>1550</npcId>
+				<npcId>1550</npcId> <!-- Naonin Agathion -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55440" toLevel="1" name="One-eyed Bat Drove Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -504,6 +525,7 @@
 		</conditions>
 	</skill>
 	<skill id="55441" toLevel="1" name="Zaken's Spirit Swords Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -519,6 +541,7 @@
 		</conditions>
 	</skill>
 	<skill id="55442" toLevel="1" name="Pegasus Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -534,6 +557,7 @@
 		</conditions>
 	</skill>
 	<skill id="55443" toLevel="1" name="Guangong Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -549,6 +573,7 @@
 		</conditions>
 	</skill>
 	<skill id="55444" toLevel="1" name="God of Fortune Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -564,6 +589,7 @@
 		</conditions>
 	</skill>
 	<skill id="55445" toLevel="1" name="Phoenix Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -579,6 +605,7 @@
 		</conditions>
 	</skill>
 	<skill id="55446" toLevel="1" name="Saerom Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -594,6 +621,7 @@
 		</conditions>
 	</skill>
 	<skill id="55447" toLevel="1" name="Gwanseum Nyang Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -609,6 +637,7 @@
 		</conditions>
 	</skill>
 	<skill id="55448" toLevel="1" name="Blue Opera Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -624,6 +653,7 @@
 		</conditions>
 	</skill>
 	<skill id="55449" toLevel="1" name="Red Opera Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -639,6 +669,7 @@
 		</conditions>
 	</skill>
 	<skill id="55450" toLevel="1" name="Miss Chipao Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -654,6 +685,7 @@
 		</conditions>
 	</skill>
 	<skill id="55451" toLevel="1" name="Flower Fairy Spirit Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -669,6 +701,7 @@
 		</conditions>
 	</skill>
 	<skill id="55452" toLevel="1" name="Iken Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -684,6 +717,7 @@
 		</conditions>
 	</skill>
 	<skill id="55453" toLevel="1" name="Lanya Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -699,6 +733,7 @@
 		</conditions>
 	</skill>
 	<skill id="55454" toLevel="1" name="Gnosian Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -714,6 +749,7 @@
 		</conditions>
 	</skill>
 	<skill id="55455" toLevel="1" name="Cheerleader Orodriel Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -729,6 +765,7 @@
 		</conditions>
 	</skill>
 	<skill id="55456" toLevel="1" name="Lakinos Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -744,6 +781,7 @@
 		</conditions>
 	</skill>
 	<skill id="55457" toLevel="1" name="Mortia Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -759,6 +797,7 @@
 		</conditions>
 	</skill>
 	<skill id="55458" toLevel="1" name="Heintz Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -774,6 +813,7 @@
 		</conditions>
 	</skill>
 	<skill id="55459" toLevel="1" name="Meruril Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -789,6 +829,7 @@
 		</conditions>
 	</skill>
 	<skill id="55460" toLevel="1" name="Taman Zu Rapatui Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -804,6 +845,7 @@
 		</conditions>
 	</skill>
 	<skill id="55461" toLevel="1" name="Kaurin Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -819,6 +861,7 @@
 		</conditions>
 	</skill>
 	<skill id="55462" toLevel="1" name="Ahertbein Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -834,6 +877,7 @@
 		</conditions>
 	</skill>
 	<skill id="55463" toLevel="1" name="Naonin Agathion Cute Trick">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -849,182 +893,181 @@
 		</conditions>
 	</skill>
 	<skill id="55464" toLevel="1" name="Energy of Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 min. Max HP / MP +5%, Paralysis Resistance +15, Mental Attack Resistance +10, XP / SP +30%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55465" toLevel="1" name="Shaft with Antharas treasures">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55466" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55467" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55468" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55469" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55470" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55471" toLevel="5" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55472" toLevel="5" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55473" toLevel="3" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55474" toLevel="5" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55475" toLevel="5" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55476" toLevel="5" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55477" toLevel="4" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55478" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55479" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55480" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55481" toLevel="4" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55482" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55483" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55484" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55485" toLevel="5" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55486" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55487" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55488" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55489" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55490" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55491" toLevel="2" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55492" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55493" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55494" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55495" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55496" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55497" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55498" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55499" toLevel="1" name="null">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- null -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27800" name="Ultimate Eternal Leather Armor" additionalName="Enchant Type / Light Armor / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -27,7 +27,7 @@
 		</stats>
 	</item>
 	<item id="27801" name="Ultimate Eternal Leather Leggings" additionalName="Enchant Type / Light Armor / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -49,7 +49,7 @@
 		</stats>
 	</item>
 	<item id="27802" name="Ultimate Eternal Leather Gloves" additionalName="Enchant Type / Light Armor / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -69,7 +69,7 @@
 		</stats>
 	</item>
 	<item id="27803" name="Ultimate Eternal Leather Boots" additionalName="Enchant Type / Light Armor / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -89,7 +89,7 @@
 		</stats>
 	</item>
 	<item id="27804" name="Ultimate Eternal Circlet" additionalName="Recovery Type / Robe / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -108,7 +108,7 @@
 		</stats>
 	</item>
 	<item id="27805" name="Ultimate Eternal Tunic" additionalName="Recovery Type / Robe / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -135,7 +135,7 @@
 		</stats>
 	</item>
 	<item id="27806" name="Ultimate Eternal Stockings" additionalName="Recovery Type / Robe / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -158,7 +158,7 @@
 		</stats>
 	</item>
 	<item id="27807" name="Ultimate Eternal Gloves" additionalName="Recovery Type / Robe / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -178,7 +178,7 @@
 		</stats>
 	</item>
 	<item id="27808" name="Ultimate Eternal Shoes" additionalName="Recovery Type / Robe / Lv1" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -198,7 +198,7 @@
 		</stats>
 	</item>
 	<item id="27809" name="Ultimate Eternal Helmet" additionalName="Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -217,7 +217,7 @@
 		</stats>
 	</item>
 	<item id="27810" name="Ultimate Eternal Breatplate" additionalName="Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows an attack or defense type set option. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an attack or defense type set option. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -242,7 +242,7 @@
 		</stats>
 	</item>
 	<item id="27811" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -263,7 +263,7 @@
 		</stats>
 	</item>
 	<item id="27812" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -283,7 +283,7 @@
 		</stats>
 	</item>
 	<item id="27813" name="Ultimate Eternal Boots" additionalName="Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -303,7 +303,7 @@
 		</stats>
 	</item>
 	<item id="27814" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -322,7 +322,7 @@
 		</stats>
 	</item>
 	<item id="27815" name="Ultimate Eternal Leather Armor" additionalName="Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -348,7 +348,7 @@
 		</stats>
 	</item>
 	<item id="27816" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -370,7 +370,7 @@
 		</stats>
 	</item>
 	<item id="27817" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -390,7 +390,7 @@
 		</stats>
 	</item>
 	<item id="27818" name="Ultimate Eternal Leather Boots" additionalName="Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -410,7 +410,7 @@
 		</stats>
 	</item>
 	<item id="27819" name="Ultimate Eternal Circlet" additionalName="Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -429,7 +429,7 @@
 		</stats>
 	</item>
 	<item id="27820" name="Ultimate Eternal Tunic" additionalName="Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows a magic or recovery type set option.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -456,7 +456,7 @@
 		</stats>
 	</item>
 	<item id="27821" name="Ultimate Eternal Stockings" additionalName="Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -479,7 +479,7 @@
 		</stats>
 	</item>
 	<item id="27822" name="Ultimate Eternal Gloves" additionalName="Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -499,7 +499,7 @@
 		</stats>
 	</item>
 	<item id="27823" name="Ultimate Eternal Shoes" additionalName="Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -519,7 +519,7 @@
 		</stats>
 	</item>
 	<item id="27824" name="Ultimate Eternal Helmet" additionalName="Attack Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -538,7 +538,7 @@
 		</stats>
 	</item>
 	<item id="27825" name="Ultimate Eternal Breatplate" additionalName="Attack Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -563,7 +563,7 @@
 		</stats>
 	</item>
 	<item id="27826" name="Ultimate Eternal Gaiters" additionalName="Attack Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -584,7 +584,7 @@
 		</stats>
 	</item>
 	<item id="27827" name="Ultimate Eternal Gauntlets" additionalName="Attack Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -604,7 +604,7 @@
 		</stats>
 	</item>
 	<item id="27828" name="Ultimate Eternal Boots" additionalName="Attack Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="27829" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -643,7 +643,7 @@
 		</stats>
 	</item>
 	<item id="27830" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -669,7 +669,7 @@
 		</stats>
 	</item>
 	<item id="27831" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -691,7 +691,7 @@
 		</stats>
 	</item>
 	<item id="27832" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -711,7 +711,7 @@
 		</stats>
 	</item>
 	<item id="27833" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -731,7 +731,7 @@
 		</stats>
 	</item>
 	<item id="27834" name="Ultimate Eternal Circlet" additionalName="Magic Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -750,7 +750,7 @@
 		</stats>
 	</item>
 	<item id="27835" name="Ultimate Eternal Tunic" additionalName="Magic Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -777,7 +777,7 @@
 		</stats>
 	</item>
 	<item id="27836" name="Ultimate Eternal Stockings" additionalName="Magic Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -800,7 +800,7 @@
 		</stats>
 	</item>
 	<item id="27837" name="Ultimate Eternal Gloves" additionalName="Magic Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -820,7 +820,7 @@
 		</stats>
 	</item>
 	<item id="27838" name="Ultimate Eternal Shoes" additionalName="Magic Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -840,7 +840,7 @@
 		</stats>
 	</item>
 	<item id="27839" name="Ultimate Eternal Helmet" additionalName="Defense Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -859,7 +859,7 @@
 		</stats>
 	</item>
 	<item id="27840" name="Ultimate Eternal Breatplate" additionalName="Defense Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def.Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def.Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -884,7 +884,7 @@
 		</stats>
 	</item>
 	<item id="27841" name="Ultimate Eternal Gaiters" additionalName="Defense Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -905,7 +905,7 @@
 		</stats>
 	</item>
 	<item id="27842" name="Ultimate Eternal Gauntlets" additionalName="Defense Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -925,7 +925,7 @@
 		</stats>
 	</item>
 	<item id="27843" name="Ultimate Eternal Boots" additionalName="Defense Type / Heavy Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -945,7 +945,7 @@
 		</stats>
 	</item>
 	<item id="27844" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -964,7 +964,7 @@
 		</stats>
 	</item>
 	<item id="27845" name="Ultimate Eternal Leather Armor" additionalName="Enchant Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -990,7 +990,7 @@
 		</stats>
 	</item>
 	<item id="27846" name="Ultimate Eternal Leather Leggings" additionalName="Enchant Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1012,7 +1012,7 @@
 		</stats>
 	</item>
 	<item id="27847" name="Ultimate Eternal Leather Gloves" additionalName="Enchant Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1032,7 +1032,7 @@
 		</stats>
 	</item>
 	<item id="27848" name="Ultimate Eternal Leather Boots" additionalName="Enchant Type / Light Armor / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1052,7 +1052,7 @@
 		</stats>
 	</item>
 	<item id="27849" name="Ultimate Eternal Circlet" additionalName="Recovery Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1071,7 +1071,7 @@
 		</stats>
 	</item>
 	<item id="27850" name="Ultimate Eternal Tunic" additionalName="Recovery Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1098,7 +1098,7 @@
 		</stats>
 	</item>
 	<item id="27851" name="Ultimate Eternal Stockings" additionalName="Recovery Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1121,7 +1121,7 @@
 		</stats>
 	</item>
 	<item id="27852" name="Ultimate Eternal Gloves" additionalName="Recovery Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1141,7 +1141,7 @@
 		</stats>
 	</item>
 	<item id="27853" name="Ultimate Eternal Shoes" additionalName="Recovery Type / Robe / lv2" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.1% and M. Atk. by 2.2%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1161,7 +1161,7 @@
 		</stats>
 	</item>
 	<item id="27854" name="Ultimate Eternal Helmet" additionalName="Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1180,7 +1180,7 @@
 		</stats>
 	</item>
 	<item id="27855" name="Ultimate Eternal Breatplate" additionalName="Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows an attack or defense type set option. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1205,7 +1205,7 @@
 		</stats>
 	</item>
 	<item id="27856" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1226,7 +1226,7 @@
 		</stats>
 	</item>
 	<item id="27857" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1246,7 +1246,7 @@
 		</stats>
 	</item>
 	<item id="27858" name="Ultimate Eternal Boots" additionalName="Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1266,7 +1266,7 @@
 		</stats>
 	</item>
 	<item id="27859" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1285,7 +1285,7 @@
 		</stats>
 	</item>
 	<item id="27860" name="Ultimate Eternal Leather Armor" additionalName="Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1311,7 +1311,7 @@
 		</stats>
 	</item>
 	<item id="27861" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1333,7 +1333,7 @@
 		</stats>
 	</item>
 	<item id="27862" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1353,7 +1353,7 @@
 		</stats>
 	</item>
 	<item id="27863" name="Ultimate Eternal Leather Boots" additionalName="Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1373,7 +1373,7 @@
 		</stats>
 	</item>
 	<item id="27864" name="Ultimate Eternal Circlet" additionalName="Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1392,7 +1392,7 @@
 		</stats>
 	</item>
 	<item id="27865" name="Ultimate Eternal Tunic" additionalName="Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows a magic or recovery type set option.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1419,7 +1419,7 @@
 		</stats>
 	</item>
 	<item id="27866" name="Ultimate Eternal Stockings" additionalName="Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1442,7 +1442,7 @@
 		</stats>
 	</item>
 	<item id="27867" name="Ultimate Eternal Gloves" additionalName="Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1462,7 +1462,7 @@
 		</stats>
 	</item>
 	<item id="27868" name="Ultimate Eternal Shoes" additionalName="Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1482,7 +1482,7 @@
 		</stats>
 	</item>
 	<item id="27869" name="Ultimate Eternal Helmet" additionalName="Attack Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1501,7 +1501,7 @@
 		</stats>
 	</item>
 	<item id="27870" name="Ultimate Eternal Breatplate" additionalName="Attack Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1526,7 +1526,7 @@
 		</stats>
 	</item>
 	<item id="27871" name="Ultimate Eternal Gaiters" additionalName="Attack Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1547,7 +1547,7 @@
 		</stats>
 	</item>
 	<item id="27872" name="Ultimate Eternal Gauntlets" additionalName="Attack Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1567,7 +1567,7 @@
 		</stats>
 	</item>
 	<item id="27873" name="Ultimate Eternal Boots" additionalName="Attack Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1587,7 +1587,7 @@
 		</stats>
 	</item>
 	<item id="27874" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1606,7 +1606,7 @@
 		</stats>
 	</item>
 	<item id="27875" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1632,7 +1632,7 @@
 		</stats>
 	</item>
 	<item id="27876" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1654,7 +1654,7 @@
 		</stats>
 	</item>
 	<item id="27877" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1674,7 +1674,7 @@
 		</stats>
 	</item>
 	<item id="27878" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues and Yul Archers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues and Yul Archers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1694,7 +1694,7 @@
 		</stats>
 	</item>
 	<item id="27879" name="Ultimate Eternal Circlet" additionalName="Magic Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1713,7 +1713,7 @@
 		</stats>
 	</item>
 	<item id="27880" name="Ultimate Eternal Tunic" additionalName="Magic Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1740,7 +1740,7 @@
 		</stats>
 	</item>
 	<item id="27881" name="Ultimate Eternal Stockings" additionalName="Magic Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1763,7 +1763,7 @@
 		</stats>
 	</item>
 	<item id="27882" name="Ultimate Eternal Gloves" additionalName="Magic Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1783,7 +1783,7 @@
 		</stats>
 	</item>
 	<item id="27883" name="Ultimate Eternal Shoes" additionalName="Magic Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1803,7 +1803,7 @@
 		</stats>
 	</item>
 	<item id="27884" name="Ultimate Eternal Helmet" additionalName="Defense Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1822,7 +1822,7 @@
 		</stats>
 	</item>
 	<item id="27885" name="Ultimate Eternal Breatplate" additionalName="Defense Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def.Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def.Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1847,7 +1847,7 @@
 		</stats>
 	</item>
 	<item id="27886" name="Ultimate Eternal Gaiters" additionalName="Defense Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1868,7 +1868,7 @@
 		</stats>
 	</item>
 	<item id="27887" name="Ultimate Eternal Gauntlets" additionalName="Defense Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1888,7 +1888,7 @@
 		</stats>
 	</item>
 	<item id="27888" name="Ultimate Eternal Boots" additionalName="Defense Type / Heavy Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Sigel Knights only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Sigel Knights only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1908,7 +1908,7 @@
 		</stats>
 	</item>
 	<item id="27889" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1927,7 +1927,7 @@
 		</stats>
 	</item>
 	<item id="27890" name="Ultimate Eternal Leather Armor" additionalName="Enchant Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1953,7 +1953,7 @@
 		</stats>
 	</item>
 	<item id="27891" name="Ultimate Eternal Leather Leggings" additionalName="Enchant Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1975,7 +1975,7 @@
 		</stats>
 	</item>
 	<item id="27892" name="Ultimate Eternal Leather Gloves" additionalName="Enchant Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1995,7 +1995,7 @@
 		</stats>
 	</item>
 	<item id="27893" name="Ultimate Eternal Leather Boots" additionalName="Enchant Type / Light Armor / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2015,7 +2015,7 @@
 		</stats>
 	</item>
 	<item id="27894" name="Ultimate Eternal Circlet" additionalName="Recovery Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2034,7 +2034,7 @@
 		</stats>
 	</item>
 	<item id="27895" name="Ultimate Eternal Tunic" additionalName="Recovery Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2061,7 +2061,7 @@
 		</stats>
 	</item>
 	<item id="27896" name="Ultimate Eternal Stockings" additionalName="Recovery Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2084,7 +2084,7 @@
 		</stats>
 	</item>
 	<item id="27897" name="Ultimate Eternal Gloves" additionalName="Recovery Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2104,7 +2104,7 @@
 		</stats>
 	</item>
 	<item id="27898" name="Ultimate Eternal Shoes" additionalName="Recovery Type / Robe / lv3" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.2% and M. Atk. by 2.4%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2124,7 +2124,7 @@
 		</stats>
 	</item>
 	<item id="27899" name="Ultimate Eternal Helmet" additionalName="Heavy Armor / lv4" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Increases P. Atk. by 1.3% and M. Atk. by 2.6%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

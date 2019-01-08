@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Stun Attack">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -105,7 +106,7 @@
 		</effects>
 	</skill>
 	<skill id="101" toLevel="40" name="Stun Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fires arrows with $s1 power added to P. Atk.. Inflicts Stun on the enemy for $s2. Requires a bow weapon. Over-hit. Cancels target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -312,6 +313,7 @@
 		</effects>
 	</skill>
 	<skill id="102" toLevel="16" name="Entangle">
+		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -444,6 +446,7 @@
 		</effects>
 	</skill>
 	<skill id="103" toLevel="4" name="Corpse Plague">
+		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every second. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -508,6 +511,7 @@
 		</effects>
 	</skill>
 	<skill id="104" toLevel="1" name="Detect Plant Weakness">
+		<!-- For 10 minutes, increases damage against plants +5%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
@@ -530,6 +534,7 @@
 		</effects>
 	</skill>
 	<skill id="105" toLevel="24" name="Freezing Strike">
+		<!-- Momentarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -690,6 +695,7 @@
 		</effects>
 	</skill>
 	<skill id="106" toLevel="14" name="Veil">
+		<!-- Creates an illusion of nearby monsters for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
@@ -744,6 +750,7 @@
 		</effects>
 	</skill>
 	<skill id="107" toLevel="9" name="Holy Aura">
+		<!-- Holds nearby undead monsters for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -805,7 +812,7 @@
 		</effects>
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
-		<!-- Glory Days Confirmed -->
+		<!-- Becomes possessed by an Ogre's soul. Increases one's own P. Atk./ P. Def./ M. Def. by 30% and Critical Damage by 10% for 5 minutes. Requires a fist weapon. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -854,6 +861,7 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
+		<!-- For $s1., increases P. Def. by $s2, M. Def. by $s3, and Buff-canceling Attack Resistance by $s4, and restricts movement. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -905,6 +913,7 @@
 		</effects>
 	</skill>
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
+		<!-- For $s1, increases Evasion by $s2, physical attack skill Evasion Rate by $s3, and Buff-canceling Attack Resistance by $s4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -954,6 +963,7 @@
 		</effects>
 	</skill>
 	<skill id="112" toLevel="4" name="Deflect Arrow">
+		<!-- Increases Bow Resistance by $s2 and Crossbow Resistance by $s3 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1007,6 +1017,7 @@
 		</effects>
 	</skill>
 	<skill id="113" toLevel="2" name="Long Shot">
+		<!-- Increases the bow's range by $s1. -->
 		<icon>icon.skill0113</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1028,6 +1039,7 @@
 		</effects>
 	</skill>
 	<skill id="115" toLevel="17" name="Power Break">
+		<!-- Decreases the enemy's P. Atk. by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1166,6 +1178,7 @@
 		</effects>
 	</skill>
 	<skill id="116" toLevel="14" name="Howl">
+		<!-- Decreases nearby enemies' P. Atk. by $s2 for $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1240,7 +1253,7 @@
 		</effects>
 	</skill>
 	<skill id="118" toLevel="1" name="Magician's Movement">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. when equipped with a robe jacket and robe pants. -->
 		<icon>icon.skill0118</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1258,6 +1271,7 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
+		<!-- Attacks the enemy with $s1 power added to P. Atk. and inflicts Stun for $s2. Requires a fist weapon. Over-hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1362,6 +1376,7 @@
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
+		<!-- Instantly recovers $s1 of Max HP and increases Max HP by $s3 for $s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1421,6 +1436,7 @@
 		</effects>
 	</skill>
 	<skill id="122" toLevel="15" name="Hex">
+		<!-- Decreases the enemy's P. Def. by $s2 for $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1498,6 +1514,7 @@
 		</effects>
 	</skill>
 	<skill id="123" toLevel="3" name="Spirit Barrier">
+		<!-- Increases M. Def. by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1547,6 +1564,7 @@
 		</effects>
 	</skill>
 	<skill id="127" toLevel="14" name="Hamstring">
+		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1636,6 +1654,7 @@
 		</effects>
 	</skill>
 	<skill id="129" toLevel="5" name="Poison">
+		<!-- Poisons the target, causing loss of $s2 HP per second for $s1. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">5</value>
@@ -1705,7 +1724,7 @@
 		</effects>
 	</skill>
 	<skill id="130" toLevel="2" name="Thrill Fight">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases Speed by $s2 and increases Atk. Spd. by $s3 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1748,6 +1767,7 @@
 		</effects>
 	</skill>
 	<skill id="131" toLevel="3" name="Hawk Eye">
+		<!-- Decreases P. Def. by $s2 and increases Accuracy by $s3 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1795,6 +1815,7 @@
 		</effects>
 	</skill>
 	<skill id="134" toLevel="1" name="Toughness">
+		<!-- Increases Sleep/ Hold/ Poison Resistance by $s1. -->
 		<icon>icon.skill0134</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1808,6 +1829,7 @@
 		</effects>
 	</skill>
 	<skill id="137" toLevel="4" name="Critical Chance">
+		<!-- Increases Critical Rate by $s1. -->
 		<icon>icon.skill0137</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -1830,7 +1852,7 @@
 		</effects>
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1956,7 +1978,7 @@
 		</effects>
 	</skill>
 	<skill id="141" toLevel="3" name="Weapon Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by $s1 and additionally by $s2. -->
 		<icon>icon.skill0141</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -1981,7 +2003,7 @@
 		</effects>
 	</skill>
 	<skill id="142" toLevel="5" name="Armor Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. by $s1 and MP Recovery Bonus by $s2. -->
 		<icon>icon.skill0142</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2023,7 +2045,7 @@
 		</effects>
 	</skill>
 	<skill id="143" toLevel="2" name="Cubic Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Ability to summon $s1 Cubics at once. -->
 		<icon>icon.skill0143</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -2041,6 +2063,7 @@
 		</effects>
 	</skill>
 	<skill id="144" toLevel="37" name="Dual Weapon Mastery">
+		<!-- Increases P. Atk. by $s1 when using a dual sword. -->
 		<icon>icon.skill0144</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -2132,6 +2155,7 @@
 		</effects>
 	</skill>
 	<skill id="146" toLevel="45" name="Anti Magic">
+		<!-- Increases M. Def. by $s1. -->
 		<icon>icon.skill0146</icon>
 		<magicLvl>
 			<value level="1">4</value>
@@ -2286,6 +2310,7 @@
 		</effects>
 	</skill>
 	<skill id="147" toLevel="51" name="M. Def.">
+		<!-- Increases M. Def. by $s1. -->
 		<icon>icon.skill0147</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2458,6 +2483,7 @@
 		</effects>
 	</skill>
 	<skill id="148" toLevel="8" name="Vital Force">
+		<!-- Increases HP Recovery Bonus by $s1 and MP Recovery Bonus by $s2 when sitting. -->
 		<icon>icon.skill0148</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -2503,6 +2529,7 @@
 		</effects>
 	</skill>
 	<skill id="150" toLevel="3" name="Weight Limit">
+		<!-- Double your weight limit. -->
 		<icon>icon.skill0150</icon>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2523,6 +2550,7 @@
 		</effects>
 	</skill>
 	<skill id="153" toLevel="4" name="Shield Mastery">
+		<!-- Increases Shield Defense by $s1 and Defense Rate by $s2. -->
 		<icon>icon.skill0153</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2566,7 +2594,7 @@
 		</effects>
 	</skill>
 	<skill id="163" toLevel="1" name="Spellcraft">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. when equipped with a robe jacket and robe pants. -->
 		<icon>icon.skill0163</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2591,6 +2619,7 @@
 		</effects>
 	</skill>
 	<skill id="164" toLevel="3" name="Quick Recovery">
+		<!-- Decreases cooldown for magic by $s1. -->
 		<icon>icon.skill0164</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2612,8 +2641,7 @@
 		</effects>
 	</skill>
 	<skill id="165" toLevel="5" name="Trade">
-		<!-- Confirmed CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- Enables you to purchase high quality weapons with a discount up to $s1. -->
 		<icon>icon.skill0165</icon>
 		<magicLvl>
 			<value level="1">15</value>
@@ -2626,6 +2654,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="168" toLevel="3" name="Boost Atk. Spd.">
+		<!-- Increases Atk. Spd. by $s1. -->
 		<icon>icon.skill0168</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2646,6 +2675,7 @@
 		</effects>
 	</skill>
 	<skill id="169" toLevel="2" name="Quick Step">
+		<!-- Increases Speed by $s1. -->
 		<icon>icon.skill0169</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -2664,7 +2694,7 @@
 		</effects>
 	</skill>
 	<skill id="171" toLevel="8" name="Esprit">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases HP Recovery Bonus by $s1 and MP Recovery Bonus by $s2 when running. -->
 		<icon>icon.skill0171</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2713,7 +2743,7 @@
 		</effects>
 	</skill>
 	<skill id="172" toLevel="15" name="Create Item">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Allows the user to manufacture level $s1 items. -->
 		<icon>icon.skill0172</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2757,7 +2787,7 @@
 		</effects>
 	</skill>
 	<skill id="173" toLevel="2" name="Acrobatics">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases the maximum height user can fall without taking damage by $s1. -->
 		<icon>icon.skill0173</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2776,7 +2806,7 @@
 		</effects>
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Spd. +$s6. Additional Accuracy $s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is $s9 or lower. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2990,6 +3020,7 @@
 		</effects>
 	</skill>
 	<skill id="181" toLevel="1" name="Revival">
+		<!-- Restores to full HP in an emergency. Only usable if HP is 10 percent or lower. -->
 		<effectPoint>562</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0181</icon>
@@ -3015,6 +3046,7 @@
 		</effects>
 	</skill>
 	<skill id="190" toLevel="37" name="Fatal Strike">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. Critical. Ignores Shield Defense. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3200,6 +3232,7 @@
 		</effects>
 	</skill>
 	<skill id="191" toLevel="6" name="Focus Mind">
+		<!-- Increases MP Recovery Bonus by $s1. -->
 		<icon>icon.skill0191</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -3226,6 +3259,7 @@
 		</effects>
 	</skill>
 	<skill id="193" toLevel="7" name="Critical Damage">
+		<!-- Increases Critical Damage by $s1. -->
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -3254,7 +3288,7 @@
 		</effects>
 	</skill>
 	<skill id="194" toLevel="1" name="Lucky">
-		<!-- Confirmed CT2.5 -->
+		<!-- Vitality points are not consumed below Lv. 9. Upon death, there is no XP decrease and no poisoning by Shilen's Breath. -->
 		<icon>icon.skill0194</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3264,6 +3298,7 @@
 		</effects>
 	</skill>
 	<skill id="195" toLevel="2" name="Boost Breath">
+		<!-- Increases lung capacity by $s1. -->
 		<icon>icon.skill0195</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3282,6 +3317,7 @@
 		</effects>
 	</skill>
 	<skill id="196" toLevel="1" name="Holy Blade">
+		<!-- Ability to attack with holy power. -->
 		<attributeType>HOLY</attributeType>
 		<icon>icon.skill0196</icon>
 		<magicLvl>43</magicLvl>
@@ -3298,6 +3334,7 @@
 		</effects>
 	</skill>
 	<skill id="197" toLevel="2" name="Holy Armor">
+		<!-- Increases Dark Attack Resistance. -->
 		<icon>icon.skill0197</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -3322,6 +3359,7 @@
 		</effects>
 	</skill>
 	<skill id="198" toLevel="3" name="Boost Evasion">
+		<!-- Increases Evasion by $s1. -->
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">24</value>

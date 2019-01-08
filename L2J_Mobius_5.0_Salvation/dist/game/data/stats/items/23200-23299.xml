@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23200" name="Tribal Warrior Costume Appearance Stone Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Tribal Warrior Top/Pants/Gloves/Shoes/Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing Tribal Warrior Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -38,7 +38,7 @@
 		</skills>
 	</item>
 	<item id="23202" name="Shiny Alien Mask" type="Armor">
-		<!-- CON + 1, MEN + 1 and INT + 1. 3-day. -->
+		<!-- CON +1, MEN +1 and INT +1. 3-day. -->
 		<set name="icon" val="icon.ev_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -58,7 +58,7 @@
 		</skills>
 	</item>
 	<item id="23203" name="Shiny Reanimated Corpse Mask" type="Armor">
-		<!-- CON + 1, STR + 1 and DEX + 1. 3-day. -->
+		<!-- CON +1, STR +1 and DEX +1. 3-day. -->
 		<set name="icon" val="icon.ev_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -78,7 +78,7 @@
 		</skills>
 	</item>
 	<item id="23204" name="Shiny Shriek Mask" type="Armor">
-		<!-- CON + 1, DEX + 1 and WIT + 1. 3-day. -->
+		<!-- CON +1, DEX +1 and WIT +1. 3-day. -->
 		<set name="icon" val="icon.ev_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -98,7 +98,7 @@
 		</skills>
 	</item>
 	<item id="23205" name="Shiny Red Devil Mask" type="Armor">
-		<!-- INT + 1, MEN + 1 and WIT + 1. 3-day. -->
+		<!-- INT +1, MEN +1 and WIT +1. 3-day. -->
 		<set name="icon" val="icon.ev_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -118,7 +118,7 @@
 		</skills>
 	</item>
 	<item id="23206" name="Shiny Mummy Mask" type="Armor">
-		<!-- CON + 1, DEX + 1 and WIT + 1. 3-day. -->
+		<!-- STR +1, DEX +1 and WIT +1. 3-day. -->
 		<set name="icon" val="icon.ev_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -138,7 +138,7 @@
 		</skills>
 	</item>
 	<item id="23207" name="Playful Hair Accessory Pack" type="EtcItem">
-		<!-- Gives a hair accessory perfect for a fun summer festival. -->
+		<!-- Gives a hair accessory perfect for a fun festival. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -152,7 +152,7 @@
 		</skills>
 	</item>
 	<item id="23208" name="Red Potion of Regeneration" type="EtcItem">
-		<!-- Restores 3000 HP and the remaining power restores CP. Instant effect with no duration. -->
+		<!-- Restores 3000 HP and the remaining power restores CP. Instant effect with no cooldown. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -170,7 +170,7 @@
 		</skills>
 	</item>
 	<item id="23209" name="Blue Potion of Recovery" type="EtcItem">
-		<!-- Magic potion that instantly restores Mana. Instant effect with no duration. -->
+		<!-- Magic potion that instantly restores Mana. Instant effect with no cooldown. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -394,7 +394,7 @@
 		</skills>
 	</item>
 	<item id="23220" name="Aenkinel's Blades of Delusion Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dualsword into that of Aenkinel's Blades of Delusion. -->
+		<!-- Changes the appearance of a dual sword into that of Aenkinel's Blades of Delusion. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -786,7 +786,7 @@
 		</stats>
 	</item>
 	<item id="23241" name="Blessed Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Pa'agrio, Sayha, Maphr and Eva Shirts. When enchanted, increases P. Def. and M. Def. by 1. From +3, Elemental defense increases by 3, and from +4, P. Def. Increases by 3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. From +3, resistance to corresponding element increases by 5, and from +4, P. Def. increases by 3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

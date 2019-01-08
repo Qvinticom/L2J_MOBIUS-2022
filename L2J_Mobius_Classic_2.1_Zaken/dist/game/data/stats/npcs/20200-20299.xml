@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20200" level="31" type="L2Monster" name="Strain">
 		<!-- L2wiki: https://l2wiki.com/classic/Strain -->
@@ -89,8 +89,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -152,8 +152,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -684,10 +684,10 @@
 				<item id="1937" min="1" max="1" chance="3.313" /> <!-- Scale Gaiter Fragment -->
 				<item id="1935" min="1" max="1" chance="2.158" /> <!-- Scale Mail Fragment -->
 				<item id="2185" min="1" max="1" chance="1.055" /> <!-- Recipe: Iron Boots -->
-				<item id="4471" min="1" max="1" chance="0.03" /> <!-- Dye of CON (Con  1 Str -1) -->
-				<item id="4472" min="1" max="1" chance="0.03" /> <!-- Dye of CON (Con  1 DEX -1) -->
-				<item id="4479" min="1" max="1" chance="0.03" /> <!-- Dye of WIT (Wit  1 Int -1) -->
-				<item id="4480" min="1" max="1" chance="0.03" /> <!-- Dye of WIT (Wit  1 Men -1) -->
+				<item id="4471" min="1" max="1" chance="0.03" /> <!-- Dye of CON <Con + 1 Str - 1> - 1st Class Transfer -->
+				<item id="4472" min="1" max="1" chance="0.03" /> <!-- Dye of CON <Con + 1 DEX - 1> - 1st Class Transfer -->
+				<item id="4479" min="1" max="1" chance="0.03" /> <!-- Dye of WIT <Wit + 1 Int - 1> - 1st Class Transfer -->
+				<item id="4480" min="1" max="1" chance="0.03" /> <!-- Dye of WIT <Wit + 1 Men - 1> - 1st Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2183" min="1" max="1" chance="11.66" /> <!-- Recipe: Mithril Banded Mail -->
@@ -1667,10 +1667,10 @@
 				<item id="1882" min="1" max="1" chance="3.136" /> <!-- Leather -->
 				<item id="1975" min="1" max="1" chance="3.077" /> <!-- Rind Leather Armor Design -->
 				<item id="1885" min="1" max="1" chance="1.213" /> <!-- High-grade Suede -->
-				<item id="4553" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR  1 CON -1) -->
-				<item id="4554" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR  1 DEX -1) -->
-				<item id="4557" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex  1 Str -1) -->
-				<item id="4558" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex  1 CON -1) -->
+				<item id="4553" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR + 1 CON - 1> - 2nd Class Transfer -->
+				<item id="4554" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR + 1 DEX - 1> - 2nd Class Transfer -->
+				<item id="4557" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex + 1 Str - 1> - 2nd Class Transfer -->
+				<item id="4558" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex + 1 CON - 1> - 2nd Class Transfer -->
 				<item id="2334" min="1" max="1" chance="0.03" /> <!-- Recipe: Sword of Whispering Death -->
 				<item id="1419" min="1" max="1" chance="9.5" /> <!-- Proof of Blood -->
 			</drop>
@@ -1710,15 +1710,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4416" level="5" /> <!--Plants -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Average P. Atk. -->
-			<skill id="4411" level="12" /> <!--Average M. Atk. -->
-			<skill id="4412" level="10" /> <!--Average P. Def. -->
-			<skill id="4413" level="10" /> <!--Average M. Def. -->
-			<skill id="4279" level="1" /> <!--Fire Vulnerability -->
-			<skill id="4277" level="5" /> <!--Resist Poison Attacks -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Average P. Def. -->
+			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2543,8 +2543,8 @@
 				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
 				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
 				<item id="1877" min="1" max="1" chance="0.3" /> <!-- Adamantite Nugget -->
-				<item id="4602" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR  3 DEX -3) -->
-				<item id="4606" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX (Dex  3 CON -3) -->
+				<item id="4602" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR + 3 DEX - 3> - 2nd Class Transfer -->
+				<item id="4606" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex + 3 CON - 3> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2074" min="1" max="1" chance="1.178" /> <!-- Crystallized Ice Bow Shaft -->
@@ -3389,8 +3389,8 @@
 				<item id="4050" min="1" max="3" chance="5.83" /> <!-- Adamantite Ring Wire -->
 				<item id="1867" min="7" max="21" chance="4.006" /> <!-- Animal Skin -->
 				<item id="4049" min="1" max="3" chance="3.228" /> <!-- Adamantite Earring Gemstone -->
-				<item id="4608" min="1" max="1" chance="0.3" /> <!-- Greater Dye of INT (Int  3 Wit -3) -->
-				<item id="4610" min="1" max="1" chance="0.3" /> <!-- Greater Dye of MEN (Men  3 Wit -3) -->
+				<item id="4608" min="1" max="1" chance="0.3" /> <!-- Greater Dye of INT <Int + 3 Wit - 3> - 2nd Class Transfer -->
+				<item id="4610" min="1" max="1" chance="0.3" /> <!-- Greater Dye of MEN <Men + 3 Wit - 3> - 2nd Class Transfer -->
 				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
 			</drop>
 			<spoil>
@@ -4093,16 +4093,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="3" /> <!--NPC Strike -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4032" level="3" /> <!-- NPC Strike -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5180,8 +5180,8 @@
 				<item id="4050" min="1" max="3" chance="5.83" /> <!-- Adamantite Ring Wire -->
 				<item id="1867" min="7" max="21" chance="4.006" /> <!-- Animal Skin -->
 				<item id="4049" min="1" max="3" chance="3.228" /> <!-- Adamantite Earring Gemstone -->
-				<item id="4608" min="1" max="1" chance="0.3" /> <!-- Greater Dye of INT (Int  3 Wit -3) -->
-				<item id="4610" min="1" max="1" chance="0.3" /> <!-- Greater Dye of MEN (Men  3 Wit -3) -->
+				<item id="4608" min="1" max="1" chance="0.3" /> <!-- Greater Dye of INT <Int + 3 Wit - 3> - 2nd Class Transfer -->
+				<item id="4610" min="1" max="1" chance="0.3" /> <!-- Greater Dye of MEN <Men + 3 Wit - 3> - 2nd Class Transfer -->
 				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
 			</drop>
 			<spoil>
@@ -5248,8 +5248,8 @@
 				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
 				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
 				<item id="1877" min="1" max="1" chance="0.3" /> <!-- Adamantite Nugget -->
-				<item id="4602" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR  3 DEX -3) -->
-				<item id="4606" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX (Dex  3 CON -3) -->
+				<item id="4602" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR + 3 DEX - 3> - 2nd Class Transfer -->
+				<item id="4606" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex + 3 CON - 3> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2074" min="1" max="1" chance="1.178" /> <!-- Crystallized Ice Bow Shaft -->
@@ -5327,8 +5327,8 @@
 				<item id="3006" min="1" max="1" chance="0.75" /> <!-- Recipe: Demon's Gloves -->
 				<item id="3017" min="1" max="1" chance="0.75" /> <!-- Recipe: Divine Gloves -->
 				<item id="2170" min="1" max="1" chance="0.75" /> <!-- Recipe: Nassen's Earring -->
-				<item id="4601" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR  3 CON -3) -->
-				<item id="4603" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con  3 Str -3) -->
+				<item id="4601" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR + 3 CON - 3> - 2nd Class Transfer -->
+				<item id="4603" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con + 3 Str - 3> - 2nd Class Transfer -->
 				<item id="2356" min="1" max="1" chance="0.03" /> <!-- Recipe: Demon's Staff -->
 			</drop>
 			<spoil>

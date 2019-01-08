@@ -23,7 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4102" name="Zubei's Helmet Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Helmet. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Sealed Zubei's Helmet. Can be sold. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -621,7 +621,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4149" name="Recipe: Avadon Circlet" type="EtcItem">
-		<!-- For Dwarves only. Recipe for an Avadon Circlet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for a Sealed Avadon Circlet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -845,7 +845,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4165" name="Recipe: Blue Wolf Helmet" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Blue Wolf Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for a Sealed Blue Wolf Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -859,7 +859,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4166" name="Recipe: Doom Helmet" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Doom Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for a Sealed Doom Helmet. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1041,7 +1041,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4179" name="Recipe: Zubei's Helmet" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Zubei's Helmet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for a Sealed Zubei's Helmet. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

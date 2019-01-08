@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25200" level="71" type="L2Monster" name="Sheshark's Family" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1946,9 +1946,9 @@
 				<item id="2379" min="1" max="1" chance="1.01899999999998" /> <!-- Avadon Gaiters -->
 				<item id="9815" min="2" max="6" chance="41.046511627907" /> <!-- Dragon Heart -->
 				<item id="8176" min="1" max="3" chance="38.100775193798" /> <!-- Destruction Tombstone -->
-				<item id="4620" min="1" max="1" chance="7.5193798449612" /> <!-- Greater INT Dye (Int + 4 Wit - 4) -->
-				<item id="4621" min="1" max="1" chance="7.4176356589147" /> <!-- Greater MEN Dye (Men + 4 Int - 4) -->
-				<item id="4619" min="1" max="3" chance="3.7403100775194" /> <!-- Greater INT Dye (Int + 4 Men - 4) -->
+				<item id="4620" min="1" max="1" chance="7.5193798449612" /> <!-- Greater INT Dye <Int + 4 Wit - 4> -->
+				<item id="4621" min="1" max="1" chance="7.4176356589147" /> <!-- Greater MEN Dye <Men + 4 Int - 4> -->
+				<item id="4619" min="1" max="3" chance="3.7403100775194" /> <!-- Greater INT Dye <Int + 4 Men - 4> -->
 				<item id="947" min="1" max="1" chance="2.1753875968992" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
 			<lucky>
@@ -2743,9 +2743,9 @@
 				<item id="2397" min="1" max="1" chance="1.54899999999995" /> <!-- Tunic of Zubei -->
 				<item id="8176" min="1" max="3" chance="41.017881011828" /> <!-- Destruction Tombstone -->
 				<item id="9817" min="2" max="6" chance="39.459282237522" /> <!-- Nonliving Nucleus -->
-				<item id="4624" min="1" max="1" chance="10.708431061007" /> <!-- Greater WIT Dye (Wit + 4 Men - 4) -->
-				<item id="4622" min="1" max="3" chance="5.3567375349928" /> <!-- Greater MEN Dye (Men + 4 Wit - 4) -->
-				<item id="4623" min="1" max="3" chance="3.4576681546493" /> <!-- Greater WIT Dye (Wit + 4 Int - 4) -->
+				<item id="4624" min="1" max="1" chance="10.708431061007" /> <!-- Greater WIT Dye <Wit + 4 Men - 4> -->
+				<item id="4622" min="1" max="3" chance="5.3567375349928" /> <!-- Greater MEN Dye <Men + 4 Wit - 4> -->
+				<item id="4623" min="1" max="3" chance="3.4576681546493" /> <!-- Greater WIT Dye <Wit + 4 Int - 4> -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="69.42" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2815,10 +2815,10 @@
 				<item id="1149" min="1" max="1" chance="0.750000000000003" /> <!-- Shining Circlet -->
 				<item id="9817" min="2" max="4" chance="38.361169102296" /> <!-- Nonliving Nucleus -->
 				<item id="8176" min="1" max="2" chance="37.999839409025" /> <!-- Destruction Tombstone -->
-				<item id="4603" min="1" max="1" chance="8.8776698249558" /> <!-- Greater CON Dye (Con + 3 Str - 3) -->
+				<item id="4603" min="1" max="1" chance="8.8776698249558" /> <!-- Greater CON Dye <Con + 3 Str - 3> -->
 				<item id="951" min="1" max="1" chance="7.4323510518709" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="4601" min="1" max="3" chance="4.4172555002409" /> <!-- Greater STR Dye (STR + 3 CON - 3) -->
-				<item id="4602" min="1" max="3" chance="2.9117151116107" /> <!-- Greater STR Dye (STR + 3 DEX - 3) -->
+				<item id="4601" min="1" max="3" chance="4.4172555002409" /> <!-- Greater STR Dye <STR + 3 CON - 3> -->
+				<item id="4602" min="1" max="3" chance="2.9117151116107" /> <!-- Greater STR Dye <STR + 3 DEX - 3> -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="58.65" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3301,9 +3301,9 @@
 				<item id="4081" min="22" max="66" chance="12.83" /> <!-- Doom Plate Armor Temper -->
 				<item id="9817" min="2" max="5" chance="41.473996375419" /> <!-- Nonliving Nucleus -->
 				<item id="8176" min="1" max="3" chance="37.173924982152" /> <!-- Destruction Tombstone -->
-				<item id="4619" min="1" max="1" chance="7.3205557691252" /> <!-- Greater INT Dye (Int + 4 Men - 4) -->
-				<item id="4620" min="1" max="1" chance="7.0020319622165" /> <!-- Greater INT Dye (Int + 4 Wit - 4) -->
-				<item id="4621" min="1" max="1" chance="6.8647372178593" /> <!-- Greater MEN Dye (Men + 4 Int - 4) -->
+				<item id="4619" min="1" max="1" chance="7.3205557691252" /> <!-- Greater INT Dye <Int + 4 Men - 4> -->
+				<item id="4620" min="1" max="1" chance="7.0020319622165" /> <!-- Greater INT Dye <Int + 4 Wit - 4> -->
+				<item id="4621" min="1" max="1" chance="6.8647372178593" /> <!-- Greater MEN Dye <Men + 4 Int - 4> -->
 				<item id="6571" min="1" max="1" chance="0.16475369322862" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
 			</drop>
 			<lucky>
@@ -3740,7 +3740,7 @@
 		<ai type="BALANCED" />
 		<dropLists>
 			<drop>
-				<item id="17343" min="2" max="2" chance="14.586987209651" /> <!-- Twilight Shield Heavy Armor -->
+				<item id="17343" min="2" max="2" chance="14.586987209651" /> <!-- Twilight Shield - Heavy Armor -->
 				<item id="17328" min="1" max="1" chance="7.8179407109552" /> <!-- Apocalypse Fighter -->
 				<item id="17331" min="1" max="1" chance="7.8068186679215" /> <!-- Apocalypse Shooter -->
 				<item id="17333" min="1" max="1" chance="7.7956966248877" /> <!-- Apocalypse Caster -->
@@ -3752,32 +3752,32 @@
 				<item id="17329" min="1" max="1" chance="7.7340976173162" /> <!-- Apocalypse Stormer -->
 				<item id="17334" min="1" max="1" chance="7.729819908457" /> <!-- Apocalypse Retributer -->
 				<item id="17327" min="1" max="1" chance="7.7246866578261" /> <!-- Apocalypse Avenger -->
-				<item id="17346" min="2" max="2" chance="19.128487449846" /> <!-- Twilight Leather Leggings Light Armor -->
-				<item id="17345" min="2" max="2" chance="18.7832415788" /> <!-- Twilight Leather Armor Light Armor -->
-				<item id="17351" min="2" max="2" chance="15.871979098628" /> <!-- Twilight Stockings Robe -->
-				<item id="17340" min="2" max="2" chance="15.638704861435" /> <!-- Twilight Gaiters Heavy Armor -->
-				<item id="17350" min="2" max="2" chance="15.564057105533" /> <!-- Twilight Tunic Robe -->
-				<item id="17339" min="2" max="2" chance="15.013529905757" /> <!-- Twilight Breastplate Heavy Armor -->
+				<item id="17346" min="2" max="2" chance="19.128487449846" /> <!-- Twilight Leather Leggings - Light Armor -->
+				<item id="17345" min="2" max="2" chance="18.7832415788" /> <!-- Twilight Leather Armor - Light Armor -->
+				<item id="17351" min="2" max="2" chance="15.871979098628" /> <!-- Twilight Stockings - Robe -->
+				<item id="17340" min="2" max="2" chance="15.638704861435" /> <!-- Twilight Gaiters - Heavy Armor -->
+				<item id="17350" min="2" max="2" chance="15.564057105533" /> <!-- Twilight Tunic - Robe -->
+				<item id="17339" min="2" max="2" chance="15.013529905757" /> <!-- Twilight Breastplate - Heavy Armor -->
 				<item id="37714" min="1" max="1" chance="18.660771852261" /> <!-- Talisman - Lilith -->
-				<item id="17347" min="2" max="2" chance="9.5744680851064" /> <!-- Twilight Leather Gloves Light Armor -->
-				<item id="17348" min="2" max="2" chance="8.9619600257898" /> <!-- Twilight Leather Boots Light Armor -->
-				<item id="17344" min="2" max="2" chance="8.8284056369163" /> <!-- Twilight Leather Helmet Light Armor -->
-				<item id="17338" min="2" max="2" chance="7.9395781523441" /> <!-- Twilight Helmet Heavy Armor -->
-				<item id="17352" min="2" max="2" chance="7.8704982960302" /> <!-- Twilight Gloves Robe -->
-				<item id="17354" min="2" max="2" chance="7.8612876485217" /> <!-- Twilight Sigil Robe -->
-				<item id="17341" min="2" max="2" chance="7.8290503822419" /> <!-- Twilight Gauntlets Heavy Armor -->
-				<item id="17353" min="2" max="2" chance="7.5941788707746" /> <!-- Twilight Shoes Robe -->
-				<item id="17342" min="2" max="2" chance="7.5849682232661" /> <!-- Twilight Boots Heavy Armor -->
-				<item id="17349" min="2" max="2" chance="7.2948328267477" /> <!-- Twilight Circlet Robe -->
+				<item id="17347" min="2" max="2" chance="9.5744680851064" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17348" min="2" max="2" chance="8.9619600257898" /> <!-- Twilight Leather Boots - Light Armor -->
+				<item id="17344" min="2" max="2" chance="8.8284056369163" /> <!-- Twilight Leather Helmet - Light Armor -->
+				<item id="17338" min="2" max="2" chance="7.9395781523441" /> <!-- Twilight Helmet - Heavy Armor -->
+				<item id="17352" min="2" max="2" chance="7.8704982960302" /> <!-- Twilight Gloves - Robe -->
+				<item id="17354" min="2" max="2" chance="7.8612876485217" /> <!-- Twilight Sigil - Robe -->
+				<item id="17341" min="2" max="2" chance="7.8290503822419" /> <!-- Twilight Gauntlets - Heavy Armor -->
+				<item id="17353" min="2" max="2" chance="7.5941788707746" /> <!-- Twilight Shoes - Robe -->
+				<item id="17342" min="2" max="2" chance="7.5849682232661" /> <!-- Twilight Boots - Heavy Armor -->
+				<item id="17349" min="2" max="2" chance="7.2948328267477" /> <!-- Twilight Circlet - Robe -->
 				<item id="19447" min="10" max="10" chance="17.391244121538" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="5" max="5" chance="17.141907288254" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="37779" min="1" max="1" chance="11.902370777723" /> <!-- Scroll of Blessing: Armor (R-grade) -->
-				<item id="17701" min="1" max="1" chance="5.9840839988087" /> <!-- Lv. 5 Giant WIT Dye Wit + 5 -->
-				<item id="17699" min="1" max="1" chance="5.9286758136346" /> <!-- Lv. 5 Giant CON Dye CON + 5 -->
-				<item id="17698" min="1" max="1" chance="5.7485992118186" /> <!-- Lv. 5 Giant DEX Dye DEX + 5 -->
-				<item id="17700" min="1" max="1" chance="5.6689499456307" /> <!-- Lv. 5 Giant INT Dye INT + 5 -->
-				<item id="17702" min="1" max="1" chance="5.6135417604566" /> <!-- Lv. 5 Giant MEN Dye Men + 5 -->
-				<item id="17697" min="1" max="1" chance="5.5269664711219" /> <!-- Lv. 5 Giant STR Dye STR + 5 -->
+				<item id="17701" min="1" max="1" chance="5.9840839988087" /> <!-- Lv. 5 Giant WIT Dye - Wit + 5 -->
+				<item id="17699" min="1" max="1" chance="5.9286758136346" /> <!-- Lv. 5 Giant CON Dye - CON + 5 -->
+				<item id="17698" min="1" max="1" chance="5.7485992118186" /> <!-- Lv. 5 Giant DEX Dye - DEX + 5 -->
+				<item id="17700" min="1" max="1" chance="5.6689499456307" /> <!-- Lv. 5 Giant INT Dye - INT + 5 -->
+				<item id="17702" min="1" max="1" chance="5.6135417604566" /> <!-- Lv. 5 Giant MEN Dye - Men + 5 -->
+				<item id="17697" min="1" max="1" chance="5.5269664711219" /> <!-- Lv. 5 Giant STR Dye - STR + 5 -->
 				<item id="37770" min="1" max="1" chance="5.2776296378383" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
 				<item id="37716" min="1" max="1" chance="3.482750739353" /> <!-- Seven Signs' Energy -->
 				<item id="19503" min="1" max="1" chance="3.4550466467659" /> <!-- Teal Soul Crystal (R-grade) -->
@@ -3934,7 +3934,7 @@
 		<ai type="BALANCED" />
 		<dropLists>
 			<drop>
-				<item id="17401" min="2" max="2" chance="14.138927722934" /> <!-- Seraph Shield Heavy Armor -->
+				<item id="17401" min="2" max="2" chance="14.138927722934" /> <!-- Seraph Shield - Heavy Armor -->
 				<item id="17386" min="1" max="1" chance="7.8563893201136" /> <!-- Specter Fighter -->
 				<item id="17389" min="1" max="1" chance="7.8486701603012" /> <!-- Specter Shooter -->
 				<item id="17387" min="1" max="1" chance="7.8443817381833" /> <!-- Specter Stormer -->
@@ -3946,32 +3946,32 @@
 				<item id="17383" min="1" max="1" chance="7.7757669842958" /> <!-- Specter Cutter -->
 				<item id="17384" min="1" max="1" chance="7.7671901400599" /> <!-- Specter Slasher -->
 				<item id="17382" min="1" max="1" chance="7.7586132958239" /> <!-- Specter Shaper -->
-				<item id="17403" min="2" max="2" chance="19.47639083684" /> <!-- Seraph Leather Armor Light Armor -->
-				<item id="17404" min="2" max="2" chance="18.447872837775" /> <!-- Seraph Leather Leggings Light Armor -->
-				<item id="17408" min="2" max="2" chance="15.970079476391" /> <!-- Seraph Tunic Robe -->
-				<item id="17409" min="2" max="2" chance="15.511921458626" /> <!-- Seraph Stockings Robe -->
-				<item id="17398" min="2" max="2" chance="15.465170640486" /> <!-- Seraph Gaiters Heavy Armor -->
-				<item id="17397" min="2" max="2" chance="15.128564749883" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17403" min="2" max="2" chance="19.47639083684" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17404" min="2" max="2" chance="18.447872837775" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17408" min="2" max="2" chance="15.970079476391" /> <!-- Seraph Tunic - Robe -->
+				<item id="17409" min="2" max="2" chance="15.511921458626" /> <!-- Seraph Stockings - Robe -->
+				<item id="17398" min="2" max="2" chance="15.465170640486" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17397" min="2" max="2" chance="15.128564749883" /> <!-- Seraph Breastplate - Heavy Armor -->
 				<item id="37715" min="1" max="1" chance="17.651654411765" /> <!-- Talisman - Anakim -->
-				<item id="17405" min="2" max="2" chance="9.5266544117647" /> <!-- Seraph Leather Gloves Light Armor -->
-				<item id="17406" min="2" max="2" chance="9.3152573529412" /> <!-- Seraph Leather Boots Light Armor -->
-				<item id="17402" min="2" max="2" chance="9.1727941176471" /> <!-- Seraph Leather Helmet Light Armor -->
-				<item id="17396" min="2" max="2" chance="7.9963235294118" /> <!-- Seraph Helmet Heavy Armor -->
-				<item id="17410" min="2" max="2" chance="7.9549632352941" /> <!-- Seraph Gloves Robe -->
-				<item id="17399" min="2" max="2" chance="7.9549632352941" /> <!-- Seraph Gauntlets Heavy Armor -->
-				<item id="17411" min="2" max="2" chance="7.8170955882353" /> <!-- Seraph Shoes Robe -->
-				<item id="17412" min="2" max="2" chance="7.6976102941176" /> <!-- Seraph Sigil Robe -->
-				<item id="17407" min="2" max="2" chance="7.5321691176471" /> <!-- Seraph Circlet Robe -->
-				<item id="17400" min="2" max="2" chance="7.3805147058824" /> <!-- Seraph Boots Heavy Armor -->
+				<item id="17405" min="2" max="2" chance="9.5266544117647" /> <!-- Seraph Leather Gloves - Light Armor -->
+				<item id="17406" min="2" max="2" chance="9.3152573529412" /> <!-- Seraph Leather Boots - Light Armor -->
+				<item id="17402" min="2" max="2" chance="9.1727941176471" /> <!-- Seraph Leather Helmet - Light Armor -->
+				<item id="17396" min="2" max="2" chance="7.9963235294118" /> <!-- Seraph Helmet - Heavy Armor -->
+				<item id="17410" min="2" max="2" chance="7.9549632352941" /> <!-- Seraph Gloves - Robe -->
+				<item id="17399" min="2" max="2" chance="7.9549632352941" /> <!-- Seraph Gauntlets - Heavy Armor -->
+				<item id="17411" min="2" max="2" chance="7.8170955882353" /> <!-- Seraph Shoes - Robe -->
+				<item id="17412" min="2" max="2" chance="7.6976102941176" /> <!-- Seraph Sigil - Robe -->
+				<item id="17407" min="2" max="2" chance="7.5321691176471" /> <!-- Seraph Circlet - Robe -->
+				<item id="17400" min="2" max="2" chance="7.3805147058824" /> <!-- Seraph Boots - Heavy Armor -->
 				<item id="19448" min="5" max="5" chance="16.379471412135" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="10" max="10" chance="16.179521891195" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="37780" min="1" max="1" chance="12.010082700433" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
-				<item id="17699" min="1" max="1" chance="5.6805331113129" /> <!-- Lv. 5 Giant CON Dye CON + 5 -->
-				<item id="17701" min="1" max="1" chance="5.4051927873947" /> <!-- Lv. 5 Giant WIT Dye Wit + 5 -->
-				<item id="17702" min="1" max="1" chance="5.3560248724093" /> <!-- Lv. 5 Giant MEN Dye Men + 5 -->
-				<item id="17698" min="1" max="1" chance="5.329801984417" /> <!-- Lv. 5 Giant DEX Dye DEX + 5 -->
-				<item id="17697" min="1" max="1" chance="5.3166905404209" /> <!-- Lv. 5 Giant STR Dye STR + 5 -->
-				<item id="17700" min="1" max="1" chance="5.2380218764443" /> <!-- Lv. 5 Giant INT Dye INT + 5 -->
+				<item id="17699" min="1" max="1" chance="5.6805331113129" /> <!-- Lv. 5 Giant CON Dye - CON + 5 -->
+				<item id="17701" min="1" max="1" chance="5.4051927873947" /> <!-- Lv. 5 Giant WIT Dye - Wit + 5 -->
+				<item id="17702" min="1" max="1" chance="5.3560248724093" /> <!-- Lv. 5 Giant MEN Dye - Men + 5 -->
+				<item id="17698" min="1" max="1" chance="5.329801984417" /> <!-- Lv. 5 Giant DEX Dye - DEX + 5 -->
+				<item id="17697" min="1" max="1" chance="5.3166905404209" /> <!-- Lv. 5 Giant STR Dye - STR + 5 -->
+				<item id="17700" min="1" max="1" chance="5.2380218764443" /> <!-- Lv. 5 Giant INT Dye - INT + 5 -->
 				<item id="37771" min="1" max="1" chance="5.1495196294706" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 				<item id="10296" min="1" max="1" chance="4.9594036915271" /> <!-- Transformation Sealbook: Anakim -->
 				<item id="19502" min="1" max="1" chance="3.2994948816201" /> <!-- Yellow Soul Crystal (R-grade) -->

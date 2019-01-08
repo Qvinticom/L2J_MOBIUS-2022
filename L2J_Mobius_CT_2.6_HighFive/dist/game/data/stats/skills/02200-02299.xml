@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2200" levels="3" name="Item - Jade Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,24,28.5;7609,26,26.0572
 			6908,24,31.5;7609,26,28.8
@@ -24,7 +23,6 @@
 		</for>
 	</skill>
 	<skill id="2201" levels="3" name="Item - Blue Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,24,39.5;7609,26,36.1144
 			6904,1,5.028;6908,28,17.957;6909,8,16.76;7609,30,16.76
@@ -47,7 +45,6 @@
 		</for>
 	</skill>
 	<skill id="2202" levels="3" name="Item - Yellow Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,5.424;6908,28,19.3714;6909,8,18.0799;7609,30,18.08
 			6904,1,6.816;6908,28,24.3428;6909,8,22.7199;7609,30,22.72
@@ -70,7 +67,6 @@
 		</for>
 	</skill>
 	<skill id="2203" levels="3" name="Item - Orange Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,7.788;6908,56,13.9072;6909,14,11.5376;7609,60,12.98
 			6910,3,50.688
@@ -93,7 +89,6 @@
 		</for>
 	</skill>
 	<skill id="2204" levels="3" name="Item - Violet Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,3,58.24
 			6910,3,69.76
@@ -116,7 +111,6 @@
 		</for>
 	</skill>
 	<skill id="2205" levels="3" name="Item - Red Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,3,84.864
 			6910,3,89.728
@@ -139,7 +133,6 @@
 		</for>
 	</skill>
 	<skill id="2206" levels="3" name="Item - White Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,6,58.048
 			6910,6,61.536
@@ -162,7 +155,6 @@
 		</for>
 	</skill>
 	<skill id="2207" levels="3" name="Item - Black Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,6,69.312
 			6910,6,76.896
@@ -220,7 +212,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2213" levels="22" name="Escape - to X Town">
-		<!-- Confirmed CT2.5 -->
 		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946 -118092 </table>
 		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280 46955 </table>
 		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 -5568 -2408 342 </table>
@@ -248,8 +239,6 @@
 		</for>
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
-		<!-- Confirmed CT2.5 -->
-		<!-- Levels 7, 8 and 9 doesn't exist in client. -->
 		<table name="#coordX"> -84200 46915 9723 -45208 115158 -118092 0 0 0 83378 </table>
 		<table name="#coordY"> 244566 51441 15576 -112502 -178170 46955 0 0 0 147999 </table>
 		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 342 0 0 0 -3400 </table>
@@ -277,7 +266,6 @@
 		</for>
 	</skill>
 	<skill id="2215" levels="4" name="Item - Quest Special Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			57,100000,8;3456,1,10;3454,1,5.5;3455,1,5.5;3448,1,17.6;3449,1,17;3446,1,18;3468,1,18.4
 			57,100000,7.5;3456,1,6;3454,1,7;3455,1,7.4;3448,1,10;3449,1,22;3446,1,19.6;3468,1,20.4
@@ -301,7 +289,6 @@
 		</for>
 	</skill>
 	<skill id="2216" levels="4" name="Item - Quest Special Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			57,100,34;1867,1,33;1872,1,33
 			57,100,34;1867,1,33;1872,1,33
@@ -325,7 +312,6 @@
 		</for>
 	</skill>
 	<skill id="2217" levels="5" name="Item - Quest Treasure Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6697,1,9;6693,1,9;6694,1,9;6696,1,9;7579,1,9;6690,1,9;6688,1,9;6691,1,9;6689,1,9;6695,1,9;57,330000,10
 			6706,1,8.5;6710,1,8.5;6714,1,8.5;6703,1,8.5;6704,1,8.5;6708,1,8.5;6709,1,8.5;6712,1,8.5;6713,1,8.5;6705,1,8.5;13099,1,8.5;57,292000,15
@@ -350,7 +336,6 @@
 		</for>
 	</skill>
 	<skill id="2218" levels="3" name="Item - Quest Sac">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1882,3,20;1876,6,16;1879,3,12;1881,1,12;1880,4,10;1874,1,10;1875,3,10;1877,3,10
 			4039,4,20;4043,4,20;4044,4,20;4040,2,15;4042,2,15;4041,1,10
@@ -373,7 +358,6 @@
 		</for>
 	</skill>
 	<skill id="2219" levels="2" name="Item - Quest Sac">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1882,20,18;1876,20,16;1879,20,10;1881,20,10;1880,20,5;1874,20,10;1875,20,10;1877,20,11;57,150000,10
 			4039,4,20;4043,4,20;4044,4,20;4040,4,10;4042,4,10;4041,4,10;57,160000,10
@@ -395,7 +379,6 @@
 		</for>
 	</skill>
 	<skill id="2220" levels="9" name="Item - Easy Green Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,3,55.2
 			6908,3,56.8
@@ -424,7 +407,6 @@
 		</for>
 	</skill>
 	<skill id="2221" levels="9" name="Item - Easy Jade Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,57.2
 			6908,6,66.8
@@ -453,7 +435,6 @@
 		</for>
 	</skill>
 	<skill id="2222" levels="9" name="Item - Easy Blue Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6908,6,65.2
 			6908,6,65.2
@@ -482,7 +463,6 @@
 		</for>
 	</skill>
 	<skill id="2223" levels="9" name="Item - Easy Yellow Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,1.768;6908,6,29.4664;6909,2,17.6798
 			6904,1,1.792;6908,6,29.8664;6909,2,17.9198
@@ -511,7 +491,6 @@
 		</for>
 	</skill>
 	<skill id="2224" levels="9" name="Item - Easy Orange Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6904,1,2.488;6908,8,33.1732;6909,2,24.88
 			6904,1,2.544;6908,16,16.96;6909,2,25.44
@@ -540,7 +519,6 @@
 		</for>
 	</skill>
 	<skill id="2225" levels="9" name="Item - Easy Violet Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,1,42.048
 			6910,1,42.912
@@ -569,7 +547,6 @@
 		</for>
 	</skill>
 	<skill id="2226" levels="9" name="Item - Easy Red Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,30.672
 			6910,2,31.248
@@ -598,7 +575,6 @@
 		</for>
 	</skill>
 	<skill id="2227" levels="9" name="Item - Easy White Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,41.952
 			6910,2,42.768
@@ -627,7 +603,6 @@
 		</for>
 	</skill>
 	<skill id="2228" levels="9" name="Item - Easy Black Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6910,2,49.968
 			6910,2,67.968
@@ -685,7 +660,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
-		<!-- Confirmed CT2.5 -->
+		<!-- Amulet: Protection of Valakas. Increases one's Resistance to attack when Valakas' attacks with its front claws. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VALAKAS_ITEM" />
@@ -706,7 +681,7 @@
 		</for>
 	</skill>
 	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
-		<!-- Confirmed CT2.5 -->
+		<!-- Amulet: Slay Valakas. Increases one's P. Atk. when fighting against Valakas. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VALAKAS_ITEM" />
@@ -727,7 +702,6 @@
 		</for>
 	</skill>
 	<skill id="2233" levels="1" name="Amulet: Flames of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -744,7 +718,7 @@
 		</for>
 	</skill>
 	<skill id="2234" levels="1" name="Soul Breaking Arrow">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily stuns and immobilizes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="STUN" />
@@ -777,7 +751,6 @@
 		</for>
 	</skill>
 	<skill id="2235" levels="1" name="Anteroom Door Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="2000" />
@@ -801,7 +774,6 @@
 		</for>
 	</skill>
 	<skill id="2236" levels="1" name="Chapel Door Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="2000" />
@@ -824,7 +796,6 @@
 		</for>
 	</skill>
 	<skill id="2237" levels="1" name="Key of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="2000" />
@@ -847,7 +818,6 @@
 		</for>
 	</skill>
 	<skill id="2238" levels="1" name="Room of Splendor Key">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
@@ -870,7 +840,7 @@
 		</for>
 	</skill>
 	<skill id="2239" levels="1" name="Petrification Scroll">
-		<!-- Confirmed CT2.5 -->
+		<!-- Turns target to stone. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_STONE" />
@@ -895,7 +865,6 @@
 		</for>
 	</skill>
 	<skill id="2240" levels="1" name="Hot Spring Nectar">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="300" />
@@ -915,7 +884,6 @@
 		</cond>
 	</skill>
 	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="300" />
@@ -935,7 +903,6 @@
 		</cond>
 	</skill>
 	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="300" />
@@ -955,7 +922,6 @@
 		</cond>
 	</skill>
 	<skill id="2243" levels="1" name="Hot Spring Sulfur">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="300" />
@@ -975,7 +941,6 @@
 		</cond>
 	</skill>
 	<skill id="2244" levels="1" name="Herb of Life">
-		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -998,7 +963,6 @@
 		</for>
 	</skill>
 	<skill id="2245" levels="1" name="Herb of Mana">
-		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1021,7 +985,7 @@
 		</for>
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
-		<!-- Confirmed CT2.5 -->
+		<!-- Herb increases P. Atk. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP_HERB" />
@@ -1049,7 +1013,7 @@
 		</for>
 	</skill>
 	<skill id="2247" levels="1" name="Herb of Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Herb increases M. Atk. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP_HERB" />
@@ -1072,6 +1036,7 @@
 		</for>
 	</skill>
 	<skill id="2248" levels="1" name="Bless of Fire">
+		<!-- Causes normal physical attacks to become fire attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1093,6 +1058,7 @@
 		</for>
 	</skill>
 	<skill id="2249" levels="1" name="Bless of Water">
+		<!-- Causes normal physical attacks to become water attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1114,6 +1080,7 @@
 		</for>
 	</skill>
 	<skill id="2250" levels="1" name="Bless of Wind">
+		<!-- Causes normal physical attacks to become wind attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1135,6 +1102,7 @@
 		</for>
 	</skill>
 	<skill id="2251" levels="1" name="Bless of Earth">
+		<!-- Causes normal physical attacks to become earth attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1156,6 +1124,7 @@
 		</for>
 	</skill>
 	<skill id="2252" levels="1" name="Bless of Darkness">
+		<!-- Causes normal physical attacks to become dark attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1177,6 +1146,7 @@
 		</for>
 	</skill>
 	<skill id="2253" levels="1" name="Bless of Sacredness">
+		<!-- Causes normal physical attacks to become sacred attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
@@ -1264,7 +1234,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2260" levels="1" name="Key of Riddles">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8059,1,100
 		</table>
@@ -1287,7 +1256,6 @@
 		</for>
 	</skill>
 	<skill id="2261" levels="9" name="Item - Hard Green Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,11.04;6911,2,18.4;8353,2,27.6
 			6913,1,11.28;6911,2,18.8;8353,2,28.2
@@ -1316,7 +1284,6 @@
 		</for>
 	</skill>
 	<skill id="2262" levels="9" name="Item - Hard Jade Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,22.8;6911,2,28.5;8359,4,19
 			6913,1,18.88;6911,2,29.5;8359,4,19.6666
@@ -1345,7 +1312,6 @@
 		</for>
 	</skill>
 	<skill id="2263" levels="9" name="Item - Hard Blue Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,25.28;6911,4,19.75;8355,4,17.5556
 			6913,1,25.6;6911,4,20;8355,4,17.7778
@@ -1374,7 +1340,6 @@
 		</for>
 	</skill>
 	<skill id="2264" levels="9" name="Item - Hard Yellow Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,1,28.288;6911,4,29.4666;8354,2,22.1
 			6913,1,28.608;6911,4,29.7998;8354,2,22.35
@@ -1403,7 +1368,6 @@
 		</for>
 	</skill>
 	<skill id="2265" levels="9" name="Item - Hard Orange Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6913,2,24.88;6911,8,20.7333;8357,2,19.904
 			6913,2,25.4;6911,8,21.1666;8357,2,20.32
@@ -1432,7 +1396,6 @@
 		</for>
 	</skill>
 	<skill id="2266" levels="9" name="Item - Hard Violet Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,1,28;6912,8,19.4445;8358,2,29.1666
 			6914,1,21.432;6912,8,14.8833;8377,1,5.358;8358,2,22.325
@@ -1461,7 +1424,6 @@
 		</for>
 	</skill>
 	<skill id="2267" levels="9" name="Item - Hard Red Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,20.432;6912,9,18.9184;8352,4,18.2428
 			6914,2,15.612;6912,9,14.4556;8377,1,7.806;8352,4,13.9393
@@ -1490,7 +1452,6 @@
 		</for>
 	</skill>
 	<skill id="2268" levels="9" name="Item - Hard White Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,20.964;6912,9,19.4112;8373,1,2.6205;8356,4,16.3781
 			6914,2,17.0976;6912,9,15.8312;8377,1,8.5488;8374,1,2.1372;8356,4,13.3575
@@ -1519,7 +1480,6 @@
 		</for>
 	</skill>
 	<skill id="2269" levels="9" name="Item - Hard Black Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6914,2,24.972;6912,9,23.1224;8373,1,3.1215;8351,4,17.3416
 			6914,4,10.1904;6912,9,18.8712;8377,1,10.1904;8374,1,2.5476;8351,4,14.1534
@@ -1548,7 +1508,6 @@
 		</for>
 	</skill>
 	<skill id="2270" levels="7" name="Item - Adventurer Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			853,1,14.1723;884,1,21.3675;916,1,10.6428
 			854,1,14.1242;885,1,21.2585;917,1,10.6022
@@ -1575,7 +1534,6 @@
 		</for>
 	</skill>
 	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8034,3,85;2134,3,4;2133,7,11
 		</table>
@@ -1603,7 +1561,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8552,1,25;8187,1,25;8555,5,25;6406,10,15;6407,5,9.991;5577,1,0.002;5578,1,0.002;5579,1,0.002;5580,1,0.001;5581,1,0.001;5582,1,0.001
 		</table>
@@ -1624,6 +1581,7 @@
 		</for>
 	</skill>
 	<skill id="2274" levels="8" name="Fisherman's Potion">
+		<!-- Fisherman's Potion Green. Fishing Mastery Level is now reduced. You can now catch green fish. -->
 		<table name="#active_skill_id_lvl"> 1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25 </table>
 		<table name="#icons"> icon.etc_oblivion_green_i00 icon.etc_oblivion_jade_i00 icon.etc_oblivion_blue_i00 icon.etc_oblivion_yellow_i00 icon.etc_oblivion_orange_i00 icon.etc_oblivion_violet_i00 icon.etc_oblivion_red_i00 icon.etc_oblivion_white_i00 </table>
 		<table name="#power"> 2 5 8 11 14 17 20 23 </table>
@@ -1645,7 +1603,6 @@
 		</for>
 	</skill>
 	<skill id="2275" levels="1" name="Fisherman's Recovery Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_oblivion_black_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1659,7 +1616,6 @@
 		</for>
 	</skill>
 	<skill id="2276" levels="1" name="Dewdrop of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -1676,7 +1632,6 @@
 		</cond>
 	</skill>
 	<skill id="2277" levels="6" name="Event Gift Box">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			1539,10,8592,1,50;1539,10,8592,1,50
 			1539,10,8593,1,50;1539,10,8593,1,50
@@ -1702,7 +1657,6 @@
 		</for>
 	</skill>
 	<skill id="2278" levels="3" name="Herb of Life">
-		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 15 25 100 </table>
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
@@ -1723,7 +1677,6 @@
 		</for>
 	</skill>
 	<skill id="2279" levels="3" name="Herb of Mana">
-		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 11 18 100 </table>
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
@@ -1744,7 +1697,7 @@
 		</for>
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases P. Atk. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
@@ -1768,7 +1721,7 @@
 		</for>
 	</skill>
 	<skill id="2281" levels="1" name="Herb of Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases M. Atk. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
@@ -1792,7 +1745,7 @@
 		</for>
 	</skill>
 	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases Atk. Spd. Effect 2. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
@@ -1816,7 +1769,7 @@
 		</for>
 	</skill>
 	<skill id="2283" levels="1" name="Herb of Casting Spd.">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
@@ -1840,7 +1793,7 @@
 		</for>
 	</skill>
 	<skill id="2284" levels="1" name="Herb of Critical Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases critical attack rate. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
@@ -1864,7 +1817,7 @@
 		</for>
 	</skill>
 	<skill id="2285" levels="1" name="Herb of Speed">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
@@ -1888,7 +1841,6 @@
 		</for>
 	</skill>
 	<skill id="2286" levels="6" name="Scroll: Recovery">
-		<!-- Confirmed CT2.5 -->
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#itemConsumeId"> 8594 8595 8596 8597 8598 8599 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1910,7 +1862,6 @@
 		</for>
 	</skill>
 	<skill id="2287" levels="6" name="Elixir of Life">
-		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 250 650 1100 1500 1900 2300 </table>
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1928,7 +1879,6 @@
 		</for>
 	</skill>
 	<skill id="2288" levels="6" name="Elixir of Mental Strength">
-		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 60 140 220 290 360 420 </table>
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1946,7 +1896,6 @@
 		</for>
 	</skill>
 	<skill id="2289" levels="6" name="Elixir of CP">
-		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 150 350 600 800 1000 1200 </table>
 		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1964,7 +1913,6 @@
 		</for>
 	</skill>
 	<skill id="2290" levels="1" name="Coffer of Shadows">
-		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8661,1,15;8660,1,15;5234,3,30;6406,10,20;6407,5,19.991;5577,1,0.002;5578,1,0.002;5579,1,0.002;5580,1,0.001;5581,1,0.001;5582,1,0.001
 		</table>
@@ -1985,7 +1933,6 @@
 		</for>
 	</skill>
 	<skill id="2291" levels="1" name="Facelifting Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1999,7 +1946,6 @@
 		</for>
 	</skill>
 	<skill id="2292" levels="1" name="Facelifting Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2015,7 +1961,6 @@
 		</for>
 	</skill>
 	<skill id="2293" levels="1" name="Facelifting Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2031,7 +1976,6 @@
 		</for>
 	</skill>
 	<skill id="2294" levels="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2045,7 +1989,6 @@
 		</for>
 	</skill>
 	<skill id="2295" levels="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2061,7 +2004,6 @@
 		</for>
 	</skill>
 	<skill id="2296" levels="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2077,7 +2019,6 @@
 		</for>
 	</skill>
 	<skill id="2297" levels="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2093,7 +2034,6 @@
 		</for>
 	</skill>
 	<skill id="2298" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -2107,7 +2047,6 @@
 		</for>
 	</skill>
 	<skill id="2299" levels="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />

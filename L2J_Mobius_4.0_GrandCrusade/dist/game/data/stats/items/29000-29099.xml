@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="29058" name="Sayha's Talisman Stage 2" type="Armor">
-		<!-- When equipped, P. Def. + 225, M. Def. + 147, XP/SP Gain + 2%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. + 225, M. Def. + 147, XP/SP Gain + 2%.. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -34,7 +34,7 @@
 		</skills>
 	</item>
 	<item id="29059" name="Sayha's Talisman Stage 3" type="Armor">
-		<!-- When equipped, P. Def. + 450, M. Def. + 294, XP/SP Gain + 3%. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, P. Def. + 450, M. Def. + 294, XP/SP Gain + 3%.. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -267,7 +267,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29080" name="Wondrous Jewelry Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 1 of the following types of items randomly: Lv. 1 La Vie En Rose�s Jewelry Box, Radiant Gemstone Fragment, La Vie En Rose's Radiant Brooch Chest, or a very small chance to win a Lv. 3 Jewelry Box. -->
+		<!-- Double-click to obtain 1 of the following types of items randomly: Lv. 1 La Vie En Rose? Jewelry Box, Radiant Gemstone Fragment, La Vie En Rose's Radiant Brooch Chest, or a very small chance to win a Lv. 3 Jewelry Box. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

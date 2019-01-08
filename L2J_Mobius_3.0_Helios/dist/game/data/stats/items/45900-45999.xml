@@ -289,7 +289,7 @@
 		<set name="icon" val="icon.ev_charge_box" />
 	</item>
 	<item id="45922" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 1" type="EtcItem">
-		<!-- Learn passive skill Dignity of the Exalted Lv. 1, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 1. Can be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 1, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 1. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="45923" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 2" type="EtcItem">
-		<!-- Learn passive skill Dignity of the Exalted Lv. 2, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 2. Can be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 2, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 2. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -329,7 +329,7 @@
 		</skills>
 	</item>
 	<item id="45924" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 3" type="EtcItem">
-		<!-- Learn passive skill Dignity of the Exalted Lv. 3, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 3. Can be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 3, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 3. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1090,7 +1090,7 @@
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 	</item>
 	<item id="45986" name="Éclair Bijou of Fortune Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 4 enchanted Éclair Bijou of Fortune. -->
+		<!-- Double-click to get a + 4 enchanted ?clair Bijou of Fortune. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

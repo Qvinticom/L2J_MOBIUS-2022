@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10606" toLevel="1" name="Gust Movement">
-		<!-- For 10 sec., has a 90% of evading melee and ranged P. Skill attacks. Requires a dagger or dual dagger. -->
+		<!-- For $s1, has a $s2 of evading melee and ranged P. Skill attacks. Requires a dagger or dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
@@ -77,7 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="10608" toLevel="4" name="Superior Haste">
-		<!-- Physical skill Cooldown - 5%. Spd. + 5. -->
+		<!-- Decreases Physical Skill Cooldown by $s1 and increases Bleed attack success rate by $s2. -->
 		<icon>icon.skill10608</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -109,7 +109,7 @@
 		</effects>
 	</skill>
 	<skill id="10609" toLevel="1" name="Critical Chances">
-		<!-- Increases Critical Damage by 304, Vital Spot Attack Rate by 15%, Critical Rate/Damage from the side and from behind by 65% and 50%, respectively, for 5 minutes. Decreases Critical Damage from the front by 30%. Requires dagger/dual dagger. -->
+		<!-- Increases Critical Damage by $s2, Deadly Attack Rate by $s3, Critical Rate/Damage from the side and from behind by $s4 and $s5, respectively, for $s1. Decreases Critical Damage from the front by $s6. Requires dagger/dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -175,13 +175,12 @@
 		</effects>
 	</skill>
 	<skill id="10610" toLevel="1" name="Critical Expansions">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max P. Critical increases. Applies when a dagger or dual dagger is equipped. -->
 		<icon>icon.skill0819</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10653" toLevel="1" name="Shadow Evasion">
-		<!-- For 10 sec, has a 90% chance of reflecting physical skill damage to the attacker. Requires a dagger or dual dagger. -->
+		<!-- Becomes immune from all debuffs and evades Physical and Magic skills at a $s2 probability for $s1. Unable to cast Shadow Hide. Requires dagger/dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
@@ -256,7 +255,7 @@
 		</effects>
 	</skill>
 	<skill id="10655" toLevel="4" name="Brutal Stab Expert">
-		<!-- Critical Damage + 5%, Speed + 2. -->
+		<!-- Increases Attack by $s1 and Critical Damage by $s2. -->
 		<icon>icon.skill10655</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -287,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="10656" toLevel="1" name="Shadow Hunter">
-		<!-- Increases Critical Damage by 608, Vital Spot Attack Rate by 5%, Critical Rate/Damage from the side by 30%, Critical Rate from behind by 50% and Critical Damage from behind by 65% for 5 minutes. Decreases Critical Damage from the front by 30%. Requires dagger/dual dagger. -->
+		<!-- Increases Critical Damage by $s2, Deadly Attack Rate by $s3, Critical Rate/Damage from the side by $s4, Critical Rate from behind by $s5 and Critical Damage by $s6 for $s1. Decreases Critical Damage from the front by $s7. Requires dagger/dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>

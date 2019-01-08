@@ -143,7 +143,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21307" name="Enchant Scroll of Fortune Treasure Sack" type="EtcItem">
-		<!-- When you open the treasure sack, you can obtain 1 C-grade ~S regular or blessed weapon/armor enchant scroll. -->
+		<!-- When you open the treasure sack, you can obtain 1 C-grade ~S regular or blessed weapon/ armor enchant scroll. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -164,7 +164,7 @@
 		</skills>
 	</item>
 	<item id="21308" name="Enchant Scroll of Fortune Treasure Sack" additionalName="Event" type="EtcItem">
-		<!-- When you open the treasure sack, you can obtain 1 C-grade ~S regular or blessed weapon/armor enchant scroll. -->
+		<!-- When you open the treasure sack, you can obtain 1 C-grade ~S regular or blessed weapon/ armor enchant scroll. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -477,7 +477,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21323" name="Buff Pouch" type="EtcItem">
-		<!-- When you open the pouch, you can obtain 1 of the following: cookie (Gludio, Dion, Aden, Giran, Rune), super healthy juice (HP, CP), sweet/fresh fruit cocktail, or fresh milk. -->
+		<!-- When you open the pouch, you can obtain 1 of the following: cookie (Gludio, Dion, Aden, Giran, Rune), super healthy juice (HP, CP), sweet/ fresh fruit cocktail, or fresh milk. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -498,7 +498,7 @@
 		</skills>
 	</item>
 	<item id="21324" name="Buff Pouch" additionalName="Event" type="EtcItem">
-		<!-- When you open the pouch, you can obtain 1 of the following: cookie (Gludio, Dion, Aden, Giran, Rune), super healthy juice (HP, CP), sweet/fresh fruit cocktail, or fresh milk. -->
+		<!-- When you open the pouch, you can obtain 1 of the following: cookie (Gludio, Dion, Aden, Giran, Rune), super healthy juice (HP, CP), sweet/ fresh fruit cocktail, or fresh milk. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -1734,7 +1734,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21379" name="Mount - Darkmane Pacer" additionalName="7-day" type="Armor">
-		<!-- Allows you to mount a Darkmane Pacer when equipped. 7-day. -->
+		<!-- Can mount a Darkmane Pacer when equipped. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

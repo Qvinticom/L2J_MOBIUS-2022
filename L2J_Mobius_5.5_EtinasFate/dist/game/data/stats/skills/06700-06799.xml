@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -18,7 +18,7 @@
 		</conditions>
 	</skill>
 	<skill id="6701" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -35,7 +35,6 @@
 		</conditions>
 	</skill>
 	<skill id="6702" toLevel="1" name="Blessing of Cheers">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -60,7 +59,6 @@
 		</effects>
 	</skill>
 	<skill id="6703" toLevel="1" name="Blessing of Cheers">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -84,7 +82,6 @@
 		</effects>
 	</skill>
 	<skill id="6704" toLevel="1" name="Blessing of Cheers">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -108,7 +105,7 @@
 		</effects>
 	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Temporarily in shock and unable to move. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -135,7 +132,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6706" toLevel="1" name="Piercing Attack">
-		<!-- High Five Skill -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -165,7 +161,6 @@
 		</effects>
 	</skill>
 	<skill id="6707" toLevel="1" name="Self-destruction">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
@@ -180,7 +175,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6708" toLevel="1" name="Self-destruction">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-1000</effectPoint>
 		<rideState>NONE</rideState>
@@ -194,7 +188,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6709" toLevel="1" name="Multi Shot">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
@@ -228,7 +221,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6711" toLevel="3" name="Etis Power Up">
-		<!-- none -->
 		<abnormalTime>30</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>1000</effectPoint>
@@ -249,7 +241,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6714" toLevel="1" name="Wind Walk of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Speed by 33 for 10 min. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -275,7 +267,7 @@
 		</effects>
 	</skill>
 	<skill id="6715" toLevel="1" name="Haste of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Atk. Spd. by 33% for 10 min. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -301,7 +293,7 @@
 		</effects>
 	</skill>
 	<skill id="6716" toLevel="1" name="Might of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases P. Atk. by 15% for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -327,7 +319,7 @@
 		</effects>
 	</skill>
 	<skill id="6717" toLevel="1" name="Berserker Spirit of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., reduces party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -381,7 +373,7 @@
 		</effects>
 	</skill>
 	<skill id="6718" toLevel="1" name="Death Whisper of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Critical Damage by 35% for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -407,7 +399,7 @@
 		</effects>
 	</skill>
 	<skill id="6719" toLevel="1" name="Guidance of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Accuracy by 4 for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -433,7 +425,7 @@
 		</effects>
 	</skill>
 	<skill id="6720" toLevel="1" name="Focus of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases critical attack rate by 30% for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -459,7 +451,7 @@
 		</effects>
 	</skill>
 	<skill id="6721" toLevel="1" name="Empower of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases M. Atk. by 75% for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -485,7 +477,7 @@
 		</effects>
 	</skill>
 	<skill id="6722" toLevel="1" name="Acumen of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Casting Spd. by 30% for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -511,7 +503,7 @@
 		</effects>
 	</skill>
 	<skill id="6723" toLevel="1" name="Concentration of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Decreases magic cancel rate by 53 for 20 min. -->
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
@@ -537,7 +529,7 @@
 		</effects>
 	</skill>
 	<skill id="6724" toLevel="1" name="Greater Heal of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Recovers the target's HP by 450 power and recovers 30 HP per second for 15 sec. -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
@@ -568,7 +560,7 @@
 		</effects>
 	</skill>
 	<skill id="6725" toLevel="1" name="Blessed Blood of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 15 sec., bestows the blessing of blood upon party members. Recovers HP by a certain rate when being attacked. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLESS_THE_BLOOD</abnormalType>
@@ -597,13 +589,12 @@
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>60</minDamage>
-				<skillId>6726</skillId>
+				<skillId>6726</skillId> <!-- Blessed Blood -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6726" toLevel="1" name="Blessed Blood">
-		<!-- Glory Days Confirmed -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -624,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="6727" toLevel="1" name="Vampiric Rage of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -650,7 +641,7 @@
 		</effects>
 	</skill>
 	<skill id="6728" toLevel="1" name="Recharge of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Recovers MP up to 136 power depending on the target's Lv. -->
 		<castRange>400</castRange>
 		<effectPoint>655</effectPoint>
 		<effectRange>900</effectRange>
@@ -671,7 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="6729" toLevel="1" name="Holy Attack Resistance of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Holy Attack Resistance by 30 for 10 min. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
@@ -698,7 +689,7 @@
 		</effects>
 	</skill>
 	<skill id="6730" toLevel="1" name="Greater Battle Heal of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Quickly recovers the target's HP by 858 power. -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>600</castRange>
 		<effectPoint>468</effectPoint>
@@ -720,7 +711,6 @@
 		</effects>
 	</skill>
 	<skill id="6731" toLevel="1" name="Etis Shadow">
-		<!-- none -->
 		<operateType>A2</operateType>
 		<effectPoint>1000</effectPoint>
 		<abnormalType>STEALTH</abnormalType>
@@ -746,8 +736,6 @@
 		</conditions>
 	</skill>
 	<skill id="6732" toLevel="1" name="Mirage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>2000</affectRange>
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -763,7 +751,7 @@
 		</effects>
 	</skill>
 	<skill id="6733" toLevel="1" name="Antharas' Stigma">
-		<!-- "Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP." -->
+		<!-- Antharas' stigma. After 10 sec., spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP. -->
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>TIME_BOMB</abnormalType>
@@ -785,7 +773,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6734" toLevel="1" name="Energy of Destruction">
-		<!-- "For 5 seconds, inflicted with poison with 800 HP decrease per second." -->
+		<!-- For 5 sec., inflicted with poison with 800 HP decrease per sec. -->
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -808,7 +796,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6735" toLevel="1" name="Petrify">
-		<!-- "Inflicted with petrification, the body is rigid like stone." -->
+		<!-- Petrified and unable to move temporarily. -->
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -829,8 +817,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6736" toLevel="1" name="Fierce Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>2000</castRange>
 		<effectRange>2000</effectRange>
 		<hitTime>4000</hitTime>
@@ -853,8 +839,6 @@
 		</effects>
 	</skill>
 	<skill id="6737" toLevel="1" name="Heal">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>2000</affectRange>
 		<hitTime>90000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -876,7 +860,7 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Temporarily inflicted with hold and unable to move. -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -900,7 +884,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6739" toLevel="1" name="Presentation - Behemoth Leader Casting Preparation">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<rideState>NONE</rideState>
@@ -911,7 +894,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6740" toLevel="1" name="Presentation - Behemoth Leader Casting">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<rideState>NONE</rideState>
@@ -923,7 +905,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6741" toLevel="1" name="Presentation - Behemoth Leader Casting Failure">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<rideState>NONE</rideState>
@@ -935,7 +916,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6742" toLevel="1" name="Presentation - Behemoth Object Channeling">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>CA1</operateType>
 		<effectPoint>100</effectPoint>
@@ -952,8 +932,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Dark attribute is weakened -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1019,7 +998,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6745" toLevel="1" name="Dark Space">
-		<!-- none -->
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
@@ -1044,7 +1022,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="6746" toLevel="1" name="Dark Space">
-		<!-- Darkness attribute is weakened. -->
+		<!-- Dark attribute is weakened. -->
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
@@ -1070,7 +1048,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6747" toLevel="1" name="Dark Blade">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-10000</effectPoint>
 		<rideState>NONE</rideState>
@@ -1087,8 +1064,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6748" toLevel="1" name="Stun Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts Stun for 5 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1122,8 +1098,6 @@
 		</effects>
 	</skill>
 	<skill id="6749" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1146,8 +1120,6 @@
 		</effects>
 	</skill>
 	<skill id="6750" toLevel="1" name="Power Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1171,7 +1143,6 @@
 		</effects>
 	</skill>
 	<skill id="6751" toLevel="1" name="Blow Attack">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-1000</effectPoint>
 		<rideState>NONE</rideState>
@@ -1190,8 +1161,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6752" toLevel="1" name="Revival">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalTime>60</abnormalTime>
 		<effectPoint>562</effectPoint>
 		<hitTime>2000</hitTime>
@@ -1217,8 +1186,6 @@
 		</effects>
 	</skill>
 	<skill id="6753" toLevel="1" name="Death Blow">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-337</effectPoint>
 		<effectRange>300</effectRange>
@@ -1243,8 +1210,7 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicted with bleed and 200 HP decreases every sec. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1278,8 +1244,6 @@
 		</effects>
 	</skill>
 	<skill id="6755" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1302,8 +1266,6 @@
 		</effects>
 	</skill>
 	<skill id="6756" toLevel="1" name="Death Talon">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-10000</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -1326,8 +1288,7 @@
 		</effects>
 	</skill>
 	<skill id="6757" toLevel="1" name="Decrease Speed">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Decreases the enemy's Speed by 30% for 15 sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1359,8 +1320,6 @@
 		</effects>
 	</skill>
 	<skill id="6758" toLevel="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1400,7 +1359,6 @@
 		</effects>
 	</skill>
 	<skill id="6759" toLevel="1" name="Death Shot">
-		<!-- none -->
 		<effectPoint>-897</effectPoint>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1416,8 +1374,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6760" toLevel="1" name="Dragon Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1441,8 +1397,6 @@
 		</effects>
 	</skill>
 	<skill id="6761" toLevel="1" name="Dragon Blow Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-1000</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1466,8 +1420,6 @@
 		</effects>
 	</skill>
 	<skill id="6762" toLevel="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -1505,8 +1457,6 @@
 		</effects>
 	</skill>
 	<skill id="6763" toLevel="1" name="Dragon Earth Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1530,8 +1480,6 @@
 		</effects>
 	</skill>
 	<skill id="6764" toLevel="1" name="Dragon Earth Shot">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1554,8 +1502,6 @@
 		</effects>
 	</skill>
 	<skill id="6765" toLevel="1" name="Full Recovery">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<effectPoint>562</effectPoint>
 		<hitTime>2500</hitTime>
 		<magicLvl>85</magicLvl>
@@ -1574,8 +1520,6 @@
 		</effects>
 	</skill>
 	<skill id="6766" toLevel="1" name="Earth Tremor">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>900</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1598,7 +1542,6 @@
 		</effects>
 	</skill>
 	<skill id="6767" toLevel="1" name="Earthquake">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>-10000</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1614,8 +1557,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6768" toLevel="1" name="Stun Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts Stun for 5 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1649,8 +1591,7 @@
 		</effects>
 	</skill>
 	<skill id="6769" toLevel="1" name="Petrify">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Petrified and unable to move temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -1682,8 +1623,6 @@
 		</effects>
 	</skill>
 	<skill id="6770" toLevel="1" name="Heal">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<affectRange>900</affectRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1705,8 +1644,6 @@
 		</effects>
 	</skill>
 	<skill id="6771" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1729,8 +1666,6 @@
 		</effects>
 	</skill>
 	<skill id="6772" toLevel="1" name="Power Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1754,8 +1689,6 @@
 		</effects>
 	</skill>
 	<skill id="6773" toLevel="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1795,8 +1728,7 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Stun Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts Stun for 10 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1830,8 +1762,6 @@
 		</effects>
 	</skill>
 	<skill id="6775" toLevel="1" name="Soul Breath">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-1000</effectPoint>
 		<effectRange>200</effectRange>
@@ -1857,8 +1787,7 @@
 		</effects>
 	</skill>
 	<skill id="6776" toLevel="1" name="Paralysis">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Causes the enemy's body to go completely rigid for 10 sec. and causes paralysis for 10 sec. -->
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -1900,13 +1829,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6779</skillId>
+				<skillId>6779</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- High Five Skill -->
+		<!-- For 20 sec., slows down Speed and inflicts bleed so that 200 HP is decreased every sec. Inflicted with paralysis for 10 sec. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1945,8 +1874,6 @@
 		</effects>
 	</skill>
 	<skill id="6778" toLevel="1" name="Devil Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1969,8 +1896,7 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Body is rigid and paralyzed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->
 		<abnormalType>PARALYZE</abnormalType>
@@ -1993,7 +1919,6 @@
 		</effects>
 	</skill>
 	<skill id="6780" toLevel="1" name="Presentation - Portal Ray Combined Light Maintenance">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2004,7 +1929,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6781" toLevel="1" name="Presentation - Red Portal Ray">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2015,7 +1939,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6782" toLevel="1" name="Presentation - Blue Portal Ray">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2026,7 +1949,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6783" toLevel="1" name="Presentation - Portal 2_boom_up">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2037,7 +1959,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6784" toLevel="1" name="Presentation - Eris' Suffering">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2049,7 +1970,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6785" toLevel="1" name="Presentation - Dialogue with Etis 1">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2061,7 +1981,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6786" toLevel="1" name="Presentation - Etis Transformation Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2072,7 +1991,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6787" toLevel="1" name="Presentation - Etis Pre-Transformation">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2084,7 +2002,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6788" toLevel="1" name="Presentation - Etis Post-Transformation">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2096,7 +2013,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6789" toLevel="1" name="Presentation - Etis' Defeat">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2108,7 +2024,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6790" toLevel="1" name="Presentation - Etis Kneeling">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2120,7 +2035,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6791" toLevel="1" name="Presentation - Dialogue with Elcadia 1">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2132,7 +2046,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6792" toLevel="1" name="Presentation - Dialogue with Elcadia 2">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2144,7 +2057,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6793" toLevel="1" name="Presentation - Dialogue with Elcadia 3">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2156,7 +2068,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6794" toLevel="1" name="Presentation - Elcadia Casting 1">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2168,7 +2079,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6795" toLevel="1" name="Presentation - Elcadia Casting 2">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2180,7 +2090,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6796" toLevel="1" name="Presentation - Meteor Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2191,7 +2100,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6797" toLevel="1" name="Presentation - Eris Scatter Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2202,7 +2110,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6798" toLevel="1" name="Presentation - Etis Summon Effect">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2213,7 +2120,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6799" toLevel="1" name="Presentation - Portal 2_boom_down">
-		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>

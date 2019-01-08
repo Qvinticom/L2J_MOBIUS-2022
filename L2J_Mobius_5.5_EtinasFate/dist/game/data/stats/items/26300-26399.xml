@@ -57,7 +57,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="26304" name="Campfire Flint" type="EtcItem">
-		<!-- You can start a campfire by using this flint. The warmth of the bonfire will decrease Skill Cooldown by 10%, increase PVE Damage by 10%, and bestow the Vampirig Rage effect. It will be effective only when the fire is started at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
+		<!-- You can start a campfire by using this flint. For 10 min. for you and your party members: Skill Cooldown -10%, PvE Damage +10%, Vampiric Rage effect 5%. It will be effective only when the fire is started at a certain distance away from the village. Cannot be stacked with the Christmas Tree effect. Can be stacked with the Warmth of Kotatsu effect. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="price" val="1" />
 		<set name="is_commissionable" val="false" />
@@ -66,7 +66,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26305" name="Kotatsu" type="EtcItem">
-		<!-- Increases Speed by 20, and reduces Skill MP Consumption by 20% and PvE Damage by 10%. It will be effective only when summoned at a certain distance away from the village. It lasts 10 minutes. Does not stack with the Christmas Tree effect. -->
+		<!-- For 10 min. for you and your party members: Speed +20, Skill MP Consumption -20%, received PvE Damage -10%. It will be effective only when summoned at a certain distance away from the village. Can be stacked with the Campfire's Warmth effect. -->
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
@@ -200,7 +200,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26319" name="Venir's Talisman Stage 1 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 1. -->
+		<!-- Double-click to obtain 10 Venir's Talismans Stage 1. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -208,7 +208,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26320" name="Venir's Talisman Stage 2 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 2. -->
+		<!-- Double-click to obtain 10 Venir's Talismans Stage 2. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -216,7 +216,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26321" name="Venir's Talisman Stage 3 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 8 Venir's Talismans Stage 3. -->
+		<!-- Double-click to obtain 8 Venir's Talismans Stage 3. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -224,7 +224,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26322" name="Venir's Talisman Stage 4 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 6 Venir's Talismans Stage 4. -->
+		<!-- Double-click to obtain 6 Venir's Talismans Stage 4. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -232,7 +232,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26323" name="Venir's Talisman Stage 5 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 4 Venir's Talismans Stage 5. -->
+		<!-- Double-click to obtain 4 Venir's Talismans Stage 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -240,7 +240,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26324" name="Venir's Talisman Stage 6 Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 2 Venir's Talismans Stage 6. -->
+		<!-- Double-click to obtain 2 Venir's Talismans Stage 6. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -313,7 +313,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="26332" name="Lineage II Baseball Uniform Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -335,7 +335,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26334" name="School Uniform A Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of the School Uniform A. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform A. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Changes the appearance of the entire armor into that of the School Uniform A. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the School Uniform A. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -353,7 +353,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="26336" name="School Uniform B Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of the School Uniform B. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform B. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Changes the appearance of the entire armor into that of the School Uniform B. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the School Uniform B. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -371,7 +371,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="26338" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">
-		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/ MP/ CP +510, P. Def. +971, M. Def. +552, P. Evasion/ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +15%, M. Atk. +15%, Skill Power +15%, Skill Critical Rate +15%. Duration 1 min. Cooldown 10 min.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -384,7 +384,7 @@
 		</skills>
 	</item>
 	<item id="26339" name="Talisman - Abundance Lv. 2 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/ MP/ CP +531, P. Def. +1051, M. Def. +609, P. Evasion/ M. Evasion +8, Attribute Resistance +17, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +16%, M. Atk. +16%, Skill Power +16%, Skill Critical Rate +16%. Duration 1 min. Cooldown 10 min.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="26340" name="Talisman - Abundance Lv. 3 (High-grade)" type="Armor">
-		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Max HP/ MP/ CP +563, P. Def. +1184, M. Def. +706, P. Evasion/ M. Evasion +9, Attribute Resistance +20, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +17%, M. Atk. +17%, Skill Power +17%, Skill Critical Rate +17%. Duration 1 min. Cooldown 10 min.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -410,7 +410,7 @@
 		</skills>
 	</item>
 	<item id="26341" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25,  Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/ MP/ CP +591, P. Def. +1307, M. Def. +799, P. Evasion/ M. Evasion +10, Attribute Resistance +25, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +20%, M. Atk. +20%, Skill Power +20%, Skill Critical Rate +20%. Duration 1 min. Cooldown 10 min.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="26350" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. + 5 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -523,7 +523,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- When enchanted, P. Def. +1 for armor and accessories (A-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -538,7 +538,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26352" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. + 6 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -553,7 +553,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26353" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (S-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -600,7 +600,7 @@
 		<set name="weight" val="1000" />
 	</item>
 	<item id="26357" name="Pirate Captain Appeareance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -611,7 +611,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26358" name="Pirate Crew Appeareance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1108,7 +1108,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
+		<!-- Double-click to obtain a Rune of Feather (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />

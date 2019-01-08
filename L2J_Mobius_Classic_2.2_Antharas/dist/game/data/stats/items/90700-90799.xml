@@ -706,7 +706,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90774" name="Fire Dragon Pendant +3" additionalName="7-day" type="Armor">
-		<!-- M. Def. + 13. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- M. Def. +13. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -722,7 +722,7 @@
 		</stats>
 	</item>
 	<item id="90775" name="Talisman of Border - Lv. 3" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./M. Def. +17, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, P./M. Atk. Spd. +15, XP and SP gain +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./M. Def. +17, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, P./M. Atk. Spd. +15, XP and SP gain +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		</stats>
 	</item>
 	<item id="90777" name="Talisman of Border - Lv. 4" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./M. Def. +19, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, Atk. Spd./Casting Spd. +17, XP and SP gain +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./M. Def. +19, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, Atk. Spd./Casting Spd. +17, XP and SP gain +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -778,7 +778,7 @@
 		</stats>
 	</item>
 	<item id="90779" name="Talisman of Border - Lv. 5" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./M. Def. +22, P./M. Skills Evasion +1, HP/MP/CP +120, Speed +5, Atk. Spd./Casting Spd. +10, XP and SP gain +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./M. Def. +22, P./M. Skills Evasion +1, HP/MP/CP +120, Speed +5, Atk. Spd./Casting Spd. +10, XP and SP gain +4%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -806,7 +806,7 @@
 		</stats>
 	</item>
 	<item id="90781" name="Talisman of Border - Lv. 6" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./M. Def. +24, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +5, P./M. Atk. Spd. +15, XP and SP gain +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
+		<!-- A 7-day item. P./M. Def. +24, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +5, P./M. Atk. Spd. +15, XP and SP gain +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -834,7 +834,7 @@
 		</stats>
 	</item>
 	<item id="90783" name="Talisman of Border - Lv. 7" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./M. Def. +29, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Border Power - Lv. 1 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./M. Def. +29, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Border Power - Lv. 1 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -902,7 +902,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="90788" name="Fire Dragon Belt" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/MP/CP +10%, Inventory Slots +6, Weight Gauge +7000, M. Critical Damage +4%, Healing Potions Effect +100, Incoming Damage -6%. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/MP/CP +10%, M. Critical Damage +4%, Healing Potions Effect +100. (Can be applied to Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_vallakas_belt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -919,7 +919,7 @@
 		</stats>
 	</item>
 	<item id="90789" name="Garnet - Lv. 4" additionalName="15-day" type="Armor">
-		<!-- 15-day item. Stun / Pulling / Silence / Petrification / Fear Resistance +11%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- 15-day item. Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +11%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -949,7 +949,7 @@
 		</stats>
 	</item>
 	<item id="90791" name="Talisman of Border - Lv. 8" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. P./M. Def. +34, P./M. Skills Evasion +2, HP/MP/CP +200, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. P./M. Def. +34, P./M. Skills Evasion +2, HP/MP/CP +200, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />

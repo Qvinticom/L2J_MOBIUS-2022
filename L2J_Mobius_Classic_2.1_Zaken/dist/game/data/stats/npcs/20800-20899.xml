@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20800" level="47" type="L2Monster" name="Eva's Watchman">
 		<parameters>
@@ -55,7 +55,7 @@
 				<item id="355" min="1" max="1" chance="0.008" /> <!-- Dwarven Chain Mail Shirt -->
 				<item id="1968" min="1" max="1" chance="0.532" /> <!-- Dwarven Chain Mail Shirt Material -->
 				<item id="382" min="1" max="1" chance="0.014" /> <!-- Dwarven Chain Gaiters -->
-				<item id="1969" min="1" max="1" chance="0.843" /> <!-- Dwarven Chain Gaiters Material -->
+				<item id="1969" min="1" max="1" chance="0.843" /> <!-- Dwarven Chain Gaiter Material -->
 				<item id="1872" min="1" max="1" chance="10.575" /> <!-- Animal Bone -->
 				<item id="1867" min="1" max="1" chance="10.575" /> <!-- Animal Skin -->
 				<item id="1881" min="1" max="1" chance="1.05" /> <!-- Coarse Bone Powder -->
@@ -66,7 +66,7 @@
 			</drop>
 			<spoil>
 				<item id="2223" min="1" max="1" chance="7.6282" /> <!-- Recipe: Tower Shield -->
-				<item id="1966" min="1" max="1" chance="7.1854" /> <!-- Plated Leather Fragment -->
+				<item id="1966" min="1" max="1" chance="7.1854" /> <!-- Plated Leather Armor Fragment -->
 				<item id="1911" min="1" max="1" chance="14.6379" /> <!-- Earring of Protection Gemstone -->
 			</spoil>
 		</dropLists>
@@ -130,21 +130,21 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="939" max="1909" chance="70" /> <!-- Adena -->
-				<item id="4233" min="1" max="1" chance="0.005" /> <!-- Knuckle Duster -->
+				<item id="4233" min="1" max="1" chance="0.005" /> <!-- Fist -->
 				<item id="4438" min="1" max="1" chance="0.394" /> <!-- Knuckle Duster Edge -->
 				<item id="1873" min="1" max="1" chance="3.024" /> <!-- Silver Nugget -->
 				<item id="1868" min="1" max="1" chance="15.18" /> <!-- Thread -->
 				<item id="1876" min="1" max="1" chance="1.517" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="2.16" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.124" /> <!-- Enria -->
-				<item id="2347" min="1" max="1" chance="0.016" /> <!-- Recipe: Akat Long Bow -->
+				<item id="2347" min="1" max="1" chance="0.016" /> <!-- Recipe: Akat Longbow -->
 				<item id="2351" min="1" max="1" chance="0.0135" /> <!-- Recipe: Scorpion -->
-				<item id="3010" min="1" max="1" chance="0.205" /> <!-- Recipe: Composite Helmet -->
+				<item id="3010" min="1" max="1" chance="0.205" /> <!-- Recipe: Compound Helmet -->
 			</drop>
 			<spoil>
-				<item id="2946" min="1" max="1" chance="13.2781" /> <!-- Plate Leather Gloves Design -->
-				<item id="2330" min="1" max="1" chance="0.5524" /> <!-- Recipe: Homunkulus's Sword -->
-				<item id="951" min="1" max="1" chance="0.4319" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="2946" min="1" max="1" chance="13.2781" /> <!-- Plated Leather Glove Design -->
+				<item id="2330" min="1" max="1" chance="0.5524" /> <!-- Recipe: Homunkulus' Sword -->
+				<item id="951" min="1" max="1" chance="0.4319" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2215,27 +2215,27 @@
 			<drop>
 				<item id="57" min="430" max="872" chance="70" /> <!-- Adena -->
 				<item id="1125" min="1" max="1" chance="0.011" /> <!-- Assault Boots -->
-				<item id="1957" min="1" max="1" chance="0.448" /> <!-- Assault Boots Part -->
+				<item id="1957" min="1" max="1" chance="0.448" /> <!-- Assault Boot Fragment -->
 				<item id="2427" min="1" max="1" chance="0.011" /> <!-- Salamander Skin Boots -->
 				<item id="2931" min="1" max="1" chance="0.448" /> <!-- Salamander Skin Boot Lining -->
 				<item id="2428" min="1" max="1" chance="0.011" /> <!-- Plate Boots -->
-				<item id="2932" min="1" max="1" chance="0.448" /> <!-- Plate Boots Design -->
-				<item id="61" min="1" max="1" chance="0.011" /> <!-- Mithril Plate Gloves -->
-				<item id="1949" min="1" max="1" chance="0.448" /> <!-- Mithril Gloves Design -->
+				<item id="2932" min="1" max="1" chance="0.448" /> <!-- Plate Boot Design -->
+				<item id="61" min="1" max="1" chance="0.011" /> <!-- Mithril Gloves -->
+				<item id="1949" min="1" max="1" chance="0.448" /> <!-- Mithril Glove Design -->
 				<item id="607" min="1" max="1" chance="0.011" /> <!-- Ogre Power Gauntlets -->
-				<item id="1963" min="1" max="1" chance="0.448" /> <!-- Ogre Power Gauntlets Part -->
+				<item id="1963" min="1" max="1" chance="0.448" /> <!-- Ogre Power Gauntlet Fragment -->
 				<item id="2451" min="1" max="1" chance="0.011" /> <!-- Sage's Worn Gloves -->
-				<item id="2933" min="1" max="1" chance="0.448" /> <!-- Sage's Worn Gloves Lining -->
+				<item id="2933" min="1" max="1" chance="0.448" /> <!-- Sage's Worn Glove Lining -->
 				<item id="1865" min="1" max="1" chance="7.848" /> <!-- Varnish -->
 				<item id="1870" min="1" max="1" chance="7.848" /> <!-- Coal -->
 				<item id="1879" min="1" max="1" chance="1.31" /> <!-- Cokes -->
 				<item id="1875" min="1" max="1" chance="0.522" /> <!-- Stone of Purity -->
 				<item id="2162" min="1" max="1" chance="0.379" /> <!-- Recipe: Aquastone Necklace -->
-				<item id="5159" min="1" max="1" chance="0.025" /> <!-- Recipe: Spiritshot (C) Compressed Package (100%) -->
+				<item id="5159" min="1" max="1" chance="0.025" /> <!-- Recipe: Spiritshot Compressed Package (C-grade) -->
 				<item id="2312" min="1" max="1" chance="0.03" /> <!-- Recipe: Crystallized Ice Bow -->
 			</drop>
 			<spoil>
-				<item id="5231" min="1" max="1" chance="7.7593" /> <!-- Recipe: Metal Hardener (100%) -->
+				<item id="5231" min="1" max="1" chance="7.7593" /> <!-- Recipe: Metal Hardener -->
 				<item id="1902" min="1" max="1" chance="11.0061" /> <!-- Elven Earring Beads -->
 				<item id="1825" min="1" max="1" chance="7.7593" /> <!-- Recipe: Oriharukon -->
 			</spoil>
@@ -2313,7 +2313,7 @@
 			<spoil>
 				<item id="1874" min="1" max="1" chance="8.0465" /> <!-- Oriharukon Ore -->
 				<item id="1875" min="1" max="1" chance="8.0465" /> <!-- Stone of Purity -->
-				<item id="1905" min="1" max="1" chance="11.741" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="1905" min="1" max="1" chance="11.741" /> <!-- Onyx Beast's Eye Earring Gemstone -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2374,19 +2374,19 @@
 				<item id="353" min="1" max="1" chance="0.015" /> <!-- Half Plate Armor -->
 				<item id="1950" min="1" max="1" chance="0.76" /> <!-- Half Plate Temper -->
 				<item id="380" min="1" max="1" chance="0.025" /> <!-- Plate Gaiters -->
-				<item id="1951" min="1" max="1" chance="1.18" /> <!-- Plate Gaiters Part -->
+				<item id="1951" min="1" max="1" chance="1.18" /> <!-- Plate Gaiter Fragment -->
 				<item id="1864" min="1" max="3" chance="10.92" /> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="11.27" /> <!-- Iron Ore -->
-				<item id="1878" min="1" max="1" chance="4.485" /> <!-- Braided Hemp -->
+				<item id="1878" min="1" max="1" chance="4.485" /> <!-- Durable Braid -->
 				<item id="1884" min="1" max="1" chance="6.93" /> <!-- Cord -->
 				<item id="2306" min="1" max="1" chance="0.046" /> <!-- Recipe: Stick of Faith -->
-				<item id="5274" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot (C) Compressed Package(100%) -->
+				<item id="5274" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
 				<item id="2996" min="1" max="1" chance="0.893" /> <!-- Recipe: Chain Gloves -->
 			</drop>
 			<spoil>
-				<item id="1878" min="1" max="1" chance="71.4983" /> <!-- Braided Hemp -->
-				<item id="1885" min="1" max="1" chance="14.8955" /> <!-- High-Grade Suede -->
-				<item id="1805" min="1" max="1" chance="0.5958" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="1878" min="1" max="1" chance="71.4983" /> <!-- Durable Braid -->
+				<item id="1885" min="1" max="1" chance="14.8955" /> <!-- High-grade Suede -->
+				<item id="1805" min="1" max="1" chance="0.5958" /> <!-- Recipe: Soulshot (C-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2459,8 +2459,8 @@
 				<item id="3000" min="1" max="1" chance="0.221" /> <!-- Recipe: Dwarven Chain Shield -->
 				<item id="2303" min="1" max="1" chance="0.015" /> <!-- Recipe: Skull Graver -->
 				<item id="2990" min="1" max="1" chance="0.273" /> <!-- Recipe: Chain Boots -->
-				<item id="3033" min="1" max="1" chance="0.013" /> <!-- Recipe: Spiritshot C -->
-				<item id="3954" min="1" max="1" chance="0.11" /> <!-- Recipe: Blessed Spiritshot C -->
+				<item id="3033" min="1" max="1" chance="0.013" /> <!-- Recipe: Spiritshot (C-grade) -->
+				<item id="3954" min="1" max="1" chance="0.11" /> <!-- Recipe: Blessed Spiritshot (C-grade) -->
 			</drop>
 			<spoil>
 				<item id="1871" min="1" max="3" chance="49.5145" /> <!-- Charcoal -->
@@ -2605,23 +2605,23 @@
 			<drop>
 				<item id="57" min="811" max="1647" chance="70" /> <!-- Adena -->
 				<item id="62" min="1" max="1" chance="0.01" /> <!-- Reinforced Mithril Boots -->
-				<item id="1958" min="1" max="1" chance="0.48" /> <!-- Reinforced Mithril Boots Design -->
+				<item id="1958" min="1" max="1" chance="0.48" /> <!-- Reinforced Mithril Boot Design -->
 				<item id="2429" min="1" max="1" chance="0.01" /> <!-- Chain Boots -->
-				<item id="2937" min="1" max="1" chance="0.48" /> <!-- Chain Boots Part -->
+				<item id="2937" min="1" max="1" chance="0.48" /> <!-- Chain Boot Fragment -->
 				<item id="2430" min="1" max="1" chance="0.01" /> <!-- Karmian Boots -->
-				<item id="2938" min="1" max="1" chance="0.48" /> <!-- Karmian Boots Fabric -->
+				<item id="2938" min="1" max="1" chance="0.48" /> <!-- Karmian Boot Fabric -->
 				<item id="2431" min="1" max="1" chance="0.01" /> <!-- Plated Leather Boots -->
-				<item id="2939" min="1" max="1" chance="0.48" /> <!-- Plate Leather Boots Lining -->
+				<item id="2939" min="1" max="1" chance="0.48" /> <!-- Plated Leather Boot Lining -->
 				<item id="2432" min="1" max="1" chance="0.01" /> <!-- Dwarven Chain Boots -->
-				<item id="2940" min="1" max="1" chance="0.48" /> <!-- Dwarven Chain Boots Part -->
+				<item id="2940" min="1" max="1" chance="0.48" /> <!-- Dwarven Chain Boot Fragment -->
 				<item id="2433" min="1" max="1" chance="0.01" /> <!-- Boots of Seal -->
 				<item id="2941" min="1" max="1" chance="0.48" /> <!-- Boots of Seal Pattern -->
 				<item id="2452" min="1" max="1" chance="0.01" /> <!-- Reinforced Mithril Gloves -->
-				<item id="2942" min="1" max="1" chance="0.48" /> <!-- Reinforced Mithril Gloves Design -->
+				<item id="2942" min="1" max="1" chance="0.48" /> <!-- Reinforced Mithril Glove Design -->
 				<item id="2453" min="1" max="1" chance="0.01" /> <!-- Chain Gloves -->
-				<item id="2943" min="1" max="1" chance="0.48" /> <!-- Chain Gloves Design -->
+				<item id="2943" min="1" max="1" chance="0.48" /> <!-- Chain Glove Design -->
 				<item id="2454" min="1" max="1" chance="0.01" /> <!-- Karmian Gloves -->
-				<item id="2944" min="1" max="1" chance="0.48" /> <!-- Karmian Gloves Fabric -->
+				<item id="2944" min="1" max="1" chance="0.48" /> <!-- Karmian Glove Fabric -->
 				<item id="1873" min="1" max="1" chance="3.542" /> <!-- Silver Nugget -->
 				<item id="1868" min="1" max="1" chance="17.72" /> <!-- Thread -->
 				<item id="1876" min="1" max="1" chance="1.771" /> <!-- Mithril Ore -->
@@ -2632,7 +2632,7 @@
 			</drop>
 			<spoil>
 				<item id="2214" min="1" max="1" chance="5.0878" /> <!-- Recipe: Dwarven Chain Gaiters -->
-				<item id="1960" min="1" max="1" chance="11.235" /> <!-- Chain Gaiters Part -->
+				<item id="1960" min="1" max="1" chance="11.235" /> <!-- Chain Gaiter Fragment -->
 				<item id="1895" min="1" max="1" chance="58.5827" /> <!-- Metallic Fiber -->
 			</spoil>
 		</dropLists>
@@ -2700,7 +2700,7 @@
 				<item id="1866" min="1" max="1" chance="6.06" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="9.1" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="2.092" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="0.364" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.364" /> <!-- High-grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.0789" /> <!-- Mold Hardener -->
 				<item id="3004" min="1" max="1" chance="0.563" /> <!-- Recipe: Rind Leather Gloves -->
 			</drop>
@@ -2934,20 +2934,20 @@
 			<drop>
 				<item id="57" min="482" max="980" chance="70" /> <!-- Adena -->
 				<item id="282" min="1" max="1" chance="0.0012" /> <!-- Elemental Bow -->
-				<item id="2085" min="1" max="1" chance="0.986" /> <!-- Crossbow Shaft -->
+				<item id="2085" min="1" max="1" chance="0.986" /> <!-- Elemental Crossbow Shaft -->
 				<item id="285" min="1" max="1" chance="0.0012" /> <!-- Noble Elven Bow -->
 				<item id="2086" min="1" max="1" chance="0.986" /> <!-- Noble Elven Bow Shaft -->
 				<item id="1869" min="1" max="1" chance="4.677" /> <!-- Iron Ore -->
 				<item id="1864" min="1" max="1" chance="9.345" /> <!-- Stem -->
 				<item id="1880" min="1" max="1" chance="0.466" /> <!-- Steel -->
-				<item id="5550" min="1" max="1" chance="0.062" /> <!-- Durable Metal Plate -->
+				<item id="5550" min="1" max="1" chance="0.062" /> <!-- Reinforced Metal Plate -->
 				<item id="4043" min="1" max="1" chance="0.1545" /> <!-- Asofe -->
 				<item id="2351" min="1" max="1" chance="0.009" /> <!-- Recipe: Scorpion -->
-				<item id="952" min="1" max="1" chance="0.062" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.062" /> <!-- Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<spoil>
 				<item id="4438" min="1" max="1" chance="0.8698" /> <!-- Knuckle Duster Edge -->
-				<item id="951" min="1" max="1" chance="0.2217" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.2217" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 				<item id="1911" min="1" max="1" chance="9.0711" /> <!-- Earring of Protection Gemstone -->
 			</spoil>
 		</dropLists>
@@ -3022,11 +3022,11 @@
 				<item id="1874" min="1" max="1" chance="0.343" /> <!-- Oriharukon Ore -->
 				<item id="4043" min="1" max="1" chance="0.171" /> <!-- Asofe -->
 				<item id="4039" min="1" max="1" chance="0.171" /> <!-- Mold Glue -->
-				<item id="952" min="1" max="1" chance="0.068" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.068" /> <!-- Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<spoil>
 				<item id="2335" min="1" max="1" chance="0.2707" /> <!-- Recipe: War Axe -->
-				<item id="1976" min="1" max="1" chance="7.0772" /> <!-- Rind Leather Gaiters Material -->
+				<item id="1976" min="1" max="1" chance="7.0772" /> <!-- Rind Leather Gaiter Material -->
 				<item id="2167" min="1" max="1" chance="5.938" /> <!-- Recipe: Ring of Ages -->
 			</spoil>
 		</dropLists>
@@ -3093,7 +3093,7 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="583" max="1184" chance="70" /> <!-- Adena -->
-				<item id="283" min="1" max="1" chance="0.0019" /> <!-- Akat Long Bow -->
+				<item id="283" min="1" max="1" chance="0.0019" /> <!-- Akat Longbow -->
 				<item id="2109" min="1" max="1" chance="0.1717" /> <!-- Akat Longbow Shaft -->
 				<item id="1871" min="1" max="1" chance="0.463626138782501" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="0.309541317510605" /> <!-- Suede -->
@@ -3102,11 +3102,11 @@
 				<item id="4040" min="1" max="1" chance="0.00923594477653503" /> <!-- Mold Lubricant -->
 				<item id="2357" min="1" max="1" chance="0.000731559982299805" /> <!-- Recipe: Crystal Dagger -->
 				<item id="3014" min="1" max="1" chance="0.0128937446880341" /> <!-- Recipe: Full Plate Boots -->
-				<item id="4188" min="1" max="1" chance="0.000457224988937378" /> <!-- Recipe: Hell Knife (100%) -->
+				<item id="4188" min="1" max="1" chance="0.000457224988937378" /> <!-- Recipe: Twilight Knife -->
 			</drop>
 			<spoil>
-				<item id="4601" min="1" max="1" chance="0.3273" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-				<item id="1539" min="1" max="1" chance="32.7301" /> <!-- Greater Healing Potion -->
+				<item id="4601" min="1" max="1" chance="0.3273" /> <!-- Greater Dye of STR <STR + 3 CON - 3> - 2nd Class Transfer -->
+				<item id="1539" min="1" max="1" chance="32.7301" /> <!-- Major Healing Potion -->
 				<item id="1914" min="1" max="1" chance="8.2745" /> <!-- Earring of Seal Gemstone -->
 			</spoil>
 		</dropLists>
@@ -3182,13 +3182,13 @@
 				<item id="1881" min="1" max="1" chance="0.607" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="0.303" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.038" /> <!-- Mold Hardener -->
-				<item id="4601" min="1" max="1" chance="0.01" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
-				<item id="4609" min="1" max="1" chance="0.01" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+				<item id="4601" min="1" max="1" chance="0.01" /> <!-- Greater Dye of STR <STR + 3 CON - 3> - 2nd Class Transfer -->
+				<item id="4609" min="1" max="1" chance="0.01" /> <!-- Greater Dye of MEN <Men + 3 Int - 3> - 2nd Class Transfer -->
 				<item id="2355" min="1" max="1" chance="0.006" /> <!-- Recipe: Ghoul's Staff -->
 			</drop>
 			<spoil>
-				<item id="4603" min="1" max="1" chance="0.2922" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-				<item id="1539" min="1" max="1" chance="29.2227" /> <!-- Greater Healing Potion -->
+				<item id="4603" min="1" max="1" chance="0.2922" /> <!-- Greater Dye of CON <Con + 3 Str - 3> - 2nd Class Transfer -->
+				<item id="1539" min="1" max="1" chance="29.2227" /> <!-- Major Healing Potion -->
 				<item id="4041" min="1" max="1" chance="1.1435" /> <!-- Mold Hardener -->
 			</spoil>
 		</dropLists>
@@ -3257,13 +3257,13 @@
 				<item id="77" min="1" max="1" chance="0.0003" /> <!-- Tsurugi -->
 				<item id="75" min="1" max="1" chance="0.0003" /> <!-- Caliburs -->
 				<item id="76" min="1" max="1" chance="0.0003" /> <!-- Sword of Delusion -->
-				<item id="84" min="1" max="1" chance="0.0003" /> <!-- Homunkulus's Sword -->
+				<item id="84" min="1" max="1" chance="0.0003" /> <!-- Homunkulus' Sword -->
 				<item id="134" min="1" max="1" chance="0.0003" /> <!-- Sword of Nightmare -->
 				<item id="145" min="1" max="1" chance="0.0003" /> <!-- Sword of Whispering Death -->
 				<item id="2089" min="1" max="1" chance="0.032" /> <!-- Caliburs Edge -->
 				<item id="2090" min="1" max="1" chance="0.032" /> <!-- Delusional Blade -->
 				<item id="2091" min="1" max="1" chance="0.032" /> <!-- Tsurugi Blade -->
-				<item id="2092" min="1" max="1" chance="0.032" /> <!-- Homunkulus's Sword Blade -->
+				<item id="2092" min="1" max="1" chance="0.032" /> <!-- Homunkulus' Sword Blade -->
 				<item id="2095" min="1" max="1" chance="0.032" /> <!-- Sword of Nightmare Blade -->
 				<item id="2096" min="1" max="1" chance="0.032" /> <!-- Sword of Whispering Death Blade -->
 				<item id="1873" min="1" max="1" chance="2.108" /> <!-- Silver Nugget -->
@@ -3271,9 +3271,9 @@
 				<item id="1876" min="1" max="1" chance="1.054" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="1.513" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.088" /> <!-- Enria -->
-				<item id="4608" min="1" max="1" chance="0.011" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+				<item id="4608" min="1" max="1" chance="0.011" /> <!-- Greater Dye of INT <Int + 3 Wit - 3> - 2nd Class Transfer -->
 				<item id="3017" min="1" max="1" chance="0.146" /> <!-- Recipe: Divine Gloves -->
-				<item id="5155" min="1" max="1" chance="0.01" /> <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
+				<item id="5155" min="1" max="1" chance="0.01" /> <!-- Recipe: Soulshot Compressed Package (B-grade) -->
 				<item id="3017" min="1" max="1" chance="0.146" /> <!-- Recipe: Divine Gloves -->
 			</drop>
 			<spoil>
@@ -3574,7 +3574,7 @@
 		<dropLists> <!-- CT2.5 -->
 			<drop>
 				<item id="57" min="623" max="1246" chance="70" /> <!-- Adena -->
-				<item id="438" min="1" max="1" chance="0.021" /> <!-- Sage's Rag -->
+				<item id="438" min="1" max="1" chance="0.021" /> <!-- Sage's Rags -->
 				<item id="1953" min="1" max="1" chance="1.238" /> <!-- Sage's Rag Lining -->
 				<item id="1869" min="1" max="1" chance="8.575" /> <!-- Iron Ore -->
 				<item id="1870" min="1" max="1" chance="8.575" /> <!-- Coal -->
@@ -3585,9 +3585,9 @@
 				<item id="2205" min="1" max="1" chance="0.25" /> <!-- Recipe: Chain Gaiters -->
 			</drop>
 			<spoil>
-				<item id="4469" min="1" max="1" chance="0.8784" /> <!-- Dye of STR <Str+1 Con-1> -->
+				<item id="4469" min="1" max="1" chance="0.8784" /> <!-- Dye of STR <STR + 1 CON - 1> - 1st Class Transfer -->
 				<item id="1956" min="1" max="1" chance="17.4488" /> <!-- Square Shield Fragment -->
-				<item id="1805" min="1" max="1" chance="0.5124" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="1805" min="1" max="1" chance="0.5124" /> <!-- Recipe: Soulshot (C-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>

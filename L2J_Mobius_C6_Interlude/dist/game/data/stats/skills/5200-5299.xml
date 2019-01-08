@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" levels="3" name="Pet Recharge">
+		<!-- Regenerates MP. -->
 		<table name="#mpConsume">120 124 128</table>
 		<table name="#power">120 124 128</table>
 		<table name="#aggro">604 617 630</table>
@@ -17,6 +18,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="5201" levels="2" name="Pet Concentration">
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken taken. -->
 		<table name="#mpConsume">39 48</table>
 		<table name="#cancel">36 42</table>
 		<table name="#aggro">418 495</table>
@@ -38,6 +40,7 @@
 		</for>
 	</skill>
 	<skill id="5202" levels="12" name="NPC Ranged Stun">
+		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -57,6 +60,7 @@
 		</for>
 	</skill>
 	<skill id="5203" levels="12" name="NPC Ranged Fear">
+		<!-- Temporarily becomes overcome with fear and flees mindlessly. -->
 		<table name="#magicLvl">46 49 52 55 58 61 64 67 70 73 76 80</table>
 		<set name="magicLvl" val="#magicLvl"/>
 		<set name="power" val="50"/>
@@ -89,6 +93,7 @@
 		</for>
 	</skill>
 	<skill id="5206" levels="1" name="Decrease Speed">
+		<!-- Curse of the Pig: Instantly reduces Speed. Effect 1. -->
 		<set name="saveVs" val="DEX"/>
 		<set name="power" val="80"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -105,6 +110,7 @@
 		</for>
 	</skill>
 	<skill id="5207" levels="1" name="Decrease Atk. Spd.">
+		<!-- Curse of the Pig: Instantly reduces Atk. Spd. Effect 1. -->
 		<set name="lvlDepend" val="1"/>
 		<set name="saveVs" val="DEX"/>
 		<set name="power" val="10"/>
@@ -119,6 +125,7 @@
 		</for>
 	</skill>
 	<skill id="5208" levels="1" name="Golden Pig Wind Walk">
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -134,6 +141,7 @@
 		</for>
 	</skill>
 	<skill id="5209" levels="1" name="Golden Pig Shield">
+		<!-- Temporarily increases P. Def. Effect 3. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -149,6 +157,7 @@
 		</for>
 	</skill>
 	<skill id="5210" levels="1" name="Golden Pig Blessed Body">
+		<!-- Temporarily increases maximum HP. Effect 6. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -164,6 +173,7 @@
 		</for>
 	</skill>
 	<skill id="5211" levels="1" name="Golden Pig Vampiric Rage">
+		<!-- Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -179,6 +189,7 @@
 		</for>
 	</skill>
 	<skill id="5212" levels="1" name="Golden Pig Regeneration">
+		<!-- Temporarily increases ability to restore HP. Effect 3. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -194,6 +205,7 @@
 		</for>
 	</skill>
 	<skill id="5213" levels="1" name="Golden Pig Haste">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -209,6 +221,7 @@
 		</for>
 	</skill>
 	<skill id="5214" levels="1" name="Golden Pig Blessed Soul">
+		<!-- Temporarily increases maximum MP. Effect 6. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -224,6 +237,7 @@
 		</for>
 	</skill>
 	<skill id="5215" levels="1" name="Golden Pig Acumen">
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -239,6 +253,7 @@
 		</for>
 	</skill>
 	<skill id="5216" levels="1" name="Golden Pig Concentration">
+		<!-- Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -254,6 +269,7 @@
 		</for>
 	</skill>
 	<skill id="5217" levels="1" name="Golden Pig Empower">
+		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="1500"/>
@@ -278,6 +294,7 @@
 		<set name="effectRange" val="900"/>
 	</skill>
 	<skill id="5219" levels="1" name="Huge Pig Stun">
+		<!-- Curse of the Huge Pig: Target is temporarily stunned and immoblized. -->
 		<set name="magicLvl" val="95"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="power" val="50"/>
@@ -295,6 +312,7 @@
 		</for>
 	</skill>
 	<skill id="5220" levels="1" name="Huge Pig Fear">
+		<!-- Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly. -->
 		<set name="mpConsume" val="150"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="power" val="50"/>

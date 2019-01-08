@@ -68,7 +68,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48203" name="Noble Circlet of Authority" type="Armor">
-		<!-- Noble Circlet of Authority. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Authority. Can be augmented. -->
+		<!-- Noble Circlet of Authority.. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Authority. Can be augmented. -->
 		<set name="icon" val="icon.bm_pattack_circlet_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -156,7 +156,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48211" name="Blessed Circlet Enchant Scroll" type="EtcItem">
-		<!-- Enchant scroll for Circlets of Authority/Foresight/Grace. Can be enchanted up to +5. If enchantment fails, the circlet's enchantment level is reset. -->
+		<!-- Enchant scroll for Circlets of Authority/ Foresight/ Grace. Can be enchanted up to +5. If enchantment fails, the circlet's enchantment level is reset. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -165,14 +165,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48212" name="Noble Upgrade Stone" type="EtcItem">
-		<!-- Ingredient needed to upgrade Circlets of Authority/Foresight/Grace into Noble Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Circlets into Noble Circlets. -->
+		<!-- Ingredient needed to upgrade Circlets of Authority/ Foresight/ Grace into Noble Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Circlets into Noble Circlets. -->
 		<set name="icon" val="icon.bm_hair_acc_upgrade_1" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48213" name="Radiant Upgrade Stone" type="EtcItem">
-		<!-- Ingredient needed to upgrade Noble Circlets of Authority/Foresight/Grace into Radiant Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Noble Circlets into Radiant Circlets. -->
+		<!-- Ingredient needed to upgrade Noble Circlets of Authority/ Foresight/ Grace into Radiant Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Noble Circlets into Radiant Circlets. -->
 		<set name="icon" val="icon.bm_hair_acc_upgrade_2" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -187,7 +187,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48215" name="Circlet Spirit Stone" type="EtcItem">
-		<!-- Spirit Stone for circlets. Can only augment Noble/Radiant circlets. -->
+		<!-- Spirit Stone for circlets. Can only augment Noble/ Radiant circlets. -->
 		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
@@ -203,7 +203,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48217" name="High-grade Balthus Knight Mark" type="EtcItem">
-		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 2 hours. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/Dual Class change. To be deleted after the event ends. -->
+		<!-- Box containing Balthus Knights' supplies. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -215,7 +215,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48218" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
-		<!-- Contains 1 Veteran Duo Bracelet. -->
+		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48219" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
-		<!-- Contains 1 Returned Duo Bracelet. -->
+		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -241,6 +241,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48220" name="NoItemName" type="EtcItem">
+		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1068,7 +1069,7 @@
 		</skills>
 	</item>
 	<item id="48283" name="Stealth Detector" type="EtcItem">
-		<!-- Salvation : Use it to fire a flash bang that reveals hidden targets around you. -->
+		<!-- Use it to fire a flash bang that reveals hidden targets around you. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_clan_depositable" val="false" />
@@ -1102,7 +1103,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48285" name="Scroll PK" type="EtcItem">
-		<!-- Double-click to lower PK value by 1. -->
+		<!-- Double-click to lower PK value by 1. Your PK value has to be at least 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah is in possession. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1123,7 +1124,7 @@
 		</skills>
 	</item>
 	<item id="48286" name="Scroll: Reputation" type="EtcItem">
-		<!-- Double-click to increase reputation points by 30000.Cannot be used when equipped with Demonic Sword Zariche or Blood Sword Akamanah. -->
+		<!-- Double-click to raise Rep. value by 30000. Can only be used while in a chaotic state (Rep. value is below 0). Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah is in possession. -->
 		<set name="icon" val="icon.etc_ev_draco_karma_down" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1143,7 +1144,7 @@
 		</skills>
 	</item>
 	<item id="48287" name="Snow Kung Transformation Stick" additionalName="15-day" type="Weapon">
-		<!-- Transformation stick that turns you into Snow Kung. 15-day. -->
+		<!-- Stick that turns you into a Snowman. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1175,7 +1176,7 @@
 		</stats>
 	</item>
 	<item id="48288" name="Scarecrow Jack Transformation Stick" additionalName="15-day" type="Weapon">
-		<!-- Transformation stick that turns you into a Scarecrow Jack. 15-day. -->
+		<!-- Stick that turns you into a Scarecrow Jack. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1207,7 +1208,7 @@
 		</stats>
 	</item>
 	<item id="48289" name="Tin Golem Transformation Stick" additionalName="15-day" type="Weapon">
-		<!-- Transformation stick that turns you into a Tin Golem. 15-day. -->
+		<!-- Stick that turns you into a Tin Golem. -->
 		<set name="icon" val="icon.weapon_tin_golem_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1239,7 +1240,7 @@
 		</stats>
 	</item>
 	<item id="48290" name="Gatekeeper Transformation Stick" additionalName="15-day" type="Weapon">
-		<!-- Allows you to transform into a Gatekeeper for 15-day. -->
+		<!-- Turns you into a Gatekeeper. -->
 		<set name="icon" val="icon.etc_gateleeper_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1271,7 +1272,7 @@
 		</stats>
 	</item>
 	<item id="48291" name="Aqua Elf Transformation Harp" additionalName="15-day" type="Weapon">
-		<!-- Transformation stick that turns you into an Aqua Elf. 15 days. -->
+		<!-- Harp that turns you into an Aqua Elf. -->
 		<set name="icon" val="icon.harp_of_transform_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

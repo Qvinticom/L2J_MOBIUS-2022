@@ -708,7 +708,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20332" name="Beast Soulshot" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its P. Atk. significantly. Used from the master's inventory. -->
+		<!-- The power of a higher-level spirit is bestowed upon a pet/ servitor, temporarily increasing its P. Atk. significantly. Used from the master's inventory. -->
 		<set name="icon" val="BranchSys.icon.br_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -731,7 +731,7 @@
 		</skills>
 	</item>
 	<item id="20333" name="Beast Spiritshot" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. Used from the master's inventory. -->
+		<!-- The power of a higher-level spirit is bestowed upon a pet/ servitor, temporarily increasing its M. Atk. Used from the master's inventory. -->
 		<set name="icon" val="BranchSys.icon.br_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +754,7 @@
 		</skills>
 	</item>
 	<item id="20334" name="Blessed Beast Spiritshot" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory. -->
+		<!-- The power of a higher-level spirit is bestowed upon a pet/ servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory. -->
 		<set name="icon" val="BranchSys.icon.br_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1063,7 +1063,7 @@
 		</skills>
 	</item>
 	<item id="20348" name="Rune of Crystal (Lv. 5)" additionalName="5-hour" type="EtcItem">
-		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm which bestows a mysterious ability if stored in the inventory. It decreases the armor grade allowing to wear it 5 levels before. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1151,7 +1151,7 @@
 		</skills>
 	</item>
 	<item id="20352" name="Rune of Crystal (Lv. 5)" additionalName="7-day" type="EtcItem">
-		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing. -->
+		<!-- Ancient charm which bestows a mysterious ability if stored in the inventory. It decreases the armor grade allowing to wear it 5 levels before. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />

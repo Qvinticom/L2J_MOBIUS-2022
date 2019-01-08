@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25300" level="79" type="L2Monster" name="Hekaton's Scout" title="Raid Fighter">
 		<race>HUMANOID</race>
@@ -2323,7 +2323,7 @@
 				<item id="880" min="1" max="3" chance="28.63" /> <!-- Black Pearl Ring -->
 				<item id="378" min="1" max="3" chance="11.16" /> <!-- Compound Scale Gaiters -->
 				<item id="553" min="1" max="3" chance="11.03" /> <!-- Iron Boots -->
-				<item id="47" min="1" max="3" chance="11" /> <!-- Helmet -->
+				<item id="47" min="1" max="3" chance="11" /> <!-- Headgear -->
 				<item id="351" min="1" max="1" chance="10.75" /> <!-- Breastplate -->
 				<item id="350" min="1" max="3" chance="10.74" /> <!-- Dwarven Scale Mail -->
 				<item id="63" min="1" max="3" chance="10.48" /> <!-- Gauntlets -->
@@ -2331,7 +2331,7 @@
 				<item id="349" min="1" max="3" chance="10.18" /> <!-- Compound Scale Mail -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2436,7 +2436,7 @@
 				<item id="2425" min="1" max="3" chance="14.61" /> <!-- Brigandine Boots -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2570,7 +2570,7 @@
 				<item id="33" min="1" max="1" chance="9.053" /> <!-- Durable Leather Gaiters -->
 				<item id="1148" min="1" max="1" chance="9.047" /> <!-- Durable Leather Helmet -->
 				<item id="1102" min="1" max="1" chance="9.027" /> <!-- Tunic of Magic -->
-				<item id="39" min="1" max="1" chance="9.024" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="9.024" /> <!-- Boots -->
 				<item id="34" min="1" max="1" chance="9.019" /> <!-- Bronze Gaiters -->
 				<item id="26" min="1" max="1" chance="8.992" /> <!-- Bronze Breastplate -->
 				<item id="1105" min="1" max="1" chance="8.982" /> <!-- Stockings of Magic -->
@@ -2585,7 +2585,7 @@
 				<item id="155" min="1" max="1" chance="4.5415" /> <!-- Flanged Mace -->
 				<item id="311" min="1" max="1" chance="4.507" /> <!-- Crucifix of Blessing -->
 				<item id="87" min="1" max="1" chance="4.498" /> <!-- Iron Hammer -->
-				<item id="5284" min="1" max="1" chance="4.487" /> <!-- Zweihander -->
+				<item id="5284" min="1" max="1" chance="4.487" /> <!-- Zweinhander -->
 				<item id="16" min="1" max="1" chance="4.4805" /> <!-- Great Spear -->
 				<item id="956" min="2" max="6" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</drop>
@@ -2933,7 +2933,7 @@
 				<item id="347" min="2" max="4" chance="7.938" /> <!-- Ring Breastplate -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="2" max="6" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="2" max="6" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3140,7 +3140,7 @@
 				<item id="45" min="2" max="6" chance="7.933" /> <!-- Bone Helmet -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3862,14 +3862,14 @@
 				<item id="351" min="1" max="3" chance="4.743" /> <!-- Breastplate -->
 				<item id="416" min="1" max="3" chance="4.714" /> <!-- Reinforced Leather Gaiters -->
 				<item id="379" min="1" max="3" chance="4.712" /> <!-- Dwarven Scale Gaiters -->
-				<item id="47" min="1" max="3" chance="4.705" /> <!-- Helmet -->
+				<item id="47" min="1" max="3" chance="4.705" /> <!-- Headgear -->
 				<item id="350" min="1" max="3" chance="4.7" /> <!-- Dwarven Scale Mail -->
 				<item id="378" min="1" max="3" chance="4.698" /> <!-- Compound Scale Gaiters -->
 				<item id="349" min="1" max="3" chance="4.692" /> <!-- Compound Scale Mail -->
 				<item id="415" min="1" max="3" chance="4.681" /> <!-- Mithril Banded Gaiters -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="12" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="4" max="12" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4017,7 +4017,7 @@
 				<item id="2377" min="1" max="3" chance="8.824" /> <!-- Mithril Scale Gaiters -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4150,7 +4150,7 @@
 				<item id="553" min="1" max="3" chance="9.978" /> <!-- Iron Boots -->
 				<item id="351" min="1" max="3" chance="9.971" /> <!-- Breastplate -->
 				<item id="63" min="1" max="3" chance="9.967" /> <!-- Gauntlets -->
-				<item id="47" min="1" max="3" chance="9.95" /> <!-- Helmet -->
+				<item id="47" min="1" max="3" chance="9.95" /> <!-- Headgear -->
 				<item id="349" min="1" max="3" chance="9.943" /> <!-- Compound Scale Mail -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
@@ -4212,7 +4212,7 @@
 				<item id="238" min="1" max="1" chance="6.357" /> <!-- Dagger of Mana -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4363,7 +4363,7 @@
 				<item id="189" min="1" max="1" chance="4.931" /> <!-- Staff of Life -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4515,7 +4515,7 @@
 				<item id="239" min="1" max="1" chance="1.872" /> <!-- Mystic Knife -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19300" level="95" type="L2Monster" name="Spicula Elite Lieutenant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -453,7 +453,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield - Heavy Armor -->
 				<item id="57" min="1072" max="2504" chance="20" /> <!-- Adena -->
 				<item id="36841" min="1" max="1" chance="1.775" /> <!-- Twilight Shield Ingredient -->
 				<item id="36779" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Shield (60%) -->
@@ -472,7 +472,7 @@
 				<item id="36532" min="1" max="1" chance="22.75" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -535,7 +535,7 @@
 				<item id="36532" min="1" max="1" chance="23.01" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -599,7 +599,7 @@
 				<item id="36532" min="1" max="1" chance="23.01" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -741,7 +741,7 @@
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -805,7 +805,7 @@
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -869,7 +869,7 @@
 				<item id="36533" min="1" max="1" chance="2.167" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -934,7 +934,7 @@
 				<item id="36533" min="1" max="1" chance="2.167" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>

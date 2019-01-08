@@ -193,7 +193,7 @@
 		</stats>
 	</item>
 	<item id="7850" name="Moon Helmet" type="Armor">
-		<!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -327,7 +327,7 @@
 		</stats>
 	</item>
 	<item id="7857" name="Moon Cape" type="Armor">
-		<!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -348,7 +348,7 @@
 		</stats>
 	</item>
 	<item id="7858" name="Moon Silk Gloves" additionalName="Robe" type="Armor">
-		<!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.armor_t1003_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -367,7 +367,7 @@
 		</stats>
 	</item>
 	<item id="7859" name="Moon Sandals" additionalName="Robe" type="Armor">
-		<!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.armor_t1003_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -440,7 +440,6 @@
 		</stats>
 	</item>
 	<item id="7882" name="Pa'agrian Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -468,7 +467,6 @@
 		</stats>
 	</item>
 	<item id="7883" name="Sword of Sentinel" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -496,7 +494,6 @@
 		</stats>
 	</item>
 	<item id="7884" name="Infernal Master" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -578,7 +575,6 @@
 		</stats>
 	</item>
 	<item id="7887" name="Mysterious Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -606,7 +602,6 @@
 		</stats>
 	</item>
 	<item id="7888" name="Ecliptic Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -634,7 +629,6 @@
 		</stats>
 	</item>
 	<item id="7889" name="Wizard's Tear" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -690,7 +684,6 @@
 		</stats>
 	</item>
 	<item id="7891" name="Ecliptic Axe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -719,7 +712,6 @@
 		</stats>
 	</item>
 	<item id="7892" name="Spell Breaker" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -748,7 +740,6 @@
 		</stats>
 	</item>
 	<item id="7893" name="Kaim Vanul's Bones" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -777,7 +768,6 @@
 		</stats>
 	</item>
 	<item id="7894" name="Spiritual Eye" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -806,7 +796,6 @@
 		</stats>
 	</item>
 	<item id="7895" name="Flaming Dragon Skull" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -862,7 +851,6 @@
 		</stats>
 	</item>
 	<item id="7897" name="Dwarven Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -890,7 +878,6 @@
 		</stats>
 	</item>
 	<item id="7898" name="Karik Horn" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -918,7 +905,6 @@
 		</stats>
 	</item>
 	<item id="7899" name="Destroyer Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

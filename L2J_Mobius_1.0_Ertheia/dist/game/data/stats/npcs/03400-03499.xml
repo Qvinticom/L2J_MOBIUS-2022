@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="3401" level="23" type="L2Monster" name="Greyclaw Kutus" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2772,12 +2772,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17404" min="1" max="1" chance="1.074" /> <!-- Seraph Leather Leggings -->
-				<item id="17398" min="1" max="1" chance="1.043" /> <!-- Seraph Gaiters -->
-				<item id="17409" min="1" max="1" chance="0.974" /> <!-- Seraph Stockings -->
-				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
-				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
-				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
+				<item id="17404" min="1" max="1" chance="1.074" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17398" min="1" max="1" chance="1.043" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17409" min="1" max="1" chance="0.974" /> <!-- Seraph Stockings - Robe -->
+				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic - Robe -->
+				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate - Heavy Armor -->
 				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
 				<item id="17391" min="1" max="1" chance="0.3" /> <!-- Specter Caster -->
 				<item id="17390" min="1" max="1" chance="0.3" /> <!-- Specter Buster -->
@@ -3004,12 +3004,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17308" min="1" max="1" chance="23.3" /> <!-- Immortal Boots -->
-				<item id="17318" min="1" max="1" chance="22.9" /> <!-- Immortal Gloves -->
-				<item id="17304" min="1" max="1" chance="16.58" /> <!-- Immortal Helmet -->
-				<item id="17310" min="1" max="1" chance="15.71" /> <!-- Immortal Leather Helmet -->
-				<item id="17313" min="1" max="3" chance="12.32" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="2" max="4" chance="7.951" /> <!-- Immortal Shoes -->
+				<item id="17308" min="1" max="1" chance="23.3" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17318" min="1" max="1" chance="22.9" /> <!-- Immortal Gloves - Robe -->
+				<item id="17304" min="1" max="1" chance="16.58" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="15.71" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17313" min="1" max="3" chance="12.32" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="2" max="4" chance="7.951" /> <!-- Immortal Shoes - Robe -->
 				<item id="17300" min="1" max="1" chance="1.546" /> <!-- Requiem Retributer -->
 				<item id="17290" min="1" max="1" chance="1.512" /> <!-- Requiem Shaper -->
 				<item id="17296" min="1" max="1" chance="1.503" /> <!-- Requiem Thrower -->
@@ -3113,9 +3113,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="66.6" /> <!-- Twilight Shield -->
-				<item id="17339" min="1" max="1" chance="17.44" /> <!-- Twilight Breastplate -->
-				<item id="17350" min="1" max="1" chance="16.67" /> <!-- Twilight Tunic -->
+				<item id="17343" min="1" max="1" chance="66.6" /> <!-- Twilight Shield - Heavy Armor -->
+				<item id="17339" min="1" max="1" chance="17.44" /> <!-- Twilight Breastplate - Heavy Armor -->
+				<item id="17350" min="1" max="1" chance="16.67" /> <!-- Twilight Tunic - Robe -->
 				<item id="17325" min="1" max="1" chance="0.75" /> <!-- Apocalypse Cutter -->
 				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
 				<item id="17527" min="1" max="1" chance="46.65" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -3217,8 +3217,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17352" min="1" max="1" chance="91.435" /> <!-- Twilight Gloves -->
-				<item id="17347" min="1" max="1" chance="19.86" /> <!-- Twilight Leather Gloves -->
+				<item id="17352" min="1" max="1" chance="91.435" /> <!-- Twilight Gloves - Robe -->
+				<item id="17347" min="1" max="1" chance="19.86" /> <!-- Twilight Leather Gloves - Light Armor -->
 				<item id="17330" min="1" max="1" chance="7.489" /> <!-- Apocalypse Thrower -->
 				<item id="17334" min="1" max="1" chance="1.587" /> <!-- Apocalypse Retributer -->
 				<item id="17526" min="1" max="1" chance="35.82" /> <!-- Scroll: Enchant Weapon (R-grade) -->

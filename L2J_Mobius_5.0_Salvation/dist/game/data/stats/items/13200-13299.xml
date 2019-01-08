@@ -74,7 +74,7 @@
 		</stats>
 	</item>
 	<item id="13202" name="Player Commendation - Samurai Long Sword*Samurai Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Samurai Long Sword*Samurai Long Sword with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 4%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Samurai Long Sword*Samurai Long Sword with limited ability enhancement. When enchanted, P. Atk. of a dual sword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 4%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -789,7 +789,7 @@
 		</stats>
 	</item>
 	<item id="13221" name="Player Commendation - Tallum Blade*Damascus" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Tallum Blade*Damascus with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Tallum Blade*Damascus with limited ability enhancement. When enchanted, P. Atk. of a dual sword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -825,7 +825,7 @@
 		</stats>
 	</item>
 	<item id="13222" name="Player Commendation - Éclair Bijou" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Éclair Bijou with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- ?clair Bijou with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -947,7 +947,7 @@
 		</stats>
 	</item>
 	<item id="13225" name="Kamaloka (Hall of the Abyss) 15-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing sheets of Color Titles. -->
+		<!-- Wrapped Pack containing 15 Extra Passes: Hall of the Abyss. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -968,7 +968,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13226" name="Near Kamaloka 15-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 10 sheets of Free Teleporter's Spellbooks. -->
+		<!-- Wrapped Pack containing 15 Extra Passes: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2077,7 +2077,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13280" name="Agathion - Love Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Love Agathion Bracelet (7-day). -->
+		<!-- Dimensional Item Pack. A pack containing Love Agathion Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2353,7 +2353,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13293" name="Pailaka Earring" type="Armor">
-		<!-- Pailaka Forgotten Temple reward item. Earring with prominent M. Def. MP + 20 effect. -->
+		<!-- Pailaka Forgotten Temple reward item. Earring with prominent M. Def. MP +20 effect. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2395,7 +2395,7 @@
 		</stats>
 	</item>
 	<item id="13295" name="Pailaka Bracelet" type="Armor">
-		<!-- Pailaka Devil's Isle reward item. MP + 20. Activates 2 talisman slots when equipped. -->
+		<!-- Pailaka Devil's Isle reward item. MP +20. Activates 2 talisman slots when equipped. -->
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />

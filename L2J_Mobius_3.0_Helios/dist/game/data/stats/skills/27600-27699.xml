@@ -1,17 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="27600" toLevel="1" name="Lineage II Baseball Uniform Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27601" toLevel="1" name="Lineage II Baseball Cap Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27602" toLevel="1" name="Adventurer's Bracelet">
-		<!-- MEN/WIT/CON/INT/DEX/STR + 1 -->
+		<!-- MEN/WIT/CON/INT/DEX/STR + $s1. Can equip 3 Talismans. -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -42,42 +40,34 @@
 		</effects>
 	</skill>
 	<skill id="27603" toLevel="1" name="Weekend Login Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27604" toLevel="1" name="Monthly Login Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27605" toLevel="1" name="Daily Quest Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27606" toLevel="1" name="Daily Instance Instance Zone Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27607" toLevel="1" name="Daily Fishing Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27608" toLevel="1" name="Olympiad Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27609" toLevel="1" name="Ceremony of Chaos Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27610" toLevel="1" name="Castle Siege Reward Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -105,46 +95,46 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.142857142857143">
-						<item id="33640" count="1" />
+						<item id="33640" count="1" /> <!-- Blessed Scroll of Escape -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="33518" count="1" />
+						<item id="33518" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27593" count="50" />
+						<item id="27593" count="50" /> <!-- Daily Coin -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="36152" count="1" />
+						<item id="36152" count="1" /> <!-- Kaliel's Energy Box -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27594" count="1" />
+						<item id="27594" count="1" /> <!-- Maphr's Wind Scroll -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27599" count="1" />
+						<item id="27599" count="1" /> <!-- Scroll of Blessing: Armor (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27600" count="1" />
+						<item id="27600" count="1" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27601" count="1" />
+						<item id="27601" count="1" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27596" count="1" />
+						<item id="27596" count="1" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27597" count="1" />
+						<item id="27597" count="1" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27598" count="1" />
+						<item id="27598" count="1" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="35649" count="1" />
+						<item id="35649" count="1" /> <!-- Sealed Talisman - Longing -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27584" count="1" />
+						<item id="27584" count="1" /> <!-- Top-grade Spirit Stone -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27595" count="1" />
+						<item id="27595" count="1" /> <!-- Vitality Maintaining Potion -->
 					</item>
 				</items>
 			</effect>
@@ -174,46 +164,46 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.142857142857143">
-						<item id="33640" count="1" />
+						<item id="33640" count="1" /> <!-- Blessed Scroll of Escape -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="33518" count="1" />
+						<item id="33518" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27593" count="50" />
+						<item id="27593" count="50" /> <!-- Daily Coin -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="36152" count="1" />
+						<item id="36152" count="1" /> <!-- Kaliel's Energy Box -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27594" count="1" />
+						<item id="27594" count="1" /> <!-- Maphr's Wind Scroll -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27599" count="1" />
+						<item id="27599" count="1" /> <!-- Scroll of Blessing: Armor (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27600" count="1" />
+						<item id="27600" count="1" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27601" count="1" />
+						<item id="27601" count="1" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27596" count="1" />
+						<item id="27596" count="1" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27597" count="1" />
+						<item id="27597" count="1" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27598" count="1" />
+						<item id="27598" count="1" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="35649" count="1" />
+						<item id="35649" count="1" /> <!-- Sealed Talisman - Longing -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27584" count="1" />
+						<item id="27584" count="1" /> <!-- Top-grade Spirit Stone -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27595" count="1" />
+						<item id="27595" count="1" /> <!-- Vitality Maintaining Potion -->
 					</item>
 				</items>
 			</effect>
@@ -243,46 +233,46 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.142857142857143">
-						<item id="33640" count="1" />
+						<item id="33640" count="1" /> <!-- Blessed Scroll of Escape -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="33518" count="1" />
+						<item id="33518" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27593" count="50" />
+						<item id="27593" count="50" /> <!-- Daily Coin -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="36152" count="1" />
+						<item id="36152" count="1" /> <!-- Kaliel's Energy Box -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27594" count="1" />
+						<item id="27594" count="1" /> <!-- Maphr's Wind Scroll -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27599" count="1" />
+						<item id="27599" count="1" /> <!-- Scroll of Blessing: Armor (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27600" count="1" />
+						<item id="27600" count="1" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27601" count="1" />
+						<item id="27601" count="1" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27596" count="1" />
+						<item id="27596" count="1" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27597" count="1" />
+						<item id="27597" count="1" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27598" count="1" />
+						<item id="27598" count="1" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="35649" count="1" />
+						<item id="35649" count="1" /> <!-- Sealed Talisman - Longing -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27584" count="1" />
+						<item id="27584" count="1" /> <!-- Top-grade Spirit Stone -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27595" count="1" />
+						<item id="27595" count="1" /> <!-- Vitality Maintaining Potion -->
 					</item>
 				</items>
 			</effect>
@@ -312,53 +302,53 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.142857142857143">
-						<item id="33640" count="1" />
+						<item id="33640" count="1" /> <!-- Blessed Scroll of Escape -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="33518" count="1" />
+						<item id="33518" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27593" count="50" />
+						<item id="27593" count="50" /> <!-- Daily Coin -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="36152" count="1" />
+						<item id="36152" count="1" /> <!-- Kaliel's Energy Box -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27594" count="1" />
+						<item id="27594" count="1" /> <!-- Maphr's Wind Scroll -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27599" count="1" />
+						<item id="27599" count="1" /> <!-- Scroll of Blessing: Armor (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27600" count="1" />
+						<item id="27600" count="1" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27601" count="1" />
+						<item id="27601" count="1" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27596" count="1" />
+						<item id="27596" count="1" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27597" count="1" />
+						<item id="27597" count="1" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27598" count="1" />
+						<item id="27598" count="1" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="35649" count="1" />
+						<item id="35649" count="1" /> <!-- Sealed Talisman - Longing -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27584" count="1" />
+						<item id="27584" count="1" /> <!-- Top-grade Spirit Stone -->
 					</item>
 					<item chance="7.142857142857143">
-						<item id="27595" count="1" />
+						<item id="27595" count="1" /> <!-- Vitality Maintaining Potion -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27615" toLevel="1" name="Maphr's Wind Scroll">
-		<!-- Vitality consumption + 200%% and XP/SP acquisition + 200%% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. -->
+		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. -->
 		<icon>icon.freya_scroll</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>27594</itemConsumeId>
@@ -406,7 +396,6 @@
 		</effects>
 	</skill>
 	<skill id="27617" toLevel="1" name="Abundance Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -478,92 +467,86 @@
 		</effects>
 	</skill>
 	<skill id="27619" toLevel="1" name="Card Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27620" toLevel="1" name="Exalted Energy Card">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Card containing the energy of Exalted. All attribute resistance + 30. -->
 		<icon>BranchIcon.icon.icon_card_hidden</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27621" toLevel="1" name="Hidden Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27622" toLevel="1" name="Exclusive Reward Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27623" toLevel="1" name="Exclusive Reward Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27624" toLevel="1" name="Shadai's Jewelry Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_bm_jewelbox_main_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27625" toLevel="1" name="Shadai's Shiny Jewelry Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_bm_jewelbox_shhadai</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="27626" toLevel="1" name="Freya's Luxury Shopping Bag">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to obtain Freya's Frozen Scroll and Freya's Art of Seduction. Has a small chance of obtaining Freay/Sirra/Snow Man's Gift Box, Freya's Vital Rune (30 min) Box, or Freya's Recovery Potion. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27627" toLevel="5" name="Freya's Fated Support Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to obtain a rare accessory or a rare item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27628" toLevel="1" name="Black Freya's Kindness">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to obtain 1 random item out of the following: Dark/White Assassin Suit, Red/White Noblesse Outfit, Pirate Red/Crew Outfit, Cowboy Purple Outfit Appearance Stone. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27629" toLevel="1" name="Freya's Scroll of Storm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Vitality consumption + $s1 and XP/SP + %s2 when hunting. Does not disappear upon death. Duration 10 min. Cooldown 10 min. Only usable when 1 or more Vitality slot is full. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27630" toLevel="1" name="Freya's Wish Stick">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to get 1 Freya's Frozen Scroll and 1 Freya's Art of Seduction. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27631" toLevel="1" name="Freya's Wish-filled Gift">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to get 1 random rare item. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27632" toLevel="1" name="Sirra's Wish-filled Gift">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to get one of the following: La Vie En Rose's Jewelry Box, various Enchant Stones and Dark/Bloody Enhancement Stones. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27633" toLevel="1" name="Snowman's Wish-filled Gift">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Double-click to get one of the following: Wind Vitality Tonic, or items that will help with enchanting skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27634" toLevel="6" name="Gran Kain's Necklace">
+		<!-- MP + 107, STR + 3, INT + 3, CON + 3, Skill Cooldown - 10%, Damage Reflect + 5%, P. Atk. + 15%, M. Atk. + 10%, Skill Power + 15%, Max HP + 3%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 25%, Hate + 25%, Windstorm + 25%, Exile + 25%, Disarmament + 15%, Slip + 15%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1110,6 +1093,7 @@
 		</effects>
 	</skill>
 	<skill id="27640" toLevel="6" name="Einhasad's Necklace">
+		<!-- MP + 107, STR + 3, INT + 3, CON + 3, Skill Cooldown - 10%, Damage Reflect + 5%, P. Atk. + 10%, M. Atk. + 15%, Skill Power + 15%, Max HP + 5%, Max MP + 3%. Resistance to the following abnormal conditions: Shock + 25%, Hate + 25%, Disarmament + 25%, Slip + 25%, Windstorm + 15%, Exile + 15%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1656,6 +1640,7 @@
 		</effects>
 	</skill>
 	<skill id="27646" toLevel="6" name="Pa'agrio's Earring">
+		<!-- MP + 80, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 15%, M. Def. + 10%, P./M. Abnormal Status Reflect + 13%, Damage Magic Reflect Rate + 13%, P. Skill Evasion + 5%, P. Skill Power + 2%, Speed + 2, Damage Received Heal Amount + 10%, Recovery Skill Power + 80. Resistance to the following abnormal conditions: Paralysis/Bluff/Slip + 10%, Aerial Yoke/Mutation + 10%, Stun/Knock Back/Knock Down/Pull/Danger Zone/Mental + 30%, Petrification/Bleed + 40%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2332,6 +2317,7 @@
 		</effects>
 	</skill>
 	<skill id="27652" toLevel="6" name="Eva's Earring">
+		<!-- MP + 80, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 10%, M. Def. + 15%, P./M. Abnormal Status Reflect + 13%, Damage Magic Reflect Rate + 13%, P. Skill Evasion + 5%, P. Skill Power + 2%, Speed + 2, Received Heal Amount + 5%, Recovery Skill Power + 160. Resistance to the following abnormal conditions: Paralysis/Bluff/Aerial Yoke 10%, Slip/Mutation + 10%, Stun/Knock Back/Knock Down/Pull/Danger Zone/Mental + 30%, Petrification/Bleed + 40%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2997,6 +2983,7 @@
 		</effects>
 	</skill>
 	<skill id="27658" toLevel="6" name="Sayha's Ring">
+		<!-- MP + 53, CHA + 3, LUC + 3, P./M. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 30%, Fixed Damage Effect Resistance + 5%, P./M. Skill Power + 5%, Speed + 2, Physical/Mind Resistance + 10, Accuracy + 2, HP Recovery Rate + 10%. Resistance to the following abnormal conditions: Shock/Knock Back/Knock Down + 20%, Hold/Pull + 12%, Seduction/Petrification + 10%, Poison + 40%, Aerial Yoke/Banishment + 5%, Danger Zone Resistance + 10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3598,6 +3585,7 @@
 		</effects>
 	</skill>
 	<skill id="27664" toLevel="6" name="Maphr's Ring">
+		<!-- MP + 53, CHA + 3, LUC + 3, P./M. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 30%, Fixed Damage Effect Resistance + 5%, P./M. Skill Power + 5%, Speed + 2, Physical/Mind Resistance + 10, M. Accuracy + 2, MP Recovery Rate + 10%. Resistance to the following abnormal conditions: Shock/Knock Back/Knock Down + 20%, Hold/Pull + 12%, Seduction/Petrification + 10%, Poison + 40%, Aerial Yoke/Banishment + 5%, Danger Zone Resistance + 10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4206,67 +4194,55 @@
 		</effects>
 	</skill>
 	<skill id="27670" toLevel="1" name="Lucky Box 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27671" toLevel="1" name="Lucky Box 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27672" toLevel="1" name="Lucky Box 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27673" toLevel="1" name="+7 Shiny Elemental Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27674" toLevel="1" name="+7 Physical Reflect Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27675" toLevel="1" name="+7 Magical Reflect Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27676" toLevel="1" name="+7 Pa'agrio's Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27677" toLevel="1" name="+7 Sayha's Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27678" toLevel="1" name="+7 Eva's Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27679" toLevel="1" name="+7 Maphr's Shirt Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27680" toLevel="1" name="PC Progression Support - Event">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Obtained XP/SP + 50%, Item Acquisition rate + 100%. Not for pets/servitors. Only applied during PC Caf? event. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27681" toLevel="2" name="Shadai's Shiny Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27682" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 3%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4285,7 +4261,6 @@
 		</effects>
 	</skill>
 	<skill id="27683" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 8%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4304,7 +4279,6 @@
 		</effects>
 	</skill>
 	<skill id="27684" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 5%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4323,7 +4297,6 @@
 		</effects>
 	</skill>
 	<skill id="27685" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 2%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4342,7 +4315,6 @@
 		</effects>
 	</skill>
 	<skill id="27686" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 2%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4361,7 +4333,6 @@
 		</effects>
 	</skill>
 	<skill id="27687" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 3%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4380,7 +4351,6 @@
 		</effects>
 	</skill>
 	<skill id="27688" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 8%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4399,7 +4369,6 @@
 		</effects>
 	</skill>
 	<skill id="27689" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 5%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4418,7 +4387,6 @@
 		</effects>
 	</skill>
 	<skill id="27690" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 2%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4437,7 +4405,6 @@
 		</effects>
 	</skill>
 	<skill id="27691" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 2%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4456,7 +4423,6 @@
 		</effects>
 	</skill>
 	<skill id="27692" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 3%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4475,7 +4441,6 @@
 		</effects>
 	</skill>
 	<skill id="27693" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 8%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4494,7 +4459,6 @@
 		</effects>
 	</skill>
 	<skill id="27694" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 5%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4513,7 +4477,6 @@
 		</effects>
 	</skill>
 	<skill id="27695" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 2%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4532,7 +4495,6 @@
 		</effects>
 	</skill>
 	<skill id="27696" toLevel="1" name="Inherent Abilities - Damage Reduction">
-		<!-- Updated to GRAND CRUSADE -->
 		<!-- Damage Received - 2%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -4551,13 +4513,7 @@
 		</effects>
 	</skill>
 	<skill id="27697" toLevel="6" name="Inherent Abilities - Helm Attack">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
-		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
-		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
-		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
-		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
-		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
+		<!-- P. Atk. + 1%, M. Atk. + 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4587,13 +4543,7 @@
 		</effects>
 	</skill>
 	<skill id="27698" toLevel="6" name="Inherent Abilities - Top Attack">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
-		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
-		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
-		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
-		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
-		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
+		<!-- P. Atk. + 1%, M. Atk. + 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -4623,13 +4573,7 @@
 		</effects>
 	</skill>
 	<skill id="27699" toLevel="6" name="Inherent Abilities - Pants Attack">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
-		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
-		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
-		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
-		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
-		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
+		<!-- P. Atk. + 1%, M. Atk. + 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>

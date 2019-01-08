@@ -1258,7 +1258,6 @@
 		</effects>
 	</skill>
 	<skill id="13345" toLevel="1" name="Release Agathion's Seal - Tersi's Light">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1272,7 +1271,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13346" toLevel="1" name="Seal Agathion - Tersi's Light">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Dismisses a summoned Agathion. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
@@ -1286,7 +1284,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13347" toLevel="1" name="Tersi's Hand">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Pushes back a shard of light with Tersi's Hand. -->
 		<icon>icon.skill13347</icon>
 		<operateType>A2</operateType>
@@ -1317,7 +1314,6 @@
 		</conditions>
 	</skill>
 	<skill id="13348" toLevel="1" name="Hand">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill13347</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -1388,7 +1384,6 @@
 		</effects>
 	</skill>
 	<skill id="13351" toLevel="1" name="Notifier">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When used, it informs of the number of currently received gifts and number of remaining gifts. The gift delivery time will reset every day at 6:30 AM. -->
 		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
@@ -1405,7 +1400,6 @@
 		</conditions>
 	</skill>
 	<skill id="13352" toLevel="1" name="Increase Hair Accessory Weight Gauge">
-		<!-- Glory Days confirmed -->
 		<!-- Increases Weight Gauge when wearing a hair accessory. -->
 		<icon>icon.Accessory_angel_circlet_i00</icon>
 		<operateType>P</operateType>
@@ -1419,7 +1413,6 @@
 		</effects>
 	</skill>
 	<skill id="13353" toLevel="1" name="Talisman (R-grade) - M. Def. (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases M. Def. by 63 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -1446,7 +1439,6 @@
 		</effects>
 	</skill>
 	<skill id="13354" toLevel="1" name="Player Commendation - Talisman - M. Def.">
-		<!-- Updated to Helios -->
 		<!-- Increases M. Def. by 21 when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
@@ -1460,7 +1452,6 @@
 		</effects>
 	</skill>
 	<skill id="13355" toLevel="1" name="Player Commendation - Talisman - M. Atk. (Active)">
-		<!-- Glory Days confirmed -->
 		<!-- Increases M. Atk. by 111 momentarily through the power of the talisman. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1860,7 +1851,6 @@
 		</effects>
 	</skill>
 	<skill id="13375" toLevel="1" name="Release Agathion's Seal - XP Bottle">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the seal on an Agathion - XP Bottle. Consumes 10 MP upon use. Can be used by main classes Lv. 85 or above. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1883,7 +1873,6 @@
 		</conditions>
 	</skill>
 	<skill id="13376" toLevel="1" name="XP Bottle's Divine Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When XP is acquired while receiving divine power, you can obtain an Agathion's gift. -->
 		<icon>icon.exp_bottle_agathion</icon>
 		<operateType>A2</operateType>
@@ -1901,7 +1890,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13377" toLevel="1" name="Scroll: XP">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1975,7 +1963,6 @@
 		</effects>
 	</skill>
 	<skill id="13380" toLevel="1" name="Seal Agathion - XP Bottle">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Seals the Agathion - XP Bottle. Decreases remaining magic by 5 upon skill use. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
@@ -1990,7 +1977,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13381" toLevel="1" name="Hair Accessory Rabbit Ears: Campaign">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1 when the hair accessory is equipped. -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
@@ -1998,7 +1984,6 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13382" toLevel="1" name="Hair Accessory Angel Circlet - Campaign">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 3, WIT + 1, MEN + 1, P. Def. + 1, and M. Def. + 1 when the hair accessory is equipped. -->
 		<icon>icon.Accessary_angel_circlet_i00</icon>
 		<operateType>P</operateType>
@@ -2006,7 +1991,6 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13383" toLevel="1" name="Sealing Agathion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When the Agathion Bracelet is un-equipped, the summoned Agathion is sealed, and for 10 seconds, cannot receive the XP Bottle's Divine Power. -->
 		<icon>icon.exp_bottle_agathion</icon>
 		<operateType>A2</operateType>
@@ -2024,7 +2008,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13384" toLevel="1" name="Equip Talisman - Infinity">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Infinity burns with power. -->
 		<icon>icon.accessory_immortal_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2045,7 +2028,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13385" toLevel="1" name="Equip Talisman - Destruction">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Destruction burns with power. -->
 		<icon>icon.accessory_destruction_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2066,7 +2048,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13386" toLevel="1" name="Equip Talisman - Annihilation">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Annihilation burns with power. -->
 		<icon>icon.accessory_extermination_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2087,7 +2068,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13387" toLevel="1" name="Equip Talisman - Hellfire">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Hellfire burns with power. -->
 		<icon>icon.accessory_hellfire_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2108,7 +2088,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13388" toLevel="1" name="Equip Talisman - Desire">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Desire burns with power. -->
 		<icon>icon.accessory_ocean_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2129,7 +2108,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13389" toLevel="1" name="Equip Talisman - Longing">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Longing burns with power. -->
 		<icon>icon.accessory_longing_talisman_i01</icon>
 		<operateType>A2</operateType>
@@ -2150,7 +2128,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13390" toLevel="1" name="Unequip Talisman - Infinity">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Infinity fades in power. -->
 		<icon>icon.accessory_immortal_talisman_i01</icon>
 		<operateType>A1</operateType>
@@ -2170,7 +2147,6 @@
 		</effects>
 	</skill>
 	<skill id="13391" toLevel="1" name="Unequip Talisman - Destruction">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Destruction fades in power. -->
 		<icon>icon.accessory_destruction_talisman_i01</icon>
 		<operateType>A1</operateType>
@@ -2190,7 +2166,6 @@
 		</effects>
 	</skill>
 	<skill id="13392" toLevel="1" name="Unequip Talisman - Annihilation">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Annihilation fades in power. -->
 		<icon>icon.accessory_extermination_talisman_i01</icon>
 		<operateType>A1</operateType>
@@ -2210,7 +2185,6 @@
 		</effects>
 	</skill>
 	<skill id="13393" toLevel="1" name="Unequip Talisman - Hellfire">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Hellfire fades in power. -->
 		<icon>icon.accessory_hellfire_talisman_i01</icon>
 		<operateType>A1</operateType>
@@ -2230,7 +2204,6 @@
 		</effects>
 	</skill>
 	<skill id="13394" toLevel="1" name="Unequip Talisman - Desire">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Desire fades in power. -->
 		<icon>icon.accessory_ocean_talisman_i01</icon>
 		<operateType>A1</operateType>
@@ -2250,7 +2223,6 @@
 		</effects>
 	</skill>
 	<skill id="13395" toLevel="1" name="Unequip Talisman - Longing">
-		<!-- Glory Days confirmed -->
 		<!-- Talisman - Longing fades in power. -->
 		<icon>icon.accessory_longing_talisman_i01</icon>
 		<operateType>A1</operateType>

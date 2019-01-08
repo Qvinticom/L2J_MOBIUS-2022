@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9300" type="Weapon" name="Sharpshooter">
+		<!-- Kamael Exclusive Weapon: Eminence Bow. Bestows one of the following functions: Guidance, Miser, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -33,6 +34,7 @@
 		</for>
 	</item>
 	<item id="9301" type="Weapon" name="Sharpshooter - Guidance">
+		<!-- Kamael Exclusive Weapon: Eminence Bow. <Soul Crystal Enhancement>. Increases Accuracy by 4. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -51,7 +53,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3008-4" />
+		<set name="item_skill" val="3008-4" /> <!-- Special Ability: Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -66,6 +68,7 @@
 		</for>
 	</item>
 	<item id="9302" type="Weapon" name="Sharpshooter - Miser">
+		<!-- Kamael Exclusive Weapon: Eminence Bow. <Soul Crystal Enhancement>. There is a 37% rate of chance that the number of soulshots consumed is reduced to 5. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -99,6 +102,7 @@
 		</for>
 	</item>
 	<item id="9303" type="Weapon" name="Sharpshooter - Cheap Shot">
+		<!-- Kamael Exclusive Weapon: Eminence Bow. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -117,7 +121,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3360-1" />
+		<set name="item_skill" val="3360-1" /> <!-- Special Ability: Cheap Shot -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -132,6 +136,7 @@
 		</for>
 	</item>
 	<item id="9304" type="Weapon" name="Military Fleuret">
+		<!-- Kamael Exclusive Weapon: Keshanberk. Bestows one of the following functions. Guidance, Focus, or Back Blow. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -164,6 +169,7 @@
 		</for>
 	</item>
 	<item id="9305" type="Weapon" name="Military Fleuret - Guidance">
+		<!-- Kamael Exclusive Weapon: Keshanberk. <Soul Crystal Enhancement>. Increases Accuracy by 5. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -182,7 +188,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3007-5" />
+		<set name="item_skill" val="3007-5" /> <!-- Special Ability: Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -197,6 +203,7 @@
 		</for>
 	</item>
 	<item id="9306" type="Weapon" name="Military Fleuret - Focus">
+		<!-- Kamael Exclusive Weapon: Keshanberk. <Soul Crystal Enhancement>. Increases Critical by 68. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -215,7 +222,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3010-5" />
+		<set name="item_skill" val="3010-5" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -230,6 +237,7 @@
 		</for>
 	</item>
 	<item id="9307" type="Weapon" name="Military Fleuret - Back Blow">
+		<!-- Kamael Exclusive Weapon: Keshanberk. <Soul Crystal Enhancement>. Increases Critical Rate by 56 when attacking a target from behind. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -248,7 +256,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3018-5" />
+		<set name="item_skill" val="3018-5" /> <!-- Special Ability: Back Blow -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -263,6 +271,7 @@
 		</for>
 	</item>
 	<item id="9308" type="Weapon" name="Innominate Victory">
+		<!-- Kamael Exclusive Weapon: Great Sword. Bestows one of the following functions: Health, Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -294,6 +303,7 @@
 		</for>
 	</item>
 	<item id="9309" type="Weapon" name="Innominate Victory - Health">
+		<!-- Kamael Exclusive Weapon: Great Sword. <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -311,7 +321,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-1" />
+		<set name="item_skill" val="3013-1" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -326,6 +336,7 @@
 		</for>
 	</item>
 	<item id="9310" type="Weapon" name="Innominate Victory - Critical Damage">
+		<!-- Kamael Exclusive Weapon: Great Sword. <Soul Crystal Enhancement>. Increases P. Atk. by 247 on a critical attack. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -343,7 +354,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3023-5" />
+		<set name="item_skill" val="3023-5" /> <!-- Special Ability: Critical Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -358,6 +369,7 @@
 		</for>
 	</item>
 	<item id="9311" type="Weapon" name="Innominate Victory - Focus">
+		<!-- Kamael Exclusive Weapon: Great Sword. <Soul Crystal Enhancement>. Increases Critical by 68. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -375,7 +387,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3010-5" />
+		<set name="item_skill" val="3010-5" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -390,6 +402,7 @@
 		</for>
 	</item>
 	<item id="9312" type="Weapon" name="Peacemaker">
+		<!-- Kamael Exclusive Weapon: Dark Elven Long Bow Conversion. Bestows one of the following functions: Evasion, Critical Bleed, or Miser. -->
 		<set name="icon" val="icon.weapon_peace_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -422,6 +435,7 @@
 		</for>
 	</item>
 	<item id="9313" type="Weapon" name="Peacemaker - Evasion">
+		<!-- Kamael Exclusive Weapon: Dark Elven Long Bow Conversion. <Soul Crystal Enhancement>. Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -440,7 +454,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3009-5" />
+		<set name="item_skill" val="3009-5" /> <!-- Special Ability: Evasion -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -455,6 +469,7 @@
 		</for>
 	</item>
 	<item id="9314" type="Weapon" name="Peacemaker - Critical Bleed">
+		<!-- Kamael Exclusive Weapon: Dark Elven Long Bow Conversion. <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 41% chance during a general critical attack. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -489,6 +504,7 @@
 		</for>
 	</item>
 	<item id="9315" type="Weapon" name="Peacemaker - Miser">
+		<!-- Kamael Exclusive Weapon: Dark Elven Long Bow Conversion. <Soul Crystal Enhancement>. There is a 19% rate of chance that the number of soulshots consumed is reduced to 1. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -522,6 +538,7 @@
 		</for>
 	</item>
 	<item id="9316" type="Weapon" name="Colichemarde">
+		<!-- Kamael Exclusive Weapon: Sword of Damascus Conversion. Bestows one of the following functions. Focus, Critical Damage, or Haste. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -554,6 +571,7 @@
 		</for>
 	</item>
 	<item id="9317" type="Weapon" name="Colichemarde - Focus">
+		<!-- Kamael Exclusive Weapon: Sword of Damascus Conversion. <Soul Crystal Enhancement>. Increases Critical by 64. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -572,7 +590,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3010-6" />
+		<set name="item_skill" val="3010-6" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -587,6 +605,7 @@
 		</for>
 	</item>
 	<item id="9318" type="Weapon" name="Colichemarde - Critical Damage">
+		<!-- Kamael Exclusive Weapon: Sword of Damascus Conversion. <Soul Crystal Enhancement>. Increases P. Atk. by 262 on a critical attack. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -605,7 +624,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3023-6" />
+		<set name="item_skill" val="3023-6" /> <!-- Special Ability: Critical Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -620,6 +639,7 @@
 		</for>
 	</item>
 	<item id="9319" type="Weapon" name="Colichemarde - Haste">
+		<!-- Kamael Exclusive Weapon: Sword of Damascus Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -638,7 +658,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3036-6" />
+		<set name="item_skill" val="3036-6" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -653,6 +673,7 @@
 		</for>
 	</item>
 	<item id="9320" type="Weapon" name="Dismantler">
+		<!-- Kamael Exclusive Weapon: Guardian Sword Conversion. Bestows one of the following functions: Critical Drain, Health, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -684,6 +705,7 @@
 		</for>
 	</item>
 	<item id="9321" type="Weapon" name="Dismantler - Critical Drain">
+		<!-- Kamael Exclusive Weapon: Guardian Sword Conversion. <Soul Crystal Enhancement>. The user absorbs 8 HP from target on a critical attack. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -717,6 +739,7 @@
 		</for>
 	</item>
 	<item id="9322" type="Weapon" name="Dismantler - Health">
+		<!-- Kamael Exclusive Weapon: Guardian Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -734,7 +757,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-1" />
+		<set name="item_skill" val="3013-1" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -749,6 +772,7 @@
 		</for>
 	</item>
 	<item id="9323" type="Weapon" name="Dismantler - Critical Bleed">
+		<!-- Kamael Exclusive Weapon: Guardian Sword Conversion. <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 41% chance during a general critical attack. -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -782,6 +806,7 @@
 		</for>
 	</item>
 	<item id="9324" type="Weapon" name="Hell Hound">
+		<!-- Kamael Exclusive Weapon: Bow of Peril Conversion. Bestows one of the following functions: Guidance, Quick Recover, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -814,6 +839,7 @@
 		</for>
 	</item>
 	<item id="9325" type="Weapon" name="Hell Hound - Guidance">
+		<!-- Kamael Exclusive Weapon: Bow of Peril Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 3. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -832,7 +858,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3008-6" />
+		<set name="item_skill" val="3008-6" /> <!-- Special Ability: Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -847,6 +873,7 @@
 		</for>
 	</item>
 	<item id="9326" type="Weapon" name="Hell Hound - Quick Recovery">
+		<!-- Kamael Exclusive Weapon: Bow of Peril Conversion. <Soul Crystal Enhancement>. Decreases re-use delay by about 13%. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -879,6 +906,7 @@
 		</for>
 	</item>
 	<item id="9327" type="Weapon" name="Hell Hound - Cheap Shot">
+		<!-- Kamael Exclusive Weapon: Bow of Peril Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -897,7 +925,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3360-1" />
+		<set name="item_skill" val="3360-1" /> <!-- Special Ability: Cheap Shot -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -912,6 +940,7 @@
 		</for>
 	</item>
 	<item id="9328" type="Weapon" name="White Lightning">
+		<!-- Kamael Exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions. Crt. Poison, Haste, or Anger. When enchanted to 4 or more, P. Atk., magical power, and received healing of all party members, including yourself, are increased on a critical attack with a certain chance, and MP consumption during skill use is decreased -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -944,6 +973,7 @@
 		</for>
 	</item>
 	<item id="9329" type="Weapon" name="White Lightning - Critical Poison">
+		<!-- Kamael Exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Poisons the target with a 10% chance during a general critical attack. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -964,7 +994,7 @@
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="oncrit_chance" val="10" />
 		<set name="oncrit_skill" val="3061-1" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -979,6 +1009,7 @@
 		</for>
 	</item>
 	<item id="9330" type="Weapon" name="White Lightning - Haste">
+		<!-- Kamael Exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -997,7 +1028,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3068-2" />
+		<set name="item_skill" val="3068-2" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1012,6 +1043,7 @@
 		</for>
 	</item>
 	<item id="9331" type="Weapon" name="White Lightning - Anger">
+		<!-- Kamael Exclusive Weapon: Tallum Blade Conversion. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 31. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1030,7 +1062,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3057-1" />
+		<set name="item_skill" val="3057-1" /> <!-- Special Ability: Anger -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1045,6 +1077,7 @@
 		</for>
 	</item>
 	<item id="9332" type="Weapon" name="Divine Pain">
+		<!-- Kamael Exclusive Weapon: Internal Master Conversion. Bestows one of the following functions: Haste, Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1076,6 +1109,7 @@
 		</for>
 	</item>
 	<item id="9333" type="Weapon" name="Divine Pain - Haste">
+		<!-- Kamael Exclusive Weapon: Internal Master Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1093,7 +1127,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3068-2" />
+		<set name="item_skill" val="3068-2" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1108,6 +1142,7 @@
 		</for>
 	</item>
 	<item id="9334" type="Weapon" name="Divine Pain - Critical Damage">
+		<!-- Kamael Exclusive Weapon: Internal Master Conversion. <Soul Crystal Enhancement>. Increases P. Atk. by 297 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1125,7 +1160,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3067-1" />
+		<set name="item_skill" val="3067-1" /> <!-- Special Ability: Critical Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1140,6 +1175,7 @@
 		</for>
 	</item>
 	<item id="9335" type="Weapon" name="Divine Pain - Focus">
+		<!-- Kamael Exclusive Weapon: Internal Master Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1157,7 +1193,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3050-1" />
+		<set name="item_skill" val="3050-1" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1172,6 +1208,7 @@
 		</for>
 	</item>
 	<item id="9336" type="Weapon" name="Doomchanter">
+		<!-- Kamael Exclusive Weapon: Carnage Bow Conversion. Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1204,6 +1241,7 @@
 		</for>
 	</item>
 	<item id="9337" type="Weapon" name="Doomchanter - Light">
+		<!-- Kamael Exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Weight gauge increase by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1222,7 +1260,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3552-1;3498-1" />
+		<set name="item_skill" val="3552-1;3498-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1237,6 +1275,7 @@
 		</for>
 	</item>
 	<item id="9338" type="Weapon" name="Doomchanter - Critical Bleed">
+		<!-- Kamael Exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Has a 35% chance of inflicting Bleed on the target during a general critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1257,7 +1296,7 @@
 		<set name="reuse_delay" val="400" />
 		<set name="oncrit_chance" val="35" />
 		<set name="oncrit_skill" val="3053-1" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1272,6 +1311,7 @@
 		</for>
 	</item>
 	<item id="9339" type="Weapon" name="Doomchanter - Mana Up">
+		<!-- Kamael Exclusive Weapon: Carnage Bow Conversion. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1290,7 +1330,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3014-2" />
+		<set name="item_skill" val="3014-2" /> <!-- Special Ability: Mana Up -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1305,6 +1345,7 @@
 		</for>
 	</item>
 	<item id="9340" type="Weapon" name="Lacerator">
+		<!-- Kamael Exclusive Weapon: Dark Legion Conversion. Bestows one of the following functions. Critical Damage, Health, or Rsk. Focus. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1337,6 +1378,7 @@
 		</for>
 	</item>
 	<item id="9341" type="Weapon" name="Lacerator - Critical Damage">
+		<!-- Kamael Exclusive Weapon: Dark Legion Conversion. <Soul Crystal Enhancement>. Increases P. Atk. by 326 on a critical attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1355,7 +1397,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3067-2" />
+		<set name="item_skill" val="3067-2" /> <!-- Special Ability: Critical Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1370,6 +1412,7 @@
 		</for>
 	</item>
 	<item id="9342" type="Weapon" name="Lacerator - Health">
+		<!-- Kamael Exclusive Weapon: Dark Legion Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1388,7 +1431,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1403,6 +1446,7 @@
 		</for>
 	</item>
 	<item id="9343" type="Weapon" name="Lacerator - Rsk. Focus">
+		<!-- Kamael Exclusive Weapon: Dark Legion Conversion. <Soul Crystal Enhancement>. Increases Critical by 130 when HP falls to 60% or below. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1421,7 +1465,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3071-2" />
+		<set name="item_skill" val="3071-2" /> <!-- Special Ability: Rsk. Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1436,6 +1480,7 @@
 		</for>
 	</item>
 	<item id="9344" type="Weapon" name="Undertaker">
+		<!-- Kamael Exclusive Weapon: Dragon Slayer Conversion. Bestows one of the following functions: Health, Critical Bleed, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1467,6 +1512,7 @@
 		</for>
 	</item>
 	<item id="9345" type="Weapon" name="Undertaker - Health">
+		<!-- Kamael Exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1484,7 +1530,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1499,6 +1545,7 @@
 		</for>
 	</item>
 	<item id="9346" type="Weapon" name="Undertaker - Critical Bleed">
+		<!-- Kamael Exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. Has a 24% chance of inflicting Bleed on the target during a general critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1518,7 +1565,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="24" />
 		<set name="oncrit_skill" val="3055-2" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1533,6 +1580,7 @@
 		</for>
 	</item>
 	<item id="9347" type="Weapon" name="Undertaker - Critical Drain">
+		<!-- Kamael Exclusive Weapon: Dragon Slayer Conversion. <Soul Crystal Enhancement>. User absorbs 11 HP from a target on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1552,7 +1600,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="24" />
 		<set name="oncrit_skill" val="3060-2" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1567,6 +1615,7 @@
 		</for>
 	</item>
 	<item id="9348" type="Weapon" name="Reaper">
+		<!-- Kamael Exclusive Weapon: Soul Bow Conversion. Bestows one of the following functions: Cheap Shot, Quick Recovery, or Critical Poison. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1599,6 +1648,7 @@
 		</for>
 	</item>
 	<item id="9349" type="Weapon" name="Reaper - Cheap Shot">
+		<!-- Kamael Exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1617,7 +1667,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3552-1;3360-1" />
+		<set name="item_skill" val="3552-1;3360-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1632,6 +1682,7 @@
 		</for>
 	</item>
 	<item id="9350" type="Weapon" name="Reaper - Quick Recovery">
+		<!-- Kamael Exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Decreases re-use delay by about 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1650,7 +1701,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="340" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1665,6 +1716,7 @@
 		</for>
 	</item>
 	<item id="9351" type="Weapon" name="Reaper - Critical Poison">
+		<!-- Kamael Exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Has a 18% chance of inflicting Poison on the target during a general critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1685,7 +1737,7 @@
 		<set name="reuse_delay" val="400" />
 		<set name="oncrit_chance" val="18" />
 		<set name="oncrit_skill" val="3062-2" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1700,6 +1752,7 @@
 		</for>
 	</item>
 	<item id="9352" type="Weapon" name="Eclair Bijou">
+		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion. Bestows one of the following functions. Haste, Health, or Crt. Poison. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1732,6 +1785,7 @@
 		</for>
 	</item>
 	<item id="9353" type="Weapon" name="Eclair Bijou - Haste">
+		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1750,7 +1804,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3068-3" />
+		<set name="item_skill" val="3068-3" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1765,6 +1819,7 @@
 		</for>
 	</item>
 	<item id="9354" type="Weapon" name="Eclair Bijou - Health">
+		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1783,7 +1838,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3013-5" />
+		<set name="item_skill" val="3013-5" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1798,6 +1853,7 @@
 		</for>
 	</item>
 	<item id="9355" type="Weapon" name="Eclair Bijou - Critical Poison">
+		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Poisons the target with a 15% chance during a general critical attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1818,7 +1874,7 @@
 		<set name="enchant4_skill" val="3426-1" />
 		<set name="oncrit_chance" val="10" />
 		<set name="oncrit_skill" val="3061-3" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1833,6 +1889,7 @@
 		</for>
 	</item>
 	<item id="9356" type="Weapon" name="Durendal">
+		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. Bestows one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1864,6 +1921,7 @@
 		</for>
 	</item>
 	<item id="9357" type="Weapon" name="Durendal - Focus">
+		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1881,7 +1939,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3050-2" />
+		<set name="item_skill" val="3050-2" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1896,6 +1954,7 @@
 		</for>
 	</item>
 	<item id="9358" type="Weapon" name="Durendal - Haste">
+		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1913,7 +1972,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3068-3" />
+		<set name="item_skill" val="3068-3" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1928,6 +1987,7 @@
 		</for>
 	</item>
 	<item id="9359" type="Weapon" name="Durendal - Health">
+		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1945,7 +2005,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-5" />
+		<set name="item_skill" val="3013-5" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1960,6 +2020,7 @@
 		</for>
 	</item>
 	<item id="9360" type="Weapon" name="Screaming Vengeance">
+		<!-- Kamael Exclusive Weapon: Shyeed's Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Quick Recover. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1992,6 +2053,7 @@
 		</for>
 	</item>
 	<item id="9361" type="Weapon" name="Screaming Vengeance - Cheap Shot">
+		<!-- Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2010,7 +2072,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3552-1;3360-1" />
+		<set name="item_skill" val="3552-1;3360-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2025,6 +2087,7 @@
 		</for>
 	</item>
 	<item id="9362" type="Weapon" name="Screaming Vengeance - Focus">
+		<!-- Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2043,7 +2106,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3050-2" />
+		<set name="item_skill" val="3050-2" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2058,6 +2121,7 @@
 		</for>
 	</item>
 	<item id="9363" type="Weapon" name="Screaming Vengeance - Quick Recovery">
+		<!-- Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Decreases re-use delay by about 17%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2076,7 +2140,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="332" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2091,6 +2155,7 @@
 		</for>
 	</item>
 	<item id="9364" type="Weapon" name="Laevateinn">
+		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion. Bestows one of the following functions. Haste, Health, or Focus. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2124,6 +2189,7 @@
 		</for>
 	</item>
 	<item id="9365" type="Weapon" name="Laevateinn - Haste">
+		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2143,7 +2209,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3564-1" />
+		<set name="item_skill" val="3564-1" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2158,6 +2224,7 @@
 		</for>
 	</item>
 	<item id="9366" type="Weapon" name="Laevateinn - Health">
+		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2177,7 +2244,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2192,6 +2259,7 @@
 		</for>
 	</item>
 	<item id="9367" type="Weapon" name="Laevateinn - Focus">
+		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2211,7 +2279,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3566-1" />
+		<set name="item_skill" val="3566-1" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2226,6 +2294,7 @@
 		</for>
 	</item>
 	<item id="9368" type="Weapon" name="Gram">
+		<!-- Kamael Exclusive Weapon: Heavens Divider Conversion. Bestows one of the following functions: Haste, Health, or Focus. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2258,6 +2327,7 @@
 		</for>
 	</item>
 	<item id="9369" type="Weapon" name="Gram - Haste">
+		<!-- Kamael Exclusive Weapon: Heavens Divider Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2276,7 +2346,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3564-1" />
+		<set name="item_skill" val="3564-1" /> <!-- Special Ability: Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2291,6 +2361,7 @@
 		</for>
 	</item>
 	<item id="9370" type="Weapon" name="Gram - Health">
+		<!-- Kamael Exclusive Weapon: Heavens Divider Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2309,7 +2380,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2324,6 +2395,7 @@
 		</for>
 	</item>
 	<item id="9371" type="Weapon" name="Gram - Focus">
+		<!-- Kamael Exclusive Weapon: Heavens Divider Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2342,7 +2414,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3566-1" />
+		<set name="item_skill" val="3566-1" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2357,6 +2429,7 @@
 		</for>
 	</item>
 	<item id="9372" type="Weapon" name="Sarunga">
+		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2390,6 +2463,7 @@
 		</for>
 	</item>
 	<item id="9373" type="Weapon" name="Sarunga - Cheap Shot">
+		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2409,7 +2483,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3552-1;3360-1" />
+		<set name="item_skill" val="3552-1;3360-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2424,6 +2498,7 @@
 		</for>
 	</item>
 	<item id="9374" type="Weapon" name="Sarunga - Focus">
+		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2443,7 +2518,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3567-1" />
+		<set name="item_skill" val="3567-1" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2458,6 +2533,7 @@
 		</for>
 	</item>
 	<item id="9375" type="Weapon" name="Sarunga - Critical Slow">
+		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2479,7 +2555,7 @@
 		<set name="reuse_delay" val="400" />
 		<set name="oncrit_chance" val="16" />
 		<set name="oncrit_skill" val="3574-1" />
-		<set name="item_skill" val="3552-1" />
+		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2494,6 +2570,7 @@
 		</for>
 	</item>
 	<item id="9376" type="Weapon" name="Dynasty Rapier">
+		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. Bestows one of the following functions. Focus, Health, or Light. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2527,6 +2604,7 @@
 		</for>
 	</item>
 	<item id="9377" type="Weapon" name="Dynasty Rapier - Focus">
+		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases critical attack by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2546,7 +2624,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3566-2" />
+		<set name="item_skill" val="3566-2" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2561,6 +2639,7 @@
 		</for>
 	</item>
 	<item id="9378" type="Weapon" name="Dynasty Rapier - Health">
+		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2580,7 +2659,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2595,6 +2674,7 @@
 		</for>
 	</item>
 	<item id="9379" type="Weapon" name="Dynasty Rapier - Light">
+		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Enchanted to . 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2614,7 +2694,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3552-1;3498-1" />
+		<set name="item_skill" val="3552-1;3498-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2629,6 +2709,7 @@
 		</for>
 	</item>
 	<item id="9380" type="Weapon" name="Dynasty Ancient Sword">
+		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2661,6 +2742,7 @@
 		</for>
 	</item>
 	<item id="9381" type="Weapon" name="Dynasty Ancient Sword - Focus">
+		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases critical attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2679,7 +2761,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3566-2" />
+		<set name="item_skill" val="3566-2" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2694,6 +2776,7 @@
 		</for>
 	</item>
 	<item id="9382" type="Weapon" name="Dynasty Ancient Sword - Health">
+		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2712,7 +2795,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3013-3" />
+		<set name="item_skill" val="3013-3" /> <!-- Special Ability: Health -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2727,6 +2810,7 @@
 		</for>
 	</item>
 	<item id="9383" type="Weapon" name="Dynasty Ancient Sword - Light">
+		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2745,7 +2829,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3552-1;3498-1" />
+		<set name="item_skill" val="3552-1;3498-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2760,6 +2844,7 @@
 		</for>
 	</item>
 	<item id="9384" type="Weapon" name="Dynasty Crossbow">
+		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2793,6 +2878,7 @@
 		</for>
 	</item>
 	<item id="9385" type="Weapon" name="Dynasty Crossbow - Cheap Shot">
+		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2812,7 +2898,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3552-1;3360-1" />
+		<set name="item_skill" val="3552-1;3360-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2827,6 +2913,7 @@
 		</for>
 	</item>
 	<item id="9386" type="Weapon" name="Dynasty Crossbow - Guidance">
+		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2846,7 +2933,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3573-2" />
+		<set name="item_skill" val="3573-2" /> <!-- Special Ability: Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2861,6 +2948,7 @@
 		</for>
 	</item>
 	<item id="9387" type="Weapon" name="Dynasty Crossbow - Focus">
+		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases critical attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2880,7 +2968,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3567-2" />
+		<set name="item_skill" val="3567-2" /> <!-- Special Ability: Focus -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2895,6 +2983,7 @@
 		</for>
 	</item>
 	<item id="9388" type="Weapon" name="Infinity Rapier">
+		<!-- Divine hero's weapon. During a critical attack, casts a P. Def.-decreasing de-buff on the target. Also causes damage shield, and increases Max HP/Max MP/Max CP. Adds holy P. Atk. Increases damage inflicted during PvP. There is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2915,7 +3004,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3579-1" />
-		<set name="item_skill" val="3427-1" />
+		<set name="item_skill" val="3427-1" /> <!-- Special Ability: Infinity Rapier -->
 		<cond msgId="1518">
 			<and>
 				<player races="KAMAEL" />
@@ -2932,6 +3021,7 @@
 		</for>
 	</item>
 	<item id="9389" type="Weapon" name="Infinity Sword">
+		<!-- Divine hero's weapon. During a critical attack, inflicts additional damage on the target. Also has a chance of causing skill reflect and increasing Max HP/Max CP and Critical Damage/Rate. Adds holy P. Atk. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2951,7 +3041,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="3634-1" />
+		<set name="item_skill" val="3634-1" /> <!-- Special Ability: Infinity Sword -->
 		<cond msgId="1518">
 			<and>
 				<player races="KAMAEL" />
@@ -2968,6 +3058,7 @@
 		</for>
 	</item>
 	<item id="9390" type="Weapon" name="Infinity Shooter">
+		<!-- Divine hero's weapon. During a critical attack, inflicts slow on the target. Decreases MP Consumption during skill use, and increases Max MP/Max CP. Adds holy P. Atk. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2989,7 +3080,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3594-1" />
-		<set name="item_skill" val="3635-1;3360-1" />
+		<set name="item_skill" val="3635-1;3360-1" /> <!-- Special Ability: Infinity Shooter -->
 		<cond msgId="1518">
 			<and>
 				<player races="KAMAEL" />
@@ -3006,6 +3097,7 @@
 		</for>
 	</item>
 	<item id="9391" type="Armor" name="Human Circlet">
+		<!-- A circlet that can only be worn by the Human Race. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_human_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3017,6 +3109,7 @@
 		</cond>
 	</item>
 	<item id="9392" type="Armor" name="Elven Circlet">
+		<!-- A circlet that can be worn by the Elf Race only. uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_elf_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3028,6 +3121,7 @@
 		</cond>
 	</item>
 	<item id="9393" type="Armor" name="Dark Elven Circlet">
+		<!-- A circlet that can be worn by the Dark Elf Race only. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_darkelf_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3039,6 +3133,7 @@
 		</cond>
 	</item>
 	<item id="9394" type="Armor" name="Orcish Circlet">
+		<!-- A circlet that can be worn by the Orc Race only. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_orc_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3050,6 +3145,7 @@
 		</cond>
 	</item>
 	<item id="9395" type="Armor" name="Dwarven Circlet">
+		<!-- A circlet that can be worn by the Dwarf Race only. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_dwarf_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3061,6 +3157,7 @@
 		</cond>
 	</item>
 	<item id="9396" type="Armor" name="Kamaelic Circlet">
+		<!-- A circlet that can be worn by the Kamael Race only. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_kamael_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3072,6 +3169,7 @@
 		</cond>
 	</item>
 	<item id="9397" type="Armor" name="Shield Master Circlet">
+		<!-- A circlet that can be worn by the Knight class after completion of 2nd or 3rd class transfer. Cannot be worn in a sub job condition. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_knight_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3087,6 +3185,7 @@
 		</cond>
 	</item>
 	<item id="9398" type="Armor" name="Bard Circlet">
+		<!-- A circlet that can be worn by the Bard class after completion of 2nd or 3rd class transfer. Cannot be worn in a sub job condition. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_enchant_knight_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -3102,6 +3201,7 @@
 		</cond>
 	</item>
 	<item id="9399" type="Armor" name="Force Master Circlet">
+		<!-- A circlet that can be worn by the Force Master class after completion of 2nd or 3rd class transfer. Cannot be worn in a sub job condition. Uses 2 circlet slots. -->
 		<set name="icon" val="icon.accessary_force_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

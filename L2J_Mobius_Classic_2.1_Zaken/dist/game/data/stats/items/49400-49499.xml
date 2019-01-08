@@ -379,7 +379,7 @@
 		</stats>
 	</item>
 	<item id="49416" name="Blade Spirit" type="EtcItem">
-		<!-- Used to exchange Soul Crystals. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse or transferred between characters on the same account through Dimensional Merchants. -->
 		<set name="icon" val="icon.etc_soul_of_blade" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -390,7 +390,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49417" name="Spirit Energy" type="EtcItem">
-		<!-- Used to exchange Soul Crystals. Cannot be dropped. -->
+		<!-- Item is not in use. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_power_of_soul" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -421,7 +421,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="49420" name="Scroll: Summon Storm" type="EtcItem">
-		<!-- Fills you with Storm Energy, granting 50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Available since level 40. -->
+		<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Available since level 40. -->
 		<set name="icon" val="icon.scrl_of_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -433,7 +433,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49421" name="Package: Cube of Sayha (30-day)" type="EtcItem">
-		<!-- Double-click the package to receive 30-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Available since level 40. -->
+		<!-- Double-click the package to receive 30-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Available since level 40. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +447,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49422" name="Package: Cube of Sayha (90-day)" type="EtcItem">
-		<!-- Double-click the package to receive 90-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Available since level 40. -->
+		<!-- Double-click the package to receive 90-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Available since level 40. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -538,7 +538,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49434" name="Sayha's Treasure Chest" type="EtcItem">
-		<!-- Open the chest to receive the Adena or Buff Scroll with a certain probability. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<!-- Open the chest to receive the Adena or Buff Scroll with a certain probability. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -551,7 +551,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49435" name="Scroll: Berserker Spirit" type="EtcItem">
-		<!-- P. Def. -5%, M. Def. -10%, Evasion -2 -->
+		<!-- For 20 minutes, P. Def. - 5%, M. Def. - 10%, P. Evasion - 2, P. Atk. + 5%, M. Atk. + 10%, Atk. Spd. + 5%, Casting Spd. + 5%, Speed + 5. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -913,7 +913,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49457" name="Letter Collector's Gift" type="EtcItem">
-		<!-- Letter Collector's Gift. Increases XP and SP gain by 10%, Max. HP / MP by 10%, Speed by 5 for 1 hour. Your armor changes to Santa Suit. The item will be deleted after the event is over. -->
+		<!-- Letter Collector's Gift. Increases XP and SP gain by +10%, Max. HP / MP by +10%, Speed by 5 for 1 hour. Your armor changes to Santa Suit. The item will be deleted after the event is over. -->
 		<set name="icon" val="icon.shield_bread_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -965,7 +965,7 @@
 		</skills>
 	</item>
 	<item id="49460" name="Fish Stew: Might" type="EtcItem">
-		<!-- Increases P. Atk. by 8% for 20 minutes. The item cannot be dropped. -->
+		<!-- For 20 min. P. Atk. +8%. Cannot be dropped. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -983,7 +983,7 @@
 		</skills>
 	</item>
 	<item id="49461" name="Fish Stew: Shield" type="EtcItem">
-		<!-- Increases P. Def. by 8% for 20 minutes. The item cannot be dropped. -->
+		<!-- For 20 min. P. Def. +8%. Cannot be dropped. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1001,7 +1001,7 @@
 		</skills>
 	</item>
 	<item id="49462" name="Fish Stew: Magic Barrier" type="EtcItem">
-		<!-- Increases M. Def. by 23% for 20 minutes. The item cannot be dropped. -->
+		<!-- For 20 min. M. Def. +23%. Cannot be dropped. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1019,7 +1019,7 @@
 		</skills>
 	</item>
 	<item id="49463" name="Fish Stew: Vampiric Rage" type="EtcItem">
-		<!-- Restores 6% from received physical damage for 20 minutes. The item cannot be dropped. -->
+		<!-- For 20 min. recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. Cannot be dropped. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1037,7 +1037,7 @@
 		</skills>
 	</item>
 	<item id="49464" name="Fish Stew: Empower" type="EtcItem">
-		<!-- Increases M. Atk. by 55% for 20 minutes. The item cannot be dropped. -->
+		<!-- For 20 min. M. Atk. +55%. Cannot be dropped. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1130,7 +1130,7 @@
 		</stats>
 	</item>
 	<item id="49469" name="Pendant Polish" type="EtcItem">
-		<!-- Polish that enhances characteristics of a Pendant. Can be enchanted to +3 with 100% probability. Maximum Enchant Level is +10. Grants special characteristics starting from level +4, depending on Pendant type. -->
+		<!-- Polish that enhances characteristics of a Pendant. Maximum Enchant Level is +10. If the enchant fails, pendant disappears. -->
 		<set name="icon" val="icon.bm_pendant_varnish" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1155,8 +1155,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49467" min="1" max="1" chance="100" />
-			<item id="49469" min="10" max="10" chance="100" />
+			<item id="49467" min="1" max="1" chance="100" /> <!-- Fire Dragon Pendant -->
+			<item id="49469" min="10" max="10" chance="100" /> <!-- Pendant Polish -->
 		</capsuled_items>
 	</item>
 	<item id="49472" name="Land Dragon Pendant Chest" type="EtcItem">
@@ -1169,7 +1169,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49473" name="Mr. K's Hand of God Gift Basket" type="EtcItem">
-		<!-- Gift Basket that contains the spirit of Mr. K's Hand of God. Open it to receive 1 Black Mask, 30 Rice Cakes of Flaming Fighting Spirit, and 50 Rice Cakes of Fighting Spirit (XP). Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
+		<!-- Gift Basket that contains the spirit of Mr. K's Hand of God. Open it to receive 1 Black Mask, 30 Rice Cakes of Flaming Fighting Spirit, and 50 Rice Cakes of Fighting Spirit (XP). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.mrk_basket_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1182,7 +1182,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49474" name="Scroll Part: Enchant Weapon" type="EtcItem">
-		<!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of these Scrolls: Scroll: Enchant Weapon D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of Scrolls: Scroll: Enchant Weapon D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_enchant_piece" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1191,7 +1191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49475" name="Scroll Part: Enchant Armor" type="EtcItem">
-		<!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of these Scrolls: Scroll: Enchant Armor D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of Scrolls: Scroll: Enchant Armor D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_enchant_piece" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1311,7 +1311,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49487" name="Soulshot Ticket" type="EtcItem">
-		<!-- Can be exchanged through Dimensional Merchant to get Soulshot, Spiritshot, Blessed Spiritshot (No-grade/D-grade/C-grade).Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. -->
+		<!-- Can be exchanged through Dimensional Merchant to get Soulshot, Spiritshot, Blessed Spiritshot (No-grade/D-grade/C-grade).Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1322,7 +1322,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49488" name="Major Healing Potion" type="EtcItem">
-		<!-- Magic potion that quickly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic potion that quickly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1344,7 +1344,7 @@
 		</skills>
 	</item>
 	<item id="49489" name="Parts of Enchantment Scrolls Chest" type="EtcItem">
-		<!-- Double-click to receive a Part of Enchantment Scroll. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
+		<!-- Double-click to receive one Part of Enchantment Scrolls. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Note>. Items received cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1356,7 +1356,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49490" name="Fishing kit" type="EtcItem">
-		<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
+		<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Note>. Be careful before opening the items as their relocation is restricted. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1466,7 +1466,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="49497" name="Hero's Fishing kit" type="EtcItem">
-		<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
+		<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords (1-day), 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Note>. Be careful before opening the items as their relocation is restricted. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1491,7 +1491,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49499" name="Angel Cat's Energy" additionalName="30-day" type="EtcItem">
-		<!-- Increases Max. HP / MP by 5%, XP and SP gain by 20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. Duration: 30 minutes. -->
+		<!-- For 30 minutes, increases Max. HP / MP by +5%, XP and SP gain by +20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

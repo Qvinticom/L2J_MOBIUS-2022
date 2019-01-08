@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21200" level="60" type="L2Monster" name="Nephilim Bishop">
 		<parameters>
@@ -742,16 +742,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="2" /> <!--NPC HP Drain -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="3" /> <!--Light Armor Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
+			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -770,11 +770,11 @@
 				<item id="1867" min="1" max="1" chance="17.289" /> <!-- Animal Skin -->
 				<item id="1881" min="1" max="1" chance="1.719" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="0.857" /> <!-- Stone of Purity -->
-				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword(100%) -->
+				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword -->
 			</drop>
 			<spoil>
-				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boots Lining -->
-				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Enchanted Necklace -->
+				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boot Lining -->
+				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Magic Necklace -->
 				<item id="1932" min="1" max="1" chance="18.2156" /> <!-- Bone Helmet Design -->
 			</spoil>
 		</dropLists>

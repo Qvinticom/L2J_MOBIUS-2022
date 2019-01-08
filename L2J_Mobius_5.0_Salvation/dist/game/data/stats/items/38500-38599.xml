@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38500" name="Agathion - Twinkling Cancer" type="Armor">
-		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. each increases by 30. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -25,7 +25,7 @@
 		</skills>
 	</item>
 	<item id="38501" name="Agathion - Radiant Cancer" type="Armor">
-		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Def. each increases by 30. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -49,7 +49,7 @@
 		</skills>
 	</item>
 	<item id="38502" name="Agathion - Cancer" type="Armor">
-		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -72,7 +72,7 @@
 		</skills>
 	</item>
 	<item id="38503" name="Agathion - Faint Cancer" type="Armor">
-		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -104,7 +104,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38449" min="1" max="1" chance="100" />
+			<item id="38449" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Capricorn -->
 		</capsuled_items>
 	</item>
 	<item id="38505" name="Agathion - Twinkling Capricorn Pack" type="EtcItem">
@@ -118,7 +118,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38450" min="1" max="1" chance="100" />
+			<item id="38450" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Capricorn -->
 		</capsuled_items>
 	</item>
 	<item id="38506" name="Agathion - Radiant Capricorn Pack" type="EtcItem">
@@ -132,7 +132,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38451" min="1" max="1" chance="100" />
+			<item id="38451" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Capricorn -->
 		</capsuled_items>
 	</item>
 	<item id="38507" name="Agathion - Capricorn Pack" type="EtcItem">
@@ -146,7 +146,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38452" min="1" max="1" chance="100" />
+			<item id="38452" min="1" max="1" chance="100" /> <!-- Agathion - Capricorn -->
 		</capsuled_items>
 	</item>
 	<item id="38508" name="Agathion - Faint Capricorn Pack" type="EtcItem">
@@ -160,7 +160,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38453" min="1" max="1" chance="100" />
+			<item id="38453" min="1" max="1" chance="100" /> <!-- Agathion - Faint Capricorn -->
 		</capsuled_items>
 	</item>
 	<item id="38509" name="Agathion - Blessed Libra Pack" type="EtcItem">
@@ -174,7 +174,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38454" min="1" max="1" chance="100" />
+			<item id="38454" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Libra -->
 		</capsuled_items>
 	</item>
 	<item id="38510" name="Agathion - Twinkling Libra Pack" type="EtcItem">
@@ -188,7 +188,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38455" min="1" max="1" chance="100" />
+			<item id="38455" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Libra -->
 		</capsuled_items>
 	</item>
 	<item id="38511" name="Agathion - Radiant Libra Pack" type="EtcItem">
@@ -202,7 +202,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38456" min="1" max="1" chance="100" />
+			<item id="38456" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Libra -->
 		</capsuled_items>
 	</item>
 	<item id="38512" name="Agathion - Libra Pack" type="EtcItem">
@@ -216,7 +216,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38457" min="1" max="1" chance="100" />
+			<item id="38457" min="1" max="1" chance="100" /> <!-- Agathion - Libra -->
 		</capsuled_items>
 	</item>
 	<item id="38513" name="Agathion - Faint Libra Pack" type="EtcItem">
@@ -230,7 +230,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38458" min="1" max="1" chance="100" />
+			<item id="38458" min="1" max="1" chance="100" /> <!-- Agathion - Faint Libra -->
 		</capsuled_items>
 	</item>
 	<item id="38514" name="Agathion - Blessed Aries Pack" type="EtcItem">
@@ -244,7 +244,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38459" min="1" max="1" chance="100" />
+			<item id="38459" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aries -->
 		</capsuled_items>
 	</item>
 	<item id="38515" name="Agathion - Twinkling Aries Pack" type="EtcItem">
@@ -258,7 +258,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38460" min="1" max="1" chance="100" />
+			<item id="38460" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Aries -->
 		</capsuled_items>
 	</item>
 	<item id="38516" name="Agathion - Radiant Aries Pack" type="EtcItem">
@@ -272,7 +272,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38461" min="1" max="1" chance="100" />
+			<item id="38461" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Aries -->
 		</capsuled_items>
 	</item>
 	<item id="38517" name="Agathion - Aries Pack" type="EtcItem">
@@ -286,7 +286,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38462" min="1" max="1" chance="100" />
+			<item id="38462" min="1" max="1" chance="100" /> <!-- Agathion - Aries -->
 		</capsuled_items>
 	</item>
 	<item id="38518" name="Agathion - Faint Aries Pack" type="EtcItem">
@@ -300,7 +300,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38463" min="1" max="1" chance="100" />
+			<item id="38463" min="1" max="1" chance="100" /> <!-- Agathion - Faint Aries -->
 		</capsuled_items>
 	</item>
 	<item id="38519" name="Agathion - Blessed Taurus Pack" type="EtcItem">
@@ -314,7 +314,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38464" min="1" max="1" chance="100" />
+			<item id="38464" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Taurus -->
 		</capsuled_items>
 	</item>
 	<item id="38520" name="Agathion - Twinkling Taurus Pack" type="EtcItem">
@@ -328,7 +328,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38465" min="1" max="1" chance="100" />
+			<item id="38465" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Taurus -->
 		</capsuled_items>
 	</item>
 	<item id="38521" name="Agathion - Radiant Taurus Pack" type="EtcItem">
@@ -342,7 +342,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38466" min="1" max="1" chance="100" />
+			<item id="38466" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Taurus -->
 		</capsuled_items>
 	</item>
 	<item id="38522" name="Agathion - Taurus Pack" type="EtcItem">
@@ -356,7 +356,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38467" min="1" max="1" chance="100" />
+			<item id="38467" min="1" max="1" chance="100" /> <!-- Agathion - Taurus -->
 		</capsuled_items>
 	</item>
 	<item id="38523" name="Agathion - Faint Taurus Pack" type="EtcItem">
@@ -370,7 +370,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38468" min="1" max="1" chance="100" />
+			<item id="38468" min="1" max="1" chance="100" /> <!-- Agathion - Faint Taurus -->
 		</capsuled_items>
 	</item>
 	<item id="38524" name="Agathion - Blessed Leo Pack" type="EtcItem">
@@ -384,7 +384,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38469" min="1" max="1" chance="100" />
+			<item id="38469" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Leo -->
 		</capsuled_items>
 	</item>
 	<item id="38525" name="Agathion - Twinkling Leo Pack" type="EtcItem">
@@ -398,7 +398,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38470" min="1" max="1" chance="100" />
+			<item id="38470" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Leo -->
 		</capsuled_items>
 	</item>
 	<item id="38526" name="Agathion - Radiant Leo Pack" type="EtcItem">
@@ -412,7 +412,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38471" min="1" max="1" chance="100" />
+			<item id="38471" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Leo -->
 		</capsuled_items>
 	</item>
 	<item id="38527" name="Agathion - Leo Pack" type="EtcItem">
@@ -426,7 +426,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38472" min="1" max="1" chance="100" />
+			<item id="38472" min="1" max="1" chance="100" /> <!-- Agathion - Leo -->
 		</capsuled_items>
 	</item>
 	<item id="38528" name="Agathion - Faint Leo Pack" type="EtcItem">
@@ -440,7 +440,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38473" min="1" max="1" chance="100" />
+			<item id="38473" min="1" max="1" chance="100" /> <!-- Agathion - Faint Leo -->
 		</capsuled_items>
 	</item>
 	<item id="38529" name="Agathion - Blessed Gemini Pack" type="EtcItem">
@@ -454,7 +454,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38474" min="1" max="1" chance="100" />
+			<item id="38474" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Gemini -->
 		</capsuled_items>
 	</item>
 	<item id="38530" name="Agathion - Twinkling Gemini Pack" type="EtcItem">
@@ -468,7 +468,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38475" min="1" max="1" chance="100" />
+			<item id="38475" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Gemini -->
 		</capsuled_items>
 	</item>
 	<item id="38531" name="Agathion - Radiant Gemini Pack" type="EtcItem">
@@ -482,7 +482,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38476" min="1" max="1" chance="100" />
+			<item id="38476" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Gemini -->
 		</capsuled_items>
 	</item>
 	<item id="38532" name="Agathion - Gemini Pack" type="EtcItem">
@@ -496,7 +496,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38477" min="1" max="1" chance="100" />
+			<item id="38477" min="1" max="1" chance="100" /> <!-- Agathion - Gemini -->
 		</capsuled_items>
 	</item>
 	<item id="38533" name="Agathion - Faint Gemini Pack" type="EtcItem">
@@ -510,7 +510,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38478" min="1" max="1" chance="100" />
+			<item id="38478" min="1" max="1" chance="100" /> <!-- Agathion - Faint Gemini -->
 		</capsuled_items>
 	</item>
 	<item id="38534" name="Agathion - Blessed Scorpio Pack" type="EtcItem">
@@ -524,7 +524,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38479" min="1" max="1" chance="100" />
+			<item id="38479" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Scorpio -->
 		</capsuled_items>
 	</item>
 	<item id="38535" name="Agathion - Twinkling Scorpio Pack" type="EtcItem">
@@ -538,7 +538,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38480" min="1" max="1" chance="100" />
+			<item id="38480" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Scorpio -->
 		</capsuled_items>
 	</item>
 	<item id="38536" name="Agathion - Radiant Scorpio Pack" type="EtcItem">
@@ -552,7 +552,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38481" min="1" max="1" chance="100" />
+			<item id="38481" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Scorpio -->
 		</capsuled_items>
 	</item>
 	<item id="38537" name="Agathion - Scorpio Pack" type="EtcItem">
@@ -566,7 +566,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38482" min="1" max="1" chance="100" />
+			<item id="38482" min="1" max="1" chance="100" /> <!-- Agathion - Scorpio -->
 		</capsuled_items>
 	</item>
 	<item id="38538" name="Agathion - Faint Scorpio Pack" type="EtcItem">
@@ -580,7 +580,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38483" min="1" max="1" chance="100" />
+			<item id="38483" min="1" max="1" chance="100" /> <!-- Agathion - Faint Scorpio -->
 		</capsuled_items>
 	</item>
 	<item id="38539" name="Agathion - Blessed Aquarius Pack" type="EtcItem">
@@ -594,7 +594,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38484" min="1" max="1" chance="100" />
+			<item id="38484" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aquarius -->
 		</capsuled_items>
 	</item>
 	<item id="38540" name="Agathion - Twinkling Aquarius Pack" type="EtcItem">
@@ -608,7 +608,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38485" min="1" max="1" chance="100" />
+			<item id="38485" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Aquarius -->
 		</capsuled_items>
 	</item>
 	<item id="38541" name="Agathion - Radiant Aquarius Pack" type="EtcItem">
@@ -622,7 +622,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38486" min="1" max="1" chance="100" />
+			<item id="38486" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Aquarius -->
 		</capsuled_items>
 	</item>
 	<item id="38542" name="Agathion - Aquarius Pack" type="EtcItem">
@@ -636,7 +636,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38487" min="1" max="1" chance="100" />
+			<item id="38487" min="1" max="1" chance="100" /> <!-- Agathion - Aquarius -->
 		</capsuled_items>
 	</item>
 	<item id="38543" name="Agathion - Faint Aquarius Pack" type="EtcItem">
@@ -650,7 +650,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38488" min="1" max="1" chance="100" />
+			<item id="38488" min="1" max="1" chance="100" /> <!-- Agathion - Faint Aquarius -->
 		</capsuled_items>
 	</item>
 	<item id="38544" name="Agathion - Blessed Pisces Pack" type="EtcItem">
@@ -664,7 +664,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38489" min="1" max="1" chance="100" />
+			<item id="38489" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces -->
 		</capsuled_items>
 	</item>
 	<item id="38545" name="Agathion - Twinkling Pisces Pack" type="EtcItem">
@@ -678,7 +678,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38490" min="1" max="1" chance="100" />
+			<item id="38490" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Pisces -->
 		</capsuled_items>
 	</item>
 	<item id="38546" name="Agathion - Radiant Pisces Pack" type="EtcItem">
@@ -692,7 +692,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38491" min="1" max="1" chance="100" />
+			<item id="38491" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Pisces -->
 		</capsuled_items>
 	</item>
 	<item id="38547" name="Agathion - Pisces Pack" type="EtcItem">
@@ -706,7 +706,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38492" min="1" max="1" chance="100" />
+			<item id="38492" min="1" max="1" chance="100" /> <!-- Agathion - Pisces -->
 		</capsuled_items>
 	</item>
 	<item id="38548" name="Agathion - Faint Pisces Pack" type="EtcItem">
@@ -720,7 +720,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38493" min="1" max="1" chance="100" />
+			<item id="38493" min="1" max="1" chance="100" /> <!-- Agathion - Faint Pisces -->
 		</capsuled_items>
 	</item>
 	<item id="38549" name="Agathion - Blessed Sagittarius Pack" type="EtcItem">
@@ -734,7 +734,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38494" min="1" max="1" chance="100" />
+			<item id="38494" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Sagittarius -->
 		</capsuled_items>
 	</item>
 	<item id="38550" name="Agathion - Twinkling Sagittarius Pack" type="EtcItem">
@@ -748,7 +748,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38495" min="1" max="1" chance="100" />
+			<item id="38495" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Sagittarius -->
 		</capsuled_items>
 	</item>
 	<item id="38551" name="Agathion - Radiant Sagittarius Pack" type="EtcItem">
@@ -762,7 +762,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38496" min="1" max="1" chance="100" />
+			<item id="38496" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Sagittarius -->
 		</capsuled_items>
 	</item>
 	<item id="38552" name="Agathion - Sagittarius Pack" type="EtcItem">
@@ -776,7 +776,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38497" min="1" max="1" chance="100" />
+			<item id="38497" min="1" max="1" chance="100" /> <!-- Agathion - Sagittarius -->
 		</capsuled_items>
 	</item>
 	<item id="38553" name="Agathion - Faint Sagittarius Pack" type="EtcItem">
@@ -790,7 +790,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38498" min="1" max="1" chance="100" />
+			<item id="38498" min="1" max="1" chance="100" /> <!-- Agathion - Faint Sagittarius -->
 		</capsuled_items>
 	</item>
 	<item id="38554" name="Agathion - Blessed Cancer Pack" type="EtcItem">
@@ -804,7 +804,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38499" min="1" max="1" chance="100" />
+			<item id="38499" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Cancer -->
 		</capsuled_items>
 	</item>
 	<item id="38555" name="Agathion - Twinkling Cancer Pack" type="EtcItem">
@@ -818,7 +818,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38500" min="1" max="1" chance="100" />
+			<item id="38500" min="1" max="1" chance="100" /> <!-- Agathion - Twinkling Cancer -->
 		</capsuled_items>
 	</item>
 	<item id="38556" name="Agathion - Radiant Cancer Pack" type="EtcItem">
@@ -832,7 +832,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38501" min="1" max="1" chance="100" />
+			<item id="38501" min="1" max="1" chance="100" /> <!-- Agathion - Radiant Cancer -->
 		</capsuled_items>
 	</item>
 	<item id="38557" name="Agathion - Cancer Pack" type="EtcItem">
@@ -846,7 +846,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38502" min="1" max="1" chance="100" />
+			<item id="38502" min="1" max="1" chance="100" /> <!-- Agathion - Cancer -->
 		</capsuled_items>
 	</item>
 	<item id="38558" name="Agathion - Faint Cancer Pack" type="EtcItem">
@@ -860,7 +860,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38503" min="1" max="1" chance="100" />
+			<item id="38503" min="1" max="1" chance="100" /> <!-- Agathion - Faint Cancer -->
 		</capsuled_items>
 	</item>
 	<item id="38559" name="Monster Only: Mahum Throwing Blade" type="Weapon">
@@ -978,7 +978,7 @@
 		</stats>
 	</item>
 	<item id="38565" name="Aria's Bracelet" additionalName="CON+3" type="Armor">
-		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, CON + 3. -->
+		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP +531, CON +3. -->
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -997,7 +997,7 @@
 		</skills>
 	</item>
 	<item id="38566" name="Aria's Bracelet" additionalName="MEN+3" type="Armor">
-		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, MEN + 3. -->
+		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP +531, MEN +3. -->
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1016,7 +1016,7 @@
 		</skills>
 	</item>
 	<item id="38567" name="Aria's Bracelet" additionalName="DEX+3" type="Armor">
-		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, DEX + 3. -->
+		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP +531, DEX +3. -->
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1035,7 +1035,7 @@
 		</skills>
 	</item>
 	<item id="38568" name="Aria's Bracelet" additionalName="WIT+3" type="Armor">
-		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, WIT + 3. -->
+		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP +531, WIT +3. -->
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1054,7 +1054,7 @@
 		</skills>
 	</item>
 	<item id="38569" name="Aria's Bracelet" additionalName="STR+3" type="Armor">
-		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, STR + 3. -->
+		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP +531, STR +3. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1073,7 +1073,7 @@
 		</skills>
 	</item>
 	<item id="38570" name="Aria's Bracelet" additionalName="INT+3" type="Armor">
-		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, INT + 3. -->
+		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP +531, INT +3. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1197,7 +1197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38581" name="Emperor's Dessert Set (Attack Type)" type="EtcItem">
-		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Atk. Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
+		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Atk. Cookie, and Emperor's Cookie for 1 hour. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_buff_fighter_gd35_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -1226,7 +1226,7 @@
 		</skills>
 	</item>
 	<item id="38582" name="Emperor's Dessert Set (Magic Type)" type="EtcItem">
-		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Magic Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
+		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Magic Cookie, and Emperor's Cookie for 1 hour. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_buff_mage_gd35_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -1255,7 +1255,7 @@
 		</skills>
 	</item>
 	<item id="38583" name="Emperor's Dessert Set (Defense Type)" type="EtcItem">
-		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Def. Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
+		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Def. Cookie, and Emperor's Cookie for 1 hour. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_buff_tank_gd35_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -1284,7 +1284,7 @@
 		</skills>
 	</item>
 	<item id="38584" name="Emperor's Dessert Set Pack (Attack Type)" type="EtcItem">
-		<!-- Double-click to obtain either Emperor's Dessert Set (Attack) x 10. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Emperor's Dessert Set (Attack) x 10. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1296,11 +1296,11 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="38581" min="10" max="10" chance="100" />
+			<item id="38581" min="10" max="10" chance="100" /> <!-- Emperor's Dessert Set (Attack Type) -->
 		</capsuled_items>
 	</item>
 	<item id="38585" name="Emperor's Dessert Set Pack (Magic Type)" type="EtcItem">
-		<!-- Double-click to obtain either Emperor's Dessert Set (Magic) x 10. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Emperor's Dessert Set (Magic) x 10. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1312,11 +1312,11 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="38582" min="10" max="10" chance="100" />
+			<item id="38582" min="10" max="10" chance="100" /> <!-- Emperor's Dessert Set (Magic Type) -->
 		</capsuled_items>
 	</item>
 	<item id="38586" name="Emperor's Dessert Set Pack (Defense Type)" type="EtcItem">
-		<!-- Double-click to obtain either Emperor's Dessert Set (Defense) x 10. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain Emperor's Dessert Set (Defense) x 10. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1328,7 +1328,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="38583" min="10" max="10" chance="100" />
+			<item id="38583" min="10" max="10" chance="100" /> <!-- Emperor's Dessert Set (Defense Type) -->
 		</capsuled_items>
 	</item>
 	<item id="38587" name="Fish Hat" type="Armor">
@@ -1356,7 +1356,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="38591" name="Tiat's Belt" type="Armor">
-		<!-- Belt instilled with Tiat's power. Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slot + 18. Received damage - 6%. -->
+		<!-- Belt instilled with Tiat's power. Max HP/ CP +398, Max MP +176, weight gauge +12800, additional damage +5%, Inventory Slots +18. Received damage -6%. -->
 		<set name="icon" val="icon.belt_of_tiat" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1371,7 +1371,7 @@
 		</stats>
 	</item>
 	<item id="38592" name="Ekimus' Belt" type="Armor">
-		<!-- Belt instilled with Ekimus' power. Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slot + 18. Received damage - 6%. -->
+		<!-- Belt instilled with Ekimus' power. Max HP/ CP +398, Max MP +176, weight gauge +12800, additional damage +5%, Inventory Slots +18. Received damage -6%. -->
 		<set name="icon" val="icon.belt_of_echimus" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1413,7 +1413,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="38595" name="Steel Keshanberk" type="Weapon">
-		<!-- <Special Option>. Critical + 68. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. Critical +68. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_kshanberk_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1464,7 +1464,7 @@
 		</stats>
 	</item>
 	<item id="38597" name="Steel Tallum Blade" type="Weapon">
-		<!-- <Special Option>. Atk. Spd. + 6%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. Atk. Spd. +6%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1489,7 +1489,7 @@
 		</stats>
 	</item>
 	<item id="38598" name="Steel Draconic Bow" type="Weapon">
-		<!-- <Special Option>. Critical + 88. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. Critical +88. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1515,7 +1515,7 @@
 		</stats>
 	</item>
 	<item id="38599" name="Steel Dynasty Sword" type="Weapon">
-		<!-- <Special Option>. Critical + 111. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. Critical +111. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

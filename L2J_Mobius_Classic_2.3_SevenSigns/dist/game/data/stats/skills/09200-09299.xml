@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="9206" toLevel="1" name="Fast Run">
-		<!-- For 30 seconds, Speed + 95. -->
+		<!-- For 30 sec., Speed +95. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPECIAL_RIDE</abnormalType>
@@ -45,7 +45,6 @@
 		</effects>
 	</skill>
 	<skill id="9244" toLevel="1" name="Improved Scroll: Enchant Weapon (D-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -57,7 +56,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9245" toLevel="1" name="Improved Scroll: Enchant Armor (D-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -69,7 +67,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9246" toLevel="1" name="Improved Scroll: Enchant Weapon (C-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -81,7 +78,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9247" toLevel="1" name="Improved Scroll: Enchant Armor (C-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -93,7 +89,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9248" toLevel="1" name="Improved Scroll: Enchant Weapon (B-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -105,7 +100,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9249" toLevel="1" name="Improved Scroll: Enchant Armor (B-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -117,7 +111,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9250" toLevel="1" name="Improved Scroll: Enchant Weapon (A-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -129,7 +122,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9251" toLevel="1" name="Improved Scroll: Enchant Armor (A-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -141,7 +133,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9257" toLevel="1" name="Mentor's Scroll: Enchant Weapon (D-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -153,7 +144,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9259" toLevel="1" name="Mentor's Scroll: Enchant Weapon (C-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -165,8 +155,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9279" toLevel="1" name="PA Progression Support">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Obtained XP/SP + 30%. Not for pets/servitors. PC Cafes only. -->
+		<!-- Acquired XP/ SP +10%. Not for servitors. PA only. -->
 		<icon>icon.etc_pccafe_exp_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -218,7 +207,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9296" toLevel="1" name="Mysterious Soulshot (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

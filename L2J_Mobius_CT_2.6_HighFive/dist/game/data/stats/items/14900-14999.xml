@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14900" type="EtcItem" name="Rune Supply Box - Magic Ornament - Grade S, A">
+		<!-- A box that has the symbol of Rune. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -11,9 +12,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2991-1" />
+		<set name="item_skill" val="2991-1" /> <!-- Rune supply box - magic ornament -->
 	</item>
 	<item id="14901" type="EtcItem" name="Schuttgart Supply Box - Magic Ornament - Grade S, A">
+		<!-- A box that has the symbol of Schuttgart. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -24,129 +26,150 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2992-1" />
+		<set name="item_skill" val="2992-1" /> <!-- Schuttgart supply box - magic ornament -->
 	</item>
 	<item id="14902" type="EtcItem" name="Sealed Magic Rune Clip (A-Grade)">
+		<!-- Can be attached to Sealed Magic Rune Clip and Belt. Ehe seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14903" type="EtcItem" name="Sealed Magic Rune Clip (S-Grade)">
+		<!-- Can be attached to Sealed Magic Rune Clip and Belt. Ehe seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14904" type="EtcItem" name="Sealed Magic Ornament (A-Grade)">
+		<!-- Can be attached to Sealed Magic Ornament and Belt. Ehe seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14905" type="EtcItem" name="Sealed Magic Ornament (S-Grade)">
+		<!-- Can be attached to Sealed Magic Ornament and Belt. Ehe seal can be cancelled through the weaver Olf Kanore and Olf Adams. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14906" type="EtcItem" name="Low-level Magic Rune Clip (A-Grade)">
+		<!-- Low-Grade Magic Rune Clip that can improve the function of Steel Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14907" type="EtcItem" name="Mid-level Magic Rune Clip (A-Grade)">
+		<!-- Magic Rune Clip that can improve the function of Steel Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14908" type="EtcItem" name="High-level Magic Rune Clip (A-Grade)">
+		<!-- Magic Rune Clip that can improve the function of Steel Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14909" type="EtcItem" name="Top-level Magic Rune Clip (A-Grade)">
+		<!-- Magic Rune Clip that can improve the function of Steel Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14910" type="EtcItem" name="Low-level Magic Rune Clip (S-Grade)">
+		<!-- Low-Grade Magic Rune Clip that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14911" type="EtcItem" name="Mid-level Magic Rune Clip (S-Grade)">
+		<!-- Magic Rune Clip that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14912" type="EtcItem" name="High-level Magic Rune Clip (S-Grade)">
+		<!-- High-grade Magic Rune Clip that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14913" type="EtcItem" name="Top-level Magic Rune Clip (S-Grade)">
+		<!-- Highest-grade Magic Rune Clip that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14914" type="EtcItem" name="Low-grade Magic Ornament (A-Grade)">
+		<!-- Low-Grade Magic Ornament that can improve the function of Steel Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14915" type="EtcItem" name="Mid-grade Magic Ornament (A-Grade)">
+		<!-- Magic Ornament that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14916" type="EtcItem" name="High-grade Magic Ornament (A-Grade)">
+		<!-- High-level Magic Ornament that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14917" type="EtcItem" name="Top-grade Magic Ornament (A-Grade)">
+		<!-- Highest-level Magic Ornament that can improve the function of Iron Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14918" type="EtcItem" name="Low-grade Magic Ornament (S-Grade)">
+		<!-- Low-Grade Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14919" type="EtcItem" name="Mid-grade Magic Ornament (S-Grade)">
+		<!-- Magic Pin that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14920" type="EtcItem" name="High-grade Magic Ornament (S-Grade)">
+		<!-- High-level Magic Ornament that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14921" type="EtcItem" name="Top-grade Magic Ornament (S-Grade)">
+		<!-- High-level Magic Ornament that can improve the function of Mithril Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14922" type="Armor" name="Low-grade Magic Rune Clip Iron Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -158,13 +181,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8338-1" />
+		<set name="item_skill" val="8338-1" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14923" type="Armor" name="Ordinary Magic Rune Clip Iron Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -176,13 +200,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8338-2" />
+		<set name="item_skill" val="8338-2" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14924" type="Armor" name="High-grade Magic Rune Clip Iron Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -194,13 +219,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8338-3" />
+		<set name="item_skill" val="8338-3" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14925" type="Armor" name="Top-grade Magic Rune Clip Iron Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -212,13 +238,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8338-4" />
+		<set name="item_skill" val="8338-4" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14926" type="Armor" name="Low-grade Magic Rune Clip Mithril Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -230,13 +257,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8339-1" />
+		<set name="item_skill" val="8339-1" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14927" type="Armor" name="Ordinary Magic Rune Clip Mithril Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -248,13 +276,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8339-2" />
+		<set name="item_skill" val="8339-2" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14928" type="Armor" name="High-grade Magic Rune Clip Mithril Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -266,13 +295,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8339-3" />
+		<set name="item_skill" val="8339-3" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14929" type="Armor" name="Top-grade Magic Rune Clip Mithril Belt - HP Recovery">
+		<!-- Increases HP Recovery Rate. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -284,13 +314,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8339-4" />
+		<set name="item_skill" val="8339-4" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14930" type="Armor" name="Low-grade Magic Rune Clip Iron Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -302,13 +333,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8340-1" />
+		<set name="item_skill" val="8340-1" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14931" type="Armor" name="Ordinary Magic Rune Clip Iron Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -320,13 +352,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8340-2" />
+		<set name="item_skill" val="8340-2" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14932" type="Armor" name="High-grade Magic Rune Clip Iron Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -338,13 +371,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8340-3" />
+		<set name="item_skill" val="8340-3" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14933" type="Armor" name="Top-grade Magic Rune Clip Iron Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -356,13 +390,14 @@
 		<set name="weight" val="460" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8340-4" />
+		<set name="item_skill" val="8340-4" /> <!-- Low-grade Magic Rune Clip Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14934" type="Armor" name="Low-grade Magic Rune Clip Mithril Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -374,13 +409,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8341-1" />
+		<set name="item_skill" val="8341-1" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14935" type="Armor" name="Ordinary Magic Rune Clip Mithril Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -392,13 +428,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8341-2" />
+		<set name="item_skill" val="8341-2" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14936" type="Armor" name="High-grade Magic Rune Clip Mithril Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -410,13 +447,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8341-3" />
+		<set name="item_skill" val="8341-3" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14937" type="Armor" name="Top-grade Magic Rune Clip Mithril Belt - MP Recovery">
+		<!-- MP Recovery Rate increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -428,13 +466,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8341-4" />
+		<set name="item_skill" val="8341-4" /> <!-- Low-grade Magic Rune Clip Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14938" type="Armor" name="Low-grade Magic Ornament Iron Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -446,13 +485,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8342-1" />
+		<set name="item_skill" val="8342-1" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14939" type="Armor" name="Regular Magic Ornament Iron Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -464,13 +504,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8342-2" />
+		<set name="item_skill" val="8342-2" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14940" type="Armor" name="High-grade Magic Ornament Iron Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -482,13 +523,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8342-3" />
+		<set name="item_skill" val="8342-3" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14941" type="Armor" name="Top-grade Magic Ornament Iron Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -500,13 +542,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8342-4" />
+		<set name="item_skill" val="8342-4" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14942" type="Armor" name="Low-grade Magic Ornament Iron Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -518,13 +561,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8343-1" />
+		<set name="item_skill" val="8343-1" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14943" type="Armor" name="Regular Magic Ornament Iron Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -536,13 +580,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8343-2" />
+		<set name="item_skill" val="8343-2" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14944" type="Armor" name="High-grade Magic Ornament Iron Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -554,13 +599,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8343-3" />
+		<set name="item_skill" val="8343-3" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14945" type="Armor" name="Top-grade Magic Ornament Iron Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -572,13 +618,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8343-4" />
+		<set name="item_skill" val="8343-4" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14946" type="Armor" name="Low-grade Magic Ornament Iron Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -590,13 +637,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8344-1" />
+		<set name="item_skill" val="8344-1" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14947" type="Armor" name="Regular Magic Ornament Iron Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -608,13 +656,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8344-2" />
+		<set name="item_skill" val="8344-2" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14948" type="Armor" name="High-grade Magic Ornament Iron Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -626,13 +675,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8344-3" />
+		<set name="item_skill" val="8344-3" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14949" type="Armor" name="Top-grade Magic Ornament Iron Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -644,13 +694,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="371300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8344-4" />
+		<set name="item_skill" val="8344-4" /> <!-- Low-grade Magic Ornament Iron Belt -->
 		<for>
 			<add order="0" stat="pDef" val="12" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14950" type="Armor" name="Low-grade Magic Ornament Mithril Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -662,13 +713,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8345-1" />
+		<set name="item_skill" val="8345-1" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14951" type="Armor" name="Regular Magic Ornament Mithril Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -680,13 +732,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8345-2" />
+		<set name="item_skill" val="8345-2" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14952" type="Armor" name="High-grade Magic Ornament Mithril Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -698,13 +751,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8345-3" />
+		<set name="item_skill" val="8345-3" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14953" type="Armor" name="Top-grade Magic Ornament Mithril Belt - PvP Physical Attack">
+		<!-- Increases PvP damage when attacking with a weapon -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -716,13 +770,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8345-4" />
+		<set name="item_skill" val="8345-4" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14954" type="Armor" name="Low-grade Magic Ornament Mithril Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -734,13 +789,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8346-1" />
+		<set name="item_skill" val="8346-1" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14955" type="Armor" name="Regular Magic Ornament Mithril Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -752,13 +808,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8346-2" />
+		<set name="item_skill" val="8346-2" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14956" type="Armor" name="High-grade Magic Ornament Mithril Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -770,13 +827,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8346-3" />
+		<set name="item_skill" val="8346-3" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14957" type="Armor" name="Top-grade Magic Ornament Mithril Belt - PvP Skill Attack">
+		<!-- Increased PvP damage when attacking with a skill. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -788,13 +846,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8346-4" />
+		<set name="item_skill" val="8346-4" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14958" type="Armor" name="Low-grade Magic Ornament Mithril Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -806,13 +865,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8347-1" />
+		<set name="item_skill" val="8347-1" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14959" type="Armor" name="Regular Magic Ornament Mithril Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -824,13 +884,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8347-2" />
+		<set name="item_skill" val="8347-2" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14960" type="Armor" name="High-grade Magic Ornament Mithril Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -842,13 +903,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8347-3" />
+		<set name="item_skill" val="8347-3" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14961" type="Armor" name="Top-grade Magic Ornament Mithril Belt - PVP Defense">
+		<!-- Increases PvP defense against physical and skill attacks. -->
 		<set name="icon" val="icon.armor_magic_deco_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -860,13 +922,14 @@
 		<set name="weight" val="440" />
 		<set name="price" val="1917000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8347-4" />
+		<set name="item_skill" val="8347-4" /> <!-- Low-grade Magic Ornament Mithril Belt -->
 		<for>
 			<add order="0" stat="pDef" val="14" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14962" type="Armor" name="Gold Skeleton Circlet">
+		<!-- Gold skull circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -876,6 +939,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="14963" type="Armor" name="Silver Skeleton Circlet">
+		<!-- Silver skull circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -885,6 +949,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="14964" type="Armor" name="Red Skeleton Circlet">
+		<!-- Red skull circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -894,6 +959,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="14965" type="Armor" name="Black Skeleton Circlet">
+		<!-- Black skull circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_golden_skeleton_circlet_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -903,6 +969,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="14966" type="Armor" name="Majestic Earring of Fortune - 30-day limited period">
+		<!-- The effect is MP +25. No exchange/drop available -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -921,6 +988,7 @@
 		</for>
 	</item>
 	<item id="14967" type="Armor" name="Majestic Necklace of Fortune - 30-day limited period">
+		<!-- The effect is MP +33. No exchange/drop available -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -939,6 +1007,7 @@
 		</for>
 	</item>
 	<item id="14968" type="Armor" name="Majestic Ring of Fortune - 30-day limited period">
+		<!-- The effect is MP +17. No exchange/drop available -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -957,6 +1026,7 @@
 		</for>
 	</item>
 	<item id="14969" type="Armor" name="Fortune Earring of Black Ore - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -974,6 +1044,7 @@
 		</for>
 	</item>
 	<item id="14970" type="Armor" name="Fortune Necklace of Black Ore - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -991,6 +1062,7 @@
 		</for>
 	</item>
 	<item id="14971" type="Armor" name="Fortune Ring of Black Ore - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1008,6 +1080,7 @@
 		</for>
 	</item>
 	<item id="14972" type="Armor" name="Fortune Earring of Seal - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1025,6 +1098,7 @@
 		</for>
 	</item>
 	<item id="14973" type="Armor" name="Fortune Necklace of Seal - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1042,6 +1116,7 @@
 		</for>
 	</item>
 	<item id="14974" type="Armor" name="Fortune Ring of Seal - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1059,6 +1134,7 @@
 		</for>
 	</item>
 	<item id="14975" type="Armor" name="Elven Earring of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1076,6 +1152,7 @@
 		</for>
 	</item>
 	<item id="14976" type="Armor" name="Elven Earring of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1093,6 +1170,7 @@
 		</for>
 	</item>
 	<item id="14977" type="Armor" name="Elven Ring of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1110,6 +1188,7 @@
 		</for>
 	</item>
 	<item id="14978" type="Armor" name="Dark Crystal Robe of Fortune - 30-day limited period">
+		<!-- One-piece Body Armor. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1132,6 +1211,7 @@
 		</for>
 	</item>
 	<item id="14979" type="Armor" name="Dark Crystal Helmet of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1149,6 +1229,7 @@
 		</for>
 	</item>
 	<item id="14980" type="Armor" name="Dark Crystal Gloves of Fortune - Robe - 30-day limited period">
+		<!-- Gloves that make a set with the Dark Crystal Robe of Fortune. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1169,6 +1250,7 @@
 		</for>
 	</item>
 	<item id="14981" type="Armor" name="Dark Crystal Boots of Fortune - Robe - 30-day limited period">
+		<!-- Boots that make a set with the Dark Crystal Robe of Fortune. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1189,6 +1271,7 @@
 		</for>
 	</item>
 	<item id="14982" type="Armor" name="Dark Crystal Shield of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1211,6 +1294,7 @@
 		</for>
 	</item>
 	<item id="14983" type="Armor" name="Avadon Robe of Fortune - 30-day limited period">
+		<!-- One-piece Body Armor. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1233,6 +1317,7 @@
 		</for>
 	</item>
 	<item id="14984" type="Armor" name="Avadon Circlet of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1250,6 +1335,7 @@
 		</for>
 	</item>
 	<item id="14985" type="Armor" name="Avadon Gloves of Fortune - Robe - 30-day limited period">
+		<!-- Gloves that make a set with the Avadon Robe of Fortune. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1270,6 +1356,7 @@
 		</for>
 	</item>
 	<item id="14986" type="Armor" name="Avadon Boots of Fortune - Robe - 30-day limited period">
+		<!-- Boots that make a set with the Avadon Robe of Fortune. No exchange or drop available -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1290,6 +1377,7 @@
 		</for>
 	</item>
 	<item id="14987" type="Armor" name="Avadon Shield of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1312,6 +1400,7 @@
 		</for>
 	</item>
 	<item id="14988" type="Armor" name="Karmian Tunic of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1334,6 +1423,7 @@
 		</for>
 	</item>
 	<item id="14989" type="Armor" name="Karmian Stockings of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1356,6 +1446,7 @@
 		</for>
 	</item>
 	<item id="14990" type="Armor" name="Karmian Gloves of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1373,6 +1464,7 @@
 		</for>
 	</item>
 	<item id="14991" type="Armor" name="Karmian Boots of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1390,6 +1482,7 @@
 		</for>
 	</item>
 	<item id="14992" type="Armor" name="Mithril Tunic of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1412,6 +1505,7 @@
 		</for>
 	</item>
 	<item id="14993" type="Armor" name="Mithril Stockings of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1434,6 +1528,7 @@
 		</for>
 	</item>
 	<item id="14994" type="Armor" name="Elven Mithril Gloves of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1451,6 +1546,7 @@
 		</for>
 	</item>
 	<item id="14995" type="Armor" name="Elven Mithril Boots of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1468,6 +1564,7 @@
 		</for>
 	</item>
 	<item id="14996" type="Armor" name="Dark Crystal Leather Armor of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1486,6 +1583,7 @@
 		</for>
 	</item>
 	<item id="14997" type="Armor" name="Dark Crystal Leggings of Fortune - 30-day limited period">
+		<!-- No exchange/drop available -->
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1504,6 +1602,7 @@
 		</for>
 	</item>
 	<item id="14998" type="Armor" name="Dark Crystal Gloves of Fortune - Light Armor - 30-day limited period">
+		<!-- Gloves that make a set with the Dark Crystal Leather Mail of Fortune. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1521,6 +1620,7 @@
 		</for>
 	</item>
 	<item id="14999" type="Armor" name="Dark Crystal Boots of Fortune - Light Armor - 30-day limited period">
+		<!-- Boots that make a set with the Dark Crystal Leather Mail of Fortune. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

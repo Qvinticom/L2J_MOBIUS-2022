@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37100" name="Elixir of Protection" type="EtcItem">
-		<!-- For 30 minutes, provides the effect of Knight's Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
+		<!-- For 30 min., provides the effect of Knight's Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
 		<set name="crystal_type" val="R" />
@@ -13,7 +13,7 @@
 		</skills>
 	</item>
 	<item id="37101" name="Elixir of Magic" type="EtcItem">
-		<!-- For 30 minutes, provides the effect of Wizard's Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
+		<!-- For 30 min., provides the effect of Wizard's Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
 		<set name="crystal_type" val="R" />
@@ -25,7 +25,7 @@
 		</skills>
 	</item>
 	<item id="37102" name="Elixir of Aggression" type="EtcItem">
-		<!-- For 30 minutes, provides the effect of Warrior's Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
+		<!-- For 30 min., provides the effect of Warrior's Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
 		<set name="crystal_type" val="R" />
@@ -395,7 +395,7 @@
 		</skills>
 	</item>
 	<item id="37128" name="Lindvior Support Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 1 Bloody Amaranthine Pack, 1 Bloody Eternal Pack, 1 Istina/ Octavis Accessory Pack, 1 Top-grade Enchantment Pack, 1 Talisman - Longing, 1 Enhanced Tauti's Bracelet, 2 billion Adena, 10 Scrolls: 100,000,000 SP, 1 Hair Accessory/ Pendant Pack, 1 Returning Hero's Shirt, 1 Nurka's Belt, 1 Lv. 5 Legendary Dye Pack, and 100 Blessed Scrolls of Resurrection. -->
+		<!-- Double-click to receive 1 Bloody Helios Pack, 1 Bloody Eternal Pack, 1 Istina/ Octavis Accessory Pack, 1 Top-grade Enchantment Pack, 1 Talisman - Longing, 1 Enhanced Tauti's Bracelet, 2 billion Adena, 10 Scrolls: 100,000,000 SP, 1 Hair Accessory/ Pendant Pack, 1 Returning Hero's Shirt, 1 Nurka's Belt, 1 Lv. 5 Legendary Dye Pack, and 100 Blessed Scrolls of Resurrection. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -408,7 +408,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37129" name="Bloody Amaranthine Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive 1 of each Bloody Amaranthine Weapon with Double Crystal Enhancement. -->
+		<!-- Double-click to receive 1 of each Bloody Helios Weapon with Double Crystal Enhancement. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -913,7 +913,7 @@
 		</stats>
 	</item>
 	<item id="37157" name="Steel Avadon Shield (60-day)" type="Armor">
-		<!-- Avadon Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Abaddon Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1068,7 +1068,7 @@
 		</stats>
 	</item>
 	<item id="37165" name="Steel Shield of Nightmare (60-day)" type="Armor">
-		<!-- Shield of Nightmare with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
+		<!-- Shield of Nightmares with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

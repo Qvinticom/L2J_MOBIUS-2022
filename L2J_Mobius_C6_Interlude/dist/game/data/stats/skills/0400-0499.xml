@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" levels="10" name="Tribunal" enchantLevels1="30" enchantLevels2="30">
+		<!-- Uses your collected sacred energy to provoke an enemy to attack while temporarily decreasing their critical attack rate. Usable when equipped with a sword/blunt weapon. Over-hit is possible. Power 642. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -34,6 +35,7 @@
 		</for>
 	</skill>
 	<skill id="401" levels="10" name="Judgment" enchantLevels1="30" enchantLevels2="30">
+		<!-- Uses your collected dark energy to provoke an enemy to attack while temporarily decreasing their critical attack power. Usable when equipped with a sword / blunt weapon. Over-hit is possible. Power 733. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -67,6 +69,7 @@
 		</for>
 	</skill>
 	<skill id="402" levels="10" name="Arrest" enchantLevels1="30" enchantLevels2="30">
+		<!-- Provokes an enemy to attack and then temporarily puts them into a held state. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -92,6 +95,7 @@
 		</for>
 	</skill>
 	<skill id="403" levels="10" name="Shackle" enchantLevels1="30" enchantLevels2="30">
+		<!-- Provokes an enemy to attack and then temporarily puts them into a held state. The target cannot be affected by any additional hold attacks while the effect lasts. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -116,6 +120,7 @@
 		</for>
 	</skill>
 	<skill id="404" levels="5" name="Mass Shackling" enchantLevels1="30" enchantLevels2="30">
+		<!-- Provokes nearby enemies to attack and then temporarily puts them into a held state. Targets cannot be affected by any additional hold attacks while the effect lasts. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -139,6 +144,7 @@
 		</for>
 	</skill>
 	<skill id="405" levels="10" name="Banish Undead" enchantLevels1="30" enchantLevels2="30">
+		<!-- The undead cower and flee as you reveal your divine nature. A Lethal Strike is possible. Consumes 5 Soul Ore. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -147,7 +153,7 @@
 		<table name="#mpConsume">50 53 55 58 59 61 63 65 67 68</table>
 		<table name="#itemConsumeCount">5 6 7 7 8 8 9 9 10 10</table>
 		<table name="#lethal2">5 9 13 17 21 25 29 33 37 41</table>
-		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeId" val="1785"/> <!-- Soul Ore -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="reuseDelay" val="20000"/>
@@ -170,6 +176,7 @@
 		</for>
 	</skill>
 	<skill id="406" levels="3" name="Angelic Icon">
+		<!-- By the will of your God, your fighting ability with one-handed swords significantly increases. While in use, the effects of HP regeneration magic significantly decreases. This skill is only available when your HP is at 30% or lower. Effect 1. -->
 		<table name="#pAtkSpd">1.1 1.2 1.3</table>
 		<table name="#runSpd">10 20 30</table>
 		<table name="#cAtk">1.33 1.66 2</table>
@@ -207,6 +214,7 @@
 		</for>
 	</skill>
 	<skill id="407" levels="10" name="Psycho Symphony">
+		<!-- Instantly reduces the Speed, Atk. Spd., and Casting Spd. of all nearby enemies. Power 229. Effect 1. -->
 		<table name="#debuff">0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7</table>
 		<table name="#mpConsume">83 88 92 95 98 101 105 108 111 113</table>
 		<table name="#power">22 26 28 30 33 35 38 40 43 45</table>
@@ -234,6 +242,7 @@
 		</for>
 	</skill>
 	<skill id="408" levels="10" name="Demonic Blade Dance">
+		<!-- Instantly reduces the P. Atk. and M. Atk. of all nearby enemies. You must be wielding dual swords in order to use this skill. Power 229. Effect 1. -->
 		<table name="#debuff">0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7</table>
 		<table name="#magicLvl">55 58 60 62 64 66 68 70 72 74</table>
 		<table name="#mpConsume">83 88 92 95 98 101 105 108 111 113</table>
@@ -260,6 +269,7 @@
 		</for>
 	</skill>
 	<skill id="409" levels="10" name="Critical Blow" enchantLevels1="30" enchantLevels2="30">
+		<!-- With an increased chance of success, you attempt an extremely deadly attack on your foes. A Lethal Strike is possible. An equipped dagger weapon is required to use this skill. Power 1832. Effect 1. -->
 		<table name="#ench1Power">3685 3718 3751 3784 3817 3850 3883 3916 3949 3982 4014 4047 4080 4113 4146 4179 4212 4245 4278 4311 4343 4376 4409 4442 4475 4508 4541 4574 4607 4640</table>
 		<table name="#ench2MpConsume">74 73 72 70 69 68 67 65 64 63 62 60 59 58 57 55 54 53 51 50 49 48 46 45 44 43 41 40 39 38</table>
 		<table name="#mpConsume">55 59 62 63 66 68 70 72 74 76</table>
@@ -290,7 +300,7 @@
 		</for>
 	</skill>
 	<skill id="410" levels="3" name="Mortal Strike" enchantLevels1="30" enchantLevels2="30">
-		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
+		<!-- Temporarily increases your chances of making a critical strike. An equipped dagger weapon is required to use this skill. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -321,6 +331,7 @@
 		</for>
 	</skill>
 	<skill id="411" levels="3" name="Stealth" enchantLevels1="30" enchantLevels2="30">
+		<!-- You use the shadows, coverings and or your keen senses to temporarily avoid monsters' initial strikes. While in effect, your fighting ability significantly decreases. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -359,6 +370,7 @@
 		</for>
 	</skill>
 	<skill id="412" levels="10" name="Sand Bomb" enchantLevels1="30" enchantLevels2="30">
+		<!-- Explodes a cloud of sand onto your enemies and instantly reduces their line of sight (Accuracy) making them look like utter buffoons. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -388,6 +400,7 @@
 		</for>
 	</skill>
 	<skill id="413" levels="8" name="Rapid Fire">
+		<!-- Temporarily increases your P. Atk. and Atk. Spd. when using a bow. While in effect, your firing range decreases. Obviously, an equipped bow is required to use this skill. Effect 1. -->
 		<table name="#mpConsume">28 29 30 31 32 33 34 34</table>
 		<table name="#atk">62 67 73 78 83 88 94 100</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -415,6 +428,7 @@
 		</for>
 	</skill>
 	<skill id="414" levels="8" name="Dead Eye">
+		<!-- Temporarily increases your Accuracy, P. Atk., and Critical Attack Power when using a bow. While in effect, your Atk. Spd. decreases. Obviously, an equipped bow is required to use this skill. Effect 1. -->
 		<table name="#mpConsume">28 29 30 31 32 33 34 35</table>
 		<table name="#pAtk">124 134 145 155 166 177 188 199</table>
 		<table name="#accCombat">1 1 2 2 2 3 3 3</table>
@@ -444,6 +458,7 @@
 		</for>
 	</skill>
 	<skill id="415" levels="3" name="Spirit of Sagittarius">
+		<!-- Temporarily decreases the MP consumption of a physical skill. Effect 2. -->
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#MpConsumeRate">0.9 0.8 0.7</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -459,6 +474,7 @@
 		</for>
 	</skill>
 	<skill id="416" levels="3" name="Blessing of Sagittarius">
+		<!-- Temporarily decreases a physical skill's recovery time. Effect 2. -->
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#pReuseRate">0.9 0.8 0.7</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -474,6 +490,7 @@
 		</for>
 	</skill>
 	<skill id="417" levels="5" name="Pain of Sagittarius">
+		<!-- Regenerates your MP by sacrificing your HP. -->
 		<table name="#magicLvl">58 62 66 70 74</table>
 		<table name="#hpConsume">318 343 366 387 407</table>
 		<table name="#power">35 38 41 43 46</table>
@@ -488,6 +505,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="418" levels="3" name="Quiver of Holding">
+		<!-- Increases your weight capacity. -->
 		<table name="#rate">1.5 1.75 2.0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -497,10 +515,11 @@
 		</for>
 	</skill>
 	<skill id="419" levels="4" name="Summon Treasure Key">
+		<!-- Summons Treasure Chest Keys. Summons 2-3 keys between grades 3 and 5. Consumes 2 Thief Keys. -->
 		<table name="#mpConsume">122 159 183 204</table>
 		<table name="#itemConsumeCount">2 3 4 6</table>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="itemConsumeId" val="1661"/>
+		<set name="itemConsumeId" val="1661"/> <!-- Thief Key -->
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="hitTime" val="3000"/>
 		<set name="reuseDelay" val="1200000"/>
@@ -509,6 +528,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="420" levels="3" name="Zealot">
+		<!-- By the will of a Guardian God, you instantly and significantly increase your fighting ability. While in use, the effects of HP regeneration magic significantly decreases. This skill is only available when your HP is at 30% or lower. Effect 1. -->
 		<table name="#hpConsume">159 183 204</table>
 		<table name="#mpConsume">106 122 136</table>
 		<table name="#runSpd">10 20 30</table>
@@ -548,6 +568,7 @@
 		</for>
 	</skill>
 	<skill id="421" levels="5" name="Fell Swoop">
+		<!-- Temporarily increases the number of enemies affected by your spear attack. An equipped spear is required to use this skill. Effect 1. -->
 		<table name="#mpConsume">27 29 31 33 34</table>
 		<table name="#atkCountMax">1 2 3 4 5</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -564,6 +585,7 @@
 		</for>
 	</skill>
 	<skill id="422" levels="3" name="Polearm Accuracy">
+		<!-- Increases your Accuracy when using a spear. While in use, MP is continuously consumed. -->
 		<table name="#mpConsume">11 13 14</table>
 		<table name="#accCombat">2 3 4</table>
 		<set name="mpConsume" val="#mpConsume"/>
@@ -579,6 +601,7 @@
 		</for>
 	</skill>
 	<skill id="423" levels="3" name="Infernal Form">
+		<!-- Temporarily bestows a fire enchantment for all physical attacks and increases your resistance to fire. Effect 1. -->
 		<table name="#mpConsume">27 31 34</table>
 		<table name="#vuln">0.85 0.77 0.7</table>
 		<table name="#stack">15 23 30</table>
@@ -596,6 +619,7 @@
 		</for>
 	</skill>
 	<skill id="424" levels="3" name="War Frenzy">
+		<!-- Increases your resistance to stun and sleep. MP is continuously consumed while the effect lasts. -->
 		<table name="#mpConsume">11 13 14</table>
 		<table name="#stunvuln">0.95 0.9 0.85</table>
 		<table name="#sleepvuln">0.9 0.8 0.7</table>
@@ -612,6 +636,7 @@
 		</for>
 	</skill>
 	<skill id="425" levels="1" name="Hawk Spirit Totem">
+		<!-- The spirit of the great hawk possesses you, temporarily increasing Accuracy, critical attack rate and critical attack power when using hand-to-hand combat weapons. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024"/>
 		<set name="magicLvl" val="74"/>
 		<set name="mpConsume" val="34"/>
@@ -635,6 +660,7 @@
 		</for>
 	</skill>
 	<skill id="426" levels="1" name="Battle Force">
+		<!-- Transfers your strength to a party member. The effect can be cancelled if you incur damage. -->
 		<set name="mpInitialConsume" val="12"/>
 		<set name="magicLvl" val="77"/>
 		<set name="triggeredId" val="5104"/>
@@ -649,6 +675,7 @@
 		<set name="isMagic" val="false"/>
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
+		<!-- Transfers your magical powers to a party member. The effect can be cancelled if you incur damage. -->
 		<set name="mpInitialConsume" val="12"/>
 		<set name="magicLvl" val="77"/>
 		<set name="triggeredId" val="5105"/>
@@ -663,6 +690,7 @@
 		<set name="isMagic" val="false"/>
 	</skill>
 	<skill id="428" levels="1" name="Inner Rhythm">
+		<!-- MP consumption for singing and dancing is decreased. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -671,6 +699,7 @@
 		</for>
 	</skill>
 	<skill id="429" levels="1" name="Knighthood">
+		<!-- Increases P. Def. when wearing heavy armor. Shield defense is increased. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="magicLvl" val="78"/>
 		<set name="skillType" val="BUFF"/>
@@ -685,6 +714,7 @@
 		</for>
 	</skill>
 	<skill id="430" levels="1" name="Master of Combat">
+		<!-- Increases the attack strength of a sword, blunt weapon, spear, dual-bladed or hand-to-hand combat weapon. Also increases maximum CP. -->
 		<set name="weaponsAllowed" val="20300"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -703,6 +733,7 @@
 		</for>
 	</skill>
 	<skill id="431" levels="1" name="Archery">
+		<!-- Increases attack strength and maximum attack range while using a bow. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -716,6 +747,7 @@
 		</for>
 	</skill>
 	<skill id="432" levels="1" name="Assassination">
+		<!-- Increases attack strength and the rate of deadly attack while using a dagger. -->
 		<set name="weaponsAllowed" val="16"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -743,6 +775,7 @@
 		</for>
 	</skill>
 	<skill id="433" levels="1" name="Arcane Roar">
+		<!-- Increases resistance to elemental attacks and increases magic power. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -755,6 +788,7 @@
 		</for>
 	</skill>
 	<skill id="434" levels="1" name="Necromancy">
+		<!-- Increases resistance to dark attacks and increases magic power. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -764,6 +798,7 @@
 		</for>
 	</skill>
 	<skill id="435" levels="1" name="Summon Lore">
+		<!-- Increases P. Def. when equipped with Robe/Light Armor and increases Casting Speed. Decreases MP consumption for magic skills. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -784,6 +819,7 @@
 		</for>
 	</skill>
 	<skill id="436" levels="1" name="Divine Lore">
+		<!-- MP consumption for magical skills is decreased. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -792,6 +828,7 @@
 		</for>
 	</skill>
 	<skill id="437" levels="1" name="Song of Silence">
+		<!-- Sing the Song of Silence to temporarily disable all enemy physical and magical skills. -->
 		<set name="magicLvl" val="79"/>
 		<set name="mpConsume" val="54"/>
 		<set name="lvlDepend" val="1"/>
@@ -811,10 +848,11 @@
 		</for>
 	</skill>
 	<skill id="438" levels="1" name="Soul of the Phoenix">
+		<!-- Grants you the ability to revive yourself from death with full health, retaining all buffs/debuffs except for Noblesse Blessing and Lucky Charm. Consumes 1 Blood of the Phoenix. -->
 		<set name="magicLvl" val="79"/>
 		<set name="mpInitialConsume" val="50"/>
 		<set name="mpConsume" val="200"/>
-		<set name="itemConsumeId" val="8873"/>
+		<set name="itemConsumeId" val="8873"/> <!-- Phoenix Blood -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -829,6 +867,7 @@
 		</for>
 	</skill>
 	<skill id="439" levels="1" name="Shield of Revenge">
+		<!-- Temporarily reflects damage from melee attack skills back to the enemy. -->
 		<set name="magicLvl" val="79"/>
 		<set name="mpConsume" val="87"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -843,6 +882,7 @@
 		</for>
 	</skill>
 	<skill id="440" levels="1" name="Braveheart">
+		<!-- Recovers 1000 CP by increasing your will to fight. Power 1000. -->
 		<set name="mpConsume" val="57"/>
 		<set name="power" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -854,6 +894,7 @@
 		<set name="buffDuration" val="20000"/>
 	</skill>
 	<skill id="441" levels="1" name="Force Meditation">
+		<!-- Meditate to increase HP/MP regeneration. Your body is immobilized and your P. Def. decreased while meditating. The effect is cancelled if you are attacked. Level 3 Focused Force charge required. -->
 		<set name="mpConsume" val="0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="300000"/>
@@ -862,7 +903,7 @@
 		<set name="isMagic" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="num_charges" val="3"/>
-		<set name="charge_skill_id" val="50"/>
+		<set name="charge_skill_id" val="50"/> <!-- Focused Force -->
 		<for>
 			<effect count="1" name="ImmobileUntilAttacked" time="30" val="0">
 				<mul order="0x30" stat="pDef" val="0.2"/>
@@ -872,8 +913,9 @@
 		</for>
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
+		<!-- Uses sonic force to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. An equipped Dual-Sword Weapon is required to use this skill. Level 5 Sonic Focus charge required. -->
 		<set name="num_charges" val="5"/>
-		<set name="charge_skill_id" val="8"/>
+		<set name="charge_skill_id" val="8"/> <!-- Sonic Focus -->
 		<set name="weaponsAllowed" val="512"/>
 		<set name="mpConsume" val="65"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -886,6 +928,7 @@
 		</for>
 	</skill>
 	<skill id="443" levels="1" name="Force Barrier">
+		<!-- Uses spiritual forces to create a temporary protective barrier that is impervious to normal strikes, skills, buffs/debuffs. An equipped hand-to-hand combat weapon is required to use this skill. Level 4 Focused Force charge required. -->
 		<set name="mpConsume" val="72"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="weaponsAllowed" val="1024"/>
@@ -894,7 +937,7 @@
 		<set name="skillType" val="CHARGE_EFFECT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="num_charges" val="4"/>
-		<set name="charge_skill_id" val="50"/>
+		<set name="charge_skill_id" val="50"/> <!-- Focused Force -->
 		<for>
 			<effect count="1" name="Invincible" time="10" val="0">
 				<using kind="Fist, Dual Fist"/>
@@ -902,6 +945,7 @@
 		</for>
 	</skill>
 	<skill id="444" levels="1" name="Festive Sweeper">
+		<!-- When used on nearby corpses that are in a Spoil state, extra items may be obtained. -->
 		<set name="mpConsume" val="12"/>
 		<set name="magicLvl" val="78"/>
 		<set name="skillRadius" val="85"/>
@@ -912,6 +956,7 @@
 		<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="445" levels="1" name="Mirage">
+		<!-- Has a chance to cancel the target of an enemy who attacks you. -->
 		<set name="aggroPoints" val="669"/>
 		<set name="hitTime" val="2000"/>
 		<set name="magicLvl" val="79"/>
@@ -927,6 +972,7 @@
 		</for>
 	</skill>
 	<skill id="446" levels="1" name="Dodge">
+		<!-- Allows you to temporarily evade a melee attack skill. -->
 		<set name="aggroPoints" val="669"/>
 		<set name="mpConsume" val="29"/>
 		<set name="magicLvl" val="79"/>
@@ -943,6 +989,7 @@
 		</for>
 	</skill>
 	<skill id="447" levels="1" name="Counterattack">
+		<!-- Temporarily allows you to reflect damage caused by a melee attack skill back to the enemy. -->
 		<set name="aggroPoints" val="669"/>
 		<set name="mpInitialConsume" val="29"/>
 		<set name="mpConsume" val="20"/>
@@ -959,14 +1006,15 @@
 		</for>
 	</skill>
 	<skill id="448" levels="1" name="Summon Swoop Cannon" enchantLevels1="30">
+		<!-- Summons a Swoop Cannon. Requires 46 Crystals: A-Grade. Consumes 21 Gemstones: B-Grade per minute. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchSwoopCannon">14840 14841 14842 14843 14844 14845 14846 14847 14848 14849 14850 14851 14852 14853 14854 14855 14856 14857 14858 14859 14860 14861 14862 14863 14864 14865 14866 14867 14868 14869</table>
 		<set name="mpInitialConsume" val="530"/>
-		<set name="itemConsumeIdOT" val="2132"/>
+		<set name="itemConsumeIdOT" val="2132"/> <!-- Gemstone B -->
 		<set name="itemConsumeCountOT" val="21"/>
 		<set name="itemConsumeCount" val="46"/>
-		<set name="itemConsumeId" val="1461"/>
+		<set name="itemConsumeId" val="1461"/> <!-- Crystal: A-Grade -->
 		<set name="itemConsumeSteps" val="20"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
 		<set name="summonTimeLostIdle" val="1000"/>
@@ -977,12 +1025,13 @@
 		<set name="skillType" val="SUMMON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<!-- Summon-specific -->
-		<set name="npcId" val="14839"/>
+		<set name="npcId" val="14839"/> <!-- Swoop Cannon -->
 		<set name="expPenalty" val="0.0"/>
 		<set name="isCubic" val="false"/>
 		<enchant1 name="npcId" val="#enchSwoopCannon"/>
 	</skill>
 	<skill id="449" levels="4" name="Summon Attractive Cubic">
+		<!-- Summons Attractive Cubic. Attractive Cubic can continuously use hate and hold magic on an enemy. Requires 10 D-Grade Crystals. -->
 		<table name="#mpConsume">58 62 65 69</table>
 		<table name="#itemConsumeCount">10 11 12 13</table>
 		<table name="#magicLvl">62 66 70 74</table>
@@ -991,7 +1040,7 @@
 		<!-- guessed -->
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="magicLvl" val="#magicLvl"/>
-		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeId" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1009,6 +1058,7 @@
 		<set name="summonTotalLifeTime" val="900000"/>
 	</skill>
 	<skill id="450" levels="10" name="Banish Seraph" enchantLevels1="30" enchantLevels2="30">
+		<!-- Strikes fear into an angel, causing it to flee. Lethal Strike is possible. Consumes 5 Soul Ore. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1018,7 +1068,7 @@
 		<table name="#itemConsumeCount">5 6 7 7 8 8 9 9 10 10</table>
 		<table name="#magicLvl">56 58 60 62 64 66 68 70 72 74</table>
 		<set name="magicLvl" val="#magicLvl"/>
-		<set name="itemConsumeId" val="1785"/>
+		<set name="itemConsumeId" val="1785"/> <!-- Soul Ore -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="power" val="30"/>
@@ -1041,6 +1091,7 @@
 		</for>
 	</skill>
 	<skill id="451" levels="2" name="Sonic Move">
+		<!-- A Sonic Force detonation significantly increases your speed. Level 2 Sonic Force charge required. An equipped Dual-Sword Weapon is required to use this skill. Effect 1. -->
 		<table name="#charges">2 3</table>
 		<!-- 2 3 Charges are consumed -->
 		<table name="#spd">40 66</table>
@@ -1049,7 +1100,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="reuseDelay" val="60000"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="charge_skill_id" val="8"/>
+		<set name="charge_skill_id" val="8"/> <!-- Sonic Focus -->
 		<set name="num_charges" val="#charges"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillType" val="CHARGE_EFFECT"/>
@@ -1062,6 +1113,7 @@
 		</for>
 	</skill>
 	<skill id="452" levels="5" name="Shock Stomp" enchantLevels1="30">
+		<!-- Temporarily shocks nearby enemies, canceling their targets. Usable when equipped with a spear. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#ench1power">81 81 81 81 82 82 82 82 83 83 83 83 84 84 84 84 85 85 85 85 86 86 86 87 87 87 88 88 89 90</table>
@@ -1085,6 +1137,7 @@
 		</for>
 	</skill>
 	<skill id="453" levels="1" name="Escape Shackle">
+		<!-- Allows you to escape from a captured state. -->
 		<set name="mpConsume" val="60"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
@@ -1095,6 +1148,7 @@
 		<set name="negatePower" val="8"/>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
+		<!-- Generates a symbol that maximizes the defense abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1108,7 +1162,7 @@
 		<set name="effectId" val="5123"/>
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1121,6 +1175,7 @@
 		</for>
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
+		<!-- Generates a symbol that cancels the singing or dancing abilities of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_GROUND"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1138,7 +1193,7 @@
 		<!-- Fire -->
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1151,6 +1206,7 @@
 		</for>
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
+		<!-- Generates a symbol that maximizes resistance to abnormal states of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1164,7 +1220,7 @@
 		<set name="effectId" val="5125"/>
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1177,6 +1233,7 @@
 		</for>
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
+		<!-- Generates a symbol that maximizes the HP/CP recovery rate of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1190,7 +1247,7 @@
 		<set name="effectId" val="5126"/>
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1203,6 +1260,7 @@
 		</for>
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
+		<!-- Generates a symbol that increases P. Atk. and force for those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1216,7 +1274,7 @@
 		<set name="effectId" val="5127"/>
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1229,6 +1287,7 @@
 		</for>
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
+		<!-- Generates a symbol that maximizes the archery skill of those nearby. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1242,7 +1301,7 @@
 		<set name="effectId" val="5128"/>
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1255,6 +1314,7 @@
 		</for>
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
+		<!-- Generates a symbol that maximizes your dodging ability and increases the chance of inflicting a deadly attack for those near to you. Applies to all targets within the affected area. The effect disappears if you leave the area. Level 2 or higher Battle Force required. Consumes 1 Battle Symbol. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SIGNET"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1268,7 +1328,7 @@
 		<set name="effectId" val="5129"/>
 		<set name="isMagic" val="false"/>
 		<set name="power" val="200"/>
-		<set name="itemConsumeId" val="8875"/>
+		<set name="itemConsumeId" val="8875"/> <!-- Battle Symbol -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="mpInitialConsume" val="36"/>
 		<set name="mpConsume" val="44"/>
@@ -1281,6 +1341,7 @@
 		</for>
 	</skill>
 	<skill id="461" levels="2" name="Break Duress">
+		<!-- Use your spirit to escape from an immobile state. Level 2 Focused Force charge required. -->
 		<table name="#mpConsume">33 37</table>
 		<table name="#magicLvl">60 66</table>
 		<table name="#numcharge">2 3</table>

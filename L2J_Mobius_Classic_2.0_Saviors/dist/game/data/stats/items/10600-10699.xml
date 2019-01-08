@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10648" name="Inventory2" type="EtcItem">
-		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -16,7 +15,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10649" name="Feather of Blessing" type="EtcItem">
-		<!-- Dimensional item.  Blessed feather that allows to resurrect right in the place of death. -->
+		<!-- Dimensional item. Blessed feather that allows to resurrect right in the place of death. -->
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />

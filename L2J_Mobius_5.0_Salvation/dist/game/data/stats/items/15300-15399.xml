@@ -412,7 +412,7 @@
 		</stats>
 	</item>
 	<item id="15315" name="Player Commendation - Imperial Staff" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Imperial Staff with limited ability enhancement. <Special Option>. MP Recovery Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Imperial Staff with limited ability enhancement. <Special Option>. MP Recovery Bonus Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -487,7 +487,7 @@
 		</stats>
 	</item>
 	<item id="15317" name="Player Commendation - Dragon Hunter Axe" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Dragon Hunter Axe with limited ability enhancement. <Special Option>. HP Recovery Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Dragon Hunter Axe with limited ability enhancement. <Special Option>. HP Recovery Bonus Rate increases. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -833,7 +833,7 @@
 		</stats>
 	</item>
 	<item id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Tallum Blade*Dark Legion's Edge with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Tallum Blade*Dark Legion's Edge with limited ability enhancement. When enchanted, P. Atk. of a dual sword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1190,7 +1190,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15346" name="Player Commendation - Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- Can only be used to enchant S-grade Player Commendation Weapons. Normal enchant rules apply. -->
+		<!-- Can only be used to enchant S-grade PA Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1212,7 +1212,7 @@
 		</skills>
 	</item>
 	<item id="15347" name="Player Commendation - Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- Can only be used to enchant A-grade Player Commendation Weapons. Normal enchant rules apply. -->
+		<!-- Can only be used to enchant A-grade PA Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1234,7 +1234,7 @@
 		</skills>
 	</item>
 	<item id="15348" name="Player Commendation - Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- Can only be used to enchant B-grade Player Commendation Weapons. Normal enchant rules apply. -->
+		<!-- Can only be used to enchant B-grade PA Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1256,7 +1256,7 @@
 		</skills>
 	</item>
 	<item id="15349" name="Player Commendation - Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- Can only be used to enchant C-grade Player Commendation Weapons. Normal enchant rules apply. -->
+		<!-- Can only be used to enchant C-grade PA Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1278,7 +1278,7 @@
 		</skills>
 	</item>
 	<item id="15350" name="Player Commendation - Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- Can only be used to enchant D-grade Player Commendation Weapons. Normal enchant rules apply. -->
+		<!-- Can only be used to enchant D-grade PA Weapons. Normal enchant rules apply. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -1452,7 +1452,7 @@
 		</skills>
 	</item>
 	<item id="15358" name="Player Commendation Instant Lottery Ticket" additionalName="30-day" type="EtcItem">
-		<!-- Instant lottery ticket for a chance to win up to 10,000 Player Commendation Points. Disappears if not used within 30 days. -->
+		<!-- Instant lottery ticket for a chance to win up to 10,000 PA Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1473,7 +1473,7 @@
 		</skills>
 	</item>
 	<item id="15359" name="Winning Lottery Ticket: 10,000 PC Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 10,000 PC Points. Disappears if not used within 30 days. -->
+		<!-- Bring it to an Adventure Guildsman in any town to receive 10,000 PA Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1488,7 +1488,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15360" name="Winning Lottery Ticket: 1,000 PC Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 1,000 PC Points. Disappears if not used within 30 days. -->
+		<!-- Bring it to an Adventure Guildsman in any town to receive 1,000 PA Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1503,7 +1503,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15361" name="Winning Lottery Ticket: 200 PC Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 200 PC Points. Disappears if not used within 30 days. -->
+		<!-- Bring it to an Adventure Guildsman in any town to receive 200 PA Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1518,7 +1518,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15362" name="Winning Lottery Ticket: 100 PC Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 100 PC Points. Disappears if not used within 30 days. -->
+		<!-- Bring it to an Adventure Guildsman in any town to receive 100 PA Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1533,7 +1533,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="15363" name="Winning Lottery Ticket: 10 PC Points" additionalName="30-day" type="EtcItem">
-		<!-- Bring it to an Adventure Guildsman in any town to receive 10 PC Points. Disappears if not used within 30 days. -->
+		<!-- Bring it to an Adventure Guildsman in any town to receive 10 PA Points. Disappears if not used within 30 days. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1859,7 +1859,7 @@
 		</skills>
 	</item>
 	<item id="15381" name="Event - Herdsman's Love Scroll" additionalName="Event" type="EtcItem">
-		<!-- July 7th event. Enchant scroll exclusively for the Weaver's Colorful Dress. Increases the P. Def. and M. Def. of the Weaver's Colorful Dress. Can be safely enchanted to + 3, and the item disappears when the enchant fails. When the Weaver's Colorful Dress is enchanted above + 4, attributes, STR, CON, INT, and MEN also increases according to the enhancement value. Can only be used during the event period. Will be deleted once the event ends. -->
+		<!-- July 7th event. Enchant scroll exclusively for the Weaver's Colorful Dress. Increases the P. Def. and M. Def. of the Weaver's Colorful Dress. Can be safely enchanted to +3, and the item disappears when the enchant fails. When the Weaver's Colorful Dress is enchanted above +4, attributes, STR, CON, INT, and MEN also increases according to the enhancement value. Can only be used during the event period. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1876,7 +1876,7 @@
 		</skills>
 	</item>
 	<item id="15382" name="Event - Scroll: Enchant Vitality Belt" additionalName="Event" type="EtcItem">
-		<!-- Enchant scroll exclusively for the Vitality Belt. Increases the Vitality Belt's P. Def. and M. Def. Maintains Vitality. Vitality maintenance cooldown reduced. Can be safely enchanted to + 3, and the item disappears when the enchant fails. When the Vitality Belt is enchanted above + 4, Vitality maintenance duration increases, and the decreases Vitality maintenance cooldown. Can only be used during the event period. Will be deleted once the event ends. -->
+		<!-- Enchant scroll exclusively for the Vitality Belt. Increases the Vitality Belt's P. Def. and M. Def. Maintains Vitality. Vitality maintenance cooldown reduced. Can be safely enchanted to +3, and the item disappears when the enchant fails. When the Vitality Belt is enchanted above +4, Vitality maintenance duration increases, and the decreases Vitality maintenance cooldown. Can only be used during the event period. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />

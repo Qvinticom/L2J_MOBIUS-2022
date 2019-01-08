@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="20000" levels="1" name="Block Checker Search">
-		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
+		<!-- Open your mind and stare at the horizon, and you may find a hidden treasure chest. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
-		<!-- Slams down on the treasure chest with a hammer to open it. -->
+		<!-- Slams the treasure chest down with a hammer to break it open. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="20002" levels="1" name="Dragon Blow">
-		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
+		<!-- A dragon's powerful kick that attacks the enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="55" />
 		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
@@ -28,7 +28,7 @@
 		</for>
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
-		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
+		<!-- A dragon's powerful slash that attacks the enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="castRange" val="55" />
 		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2000" />
@@ -73,7 +73,7 @@
 		</for>
 	</skill>
 	<skill id="20006" levels="1" name="Soul Roar">
-		<!-- Confirmed High Five -->
+		<!-- Upon use, immediately regenerates Max HP/CP by 15% and for 10 minutes, increases your Max HP/CP by 15%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MULTI_DEBUFF_G" />

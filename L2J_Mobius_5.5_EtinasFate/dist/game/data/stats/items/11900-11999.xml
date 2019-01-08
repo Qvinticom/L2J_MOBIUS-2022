@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11900" name="Common Item - Sword of Valhalla" type="Weapon">
-		<!-- Sword of Valhalla with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Valhalla with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -27,7 +27,7 @@
 		</stats>
 	</item>
 	<item id="11901" name="Common Item - StormBringer*Samurai Long Sword" type="Weapon">
-		<!-- StormBringer*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Stormbringer*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -55,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="11902" name="Common Item - Spell Breaker" type="Weapon">
-		<!-- Spell Breaker with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spell Breaker with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -82,7 +82,7 @@
 		</stats>
 	</item>
 	<item id="11903" name="Common Item - Arthro Nail" type="Weapon">
-		<!-- Arthro Nail with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Arthro Nail with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -108,7 +108,7 @@
 		</stats>
 	</item>
 	<item id="11904" name="Common Item - Ice Storm Hammer" type="Weapon">
-		<!-- Ice Storm Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Ice Storm Hammer with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -134,7 +134,7 @@
 		</stats>
 	</item>
 	<item id="11905" name="Common Item - Sword of Nightmare*Sword of Nightmare" type="Weapon">
-		<!-- Sword of Nightmare*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Nightmare*Sword of Nightmare with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -162,7 +162,7 @@
 		</stats>
 	</item>
 	<item id="11906" name="Common Item - Sword of Nightmare*Tsurugi" type="Weapon">
-		<!-- Sword of Nightmare*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Nightmare*Tsurugi with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -223,7 +223,7 @@
 		</stats>
 	</item>
 	<item id="11908" name="Common Item - Spirit's Staff" type="Weapon">
-		<!-- Spirit's Staff of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spirit's Staff of Mana with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="11909" name="Common Item - Tsurugi*Tsurugi" type="Weapon">
-		<!-- Tsurugi*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tsurugi*Tsurugi with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -278,7 +278,7 @@
 		</stats>
 	</item>
 	<item id="11910" name="Common Item - Caliburs*Ultimate Sword" type="Weapon">
-		<!-- Caliburs*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Caliburs*Ultimate Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -306,7 +306,7 @@
 		</stats>
 	</item>
 	<item id="11911" name="Common Item - Caliburs*Sword of Delusion" type="Weapon">
-		<!-- Caliburs*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Caliburs*Sword of Delusion with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -334,7 +334,7 @@
 		</stats>
 	</item>
 	<item id="11912" name="Common Item - Caliburs*Sword of Nightmare" type="Weapon">
-		<!-- Caliburs*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Caliburs*Sword of Delusion with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -362,7 +362,7 @@
 		</stats>
 	</item>
 	<item id="11913" name="Common Item - Caliburs*Tsurugi" type="Weapon">
-		<!-- Caliburs*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Caliburs*Tsurugi with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -390,7 +390,7 @@
 		</stats>
 	</item>
 	<item id="11914" name="Common Item - Caliburs*Caliburs" type="Weapon">
-		<!-- Caliburs*Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Caliburs*Caliburs with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -418,7 +418,7 @@
 		</stats>
 	</item>
 	<item id="11915" name="Common Item - Kris" type="Weapon">
-		<!-- Kris with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Kris with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_kris_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -444,7 +444,7 @@
 		</stats>
 	</item>
 	<item id="11916" name="Common Item - Keshanberk" type="Weapon">
-		<!-- Keshanberk with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Keshanberk with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -501,7 +501,7 @@
 		</stats>
 	</item>
 	<item id="11918" name="Common Item - Heavy War Axe" type="Weapon">
-		<!-- Heavy War Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Heavy War Axe with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_heavy_war_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -527,7 +527,7 @@
 		</stats>
 	</item>
 	<item id="11919" name="Common Item - Twilight Knife" type="Weapon">
-		<!-- Twilight Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Twilight Knife with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -554,7 +554,7 @@
 		</stats>
 	</item>
 	<item id="11920" name="Common Item - Raid Sword*Samurai Long Sword" type="Weapon">
-		<!-- Raid Sword*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Raid Sword*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -582,7 +582,7 @@
 		</stats>
 	</item>
 	<item id="11921" name="Common Item - Shamshir*Samurai Long Sword" type="Weapon">
-		<!-- Shamshir*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Shamshir*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -610,7 +610,7 @@
 		</stats>
 	</item>
 	<item id="11922" name="Common Item - Spirit Sword*Samurai Long Sword" type="Weapon">
-		<!-- Spirit Sword*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spirit Sword*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -638,7 +638,7 @@
 		</stats>
 	</item>
 	<item id="11923" name="Common Item - Katana*Samurai Long Sword" type="Weapon">
-		<!-- Katana*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Katana*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -666,7 +666,7 @@
 		</stats>
 	</item>
 	<item id="11924" name="Common Item - Ultimate Sword*Samurai Long Sword" type="Weapon">
-		<!-- Ultimate Sword*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Ultimate Sword*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -694,7 +694,7 @@
 		</stats>
 	</item>
 	<item id="11925" name="Common Item - Sword of Delusion*Samurai Long Sword" type="Weapon">
-		<!-- Sword of Delusion*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Delusion*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -722,7 +722,7 @@
 		</stats>
 	</item>
 	<item id="11926" name="Common Item - Sword of Nightmare*Samurai Long Sword" type="Weapon">
-		<!-- Sword of Nightmare*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Nightmare*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -750,7 +750,7 @@
 		</stats>
 	</item>
 	<item id="11927" name="Common Item - Tsurugi*Samurai Long Sword" type="Weapon">
-		<!-- Tsurugi*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tsurugi*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -778,7 +778,7 @@
 		</stats>
 	</item>
 	<item id="11928" name="Common Item - Caliburs*Samurai Long Sword" type="Weapon">
-		<!-- Caliburs*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Caliburs*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -806,7 +806,7 @@
 		</stats>
 	</item>
 	<item id="11929" name="Common Item - Guardian's Sword" type="Weapon">
-		<!-- Guardian's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Guardian's Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -832,7 +832,7 @@
 		</stats>
 	</item>
 	<item id="11930" name="Common Item - Damascus Sword" type="Weapon">
-		<!-- Damascus Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Damascus Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -888,7 +888,7 @@
 		</stats>
 	</item>
 	<item id="11932" name="Common Item - Lance" type="Weapon">
-		<!-- Lance with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Lance with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -917,7 +917,7 @@
 		</stats>
 	</item>
 	<item id="11933" name="Common Item - Bellion Cestus" type="Weapon">
-		<!-- Bellion Cestus with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bellion Cestus with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -943,7 +943,7 @@
 		</stats>
 	</item>
 	<item id="11934" name="Common Item - Staff of Evil Spirits" type="Weapon">
-		<!-- Staff of Evil Spirits of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Staff of Evil Spirits with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -970,7 +970,7 @@
 		</stats>
 	</item>
 	<item id="11935" name="Common Item - Deadman's Glory" type="Weapon">
-		<!-- Deadman's Glory with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Deadman's Glory with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -996,7 +996,7 @@
 		</stats>
 	</item>
 	<item id="11936" name="Common Item - Star Buster" type="Weapon">
-		<!-- Star Buster with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Star Buster with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1022,7 +1022,7 @@
 		</stats>
 	</item>
 	<item id="11937" name="Common Item - Samurai Long Sword*Samurai Long Sword" type="Weapon">
-		<!-- Samurai Long Sword*Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Samurai Long Sword*Samurai Long Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1050,7 +1050,7 @@
 		</stats>
 	</item>
 	<item id="11938" name="Common Item - Art of Battle Axe" type="Weapon">
-		<!-- Art of Battle Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Art of Battle Axe with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1076,7 +1076,7 @@
 		</stats>
 	</item>
 	<item id="11939" name="Common Item - Demon's Dagger" type="Weapon">
-		<!-- Demon's Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Demon's Dagger with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1102,7 +1102,7 @@
 		</stats>
 	</item>
 	<item id="11940" name="Common Item - Demon's Dagger" type="Weapon">
-		<!-- Demon's Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Demon's Dagger with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1131,7 +1131,7 @@
 		</stats>
 	</item>
 	<item id="11941" name="Common Item - Kaim Vanul's Bones" type="Weapon">
-		<!-- Kaim Vanul's Bones with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Kaim Vanul's Bones with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1191,7 +1191,7 @@
 		</stats>
 	</item>
 	<item id="11943" name="Common Item - Wizard's Tear" type="Weapon">
-		<!-- Wizard's Tear with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Wizard's Tear with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1217,7 +1217,7 @@
 		</stats>
 	</item>
 	<item id="11944" name="Common Item - Bow of Peril" type="Weapon">
-		<!-- Bow of Peril with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bow of Peril with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1277,7 +1277,7 @@
 		</stats>
 	</item>
 	<item id="11946" name="Common Item - Dasparion's Staff" type="Weapon">
-		<!-- Dasparion's Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dasparion's Staff with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1368,7 +1368,7 @@
 		</stats>
 	</item>
 	<item id="11949" name="Common Item - Meteor Shower" type="Weapon">
-		<!-- Meteor Shower with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Meteor Shower with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1394,7 +1394,7 @@
 		</stats>
 	</item>
 	<item id="11950" name="Common Item - Blood Tornado" type="Weapon">
-		<!-- Blood Tornado with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Blood Tornado with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1420,7 +1420,7 @@
 		</stats>
 	</item>
 	<item id="11951" name="Common Item - Bloody Orchid" type="Weapon">
-		<!-- Bloody Orchid with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bloody Orchid with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1446,7 +1446,7 @@
 		</stats>
 	</item>
 	<item id="11952" name="Common Item - Elemental Sword" type="Weapon">
-		<!-- Elemental Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Elemental Sword with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1472,7 +1472,7 @@
 		</stats>
 	</item>
 	<item id="11953" name="Common Item - Spiritual Eye" type="Weapon">
-		<!-- Spiritual Eye with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spiritual Eye with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1499,7 +1499,7 @@
 		</stats>
 	</item>
 	<item id="11954" name="Common Item - Infernal Master" type="Weapon">
-		<!-- Infernal Master with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Infernal Master with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1525,7 +1525,7 @@
 		</stats>
 	</item>
 	<item id="11955" name="Common Item - Carnage Bow" type="Weapon">
-		<!-- Carnage Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Carnage Bow with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1554,7 +1554,7 @@
 		</stats>
 	</item>
 	<item id="11956" name="Common Item - Keshanberk*Keshanberk" type="Weapon">
-		<!-- Keshanberk*Keshanberk with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Keshanberk*Keshanberk with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1582,7 +1582,7 @@
 		</stats>
 	</item>
 	<item id="11957" name="Common Item - Tallum Blade" type="Weapon">
-		<!-- Tallum Blade with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tallum Blade with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1608,7 +1608,7 @@
 		</stats>
 	</item>
 	<item id="11958" name="Common Item - Destroyer Hammer" type="Weapon">
-		<!-- Destroyer Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Destroyer Hammer with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1664,7 +1664,7 @@
 		</stats>
 	</item>
 	<item id="11960" name="Common Item - Halberd" type="Weapon">
-		<!-- Halberd with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Halberd with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1693,7 +1693,7 @@
 		</stats>
 	</item>
 	<item id="11961" name="Common Item - Keshanberk*Damascus" type="Weapon">
-		<!-- Keshanberk*Damascus with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Keshanberk*Damascus with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1754,7 +1754,7 @@
 		</stats>
 	</item>
 	<item id="11963" name="Common Item - Damascus*Damascus" type="Weapon">
-		<!-- Damascus*Damascus with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Damascus*Damascus with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1782,7 +1782,7 @@
 		</stats>
 	</item>
 	<item id="11964" name="Common Item - Dark Legion's Edge" type="Weapon">
-		<!-- Dark Legion's Edge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dark Legion's Edge with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1838,7 +1838,7 @@
 		</stats>
 	</item>
 	<item id="11966" name="Common Item - Doom Crusher" type="Weapon">
-		<!-- Doom Crusher with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Doom Crusher with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="11967" name="Common Item - Dragon Grinder" type="Weapon">
-		<!-- Dragon Grinder with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dragon Grinder with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1890,7 +1890,7 @@
 		</stats>
 	</item>
 	<item id="11968" name="Common Item - Dragon Slayer" type="Weapon">
-		<!-- Dragon Slayer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dragon Slayer with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1916,7 +1916,7 @@
 		</stats>
 	</item>
 	<item id="11969" name="Common Item - Flaming Dragon Skull" type="Weapon">
-		<!-- Flaming Dragon Skull with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Flaming Dragon Skull with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1943,7 +1943,7 @@
 		</stats>
 	</item>
 	<item id="11970" name="Common Item - Branch of the Mother Tree" type="Weapon">
-		<!-- Branch of the Mother Tree with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Branch of the Mother Tree with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1970,7 +1970,7 @@
 		</stats>
 	</item>
 	<item id="11971" name="Common Item - Sword of Miracles" type="Weapon">
-		<!-- Sword of Miracles with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Miracles with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2027,7 +2027,7 @@
 		</stats>
 	</item>
 	<item id="11973" name="Common Item - Soul Separator" type="Weapon">
-		<!-- Soul Separator with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Soul Separator with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2053,7 +2053,7 @@
 		</stats>
 	</item>
 	<item id="11974" name="Common Item - Elysian" type="Weapon">
-		<!-- Elysian with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Elysian with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2079,7 +2079,7 @@
 		</stats>
 	</item>
 	<item id="11975" name="Common Item - Soul Bow" type="Weapon">
-		<!-- Soul Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Soul Bow with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2108,7 +2108,7 @@
 		</stats>
 	</item>
 	<item id="11976" name="Common Item - Tallum Glaive" type="Weapon">
-		<!-- Tallum Glaive with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tallum Glaive with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2137,7 +2137,7 @@
 		</stats>
 	</item>
 	<item id="11977" name="Common Item - Naga Storm" type="Weapon">
-		<!-- Naga Storm with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Naga's Storm with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2163,7 +2163,7 @@
 		</stats>
 	</item>
 	<item id="11978" name="Common Item - Daimon Crystal" type="Weapon">
-		<!-- Daimon Crystal with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Daimon Crystal with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2190,7 +2190,7 @@
 		</stats>
 	</item>
 	<item id="11979" name="Common Item - Barakiel's Axe" type="Weapon">
-		<!-- Barakiel's Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Barakiel's Axe with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2247,7 +2247,7 @@
 		</stats>
 	</item>
 	<item id="11981" name="Common Item - Behemoth' Tuning Fork" type="Weapon">
-		<!-- Behemoth' Tuning Fork with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Behemoth' Tuning Fork with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2303,7 +2303,7 @@
 		</stats>
 	</item>
 	<item id="11983" name="Common Item - Shyeed's Bow" type="Weapon">
-		<!-- Shyeed's Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Shyeed's Bow with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2332,7 +2332,7 @@
 		</stats>
 	</item>
 	<item id="11984" name="Common Item - Sword of Ipos" type="Weapon">
-		<!-- Sword of Ipos with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Ipos with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2358,7 +2358,7 @@
 		</stats>
 	</item>
 	<item id="11985" name="Common Item - Sobekk's Hurricane" type="Weapon">
-		<!-- Sobekk's Hurricane with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sobekk's Hurricane with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2384,7 +2384,7 @@
 		</stats>
 	</item>
 	<item id="11986" name="Common Item - Sirra's Blade" type="Weapon">
-		<!-- Sirra's Blade with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sirra's Blade with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2410,7 +2410,7 @@
 		</stats>
 	</item>
 	<item id="11987" name="Common Item - Éclair Bijou" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shadow weapon - Sirra's Blade conversion. Éclair Bijou with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Sirra's Blade conversion. ?clair Bijou with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2443,7 +2443,7 @@
 		</stats>
 	</item>
 	<item id="11988" name="Common Item - Tiphon's Spear" type="Weapon">
-		<!-- Tiphon's Spear with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tiphon's Spear with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2472,7 +2472,7 @@
 		</stats>
 	</item>
 	<item id="11989" name="Common Item - Tallum Blade*Damascus" type="Weapon">
-		<!-- Tallum Blade*Damascus with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tallum Blade*Damascus with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2500,7 +2500,7 @@
 		</stats>
 	</item>
 	<item id="11990" name="Common Item - Themis' Tongue" type="Weapon">
-		<!-- Themis' Tongue with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Themis' Tongue with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2526,7 +2526,7 @@
 		</stats>
 	</item>
 	<item id="11991" name="Common Item - Cabrio's Hand" type="Weapon">
-		<!-- Cabrio's Hand with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Cabrio's Hand with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2553,7 +2553,7 @@
 		</stats>
 	</item>
 	<item id="11992" name="Common Item - Gram" type="Weapon">
-		<!-- Gram with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Gram with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2584,7 +2584,7 @@
 		</stats>
 	</item>
 	<item id="11993" name="Common Item - Demon Splinter" type="Weapon">
-		<!-- Demon Splinter with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Demon Splinter with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2611,7 +2611,7 @@
 		</stats>
 	</item>
 	<item id="11994" name="Common Item - Draconic Bow" type="Weapon">
-		<!-- Draconic Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Draconic Bow with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2641,7 +2641,7 @@
 		</stats>
 	</item>
 	<item id="11995" name="Common Item - Dragon Hunter Axe" type="Weapon">
-		<!-- Dragon Hunter Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dragon Hunter Axe with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2668,7 +2668,7 @@
 		</stats>
 	</item>
 	<item id="11996" name="Common Item - Laevateinn" type="Weapon">
-		<!-- Laevateinn with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Laevateinn with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2702,7 +2702,7 @@
 		</stats>
 	</item>
 	<item id="11997" name="Common Item - Basalt Battlehammer" type="Weapon">
-		<!-- Basalt Battlehammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Basalt Battlehammer with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2729,7 +2729,7 @@
 		</stats>
 	</item>
 	<item id="11998" name="Common Item - Sarunga" type="Weapon">
-		<!-- Sarunga with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sarunga with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2761,7 +2761,7 @@
 		</stats>
 	</item>
 	<item id="11999" name="Common Item - Saint Spear" type="Weapon">
-		<!-- Saint Spear with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saint Spear with limited enhancement options. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

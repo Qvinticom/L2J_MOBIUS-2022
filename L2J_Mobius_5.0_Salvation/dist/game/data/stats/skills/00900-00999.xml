@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="900" toLevel="6" name="Energy Blast">
+		<!-- Delivers a powerful strike with $s1 Power. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -63,6 +64,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="901" toLevel="6" name="Dark Strike">
+		<!-- Delivers a powerful strike with $s1 Power. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -124,6 +126,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="902" toLevel="6" name="Bursting Flame">
+		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -184,6 +187,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="903" toLevel="6" name="Stratum Explosion">
+		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -245,6 +249,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="904" toLevel="6" name="Corpse Burst">
+		<!-- Causes a nearby corpse to burst open, poisoning enemies with $s1 Power. Effect $s2. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -330,6 +335,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="905" toLevel="6" name="Dark Detonation">
+		<!-- Inflicts a powerful continuous attack on nearby enemies, stunning them with $s1 Power. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -404,6 +410,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="906" toLevel="6" name="Lance Step">
+		<!-- Inflicts a mighty straight-line blow with $s1 Power. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>900</affectRange>
 		<effectPoint>
@@ -466,6 +473,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="907" toLevel="6" name="Aqua Blast">
+		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -528,6 +536,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="908" toLevel="6" name="Spin Slash">
+		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -589,6 +598,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="909" toLevel="6" name="Ice Fog">
+		<!-- Inflicts continuous damage on nearby enemies with $s1 Power, decreasing their Speed, Atk. Spd. and Casting Spd. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -680,6 +690,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="910" toLevel="6" name="Water Jet">
+		<!-- Strikes enemies with $s2 Power in a mighty rush of Water. Effect $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -753,7 +764,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="911" toLevel="11" name="Energy Burst">
-		<!-- Aurabird Falcon and Owl -->
+		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -823,6 +834,7 @@
 		</effects>
 	</skill>
 	<skill id="912" toLevel="1" name="Summon Imperial Phoenix">
+		<!-- Summons an Imperial Phoenix. Requires 2 A-grade Crystals. -->
 		<hitTime>15000</hitTime>
 		<icon>icon.skill0912</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -841,14 +853,15 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14918</npcId>
+				<npcId>14918</npcId> <!-- Imperial Phoenix -->
 				<lifeTime>3600</lifeTime>
-				<consumeItemId>1461</consumeItemId>
+				<consumeItemId>1461</consumeItemId> <!-- Crystal (A-grade) -->
 				<consumeItemCount>1</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="913" toLevel="1" name="Deflect Magic">
+		<!-- Increases Magic Attack Resistance by 100% for 20 minutes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DD_RESIST</abnormalType>
@@ -872,7 +885,7 @@
 		</effects>
 	</skill>
 	<skill id="914" toLevel="1" name="Song of Purification">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provides an 80% chance of removing a party member's debuffs. And for the next 2 minutes, increases Debuff Resistance by 30% and increases the Healing power received by 30%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_PURIFICATION</abnormalType>
@@ -908,7 +921,7 @@
 		</effects>
 	</skill>
 	<skill id="915" toLevel="1" name="Dance of Berserker">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases a party member's P. Def., M. Def. and Evasion, and increases their P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed for 2 minutes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_BERSERKER</abnormalType>
@@ -971,7 +984,7 @@
 		</effects>
 	</skill>
 	<skill id="916" toLevel="4" name="Shield Deflect Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, transfers magical damage back to the enemy caster. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
@@ -1012,7 +1025,7 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 sec., you call upon your hidden reserves to increase your skills power and standard attack damage by 30% during PvP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
@@ -1040,7 +1053,7 @@
 		</effects>
 	</skill>
 	<skill id="918" toLevel="1" name="Maximum Force Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Immediately increases Momentum to its maximum level. -->
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
@@ -1068,7 +1081,7 @@
 		</effects>
 	</skill>
 	<skill id="919" toLevel="1" name="Maximum Sonic Focus">
-		<!-- Confirmed CT2.5 -->
+		<!-- Immediately increases Momentum to its maximum level. -->
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
@@ -1097,7 +1110,7 @@
 		</effects>
 	</skill>
 	<skill id="920" toLevel="37" name="Power Crush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit. Critical. -->
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1281,7 +1294,7 @@
 		</effects>
 	</skill>
 	<skill id="921" toLevel="1" name="Cursed Pierce">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with 3849 Power added to P. Atk. Over-hit. Ignores Shield Defense. Critical is possible. -->
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-337</effectPoint>
@@ -1314,8 +1327,7 @@
 		</effects>
 	</skill>
 	<skill id="922" toLevel="1" name="Hide">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
+		<!-- Hides the user. Decreases Speed by 30%, and the effect is canceled if any action other than movement is initiated. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
@@ -1345,7 +1357,7 @@
 		</effects>
 	</skill>
 	<skill id="923" toLevel="1" name="Dual Dagger Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When using a dual dagger, increases P. Atk. by 87.5 and the Vital Spot Attack Rate by 5%. -->
 		<icon>icon.skill0923</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -1372,7 +1384,7 @@
 		</effects>
 	</skill>
 	<skill id="924" toLevel="1" name="Seven Arrow">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical. -->
 		<castRange>900</castRange>
 		<effectPoint>-1022</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1403,7 +1415,7 @@
 		</effects>
 	</skill>
 	<skill id="925" toLevel="1" name="Sigil Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a Sigil is equipped, increases M. Atk. by 4% and MP Recovery Bonus by 17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1426,7 +1438,7 @@
 		</effects>
 	</skill>
 	<skill id="926" toLevel="1" name="Sigil Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- When a Sigil is equipped, increases heal power by 30 and MP Recovery Bonus by 17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1449,7 +1461,7 @@
 		</effects>
 	</skill>
 	<skill id="927" toLevel="14" name="Burning Chop">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every second. Cannot be used when a bow/ crossbow is equipped. Over-hit. Critical. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1577,7 +1589,7 @@
 		</effects>
 	</skill>
 	<skill id="928" toLevel="1" name="Dual Blow">
-		<!-- High Five Skill -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical. Over-hit. Requires a dual dagger to be equipped. -->
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
@@ -1615,6 +1627,7 @@
 		</effects>
 	</skill>
 	<skill id="929" toLevel="1" name="Spirit of the Cat">
+		<!-- Harness the spirit of your servitor. This skill transforms you into a Human/ Cat hybrid with specialized skills for 5 minutes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1667,6 +1680,7 @@
 		</effects>
 	</skill>
 	<skill id="930" toLevel="1" name="Spirit of the Phantom">
+		<!-- Harness the spirit of your servitor. This skill transforms you into a Dark Elf/ Phantom hybrid with specialized skills for 5 minutes. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1719,6 +1733,7 @@
 		</effects>
 	</skill>
 	<skill id="931" toLevel="1" name="Spirit of the Unicorn">
+		<!-- Harness the spirit of your servitor. This skill transforms you into an Elf/ Unicorn hybrid with specialized skills for 5 minute. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1771,6 +1786,7 @@
 		</effects>
 	</skill>
 	<skill id="932" toLevel="9" name="Star Stone Gathering">
+		<!-- Collects Star Stones. -->
 		<castRange>100</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>6000</hitTime>
@@ -1799,7 +1815,7 @@
 		</conditions>
 	</skill>
 	<skill id="933" toLevel="1" name="Detection">
-		<!-- Confirmed CT2.5 -->
+		<!-- Finds any enemies hidden nearby. -->
 		<affectRange>300</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2500</hitTime>
@@ -1818,6 +1834,7 @@
 		</effects>
 	</skill>
 	<skill id="934" toLevel="1" name="Sigil Mastery">
+		<!-- When a sigil is equipped, increases Max MP by 5% and MP Recovery Bonus by 17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1840,6 +1857,7 @@
 		</effects>
 	</skill>
 	<skill id="935" toLevel="1" name="Sigil Mastery">
+		<!-- When a sigil is equipped, increases Max MP by 5% and MP Recovery Bonus by 17%. -->
 		<icon>icon.skill0925</icon>
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
@@ -1862,7 +1880,7 @@
 		</effects>
 	</skill>
 	<skill id="936" toLevel="47" name="Ordinary Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Mercenary's ability. -->
 		<icon>icon.skilltransform1</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2151,7 +2169,7 @@
 		</effects>
 	</skill>
 	<skill id="937" toLevel="47" name="Elite Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Elite Mercenary's ability. -->
 		<icon>icon.skilltransform1</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2447,7 +2465,7 @@
 		</effects>
 	</skill>
 	<skill id="938" toLevel="47" name="Exalted Mercenary">
-		<!-- Confirmed CT2.5 -->
+		<!-- Exalted Mercenary's ability. -->
 		<icon>icon.skilltransform1</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2736,7 +2754,7 @@
 		</effects>
 	</skill>
 	<skill id="939" toLevel="1" name="Soul Rage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to level 40. Critical hit and over-hit are possible. -->
 		<castRange>600</castRange>
 		<effectPoint>-340</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2764,6 +2782,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="940" toLevel="1" name="Fake Attack">
+		<!-- Pretends to attack. -->
 		<hitTime>1000</hitTime>
 		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
@@ -2774,6 +2793,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="941" toLevel="1" name="Special Motion">
+		<!-- Surprises the target. -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2787,6 +2807,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="942" toLevel="1" name="Special Motion">
+		<!-- Acts grumpy. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_transform_s_attack</icon>
@@ -2798,6 +2819,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="943" toLevel="1" name="Special Motion">
+		<!-- Brings down snow on the target's head. -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2811,6 +2833,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="944" toLevel="1" name="Special Motion">
+		<!-- Laughs at target. -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2824,6 +2847,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="945" toLevel="1" name="Magician's Will">
+		<!-- Increases M. Atk. by 5%, Casting Spd. by 5% and magical Critical Rate by 5%. Decreases MP Consumption by 5%. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2849,6 +2873,7 @@
 		</effects>
 	</skill>
 	<skill id="946" toLevel="1" name="Silent Mind">
+		<!-- Allows use of a bow without consuming MP. -->
 		<icon>icon.skill0946</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -2858,7 +2883,7 @@
 		</effects>
 	</skill>
 	<skill id="947" toLevel="1" name="Lucky Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit. -->
 		<affectLimit>3-6</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
@@ -2894,6 +2919,7 @@
 		</effects>
 	</skill>
 	<skill id="948" toLevel="1" name="Eye for Eye">
+		<!-- For 10 seconds, returns received damage back to the enemy. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
@@ -2919,6 +2945,7 @@
 		</effects>
 	</skill>
 	<skill id="949" toLevel="1" name="Onslaught of Pa'agrio">
+		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 seconds, and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -2966,8 +2993,7 @@
 		</effects>
 	</skill>
 	<skill id="950" toLevel="7" name="Nail Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- A demonic clawed combo attack. Power $s1. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -3014,8 +3040,7 @@
 		</effects>
 	</skill>
 	<skill id="951" toLevel="7" name="Wing Assault">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- Charges with outspread wings. Strikes around the attacking target. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
@@ -3069,7 +3094,7 @@
 		</effects>
 	</skill>
 	<skill id="952" toLevel="5" name="Collector's Experience">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by $s1 when using a sword/ blunt weapon. Increases Shield Defense by $s2 when using a shield. There's a chance that Collector's Fortune will be activated on yourself when using Crushing Strike. -->
 		<icon>BranchSys2.icon.skill0952</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -3085,7 +3110,7 @@
 				<!-- Crushing Strike -->
 				<!-- Collector's Fortune -->
 				<castSkillId>997</castSkillId>
-				<skillId>6920</skillId>
+				<skillId>6920</skillId> <!-- Collector's Fortune -->
 				<skillLevel>1</skillLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -3117,7 +3142,7 @@
 		</effects>
 	</skill>
 	<skill id="953" toLevel="1" name="Life to Soul">
-		<!-- Confirmed CT2.5 -->
+		<!-- Consumes HP in order to increase the soul. -->
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>328</hpConsume>
@@ -3139,7 +3164,7 @@
 		</effects>
 	</skill>
 	<skill id="954" toLevel="1" name="Strider Bite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 seconds, and makes him consume 54 HP every second. Over-hit. Critical. -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -3177,7 +3202,7 @@
 		</effects>
 	</skill>
 	<skill id="955" toLevel="1" name="Strider Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Speed by 66 for 15 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -3201,8 +3226,7 @@
 		</effects>
 	</skill>
 	<skill id="956" toLevel="3" name="Boost Morale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- For $s1 when using a sword/ blunt weapon/ dual sword, increases one's own Accuracy by $s2, Critical Rate by $s3, and Critical Damage by $s4. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3265,8 +3289,7 @@
 		</effects>
 	</skill>
 	<skill id="957" toLevel="37" name="Guillotine Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
 		<effectPoint>
@@ -3452,8 +3475,7 @@
 		</effects>
 	</skill>
 	<skill id="958" toLevel="37" name="Triple Blade Slash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Vanguard Stance Skill -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit. Ignores Shield Defense. -->
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -3639,7 +3661,7 @@
 		</effects>
 	</skill>
 	<skill id="959" toLevel="1" name="Frog Jump">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
@@ -3664,7 +3686,7 @@
 		</effects>
 	</skill>
 	<skill id="960" toLevel="1" name="Race Running">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
@@ -3689,7 +3711,7 @@
 		</effects>
 	</skill>
 	<skill id="961" toLevel="1" name="Swift Dash">
-		<!-- Increases one's own moving speed by 33 for 15 seconds. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
@@ -3714,7 +3736,7 @@
 		</effects>
 	</skill>
 	<skill id="962" toLevel="1" name="Guard's March">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Speed by 33 for 5 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
@@ -3740,7 +3762,7 @@
 		</effects>
 	</skill>
 	<skill id="963" toLevel="1" name="Guard's Ambush">
-		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
+		<!-- Hides the user. Decreases Speed by 30%, and the effect is canceled if any action other than movement is initiated. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
@@ -3769,6 +3791,7 @@
 		</effects>
 	</skill>
 	<skill id="964" toLevel="1" name="Children of Shilen">
+		<!-- Increases Casting Spd. by 13 and MP Recovery Bonus by 2%. -->
 		<icon>icon.skill0294</icon>
 		<magicLvl>14</magicLvl>
 		<operateType>P</operateType>
@@ -3785,7 +3808,7 @@
 		</effects>
 	</skill>
 	<skill id="965" toLevel="1" name="Fake Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Pretends to attack. -->
 		<hitTime>1000</hitTime>
 		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>80</magicLvl>
@@ -3796,7 +3819,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="966" toLevel="1" name="Special Motion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Plays harp. -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3818,7 +3841,7 @@
 		<!-- TODO: Implement and use proper effects. -->
 	</skill>
 	<skill id="968" toLevel="1" name="Treykan Claw">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with 6960 Power added to P. Atk. -->
 		<castRange>20</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>-354</effectPoint>
@@ -3842,7 +3865,7 @@
 		</effects>
 	</skill>
 	<skill id="969" toLevel="1" name="Treykan Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases your Speed by 100% for 5 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -3868,7 +3891,7 @@
 		</effects>
 	</skill>
 	<skill id="970" toLevel="1" name="Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases your Speed by 66 for 15 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -3894,7 +3917,7 @@
 		</effects>
 	</skill>
 	<skill id="971" toLevel="1" name="Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. by 30% for 20 minutes. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -3922,7 +3945,7 @@
 		</effects>
 	</skill>
 	<skill id="972" toLevel="1" name="Snipe">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 2 minutes, increases Accuracy by 6, P. Atk. by 199, bow's range by 200 and Critical Rate by 20% when using a bow. The player cannot move while the effect lasts. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
@@ -3971,7 +3994,7 @@
 		</effects>
 	</skill>
 	<skill id="973" toLevel="8" name="Stun Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with Power $s1 added to P. Atk. Stuns the enemy for $s2. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -4040,7 +4063,7 @@
 		</effects>
 	</skill>
 	<skill id="974" toLevel="7" name="Stun Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fires arrows of $s1 power added to P. Atk.. Inflicts Stun on the enemy for $s2. Cancels target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -4099,7 +4122,7 @@
 		</effects>
 	</skill>
 	<skill id="975" toLevel="7" name="Aqua Swirl">
-		<!-- Confirmed CT2.5 -->
+		<!-- Creates a powerful vortex of water and inflicts Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-673</value>
@@ -4165,7 +4188,7 @@
 		</effects>
 	</skill>
 	<skill id="976" toLevel="7" name="(Wind Strike)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Creates a powerful hurricane and inflicts Wind damage on the enemy with $s1 Power added to M. Atk. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-669</value>
@@ -4230,7 +4253,7 @@
 		</effects>
 	</skill>
 	<skill id="977" toLevel="6" name="Ice Bolt">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power added to M. Atk., and decreasing their Speed by $s3 for $s2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4302,7 +4325,7 @@
 		</effects>
 	</skill>
 	<skill id="978" toLevel="7" name="Shoulder Charge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Over-hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -4365,7 +4388,7 @@
 		</effects>
 	</skill>
 	<skill id="979" toLevel="6" name="Aggression">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes the selected target with $s1 Power into attacking you. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -4405,7 +4428,7 @@
 		</effects>
 	</skill>
 	<skill id="980" toLevel="6" name="Aggression Aura">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provokes nearby enemies with $s1 Power into attacking you. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -4453,7 +4476,7 @@
 		</effects>
 	</skill>
 	<skill id="981" toLevel="6" name="Sleep">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes the enemy to sleep for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -4508,6 +4531,7 @@
 		</effects>
 	</skill>
 	<skill id="982" toLevel="3" name="Combat Aura">
+		<!-- Increases party member's P. Atk. by $s2 and Atk. Spd. by $s3 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4561,7 +4585,7 @@
 		</effects>
 	</skill>
 	<skill id="983" toLevel="1" name="Patience">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Skill Power by 20% when being attacked. -->
 		<icon>icon.skill0983</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>P</operateType>
@@ -4575,13 +4599,13 @@
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>6687</skillId>
+				<skillId>6687</skillId> <!-- Patience -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="984" toLevel="25" name="Shield Strike">
-		<!-- Glory Days confirmed -->
+		<!-- Attacks the enemy using a shield with $s1 Power added to P. Atk, and provokes the enemy. Requires a shield. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-3787</value>
@@ -4712,7 +4736,7 @@
 		</effects>
 	</skill>
 	<skill id="985" toLevel="1" name="Challenge for Fate">
-		<!-- Glory Days confirmed -->
+		<!-- Challenges and provokes nearby enemies. Increases your P. Def. and M. Def. for 15 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -4744,13 +4768,13 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Challenge of Faith -->
-				<skillId>6913</skillId>
+				<skillId>6913</skillId> <!-- Challenge of Faith -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="986" toLevel="25" name="Deadly Strike">
-		<!-- High Five Skill -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Cannot be used when a bow/ crossbow/ fist weapon is equipped. Over-hit. -->
 		<castRange>40</castRange>
 		<effectPoint>-2320</effectPoint>
 		<effectRange>400</effectRange>
@@ -4864,7 +4888,7 @@
 		</effects>
 	</skill>
 	<skill id="987" toLevel="1" name="Multiple Shot">
-		<!-- Glory Days confirmed -->
+		<!-- Attack multiple enemies at the front with 11030 Power added to P. Atk. Over-hit. Critical. Requires a bow or crossbow to be equipped. -->
 		<affectLimit>8-0-1</affectLimit>
 		<affectRange>900</affectRange>
 		<affectHeight>-200;200</affectHeight>
@@ -4903,7 +4927,7 @@
 		</effects>
 	</skill>
 	<skill id="988" toLevel="3" name="Battle Whisper">
-		<!-- High Five Skill -->
+		<!-- For $s1, increases P. Atk. by $s2, Critical Damage by $s3, and Atk. Spd. by $s4. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
 		<abnormalTime>120</abnormalTime>
 		<effectPoint>
 			<value level="1">486</value>
@@ -4960,7 +4984,7 @@
 		</effects>
 	</skill>
 	<skill id="989" toLevel="1" name="Defense Motion">
-		<!-- High Five Skill -->
+		<!-- For 2 minutes, increases your P. Def. by 25%, Evasion by 3, and M. Def. by 10%. Increases the additional MP Consumption when singing while sing/ dance effect lasts. -->
 		<abnormalTime>120</abnormalTime>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
@@ -4993,7 +5017,7 @@
 		</effects>
 	</skill>
 	<skill id="990" toLevel="1" name="Death Sting">
-		<!-- High Five Skill -->
+		<!-- Shoots an arrow that is aimed to kill. Attacks the enemy with 24306 Power added to P. Atk. Over-hit possible. Critical hit possible. Requires a bow/ crossbow to be equipped. -->
 		<castRange>900</castRange>
 		<effectPoint>-1387</effectPoint>
 		<effectRange>1400</effectRange>
@@ -5027,7 +5051,7 @@
 		</effects>
 	</skill>
 	<skill id="991" toLevel="1" name="Throwing Dagger">
-		<!-- Glory Days confirmed -->
+		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and decreases Speed by 80% for 10 seconds. Requires a dagger to be equipped. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -5070,7 +5094,7 @@
 		</effects>
 	</skill>
 	<skill id="992" toLevel="8" name="Sonic Mastery">
-		<!-- High Five Skill -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for regular physical attacks and $s2 during a critical attack. Applies when a sword, blunt weapon, or dual sword is equipped. Up to stage $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0992</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -5109,7 +5133,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
 				<isCritical>false</isCritical>
-				<skillId>6813</skillId>
+				<skillId>6813</skillId> <!-- Sonic Focus -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -5131,7 +5155,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Sonic -->
 				<isCritical>true</isCritical>
-				<skillId>6813</skillId>
+				<skillId>6813</skillId> <!-- Sonic Focus -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -5153,7 +5177,7 @@
 		</effects>
 	</skill>
 	<skill id="993" toLevel="8" name="Force Mastery">
-		<!-- High Five Skill -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for regular physical attacks and $s2 during a critical attack. Applies when a fist weapon is equipped. Up to stage $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0993</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -5183,7 +5207,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Force -->
 				<isCritical>false</isCritical>
-				<skillId>6814</skillId>
+				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -5205,7 +5229,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Focus Force -->
 				<isCritical>true</isCritical>
-				<skillId>6814</skillId>
+				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -5227,7 +5251,7 @@
 		</effects>
 	</skill>
 	<skill id="994" toLevel="1" name="Rush">
-		<!-- High Five Skill -->
+		<!-- Charges toward the enemy. Cannot be used when a bow/ crossbow is equipped. -->
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-379</effectPoint>
@@ -5262,7 +5286,7 @@
 		</conditions>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
-		<!-- High Five Skill -->
+		<!-- Charges forward to attack the enemies in front with 4224 power added to P. Atk. and inflicts Stun for 9 seconds. Unavailable to use when a bow/ crossbow is equipped. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -5318,7 +5342,7 @@
 		</effects>
 	</skill>
 	<skill id="996" toLevel="1" name="Disarm">
-		<!-- High Five Skill -->
+		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -5359,7 +5383,7 @@
 		</effects>
 	</skill>
 	<skill id="997" toLevel="25" name="Crushing Strike">
-		<!-- High Five Skill -->
+		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -5483,7 +5507,7 @@
 		</effects>
 	</skill>
 	<skill id="998" toLevel="1" name="Blazing Boost">
-		<!-- Glory Days confirmed -->
+		<!-- Quickly approaches the enemy. Cannot be used when a bow/ crossbow is equipped. -->
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-630</effectPoint>

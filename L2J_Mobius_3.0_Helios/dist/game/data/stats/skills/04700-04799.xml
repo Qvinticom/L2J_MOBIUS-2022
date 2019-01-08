@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" toLevel="13" name="Gift of Queen">
+		<!-- Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -129,6 +130,7 @@
 		</effects>
 	</skill>
 	<skill id="4701" toLevel="13" name="Cure of Queen">
+		<!-- Has a chance to remove curses that decrease Accuracy, P. Atk. and Atk. Spd. from all party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -206,6 +208,7 @@
 		</effects>
 	</skill>
 	<skill id="4702" toLevel="13" name="Blessing of Seraphim">
+		<!-- Buff magic used by the Seraphim the Unicorn. Party members' MP Recovery Bonus increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -316,6 +319,7 @@
 		</effects>
 	</skill>
 	<skill id="4703" toLevel="13" name="Gift of Seraphim">
+		<!-- Seraphim the Unicorn's buff magic temporarily reduces party members' magic skill recovery time. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -427,6 +431,7 @@
 		</effects>
 	</skill>
 	<skill id="4704" toLevel="13" name="Cure of Seraphim">
+		<!-- Seraphim the Unicorn's cure magic. Removes Sleep, Hold, Stun, Silence and Paralysis debuffs from party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -504,8 +509,7 @@
 		</effects>
 	</skill>
 	<skill id="4705" toLevel="13" name="Curse of Shade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease their P. Def. and M. Def. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -657,8 +661,7 @@
 		</effects>
 	</skill>
 	<skill id="4706" toLevel="13" name="Mass Curse of Shade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their P. Def. and M. Def. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -812,8 +815,7 @@
 		</effects>
 	</skill>
 	<skill id="4707" toLevel="13" name="Shade Sacrifice">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Nightshade special HP recovery magic. Sacrifices one's own HP to regenerate HP of party members. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">589</value>
@@ -891,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="4708" toLevel="17" name="Cursed Strike">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -994,7 +996,7 @@
 		</effects>
 	</skill>
 	<skill id="4709" toLevel="17" name="Cursed Blow">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-279</value>
@@ -1088,6 +1090,7 @@
 		</effects>
 	</skill>
 	<skill id="4710" toLevel="12" name="Wild Stun">
+		<!-- Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1171,6 +1174,7 @@
 		</effects>
 	</skill>
 	<skill id="4711" toLevel="12" name="Wild Defense">
+		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
@@ -1262,6 +1266,7 @@
 		</effects>
 	</skill>
 	<skill id="4712" toLevel="12" name="Bright Burst">
+		<!-- Star Hatchling/Strider's attack skill. Power $s1. -->
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -1336,6 +1341,7 @@
 		</effects>
 	</skill>
 	<skill id="4713" toLevel="12" name="Bright Heal">
+		<!-- Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power $s1. -->
 		<coolTime>1000</coolTime>
 		<effectPoint>
 			<value level="1">33</value>
@@ -1409,27 +1415,28 @@
 		</effects>
 	</skill>
 	<skill id="4714" toLevel="1" name="Twilight Dragon">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- An active dragon with fast moving feet. -->
 		<icon>icon.skill1373</icon>
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4715" toLevel="1" name="Wind Dragon">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
 		<icon>icon.skill1373</icon>
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4716" toLevel="1" name="Star Dragon">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases. -->
 		<icon>icon.skill1373</icon>
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4717" toLevel="12" name="Heal Trick">
+		<!-- A recovery magic used by a pet. Regenerates master's HP just a little bit. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">9</value>
@@ -1490,6 +1497,7 @@
 		</effects>
 	</skill>
 	<skill id="4718" toLevel="12" name="Greater Heal Trick">
+		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">62</value>
@@ -1550,7 +1558,6 @@
 		</effects>
 	</skill>
 	<skill id="4719" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1609,7 +1616,6 @@
 		</effects>
 	</skill>
 	<skill id="4720" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1668,7 +1674,6 @@
 		</effects>
 	</skill>
 	<skill id="4721" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1727,7 +1732,6 @@
 		</effects>
 	</skill>
 	<skill id="4722" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1786,7 +1790,6 @@
 		</effects>
 	</skill>
 	<skill id="4723" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1845,6 +1848,7 @@
 		</effects>
 	</skill>
 	<skill id="4724" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -1926,6 +1930,7 @@
 		</effects>
 	</skill>
 	<skill id="4725" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2007,6 +2012,7 @@
 		</effects>
 	</skill>
 	<skill id="4726" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2088,6 +2094,7 @@
 		</effects>
 	</skill>
 	<skill id="4727" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2169,6 +2176,7 @@
 		</effects>
 	</skill>
 	<skill id="4728" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2250,7 +2258,6 @@
 		</effects>
 	</skill>
 	<skill id="4729" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2310,7 +2317,6 @@
 		</effects>
 	</skill>
 	<skill id="4730" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2370,7 +2376,6 @@
 		</effects>
 	</skill>
 	<skill id="4731" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2430,7 +2435,6 @@
 		</effects>
 	</skill>
 	<skill id="4732" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2490,7 +2494,6 @@
 		</effects>
 	</skill>
 	<skill id="4733" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2550,7 +2553,6 @@
 		</effects>
 	</skill>
 	<skill id="4734" toLevel="12" name="Spinning Slasher">
-		<!-- Boss Skill -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2609,7 +2611,6 @@
 		</effects>
 	</skill>
 	<skill id="4735" toLevel="12" name="Spinning Slasher">
-		<!-- Boss Skill -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2668,7 +2669,6 @@
 		</effects>
 	</skill>
 	<skill id="4736" toLevel="12" name="Spinning Slasher">
-		<!-- Boss Skill -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2727,7 +2727,6 @@
 		</effects>
 	</skill>
 	<skill id="4737" toLevel="12" name="Spinning Slasher">
-		<!-- Boss Skill -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2786,7 +2785,6 @@
 		</effects>
 	</skill>
 	<skill id="4738" toLevel="12" name="Spinning Slasher">
-		<!-- Boss Skill -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2845,7 +2843,6 @@
 		</effects>
 	</skill>
 	<skill id="4739" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2904,7 +2901,6 @@
 		</effects>
 	</skill>
 	<skill id="4740" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2963,7 +2959,6 @@
 		</effects>
 	</skill>
 	<skill id="4741" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3022,7 +3017,6 @@
 		</effects>
 	</skill>
 	<skill id="4742" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3081,7 +3075,6 @@
 		</effects>
 	</skill>
 	<skill id="4743" toLevel="12" name="Power Strike">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3140,6 +3133,7 @@
 		</effects>
 	</skill>
 	<skill id="4744" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3221,6 +3215,7 @@
 		</effects>
 	</skill>
 	<skill id="4745" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3302,6 +3297,7 @@
 		</effects>
 	</skill>
 	<skill id="4746" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3383,6 +3379,7 @@
 		</effects>
 	</skill>
 	<skill id="4747" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3464,6 +3461,7 @@
 		</effects>
 	</skill>
 	<skill id="4748" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3545,7 +3543,6 @@
 		</effects>
 	</skill>
 	<skill id="4749" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3605,7 +3602,6 @@
 		</effects>
 	</skill>
 	<skill id="4750" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3665,7 +3661,6 @@
 		</effects>
 	</skill>
 	<skill id="4751" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3725,7 +3720,6 @@
 		</effects>
 	</skill>
 	<skill id="4752" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3785,7 +3779,6 @@
 		</effects>
 	</skill>
 	<skill id="4753" toLevel="12" name="Mortal Blow">
-		<!-- Boss Skill -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3845,7 +3838,6 @@
 		</effects>
 	</skill>
 	<skill id="4754" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3903,7 +3895,6 @@
 		</effects>
 	</skill>
 	<skill id="4755" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3961,7 +3952,6 @@
 		</effects>
 	</skill>
 	<skill id="4756" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4019,7 +4009,6 @@
 		</effects>
 	</skill>
 	<skill id="4757" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4077,7 +4066,6 @@
 		</effects>
 	</skill>
 	<skill id="4758" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4135,6 +4123,7 @@
 		</effects>
 	</skill>
 	<skill id="4759" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4215,6 +4204,7 @@
 		</effects>
 	</skill>
 	<skill id="4760" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4295,6 +4285,7 @@
 		</effects>
 	</skill>
 	<skill id="4761" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4375,6 +4366,7 @@
 		</effects>
 	</skill>
 	<skill id="4762" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4455,6 +4447,7 @@
 		</effects>
 	</skill>
 	<skill id="4763" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4535,7 +4528,6 @@
 		</effects>
 	</skill>
 	<skill id="4764" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4593,7 +4585,6 @@
 		</effects>
 	</skill>
 	<skill id="4765" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4651,7 +4642,6 @@
 		</effects>
 	</skill>
 	<skill id="4766" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4709,7 +4699,6 @@
 		</effects>
 	</skill>
 	<skill id="4767" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4767,7 +4756,6 @@
 		</effects>
 	</skill>
 	<skill id="4768" toLevel="12" name="Power Shot">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4825,6 +4813,7 @@
 		</effects>
 	</skill>
 	<skill id="4769" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4905,6 +4894,7 @@
 		</effects>
 	</skill>
 	<skill id="4770" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4985,6 +4975,7 @@
 		</effects>
 	</skill>
 	<skill id="4771" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -5065,6 +5056,7 @@
 		</effects>
 	</skill>
 	<skill id="4772" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -5145,6 +5137,7 @@
 		</effects>
 	</skill>
 	<skill id="4773" toLevel="12" name="Stun">
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -5225,7 +5218,6 @@
 		</effects>
 	</skill>
 	<skill id="4774" toLevel="12" name="Spear Attack">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -5283,7 +5275,6 @@
 		</effects>
 	</skill>
 	<skill id="4775" toLevel="12" name="Spear Attack">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -5341,7 +5332,6 @@
 		</effects>
 	</skill>
 	<skill id="4776" toLevel="12" name="Spear Attack">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -5399,7 +5389,6 @@
 		</effects>
 	</skill>
 	<skill id="4777" toLevel="12" name="Spear Attack">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -5457,7 +5446,6 @@
 		</effects>
 	</skill>
 	<skill id="4778" toLevel="12" name="Spear Attack">
-		<!-- Boss Skill -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -5515,7 +5503,6 @@
 		</effects>
 	</skill>
 	<skill id="4779" toLevel="12" name="Heal">
-		<!-- Boss Skill -->
 		<castRange>700</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -5574,7 +5561,6 @@
 		</effects>
 	</skill>
 	<skill id="4780" toLevel="12" name="Heal">
-		<!-- Boss Skill -->
 		<castRange>700</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -5633,7 +5619,6 @@
 		</effects>
 	</skill>
 	<skill id="4781" toLevel="12" name="Heal">
-		<!-- Boss Skill -->
 		<castRange>700</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -5692,7 +5677,6 @@
 		</effects>
 	</skill>
 	<skill id="4782" toLevel="12" name="Heal">
-		<!-- Boss Skill -->
 		<castRange>700</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -5751,7 +5735,6 @@
 		</effects>
 	</skill>
 	<skill id="4783" toLevel="12" name="Heal">
-		<!-- Boss Skill -->
 		<castRange>700</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -5810,7 +5793,6 @@
 		</effects>
 	</skill>
 	<skill id="4784" toLevel="12" name="Chant of Life">
-		<!-- Boss Skill -->
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -5889,7 +5871,6 @@
 		</effects>
 	</skill>
 	<skill id="4785" toLevel="12" name="Chant of Life">
-		<!-- Boss Skill -->
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -5968,7 +5949,6 @@
 		</effects>
 	</skill>
 	<skill id="4786" toLevel="12" name="Chant of Life">
-		<!-- Boss Skill -->
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -6047,7 +6027,6 @@
 		</effects>
 	</skill>
 	<skill id="4787" toLevel="12" name="Chant of Life">
-		<!-- Boss Skill -->
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -6126,7 +6105,6 @@
 		</effects>
 	</skill>
 	<skill id="4788" toLevel="12" name="Chant of Life">
-		<!-- Boss Skill -->
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -6242,70 +6220,70 @@
 		</effects>
 	</skill>
 	<skill id="4790" toLevel="1" name="Raid Boss (Lv. 23)">
-		<!-- Confirmed CT2.5 -->
+		<!-- A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in Gludio. He waits for an opportunity to return to his country. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4791" toLevel="1" name="Raid Boss (Lv. 30)">
-		<!-- Confirmed CT2.5 -->
+		<!-- The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4792" toLevel="1" name="Raid Boss (Lv. 42)">
-		<!-- Confirmed CT2.5 -->
+		<!-- A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by M. Atk. of the Wastelands. The Spider was forced to retreat to this place. It swears that someday it will feed on the Ants and destroy them. It quietly grows in power while sharpening its fangs for vengeance. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4793" toLevel="1" name="Raid Boss (Lv. 55)">
-		<!-- Confirmed CT2.5 -->
+		<!-- A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, and the desire for revenge. Gripped by his anger, he is still at war against all humans and mystics. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4794" toLevel="1" name="Raid Boss (Lv. 50)">
-		<!-- Confirmed CT2.5 -->
+		<!-- One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came back to life. But the devil's bargain turned his once noble ideals towards loathing, turning him into a monster with the power of evil magic. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4795" toLevel="1" name="Raid Boss (Lv. 60)">
-		<!-- Confirmed CT2.5 -->
+		<!-- A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Eva, made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafurion's troops, or invaders threatening the garden. The dwarven master made two other golems, but this third version was the strongest and became the last one remaining. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4796" toLevel="1" name="Raid Boss (Lv. 25)">
-		<!-- Confirmed CT2.5 -->
+		<!-- A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after suffering cruel attacks from both sides, but Pay Dryad still remains here waiting for the golden age of peace to return. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4797" toLevel="1" name="Raid Boss (Lv. 34)">
-		<!-- Confirmed CT2.5 -->
+		<!-- An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He grows in power, and uses summoning magic learned from the Dark Elves to harness powerful servitors and minions. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4798" toLevel="1" name="Raid Boss (Lv. 34)">
-		<!-- Confirmed CT2.5 -->
+		<!-- She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates and even her own children. The Queen yearns to build a kingdom for Marsh Stakatos someday. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4799" toLevel="1" name="Raid Boss (Lv. 49)">
-		<!-- Confirmed CT2.5 -->
+		<!-- He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He greatly detests the Silenos as well as humans, and is a formidable enemy. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

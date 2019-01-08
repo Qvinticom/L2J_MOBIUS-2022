@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22100" level="58" type="L2Monster" name="Freya's Gardener">
 		<!-- Confirmed CT2.5 -->
@@ -1550,7 +1550,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
-				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet - Light Armor -->
 				<item id="35344" min="1" max="1" chance="0.0300000000000001" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1644,7 +1644,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
-				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets - Heavy Armor -->
 				<item id="36523" min="1" max="1" chance="0.299999999999999" /> <!-- Adamantite -->
 				<item id="35341" min="1" max="1" chance="0.0299999999999999" /> <!-- Eternal Gauntlet Ingredient -->
 				<item id="36524" min="1" max="1" chance="0.0299999999999999" /> <!-- Orichalcum -->

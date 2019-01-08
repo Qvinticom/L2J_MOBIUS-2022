@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15700" type="Armor" name="Sealed Moirai Gaiter">
+		<!-- Sealed Moirai Gaiters. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -22,6 +23,7 @@
 		</for>
 	</item>
 	<item id="15701" type="Armor" name="Sealed Moirai Leather Legging">
+		<!-- Sealed Moirai Leather Leggings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -40,6 +42,7 @@
 		</for>
 	</item>
 	<item id="15702" type="Armor" name="Sealed Moirai Stockings">
+		<!-- Sealed Moirai Stockings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -62,6 +65,7 @@
 		</for>
 	</item>
 	<item id="15703" type="Armor" name="Sealed Moirai Gauntlet">
+		<!-- Sealed Moirai Gauntlet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -82,6 +86,7 @@
 		</for>
 	</item>
 	<item id="15704" type="Armor" name="Sealed Moirai Leather Gloves">
+		<!-- Sealed Moirai Leather Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -99,6 +104,7 @@
 		</for>
 	</item>
 	<item id="15705" type="Armor" name="Sealed Moirai Gloves">
+		<!-- Sealed Moirai Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -119,6 +125,7 @@
 		</for>
 	</item>
 	<item id="15706" type="Armor" name="Sealed Moirai Boots">
+		<!-- Sealed Moirai Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -139,6 +146,7 @@
 		</for>
 	</item>
 	<item id="15707" type="Armor" name="Sealed Moirai Leather Boots">
+		<!-- Sealed Moirai Leather Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -156,6 +164,7 @@
 		</for>
 	</item>
 	<item id="15708" type="Armor" name="Sealed Moirai Shoes">
+		<!-- Sealed Moirai Shoes. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -176,6 +185,7 @@
 		</for>
 	</item>
 	<item id="15709" type="Armor" name="Sealed Moirai Sigil">
+		<!-- Sealed Moirai Sigil. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.weapon_tysandy_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -197,6 +207,7 @@
 		</for>
 	</item>
 	<item id="15710" type="Armor" name="Sealed Moirai Shield">
+		<!-- Sealed Moirai Shield. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.weapon_tysandy_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -218,6 +229,7 @@
 		</for>
 	</item>
 	<item id="15711" type="EtcItem" name="War Veteran Voucher">
+		<!-- Document showing military service in the Seed of Annihilation region. Collect plenty of these and take them back to Soldier Ilvenis at the pier in the Seed of Annihilation to exchange for a reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -230,6 +242,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15712" type="EtcItem" name="Full Barrel of Soup">
+		<!-- Food container of the Sel Mahums. Contains a lot of porridge. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -242,6 +255,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15713" type="EtcItem" name="Empty Soup Barrel">
+		<!-- Food container of the Sel Mahums. It's completely empty. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -254,6 +268,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15714" type="EtcItem" name="Sel Mahum ID Tag">
+		<!-- ID Tag of a Sel Mahum who is training at the Sel Mahum Training Grounds. Take it back to Guard Pinaps of Oren Village. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -266,6 +281,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15715" type="EtcItem" name="Damaged Book">
+		<!-- Ancient text that is too damaged to determine its contents. It served its purpose as a book. Sell it at the shop and get at least a little money. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -275,6 +291,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15716" type="EtcItem" name="Packaged Book">
+		<!-- Item received after saving a Treasure Hunter. It's tightly wrapped so you can't see what book is inside. Double click for more information. -->
 		<set name="icon" val="icon.etc_memopad_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -286,9 +303,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="9077-1" />
+		<set name="item_skill" val="9077-1" /> <!-- Open Packaged Book -->
 	</item>
 	<item id="15717" type="Armor" name="Elegia Ring">
+		<!-- Elegia Ring The effect is MP +27. -->
 		<set name="icon" val="icon.accessary_verpes_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -306,6 +324,7 @@
 		</for>
 	</item>
 	<item id="15718" type="Armor" name="Elegia Earring">
+		<!-- Elegia Earring. The effect is MP +39. -->
 		<set name="icon" val="icon.accessary_verpes_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -323,6 +342,7 @@
 		</for>
 	</item>
 	<item id="15719" type="Armor" name="Elegia Necklace">
+		<!-- Elegia Necklace. The effect is MP +52. -->
 		<set name="icon" val="icon.accessary_verpes_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -340,6 +360,7 @@
 		</for>
 	</item>
 	<item id="15720" type="Armor" name="Vorpal Ring">
+		<!-- Vorpal Ring. The effect is MP +26. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -357,6 +378,7 @@
 		</for>
 	</item>
 	<item id="15721" type="Armor" name="Vorpal Earring">
+		<!-- Vorpal Earring. The effect is MP +38. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -374,6 +396,7 @@
 		</for>
 	</item>
 	<item id="15722" type="Armor" name="Vorpal Necklace">
+		<!-- Vorpal Necklace. The effect is MP +51. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -391,6 +414,7 @@
 		</for>
 	</item>
 	<item id="15723" type="Armor" name="Moirai Ring">
+		<!-- Moirai Ring. The effect is MP +24. -->
 		<set name="icon" val="icon.accessary_bluelycan_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -408,6 +432,7 @@
 		</for>
 	</item>
 	<item id="15724" type="Armor" name="Moirai Earring">
+		<!-- Moirai Earring. The effect is MP +36. -->
 		<set name="icon" val="icon.accessary_bluelycan_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -425,6 +450,7 @@
 		</for>
 	</item>
 	<item id="15725" type="Armor" name="Moirai Necklace">
+		<!-- Moirai Necklace. The effect is MP +48. -->
 		<set name="icon" val="icon.accessary_bluelycan_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -442,6 +468,7 @@
 		</for>
 	</item>
 	<item id="15726" type="Armor" name="Sealed Elegia Helmet">
+		<!-- Sealed Elegia Helmet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -462,6 +489,7 @@
 		</for>
 	</item>
 	<item id="15727" type="Armor" name="Sealed Elegia Leather Helmet">
+		<!-- Sealed Elegia Leather Helmet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -479,6 +507,7 @@
 		</for>
 	</item>
 	<item id="15728" type="Armor" name="Sealed Elegia Circlet">
+		<!-- Sealed Elegia Circlet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -499,6 +528,7 @@
 		</for>
 	</item>
 	<item id="15729" type="Armor" name="Sealed Elegia Breastplate">
+		<!-- Sealed Elegia Breastplate. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t91_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -520,6 +550,7 @@
 		</for>
 	</item>
 	<item id="15730" type="Armor" name="Sealed Elegia Leather Breastplate">
+		<!-- Sealed Elegia Leather Breastplate. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t92_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -538,6 +569,7 @@
 		</for>
 	</item>
 	<item id="15731" type="Armor" name="Sealed Elegia Tunic">
+		<!-- Sealed Elegia Tunic. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t93_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -560,6 +592,7 @@
 		</for>
 	</item>
 	<item id="15732" type="Armor" name="Sealed Elegia Gaiter">
+		<!-- Sealed Elegia Gaiters. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t91_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -581,6 +614,7 @@
 		</for>
 	</item>
 	<item id="15733" type="Armor" name="Sealed Elegia Leather Legging">
+		<!-- Sealed Elegia Leather Leggings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t92_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -599,6 +633,7 @@
 		</for>
 	</item>
 	<item id="15734" type="Armor" name="Sealed Elegia Stockings">
+		<!-- Sealed Elegia Stockings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t93_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -621,6 +656,7 @@
 		</for>
 	</item>
 	<item id="15735" type="Armor" name="Sealed Elegia Gauntlet">
+		<!-- Sealed Elegia Gauntlet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t91_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -641,6 +677,7 @@
 		</for>
 	</item>
 	<item id="15736" type="Armor" name="Sealed Elegia Leather Gloves">
+		<!-- Sealed Elegia Leather Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t92_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -658,6 +695,7 @@
 		</for>
 	</item>
 	<item id="15737" type="Armor" name="Sealed Elegia Gloves">
+		<!-- Sealed Elegia Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t93_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -678,6 +716,7 @@
 		</for>
 	</item>
 	<item id="15738" type="Armor" name="Sealed Elegia Boots">
+		<!-- Sealed Elegia Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t91_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -698,6 +737,7 @@
 		</for>
 	</item>
 	<item id="15739" type="Armor" name="Sealed Elegia Leather Boots">
+		<!-- Sealed Elegia Leather Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t92_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -715,6 +755,7 @@
 		</for>
 	</item>
 	<item id="15740" type="Armor" name="Sealed Elegia Shoes">
+		<!-- Sealed Elegia Shoes. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t93_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -735,6 +776,7 @@
 		</for>
 	</item>
 	<item id="15741" type="Armor" name="Sealed Elegia Shield">
+		<!-- Sealed Elegia Shield. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.heavengate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -756,6 +798,7 @@
 		</for>
 	</item>
 	<item id="15742" type="Armor" name="Sealed Elegia Sigil">
+		<!-- Sealed Elegia Sigil. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.weapon_pricklelotus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -777,6 +820,7 @@
 		</for>
 	</item>
 	<item id="15743" type="Armor" name="Sealed Vorpal Helmet">
+		<!-- Sealed Vorpal Helmet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -797,6 +841,7 @@
 		</for>
 	</item>
 	<item id="15744" type="Armor" name="Sealed Vorpal Leather Helmet">
+		<!-- Sealed Vorpal Leather Helmet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -814,6 +859,7 @@
 		</for>
 	</item>
 	<item id="15745" type="Armor" name="Sealed Vorpal Circlet">
+		<!-- Sealed Vorpal Circlet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_circlet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -834,6 +880,7 @@
 		</for>
 	</item>
 	<item id="15746" type="Armor" name="Sealed Vorpal Breastplate">
+		<!-- Sealed Vorpal Breastplate. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -855,6 +902,7 @@
 		</for>
 	</item>
 	<item id="15747" type="Armor" name="Sealed Vorpal Leather Breastplate">
+		<!-- Sealed Vorpal Leather Breastplate. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -873,6 +921,7 @@
 		</for>
 	</item>
 	<item id="15748" type="Armor" name="Sealed Vorpal Tunic">
+		<!-- Sealed Vorpal Tunic. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -895,6 +944,7 @@
 		</for>
 	</item>
 	<item id="15749" type="Armor" name="Sealed Vorpal Gaiter">
+		<!-- Sealed Vorpal Gaiters. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -916,6 +966,7 @@
 		</for>
 	</item>
 	<item id="15750" type="Armor" name="Sealed Vorpal Leather Legging">
+		<!-- Sealed Vorpal Leather Leggings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -934,6 +985,7 @@
 		</for>
 	</item>
 	<item id="15751" type="Armor" name="Sealed Vorpal Stockings">
+		<!-- Sealed Vorpal Stockings. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -956,6 +1008,7 @@
 		</for>
 	</item>
 	<item id="15752" type="Armor" name="Sealed Vorpal Gauntlet">
+		<!-- Sealed Vorpal Gauntlet. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -976,6 +1029,7 @@
 		</for>
 	</item>
 	<item id="15753" type="Armor" name="Sealed Vorpal Leather Gloves">
+		<!-- Sealed Vorpal Leather Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -993,6 +1047,7 @@
 		</for>
 	</item>
 	<item id="15754" type="Armor" name="Sealed Vorpal Gloves">
+		<!-- Sealed Vorpal Gloves. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1013,6 +1068,7 @@
 		</for>
 	</item>
 	<item id="15755" type="Armor" name="Sealed Vorpal Boots">
+		<!-- Sealed Vorpal Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t94_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1033,6 +1089,7 @@
 		</for>
 	</item>
 	<item id="15756" type="Armor" name="Sealed Vorpal Leather Boots">
+		<!-- Sealed Vorpal Leather Boots. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t95_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1050,6 +1107,7 @@
 		</for>
 	</item>
 	<item id="15757" type="Armor" name="Sealed Vorpal Shoes">
+		<!-- Sealed Vorpal Shoes. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.armor_t96_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1070,6 +1128,7 @@
 		</for>
 	</item>
 	<item id="15758" type="Armor" name="Sealed Vorpal Shield">
+		<!-- Sealed Vorpal Shield. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.Evilgate_Shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1091,6 +1150,7 @@
 		</for>
 	</item>
 	<item id="15759" type="Armor" name="Sealed Vorpal Sigil">
+		<!-- Sealed Vorpal Sigil. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
 		<set name="icon" val="icon.belleface_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -1112,6 +1172,7 @@
 		</for>
 	</item>
 	<item id="15760" type="Armor" name="Sealed Elegia Ring">
+		<!-- Sealed Elegia Ring. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +8 and MP+27. -->
 		<set name="icon" val="icon.accessary_sealed_verpes_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1128,6 +1189,7 @@
 		</for>
 	</item>
 	<item id="15761" type="Armor" name="Sealed Elegia Earring">
+		<!-- Sealed Elegia Earring. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +12 and MP+39. -->
 		<set name="icon" val="icon.accessary_sealed_verpes_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1144,6 +1206,7 @@
 		</for>
 	</item>
 	<item id="15762" type="Armor" name="Sealed Elegia Necklace">
+		<!-- Sealed Elegia Necklace. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +17 and MP+52. -->
 		<set name="icon" val="icon.accessary_sealed_verpes_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1160,6 +1223,7 @@
 		</for>
 	</item>
 	<item id="15763" type="Armor" name="Sealed Vorpal Ring">
+		<!-- Sealed Vorpal Ring. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +8 and MP+26. -->
 		<set name="icon" val="icon.accessary_sealed_ponshrnoen_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1176,6 +1240,7 @@
 		</for>
 	</item>
 	<item id="15764" type="Armor" name="Sealed Vorpal Earring">
+		<!-- Sealed Vorpal Earring. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +12 and MP+38. -->
 		<set name="icon" val="icon.accessary_sealed_ponshrnoen_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1192,6 +1257,7 @@
 		</for>
 	</item>
 	<item id="15765" type="Armor" name="Sealed Vorpal Necklace">
+		<!-- Sealed Vorpal Necklace. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +16 and MP+51. -->
 		<set name="icon" val="icon.accessary_sealed_ponshrnoen_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1208,6 +1274,7 @@
 		</for>
 	</item>
 	<item id="15766" type="Armor" name="Sealed Moirai Ring">
+		<!-- Sealed Moirai Ring. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +7 and MP+24. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1224,6 +1291,7 @@
 		</for>
 	</item>
 	<item id="15767" type="Armor" name="Sealed Moirai Earring">
+		<!-- Sealed Moirai Earring. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has M. Def. +10 and MP+36. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1240,6 +1308,7 @@
 		</for>
 	</item>
 	<item id="15768" type="Armor" name="Sealed Moirai Necklace">
+		<!-- Sealed Moirai Necklace. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, has an M. Def. +14 and MP+48. -->
 		<set name="icon" val="icon.accessary_sealed_bluelycan_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1256,6 +1325,7 @@
 		</for>
 	</item>
 	<item id="15769" type="EtcItem" name="Sealed Vesper Ring Gem">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Ring. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.sealed_vesper_ring_gem" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1265,6 +1335,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15770" type="EtcItem" name="Sealed Vesper Earring Gem">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Earring. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.sealed_vesper_earring_gem" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1274,6 +1345,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15771" type="EtcItem" name="Sealed Vesper Necklace Gem">
+		<!-- An essential ingredient that a Dwarf needs to make Vesper Necklace. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.sealed_vesper_neckalce_gem" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1283,6 +1355,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15772" type="EtcItem" name="Sealed Moirai Ring Gem">
+		<!-- An essential ingredient that a Dwarf needs to make Moirai Ring. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.sealed_bluelycan_ring_gem" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1292,6 +1365,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15773" type="EtcItem" name="Sealed Moirai Earring Gem">
+		<!-- An essential ingredient that a Dwarf needs to make Moirai Earring. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.sealed_bluelycan_earring_gem" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1301,6 +1375,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15774" type="EtcItem" name="Sealed Moirai Necklace Gem">
+		<!-- An essential ingredient that a Dwarf needs to make Moirai Necklace. It can be sold at ordinary stores. -->
 		<set name="icon" val="icon.sealed_bluelycan_neckalce_gem" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1310,6 +1385,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15775" type="EtcItem" name="Recipe - Sealed Moirai Helmet (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Helmet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1322,6 +1398,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15776" type="EtcItem" name="Recipe - Sealed Moirai Leather Helmet(60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Helmet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1334,6 +1411,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15777" type="EtcItem" name="Recipe - Sealed Moirai Circlet (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Circlet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1346,6 +1424,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15778" type="EtcItem" name="Recipe - Sealed Moirai Breastplate (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Breastplate. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1358,6 +1437,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15779" type="EtcItem" name="Recipe - Sealed Moirai Leather Breastplate (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Breastplate. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1370,6 +1450,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15780" type="EtcItem" name="Recipe - Sealed Moirai Tunic (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Tunic. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1382,6 +1463,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15781" type="EtcItem" name="Recipe - Sealed Moirai Gaiter (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Gaiters. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1394,6 +1476,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15782" type="EtcItem" name="Recipe - Sealed Moirai Leather Legging (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Leggings. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1406,6 +1489,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15783" type="EtcItem" name="Recipe - Sealed Moirai Stockings (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Stockings. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1418,6 +1502,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15784" type="EtcItem" name="Recipe - Sealed Moirai Gauntlet (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Gauntlet. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1430,6 +1515,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15785" type="EtcItem" name="Recipe - Sealed Moirai Leather Gloves (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Gloves. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1442,6 +1528,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15786" type="EtcItem" name="Recipe - Sealed Moirai Gloves (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Gloves. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1454,6 +1541,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15787" type="EtcItem" name="Recipe - Sealed Moirai Boots (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1466,6 +1554,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15788" type="EtcItem" name="Recipe - Sealed Moirai Leather Boots (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Leather Boots. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1478,6 +1567,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15789" type="EtcItem" name="Recipe - Sealed Moirai Shoes (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Shoes. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1490,6 +1580,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15790" type="EtcItem" name="Recipe - Sealed Moirai Sigil (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Sigil. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1502,6 +1593,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15791" type="EtcItem" name="Recipe - Sealed Moirai Shield (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Moirai Shield. Requires Create Item - Skill Level 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1514,6 +1606,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15792" type="EtcItem" name="Recipe - Sealed Vesper Helmet (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Helmet. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1526,6 +1619,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15793" type="EtcItem" name="Recipe - Sealed Vesper Leather Helmet (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Leather Helmet. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1538,6 +1632,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15794" type="EtcItem" name="Recipe - Sealed Vesper Circlet (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Circlet. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1550,6 +1645,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15795" type="EtcItem" name="Recipe - Sealed Vesper Breastplate (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Breastplate. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1562,6 +1658,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15796" type="EtcItem" name="Recipe - Sealed Vesper Leather Breastplate (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Leather Breastplate. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1574,6 +1671,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15797" type="EtcItem" name="Recipe - Sealed Vesper Tunic (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Tunic. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1586,6 +1684,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15798" type="EtcItem" name="Recipe - Sealed Vesper Gaiter (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Gaiters. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1598,6 +1697,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="15799" type="EtcItem" name="Recipe - Sealed Vesper Leather Legging (60%)">
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Vesper Leather Leggings. Requires Create Item - Skill Level 10. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

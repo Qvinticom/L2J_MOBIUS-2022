@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48300" name="Resolute Recovery Potion" type="EtcItem">
 		<!-- Upon use, it restores 3000 HP and the remaining power restores CP. Instant effect with no cooldown. Cannot be used in the Olympiad. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48301" name="Resolute Attack Scroll" type="EtcItem">
-		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Atk. by 3%, P./ M. Skill Power by 3%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with οΏ½Resolute Defense Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, nearby clan members' P./ M. Atk. +3%, P./ M. Skill Power +3%, and Acquired XP/ SPed +5% for 30 min. Cannot be used together with Resolute Defense Scroll. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -18,7 +18,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48302" name="Resolute Defense Scroll" type="EtcItem">
-		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, increases nearby clan members' P./ M. Def. by 3%, Debuff Resistance by 5%, XP gained by 3%, and SP gained by 5% for 30 minutes. Cannot be used together with οΏ½Resolute Attack Scroll'. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, nearby clan members' P./ M. Def. +5%, Debuff Resistance +5%, and Acquired XP/ SPed +5% for 30 min. Cannot be used together with Resolute Attack Scroll. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48303" name="Resolute Raid Point Rune (2-hour) Box" type="EtcItem">
-		<!-- Raid Point Rune box that can be obtained with Clan Point Tokens. Double-click to obtain a Resolute Raid Point Rune (2-hour) that increases Raid Points gained by 100%. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Raid Point Rune box that can be obtained with Clan Point Tokens. Double-click to obtain a Resolute Raid Point Rune (2-hr.) that increases Raid Points gained by 100%. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -45,7 +45,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48305" name="Blessed Antharas' Earring - Shield" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
 		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -61,7 +61,7 @@
 		</stats>
 	</item>
 	<item id="48306" name="Blessed Antharas' Earring - Earth" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
 		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -77,7 +77,7 @@
 		</stats>
 	</item>
 	<item id="48307" name="Blessed Antharas' Earring - Pure" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secsCancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -93,7 +93,7 @@
 		</stats>
 	</item>
 	<item id="48308" name="Blessed Valakas' Necklace - Body" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Max HP +5% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Max HP +5% -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		</stats>
 	</item>
 	<item id="48309" name="Blessed Valakas' Necklace - Mind" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power -3%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Skill Cooldown -3% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Skill Cooldown -3% -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -125,7 +125,7 @@
 		</stats>
 	</item>
 	<item id="48310" name="Blessed Valakas' Necklace - Barrier" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Fixed Damage Resistance +5% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Fixed Damage Resistance +5% -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -141,7 +141,7 @@
 		</stats>
 	</item>
 	<item id="48311" name="Lindvior's Earring - Shield" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Cancels Knock Back/ Knock Down and gives Knock Back/ Knock Down Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +157,7 @@
 		</stats>
 	</item>
 	<item id="48312" name="Lindvior's Earring - Earth" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Cancels Knock Back/ Knock Down and gives Knock Back/ Knock Down Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -173,7 +173,7 @@
 		</stats>
 	</item>
 	<item id="48313" name="Lindvior's Earring - Pure" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Cancels Knock Back/ Knock Down and gives Knock Back/ Knock Down Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Resistance +25 -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -197,7 +197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48315" name="Shiny Gold Bar" type="EtcItem">
-		<!-- Expensive gold bars traded tacitly in the Mystic Tavern. Take it to a Dimensional Merchant to exchange it for useful items. Will be deleted on Wednesday, October 25, 2017, after regular maintenance. -->
+		<!-- A highly expensive gold bar secretly traded at Mystic Tavern. Take it to a Dimensional Merchant to exchange it for a useful item. Will be deleted during maintenance on Wednesday, April 25th, 2018. -->
 		<set name="icon" val="icon.bm_gold_bar" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48317" name="Honey Vitality Beer" type="EtcItem">
-		<!-- Brewed with a secret special method of the Mystic Tavern. When used, recovers Vitality instantly and CON/ MEN/ LUC/ CHA +1 for 10 minutes. Using additional οΏ½Honey Vitality Beer' while the buff is active enables up to Lv. 3 stacked effects. Honey Vitality Beer Lv. 2: CON/ MEN/ LUC/ CHA +2 and XP gained +10% for 10 min. Honey Vitality Beer Lv. 3: CON/ MEN/ LUC/ CHA +3 and XP gained +30% for 10 min. Cannot be used together when fish stew. Cannot be used in the Olympiad. -->
+		<!-- Honey Vitality Beer made from Mystic Tavern's special recipe. When used, it instantly restores Vitality and increases CON/ MEN/ LUC/ CHA by 1 for 10 min. If additional Honey Vitality Beer items are used while this buff is active, the effects stack up to Lv. 3.. Honey Vitality Beer Lv. 2: For 10 min, increases CON/ MEN/ LUC/ CHA by 2 and XP gain by 10%. Honey Vitality Beer Lv. 3: For 10 min, increases CON/ MEN/ LUC/ CHA by 3 and XP gain by 30%. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_royal_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -220,7 +220,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48318" name="Dark Bloody Enhancement Stone Box" type="EtcItem">
-		<!-- Use to obtain one of Dark Helios, Bloody Helios, Dark Eternal, or Bloody Eternal Enhancement Stones. -->
+		<!-- Use to obtain a Dark Helios, Bloody Helios, Dark Eternal, or Bloody Eternal Enhancement Stone. -->
 		<set name="icon" val="icon.bm_pvp_pve_upgrade_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48319" name="Royal White Save Ticket Treasure Chest" type="EtcItem">
-		<!-- Use to obtain one of R/ R95/ R99 Royal White Save Tickets. -->
+		<!-- Use to obtain a R, R95, or R99 Royal White Save Ticket. -->
 		<set name="icon" val="icon.bm_royal_white_ticket_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -236,7 +236,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48320" name="Royal Purple Save Ticket Treasure Chest" type="EtcItem">
-		<!-- Use to obtain one of R/ R95/ R99 Royal Purple Save Tickets. -->
+		<!-- Use to obtain a R, R95, or R99 Royal Purple Save Ticket. -->
 		<set name="icon" val="icon.bm_royal_purple_ticket_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -253,7 +253,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48322" name="Dimensional Bracelet Enhancement Stone Pack" type="EtcItem">
-		<!-- Double-click to randomly obtain one of the 6 types of Dimensional Bracelet Enhancement Stones. -->
+		<!-- Double-click to randomly obtain one of 6 types of Dimensional Bracelet Enhancement Stones. -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -269,7 +269,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48324" name="Agathion Masters Box" type="EtcItem">
-		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Zodiac Agathion Book of Growth. -->
+		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Book of Growth: Zodiac Agathion. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -277,7 +277,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48325" name="Special Agathion Masters Box" type="EtcItem">
-		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Zodiac Agathion Book of Growth. -->
+		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Book of Growth: Zodiac Agathion. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -300,7 +300,7 @@
 		</stats>
 	</item>
 	<item id="48327" name="Kelbim's Geffelen Shulter" type="Weapon">
-		<!-- Material item for crafting Kelbim's Geffelen (Fallen) Shulter (Shoulder) appearance. -->
+		<!-- Material item for crafting Kelbim's Geffelen Shulter appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -370,7 +370,7 @@
 		</stats>
 	</item>
 	<item id="48332" name="Rael Wrist Shield" type="Weapon">
-		<!-- Material item for crafting Rael Wrist Shield appearance. -->
+		<!-- Material item for crafting Rael Tribe Wrist Shield appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield7" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -454,7 +454,7 @@
 		</stats>
 	</item>
 	<item id="48338" name="Poln Angel Shulter" type="Weapon">
-		<!-- Material item for crafting Poln Angel Shulter appearance. -->
+		<!-- Material item for crafting Fallen Angel Shulter appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield13" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -510,7 +510,7 @@
 		</stats>
 	</item>
 	<item id="48342" name="Angelos Shield" type="Weapon">
-		<!-- Material item for crafting Angelos Shield appearance. -->
+		<!-- Material item for crafting Angelus Shield appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield17" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -564,7 +564,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48348" name="Tanta Skull Shield Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Tanta Skull Shield appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Tanta Tribe Skull Shield appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -572,7 +572,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48349" name="Rael Wrist Shield Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Rael Wrist Shield appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Rael Tribe Wrist Shield appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -620,7 +620,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48355" name="Poln Angel Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Poln Angel Shulter appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Fallen Angel Shulter appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -652,7 +652,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48359" name="Angelos Shield Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Angelos Shield appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Angelus Shield appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -694,7 +694,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48363" name="Nerupa's Faint Threads" type="EtcItem">
-		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are faint and weak in power of time regression. -->
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are faint and weak. -->
 		<set name="icon" val="icon.glimmer" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -702,7 +702,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48364" name="Nerupa's Vivid Threads" type="EtcItem">
-		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are vivid and strong in power of time regression. -->
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. The threads are vivid and strong. -->
 		<set name="icon" val="icon.glimmer" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -710,7 +710,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48365" name="Nerupa's Intense Threads" type="EtcItem">
-		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. Replete with Nerupa's power, these threads are the most effective among all of Nerupa's threads in turning back the time. -->
+		<!-- Threads weaved with Nerupa's power. Using them on a Lithra Bud turns back the Lithra Bud's time and creates a Nerupa Bud. However, there is no knowing what the repercussion of turning back the time will be. Replete with Nerupa's power, these threads are the most effective among all of Nerupa's threads. -->
 		<set name="icon" val="icon.glimmer" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -729,7 +729,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48367" name="Thread of Fate" type="EtcItem">
-		<!-- The thread of fate that binds Nerupa, Lithra, and the Mother Tree together. Normally invisible, but Nerupa's power revealed it to living eyes. -->
+		<!-- The thread of fate that binds Nerupa, Lithra, and the Mother Tree together. It is normally not visible to the naked eye, but Nerupa's power allows for it to be seen. -->
 		<set name="icon" val="icon.etc_fortune_web" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -740,7 +740,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48368" name="Nerupa Bud Petals" type="EtcItem">
-		<!-- Petals that monsters born from the Nerupa Buds have.These are the proof of the impact of time regression. As Nerupa Bud Petals of the same shape contain different memories of time, Nerupa can read the memories through these petals. -->
+		<!-- Petals of the monsters born from Nerupa Buds. These are evidence of the impact of time regression. As Nerupa Bud Petals of the same shape contain different memories of time, Nerupa can read memories through these petals. -->
 		<set name="icon" val="icon.etc_nerupa_petal" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -775,7 +775,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48371" name="Request - Forest of the Dead" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Forest of the Dead. The request can be accepted by characters between Lv. 100-110. Double-click to receive the request. -->
+		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters in the Forest of the Dead. Characters of level 100-110 can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -787,7 +787,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48372" name="Request - Swamp of Screams" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Swamp of Screams. The request can be accepted by characters between Lv. 100-110. Double-click to receive the request. -->
+		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters in the Swamp of Screams. Characters of level 100-110 can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -861,7 +861,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48379" name="Putrefied Extract" type="EtcItem">
-		<!-- Extract that Grocer Vollodos asked you to collect by defeating bug monsters in the Bloody Swampland. -->
+		<!-- The extract that Grocer Vollodos asked you to collect by defeating bugs in the Bloody Swampland. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -905,7 +905,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48383" name="Control Module" type="EtcItem">
-		<!-- Control modules obtained after defeating the Berserk Commander Golems on the Isle of Souls. Take them to Hesed of the Black Anvil Guild. -->
+		<!-- Control modules obtained after defeating the Control Golems on the Isle of Souls. Take them to Hesed of the Black Anvil Guild. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -916,7 +916,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48384" name="Cannonball of Despair" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it stuns Spezion and his clones for 10 seconds, and removes the Invincibility buff for 1 minute. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it stuns Spezion and his clones for 10 seconds, and removes the Invincibility buff for 1 min. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48385" name="Cannonball of Lunacy" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and causes Spezion's clones and minions to use the οΏ½Crazed Immolation' skill and self-destruct. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 min. and causes Spezion's clones and minions to use the Crazed Immolation skill and self-destruct. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48386" name="Cannonball of Rage" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and inflicts οΏ½Eroded Rage' buff on Spezion's clones and minions for 30 seconds. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 min. and inflicts Eroded Rage buff on Spezion's clones and minions for 30 seconds. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -946,7 +946,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48387" name="Ancient Zodiac Agathion Book of Growth" additionalName="Event" type="EtcItem">
-		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. Will be deleted on Wednesday, January 3, 2017, after regular maintenance. -->
+		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. Will be deleted on Wednesday, January 3, 2018, after regular maintenance. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -958,7 +958,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48388" name="Red Libra Kaliel's Energy Box" type="EtcItem">
-		<!-- Use to randomly obtain either Kaliel's Energy- Desire or the Energy of Longing. -->
+		<!-- Use to randomly obtain either Kaliel's Energy - Desire or the Energy of Longing. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48389" name="Shiny Agathion Cube Fragment" type="EtcItem">
-		<!-- Can be exchanged for the Zodiac Agathion Book of Growth through the Warehouse Keeper. -->
+		<!-- Can be exchanged for the Book of Growth: Zodiac Agathion through the Warehouse Keeper. -->
 		<set name="icon" val="icon.cube_piece_ag" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -990,7 +990,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48393" name="Adventure Guild Cube Treasure Chest" type="EtcItem">
-		<!-- A cube treasure chest received from Herphah for completing the Adventure Guild missions. Double-click to obtain useful items periodically. -->
+		<!-- A cube box received from Herphah for completing the Adventure Guild missions. Double-click to obtain useful items periodically. -->
 		<set name="icon" val="icon.cube_piece_bless" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

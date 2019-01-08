@@ -191,7 +191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90816" name="Gracia's Cube" additionalName="15-day" type="EtcItem">
-		<!-- A 15-day item. Double-click to receive Gracia's Potion. (Can be used only once a day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. This item will be deleted after the event is over on October 5, 2016. -->
+		<!-- A 15-day item. Double-click to get Grace Rice Cake (available only once a day). Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_violet_crystal_cube_pc_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -201,7 +201,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="90817" name="Gracia's Potion" type="EtcItem">
-		<!-- Sayha Grace points +105000 (3 slots). Cooldown: 10 minutes. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. This item will be deleted after the event is over on October 5, 2016. -->
+		<!-- Sayha Grace points +105000 (3 cells). Cooldown - 10 min. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -267,7 +267,7 @@
 		</stats>
 	</item>
 	<item id="90821" name="My Teleport Book - 1 slot" type="EtcItem">
-		<!-- A dimensional item.  Increases the number of return points to save by 1. The maximum number is 18. -->
+		<!-- A dimensional item. Increases the number of return points to save by 1. The maximum number is 18. -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="weight" val="5" />
@@ -324,7 +324,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90828" name="Transformation Scroll: Dark Knight Lv. 3" type="EtcItem">
-		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +10%, P. Def. in PvP +10%, Stun/Fear/Mental Resistance +10%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +10%, P. Def. in PvP +10%, Stun/Paralysis/Mental Resistance +10%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -334,7 +334,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90829" name="Transformation Scroll: Dark Knight Lv. 2" type="EtcItem">
-		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP  +10%, P. Atk. in PvP +7%, P. Def. in PvP +7%, Stun/Fear/Mental Resistance +7%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +7%, P. Def. in PvP +7%, Stun/Paralysis/Mental Resistance +7%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -344,7 +344,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90830" name="Transformation Scroll: Dark Knight Lv. 1" type="EtcItem">
-		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/Fear/Mental Resistance +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/Paralysis/Mental Resistance +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -364,7 +364,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90832" name="Glorious Amulet" additionalName="7-day" type="EtcItem">
-		<!-- A 7-day item. When in inventory, you get STR +1, DEX +1, CON + +1, INT +1, WIT +1, MEN +1. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- A 7-day item. When in inventory, you get STR +1, DEX +1, CON ++1, INT +1, WIT +1, MEN +1. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -373,7 +373,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="90833" name="Agathion - Joy" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec.. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -396,7 +396,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="90835" name="Life Control Tower's Scroll of Blessing" additionalName="Event" type="EtcItem">
-		<!-- Max. HP / MP +5%, XP / SP gain +30%, activates Paralysis / Mental Attack Resistance. Duration: 60 minutes. Reuse Time: 30 minutes. <Note> When used simultaneously with Angel Cat's Blessing, effects do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Max. HP/ MP +5%, XP/ SP gain +30%, activates Paralysis/ Mental Attack Resistance. Duration: 60 minutes. Reuse Time: 30 minutes. <Note> When used simultaneously with Angel Cat's Blessing, effects do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
@@ -645,7 +645,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90855" name="Stabilized Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
-		<!-- Hair Accessory M. / P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. From +6, enchantment level stays the same in case of failed enchantment. Cannot be dropped. -->
+		<!-- Hair Accessory M./ P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. From +6, enchantment level stays the same in case of failed enchantment. Cannot be dropped. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90874" name="Sayha's Storm" additionalName="Event" type="EtcItem">
-		<!-- For 10 min. Sayha Grace points +100%, XP/SP gain +100%. Reuse Time: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha�s Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- For 10 min. Sayha Grace points +100%, XP/SP gain +100%. Reuse Time: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha? Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90875" name="Sayha's Storm" type="EtcItem">
-		<!-- For 10 min. Sayha Grace points +100%, XP/SP gain +150%. Reuse Time: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha�s Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- For 10 min. Sayha Grace points +100%, XP/SP gain +150%. Reuse Time: 10 minutes. This effect remains even after character's death. Available when more than one slot of the bar of Sayha? Grace points is filled. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -1110,7 +1110,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90892" name="Agathion Bracelet - Joy" type="Armor">
-		<!-- When worn, 2 Agathion slots are activated. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- When worn, 2 Agathion slots are activated.. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1122,7 +1122,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90893" name="Agathion Bracelet - Joy" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. When worn, 2 Agathion slots are activated. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. When worn, 2 Agathion slots are activated.. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1183,13 +1183,13 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="90898" name="Agathion's Soul" type="EtcItem">
-		<!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 2  to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->
+		<!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 2 to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90899" name="Blessed Agathion's Soul" type="EtcItem">
-		<!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 3  to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->
+		<!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 3 to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />

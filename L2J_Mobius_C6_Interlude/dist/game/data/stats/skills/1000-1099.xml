@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1001" levels="10" name="Soul Cry">
+		<!-- Increases one's own P. Atk. MP gets consumed continuously. -->
 		<table name="#patk-add">4.5 14 33.5 66.5 90.5 141.5 208.5 247 310 375.5</table>
 		<table name="#mpRegen-sub">3 6 9 12 15 18 21 24 27 30</table>
 		<table name="#mpConsume_Init">2 3 5 6 7 9 11 11 13 14</table>
@@ -19,6 +20,7 @@
 		</for>
 	</skill>
 	<skill id="1002" levels="3" name="Chant of Flame" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party member's magic speed. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -55,6 +57,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1003" levels="3" name="Pa'agrian Gift" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases clan member's attack power. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -93,6 +96,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1004" levels="3" name="The Wisdom of Pa'agrio" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases alliance members' Casting Spd. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -131,6 +135,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1005" levels="3" name="Blessing of Pa'agrio" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases clan member's defense. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -169,6 +174,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1006" levels="3" name="Chant of Fire" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party member's magic resistance. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -205,6 +211,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1007" levels="3" name="Chant of Battle" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party member's attack power. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -241,6 +248,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1008" levels="3" name="The Glory of Pa'agrio" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases alliance members' M. Def. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -279,6 +287,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1009" levels="3" name="Chant of Shielding" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party member's defense. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -315,6 +324,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1010" levels="3" name="Soul Shield" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases defense. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -350,6 +360,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1011" levels="18" name="Heal">
+		<!-- Recovers HP. Power 49. -->
 		<table name="#mpConsume_Init">2 3 3 4 4 5 5 6 6 7 7 8 9 9 9 10 10 11</table>
 		<table name="#mpConsume">8 10 11 13 15 17 19 21 24 26 28 29 33 35 35 38 40 41</table>
 		<table name="#power">49 58 67 83 95 107 121 135 151 176 185 195 224 234 245 278 289 301</table>
@@ -368,6 +379,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1012" levels="3" name="Cure Poison">
+		<!-- Cures poisoning up to Effect 3. -->
 		<table name="#mpConsume_Init">2 6 11</table>
 		<table name="#mpConsume">8 24 44</table>
 		<table name="#power">3 7 9</table>
@@ -386,6 +398,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1013" levels="32" name="Recharge" enchantLevels1="30" enchantLevels2="30">
+		<!-- Regenerates MP. Cannot be used on a class that has Recharge. Power 49. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -416,6 +429,7 @@
 		</cond>
 	</skill>
 	<skill id="1015" levels="15" name="Battle Heal">
+		<!-- Quickly recovers HP. Power 83. -->
 		<table name="#mpConsume_Init">5 6 7 7 8 9 10 11 11 13 13 14 15 15 16</table>
 		<table name="#mpConsume">20 22 25 28 32 35 39 41 43 49 52 53 57 59 62</table>
 		<table name="#power">83 95 107 121 135 151 176 185 195 224 234 245 278 289 301</table>
@@ -434,6 +448,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1016" levels="9" name="Resurrection">
+		<!-- Resurrects a corpse. -->
 		<table name="#mpConsume_Init">12 18 25 31 36 39 42 46 48</table>
 		<table name="#mpConsume">47 70 97 121 144 156 165 182 191</table>
 		<table name="#power">0 20 30 40 50 55 60 65 70</table>
@@ -452,6 +467,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1018" levels="3" name="Purify">
+		<!-- Heals paralysis, cures poisoning and stops bleeding with the effect of 3 or less. -->
 		<table name="#mpConsume_Init">8 10 11</table>
 		<table name="#mpConsume">31 38 44</table>
 		<table name="#negatePower">3 7 9</table>
@@ -472,6 +488,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1020" levels="27" name="Vitalize" enchantLevels1="30" enchantLevels2="30">
+		<!-- Recovers HP, cures poison, and stops bleeding with Effect 3 or less. Power 440. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -502,6 +519,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1027" levels="15" name="Group Heal">
+		<!-- Recovers party member's HP. Power 66. -->
 		<table name="#mpConsume_Init">7 8 9 10 11 12 13 14 15 17 18 18 19 20 21</table>
 		<table name="#mpConsume">26 30 34 38 42 47 52 55 57 66 69 70 76 79 82</table>
 		<table name="#power">66 76 86 97 108 121 141 148 156 179 188 196 222 231 241</table>
@@ -521,6 +539,7 @@
 		<set name="aggroPoints" val="#aggro"/>
 	</skill>
 	<skill id="1028" levels="19" name="Might of Heaven" enchantLevels1="30" enchantLevels2="30">
+		<!-- Inflicts damage to undead monsters. Power 39. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -549,6 +568,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init"/>
 	</skill>
 	<skill id="1031" levels="8" name="Disrupt Undead">
+		<!-- Does damage to undead monsters. Power 19. -->
 		<table name="#mpConsume_Init">4 4 5 5 5 6 6 6</table>
 		<table name="#mpConsume">14 16 17 18 20 21 23 24</table>
 		<table name="#magicLvl">17 20 23 25 28 30 33 35</table>
@@ -568,6 +588,7 @@
 		<set name="effectRange" val="900"/>
 	</skill>
 	<skill id="1032" levels="3" name="Invigor" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases resistance to bleeding. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -602,6 +623,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1033" levels="3" name="Resist Poison" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases resistance to poison. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -637,6 +659,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1034" levels="13" name="Repose">
+		<!-- Diminishes undead monster's will to attack. -->
 		<table name="#mpConsume_Init">12 13 14 16 16 17 18 18 19 19 20 20 21</table>
 		<table name="#mpConsume">47 52 56 61 64 66 69 71 74 76 78 80 82</table>
 		<table name="#power">30 40 50 60 70 80 90 100 110 120 130 140 150</table>
@@ -654,6 +677,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="1035" levels="4" name="Mental Shield" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases resistance to Hold, Sleep, Fear, and Mental attacks. Enchant Time: the skill duration is increased. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -697,6 +721,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1036" levels="2" name="Magic Barrier" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases M. Def. Effect 2. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -732,6 +757,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1040" levels="3" name="Shield" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases P. Def. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -767,6 +793,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1042" levels="12" name="Hold Undead" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly paralyzes undead monsters. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -796,6 +823,7 @@
 		</for>
 	</skill>
 	<skill id="1043" levels="1" name="Holy Weapon" enchantLevels1="30" enchantLevels2="30">
+		<!-- A temporary holy enhancement of a physical attack. Can be used on one's party members. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -828,6 +856,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1044" levels="3" name="Regeneration" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases HP recovery. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -863,6 +892,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1045" levels="6" name="Bless the Body" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases maximum HP. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -898,6 +928,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1047" levels="4" name="Mana Regeneration">
+		<!-- Temporarily increases ability to regenerate MP. Consumes 7 Spirit Ore. Effect 1. -->
 		<table name="#regMp">1.72 2.16 2.74 3.09</table>
 		<table name="#itemConsumeCount">7 9 12 15</table>
 		<table name="#mpConsume_Init">7 9 11 13</table>
@@ -905,7 +936,7 @@
 		<table name="#aggro">379 457 566 635</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="3031"/>
+		<set name="itemConsumeId" val="3031"/> <!-- Spirit Ore -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="6000"/>
@@ -923,6 +954,7 @@
 		</for>
 	</skill>
 	<skill id="1048" levels="6" name="Bless the Soul" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases maximum MP. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -959,6 +991,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1049" levels="14" name="Requiem">
+		<!-- A requiem for the dead that temporarily disables aggressive behavior of nearby undead monsters. -->
 		<table name="#mpConsume_Init">11 12 13 14 16 16 17 18 18 19 19 20 20 21</table>
 		<table name="#mpConsume">42 47 52 56 61 64 66 69 71 74 76 78 80 82</table>
 		<table name="#magicLvl">40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -984,6 +1017,7 @@
 		</for>
 	</skill>
 	<skill id="1050" levels="2" name="Return">
+		<!-- Teleports caster to the nearest village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
 		<table name="#mpConsume_Init">21 31</table>
 		<table name="#mpConsume">84 122</table>
 		<table name="#hitTime">20000 1500</table>
@@ -997,6 +1031,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="1056" levels="12" name="Cancellation">
+		<!-- Removes multiple buffs from an enemy. -->
 		<table name="#mpConsume_Init">9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -1016,6 +1051,7 @@
 		<set name="negatePower" val="5"/>
 	</skill>
 	<skill id="1059" levels="3" name="Empower" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1051,6 +1087,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1062" levels="2" name="Berserker Spirit" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily reduces P. Def., M. Def. and Evasion while increasing P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Can be used on one's party members. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1105,6 +1142,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1064" levels="14" name="Silence" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly blocks an enemy's magic skills. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1137,6 +1175,7 @@
 		</for>
 	</skill>
 	<skill id="1068" levels="3" name="Might" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases P. Atk. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1172,6 +1211,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1069" levels="42" name="Sleep" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly puts target to sleep. If cast on a sleeping target, the spell has no effect. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1203,6 +1243,7 @@
 		</for>
 	</skill>
 	<skill id="1071" levels="14" name="Surrender To Water" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly decreases enemy's resistance to water attacks and increases resistance to fire attacks. Effect 4. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1238,6 +1279,7 @@
 		</for>
 	</skill>
 	<skill id="1072" levels="5" name="Sleeping Cloud" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly puts nearby enemies to sleep. If cast on a sleeping target, the spell has no effect. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1270,6 +1312,7 @@
 		</for>
 	</skill>
 	<skill id="1073" levels="2" name="Kiss of Eva" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases lung capacity. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1303,6 +1346,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1074" levels="14" name="Surrender To Wind" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly decreases enemy's resistance to wind attacks and increases resistance to earth attacks. Effect 4. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1338,6 +1382,7 @@
 		</for>
 	</skill>
 	<skill id="1075" levels="15" name="Peace">
+		<!-- Puts target's mind at peace. Desire to attack is decreased. -->
 		<table name="#mpConsume_Init">6 7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">24 28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">35 40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -1354,6 +1399,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="1077" levels="3" name="Focus" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases critical attack rate. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1389,6 +1435,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1078" levels="6" name="Concentration" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken taken. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1424,6 +1471,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1083" levels="17" name="Surrender To Fire" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly decreases enemy's resistance to fire attacks and increases resistance to water attacks. Effect 3. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1463,6 +1511,7 @@
 		</for>
 	</skill>
 	<skill id="1085" levels="3" name="Acumen" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases Casting Spd. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1498,6 +1547,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1086" levels="2" name="Haste" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1533,6 +1583,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1087" levels="3" name="Agility" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases Evasion. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1568,6 +1619,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="1090" levels="6" name="Life Drain">
+		<!-- Absorbs target's HP. Power 15. -->
 		<table name="#mpConsume_Init">5 8 10 12 14 16</table>
 		<table name="#mpConsume">22 32 40 46 54 63</table>
 		<table name="#magicLvl">7 14 20 25 30 35</table>
@@ -1589,6 +1641,7 @@
 		<!-- absorbs 80% of damage -->
 	</skill>
 	<skill id="1092" levels="19" name="Fear">
+		<!-- Instills fear into an enemy causing it to flee. -->
 		<table name="#mpConsume_Init">3 4 5 6 6 7 8 9 10 11 11 11 12 12 13 13 13 14 14</table>
 		<table name="#mpConsume">12 16 18 21 24 28 31 35 38 41 43 44 46 48 49 51 52 53 55</table>
 		<table name="#magicLvl">14 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74</table>
@@ -1612,6 +1665,7 @@
 		</for>
 	</skill>
 	<skill id="1095" levels="5" name="Venom">
+		<!-- Instantaneous poison attack. Effect 1. -->
 		<table name="#mpConsume_Init">2 3 4 7 10</table>
 		<table name="#mpConsume">8 12 16 28 38</table>
 		<table name="#magicLvl">7 14 20 40 52</table>
@@ -1641,6 +1695,7 @@
 		</for>
 	</skill>
 	<skill id="1096" levels="16" name="Seal of Chaos" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly decreases Accuracy of nearby enemies. Effect 2. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1675,6 +1730,7 @@
 		</for>
 	</skill>
 	<skill id="1097" levels="20" name="Dreaming Spirit" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly puts target to sleep. If cast on a sleeping target, the spell has no effect. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1707,6 +1763,7 @@
 		</for>
 	</skill>
 	<skill id="1099" levels="15" name="Seal of Slow" enchantLevels1="30" enchantLevels2="30">
+		<!-- Instantly reduces the Speed of nearby enemies. Effect 2. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>

@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10497" toLevel="1" name="Warrior - Individual Passive">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0217</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10498" toLevel="1" name="Warrior - Individual">
-		<!-- Glory Days confirmed -->
 		<!-- P. Atk. increases by 10% for 5 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -35,7 +33,6 @@
 		</effects>
 	</skill>
 	<skill id="10499" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>

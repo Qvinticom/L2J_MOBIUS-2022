@@ -1661,7 +1661,7 @@
 		</stats>
 	</item>
 	<item id="20868" name="Kotatz" type="EtcItem">
-		<!-- Summons Kotatz, who increases HP Recovery Rate by 40% and MP Recovery Rate by 20%. The Recovery Bonus effect occurs only when summoned at a certain distance away from the village. -->
+		<!-- Summons Kotatz, who increases HP Recovery Bonus Rate by 40% and MP Recovery Bonus Rate by 20%. The Recovery Bonus effect occurs only when summoned at a certain distance away from the village. -->
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1845,7 +1845,7 @@
 		</skills>
 	</item>
 	<item id="20876" name="Love for All Seasons" additionalName="Empower, Wild Magic" type="EtcItem">
-		<!-- For 1 hour, M. Atk. + 75% and the chance of magic damage by 2. -->
+		<!-- For 1 hour, M. Atk. +75% and the chance of magic damage by 2. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1896,7 +1896,7 @@
 		</skills>
 	</item>
 	<item id="20878" name="Female Aniruddha" additionalName="Shield, Magic Barrier, Blessed Shield" type="EtcItem">
-		<!-- For 1 hour, P. Def. + 15, M. Def. by 30%, and Shield Defense rate by 15. -->
+		<!-- For 1 hour, P. Def. +15, M. Def. by 30%, and Shield Defense rate by 15. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_c_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1922,7 +1922,7 @@
 		</skills>
 	</item>
 	<item id="20879" name="Kung Hei Fat Choy" additionalName="Might, Berserker Spirit, Vampiric Rage" type="EtcItem">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4. P. Atk. + 15%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. Has a chance of recovering 9% of the standard melee damage inflicted on the enemy as HP. -->
+		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4. P. Atk. +15%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. Has a chance of recovering 9% of the standard melee damage inflicted on the enemy as HP. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1948,7 +1948,7 @@
 		</skills>
 	</item>
 	<item id="20880" name="Chinese Feast" additionalName="Clarity, Acumen, Blessed Soul" type="EtcItem">
-		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Increases Casting Spd. by 30% and Max MP by 35%. -->
+		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/ dance skill's MP consumption by 20%. Increases Casting Spd. by 30% and Max MP by 35%. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_e_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

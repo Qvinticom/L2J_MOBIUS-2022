@@ -219,7 +219,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="5220" name="Metal Hardener" type="EtcItem">
-		<!-- Used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -274,7 +274,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5233" name="Keshanberk*Keshanberk" type="Weapon">
-		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
+		<!-- As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1063,7 +1063,6 @@
 		</stats>
 	</item>
 	<item id="5286" name="Berserker Blade" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1091,7 +1090,7 @@
 		</stats>
 	</item>
 	<item id="5287" name="Sealed Dark Crystal breastplate" type="Armor">
-		<!-- Sealed Dark Crystal breastplate. The seal can be removed by a blacksmith in any village. -->
+		<!-- Sealed Dark Crystal Breastplate. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t74_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

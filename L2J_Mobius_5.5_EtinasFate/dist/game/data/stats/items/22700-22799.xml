@@ -235,7 +235,7 @@
 		</skills>
 	</item>
 	<item id="22711" name="Japanese Sword" type="Weapon">
-		<!-- Japanese weapon. One-handed sword form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. One-handed sword type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -296,7 +296,7 @@
 		</stats>
 	</item>
 	<item id="22713" name="Japanese Long Sword" type="Weapon">
-		<!-- Japanese weapon. Two-handed sword form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. Two-handed sword type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -455,7 +455,7 @@
 		</stats>
 	</item>
 	<item id="22718" name="Japanese Blunt Weapon" type="Weapon">
-		<!-- Japanese weapon. One-handed blunt form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. One-handed blunt weapon type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -486,7 +486,7 @@
 		</stats>
 	</item>
 	<item id="22719" name="Japanese Giant Blunt Weapon" type="Weapon">
-		<!-- Japanese weapon. Two-handed blunt form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. Two-handed blunt weapon type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -517,7 +517,7 @@
 		</stats>
 	</item>
 	<item id="22720" name="Japanese Magic Blunt Weapon" type="Weapon">
-		<!-- Japanese weapon. One-handed magic blunt form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. One-handed staff type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -548,7 +548,7 @@
 		</stats>
 	</item>
 	<item id="22721" name="Japanese Giant Magic Blunt Weapon" type="Weapon">
-		<!-- Japanese weapon. Two-handed magic blunt form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. Two-handed staff type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -579,7 +579,7 @@
 		</stats>
 	</item>
 	<item id="22722" name="Japanese Dualsword" type="Weapon">
-		<!-- Japanese weapon. Dualsword form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. Dual Sword type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dual" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -609,7 +609,7 @@
 		</stats>
 	</item>
 	<item id="22723" name="Japanese Double Dagger" type="Weapon">
-		<!-- Japanese weapon. Dual dagger form. Basic Japanese Weapon Appearance Stone. -->
+		<!-- Japanese weapon. Dual dagger type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dualdagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -720,7 +720,7 @@
 		</stats>
 	</item>
 	<item id="22727" name="Japanese Sword Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of a Japanese Sword. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed sword to that of a Japanese Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -762,7 +762,7 @@
 		</skills>
 	</item>
 	<item id="22729" name="Japanese Long Sword Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of a Japanese Long Sword. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed sword to that of a Japanese Long Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -867,7 +867,7 @@
 		</skills>
 	</item>
 	<item id="22734" name="Japanese Blunt Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a one-handed blunt to that of a Japanese blunt. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed blunt weapon to that of a Japanese Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -888,7 +888,7 @@
 		</skills>
 	</item>
 	<item id="22735" name="Japanese Giant Blunt Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a two-handed blunt to that of a Japanese blunt. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of a Japanese Giant Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -909,7 +909,7 @@
 		</skills>
 	</item>
 	<item id="22736" name="Japanese Magic Blunt Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic blunt to that of a Japanese magic blunt. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed staff to that of a Japanese One-handed Staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -930,7 +930,7 @@
 		</skills>
 	</item>
 	<item id="22737" name="Japanese Giant Magic Blunt Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a two-handed magic blunt to that of a Japanese giant magic blunt. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of a Japanese Giant Two-handed Staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -951,7 +951,7 @@
 		</skills>
 	</item>
 	<item id="22738" name="Japanese Dualsword Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of a Japanese dualsword. -->
+		<!-- Dimensional item. Changes the appearance of a dual sword to that of a Japanese Dual Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -972,7 +972,7 @@
 		</skills>
 	</item>
 	<item id="22739" name="Japanese Double Dagger Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dual dagger to that of a Japanese Double Dagger. -->
+		<!-- Dimensional item. Changes the appearance of a dual dagger to that of a Japanese Double Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1075,7 +1075,7 @@
 		</skills>
 	</item>
 	<item id="22744" name="Vitality Suspending Potion Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Vitality Suspending Potion. -->
+		<!-- Double-click to obtain a Vitality Suspending Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="36" />
 		<set name="is_clan_depositable" val="false" />
@@ -1117,7 +1117,7 @@
 		</skills>
 	</item>
 	<item id="22746" name="Scroll: Increase Vitality Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Scroll: increase Vitality. -->
+		<!-- Double-click to obtain a Scroll: increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1159,7 +1159,7 @@
 		</skills>
 	</item>
 	<item id="22748" name="Scroll: Increase Vitality Pack (High-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing Scroll: increase Vitality (High-grade). -->
+		<!-- Double-click to obtain a Scroll: increase Vitality (High-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1201,7 +1201,7 @@
 		</skills>
 	</item>
 	<item id="22750" name="Scroll: Increase Vitality Pack (Top-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing Scroll: increase Vitality (Top-grade). -->
+		<!-- Double-click to obtain a Scroll: increase Vitality (Top-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1222,7 +1222,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22751" name="Drop Rate Rune 30% (3-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 30%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +30%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1239,7 +1239,7 @@
 		</skills>
 	</item>
 	<item id="22752" name="Drop Rate Rune 30% (5-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 30%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +30%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1256,7 +1256,7 @@
 		</skills>
 	</item>
 	<item id="22753" name="Drop Rate Rune 30% (7-day)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 30%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +30%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1273,7 +1273,7 @@
 		</skills>
 	</item>
 	<item id="22754" name="Drop Rate Rune 50% (3-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 50%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +50%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1290,7 +1290,7 @@
 		</skills>
 	</item>
 	<item id="22755" name="Drop Rate Rune 50% (5-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 50%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +50%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1307,7 +1307,7 @@
 		</skills>
 	</item>
 	<item id="22756" name="Drop Rate Rune 50% (7-day)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 50%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +50%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1324,7 +1324,7 @@
 		</skills>
 	</item>
 	<item id="22757" name="Drop Rate Rune 100% (3-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 100%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +100%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1341,7 +1341,7 @@
 		</skills>
 	</item>
 	<item id="22758" name="Drop Rate Rune 100% (5-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 100%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +100%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1358,7 +1358,7 @@
 		</skills>
 	</item>
 	<item id="22759" name="Drop Rate Rune 100% (7-day)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 100%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +100%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1375,7 +1375,7 @@
 		</skills>
 	</item>
 	<item id="22760" name="Drop Rate Rune 200% (3-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 200%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +200%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1392,7 +1392,7 @@
 		</skills>
 	</item>
 	<item id="22761" name="Drop Rate Rune 200% (5-hour)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 200%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +200%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1409,7 +1409,7 @@
 		</skills>
 	</item>
 	<item id="22762" name="Drop Rate Rune 200% (7-day)" type="EtcItem">
-		<!-- When stored in the inventory, item acquisition through hunting + 200%. -->
+		<!-- When stored in the inventory, item acquisition through hunting +200%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1426,7 +1426,7 @@
 		</skills>
 	</item>
 	<item id="22763" name="Drop Rate Rune 30% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 30% (3-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 30% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1443,11 +1443,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22751" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (3-hour) -->
+			<item id="22751" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (3-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22764" name="Drop Rate Rune 30% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 30% (5-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 30% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1464,11 +1464,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22752" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (5-hour) -->
+			<item id="22752" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (5-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22765" name="Drop Rate Rune 30% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 30% (7-day. -->
+		<!-- Double-click to obtain a Drop Rate Rune 30% (7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1489,7 +1489,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22766" name="Drop Rate Rune 50% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 50% (3-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 50% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1506,11 +1506,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22754" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (3-hour) -->
+			<item id="22754" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (3-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22767" name="Drop Rate Rune 50% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 50% (5-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 50% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1527,11 +1527,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22755" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (5-hour) -->
+			<item id="22755" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (5-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22768" name="Drop Rate Rune 50% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 50% (7-day. -->
+		<!-- Double-click to obtain a Drop Rate Rune 50% (7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1552,7 +1552,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22769" name="Drop Rate Rune 100% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 100% (3-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 100% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1569,11 +1569,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22757" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (3-hour) -->
+			<item id="22757" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (3-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22770" name="Drop Rate Rune 100% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 100% (5-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 100% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1590,11 +1590,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22758" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (5-hour) -->
+			<item id="22758" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (5-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22771" name="Drop Rate Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 100% (7-day. -->
+		<!-- Double-click to obtain a Drop Rate Rune 100% (7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1615,7 +1615,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22772" name="Drop Rate Rune 200% Pack (3-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 200% (3-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 200% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1632,11 +1632,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22760" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (3-hour) -->
+			<item id="22760" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (3-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22773" name="Drop Rate Rune 200% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 200% (5-hour). -->
+		<!-- Double-click to obtain a Drop Rate Rune 200% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1653,11 +1653,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22761" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (5-hour) -->
+			<item id="22761" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (5-hr.) -->
 		</capsuled_items>
 	</item>
 	<item id="22774" name="Drop Rate Rune 200% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 200% (7-day). -->
+		<!-- Double-click to obtain a Drop Rate Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1678,7 +1678,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22775" name="Drake Maul" type="Weapon">
-		<!-- Two-handed blunt with special powers used by the Drake Lord. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Two-handed blunt with special powers used by the Drake Lord. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1956,7 +1956,7 @@
 		</stats>
 	</item>
 	<item id="22783" name="Drake Maul - Evil Spirit" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2242,7 +2242,7 @@
 		</stats>
 	</item>
 	<item id="22791" name="Freya's Staff" type="Weapon">
-		<!-- Two-handed magic blunt with special powers used by Freya. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- A two-handed staff used by Freya. Bestows a special power on the user. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2370,7 +2370,7 @@
 		</stats>
 	</item>
 	<item id="22795" name="Freya's Staff (PvP)" type="Weapon">
-		<!-- Two-handed magic blunt with special powers used by Freya. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- A two-handed staff used by Freya. Bestows a special power on the user. Inflicts more damage during PvP and has a chance to recover CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2407,7 +2407,7 @@
 		</stats>
 	</item>
 	<item id="22796" name="Freya's Staff (PvP) - Magic Hold" type="Weapon">
-		<!-- <Special Option>. Two-handed magic blunt with special powers used by Freya. A 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the user. Has a 20% chance to trigger Dryad Root when casting a magic skill on the target. Inflicts more damage during PvP. Has a chance to increase Casting Spd. when hit. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2445,7 +2445,7 @@
 		</stats>
 	</item>
 	<item id="22797" name="Freya's Staff (PvP) - Empower" type="Weapon">
-		<!-- <Special Option>. Two-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the user. Increases M. Atk. by 177. Inflicts more damage during PvP. Has a chance to increase Casting Spd. when hit. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2483,7 +2483,7 @@
 		</stats>
 	</item>
 	<item id="22798" name="Freya's Staff (PvP) - MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Two-handed magic blunt with special powers used by Freya. MP Recovery Rate is raised. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. A two-handed staff used by Freya. Bestows a special power on the user. Increases MP Recovery Rate. Inflicts more damage during PvP. Has a chance to increase Casting Spd. when hit. No Soul Crystal option. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2521,7 +2521,7 @@
 		</stats>
 	</item>
 	<item id="22799" name="Freya's Staff - Cleverness" type="Weapon">
-		<!-- Masterwork Item with chance of MP absorption. Two-handed magic blunt with special powers used by Freya. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork item that increases MP Recovery Rate. A two-handed staff used by Freya. Bestows a special power on the user. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

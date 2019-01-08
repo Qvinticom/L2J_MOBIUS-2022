@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4100" toLevel="12" name="Prominence">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -63,7 +62,6 @@
 		</effects>
 	</skill>
 	<skill id="4101" toLevel="12" name="Spinning Slasher">
-		<!-- Freya retail confirmed -->
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -123,7 +121,7 @@
 		</effects>
 	</skill>
 	<skill id="4102" toLevel="3" name="Surrender to Fire">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily decreases Fire Resistance and increases Water Resistance. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -178,7 +176,6 @@
 		</effects>
 	</skill>
 	<skill id="4103" toLevel="2" name="Ultimate Evasion">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -214,7 +211,7 @@
 		</effects>
 	</skill>
 	<skill id="4104" toLevel="12" name="Chill Flame">
-		<!-- Freya retail confirmed -->
+		<!-- HP decreases momentarily from burning flame. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -299,7 +296,6 @@
 		</effects>
 	</skill>
 	<skill id="4105" toLevel="12" name="Beam Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -359,9 +355,7 @@
 		</effects>
 	</skill>
 	<skill id="4106" toLevel="1" name="Antharas Stun">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
-		<!-- Antharas Jump from Front -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -392,9 +386,7 @@
 		</effects>
 	</skill>
 	<skill id="4107" toLevel="1" name="Antharas Stun">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
-		<!-- Antharas Tail from Behind -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>FLY_AWAY</abnormalType>
@@ -430,8 +422,7 @@
 		</effects>
 	</skill>
 	<skill id="4108" toLevel="1" name="Antharas Fear">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -464,8 +455,7 @@
 		</effects>
 	</skill>
 	<skill id="4109" toLevel="1" name="Curse of Antharas">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
+		<!-- You have been touched by the curse of Antharas, which has temporarily decreased all your combat stats. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ANTARAS_DEBUFF</abnormalType>
@@ -533,8 +523,6 @@
 		</effects>
 	</skill>
 	<skill id="4110" toLevel="2" name="Breath Attack">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
 		<affectRange>1200</affectRange>
 		<castRange>
 			<value level="1">500</value>
@@ -565,8 +553,7 @@
 		</effects>
 	</skill>
 	<skill id="4111" toLevel="1" name="Antharas Petrify">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
+		<!-- Petrified and unable to move temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -605,8 +592,6 @@
 		</effects>
 	</skill>
 	<skill id="4112" toLevel="1" name="Antharas Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
 		<affectRange>100</affectRange>
 		<castRange>50</castRange>
 		<coolTime>800</coolTime>
@@ -630,8 +615,6 @@
 		</effects>
 	</skill>
 	<skill id="4113" toLevel="1" name="Antharas Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
 		<affectRange>100</affectRange>
 		<castRange>50</castRange>
 		<coolTime>800</coolTime>
@@ -655,7 +638,6 @@
 		</effects>
 	</skill>
 	<skill id="4114" toLevel="1" name="Aden Flame">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>1100</castRange>
 		<effectPoint>-100</effectPoint>
@@ -680,7 +662,6 @@
 		</effects>
 	</skill>
 	<skill id="4115" toLevel="1" name="Aden Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -701,7 +682,7 @@
 		</effects>
 	</skill>
 	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -725,7 +706,7 @@
 		</effects>
 	</skill>
 	<skill id="4117" toLevel="12" name="Paralysis">
-		<!-- Freya retail confirmed -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -794,7 +775,7 @@
 		</effects>
 	</skill>
 	<skill id="4118" toLevel="12" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -865,7 +846,7 @@
 		</effects>
 	</skill>
 	<skill id="4119" toLevel="3" name="Decrease Accuracy">
-		<!-- Freya retail confirmed -->
+		<!-- Accuracy decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -912,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="4120" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">9</value>
@@ -1002,7 +983,6 @@
 		</effects>
 	</skill>
 	<skill id="4121" toLevel="12" name="Summoned Monster Magic Protection">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1026,8 +1006,7 @@
 		</effects>
 	</skill>
 	<skill id="4122" toLevel="1" name="Antharas">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
+		<!-- Vulnerable to Wind attacks but has a very powerful Earth Resistance. -->
 		<icon>icon.skillboss</icon>
 		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
@@ -1041,7 +1020,7 @@
 		</effects>
 	</skill>
 	<skill id="4123" toLevel="12" name="Hostile Feeling">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes the enemy to target you for attack. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-410</value>
@@ -1095,7 +1074,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4124" toLevel="12" name="Spear Attack">
-		<!-- Freya retail confirmed -->
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -1154,8 +1132,7 @@
 		</effects>
 	</skill>
 	<skill id="4125" toLevel="1" name="Antharas Recovery">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
+		<!-- Antharas recovery stage 1. -->
 		<abnormalLvl>11</abnormalLvl>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -1177,7 +1154,7 @@
 		</effects>
 	</skill>
 	<skill id="4126" toLevel="1" name="Reduce Delay">
-		<!-- Freya retail confirmed -->
+		<!-- Skill Cooldown decreases temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1202,8 +1179,6 @@
 		</effects>
 	</skill>
 	<skill id="4127" toLevel="1" name="Baium Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>200</affectRange>
 		<castRange>100</castRange>
 		<coolTime>1000</coolTime>
@@ -1224,8 +1199,6 @@
 		</effects>
 	</skill>
 	<skill id="4128" toLevel="1" name="Wind Of Force">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>600</affectRange>
 		<coolTime>1700</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1244,8 +1217,6 @@
 		</effects>
 	</skill>
 	<skill id="4129" toLevel="1" name="Earthquake">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>250</affectRange>
 		<coolTime>2500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1264,8 +1235,6 @@
 		</effects>
 	</skill>
 	<skill id="4130" toLevel="1" name="Lightning">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<coolTime>4000</coolTime>
@@ -1287,8 +1256,7 @@
 		</effects>
 	</skill>
 	<skill id="4131" toLevel="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
+		<!-- Paralyzed and unable to move temporarily. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1318,7 +1286,6 @@
 		</effects>
 	</skill>
 	<skill id="4132" toLevel="1" name="Spear Attack">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
@@ -1336,7 +1303,6 @@
 		</effects>
 	</skill>
 	<skill id="4133" toLevel="1" name="Heal">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1354,7 +1320,6 @@
 		</effects>
 	</skill>
 	<skill id="4134" toLevel="1" name="Seal">
-		<!-- Confirmed CT2.5 -->
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1369,8 +1334,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4135" toLevel="1" name="Baium Heal">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<magicLvl>75</magicLvl>
@@ -1387,8 +1350,6 @@
 		</effects>
 	</skill>
 	<skill id="4136" toLevel="1" name="Baium's Gift">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baium Skills -->
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -1407,7 +1368,6 @@
 		</effects>
 	</skill>
 	<skill id="4137" toLevel="12" name="Hydro Screw">
-		<!-- Freya retail confirmed -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1472,7 +1432,6 @@
 		</effects>
 	</skill>
 	<skill id="4138" toLevel="12" name="Corpse Burst">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1540,7 +1499,6 @@
 		</effects>
 	</skill>
 	<skill id="4139" toLevel="12" name="Boom Attack">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -1588,7 +1546,7 @@
 		</effects>
 	</skill>
 	<skill id="4140" toLevel="12" name="Contract Payment">
-		<!-- Freya retail confirmed -->
+		<!-- Your MP is continuously consumed as payment for summoning an unholy creature. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1654,7 +1612,6 @@
 		</effects>
 	</skill>
 	<skill id="4141" toLevel="12" name="Wind Fist">
-		<!-- Freya retail confirmed -->
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1721,7 +1678,6 @@
 		</effects>
 	</skill>
 	<skill id="4143" toLevel="10" name="Bomb">
-		<!-- Freya retail confirmed -->
 		<affectRange>350</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>500</hitTime>
@@ -1763,7 +1719,6 @@
 		</effects>
 	</skill>
 	<skill id="4144" toLevel="80" name="Mimic Attack">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1944,8 +1899,7 @@
 		</effects>
 	</skill>
 	<skill id="4145" toLevel="3" name="Decrease P. Atk.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- P. Atk. decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1978,8 +1932,7 @@
 		</effects>
 	</skill>
 	<skill id="4146" toLevel="3" name="Decrease P. Def.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- P. Def. decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2012,8 +1965,6 @@
 		</effects>
 	</skill>
 	<skill id="4147" toLevel="7" name="Dispel">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<effectPoint>-100</effectPoint>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2035,8 +1986,7 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- HP decreases from Poison momentarily. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2103,8 +2053,7 @@
 		</effects>
 	</skill>
 	<skill id="4149" toLevel="12" name="Bleed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- HP decreases from Bleeding momentarily. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2171,8 +2120,7 @@
 		</effects>
 	</skill>
 	<skill id="4150" toLevel="12" name="Flame">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- HP decreases from burning flame momentarily. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2239,7 +2187,6 @@
 		</effects>
 	</skill>
 	<skill id="4151" toLevel="12" name="Wind Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2301,7 +2248,6 @@
 		</effects>
 	</skill>
 	<skill id="4152" toLevel="12" name="Drain Energy">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2378,7 +2324,7 @@
 		</effects>
 	</skill>
 	<skill id="4153" toLevel="12" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2467,7 +2413,6 @@
 		</effects>
 	</skill>
 	<skill id="4154" toLevel="12" name="Mana Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2528,7 +2473,6 @@
 		</effects>
 	</skill>
 	<skill id="4155" toLevel="12" name="Twister">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2590,7 +2534,6 @@
 		</effects>
 	</skill>
 	<skill id="4156" toLevel="12" name="Beam Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2650,7 +2593,6 @@
 		</effects>
 	</skill>
 	<skill id="4157" toLevel="12" name="Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2726,7 +2668,6 @@
 		</effects>
 	</skill>
 	<skill id="4158" toLevel="12" name="Prominence">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2788,7 +2729,6 @@
 		</effects>
 	</skill>
 	<skill id="4159" toLevel="12" name="Beam Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2848,7 +2788,6 @@
 		</effects>
 	</skill>
 	<skill id="4160" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -2908,8 +2847,6 @@
 		</effects>
 	</skill>
 	<skill id="4161" toLevel="1" name="Summon">
-		<!-- Confirmed CT2.5 -->
-		<!-- Teleports player to mob (Porta/Perum skill) -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2922,8 +2859,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Atk. Spd. decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2956,7 +2892,6 @@
 		</effects>
 	</skill>
 	<skill id="4163" toLevel="12" name="Damage Shield">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
@@ -3006,8 +2941,7 @@
 		</effects>
 	</skill>
 	<skill id="4164" toLevel="18" name="Paralysis">
-		<!-- Cubic skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Body is rigid with paralysis. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3060,14 +2994,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6125</skillId>
+				<skillId>6125</skillId> <!-- Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="4165" toLevel="17" name="Icy Air">
-		<!-- Cubic skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Continuously damaged by icy air. Effect 5. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -3148,8 +3081,7 @@
 		</effects>
 	</skill>
 	<skill id="4166" toLevel="18" name="Stun">
-		<!-- Cubic skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3192,7 +3124,7 @@
 		</effects>
 	</skill>
 	<skill id="4167" toLevel="1" name="Curse of Fairy Mimyu">
-		<!-- Freya retail confirmed -->
+		<!-- Fairy Mimyu's Curse reduces Speed and Atk. Speed. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -3221,7 +3153,6 @@
 		</effects>
 	</skill>
 	<skill id="4168" toLevel="12" name="Power Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3280,7 +3211,7 @@
 		</effects>
 	</skill>
 	<skill id="4169" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3362,7 +3293,6 @@
 		</effects>
 	</skill>
 	<skill id="4170" toLevel="12" name="Mortal Blow">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3422,7 +3352,6 @@
 		</effects>
 	</skill>
 	<skill id="4171" toLevel="12" name="Spinning Slasher">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3481,7 +3410,7 @@
 		</effects>
 	</skill>
 	<skill id="4172" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3537,7 +3466,7 @@
 		</effects>
 	</skill>
 	<skill id="4173" toLevel="12" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. is increased. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -3589,7 +3518,7 @@
 		</effects>
 	</skill>
 	<skill id="4174" toLevel="12" name="Shield">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. is increased. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -3641,7 +3570,7 @@
 		</effects>
 	</skill>
 	<skill id="4175" toLevel="12" name="Haste">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. is increased. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -3693,7 +3622,7 @@
 		</effects>
 	</skill>
 	<skill id="4176" toLevel="12" name="Reflect Damage">
-		<!-- Freya retail confirmed -->
+		<!-- Returns received damage. -->
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
@@ -3745,7 +3674,6 @@
 		</effects>
 	</skill>
 	<skill id="4177" toLevel="12" name="Cancel">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
@@ -3788,7 +3716,6 @@
 		</effects>
 	</skill>
 	<skill id="4178" toLevel="12" name="Flame Strike">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3850,7 +3777,6 @@
 		</effects>
 	</skill>
 	<skill id="4179" toLevel="12" name="Power Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3909,7 +3835,7 @@
 		</effects>
 	</skill>
 	<skill id="4180" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3991,7 +3917,6 @@
 		</effects>
 	</skill>
 	<skill id="4181" toLevel="12" name="Mortal Blow">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -4051,7 +3976,7 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP decreases from poison momentarily. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4133,7 +4058,7 @@
 		</effects>
 	</skill>
 	<skill id="4183" toLevel="12" name="Decrease P. Atk.">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4212,7 +4137,7 @@
 		</effects>
 	</skill>
 	<skill id="4184" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4291,7 +4216,7 @@
 		</effects>
 	</skill>
 	<skill id="4185" toLevel="12" name="Sleep">
-		<!-- Freya retail confirmed -->
+		<!-- Afflicted with Sleep and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -4357,7 +4282,7 @@
 		</effects>
 	</skill>
 	<skill id="4186" toLevel="12" name="Hold">
-		<!-- Freya retail confirmed -->
+		<!-- Afflicted with Hold and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -4422,7 +4347,7 @@
 		</effects>
 	</skill>
 	<skill id="4187" toLevel="12" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4501,7 +4426,7 @@
 		</effects>
 	</skill>
 	<skill id="4188" toLevel="12" name="Bleed">
-		<!-- Freya retail confirmed -->
+		<!-- HP decreases from bleeding momentarily. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4583,7 +4508,7 @@
 		</effects>
 	</skill>
 	<skill id="4189" toLevel="12" name="Paralysis">
-		<!-- Freya retail confirmed -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -4648,7 +4573,7 @@
 		</effects>
 	</skill>
 	<skill id="4190" toLevel="12" name="Decrease MP">
-		<!-- Freya retail confirmed -->
+		<!-- Decreases the target's usable amount of MP. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -4728,7 +4653,6 @@
 		</effects>
 	</skill>
 	<skill id="4191" toLevel="12" name="Wind Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4788,7 +4712,6 @@
 		</effects>
 	</skill>
 	<skill id="4192" toLevel="12" name="Vampiric Touch">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4849,7 +4772,6 @@
 		</effects>
 	</skill>
 	<skill id="4193" toLevel="12" name="Life Drain">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4908,7 +4830,6 @@
 		</effects>
 	</skill>
 	<skill id="4194" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -4966,7 +4887,6 @@
 		</effects>
 	</skill>
 	<skill id="4195" toLevel="12" name="Twister">
-		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -5026,7 +4946,7 @@
 		</effects>
 	</skill>
 	<skill id="4196" toLevel="12" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -5098,7 +5018,7 @@
 		</effects>
 	</skill>
 	<skill id="4197" toLevel="12" name="Hold">
-		<!-- Freya retail confirmed -->
+		<!-- Afflicted with Hold and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -5165,7 +5085,7 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- HP decreases from poison momentarily. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -5247,7 +5167,7 @@
 		</effects>
 	</skill>
 	<skill id="4199" toLevel="12" name="Decrease P. Atk.">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. decreases momentarily. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

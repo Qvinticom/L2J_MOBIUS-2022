@@ -1,37 +1,33 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="39200" toLevel="1" name="Weapons Ingredient Box - A-grade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39201" toLevel="1" name="Box of Best Dye">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39202" toLevel="1" name="Spellbok Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39203" toLevel="1" name="Life Stone Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39204" toLevel="1" name="Dimensional Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Gives 3,700,000 XP/ 1,110,000 SP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39205" toLevel="1" name="Dark Assassin Transformation Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- You are transformed into Dark Assassin. For 15 minutes Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +10, Speed +4. Cooldown: 10 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39206" toLevel="1" name="Monster Arena Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using the Belt CON +1, HORN +1, HP Recovery Bonus +2.31, MP +1.54, CP +3.07, Max HP/ MP/ CP +10%%, damage received -3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -57,97 +53,92 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="60">
-						<item id="35669" count="1" />
+						<item id="35669" count="1" /> <!-- Angel Cat's Blessing - 30-day -->
 					</item>
 					<item chance="30">
-						<item id="49541" count="1" />
+						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<item chance="5">
-						<item id="952" count="1" />
+						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 					</item>
 					<item chance="5">
-						<item id="951" count="1" />
+						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="39208" toLevel="1" name="Pendant Matte Varnish">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39209" toLevel="1" name="Varnish for Deluxe Pendant">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39210" toLevel="1" name="White Assassin Transformation Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transforms to White Assassin for 15 minutes. Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5, Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39211" toLevel="1" name="Savior' Growth Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases XP/ SP gain by 50% for 2 hours. Cooldown - 2 hours. Effect remains after death. Only usable up to level 75. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39212" toLevel="1" name="Einsahad�s Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 1 hour Increases XP/ SP gain by 100%. Cooldown - 1 hour. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39213" toLevel="1" name="Savior Scroll: Enchant Weapon">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Can only be used together with weapons of Savior. Does not disappear after an unsuccessful Enchant. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39214" toLevel="1" name="Savior�s Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39215" toLevel="1" name="Ring of Savior">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Shock Resistance +5%, HP Recovery Bonus +1.8/ MP +1.1. Effect does not double when two of the same rings are equipped. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39216" toLevel="1" name="Transformation into an Apostle">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformation into an Apostle. Attacking is not possible. Can be used once a day. After a restart or when used during a duel, the Buff is removed after duel ends. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39217" toLevel="1" name="Transformation into a Shillien Saint">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformation into a Shillien Saint. Attacking is not possible. Can be used once a day. After a restart or when used during a duel, the Buff is removed after duel ends. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39218" toLevel="1" name="Transformation into an Eva's Saint">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformation into Eva's Saint. Attacking is not possible. Can be used once a day. After a restart or when used during a duel, the Buff is removed after duel ends. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39219" toLevel="3" name="Dark Knight">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transformed Dark Knight. Max HP/ MP +5%, Stun/ Paralysis/ Fear Resistance +5%, Attack Power in PvP +5%, received damage -5%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39220" toLevel="1" name="Ticket for Monster Arena">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39221" toLevel="1" name="Elite Ticket for Monster Arena">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39222" toLevel="1" name="Battle Cure">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39223" toLevel="1" name="Bunch of Bananas">
+		<!-- For $s1, XP and SP gained through hunting +$s2, P./ M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/ SP bonuses. -->
 		<icon>icon.skill39223</icon>
 		<operateType>A2</operateType>
 		<abnormalInstant>true</abnormalInstant>
@@ -201,6 +192,7 @@
 		</effects>
 	</skill>
 	<skill id="39224" toLevel="1" name="Strawberry-Banana Cocktail">
+		<!-- For 60 minutes, Max HP +10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.skill39224</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -244,6 +236,7 @@
 		</effects>
 	</skill>
 	<skill id="39225" toLevel="1" name="Mango-Banana Cocktail">
+		<!-- For 60 minutes, MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.skill39225</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -282,6 +275,7 @@
 		</effects>
 	</skill>
 	<skill id="39226" toLevel="1" name="Cherry-Banana Cocktail">
+		<!-- For 60 minutes, P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
 		<icon>icon.skill39226</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -324,11 +318,11 @@
 		</effects>
 	</skill>
 	<skill id="39227" toLevel="1" name="Tuna">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39228" toLevel="1" name="Chef's Fish Stew - Victory">
+		<!-- For 10 min., HP/ MP Recovery bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Casting/ Atk. Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. Effect remains after death. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -419,6 +413,7 @@
 		</effects>
 	</skill>
 	<skill id="39229" toLevel="1" name="Chef's Fish Stew - Fire">
+		<!-- For 10 min., Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Effect remains after death. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -475,6 +470,7 @@
 		</effects>
 	</skill>
 	<skill id="39230" toLevel="1" name="Chef's Fish Stew - Water">
+		<!-- For 10 min., MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Effect remains after death. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -544,6 +540,7 @@
 		</effects>
 	</skill>
 	<skill id="39231" toLevel="1" name="Chef's Fish Stew - Wind">
+		<!-- For 10 min., P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. Effect remains after death. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -600,137 +597,116 @@
 		</effects>
 	</skill>
 	<skill id="39232" toLevel="1" name="Gold Urn">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39233" toLevel="1" name="Glowing  Whale">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39234" toLevel="1" name="Giant's Enchant Scroll Pack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39235" toLevel="1" name="Low-grade Arena Loot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39236" toLevel="1" name="Intermediate Arena Loot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39237" toLevel="1" name="High-grade Arena Loot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39238" toLevel="1" name="MOPP Combat Ration">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- MOPP Combat Ration. While hunting, for $s1 XP and SP +$s2, P./ M. Atk. +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, Speed +$s6, Sayha's Speed -$s7. Changes appearance to Santa Claus. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39239" toLevel="2" name="Sapphire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Damage from Beast Spiritshot +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39240" toLevel="1" name="Sapphire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39241" toLevel="1" name="Sapphire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39242" toLevel="1" name="Sapphire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39243" toLevel="1" name="Topaz Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39244" toLevel="1" name="Garnet Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39245" toLevel="1" name="Jade Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39246" toLevel="1" name="Ruby Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39247" toLevel="1" name="Sapphire Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39248" toLevel="1" name="Diamond Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39249" toLevel="1" name="Pearl Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39250" toLevel="1" name="Vital Stone Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39251" toLevel="1" name="Melodys Luck Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39252" toLevel="1" name="My Teleport Book">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39253" toLevel="1" name="Chef's Fish Stew - Victory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 10 min., HP/ MP Recovery bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Casting/ Atk. Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39254" toLevel="1" name="Chef's Fish Stew - Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 10 min., Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39255" toLevel="1" name="Chef's Fish Stew - Water">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 10 min., MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39256" toLevel="1" name="Chef's Fish Stew - Wind">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 10 min., P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39257" toLevel="1" name="Newbie MP Recovery Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39258" toLevel="1" name="Warrior MP Recovery Potion">
-		<!-- Lineage II Classic Zaken -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -749,71 +725,67 @@
 		</effects>
 	</skill>
 	<skill id="39259" toLevel="1" name="Savior's Experience Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39260" toLevel="1" name="Magical Potion of Leaping - Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Allows to receive 37,000,000 XP/ 1,110,000 SP. Available for characters from Lv. 45 or higher. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39261" toLevel="1" name="Fish Stew - Greater Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39262" toLevel="1" name="Fish Stew - Greater Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1 P. Def. +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39263" toLevel="1" name="Fish Stew - Wild Magic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, M. Critical Rate +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39264" toLevel="2" name="Fish Stew - Berserker Spirit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, P. Def. -$s2, M. Def. -$s3, and P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39265" toLevel="3" name="Fish Stew - Decrease Weight">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1 Weight limit +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39266" toLevel="1" name="Shiny Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39267" toLevel="1" name="Mood Melody">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Will not be deleted upon death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39268" toLevel="1" name="Mysterious Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39269" toLevel="1" name="Special Dragon's Fruit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Cooldown: 1 minute. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39270" toLevel="1" name="Dragon??s Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39271" toLevel="1" name="Dragon's Shining Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39272" toLevel="1" name="Officer of Balthus Knights">
+		<!-- For 2 hours XP/ SP bonus +20%, grants a chance to obtain Special Supplies. Effect remains after death. -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90506</itemConsumeId>
 		<abnormalLvl>1</abnormalLvl>
@@ -845,137 +817,119 @@
 		</effects>
 	</skill>
 	<skill id="39273" toLevel="1" name="Special Dragon's Fruit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes, XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Cooldown: 1 minute. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39274" toLevel="1" name="Lesser GM's Blessing Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39275" toLevel="1" name="Greater GM's Blessing Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39276" toLevel="1" name="Greatest GM's Blessing Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39277" toLevel="1" name="Transform Raid Hero">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Transforms into Raid Hero for 1 hour. If activated in combat, the effect will disappear after the combat ends. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39278" toLevel="1" name="Flower Sweets">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP/ MP +5%, XP/ SP bonus +20%. Duration: 20 minutes. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39279" toLevel="1" name="Pumpkin Sweets">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Rate +5%, P./ M. Def. +15%, HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39280" toLevel="1" name="Banana Sweets">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 5 minutes XP/ SP +10%, M./ P. Atk. +15%, M./ P. Def. +15%, Atk./ Casting Spd. +10%, Speed +10. Sayha Grace Consumption -30%. Changes the appearance of armor to the Hanbok. Effect disappears upon restart. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39281" toLevel="1" name="Sealed Rune Lvl 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39282" toLevel="1" name="Sealed Rune Lvl 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39283" toLevel="1" name="Sealed Rune Lvl 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39284" toLevel="1" name="Sealed Rune Lvl 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39285" toLevel="1" name="Sealed Rune Lvl 5">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39286" toLevel="1" name="Sealed Rune Lvl 6">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39287" toLevel="1" name="Sealed Rune Lvl 7">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39288" toLevel="1" name="Sealed Rune Lvl 8">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39289" toLevel="1" name="Sealed Rune Lvl 9">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39290" toLevel="1" name="Sealed Rune Lvl 10">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39291" toLevel="1" name="Sealed Rune Lvl 11">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39292" toLevel="1" name="Sealed Rune Lvl 12">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39293" toLevel="1" name="Sealed Rune Lvl 13">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39294" toLevel="1" name="Pirate's Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39295" toLevel="1" name="Teleport: Entrance to the Devil's Isle">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports you to the entrance to the Devil's Isle -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39296" toLevel="1" name="Teleports you to the entrance to the Devil's Isle">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports you to the entrance to the Devil's Isle -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39297" toLevel="1" name="Escape: Clan Hall">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Return to Clan Hall. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39298" toLevel="1" name="Shining Scroll of Mood Melody">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death. Cannot be used together with Scroll of Mood Melody. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39299" toLevel="1" name="Gracia's Cube">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

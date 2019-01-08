@@ -1,92 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="27300" toLevel="1" name="+ 7 Blessed Apocalypse Shooter Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27301" toLevel="1" name="+ 8 Blessed Apocalypse Shooter Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27302" toLevel="1" name="+ 9 Blessed Apocalypse Shooter Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27303" toLevel="1" name="+ 10 Blessed Apocalypse Shooter Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27304" toLevel="1" name="+ 4 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27305" toLevel="1" name="+ 5 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27306" toLevel="1" name="+ 6 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27307" toLevel="1" name="+ 7 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27308" toLevel="1" name="+ 8 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27309" toLevel="1" name="+ 9 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27310" toLevel="1" name="+ 10 Blessed Apocalypse Buster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27311" toLevel="1" name="+ 4 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27312" toLevel="1" name="+ 5 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27313" toLevel="1" name="+ 6 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27314" toLevel="1" name="+ 7 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27315" toLevel="1" name="+ 8 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27316" toLevel="1" name="+ 9 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27317" toLevel="1" name="+ 10 Blessed Apocalypse Caster Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -925,39 +907,36 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="23847" count="1" />
+						<item id="23847" count="1" /> <!-- Luxury Fortune Reading Coupon -->
 					</item>
 					<item chance="25">
-						<item id="33512" count="1800" />
+						<item id="33512" count="1800" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 					</item>
 					<item chance="15">
-						<item id="17527" count="3600" />
+						<item id="17527" count="3600" /> <!-- Scroll: Enchant Armor (R-grade) -->
 					</item>
 					<item chance="15">
-						<item id="17526" count="3600" />
+						<item id="17526" count="3600" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 					</item>
 					<item chance="25">
-						<item id="23232" count="3600" />
+						<item id="23232" count="3600" /> <!-- Traces of Ancient Kartia's Labyrinth -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27347" toLevel="1" name="Halloween Outfit Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Halloween Outfit Appearance Stone without the additional skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27348" toLevel="1" name="Halloween Weapon Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Halloween Weapon Appearance Stone without the additional skill. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27349" toLevel="12" name="Healing Light">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Restores entire party's HP/MP/CP with a chance to cancel debuffs. -->
+		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_aug_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -1003,7 +982,6 @@
 		</effects>
 	</skill>
 	<skill id="27350" toLevel="12" name="Skipping Kid">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports 600 grids forward. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_dec_i00</icon>
 		<operateType>A1</operateType>
@@ -1042,7 +1020,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="27351" toLevel="12" name="Scale of Life">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Equalizes the entire party's HP and restores 333 HP/second for 15 sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_sep_i00</icon>
 		<operateType>A2</operateType>
@@ -1089,7 +1066,6 @@
 		</effects>
 	</skill>
 	<skill id="27352" toLevel="12" name="Rocky Camouflage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_march_i00</icon>
 		<operateType>A2</operateType>
@@ -1139,7 +1115,6 @@
 		</effects>
 	</skill>
 	<skill id="27353" toLevel="12" name="Mad Cow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., P./M. Atk., and Atik./Casting Spd. x2. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_skill_i00</icon>
 		<operateType>A2</operateType>
@@ -1191,7 +1166,6 @@
 		</effects>
 	</skill>
 	<skill id="27354" toLevel="12" name="Maiden's Prayer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Invincible for 10 sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
@@ -1242,8 +1216,7 @@
 		</effects>
 	</skill>
 	<skill id="27355" toLevel="12" name="Bountiful Resurrection">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Resurrect from death with full health restored. Buff/Debuffs remain after death. Noblesse Blessing and Lucky Charm are an exception. -->
+		<!-- Resurrects from death fully recovered. Buffs/debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_may_skill_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1283,7 +1256,6 @@
 		</effects>
 	</skill>
 	<skill id="27356" toLevel="12" name="Scorpion's Mass Exile">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose 282 HP/second. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_oct_i00</icon>
 		<operateType>A2</operateType>
@@ -1347,8 +1319,7 @@
 		</effects>
 	</skill>
 	<skill id="27357" toLevel="12" name="Mass Binding Flood">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Thrusts target and nearby enemies into the air and immobilizes them for 10 sec., inflicting 100 damage/second. -->
+		<!-- Immobilizes target and nearby enemies midair for 9 seconds and inflicts 100 damage per second. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -1428,7 +1399,6 @@
 		</effects>
 	</skill>
 	<skill id="27358" toLevel="12" name="Slippery Scale">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., defends against debuffs 5 times. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
 		<operateType>A2</operateType>
@@ -1467,7 +1437,6 @@
 		</effects>
 	</skill>
 	<skill id="27359" toLevel="12" name="Archer's Call">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons all party members to you. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_nov_i00</icon>
 		<operateType>A1</operateType>
@@ -1510,7 +1479,6 @@
 		</effects>
 	</skill>
 	<skill id="27360" toLevel="12" name="Exoskeletal Shield">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Reflects 20% of received damage. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_june_skill_i00</icon>
 		<operateType>A2</operateType>
@@ -1550,7 +1518,6 @@
 		</effects>
 	</skill>
 	<skill id="27361" toLevel="1" name="Matryoshka Teleport: Talking Island Village">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Talking Island Village. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1558,7 +1525,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="27362" toLevel="1" name="Matryoshka Teleport: Town of Aden">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Town of Aden. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1566,7 +1532,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="27363" toLevel="1" name="Matryoshka Teleport: Magmeld">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Ancient City Arcan of Megmeld. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1574,7 +1539,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="27364" toLevel="1" name="Matryoshka Teleport: Keucereus Alliance Base">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Keucereus Alliance Base. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1582,7 +1546,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="27365" toLevel="1" name="Matryoshka's Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Receive Matryoshka's Gift. -->
 		<icon>icon.etc_pi_gift_box_i02</icon>
 		<operateType>A1</operateType>
@@ -1591,7 +1554,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27366" toLevel="1" name="Matryoshka's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 min., obtained XP/SP + 30%. -->
 		<icon>icon.exp_bottle_scroll</icon>
 		<operateType>A2</operateType>
@@ -1601,7 +1563,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27367" toLevel="1" name="Minion Eye's Blessed Resurrection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can use Blessed Resurrection. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
@@ -1611,18 +1572,15 @@
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
 	<skill id="27368" toLevel="1" name="Minion Eye's Encouragement">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON +3, MEN +3, Weight Gauge + 10000, Max HP/MP/CP + 300. Skill Cooldown - 3%, Skill MP Consumption - 3%. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27369" toLevel="1" name="La Vie En Rose's Jewelry Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_bm_jewelbox_main_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27370" toLevel="1" name="3rd Anniversary Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Receive the gift from Agathion - Nepal Snow. -->
 		<icon>icon.etc_pi_gift_box_i02</icon>
 		<operateType>A1</operateType>
@@ -1631,8 +1589,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27371" toLevel="1" name="Transformation Skill">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, and Sleepy Tow. -->
+		<!-- For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -1642,7 +1599,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="27372" toLevel="1" name="Summon Friend">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 minutes. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1652,7 +1608,6 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="27373" toLevel="1" name="6th Anniversary Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Receive the gift from Agathion - Nepal Snow. -->
 		<icon>icon.etc_pi_gift_box_i02</icon>
 		<operateType>A1</operateType>
@@ -1661,8 +1616,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="27374" toLevel="1" name="Transformation Skill">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, and Sleepy Tow. -->
+		<!-- For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -1672,7 +1626,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="27375" toLevel="1" name="Summon Friend">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 minutes. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1682,128 +1635,104 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="27376" toLevel="1" name="Campfire's Warmth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The campfire's warmth can be felt. Skill Cooldown - 10%, PVE Damage + 10%, Vampirig Rage Effect + 5%. -->
 		<icon>icon.etc_torch_on_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="27377" toLevel="1" name="Summon Campfire">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="27378" toLevel="1" name="Warmth of Kotatsu">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The warmth of Kotatsu can be felt. Speed + 20, MP Consumption of skills decreases, and PVE Damage - 10%. -->
 		<icon>BranchSys.icon.br_kotatsu_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 	</skill>
 	<skill id="27379" toLevel="1" name="Summon Warm Kotatsu">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>BranchSys.icon.br_kotatsu_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="27380" toLevel="1" name="Lineage II Baseball Uniform Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27381" toLevel="1" name="Lineage II Baseball Cap Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27382" toLevel="1" name="School Uniform A Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27383" toLevel="1" name="School Uniform Hair A Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27384" toLevel="1" name="School Uniform B Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27385" toLevel="1" name="School Uniform Hair B Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>BranchSys3.Icon.g_shape_shifting_hair1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27386" toLevel="1" name="Pirate Captain Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27387" toLevel="1" name="Pirate Crew Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27388" toLevel="1" name="Automatic Appearance Stone: Tears Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27389" toLevel="1" name="Automatic Appearance Stone: Tears Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27390" toLevel="1" name="Metal Suit Hair Accessory Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27391" toLevel="1" name="Metal Suit Top Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27392" toLevel="1" name="Metal Suit Pants Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27393" toLevel="1" name="Metal Suit Gloves Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27394" toLevel="1" name="Metal Suit Shoes Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27395" toLevel="1" name="Ninja Hair Accessory Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27396" toLevel="1" name="Ninja Top Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27397" toLevel="1" name="Ninja Pants Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27398" toLevel="1" name="Ninja Gloves Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27399" toLevel="1" name="Ninja Shoes Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

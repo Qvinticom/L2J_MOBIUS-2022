@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21000" level="54" type="L2Monster" name="Soul of Ruins">
 		<!-- L2wiki: https://l2wiki.com/classic/Soul_of_Ruins -->
@@ -30,8 +30,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="9" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2033,8 +2033,8 @@
 				<item id="172" min="1" max="1" chance="0.006" /> <!-- Heavy Bone Club -->
 				<item id="2037" min="1" max="1" chance="0.04" /> <!-- Heavy Bone Club Head -->
 				<item id="1874" min="1" max="1" chance="0.304" /> <!-- Oriharukon Ore -->
-				<item id="1889" min="1" max="1" chance="0.304" /> <!-- Compound Braid -->
-				<item id="1878" min="1" max="1" chance="1.825" /> <!-- Braided Hemp -->
+				<item id="1889" min="1" max="1" chance="0.304" /> <!-- Synthetic Braid -->
+				<item id="1878" min="1" max="1" chance="1.825" /> <!-- Durable Braid -->
 				<item id="1884" min="1" max="1" chance="2.808" /> <!-- Cord -->
 				<item id="5220" min="1" max="1" chance="0.182" /> <!-- Metal Hardener -->
 				<item id="2190" min="1" max="1" chance="0.326" /> <!-- Recipe: Mithril Stockings -->
@@ -4401,8 +4401,8 @@
 				<item id="4044" min="1" max="1" chance="1.106" /> <!-- Thons -->
 				<item id="4975" min="1" max="1" chance="0.3" /> <!-- Recipe: Black Ore Necklace (70%) -->
 				<item id="4985" min="1" max="1" chance="0.075" /> <!-- Recipe: Leather Armor of Doom (60%) -->
-				<item id="4621" min="1" max="1" chance="0.03" /> <!-- Greater Dye of MEN (Men  4 Int -4) -->
-				<item id="4618" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX (Dex  4 CON -4) -->
+				<item id="4621" min="1" max="1" chance="0.03" /> <!-- Greater Dye of MEN <Men +4 Int -4> - 2nd Class Transfer -->
+				<item id="4618" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex +4 CON -4> - 2nd Class Transfer -->
 				<item id="5008" min="1" max="1" chance="0.03" /> <!-- Recipe: Pata (60%) -->
 			</drop>
 			<spoil>
@@ -4479,8 +4479,8 @@
 				<item id="4043" min="1" max="1" chance="1.551" /> <!-- Asofe -->
 				<item id="4984" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Leather Armor (60%) -->
 				<item id="4986" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Tunic (60%) -->
-				<item id="4617" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex  4 Str -4) -->
-				<item id="4620" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int  4 Wit -4) -->
+				<item id="4617" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex +4 Str -4> - 2nd Class Transfer -->
+				<item id="4620" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +4 Wit -4> - 2nd Class Transfer -->
 				<item id="4971" min="1" max="1" chance="0.075" /> <!-- Recipe: Dark Elven Longbow (60%) -->
 				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
@@ -4552,16 +4552,16 @@
 				<item id="5293" min="1" max="1" chance="0.002" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5521" min="1" max="1" chance="0.28" /> <!-- Sealed Tallum Plate Armor Pattern -->
 				<item id="5288" min="1" max="1" chance="0.005" /> <!-- Sealed Dark Crystal Gaiters -->
-				<item id="5524" min="1" max="1" chance="0.608" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
+				<item id="5524" min="1" max="1" chance="0.608" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
 				<item id="1895" min="1" max="1" chance="9.88" /> <!-- Metallic Fiber -->
 				<item id="4040" min="1" max="1" chance="0.691" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="0.576" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="1.151" /> <!-- Asofe -->
-				<item id="4166" min="1" max="1" chance="0.285" /> <!-- Recipe: Doom Helmet (100%) -->
+				<item id="4166" min="1" max="1" chance="0.285" /> <!-- Recipe: Sealed Doom Helmet (100%) -->
 			</drop>
 			<spoil>
-				<item id="1807" min="1" max="1" chance="1.2483" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5482" min="1" max="1" chance="12.3574" /> <!-- Sealed Dark Crystal Leggings Design -->
+				<item id="1807" min="1" max="1" chance="1.2483" /> <!-- Recipe: Soulshot (A-grade) -->
+				<item id="5482" min="1" max="1" chance="12.3574" /> <!-- Sealed Dark Crystal Legging Design -->
 				<item id="1895" min="1" max="5" chance="89.1673" /> <!-- Metallic Fiber -->
 			</spoil>
 		</dropLists>
@@ -4702,7 +4702,7 @@
 				<item id="5308" min="1" max="1" chance="0.003" /> <!-- Sealed Dark Crystal Robe -->
 				<item id="5486" min="1" max="1" chance="0.362" /> <!-- Sealed Dark Crystal Robe Fabric -->
 				<item id="5305" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Stockings -->
-				<item id="5489" min="1" max="1" chance="0.808" /> <!-- Sealed Tallum Stockings Fabric -->
+				<item id="5489" min="1" max="1" chance="0.808" /> <!-- Sealed Tallum Stocking Fabric -->
 				<item id="1873" min="1" max="1" chance="14.697" /> <!-- Silver Nugget -->
 				<item id="1868" min="3" max="9" chance="12.25" /> <!-- Thread -->
 				<item id="1876" min="1" max="1" chance="7.346" /> <!-- Mithril Ore -->
@@ -4711,7 +4711,7 @@
 				<item id="4986" min="1" max="1" chance="0.152" /> <!-- Recipe: Blue Wolf Tunic (60%) -->
 			</drop>
 			<spoil>
-				<item id="5338" min="1" max="1" chance="1.2863" /> <!-- Recipe: Sealed Majestic Leather Armor(60%) -->
+				<item id="5338" min="1" max="1" chance="1.2863" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
 				<item id="4042" min="1" max="1" chance="16.5717" /> <!-- Enria -->
 				<item id="5485" min="1" max="1" chance="8.3611" /> <!-- Sealed Tallum Tunic Texture -->
 			</spoil>
@@ -4865,19 +4865,19 @@
 				<item id="5293" min="1" max="1" chance="0.002" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5521" min="1" max="1" chance="0.248" /> <!-- Sealed Tallum Plate Armor Pattern -->
 				<item id="5288" min="1" max="1" chance="0.005" /> <!-- Sealed Dark Crystal Gaiters -->
-				<item id="5524" min="1" max="1" chance="0.54" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
+				<item id="5524" min="1" max="1" chance="0.54" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
 				<item id="1871" min="1" max="3" chance="9.165" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="18.33" /> <!-- Suede -->
 				<item id="1877" min="1" max="1" chance="1.099" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.042" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.549" /> <!-- Mold Lubricant -->
-				<item id="730" min="1" max="1" chance="0.022" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.022" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="1344" min="20" max="60" chance="17.155" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
-				<item id="5230" min="1" max="1" chance="1.1849" /> <!-- Recipe: Mithril Arrow (100%) -->
+				<item id="5230" min="1" max="1" chance="1.1849" /> <!-- Recipe: Mithril Arrow -->
 				<item id="5486" min="1" max="1" chance="5.2583" /> <!-- Sealed Dark Crystal Robe Fabric -->
-				<item id="5156" min="1" max="1" chance="1.1849" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
+				<item id="5156" min="1" max="1" chance="1.1849" /> <!-- Recipe: Soulshot Compressed Package (A-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -4941,18 +4941,18 @@
 				<item id="5301" min="1" max="1" chance="0.00165" /> <!-- Sealed Tallum Leather Armor -->
 				<item id="5479" min="1" max="1" chance="0.213" /> <!-- Sealed Tallum Leather Armor Pattern -->
 				<item id="5298" min="1" max="1" chance="0.00431" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5482" min="1" max="1" chance="0.4753" /> <!-- Sealed Dark Crystal Leggings Design -->
+				<item id="5482" min="1" max="1" chance="0.4753" /> <!-- Sealed Dark Crystal Legging Design -->
 				<item id="1867" min="1" max="3" chance="21.076" /> <!-- Animal Skin -->
 				<item id="1872" min="1" max="3" chance="14.036" /> <!-- Animal Bone -->
 				<item id="1882" min="1" max="1" chance="6.996" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="1.1" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.523" /> <!-- Enria -->
-				<item id="3035" min="1" max="1" chance="0.042" /> <!-- Recipe: Spiritshot A -->
+				<item id="3035" min="1" max="1" chance="0.042" /> <!-- Recipe: Spiritshot (A-grade) -->
 			</drop>
 			<spoil>
 				<item id="5479" min="1" max="1" chance="3.5349" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="3035" min="1" max="1" chance="0.7965" /> <!-- Recipe: Spiritshot A -->
-				<item id="5336" min="1" max="1" chance="0.7728" /> <!-- Recipe: Sealed Leather Armor of Nightmare(60%) -->
+				<item id="3035" min="1" max="1" chance="0.7965" /> <!-- Recipe: Spiritshot (A-grade) -->
+				<item id="5336" min="1" max="1" chance="0.7728" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -5021,18 +5021,18 @@
 				<item id="5289" min="1" max="1" chance="0.005" /> <!-- Sealed Dark Crystal Helmet -->
 				<item id="5525" min="1" max="1" chance="0.589" /> <!-- Sealed Dark Crystal Helmet Design -->
 				<item id="5294" min="1" max="1" chance="0.005" /> <!-- Sealed Tallum Helmet -->
-				<item id="5526" min="1" max="1" chance="0.589" /> <!-- Sealed Tallum Helm Design -->
+				<item id="5526" min="1" max="1" chance="0.589" /> <!-- Sealed Tallum Helmet Design -->
 				<item id="1868" min="4" max="12" chance="6.762" /> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="10.846" /> <!-- Silver Nugget -->
 				<item id="5549" min="1" max="1" chance="2.711" /> <!-- Metallic Thread -->
-				<item id="1889" min="1" max="1" chance="1.807" /> <!-- Compound Braid -->
+				<item id="1889" min="1" max="1" chance="1.807" /> <!-- Synthetic Braid -->
 				<item id="4044" min="1" max="1" chance="0.903" /> <!-- Thons -->
-				<item id="3956" min="1" max="1" chance="0.034" /> <!-- Recipe: Blessed Spiritshot A -->
+				<item id="3956" min="1" max="1" chance="0.034" /> <!-- Recipe: Blessed Spiritshot (A-grade) -->
 				<item id="1344" min="30" max="90" chance="11.28" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
 				<item id="5485" min="1" max="1" chance="4.9077" /> <!-- Sealed Tallum Tunic Texture -->
-				<item id="5161" min="1" max="1" chance="0.7782" /> <!-- Recipe: Spiritshot (A) Compressed Package (100%) -->
+				<item id="5161" min="1" max="1" chance="0.7782" /> <!-- Recipe: Spiritshot Compressed Package (A-grade) -->
 				<item id="5478" min="1" max="1" chance="4.9077" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
 			</spoil>
 		</dropLists>
@@ -5278,7 +5278,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="76" max="179" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="9.92" /> <!-- Thread -->

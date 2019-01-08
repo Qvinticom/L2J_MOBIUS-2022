@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14826" toLevel="9" name="Intense Slash">
-		<!-- Glory Days confirmed -->
-		<!-- Uses aligned power to attack nearby targets with 831 power. -->
+		<!-- Deals physical damage to the target using intense spirit. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
 		<hitTime>2500</hitTime>
@@ -33,8 +32,7 @@
 		</effects>
 	</skill>
 	<skill id="14828" toLevel="9" name="Purity Blast">
-		<!-- Glory Days confirmed -->
-		<!-- Uses pure magic to attack enemies near the target with 50 power. -->
+		<!-- Inflicts damage on nearby enemies with $s1 Power added to M. Atk. using the power of holy magic. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>
@@ -68,8 +66,7 @@
 		</effects>
 	</skill>
 	<skill id="14830" toLevel="9" name="Grey Explosion">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks nearby targets with a reverent heart with 985 power. -->
+		<!-- Deals damage to the target with $s1 Power using the power of a devout heart. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
 		<hitTime>2500</hitTime>
@@ -100,8 +97,7 @@
 		</effects>
 	</skill>
 	<skill id="14832" toLevel="9" name="Platonic Blizzard">
-		<!-- Glory Days confirmed -->
-		<!-- Uses magic to attack enemies near the target using all focus with 55 power. -->
+		<!-- Inflicts magical damage on nearby enemies with $s1 Power added to M. Atk. by fully concentrating on holy magic. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6200" levels="1" name="NPC Transform Dispel">
-		<!-- Confirmed CT2.5 -->
+		<!-- Cancels transformation. -->
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
@@ -21,7 +21,7 @@
 		</for>
 	</skill>
 	<skill id="6201" levels="1" name="Transformation Condition - Frog">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transformed into a frog. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="520" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -53,7 +53,7 @@
 		</for>
 	</skill>
 	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transformed into a young child. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="460" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -85,7 +85,7 @@
 		</for>
 	</skill>
 	<skill id="6203" levels="1" name="Transformed Condition - Native">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transformed into a native. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="215" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -117,7 +117,7 @@
 		</for>
 	</skill>
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transformed into a Guard of the Dawn. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -149,7 +149,7 @@
 		</for>
 	</skill>
 	<skill id="6205" levels="19" name="Strider Bite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with 1649 Power added to P. Atk., causes bleed for 20 seconds, and makes him consume 67 HP every second. Over-hit and Critical are possible. -->
 		<table name="#dot"> 65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87 </table>
 		<table name="#effectPoints"> -523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
@@ -186,7 +186,7 @@
 		</for>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Frightens the enemy and causes him to flee for 10 seconds. -->
 		<table name="#effectPoints"> -523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
@@ -217,7 +217,7 @@
 		</for>
 	</skill>
 	<skill id="6207" levels="1" name="Strider Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases one's own Speed by 66 for 15 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -248,6 +248,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6209" levels="4" name="Weapon Grade Penalty">
+		<!-- The equipped weapon's grade doesn't match your level, so the following penalties are incurred: Decrease in accuracy by 16, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 10%, and P. Atk. by 10%. -->
 		<table name="#cAtk"> 0.9 0.8 0.7 0.6 </table>
 		<table name="#icons"> icon.skill6209_1 icon.skill6209_2 icon.skill6209_3 icon.skill6209_4 </table>
 		<table name="#rCrit"> 0.9 0.8 0.7 0.6 </table>
@@ -267,6 +268,7 @@
 		</for>
 	</skill>
 	<skill id="6213" levels="4" name="Armor Grade Penalty">
+		<!-- When equipped with armor or accessories whose grade doesn't fit with your level, a penalty is incurred with decreases in evasion by 2.5, Atk. Spd./Casting Spd./Speed by 16.67%. -->
 		<table name="#amount"> 0.8333 0.6944 0.5787 0.4823 </table>
 		<table name="#icons"> icon.skill6213_1 icon.skill6213_2 icon.skill6213_3 icon.skill6213_4 </table>
 		<table name="#rEvas"> 2.5 5 7.5 10 </table>
@@ -285,119 +287,119 @@
 		</for>
 	</skill>
 	<skill id="6217" levels="1" name="Raid Boss - Level 81">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6218" levels="1" name="Raid Boss - Level 81">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6219" levels="1" name="Raid Boss - Level 81">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6220" levels="1" name="Raid Boss - Level 81">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6221" levels="1" name="Raid Boss - Level 82">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6222" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Evil existence trying to invade the real world along the border between dreams and reality. It is recognized differently by different people, as if it were created by a collection of nightmares. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6223" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6224" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6225" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6226" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Leader of the Cannibalistic Stakatos appointed by the Stakato Queen Shyeed to guard their nest. Unlike other Stakatos, it has the ability to jump through invisible space. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6227" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Queen of the Spike Stakatos who commands and propagates the Spike Stakatos. It knows that its life is coming to an end, and it orders the nest guarded so that it is a good environment for the next Stakato Queen to grow up. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6228" levels="1" name="Raid Boss - Level 83">
-		<!-- Confirmed CT2.5 -->
+		<!-- One of the monsters born of the Goddess Shilen. When the Great Sprite Gildor is weakened, it leads the Tasaba Lizardmen into the Reed Field, but when the Tasaba Lizardmen are wiped out by the appearance of the Mucrokians, it spews tremendous anger. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6229" levels="1" name="Raid Boss - Level 84">
-		<!-- Confirmed CT2.5 -->
+		<!-- Water sprite born from the powerful waters of Innadril. It is greatly beloved by the Goddess Eva. It's a trickster that does whatever it wants, like snatching babies or causing floods in the middle of the night. Eva fears retaliation one day because of Lian's severe tricks, and she puts him in the care of guardian spirits. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6230" levels="1" name="Raid Boss - Level 82">
-		<!-- Confirmed CT2.5 -->
+		<!-- Because of the item that was made in the image of the giants by the Ivory Tower magicians, it believes it is a giant itself. It is controlled by Hekaton Prime, and it guards the cave that was once the fortress of the giants. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6231" levels="1" name="Raid Boss - Level 82">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lifeform created by the giants that were fleeing by night the wrath of Einhasad. It was improved with a Monster Eye as its foundation and it was created to exterminate the pursuers of the gods. At one time, it broke free from the control of the giants and fought against them. Its mind is now controlled by Hekaton prime, and it again protects the giants. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6232" levels="1" name="Raid Boss - Level 83">
-		<!-- Confirmed CT2.5 -->
+		<!-- Last Lesser Giant hiding deep inside the Giant's Cave. Though it is physically the same as the other Lesser Giants, it contains the secret of the ancient lesser giant civilization, and it protects this secret. It is currently controlled by Hekaton Prime. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6233" levels="1" name="Raid Boss - Level 83">
-		<!-- Confirmed CT2.5 -->
+		<!-- Control device created by the ancient giants civilization. It has outgrown its original research goal. It's only goal now is to protect the cave. It is transforming it into a powerful protected fortress by controlling the minds of the other races and by maintaining the Giant's Cave. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -411,6 +413,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6235" levels="1" name="Blessed Focus">
+		<!-- Blessing's Focus. Increases Critical Rate for 1 minute. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_B" />
@@ -428,6 +431,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
+		<!-- Speed is reduced by 80% for 10 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -449,6 +453,7 @@
 		</for>
 	</skill>
 	<skill id="6238" levels="1" name="Moving Speed Decrease">
+		<!-- Speed/Casting Spd./Atk. Spd. are reduced by 50% for 20 seconds. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -476,7 +481,6 @@
 		</for>
 	</skill>
 	<skill id="6239" levels="1" name="Proof of Space and Time">
-		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -498,6 +502,7 @@
 		</for>
 	</skill>
 	<skill id="6240" levels="5" name="Heatstroke">
+		<!-- Heatstroke stage 1. Inflicted with heatstroke. You are extremely hot and fatigued. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="86400" />
@@ -512,6 +517,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6241" levels="1" name="Heatstroke Prevention Effect - Gludio">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Gludio region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -524,6 +530,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6242" levels="1" name="Heatstroke Prevention Effect - Dion">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Dion region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -536,6 +543,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6243" levels="1" name="Heatstroke Prevention Effect - Giran">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Giran region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -548,6 +556,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6244" levels="1" name="Heatstroke Prevention Effect - Oren">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Oren region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -560,6 +569,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6245" levels="1" name="Heatstroke Prevention Effect - Aden">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Aden region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -572,6 +582,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6246" levels="1" name="Heatstroke Prevention Effect - Innadril">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Innadril region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -584,6 +595,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6247" levels="1" name="Heatstroke Prevention Effect - Goddard">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Goddard region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -596,6 +608,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6248" levels="1" name="Heatstroke Prevention Effect - Rune">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Rune region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -608,6 +621,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6249" levels="1" name="Heatstroke Prevention Effect -Schuttgart">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Schuttgart region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -620,6 +634,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6250" levels="1" name="Severe Heatstroke">
+		<!-- Severe heatstroke. Humidity is summoned. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SIGNAL_D" />
@@ -635,7 +650,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6251" levels="1" name="Summon Humidity">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -656,6 +670,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Gludio region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -668,6 +683,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Dion region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -680,6 +696,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Giran region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -692,6 +709,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Oren region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -704,6 +722,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Aden region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -716,6 +735,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Innadril region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -728,6 +748,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Goddard region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -740,6 +761,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Rune region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -752,6 +774,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
+		<!-- Heatstroke Prevention Effect - Prevention effect received in the Schuttgart region. Effect that minimizes the damage incurred from heatstroke. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
@@ -773,6 +796,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6263" levels="1" name="EMP Shock">
+		<!-- Momentarily causes shock and stuns the enemy for 2 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
@@ -810,6 +834,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6266" levels="1" name="Shock">
+		<!-- Momentarily causes shock and stuns the enemy for 30 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="STUN" />
@@ -843,6 +868,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="6269" levels="1" name="Poison Gas">
+		<!-- Poisons the enemy for 10 seconds and inflicts 345 HP damage per second. -->
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
@@ -869,6 +895,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
+		<!-- Increase Physical Attack by 10%. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -904,8 +931,6 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6274" levels="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1000" />
@@ -928,8 +953,6 @@
 		</for>
 	</skill>
 	<skill id="6275" levels="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1000" />
@@ -952,8 +975,6 @@
 		</for>
 	</skill>
 	<skill id="6276" levels="1" name="Eternal Blizzard">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1000" />
@@ -968,8 +989,6 @@
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="6277" levels="1" name="Summon Spirits">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
@@ -982,8 +1001,6 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6278" levels="1" name="Ice Ball">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="250" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
@@ -1003,8 +1020,6 @@
 		</for>
 	</skill>
 	<skill id="6279" levels="1" name="Attack Nearby Range">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="450" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
@@ -1022,8 +1037,7 @@
 		</for>
 	</skill>
 	<skill id="6280" levels="1" name="Death Clack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Freya's Cruel Sentence. Verdict will be made after 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="DEATH_CLACK" />
@@ -1048,8 +1062,6 @@
 		</endEffects>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills (Triggered from 6280) -->
 		<set name="affectRange" val="300" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1063,8 +1075,7 @@
 		</for>
 	</skill>
 	<skill id="6282" levels="1" name="Reflect Magic">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Reflects magic damage back to the enemy for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="REFLECT_MAGIC_DD" />
@@ -1082,8 +1093,6 @@
 		</for>
 	</skill>
 	<skill id="6283" levels="1" name="Ice Storm">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="castRange" val="1100" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
@@ -1101,8 +1110,7 @@
 		</for>
 	</skill>
 	<skill id="6284" levels="1" name="Freya's Bless">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Increase P.Atk, P.Def. and Atk. Spd. by 15%. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
@@ -1122,8 +1130,7 @@
 		</for>
 	</skill>
 	<skill id="6285" levels="1" name="Rage of Ice">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Increases Casting Spd. by 15% for 20 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -1140,8 +1147,7 @@
 		</for>
 	</skill>
 	<skill id="6286" levels="1" name="Bless of Sword">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Jinia Skills -->
+		<!-- Increase HP Recovery Bonus by 15% and P. Def by 10% for 20 minutes. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_UP" />
@@ -1164,8 +1170,6 @@
 		</for>
 	</skill>
 	<skill id="6287" levels="1" name="Bless of Sword">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Kegor Skills -->
 		<set name="affectRange" val="1100" />
 		<set name="castRange" val="650" />
 		<set name="effectRange" val="900" />
@@ -1189,8 +1193,7 @@
 		</for>
 	</skill>
 	<skill id="6288" levels="1" name="Jinia's Prayer">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Jinia Skills -->
+		<!-- Increase P.Def. and M.Def. by 300%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -1210,8 +1213,7 @@
 		</for>
 	</skill>
 	<skill id="6289" levels="1" name="Kegor's Courage">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Kegor Skills -->
+		<!-- Increase P.Atk. by 300%, M. Atk. by 300%, Atk. Spd. by 25% and Casting Spd. by 25%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_B" />
@@ -1233,8 +1235,6 @@
 		</for>
 	</skill>
 	<skill id="6290" levels="1" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
@@ -1252,8 +1252,6 @@
 		</for>
 	</skill>
 	<skill id="6291" levels="1" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-574" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -1270,8 +1268,6 @@
 		</for>
 	</skill>
 	<skill id="6292" levels="1" name="Rush">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-574" />
@@ -1296,8 +1292,6 @@
 		</for>
 	</skill>
 	<skill id="6293" levels="1" name="Power Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="affectRange" val="250" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-574" />
@@ -1317,8 +1311,7 @@
 		</for>
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
+		<!-- Increase P.Atk. by 15%. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
@@ -1340,8 +1333,6 @@
 		</for>
 	</skill>
 	<skill id="6295" levels="1" name="Point Target">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
@@ -1353,8 +1344,6 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6296" levels="1" name="Rush">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-574" />
@@ -1379,8 +1368,6 @@
 		</for>
 	</skill>
 	<skill id="6297" levels="1" name="Cylinder Throw">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="1100" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />
@@ -1399,8 +1386,6 @@
 		</for>
 	</skill>
 	<skill id="6298" levels="1" name="Summon Follower Knight">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="1" />
@@ -1412,8 +1397,6 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-689" />

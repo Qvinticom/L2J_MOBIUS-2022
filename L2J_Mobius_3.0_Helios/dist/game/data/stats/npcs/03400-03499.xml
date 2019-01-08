@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="3401" level="23" type="L2Monster" name="Greyclaw Kutus" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -893,9 +893,9 @@
 			<drop>
 				<item id="262" min="1" max="1" chance="8.308" /> <!-- Scallop Jamadhr -->
 				<item id="438" min="1" max="1" chance="3.961" /> <!-- Sage's Rags -->
-				<item id="4594" min="1" max="1" chance="13" /> <!-- Greater DEX Dye (Dex  2 CON - 2) -->
-				<item id="4595" min="1" max="1" chance="12.48" /> <!-- Greater INT Dye (Int  2 Men - 2) -->
-				<item id="4596" min="1" max="1" chance="12.44" /> <!-- Greater INT Dye (Int  2 Wit - 2) -->
+				<item id="4594" min="1" max="1" chance="13" /> <!-- Greater DEX Dye <Dex + 2 CON - 2> -->
+				<item id="4595" min="1" max="1" chance="12.48" /> <!-- Greater INT Dye <Int + 2 Men - 2> -->
+				<item id="4596" min="1" max="1" chance="12.44" /> <!-- Greater INT Dye <Int + 2 Wit - 2> -->
 				<item id="1953" min="105" max="315" chance="8.808" /> <!-- Sage's Rag Lining -->
 				<item id="2053" min="108" max="324" chance="2.247" /> <!-- Scallop Jamadhr Edge -->
 				<item id="6574" min="1" max="1" chance="2.222" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
@@ -1442,9 +1442,9 @@
 				<item id="2402" min="1" max="1" chance="2.344" /> <!-- Stockings of Zubei -->
 				<item id="92" min="1" max="1" chance="2.07" /> <!-- Spirit's Staff -->
 				<item id="91" min="1" max="1" chance="2.053" /> <!-- Heavy War Axe -->
-				<item id="4611" min="1" max="1" chance="13.47" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
-				<item id="4612" min="1" max="1" chance="13.21" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
-				<item id="4610" min="1" max="1" chance="12.68" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
+				<item id="4611" min="1" max="1" chance="13.47" /> <!-- Greater WIT Dye <Wit + 3 Int - 3> -->
+				<item id="4612" min="1" max="1" chance="13.21" /> <!-- Greater WIT Dye <Wit + 3 Men - 3> -->
+				<item id="4610" min="1" max="1" chance="12.68" /> <!-- Greater MEN Dye <Men + 3 Wit - 3> -->
 				<item id="6574" min="1" max="1" chance="3.414" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -1577,9 +1577,9 @@
 				<item id="286" min="1" max="1" chance="3.797" /> <!-- Eminence Bow -->
 				<item id="855" min="1" max="1" chance="3.016" /> <!-- Nassen's Earring -->
 				<item id="119" min="1" max="1" chance="1.542" /> <!-- Necklace of Seal -->
-				<item id="4608" min="1" max="1" chance="13.16" /> <!-- Greater INT Dye (Int  3 Wit - 3) -->
-				<item id="4609" min="1" max="1" chance="12.86" /> <!-- Greater MEN Dye (Men  3 Int - 3) -->
-				<item id="4607" min="1" max="1" chance="12.75" /> <!-- Greater INT Dye (Int  3 Men - 3) -->
+				<item id="4608" min="1" max="1" chance="13.16" /> <!-- Greater INT Dye <Int + 3 Wit - 3> -->
+				<item id="4609" min="1" max="1" chance="12.86" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
+				<item id="4607" min="1" max="1" chance="12.75" /> <!-- Greater INT Dye <Int + 3 Men - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -1711,9 +1711,9 @@
 				<item id="231" min="1" max="1" chance="4.594" /> <!-- Grace Dagger -->
 				<item id="233" min="1" max="1" chance="4.591" /> <!-- Dark Screamer -->
 				<item id="64" min="1" max="1" chance="1.719" /> <!-- Compound Boots -->
-				<item id="4604" min="1" max="1" chance="15.7" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
-				<item id="4605" min="1" max="1" chance="15.28" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
-				<item id="4606" min="1" max="1" chance="14.7" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
+				<item id="4604" min="1" max="1" chance="15.7" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4605" min="1" max="1" chance="15.28" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="4606" min="1" max="1" chance="14.7" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -3282,12 +3282,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17398" min="1" max="1" chance="1.048" /> <!-- Seraph Gaiters -->
-				<item id="17404" min="1" max="1" chance="1.027" /> <!-- Seraph Leather Leggings -->
-				<item id="17409" min="1" max="1" chance="0.977" /> <!-- Seraph Stockings -->
-				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
-				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
-				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
+				<item id="17398" min="1" max="1" chance="1.048" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17404" min="1" max="1" chance="1.027" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17409" min="1" max="1" chance="0.977" /> <!-- Seraph Stockings - Robe -->
+				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic - Robe -->
+				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate - Heavy Armor -->
 				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
 				<item id="17391" min="1" max="1" chance="0.3" /> <!-- Specter Caster -->
 				<item id="17390" min="1" max="1" chance="0.3" /> <!-- Specter Buster -->
@@ -3300,37 +3300,37 @@
 				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
 				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
 				<item id="17526" min="1" max="1" chance="1.539" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Gauntlets (60%) -->
-				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Boots (60%) -->
-				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Shield (60%) -->
-				<item id="35437" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Leather Helmet (60%) -->
-				<item id="35440" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Leather Gloves (60%) -->
-				<item id="35441" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Leather Boots (60%) -->
-				<item id="35442" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Circlet (60%) -->
-				<item id="35445" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Gloves (60%) -->
-				<item id="35446" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Shoes (60%) -->
-				<item id="35447" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Sigil (60%) -->
-				<item id="35431" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Helmet (60%) -->
-				<item id="35450" min="1" max="1" chance="0.75" /> <!-- Recipe:Β Seraph Ring (60%) -->
-				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Avenger (60%) -->
-				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Tunic (60%) -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Stockings (60%) -->
-				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Slasher (60%) -->
-				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Cutter (60%) -->
-				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shaper (60%) -->
-				<item id="35448" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Necklace (60%) -->
-				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Earring (60%) -->
-				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Fighter (60%) -->
-				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Stormer (60%) -->
-				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Breastplate (60%) -->
-				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Gaiters (60%) -->
-				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Caster (60%) -->
-				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Buster (60%) -->
-				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shooter (60%) -->
-				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Thrower (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
-				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Retributer (60%) -->
+				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35445" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35431" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35450" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35448" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3524,12 +3524,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17318" min="1" max="1" chance="25.09" /> <!-- Immortal Gloves -->
-				<item id="17308" min="1" max="1" chance="22.95" /> <!-- Immortal Boots -->
-				<item id="17304" min="1" max="1" chance="15.91" /> <!-- Immortal Helmet -->
-				<item id="17310" min="1" max="1" chance="15.89" /> <!-- Immortal Leather Helmet -->
-				<item id="17313" min="1" max="3" chance="12.3" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="2" max="4" chance="7.937" /> <!-- Immortal Shoes -->
+				<item id="17318" min="1" max="1" chance="25.09" /> <!-- Immortal Gloves - Robe -->
+				<item id="17308" min="1" max="1" chance="22.95" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17304" min="1" max="1" chance="15.91" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="15.89" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17313" min="1" max="3" chance="12.3" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="2" max="4" chance="7.937" /> <!-- Immortal Shoes - Robe -->
 				<item id="17291" min="1" max="1" chance="1.494" /> <!-- Requiem Cutter -->
 				<item id="17296" min="1" max="1" chance="1.49" /> <!-- Requiem Thrower -->
 				<item id="17290" min="1" max="1" chance="1.468" /> <!-- Requiem Shaper -->
@@ -3643,9 +3643,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="66.58" /> <!-- Twilight Shield -->
-				<item id="17339" min="1" max="1" chance="17.41" /> <!-- Twilight Breastplate -->
-				<item id="17350" min="1" max="1" chance="16.78" /> <!-- Twilight Tunic -->
+				<item id="17343" min="1" max="1" chance="66.58" /> <!-- Twilight Shield - Heavy Armor -->
+				<item id="17339" min="1" max="1" chance="17.41" /> <!-- Twilight Breastplate - Heavy Armor -->
+				<item id="17350" min="1" max="1" chance="16.78" /> <!-- Twilight Tunic - Robe -->
 				<item id="17325" min="1" max="1" chance="0.75" /> <!-- Apocalypse Cutter -->
 				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
 				<item id="17527" min="1" max="1" chance="46.47" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -3757,8 +3757,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17352" min="1" max="1" chance="91.475" /> <!-- Twilight Gloves -->
-				<item id="17347" min="1" max="1" chance="20.07" /> <!-- Twilight Leather Gloves -->
+				<item id="17352" min="1" max="1" chance="91.475" /> <!-- Twilight Gloves - Robe -->
+				<item id="17347" min="1" max="1" chance="20.07" /> <!-- Twilight Leather Gloves - Light Armor -->
 				<item id="17330" min="1" max="1" chance="7.548" /> <!-- Apocalypse Thrower -->
 				<item id="17334" min="1" max="1" chance="1.532" /> <!-- Apocalypse Retributer -->
 				<item id="17526" min="1" max="1" chance="37" /> <!-- Scroll: Enchant Weapon (R-grade) -->

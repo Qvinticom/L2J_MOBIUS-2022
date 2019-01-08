@@ -1136,7 +1136,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23079" name="Test - Drop Rate Rune 30% (3-hour)" type="EtcItem">
-		<!-- Test Item When possessed in the inventory, it increases the item acquisition rate through hunting by 30%. -->
+		<!-- Test Item. When possessed in the inventory, it increases the item acquisition rate through hunting by 30%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1153,7 +1153,7 @@
 		</skills>
 	</item>
 	<item id="23080" name="Test - Drop Rate Rune 50% (5-hour)" type="EtcItem">
-		<!-- Test Item When possessed in the inventory, it increases the item acquisition rate through hunting by 50%. -->
+		<!-- Test Item. When possessed in the inventory, it increases the item acquisition rate through hunting by 50%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1170,7 +1170,7 @@
 		</skills>
 	</item>
 	<item id="23081" name="Test - Drop Rate Rune 100% (7-day)" type="EtcItem">
-		<!-- Test Item When possessed in the inventory, it increases the item acquisition rate through hunting by 100%. -->
+		<!-- Test Item. When possessed in the inventory, it increases the item acquisition rate through hunting by 100%. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1323,7 +1323,7 @@
 		<capsuled_items>
 			<item id="21247" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Potion -->
 			<item id="22966" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (1-hour) -->
-			<item id="22906" min="3" max="3" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (1-hour) -->
+			<item id="22906" min="3" max="3" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% Pack (1-hour) -->
 			<item id="22979" min="3" max="3" chance="100" /> <!-- SP Rune 50% Pack (1-hour) -->
 		</capsuled_items>
 	</item>
@@ -1345,7 +1345,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21247" min="3" max="3" chance="100" /> <!-- Vitality Replenishing Potion -->
-			<item id="22906" min="9" max="9" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (1-hour) -->
+			<item id="22906" min="9" max="9" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% Pack (1-hour) -->
 			<item id="22979" min="9" max="9" chance="100" /> <!-- SP Rune 50% Pack (1-hour) -->
 			<item id="22966" min="3" max="3" chance="100" /> <!-- Vitality Maintaining Potion (1-hour) -->
 			<item id="34620" min="2" max="2" chance="100" /> <!-- Heavenly Cocktail -->
@@ -1369,9 +1369,9 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21247" min="9" max="9" chance="100" /> <!-- Vitality Replenishing Potion -->
-			<item id="22906" min="10" max="10" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (1-hour) -->
+			<item id="22906" min="10" max="10" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% Pack (1-hour) -->
 			<item id="22979" min="10" max="10" chance="100" /> <!-- SP Rune 50% Pack (1-hour) -->
-			<item id="20549" min="3" max="3" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (5-hour) -->
+			<item id="20549" min="3" max="3" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% Pack (5-hour) -->
 			<item id="20555" min="3" max="3" chance="100" /> <!-- SP Rune 50% Pack (5-hour) -->
 			<item id="22966" min="9" max="9" chance="100" /> <!-- Vitality Maintaining Potion (1-hour) -->
 			<item id="34620" min="6" max="6" chance="100" /> <!-- Heavenly Cocktail -->
@@ -1420,7 +1420,7 @@
 		<capsuled_items>
 			<item id="22888" min="10000" max="10000" chance="100" /> <!-- Mysterious Soulshot (R-grade) -->
 			<item id="23082" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->
-			<item id="22906" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% Pack (1-hour) -->
+			<item id="22906" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% Pack (1-hour) -->
 			<item id="22979" min="1" max="1" chance="100" /> <!-- SP Rune 50% Pack (1-hour) -->
 			<item id="34620" min="1" max="1" chance="100" /> <!-- Heavenly Cocktail -->
 		</capsuled_items>

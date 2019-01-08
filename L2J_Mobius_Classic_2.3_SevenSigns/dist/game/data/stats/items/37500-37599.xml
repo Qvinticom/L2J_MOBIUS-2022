@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37533" name="NC Messenger's Hat" type="Armor">
-		<!-- NC Messenger's Hat. Occupies 2 Hair Accessory slots. STR +1, DEX + 1, INT + 1, WIT + 1. -->
+		<!-- NC Messenger's Hat. Occupies 2 Hair Accessory slots. STR +1, DEX +1, INT +1, WIT +1. -->
 		<set name="icon" val="icon.nc_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -14,7 +14,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37534" name="Santa Suit" type="Armor">
-		<!-- A costume to wear during Christmas holidays. -->
+		<!-- Santa's Suit. -->
 		<set name="icon" val="icon.armor_ev_santas_clothes" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -27,7 +27,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="37535" name="Santa Hat" type="Armor">
-		<!-- Santa Hat. -->
+		<!-- Santa's Hat. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -39,7 +39,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="37543" name="Snowy Squash Nectar" type="EtcItem">
-		<!-- Item for Squash event 2015. Can be exchanged into Snowy Squash Seed or Large Snowy Squash Seed through Santa Claus to grow a Snowy Squash or a Large Snowy Squash. Will be deleted after event. -->
+		<!-- Go to Santa to trade in for Snowy Squash Seed or Large Snowy Squash Seed. You can also use it to grow Snowy Squash and Large Snowy Squash. -->
 		<set name="icon" val="icon.etc_nectar_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -122,7 +122,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37552" name="Snowy Squash Seed" type="EtcItem">
-		<!-- Double-click to spawn a Snowy Young Squash. Will be deleted after event. -->
+		<!-- Double-click to have a Young Snowy Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i10" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -135,7 +135,7 @@
 		</skills>
 	</item>
 	<item id="37553" name="Large Snowy Squash Seed" type="EtcItem">
-		<!-- Double-click to spawn a Snowy Large Young Squash. Will be deleted after event. -->
+		<!-- Double-click to have a Young Large Snowy Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

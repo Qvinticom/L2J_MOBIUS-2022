@@ -794,11 +794,11 @@
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20639" min="1" max="1" chance="100" /> <!-- Common Item - Elven Long Sword -->
-			<item id="20640" min="1" max="1" chance="100" /> <!-- Common Item - Light Crossbow -->
+			<item id="20640" min="1" max="1" chance="100" /> <!-- Common Item - Light Bow -->
 			<item id="20641" min="1" max="1" chance="100" /> <!-- Common Item - Knight's Sword*Elven Sword -->
 			<item id="20642" min="1" max="1" chance="100" /> <!-- Common Item - Mithril Gloves -->
 			<item id="20643" min="1" max="1" chance="100" /> <!-- Common Item - Plate Boots -->
-			<item id="20644" min="1" max="1" chance="100" /> <!-- Common Item - Plate Shield -->
+			<item id="20644" min="1" max="1" chance="100" /> <!-- Common Item- Plate Shield -->
 			<item id="20645" min="1" max="1" chance="100" /> <!-- Common Item - Plate Helmet -->
 			<item id="20646" min="1" max="1" chance="100" /> <!-- Common Item - Plate Gaiters -->
 			<item id="20647" min="1" max="1" chance="100" /> <!-- Common Item - Half Plate Armor -->
@@ -884,7 +884,7 @@
 		</stats>
 	</item>
 	<item id="20640" name="Common Item - Light Crossbow" type="Weapon">
-		<!-- Light Crossbow with limited power enhancement. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
+		<!-- Light Bow with limited power enhancement. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -987,7 +987,7 @@
 		</stats>
 	</item>
 	<item id="20644" name="Common Item - Plate Shield" type="Armor">
-		<!-- Plate Shield with limited power enhancement. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
+		<!-- Plate Shield with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
 		<set name="icon" val="icon.shield_plate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2600" toLevel="1" name="Gran Kain's Echo Crystal - Theme of Solitude">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -67,8 +67,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2606" toLevel="1" name="Gran Kain's Gift Box">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="reuseDelay" val="86400000" / -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -89,40 +87,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.8130">
-						<item id="13259" count="1" />
+						<item id="13259" count="1" /> <!-- Gran Kain's Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="1.626">
-						<item id="13258" count="1" />
+						<item id="13258" count="1" /> <!-- Gran Kain's Blessed Scroll of Escape -->
 					</item>
 					<item chance="16.260">
-						<item id="13260" count="1" />
+						<item id="13260" count="1" /> <!-- Gran Kain's Squeaking Shoes - 10-hour -->
 					</item>
 					<item chance="4.645">
-						<item id="13261" count="10" />
+						<item id="13261" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Journey -->
 					</item>
 					<item chance="4.645">
-						<item id="13262" count="10" />
+						<item id="13262" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Battle -->
 					</item>
 					<item chance="4.645">
-						<item id="13263" count="10" />
+						<item id="13263" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Love -->
 					</item>
 					<item chance="4.645">
-						<item id="13264" count="10" />
+						<item id="13264" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Solitude -->
 					</item>
 					<item chance="4.645">
-						<item id="13265" count="10" />
+						<item id="13265" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Festival -->
 					</item>
 					<item chance="4.645">
-						<item id="13266" count="10" />
+						<item id="13266" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Celebration -->
 					</item>
 					<item chance="4.645">
-						<item id="13267" count="10" />
+						<item id="13267" count="10" /> <!-- Gran Kain's Echo Crystal - Theme of Comedy -->
 					</item>
 					<item chance="32.5260">
-						<item id="13268" count="10" />
+						<item id="13268" count="10" /> <!-- Gran Kain's Firecracker -->
 					</item>
 					<item chance="16.260">
-						<item id="13269" count="10" />
+						<item id="13269" count="10" /> <!-- Gran Kain's Large Firecracker -->
 					</item>
 				</items>
 			</effect>
@@ -164,9 +162,6 @@
 		</effects>
 	</skill>
 	<skill id="2608" toLevel="3" name="Blue Crystal of Fantasy">
-		<!-- Lvl 1: Blue Crystal of Fantasy -->
-		<!-- Lvl 2: Green Crystal of Fantasy -->
-		<!-- Lvl 3: Red Crystal of Fantasy -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -194,7 +189,6 @@
 		</effects>
 	</skill>
 	<skill id="2609" toLevel="20" name="Scroll of Escape: Talking Island Village">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>
@@ -371,7 +365,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2615" toLevel="1" name="Shards of Broken Darkness">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13853</itemConsumeId> <!-- Destroyed Darkness Fragment Powder -->
@@ -404,6 +397,7 @@
 		</effects>
 	</skill>
 	<skill id="2616" toLevel="1" name="Bond Sealant">
+		<!-- A block is adhered to the floor and cannot move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -520,7 +514,6 @@
 		</effects>
 	</skill>
 	<skill id="2622" toLevel="1" name="Summon Life-size Decoy">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
@@ -544,12 +537,13 @@
 		</conditions>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>32544</npcId>
+				<npcId>32544</npcId> <!-- Seed of Generation -->
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2623" toLevel="1" name="Alkaline Therapy">
+		<!-- Covers yourself in an ointment that reduces lethal de-buff effects within the Hall of Erosion. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
@@ -566,6 +560,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2624" toLevel="1" name="Life Aid Banding">
+		<!-- Increases Resistance to bleed damage, poison and altered conditions caused by the Death Worm within the Seed of Infinity. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>RESIST_BLEEDING</abnormalType>
@@ -612,6 +607,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2628" toLevel="1" name="Structure Scarab">
+		<!-- Allows user to retain buffs and debuffs following death and resurrection. Noblesse Blessing and Amulet of Luck disappear, however. Consumes 1 Structure Scarab. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
@@ -674,6 +670,7 @@
 		</conditions>
 	</skill>
 	<skill id="2631" toLevel="1" name="Transformation Scroll: Frog">
+		<!-- Transforms into a frog. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -702,6 +699,7 @@
 		</effects>
 	</skill>
 	<skill id="2632" toLevel="1" name="Transformation Scroll: Young Child">
+		<!-- Transforms into a young child. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -730,7 +728,6 @@
 		</effects>
 	</skill>
 	<skill id="2633" toLevel="1" name="Elmore-Aden's Holy Water">
-		<!-- Confirmed CT2.5 -->
 		<castRange>400</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
@@ -761,7 +758,6 @@
 		</effects>
 	</skill>
 	<skill id="2634" toLevel="1" name="Court Magician's Blessing">
-		<!-- Confirmed CT2.5 -->
 		<castRange>400</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
@@ -791,6 +787,7 @@
 		</effects>
 	</skill>
 	<skill id="2635" toLevel="1" name="Blessing of Fire">
+		<!-- Blessing of fire. Fire attribute is bestowed on physical attacks. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -813,6 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="2636" toLevel="1" name="Blessing of Earth">
+		<!-- Blessing of earth. Earth attribute is bestowed on physical attacks. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -845,7 +843,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2638" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13426</itemConsumeId> <!-- Small Mineral Box -->
@@ -866,29 +863,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="9546" count="1" />
+						<item id="9546" count="1" /> <!-- Fire Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9547" count="1" />
+						<item id="9547" count="1" /> <!-- Water Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9548" count="1" />
+						<item id="9548" count="1" /> <!-- Earth Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9549" count="1" />
+						<item id="9549" count="1" /> <!-- Wind Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9550" count="1" />
+						<item id="9550" count="1" /> <!-- Dark Stone -->
 					</item>
 					<item chance="17.0">
-						<item id="9551" count="1" />
+						<item id="9551" count="1" /> <!-- Holy Stone -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2639" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13423</itemConsumeId> <!-- Medium Mineral Box -->
@@ -909,29 +905,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6">
-						<item id="9546" count="2" />
+						<item id="9546" count="2" /> <!-- Fire Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9547" count="2" />
+						<item id="9547" count="2" /> <!-- Water Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9548" count="2" />
+						<item id="9548" count="2" /> <!-- Earth Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9549" count="2" />
+						<item id="9549" count="2" /> <!-- Wind Stone -->
 					</item>
 					<item chance="16.6">
-						<item id="9550" count="2" />
+						<item id="9550" count="2" /> <!-- Dark Stone -->
 					</item>
 					<item chance="17.0">
-						<item id="9551" count="2" />
+						<item id="9551" count="2" /> <!-- Holy Stone -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2640" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13428</itemConsumeId> <!-- Small Libation Box -->
@@ -952,44 +947,43 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="9.0">
-						<item id="10260" count="1" />
+						<item id="10260" count="1" /> <!-- Haste Potion -->
 					</item>
 					<item chance="9.0">
-						<item id="10261" count="1" />
+						<item id="10261" count="1" /> <!-- Accuracy Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10262" count="1" />
+						<item id="10262" count="1" /> <!-- Critical Damage Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10263" count="1" />
+						<item id="10263" count="1" /> <!-- Critical Rate Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10264" count="1" />
+						<item id="10264" count="1" /> <!-- Casting Spd. Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10265" count="1" />
+						<item id="10265" count="1" /> <!-- Evasion Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10266" count="1" />
+						<item id="10266" count="1" /> <!-- M. Atk. Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10267" count="1" />
+						<item id="10267" count="1" /> <!-- P. Atk. Potion -->
 					</item>
 					<item chance="9.0">
-						<item id="10268" count="1" />
+						<item id="10268" count="1" /> <!-- Wind Walk Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10269" count="1" />
+						<item id="10269" count="1" /> <!-- P. Def. Juice -->
 					</item>
 					<item chance="10.0">
-						<item id="10270" count="1" />
+						<item id="10270" count="1" /> <!-- MP Consumption Juice -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2641" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13427</itemConsumeId> <!-- Medium Libation Box -->
@@ -1010,44 +1004,43 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="9.0">
-						<item id="10260" count="2" />
+						<item id="10260" count="2" /> <!-- Haste Potion -->
 					</item>
 					<item chance="9.0">
-						<item id="10261" count="2" />
+						<item id="10261" count="2" /> <!-- Accuracy Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10262" count="2" />
+						<item id="10262" count="2" /> <!-- Critical Damage Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10263" count="2" />
+						<item id="10263" count="2" /> <!-- Critical Rate Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10264" count="2" />
+						<item id="10264" count="2" /> <!-- Casting Spd. Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10265" count="2" />
+						<item id="10265" count="2" /> <!-- Evasion Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10266" count="2" />
+						<item id="10266" count="2" /> <!-- M. Atk. Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10267" count="2" />
+						<item id="10267" count="2" /> <!-- P. Atk. Potion -->
 					</item>
 					<item chance="9.0">
-						<item id="10268" count="2" />
+						<item id="10268" count="2" /> <!-- Wind Walk Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10269" count="2" />
+						<item id="10269" count="2" /> <!-- P. Def. Juice -->
 					</item>
 					<item chance="10.0">
-						<item id="10270" count="2" />
+						<item id="10270" count="2" /> <!-- MP Consumption Juice -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2642" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13424</itemConsumeId> <!-- Large Libation Box -->
@@ -1068,44 +1061,43 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="9.0">
-						<item id="10260" count="3" />
+						<item id="10260" count="3" /> <!-- Haste Potion -->
 					</item>
 					<item chance="9.0">
-						<item id="10261" count="3" />
+						<item id="10261" count="3" /> <!-- Accuracy Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10262" count="3" />
+						<item id="10262" count="3" /> <!-- Critical Damage Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10263" count="3" />
+						<item id="10263" count="3" /> <!-- Critical Rate Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10264" count="3" />
+						<item id="10264" count="3" /> <!-- Casting Spd. Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10265" count="3" />
+						<item id="10265" count="3" /> <!-- Evasion Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10266" count="3" />
+						<item id="10266" count="3" /> <!-- M. Atk. Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10267" count="3" />
+						<item id="10267" count="3" /> <!-- P. Atk. Potion -->
 					</item>
 					<item chance="9.0">
-						<item id="10268" count="3" />
+						<item id="10268" count="3" /> <!-- Wind Walk Juice -->
 					</item>
 					<item chance="9.0">
-						<item id="10269" count="3" />
+						<item id="10269" count="3" /> <!-- P. Def. Juice -->
 					</item>
 					<item chance="10.0">
-						<item id="10270" count="3" />
+						<item id="10270" count="3" /> <!-- MP Consumption Juice -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2643" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13425</itemConsumeId> <!-- Small Parchment Box -->
@@ -1126,53 +1118,52 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.14">
-						<item id="7122" count="1" />
+						<item id="7122" count="1" /> <!-- Scroll of Escape: Gludin Village -->
 					</item>
 					<item chance="7.14">
-						<item id="7123" count="1" />
+						<item id="7123" count="1" /> <!-- Scroll of Escape: Town of Gludio -->
 					</item>
 					<item chance="7.14">
-						<item id="7124" count="1" />
+						<item id="7124" count="1" /> <!-- Scroll of Escape: Town of Dion -->
 					</item>
 					<item chance="7.14">
-						<item id="7125" count="1" />
+						<item id="7125" count="1" /> <!-- Scroll of Escape: Floran Village -->
 					</item>
 					<item chance="7.14">
-						<item id="7126" count="1" />
+						<item id="7126" count="1" /> <!-- Scroll of Escape: Town of Giran -->
 					</item>
 					<item chance="7.14">
-						<item id="7127" count="1" />
+						<item id="7127" count="1" /> <!-- Scroll of Escape: Hardin's Academy -->
 					</item>
 					<item chance="7.14">
-						<item id="7128" count="1" />
+						<item id="7128" count="1" /> <!-- Scroll of Escape: Heine -->
 					</item>
 					<item chance="7.14">
-						<item id="7129" count="1" />
+						<item id="7129" count="1" /> <!-- Scroll of Escape: Town of Oren -->
 					</item>
 					<item chance="7.18">
-						<item id="7130" count="1" />
+						<item id="7130" count="1" /> <!-- Scroll of Escape: Ivory Tower -->
 					</item>
 					<item chance="7.14">
-						<item id="7131" count="1" />
+						<item id="7131" count="1" /> <!-- Scroll of Escape: Hunter's Village -->
 					</item>
 					<item chance="7.14">
-						<item id="7132" count="1" />
+						<item id="7132" count="1" /> <!-- Scroll of Escape: Town of Aden -->
 					</item>
 					<item chance="7.14">
-						<item id="7133" count="1" />
+						<item id="7133" count="1" /> <!-- Scroll of Escape: Town of Goddard -->
 					</item>
 					<item chance="7.14">
-						<item id="7134" count="1" />
+						<item id="7134" count="1" /> <!-- Scroll of Escape: Town of Rune -->
 					</item>
 					<item chance="7.14">
-						<item id="7135" count="1" />
+						<item id="7135" count="1" /> <!-- Scroll of Escape: Town of Schuttgart -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2644" toLevel="1" name="5th Anniversary Event Box">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13422</itemConsumeId> <!-- Medium Parchment Box -->
@@ -1193,53 +1184,52 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="7.14">
-						<item id="7122" count="2" />
+						<item id="7122" count="2" /> <!-- Scroll of Escape: Gludin Village -->
 					</item>
 					<item chance="7.14">
-						<item id="7123" count="2" />
+						<item id="7123" count="2" /> <!-- Scroll of Escape: Town of Gludio -->
 					</item>
 					<item chance="7.14">
-						<item id="7124" count="2" />
+						<item id="7124" count="2" /> <!-- Scroll of Escape: Town of Dion -->
 					</item>
 					<item chance="7.14">
-						<item id="7125" count="2" />
+						<item id="7125" count="2" /> <!-- Scroll of Escape: Floran Village -->
 					</item>
 					<item chance="7.14">
-						<item id="7126" count="2" />
+						<item id="7126" count="2" /> <!-- Scroll of Escape: Town of Giran -->
 					</item>
 					<item chance="7.14">
-						<item id="7127" count="2" />
+						<item id="7127" count="2" /> <!-- Scroll of Escape: Hardin's Academy -->
 					</item>
 					<item chance="7.14">
-						<item id="7128" count="2" />
+						<item id="7128" count="2" /> <!-- Scroll of Escape: Heine -->
 					</item>
 					<item chance="7.14">
-						<item id="7129" count="2" />
+						<item id="7129" count="2" /> <!-- Scroll of Escape: Town of Oren -->
 					</item>
 					<item chance="7.18">
-						<item id="7130" count="2" />
+						<item id="7130" count="2" /> <!-- Scroll of Escape: Ivory Tower -->
 					</item>
 					<item chance="7.14">
-						<item id="7131" count="2" />
+						<item id="7131" count="2" /> <!-- Scroll of Escape: Hunter's Village -->
 					</item>
 					<item chance="7.14">
-						<item id="7132" count="2" />
+						<item id="7132" count="2" /> <!-- Scroll of Escape: Town of Aden -->
 					</item>
 					<item chance="7.14">
-						<item id="7133" count="2" />
+						<item id="7133" count="2" /> <!-- Scroll of Escape: Town of Goddard -->
 					</item>
 					<item chance="7.14">
-						<item id="7134" count="2" />
+						<item id="7134" count="2" /> <!-- Scroll of Escape: Town of Rune -->
 					</item>
 					<item chance="7.14">
-						<item id="7135" count="2" />
+						<item id="7135" count="2" /> <!-- Scroll of Escape: Town of Schuttgart -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2645" toLevel="1" name="Multi-Colored Honey Rice Cake">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13420</itemConsumeId> <!-- Multi-colored Honey Rice Cake -->
@@ -1264,7 +1254,6 @@
 		</effects>
 	</skill>
 	<skill id="2646" toLevel="1" name="Honey Wheat Cake">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13421</itemConsumeId> <!-- Honey Wheat Cake -->
@@ -1289,7 +1278,6 @@
 		</effects>
 	</skill>
 	<skill id="2647" toLevel="1" name="Energy Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13277</itemConsumeId> <!-- Energy Star Stone -->
@@ -1312,7 +1300,6 @@
 		</effects>
 	</skill>
 	<skill id="2648" toLevel="1" name="High-quality Energy Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13278</itemConsumeId> <!-- Greater Quality Energy Star Stone -->
@@ -1335,7 +1322,6 @@
 		</effects>
 	</skill>
 	<skill id="2649" toLevel="9" name="Scroll of Escape: Gludin Village">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1403,7 +1389,6 @@
 		</effects>
 	</skill>
 	<skill id="2650" toLevel="1" name="Summon Imperial Phoenix">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1421,20 +1406,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>912</skillId>
+				<skillId>912</skillId> <!-- Summon Imperial Phoenix -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>912</skillId>
+				<skillId>912</skillId> <!-- Summon Imperial Phoenix -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2651" toLevel="1" name="Deflect Magic">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1464,20 +1448,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>913</skillId>
+				<skillId>913</skillId> <!-- Deflect Magic -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>913</skillId>
+				<skillId>913</skillId> <!-- Deflect Magic -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2652" toLevel="1" name="Song of Purification">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1495,20 +1478,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>914</skillId>
+				<skillId>914</skillId> <!-- Song of Purification -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>914</skillId>
+				<skillId>914</skillId> <!-- Song of Purification -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2653" toLevel="1" name="Dance of Berserker">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1526,20 +1508,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>915</skillId>
+				<skillId>915</skillId> <!-- Dance of Berserker -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>915</skillId>
+				<skillId>915</skillId> <!-- Dance of Berserker -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2654" toLevel="1" name="Final Secret">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1570,20 +1551,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>917</skillId>
+				<skillId>917</skillId> <!-- Final Secret -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>917</skillId>
+				<skillId>917</skillId> <!-- Final Secret -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2655" toLevel="1" name="Maximum Force Focus">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1601,20 +1581,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>918</skillId>
+				<skillId>918</skillId> <!-- Maximum Force Focus -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>918</skillId>
+				<skillId>918</skillId> <!-- Maximum Force Focus -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2656" toLevel="1" name="Maximum Sonic Focus">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1632,20 +1611,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>919</skillId>
+				<skillId>919</skillId> <!-- Maximum Sonic Focus -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>919</skillId>
+				<skillId>919</skillId> <!-- Maximum Sonic Focus -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2657" toLevel="1" name="Hide">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1672,20 +1650,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>922</skillId>
+				<skillId>922</skillId> <!-- Hide -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>922</skillId>
+				<skillId>922</skillId> <!-- Hide -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2658" toLevel="1" name="Dual Dagger Mastery">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1713,20 +1690,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>923</skillId>
+				<skillId>923</skillId> <!-- Dual Dagger Mastery -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>923</skillId>
+				<skillId>923</skillId> <!-- Dual Dagger Mastery -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2659" toLevel="1" name="Seven Arrow">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1753,20 +1729,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>924</skillId>
+				<skillId>924</skillId> <!-- Seven Arrow -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>924</skillId>
+				<skillId>924</skillId> <!-- Seven Arrow -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2660" toLevel="1" name="Enlightenment">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1796,20 +1771,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1532</skillId>
+				<skillId>1532</skillId> <!-- Enlightenment -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1532</skillId>
+				<skillId>1532</skillId> <!-- Enlightenment -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2661" toLevel="1" name="Enlightenment">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1839,20 +1813,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1533</skillId>
+				<skillId>1533</skillId> <!-- Enlightenment -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1533</skillId>
+				<skillId>1533</skillId> <!-- Enlightenment -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2662" toLevel="1" name="Chant of Movement">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1870,20 +1843,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1535</skillId>
+				<skillId>1535</skillId> <!-- Chant of Movement -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1535</skillId>
+				<skillId>1535</skillId> <!-- Chant of Movement -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2663" toLevel="1" name="Combat of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1901,20 +1873,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1536</skillId>
+				<skillId>1536</skillId> <!-- Combat of Pa'agrio -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1536</skillId>
+				<skillId>1536</skillId> <!-- Combat of Pa'agrio -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2664" toLevel="1" name="Critical of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1932,20 +1903,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1537</skillId>
+				<skillId>1537</skillId> <!-- Critical of Pa'agrio -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1537</skillId>
+				<skillId>1537</skillId> <!-- Critical of Pa'agrio -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2665" toLevel="1" name="Condition of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1963,20 +1933,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>1538</skillId>
+				<skillId>1538</skillId> <!-- Condition of Pa'agrio -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>1538</skillId>
+				<skillId>1538</skillId> <!-- Condition of Pa'agrio -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2666" toLevel="1" name="Dual Blow">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2003,20 +1972,19 @@
 				<isWithin>true</isWithin>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>928</skillId>
+				<skillId>928</skillId> <!-- Dual Blow -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>928</skillId>
+				<skillId>928</skillId> <!-- Dual Blow -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2667" toLevel="1" name="Spirit of the Cat">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2034,20 +2002,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>929</skillId>
+				<skillId>929</skillId> <!-- Spirit of the Cat -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>929</skillId>
+				<skillId>929</skillId> <!-- Spirit of the Cat -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2668" toLevel="1" name="Spirit of the Phantom">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2065,20 +2032,19 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>930</skillId>
+				<skillId>930</skillId> <!-- Spirit of the Phantom -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>930</skillId>
+				<skillId>930</skillId> <!-- Spirit of the Phantom -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2669" toLevel="1" name="Spirit of the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2096,20 +2062,20 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>931</skillId>
+				<skillId>931</skillId> <!-- Spirit of the Unicorn -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>931</skillId>
+				<skillId>931</skillId> <!-- Spirit of the Unicorn -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2670" toLevel="1" name="Transformation Scroll: Red">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transforms caster into a member of the red team. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2138,7 +2104,7 @@
 		</effects>
 	</skill>
 	<skill id="2671" toLevel="1" name="Transformation Scroll: Blue">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transforms caster into a member of the blue team. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2167,6 +2133,7 @@
 		</effects>
 	</skill>
 	<skill id="2672" toLevel="1" name="Gludio Human Mercenary">
+		<!-- Transforms into a human mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2206,6 +2173,7 @@
 		</effects>
 	</skill>
 	<skill id="2673" toLevel="1" name="Gludio Elf Mercenary">
+		<!-- Transforms into an Elf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2245,6 +2213,7 @@
 		</effects>
 	</skill>
 	<skill id="2674" toLevel="1" name="Gludio Dark Elf Mercenary">
+		<!-- Transforms into a Dark Elf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2284,6 +2253,7 @@
 		</effects>
 	</skill>
 	<skill id="2675" toLevel="1" name="Gludio Orc Mercenary">
+		<!-- Transforms into an Orc mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2323,6 +2293,7 @@
 		</effects>
 	</skill>
 	<skill id="2676" toLevel="1" name="Gludio Dwarf Mercenary">
+		<!-- Transforms into a Dwarf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2362,6 +2333,7 @@
 		</effects>
 	</skill>
 	<skill id="2677" toLevel="1" name="Gludio Kamael Mercenary">
+		<!-- Transforms into a Kamael mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2401,6 +2373,7 @@
 		</effects>
 	</skill>
 	<skill id="2678" toLevel="1" name="Gludio Royal Guard Captain">
+		<!-- Transforms into a Royal Guard Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2440,6 +2413,7 @@
 		</effects>
 	</skill>
 	<skill id="2679" toLevel="1" name="Gludio Archer Captain">
+		<!-- Transforms into an Archer Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2479,6 +2453,7 @@
 		</effects>
 	</skill>
 	<skill id="2680" toLevel="1" name="Gludio Wizard Captain">
+		<!-- Transforms into a Wizard Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2518,6 +2493,7 @@
 		</effects>
 	</skill>
 	<skill id="2681" toLevel="1" name="Gludio Kamael Guard Captain">
+		<!-- Transforms into a Kamael Guard Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2557,6 +2533,7 @@
 		</effects>
 	</skill>
 	<skill id="2682" toLevel="1" name="Gludio Knight of Dawn">
+		<!-- Transforms into a Knight of Dawn. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2596,6 +2573,7 @@
 		</effects>
 	</skill>
 	<skill id="2683" toLevel="1" name="Gludio Fortress Commander">
+		<!-- Transforms into a Fortress Commander. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2635,6 +2613,7 @@
 		</effects>
 	</skill>
 	<skill id="2684" toLevel="1" name="Dion Human Mercenary">
+		<!-- Transforms into a human mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2674,6 +2653,7 @@
 		</effects>
 	</skill>
 	<skill id="2685" toLevel="1" name="Dion Elf Mercenary">
+		<!-- Transforms into an Elf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2713,6 +2693,7 @@
 		</effects>
 	</skill>
 	<skill id="2686" toLevel="1" name="Dion Dark Elf Mercenary">
+		<!-- Transforms into a Dark Elf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2752,6 +2733,7 @@
 		</effects>
 	</skill>
 	<skill id="2687" toLevel="1" name="Dion Orc Mercenary">
+		<!-- Transforms into an Orc mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2791,6 +2773,7 @@
 		</effects>
 	</skill>
 	<skill id="2688" toLevel="1" name="Dion Dwarf Mercenary">
+		<!-- Transforms into a Dwarf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2830,6 +2813,7 @@
 		</effects>
 	</skill>
 	<skill id="2689" toLevel="1" name="Dion Kamael Mercenary">
+		<!-- Transforms into a Kamael mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2869,6 +2853,7 @@
 		</effects>
 	</skill>
 	<skill id="2690" toLevel="1" name="Dion Royal Guard Captain">
+		<!-- Transforms into a Royal Guard Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2908,6 +2893,7 @@
 		</effects>
 	</skill>
 	<skill id="2691" toLevel="1" name="Dion Archer Captain">
+		<!-- Transforms into an Archer Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2947,6 +2933,7 @@
 		</effects>
 	</skill>
 	<skill id="2692" toLevel="1" name="Dion Wizard Captain">
+		<!-- Transforms into a Wizard Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -2986,6 +2973,7 @@
 		</effects>
 	</skill>
 	<skill id="2693" toLevel="1" name="Dion Kamael Guard Captain">
+		<!-- Transforms into a Kamael Guard Captain. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -3025,6 +3013,7 @@
 		</effects>
 	</skill>
 	<skill id="2694" toLevel="1" name="Dion Knight of Dawn">
+		<!-- Transforms into a Knight of Dawn. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -3064,6 +3053,7 @@
 		</effects>
 	</skill>
 	<skill id="2695" toLevel="1" name="Dion Fortress Commander">
+		<!-- Transforms into a Fortress Commander. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -3103,6 +3093,7 @@
 		</effects>
 	</skill>
 	<skill id="2696" toLevel="1" name="Giran Human Mercenary">
+		<!-- Transforms into a human mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -3142,6 +3133,7 @@
 		</effects>
 	</skill>
 	<skill id="2697" toLevel="1" name="Giran Elf Mercenary">
+		<!-- Transforms into an Elf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -3181,6 +3173,7 @@
 		</effects>
 	</skill>
 	<skill id="2698" toLevel="1" name="Giran Dark Elf Mercenary">
+		<!-- Transforms into a Dark Elf mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -3220,6 +3213,7 @@
 		</effects>
 	</skill>
 	<skill id="2699" toLevel="1" name="Giran Orc Mercenary">
+		<!-- Transforms into an Orc mercenary. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>

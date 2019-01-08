@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25001" level="23" type="L2RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
@@ -615,9 +615,9 @@
 				<item id="268" min="1" max="1" chance="2.701" /> <!-- Bellion Cestus -->
 				<item id="2439" min="1" max="1" chance="2.067" /> <!-- Sealed Blue Wolf Boots -->
 				<item id="2475" min="1" max="1" chance="1.442" /> <!-- Sealed Doom Gloves -->
-				<item id="4621" min="1" max="1" chance="16.54" /> <!-- Greater MEN Dye (Men  4 Int - 4) -->
-				<item id="4620" min="1" max="1" chance="15.18" /> <!-- Greater INT Dye (Int  4 Wit - 4) -->
-				<item id="4619" min="1" max="3" chance="7.844" /> <!-- Greater INT Dye (Int  4 Men - 4) -->
+				<item id="4621" min="1" max="1" chance="16.54" /> <!-- Greater MEN Dye <Men + 4 Int - 4> -->
+				<item id="4620" min="1" max="1" chance="15.18" /> <!-- Greater INT Dye <Int + 4 Wit - 4> -->
+				<item id="4619" min="1" max="3" chance="7.844" /> <!-- Greater INT Dye <Int + 4 Men - 4> -->
 				<item id="947" min="1" max="1" chance="4.611" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="46489" min="1" max="1" chance="1.08" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="1.077" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -1158,9 +1158,9 @@
 				<item id="286" min="1" max="1" chance="3.797" /> <!-- Eminence Bow -->
 				<item id="855" min="1" max="1" chance="3.016" /> <!-- Nassen's Earring -->
 				<item id="119" min="1" max="1" chance="1.542" /> <!-- Necklace of Seal -->
-				<item id="4608" min="1" max="1" chance="13.16" /> <!-- Greater INT Dye (Int  3 Wit - 3) -->
-				<item id="4609" min="1" max="1" chance="12.86" /> <!-- Greater MEN Dye (Men  3 Int - 3) -->
-				<item id="4607" min="1" max="1" chance="12.75" /> <!-- Greater INT Dye (Int  3 Men - 3) -->
+				<item id="4608" min="1" max="1" chance="13.16" /> <!-- Greater INT Dye <Int + 3 Wit - 3> -->
+				<item id="4609" min="1" max="1" chance="12.86" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
+				<item id="4607" min="1" max="1" chance="12.75" /> <!-- Greater INT Dye <Int + 3 Men - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -1313,9 +1313,9 @@
 				<item id="673" min="1" max="1" chance="2.951" /> <!-- Avadon Shield -->
 				<item id="503" min="1" max="1" chance="1.403" /> <!-- Zubei's Helmet -->
 				<item id="2415" min="1" max="1" chance="0.75" /> <!-- Avadon Circlet -->
-				<item id="4615" min="1" max="1" chance="14.71" /> <!-- Greater CON Dye (Con  4 Str - 4) -->
-				<item id="4613" min="1" max="1" chance="14.66" /> <!-- Greater STR Dye (STR  4 CON - 4) -->
-				<item id="4614" min="1" max="1" chance="14.42" /> <!-- Greater STR Dye (STR  4 DEX - 4) -->
+				<item id="4615" min="1" max="1" chance="14.71" /> <!-- Greater CON Dye <Con + 4 Str - 4> -->
+				<item id="4613" min="1" max="1" chance="14.66" /> <!-- Greater STR Dye <STR + 4 CON - 4> -->
+				<item id="4614" min="1" max="1" chance="14.42" /> <!-- Greater STR Dye <STR + 4 DEX - 4> -->
 				<item id="947" min="1" max="1" chance="4.431" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -2080,9 +2080,9 @@
 				<item id="2463" min="1" max="1" chance="3.844" /> <!-- Divine Gloves -->
 				<item id="2436" min="1" max="1" chance="2.234" /> <!-- Theca Leather Boots -->
 				<item id="228" min="1" max="1" chance="1.802" /> <!-- Crystal Dagger -->
-				<item id="4605" min="1" max="1" chance="17.43" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
-				<item id="4606" min="1" max="1" chance="17.27" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
-				<item id="4604" min="1" max="1" chance="17.14" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
+				<item id="4605" min="1" max="1" chance="17.43" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="4606" min="1" max="1" chance="17.27" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="4604" min="1" max="1" chance="17.14" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -2248,9 +2248,9 @@
 				<item id="2463" min="1" max="1" chance="4.041" /> <!-- Divine Gloves -->
 				<item id="2436" min="1" max="1" chance="2.362" /> <!-- Theca Leather Boots -->
 				<item id="228" min="1" max="1" chance="1.918" /> <!-- Crystal Dagger -->
-				<item id="4612" min="1" max="1" chance="13.85" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
-				<item id="4610" min="1" max="1" chance="13.01" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
-				<item id="4611" min="1" max="1" chance="12.89" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
+				<item id="4612" min="1" max="1" chance="13.85" /> <!-- Greater WIT Dye <Wit + 3 Men - 3> -->
+				<item id="4610" min="1" max="1" chance="13.01" /> <!-- Greater MEN Dye <Men + 3 Wit - 3> -->
+				<item id="4611" min="1" max="1" chance="12.89" /> <!-- Greater WIT Dye <Wit + 3 Int - 3> -->
 				<item id="6574" min="1" max="1" chance="3.407" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -2411,9 +2411,9 @@
 				<item id="2384" min="1" max="1" chance="4.862" /> <!-- Zubei's Leather Shirt -->
 				<item id="2388" min="1" max="1" chance="2.974" /> <!-- Zubei's Leather Gaiters -->
 				<item id="300" min="1" max="1" chance="2.68" /> <!-- Great Axe -->
-				<item id="4611" min="1" max="1" chance="13.69" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
-				<item id="4610" min="1" max="1" chance="12.6" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
-				<item id="4612" min="1" max="1" chance="12.47" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
+				<item id="4611" min="1" max="1" chance="13.69" /> <!-- Greater WIT Dye <Wit + 3 Int - 3> -->
+				<item id="4610" min="1" max="1" chance="12.6" /> <!-- Greater MEN Dye <Men + 3 Wit - 3> -->
+				<item id="4612" min="1" max="1" chance="12.47" /> <!-- Greater WIT Dye <Wit + 3 Men - 3> -->
 				<item id="6574" min="1" max="1" chance="3.313" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -2791,9 +2791,9 @@
 				<item id="231" min="1" max="1" chance="4.594" /> <!-- Grace Dagger -->
 				<item id="233" min="1" max="1" chance="4.591" /> <!-- Dark Screamer -->
 				<item id="64" min="1" max="1" chance="1.719" /> <!-- Compound Boots -->
-				<item id="4604" min="1" max="1" chance="15.7" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
-				<item id="4605" min="1" max="1" chance="15.28" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
-				<item id="4606" min="1" max="1" chance="14.7" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
+				<item id="4604" min="1" max="1" chance="15.7" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4605" min="1" max="1" chance="15.28" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="4606" min="1" max="1" chance="14.7" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -3188,10 +3188,10 @@
 				<item id="883" min="1" max="1" chance="1.14" /> <!-- Aquastone Ring -->
 				<item id="915" min="1" max="1" chance="0.75" /> <!-- Aquastone Necklace -->
 				<item id="89" min="1" max="1" chance="0.3" /> <!-- Big Hammer -->
-				<item id="4593" min="1" max="1" chance="15.14" /> <!-- Greater DEX Dye (Dex  2 Str - 2) -->
-				<item id="4592" min="1" max="1" chance="14.31" /> <!-- Greater CON Dye (Con  2 DEX - 2) -->
+				<item id="4593" min="1" max="1" chance="15.14" /> <!-- Greater DEX Dye <Dex + 2 Str - 2> -->
+				<item id="4592" min="1" max="1" chance="14.31" /> <!-- Greater CON Dye <Con + 2 DEX - 2> -->
 				<item id="951" min="1" max="1" chance="8.029" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="4591" min="1" max="3" chance="7.4" /> <!-- Greater CON Dye (Con  2 Str - 2) -->
+				<item id="4591" min="1" max="3" chance="7.4" /> <!-- Greater CON Dye <Con + 2 Str - 2> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -3345,9 +3345,9 @@
 				<item id="148" min="1" max="1" chance="3.231" /> <!-- Sword of Valhalla -->
 				<item id="2406" min="1" max="1" chance="2.217" /> <!-- Avadon Robe -->
 				<item id="2397" min="1" max="1" chance="0.953" /> <!-- Tunic of Zubei -->
-				<item id="4604" min="1" max="3" chance="16.1" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
-				<item id="4605" min="1" max="3" chance="10.32" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
-				<item id="4606" min="2" max="6" chance="7.997" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
+				<item id="4604" min="1" max="3" chance="16.1" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4605" min="1" max="3" chance="10.32" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
+				<item id="4606" min="2" max="6" chance="7.997" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
 				<item id="46504" min="1" max="1" chance="1.132" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="1.117" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46474" min="1" max="1" chance="1.099" /> <!-- Leona's Soul Crystal - Stage 1 -->
@@ -3933,11 +3933,11 @@
 		<dropLists>
 			<drop>
 				<item id="71" min="1" max="1" chance="7.255" /> <!-- Flamberge -->
-				<item id="72" min="1" max="1" chance="7.255" /> <!-- Stormbringer -->
+				<item id="72" min="1" max="1" chance="7.255" /> <!-- StormBringer -->
 				<item id="439" min="1" max="1" chance="2.952" /> <!-- Karmian Tunic -->
 				<item id="471" min="1" max="1" chance="1.489" /> <!-- Karmian Stockings -->
-				<item id="4590" min="1" max="1" chance="20.13" /> <!-- Greater STR Dye (STR  2 DEX - 2) -->
-				<item id="4589" min="1" max="1" chance="18.65" /> <!-- Greater STR Dye (STR  2 CON - 2) -->
+				<item id="4590" min="1" max="1" chance="20.13" /> <!-- Greater STR Dye <STR + 2 DEX - 2> -->
+				<item id="4589" min="1" max="1" chance="18.65" /> <!-- Greater STR Dye <STR + 2 CON - 2> -->
 				<item id="6574" min="1" max="1" chance="3.338" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4088,10 +4088,10 @@
 				<item id="854" min="1" max="1" chance="7.568" /> <!-- Earring of Seal -->
 				<item id="917" min="1" max="1" chance="3.591" /> <!-- Necklace of Mermaid -->
 				<item id="885" min="1" max="1" chance="2.578" /> <!-- Ring of Ages -->
-				<item id="4603" min="1" max="1" chance="17.51" /> <!-- Greater CON Dye (Con  3 Str - 3) -->
+				<item id="4603" min="1" max="1" chance="17.51" /> <!-- Greater CON Dye <Con + 3 Str - 3> -->
 				<item id="951" min="1" max="1" chance="13.51" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="4601" min="1" max="3" chance="8.638" /> <!-- Greater STR Dye (STR  3 CON - 3) -->
-				<item id="4602" min="1" max="3" chance="5.796" /> <!-- Greater STR Dye (STR  3 DEX - 3) -->
+				<item id="4601" min="1" max="3" chance="8.638" /> <!-- Greater STR Dye <STR + 3 CON - 3> -->
+				<item id="4602" min="1" max="3" chance="5.796" /> <!-- Greater STR Dye <STR + 3 DEX - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -4321,9 +4321,9 @@
 				<item id="210" min="1" max="1" chance="1.421" /> <!-- Staff of Evil Spirits -->
 				<item id="171" min="1" max="1" chance="1.42" /> <!-- Deadman's Glory -->
 				<item id="175" min="1" max="1" chance="1.407" /> <!-- Art of Battle Axe -->
-				<item id="4617" min="1" max="1" chance="10.22" /> <!-- Greater DEX Dye (Dex  4 Str - 4) -->
-				<item id="4616" min="1" max="1" chance="9.92" /> <!-- Greater CON Dye (Con  4 DEX - 4) -->
-				<item id="4618" min="1" max="1" chance="9.68" /> <!-- Greater DEX Dye (Dex  4 CON - 4) -->
+				<item id="4617" min="1" max="1" chance="10.22" /> <!-- Greater DEX Dye <Dex + 4 Str - 4> -->
+				<item id="4616" min="1" max="1" chance="9.92" /> <!-- Greater CON Dye <Con + 4 DEX - 4> -->
+				<item id="4618" min="1" max="1" chance="9.68" /> <!-- Greater DEX Dye <Dex + 4 CON - 4> -->
 				<item id="6572" min="1" max="1" chance="1.879" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4791,8 +4791,8 @@
 				<item id="396" min="1" max="1" chance="20.34" /> <!-- Salamander Skin Mail -->
 				<item id="2499" min="1" max="1" chance="5.523" /> <!-- Elven Long Sword -->
 				<item id="70" min="1" max="1" chance="5.502" /> <!-- Claymore -->
-				<item id="4589" min="1" max="1" chance="16.46" /> <!-- Greater STR Dye (STR  2 CON - 2) -->
-				<item id="4590" min="1" max="1" chance="16.45" /> <!-- Greater STR Dye (STR  2 DEX - 2) -->
+				<item id="4589" min="1" max="1" chance="16.46" /> <!-- Greater STR Dye <STR + 2 CON - 2> -->
+				<item id="4590" min="1" max="1" chance="16.45" /> <!-- Greater STR Dye <STR + 2 DEX - 2> -->
 				<item id="2047" min="14" max="42" chance="12.11" /> <!-- Claymore Blade -->
 				<item id="952" min="3" max="9" chance="11.73" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="2967" min="20" max="60" chance="8.245" /> <!-- Elven Long Sword Blade -->
@@ -4872,9 +4872,9 @@
 				<item id="608" min="1" max="1" chance="0.75" /> <!-- Mithril Gauntlets -->
 				<item id="75" min="1" max="1" chance="0.3" /> <!-- Caliburs -->
 				<item id="76" min="1" max="1" chance="0.3" /> <!-- Sword of Delusion -->
-				<item id="4606" min="1" max="1" chance="23.12" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
-				<item id="4604" min="1" max="3" chance="12.25" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
-				<item id="4605" min="1" max="3" chance="8.075" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
+				<item id="4606" min="1" max="1" chance="23.12" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="4604" min="1" max="3" chance="12.25" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4605" min="1" max="3" chance="8.075" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
 				<item id="46504" min="1" max="1" chance="1.146" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46474" min="1" max="1" chance="1.128" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="1.056" /> <!-- Pantheon's Soul Crystal - Stage 1 -->

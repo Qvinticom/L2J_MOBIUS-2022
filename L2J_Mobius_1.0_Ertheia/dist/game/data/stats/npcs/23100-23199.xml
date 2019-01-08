@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23100" level="39" type="L2Monster" name="Ant Warrior Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2741,7 +2741,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="667" max="1557" chance="70" /> <!-- Adena -->
-				<item id="17410" min="1" max="1" chance="0.003" /> <!-- Seraph Gloves -->
+				<item id="17410" min="1" max="1" chance="0.003" /> <!-- Seraph Gloves - Robe -->
 				<item id="36523" min="1" max="1" chance="0.299999999999998" /> <!-- Adamantite -->
 				<item id="35321" min="1" max="1" chance="0.0749999999999982" /> <!-- Seraph Glove Ingredient -->
 				<item id="9548" min="1" max="1" chance="0.0299999999999998" /> <!-- Earth Stone -->
@@ -2819,7 +2819,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="17402" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Helmet -->
+				<item id="17402" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Helmet - Light Armor -->
 				<item id="57" min="1175" max="2742" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
@@ -3639,7 +3639,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="415" max="967" chance="70" /> <!-- Adena -->
-				<item id="17315" min="1" max="1" chance="0.0299999999999999" /> <!-- Immortal Circlet -->
+				<item id="17315" min="1" max="1" chance="0.0299999999999999" /> <!-- Immortal Circlet - Robe -->
 				<item id="36816" min="1" max="1" chance="2.51599999999999" /> <!-- Immortal Circlet Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.0299999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36754" min="1" max="1" chance="0.0299999999999998" /> <!-- Recipe: Immortal Circlet (60%) -->
@@ -4092,7 +4092,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="425" max="991" chance="70" /> <!-- Adena -->
-				<item id="17319" min="1" max="1" chance="0.03" /> <!-- Immortal Shoes -->
+				<item id="17319" min="1" max="1" chance="0.03" /> <!-- Immortal Shoes - Robe -->
 				<item id="36820" min="1" max="1" chance="3.66000000000002" /> <!-- Immortal Shoe Ingredient -->
 				<item id="36758" min="1" max="1" chance="0.0749999999999986" /> <!-- Recipe: Immortal Shoes (60%) -->
 				<item id="9546" min="1" max="1" chance="0.0299999999999998" /> <!-- Fire Stone -->
@@ -4718,7 +4718,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="391" max="912" chance="70" /> <!-- Adena -->
-				<item id="17318" min="1" max="1" chance="0.03" /> <!-- Immortal Gloves -->
+				<item id="17318" min="1" max="1" chance="0.03" /> <!-- Immortal Gloves - Robe -->
 				<item id="36819" min="1" max="1" chance="2.53100000000001" /> <!-- Immortal Glove Ingredient -->
 				<item id="36757" min="1" max="1" chance="0.0300000000000005" /> <!-- Recipe: Immortal Gloves (60%) -->
 				<item id="30423" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Soulshot (R-grade) -->

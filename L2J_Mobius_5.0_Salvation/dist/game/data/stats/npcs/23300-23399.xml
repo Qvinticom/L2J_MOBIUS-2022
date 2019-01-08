@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23300" level="98" type="L2Monster" name="Commander of Operations">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -37,7 +37,7 @@
 				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
+				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -92,7 +92,7 @@
 				<item id="57" min="1683" max="3926" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 				<item id="35308" min="1" max="1" chance="0.03" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35432" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35432" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Breastplate (60%) -->
 			</drop>
 			<spoil>
 				<item id="40206" min="1" max="1" chance="11.8" /> <!-- Specter Fragment -->
@@ -240,13 +240,13 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes -->
+				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes - Robe -->
 				<item id="57" min="1883" max="4395" chance="20" /> <!-- Adena -->
 				<item id="35322" min="1" max="1" chance="0.075" /> <!-- Seraph Shoe Ingredient -->
 				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
 				<item id="9552" min="1" max="1" chance="0.0075" /> <!-- Fire Crystal -->
 				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
-				<item id="35446" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35446" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="9554" min="1" max="1" chance="0.075" /> <!-- Earth Crystal -->
@@ -1299,7 +1299,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="18354" max="42755" chance="70" /> <!-- Adena -->
-				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Amaranthine Slasher -->
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
 				<item id="36529" min="1" max="1" chance="4.86100000000001" /> <!-- Quality Fiber -->
 				<item id="36520" min="1" max="1" chance="0.299999999999997" /> <!-- Exquisite Leather -->
 			</drop>
@@ -1901,8 +1901,8 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
-				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
+				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
 				<item id="57" min="1218" max="2842" chance="20" /> <!-- Adena -->
 				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1910,8 +1910,8 @@
 				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
 				<item id="36876" min="1" max="1" chance="0.003" /> <!-- Recipe: Metallic Fiber - Upgrade -->
 				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
-				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -1965,9 +1965,9 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
-				<item id="17312" min="1" max="1" chance="0.0075" /> <!-- Immortal Leather Leggings -->
-				<item id="17316" min="1" max="1" chance="0.0075" /> <!-- Immortal Tunic -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17312" min="1" max="1" chance="0.0075" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17316" min="1" max="1" chance="0.0075" /> <!-- Immortal Tunic - Robe -->
 				<item id="57" min="1439" max="3357" chance="20" /> <!-- Adena -->
 				<item id="36810" min="1" max="1" chance="3.755" /> <!-- Immortal Shield Ingredient -->
 				<item id="36517" min="1" max="1" chance="2.58" /> <!-- Leather -->

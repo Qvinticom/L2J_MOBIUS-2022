@@ -560,7 +560,7 @@
 		</skills>
 	</item>
 	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -577,7 +577,7 @@
 		</skills>
 	</item>
 	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -679,7 +679,7 @@
 		</skills>
 	</item>
 	<item id="736" name="Scroll of Escape" type="EtcItem">
-		<!-- Scroll of enchantment that relocates you to the nearest village. -->
+		<!-- Magical scroll that relocates you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -695,7 +695,7 @@
 		</skills>
 	</item>
 	<item id="737" name="Scroll of Resurrection" type="EtcItem">
-		<!-- Scroll of enchantment that resuscitates a dead person. -->
+		<!-- Magical scroll that resurrects a dead character. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />

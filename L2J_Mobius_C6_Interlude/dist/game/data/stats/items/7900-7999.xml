@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7900" type="Weapon" name="Ice Storm Hammer">
+		<!-- Bestows either Focus, Anger, or Critical Bleed. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1950"/>
@@ -46,6 +47,7 @@
 		</for>
 	</item>
 	<item id="7901" type="Weapon" name="Star Buster">
+		<!-- Bestows either Health, Haste, or Rsk. Focus. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -91,6 +93,7 @@
 		</for>
 	</item>
 	<item id="7902" type="Weapon" name="Doom Crusher">
+		<!-- Bestows one of the following functions: Health, Anger or Rsk. Haste. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>
@@ -136,6 +139,7 @@
 		</for>
 	</item>
 	<item id="7903" type="Weapon" name="Frintezza's Sword">
+		<!-- Frintezz'a sword of transformation. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2180"/>
@@ -179,6 +183,7 @@
 		</for>
 	</item>
 	<item id="7904" type="EtcItem" name="Boat Ticket: Rune to Gludin">
+		<!-- Boat Ticket: Depart Rune - Arrive Gludin -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -193,6 +198,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7905" type="EtcItem" name="Boat Ticket: Gludin to Rune">
+		<!-- Boat Ticket: Depart Gludin - Arrive Rune -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -207,6 +213,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7906" type="EtcItem" name="Blessing of Fire">
+		<!-- Bestows fire attack attribute while engaged in a physical attack. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -221,6 +228,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7907" type="EtcItem" name="Blessing of Water">
+		<!-- Bestows water attack attribute while engaged in a physical attack. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -235,6 +243,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7908" type="EtcItem" name="Blessing of Wind">
+		<!-- Bestows wind attack attribute while engaged in a physical attack. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -249,6 +258,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7909" type="EtcItem" name="Blessing of Earth">
+		<!-- Bestows earth attack attribute while engaged in a physical attack. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -263,6 +273,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7910" type="EtcItem" name="Blessing of Darkness">
+		<!-- Bestows darkness attack attribute while engaged in a physical attack. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -277,6 +288,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7911" type="EtcItem" name="Blessing of Sanctity">
+		<!-- Bestows sacred attack attribute while engaged in a physical attack. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -291,6 +303,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7912" type="EtcItem" name="Fire Crystal">
+		<!-- Eliminates vulnerability to fire attacks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -305,6 +318,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7913" type="EtcItem" name="Water Crystal">
+		<!-- Eliminates vulnerability to to water attacks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -319,6 +333,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7914" type="EtcItem" name="Wind Crystal">
+		<!-- Eliminates vulnerability to wind attacks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -333,6 +348,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7915" type="EtcItem" name="Earth Crystal">
+		<!-- Eliminates vulnerability to earth attacks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -347,6 +363,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7916" type="EtcItem" name="Dark Crystal">
+		<!-- Eliminates vulnerability to darkness attacks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -361,6 +378,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7917" type="EtcItem" name="Sanctity Crystal">
+		<!-- Eliminates vulnerability to sacred attacks. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="20"/>
@@ -375,6 +393,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7918" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Schuttgart/Sword/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -389,6 +408,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7919" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Schuttgart/Spear/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -403,6 +423,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7920" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Schuttgart/Bow/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -417,6 +438,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7921" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Schuttgart/Cleric/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -431,6 +453,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7922" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Schuttgart/Wizard/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -445,6 +468,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7923" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Schuttgart/Sword/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -459,6 +483,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7924" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Schuttgart/Spear/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -473,6 +498,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7925" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Schuttgart/Bow/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -487,6 +513,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7926" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Schuttgart/Cleric/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -501,6 +528,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7927" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Schuttgart/Wizard/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -515,6 +543,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7928" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+		<!-- Placed in Schuttgart, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -529,6 +558,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7929" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+		<!-- Placed in Schuttgart, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -543,6 +573,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7930" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+		<!-- Placed in Schuttgart, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -557,6 +588,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7931" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Schuttgart/Sword/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -571,6 +603,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7932" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Schuttgart/Spear/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -585,6 +618,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7933" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Schuttgart/Bow/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -599,6 +633,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7934" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -613,6 +648,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7935" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -627,6 +663,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7936" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Schuttgart/Sword/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -641,6 +678,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7937" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Schuttgart/Spear/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -655,6 +693,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7938" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Schuttgart/Bow/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -669,6 +708,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7939" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -683,6 +723,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7940" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -697,6 +738,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7941" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Schuttgart/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -711,6 +753,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7942" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Schuttgart/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -725,6 +768,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7943" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Schuttgart/Bow/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -739,6 +783,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7944" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -753,6 +798,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7945" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -767,6 +813,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7946" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -781,6 +828,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7947" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Schuttgart/Spear/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -795,6 +843,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7948" type="EtcItem" name="Dawn Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Schuttgart/Bow/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -809,6 +858,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7949" type="EtcItem" name="Dawn Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -823,6 +873,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7950" type="EtcItem" name="Dawn Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -837,6 +888,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7951" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Schuttgart/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -851,6 +903,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7952" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Schuttgart/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -865,6 +918,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7953" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Schuttgart/Bow/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -879,6 +933,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7954" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -893,6 +948,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7955" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -907,6 +963,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7956" type="EtcItem" name="Greater Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -921,6 +978,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7957" type="EtcItem" name="Greater Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Schuttgart/Spear/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -935,6 +993,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7958" type="EtcItem" name="Greater Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Schuttgart/Bow/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -949,6 +1008,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7959" type="EtcItem" name="Greater Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -963,6 +1023,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7960" type="EtcItem" name="Greater Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -977,6 +1038,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7961" type="EtcItem" name="Recruit Posting Ticket (Sword/Stationary)">
+		<!-- Schuttgart/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -991,6 +1053,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7962" type="EtcItem" name="Recruit Posting Ticket (Spear/Stationary)">
+		<!-- Schuttgart/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1005,6 +1068,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7963" type="EtcItem" name="Recruit Posting Ticket (Bow/Stationary)">
+		<!-- Schuttgart/Bow/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1019,6 +1083,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7964" type="EtcItem" name="Recruit Posting Ticket (Cleric/Stationary)">
+		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1033,6 +1098,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7965" type="EtcItem" name="Recruit Posting Ticket (Wizard/Stationary)">
+		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1047,6 +1113,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7966" type="EtcItem" name="Recruit Posting Ticket (Sword/Mobile)">
+		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1061,6 +1128,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7967" type="EtcItem" name="Recruit Posting Ticket (Spear/Mobile)">
+		<!-- Schuttgart/Spear/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1075,6 +1143,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7968" type="EtcItem" name="Recruit Posting Ticket (Bow/Mobile)">
+		<!-- Schuttgart/Bow/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1089,6 +1158,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7969" type="EtcItem" name="Recruit Posting Ticket (Cleric/Mobile)">
+		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1103,6 +1173,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7970" type="EtcItem" name="Recruit Posting Ticket (Wizard/Mobile)">
+		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1117,6 +1188,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7971" type="EtcItem" name="Nephilim Warrior Posting Ticket">
+		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1131,6 +1203,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7972" type="EtcItem" name="Nephilim Shaman Posting Ticket">
+		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1145,6 +1218,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7973" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Rune/Sword/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1159,6 +1233,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7974" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Rune/Spear/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1173,6 +1248,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7975" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Rune/Bow/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1187,6 +1263,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7976" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Rune/Cleric/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1201,6 +1278,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7977" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Rune/Wizard/Stationary -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1215,6 +1293,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7978" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Rune/Sword/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1229,6 +1308,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7979" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Rune/Spear/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1243,6 +1323,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7980" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Rune/Bow/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1257,6 +1338,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7981" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Rune/Cleric/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1271,6 +1353,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7982" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Rune/Wizard/Mobile -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1285,6 +1368,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7983" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+		<!-- Placed in Rune, at the Teleporter or inside the castle, this ticket allows teleportation to the East Gate of the inner castle, the western section of the outer castle, the Plaza or the guardian's location. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1299,6 +1383,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7984" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+		<!-- Placed in Rune, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the East Gate of the inner castle, the Plaza or the guardian's location. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1313,6 +1398,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7985" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+		<!-- Placed in Rune, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the West Gate of the outer castle, the Plaza or the guardian's location. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1327,6 +1413,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7986" type="EtcItem" name="Mercenary Posting Ticket (Teleporter4)">
+		<!-- Placed in Rune, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the western section of the outer castle, the East Gate of the outer castle or the guardian's location. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1341,6 +1428,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7987" type="EtcItem" name="Mercenary Posting Ticket (Teleporter5)">
+		<!-- Placed in Rune, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle, the western section of the outer castle, the East Gate of the outer castle or to the Plaza. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1355,6 +1443,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7988" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Rune/Sword/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1369,6 +1458,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7989" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Rune/Spear/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1383,6 +1473,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7990" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Rune/Bow/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1397,6 +1488,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7991" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Rune/Cleric/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1411,6 +1503,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7992" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Rune/Wizard/Stationary. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1425,6 +1518,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7993" type="EtcItem" name="Greater Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Rune/Sword/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1439,6 +1533,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7994" type="EtcItem" name="Greater Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Rune/Spear/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1453,6 +1548,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7995" type="EtcItem" name="Greater Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Rune/Bow/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1467,6 +1563,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7996" type="EtcItem" name="Greater Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Rune/Cleric/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1481,6 +1578,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7997" type="EtcItem" name="Greater Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Rune/Wizard/Mobile. The Seal of Strife cannot be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1495,6 +1593,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7998" type="EtcItem" name="Dawn Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Rune/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>
@@ -1509,6 +1608,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="7999" type="EtcItem" name="Dawn Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Rune/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="castle_guard"/>
 		<set name="weight" val="0"/>

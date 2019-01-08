@@ -1,91 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4500" levels="1" name="Treasure Chest - Level 27">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4501" levels="1" name="Treasure Chest - Level 29">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4502" levels="1" name="Treasure Chest - Level 31">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4503" levels="1" name="Treasure Chest - Level 32">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4504" levels="1" name="Treasure Chest - Level 33">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4505" levels="1" name="Treasure Chest - Level 35">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4506" levels="1" name="Treasure Chest - Level 39">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4507" levels="1" name="Treasure Chest - Level 42">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4508" levels="1" name="Treasure Chest - Level 43">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4509" levels="1" name="Treasure Chest - Level 45">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4510" levels="1" name="Treasure Chest - Level 47">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4511" levels="1" name="Treasure Chest - Level 49">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4512" levels="1" name="Treasure Chest - Level 52">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="icon" val="icon.skill0042" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -104,6 +104,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4515" levels="1" name="Raid Curse">
+		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse cannot be undone and is cast when trying to slay a raid monster whose is 9 or more levels below that of the attacker. -->
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TURN_STONE" />
@@ -124,8 +125,6 @@
 		</for>
 	</skill>
 	<skill id="4516" levels="1" name="Orfen Heal">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
@@ -219,6 +218,7 @@
 		</for>
 	</skill>
 	<skill id="4522" levels="1" name="Eye of Assassin">
+		<!-- Greatly increases the critical success rate of dagger and rapier skills. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
@@ -396,6 +396,7 @@
 		</for>
 	</skill>
 	<skill id="4533" levels="1" name="Dance of Resistance">
+		<!-- Temporarily decreases Speed and Accuracy significantly. Dance of Inspiration can remove the curse. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DANCE_OF_INSPIRATION" />
@@ -417,6 +418,7 @@
 		</for>
 	</skill>
 	<skill id="4534" levels="1" name="Dance of Nihil">
+		<!-- Temporarily decreases Atk. Spd. and Evasion significantly. Dance of Fury can remove the curse. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DANCE_OF_FURY" />
@@ -438,6 +440,7 @@
 		</for>
 	</skill>
 	<skill id="4535" levels="1" name="Dance of Weakness">
+		<!-- Temporarily decreases P. Def. and P. Atk. significantly. Dance of the Vampire can remove the curse. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DANCE_OF_VAMPIRE" />
@@ -459,6 +462,7 @@
 		</for>
 	</skill>
 	<skill id="4536" levels="1" name="Song of Seduce">
+		<!-- Temporarily decreases Speed and Accuracy significantly. Song of Wind can remove the curse. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SONG_OF_WIND" />
@@ -480,6 +484,7 @@
 		</for>
 	</skill>
 	<skill id="4537" levels="1" name="Song of Sweet Whisper">
+		<!-- Temporarily decreases Atk. Spd. and Evasion significantly. Song of Water can remove the curse. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SONG_OF_WATER" />
@@ -501,6 +506,7 @@
 		</for>
 	</skill>
 	<skill id="4538" levels="1" name="Song of Temptation">
+		<!-- Temporarily decreases P. Def. and P. Atk. significantly. Song of Vengeance can remove the curse. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SONG_OF_VENGEANCE" />
@@ -522,6 +528,7 @@
 		</for>
 	</skill>
 	<skill id="4539" levels="1" name="Curse of Vague">
+		<!-- Temporarily decreases Speed and Accuracy significantly. Guidance spell can remove the curse. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -544,6 +551,7 @@
 		</for>
 	</skill>
 	<skill id="4540" levels="1" name="Curse of Weakness">
+		<!-- Temporarily decreases P. Def. and Speed significantly. Shield spell can remove the curse. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -566,6 +574,7 @@
 		</for>
 	</skill>
 	<skill id="4541" levels="1" name="Curse of Nihil">
+		<!-- Temporarily decreases P. Atk., M. Atk. and Atk. Spd. significantly. Might spell can remove the curse. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -654,7 +663,6 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4547" levels="1" name="Gaze of Watcher">
-		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="WATCHER_GAZE" />
@@ -672,7 +680,6 @@
 		</for>
 	</skill>
 	<skill id="4548" levels="1" name="Quest - Dispel Watcher Gaze">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -703,6 +710,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4551" levels="10" name="Hot Springs Rheumatism">
+		<!-- Infected with Hot Springs Rheumatism. While afflicted, your critical attack success rate is increased. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#pDef"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
 		<table name="#rCrit"> 30 50 80 100 50 0 0 0 0 0 </table>
@@ -730,6 +738,7 @@
 		</for>
 	</skill>
 	<skill id="4552" levels="10" name="Hot Springs Cholera">
+		<!-- Infected with Hot Springs Cholera. While afflicted, your Accuracy is increased. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#accCombat"> 3 6 8 10 6 0 0 0 0 0 </table>
 		<table name="#rEvas"> 0 3 3 3 5 5 5 8 8 10 </table>
@@ -757,6 +766,7 @@
 		</for>
 	</skill>
 	<skill id="4553" levels="10" name="Hot Springs Flu">
+		<!-- Infected with Hot Springs Flu. While afflicted, your Atk. Spd. is increased. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#pAtk"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
 		<table name="#pAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
@@ -784,6 +794,7 @@
 		</for>
 	</skill>
 	<skill id="4554" levels="10" name="Hot Spring Malaria">
+		<!-- Infected with Hot Springs Malaria. While afflicted, your Casting Spd. is increased. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#mAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
 		<table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
@@ -825,8 +836,6 @@
 		</for>
 	</skill>
 	<skill id="4556" levels="1" name="Dispel Hot Spring Disease A_D">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -843,8 +852,6 @@
 		</for>
 	</skill>
 	<skill id="4557" levels="1" name="Dispel Hot Spring Disease B_D">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -861,8 +868,6 @@
 		</for>
 	</skill>
 	<skill id="4558" levels="1" name="Dispel Hot Spring Disease C_D">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -879,8 +884,7 @@
 		</for>
 	</skill>
 	<skill id="4559" levels="1" name="Hot Spring Illusion">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Temporary optical illusion caused by the Hot Spring. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -1282,6 +1286,7 @@
 		</for>
 	</skill>
 	<skill id="4577" levels="12" name="Decrease Accuracy">
+		<!-- Temporarily decreases Accuracy. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#accCombat"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1313,6 +1318,7 @@
 		</for>
 	</skill>
 	<skill id="4578" levels="1" name="Petrification">
+		<!-- Petrified. Total immobilization. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_STONE" />
@@ -1336,6 +1342,7 @@
 		</for>
 	</skill>
 	<skill id="4579" levels="12" name="Bleed">
+		<!-- Inflicts a wound that reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1371,6 +1378,7 @@
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
+		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
@@ -1401,6 +1409,7 @@
 		</for>
 	</skill>
 	<skill id="4581" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1428,6 +1437,7 @@
 		</for>
 	</skill>
 	<skill id="4582" levels="12" name="Poison">
+		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dmg"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1459,6 +1469,7 @@
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 36 59 82 111 143 176 206 220 231 239 244 247 </table>
@@ -1488,6 +1499,7 @@
 		</for>
 	</skill>
 	<skill id="4584" levels="12" name="Reducing P. Def Stun">
+		<!-- Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 1. -->
 		<table name="#abnormalLvls"> 11 12 12 13 13 13 13 13 13 13 13 13 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
@@ -1559,6 +1571,7 @@
 		</for>
 	</skill>
 	<skill id="4586" levels="12" name="Decrease Evasion">
+		<!-- Reduces Evasion. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 77 78 83 </table>
@@ -1589,6 +1602,7 @@
 		</for>
 	</skill>
 	<skill id="4587" levels="12" name="Decrease P. Atk.">
+		<!-- Instantly reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
@@ -1658,6 +1672,7 @@
 		</for>
 	</skill>
 	<skill id="4589" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
@@ -1688,6 +1703,7 @@
 		</for>
 	</skill>
 	<skill id="4590" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
@@ -1717,6 +1733,7 @@
 		</for>
 	</skill>
 	<skill id="4591" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
@@ -1746,6 +1763,7 @@
 		</for>
 	</skill>
 	<skill id="4592" levels="12" name="Decrease P. Def.">
+		<!-- Reduces P. Def. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
@@ -1777,6 +1795,7 @@
 		</for>
 	</skill>
 	<skill id="4593" levels="12" name="Decrease P. Def.">
+		<!-- Reduces P. Def. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
@@ -1807,6 +1826,7 @@
 		</for>
 	</skill>
 	<skill id="4594" levels="12" name="Decrease P. Def.">
+		<!-- Reduces P. Def. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
@@ -1865,6 +1885,7 @@
 		</for>
 	</skill>
 	<skill id="4596" levels="12" name="Bleed">
+		<!-- Inflicts a wound that reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1897,6 +1918,7 @@
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
+		<!-- Inflicts a wound that reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1928,6 +1950,7 @@
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
+		<!-- Inflicts a wound that reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1959,6 +1982,7 @@
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 35 58 81 109 141 174 203 216 227 235 241 244 </table>

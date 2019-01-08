@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16400" toLevel="1" name="Ferin's Recharge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
@@ -13,7 +12,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16401" toLevel="1" name="Dimensional Death Skin">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 sec., received damage - 50%. -->
 		<icon>icon.skill0340</icon>
 		<operateType>A2</operateType>
@@ -22,7 +20,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16402" toLevel="1" name="Dimensional Horror">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Fear on nearby enemies for 5 sec. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -33,7 +30,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16403" toLevel="1" name="Dimensional Judgment">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Sentence target to death. 150,000 damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -44,7 +40,6 @@
 		<isMagic>6</isMagic>
 	</skill>
 	<skill id="16404" toLevel="1" name="Dimensional Wide Judgment">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Sentence enemies to the front to death. 150,000 damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -55,7 +50,6 @@
 		<isMagic>6</isMagic>
 	</skill>
 	<skill id="16405" toLevel="1" name="Dimensional Mass Judgment">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Sentence all nearby enemies to death. 150,000 damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -65,7 +59,6 @@
 		<isMagic>6</isMagic>
 	</skill>
 	<skill id="16406" toLevel="1" name="Dimensional Fear">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Fear on target for 5 sec. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
@@ -76,7 +69,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16407" toLevel="1" name="Dimensional Resurrection Block">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Stops target from resurrecting for 60 sec. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
@@ -89,7 +81,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16408" toLevel="3" name="Trap Fear">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Moving against your will due to Fear. -->
 		<icon>icon.skill1381</icon>
 		<operateType>A2</operateType>
@@ -98,7 +89,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16409" toLevel="3" name="Trap Hold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
@@ -107,7 +97,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16410" toLevel="3" name="Trap Aerial Yoke">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<icon>icon.skill11050</icon>
 		<operateType>A2</operateType>
@@ -116,7 +105,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16411" toLevel="3" name="Trap Stun">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -125,7 +113,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16412" toLevel="3" name="Trap Petrify">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -134,7 +121,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16413" toLevel="3" name="Trap Poison">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Poisoned and losing 1,000 HP/second. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
@@ -143,14 +129,12 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16414" toLevel="1" name="Peace Zone Cure">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="16415" toLevel="4" name="Dimensional Dark Forces">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M./ Atk. - 10%, and P./M. Critical Rate - 30. -->
 		<icon>icon.skill1298</icon>
 		<operateType>A2</operateType>
@@ -158,19 +142,16 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16416" toLevel="10" name="Bluff Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resistance to Bluff. -->
 		<icon>icon.skill0358</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16417" toLevel="10" name="Wind Stun Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resistance to Wind Stun. -->
 		<icon>icon.skill4011</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16418" toLevel="10" name="Seduction Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Seduction Resistance. -->
 		<icon>icon.skill5934</icon>
 		<operateType>P</operateType>
@@ -274,7 +255,6 @@
 		</effects>	
 	</skill>
 	<skill id="16422" toLevel="1" name="Winter Holiday Reward">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Receive a Santa's Mark when the blessing from the Stocking/Tree/Snowman Fairy expires. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -300,13 +280,11 @@
 		</effects>
 	</skill>
 	<skill id="16424" toLevel="1" name="Appearance Stone: Santa Hat">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16425" toLevel="1" name="Appearance Stone: Santa Suit">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
 		<icon>BranchSys.icon.br_xmas_present_fun_i00</icon>
 		<operateType>A2</operateType>
@@ -544,7 +522,6 @@
 		</effects>
 	</skill>
 	<skill id="16436" toLevel="1" name="Rush">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Charges into the enemy. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -555,7 +532,6 @@
 		<coolTime>200</coolTime>
 	</skill>
 	<skill id="16437" toLevel="1" name="Master's Blessing - GM's Cheers">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. XP and SP increases by 100% for 1 hr. Cannot be stacked with Fall of the Dragon. -->
 		<icon>icon.skill0919</icon>
 		<operateType>A2</operateType>
@@ -563,7 +539,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="16468" toLevel="1" name="Tauti's Temporary Invincibility">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A temporary buff that makes Tauti immune to attacks when he's down. -->
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<operateType>A2</operateType>

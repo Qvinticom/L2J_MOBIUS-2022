@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4000" toLevel="1" name="Returning Warrior's Bracelet">
-		<!-- Glory Days confirmed -->
 		<!-- 5 Talisman can be equipped. -->
 		<icon>icon.high_agathion_bracelet_i01</icon>
 		<operateType>P</operateType>
@@ -13,7 +12,6 @@
 		</effects>
 	</skill>
 	<skill id="4001" toLevel="12" name="Gust">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -88,7 +86,6 @@
 		</effects>
 	</skill>
 	<skill id="4002" toLevel="12" name="Blood Siphon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -151,7 +148,6 @@
 		</effects>
 	</skill>
 	<skill id="4003" toLevel="1" name="Golem Body">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -165,7 +161,6 @@
 		</effects>
 	</skill>
 	<skill id="4004" toLevel="1" name="Fragile Skull">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -176,7 +171,6 @@
 		</effects>
 	</skill>
 	<skill id="4005" toLevel="1" name="Floating Target">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -191,7 +185,6 @@
 		</effects>
 	</skill>
 	<skill id="4006" toLevel="1" name="Burning Wood">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -206,7 +199,6 @@
 		</effects>
 	</skill>
 	<skill id="4007" toLevel="1" name="Immortal Life">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -222,7 +214,6 @@
 		</effects>
 	</skill>
 	<skill id="4008" toLevel="1" name="Insect Skin">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -234,60 +225,54 @@
 		</effects>
 	</skill>
 	<skill id="4009" toLevel="5" name="Fire Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Fire attacks. -->
 		<icon>icon.skill4009</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4010" toLevel="5" name="Water Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Water attacks. -->
 		<icon>icon.skill4010</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4011" toLevel="5" name="Wind Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Wind attacks. -->
 		<icon>icon.skill4011</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4012" toLevel="5" name="Earth Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to Earth attacks. -->
 		<icon>icon.skill4012</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4013" toLevel="1" name="Fire Resistance, Water Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4014" toLevel="1" name="Water Resistance, Fire Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4015" toLevel="1" name="Wind Resistance, Earth Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4016" toLevel="1" name="Earth Resistance, Wind Vulnerability">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4017" toLevel="1" name="Queen Ant's Blow">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
 		<affectRange>250</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -306,8 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="4018" toLevel="1" name="Decrease Speed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
+		<!-- Speed decreases momentarily. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -338,8 +322,7 @@
 		</effects>
 	</skill>
 	<skill id="4019" toLevel="1" name="Decrease Speed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
+		<!-- Momentarily decreases Speed and continuously consumes HP. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -373,7 +356,6 @@
 		</effects>
 	</skill>
 	<skill id="4020" toLevel="1" name="Recovery">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -392,8 +374,7 @@
 		</effects>
 	</skill>
 	<skill id="4021" toLevel="1" name="Queen Ant">
-		<!-- Confirmed CT2.5 -->
-		<!-- Queen Ant Skills -->
+		<!-- Vulnerable to Fire attacks but highly resistant to archery attacks. -->
 		<icon>icon.skillboss</icon>
 		<magicLvl>40</magicLvl>
 		<operateType>P</operateType>
@@ -405,21 +386,16 @@
 		</effects>
 	</skill>
 	<skill id="4022" toLevel="1" name="Body of Nurse Ant">
-		<!-- Confirmer CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4023" toLevel="1" name="Body of Royal Guard Ant">
-		<!-- Confirmer CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
 		<magicLvl>35</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4024" toLevel="1" name="Recovery">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -438,7 +414,6 @@
 		</effects>
 	</skill>
 	<skill id="4025" toLevel="12" name="Master Recharge">
-		<!-- Freya retail confirmed -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">138</value>
@@ -511,7 +486,6 @@
 		</effects>
 	</skill>
 	<skill id="4026" toLevel="1" name="Gludio Flame">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -536,7 +510,6 @@
 		</effects>
 	</skill>
 	<skill id="4027" toLevel="1" name="Gludio Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -557,7 +530,7 @@
 		</effects>
 	</skill>
 	<skill id="4028" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- Increases P. Atk. by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -601,6 +574,7 @@
 		</effects>
 	</skill>
 	<skill id="4029" toLevel="3" name="Shield">
+		<!-- Increases P. Def. by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -641,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="4030" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
+		<!-- Increases P. Atk. by $s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -685,7 +659,6 @@
 		</effects>
 	</skill>
 	<skill id="4031" toLevel="3" name="Might">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -729,7 +702,6 @@
 		</effects>
 	</skill>
 	<skill id="4032" toLevel="12" name="Power Strike">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -789,7 +761,6 @@
 		</effects>
 	</skill>
 	<skill id="4033" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
@@ -850,7 +821,7 @@
 		</effects>
 	</skill>
 	<skill id="4034" toLevel="12" name="Ice Bolt">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -925,7 +896,7 @@
 		</effects>
 	</skill>
 	<skill id="4035" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1011,7 +982,7 @@
 		</effects>
 	</skill>
 	<skill id="4036" toLevel="12" name="Poison">
-		<!-- Freya retail confirmed -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1099,7 +1070,7 @@
 		</effects>
 	</skill>
 	<skill id="4037" toLevel="3" name="Weakness">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1145,7 +1116,7 @@
 		</effects>
 	</skill>
 	<skill id="4038" toLevel="5" name="Shackle">
-		<!-- Freya retail confirmed -->
+		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1199,7 +1170,6 @@
 		</effects>
 	</skill>
 	<skill id="4039" toLevel="12" name="Mana Drain">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1260,7 +1230,6 @@
 		</effects>
 	</skill>
 	<skill id="4040" toLevel="12" name="Power Shot">
-		<!-- Freya retail confirmed -->
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -1319,7 +1288,6 @@
 		</effects>
 	</skill>
 	<skill id="4041" toLevel="2" name="Cruma Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1350,7 +1318,6 @@
 		</effects>
 	</skill>
 	<skill id="4042" toLevel="1" name="Nurka Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1372,7 +1339,6 @@
 		</effects>
 	</skill>
 	<skill id="4043" toLevel="1" name="Partisan Flame">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1397,7 +1363,6 @@
 		</effects>
 	</skill>
 	<skill id="4044" toLevel="1" name="Partisan Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1418,7 +1383,6 @@
 		</effects>
 	</skill>
 	<skill id="4045" toLevel="1" name="Full Magic Attack Resistance">
-		<!-- Glory Days retail confirmed -->
 		<magicLvl>50</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1446,7 +1410,7 @@
 		</effects>
 	</skill>
 	<skill id="4046" toLevel="12" name="Sleep">
-		<!-- Freya retail confirmed -->
+		<!-- Afflicted with Sleep and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -1503,10 +1467,7 @@
 		</effects>
 	</skill>
 	<skill id="4047" toLevel="13" name="Hold">
-		<!-- Freya retail confirmed and Updated to Ertheia -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
+		<!-- Afflicted with Hold and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1578,7 +1539,6 @@
 		</effects>
 	</skill>
 	<skill id="4048" toLevel="3" name="Dash">
-		<!-- Freya retail confirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -1610,8 +1570,6 @@
 		</effects>
 	</skill>
 	<skill id="4049" toLevel="16" name="Cubic Strike">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>
 			<value level="1">-379</value>
 			<value level="2">-438</value>
@@ -1678,8 +1636,6 @@
 		</effects>
 	</skill>
 	<skill id="4050" toLevel="16" name="Cubic Drain">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>
 			<value level="1">-408</value>
 			<value level="2">-467</value>
@@ -1748,9 +1704,6 @@
 		</effects>
 	</skill>
 	<skill id="4051" toLevel="20" name="Cubic Heal">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
-		<!-- Levels 17, 18 and 19 doesn't exist in client. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">408</value>
@@ -1832,8 +1785,7 @@
 		</effects>
 	</skill>
 	<skill id="4052" toLevel="15" name="Cubic Poison">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -1925,8 +1877,7 @@
 		</effects>
 	</skill>
 	<skill id="4053" toLevel="16" name="Cubic Weakness">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1986,8 +1937,7 @@
 		</effects>
 	</skill>
 	<skill id="4054" toLevel="16" name="Cubic Hex">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. decreases temporarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -2047,8 +1997,7 @@
 		</effects>
 	</skill>
 	<skill id="4055" toLevel="16" name="Cubic Shackle">
-		<!-- Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- Atk. Spd. decreases temporarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2108,13 +2057,11 @@
 		</effects>
 	</skill>
 	<skill id="4056" toLevel="1" name="Immortal Attack">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4057" toLevel="1" name="Insect Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2125,7 +2072,6 @@
 		</effects>
 	</skill>
 	<skill id="4058" toLevel="1" name="Animal Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2136,7 +2082,6 @@
 		</effects>
 	</skill>
 	<skill id="4059" toLevel="1" name="Plant Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2147,7 +2092,6 @@
 		</effects>
 	</skill>
 	<skill id="4060" toLevel="1" name="Beast Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2158,7 +2102,6 @@
 		</effects>
 	</skill>
 	<skill id="4061" toLevel="1" name="Dragon Vulnerability">
-		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2169,8 +2112,7 @@
 		</effects>
 	</skill>
 	<skill id="4062" toLevel="1" name="Orfen">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
+		<!-- The youngest of the 3 Nerupa sisters. Ambitious unlike her sisters, she is amassing her power in the Sea of Spores. She threads the web of the Future. -->
 		<icon>icon.skillboss</icon>
 		<magicLvl>50</magicLvl>
 		<operateType>P</operateType>
@@ -2182,8 +2124,7 @@
 		</effects>
 	</skill>
 	<skill id="4063" toLevel="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
+		<!-- Paralyzed and unable to move temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2211,8 +2152,7 @@
 		</effects>
 	</skill>
 	<skill id="4064" toLevel="1" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Orfen Skills -->
+		<!-- Paralyzed and unable to move temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2239,7 +2179,6 @@
 		</effects>
 	</skill>
 	<skill id="4065" toLevel="12" name="Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2313,7 +2252,6 @@
 		</effects>
 	</skill>
 	<skill id="4066" toLevel="12" name="Twister">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2375,7 +2313,6 @@
 		</effects>
 	</skill>
 	<skill id="4067" toLevel="12" name="Blow">
-		<!-- Freya retail confirmed -->
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2436,7 +2373,6 @@
 		</effects>
 	</skill>
 	<skill id="4068" toLevel="12" name="Mechanical Cannon">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -2496,7 +2432,6 @@
 		</effects>
 	</skill>
 	<skill id="4069" toLevel="12" name="Curve Beam">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2556,8 +2491,7 @@
 		</effects>
 	</skill>
 	<skill id="4070" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Atk. Spd. decreases momentarily. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2582,6 +2516,7 @@
 		</effects>
 	</skill>
 	<skill id="4071" toLevel="5" name="Bow/Crossbow Resistance">
+		<!-- Resistant to Bow/Crossbow attacks. -->
 		<icon>
 			<value level="1">icon.skill4071</value>
 			<value level="2">icon.skill4071</value>
@@ -2612,7 +2547,7 @@
 		</effects>
 	</skill>
 	<skill id="4072" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2696,7 +2631,7 @@
 		</effects>
 	</skill>
 	<skill id="4073" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2766,7 +2701,7 @@
 		</effects>
 	</skill>
 	<skill id="4074" toLevel="2" name="Haste">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Speed by $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2806,7 +2741,7 @@
 		</effects>
 	</skill>
 	<skill id="4075" toLevel="12" name="Stun">
-		<!-- Freya retail confirmed -->
+		<!-- Momentarily stuns and paralyzes target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2861,7 +2796,7 @@
 		</effects>
 	</skill>
 	<skill id="4076" toLevel="3" name="Decrease Speed">
-		<!-- Freya retail confirmed -->
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2908,7 +2843,6 @@
 		</effects>
 	</skill>
 	<skill id="4077" toLevel="12" name="Aura Burn">
-		<!-- Freya retail confirmed -->
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -2983,7 +2917,6 @@
 		</effects>
 	</skill>
 	<skill id="4078" toLevel="12" name="Flame Strike">
-		<!-- Freya retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -3047,7 +2980,7 @@
 		</effects>
 	</skill>
 	<skill id="4079" toLevel="1" name="Siege Hammer">
-		<!-- Confirmed CT2.5 -->
+		<!-- Powerfully attacks castle gates, castle walls, etc. -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3069,7 +3002,6 @@
 		</effects>
 	</skill>
 	<skill id="4080" toLevel="1" name="Dark Heal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3092,7 +3024,6 @@
 		</effects>
 	</skill>
 	<skill id="4081" toLevel="1" name="Pretending to steal">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3106,7 +3037,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4082" toLevel="1" name="Poison of Death">
-		<!-- Confirmed CT2.5 -->
+		<!-- You have been infected by a fatal poison. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4200</abnormalTime>
 		<abnormalType>FATAL_POISON</abnormalType>
@@ -3138,7 +3069,6 @@
 		</effects>
 	</skill>
 	<skill id="4083" toLevel="1" name="Kalis' Poison">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3159,7 +3089,7 @@
 		</effects>
 	</skill>
 	<skill id="4084" toLevel="11" name="Physical Attack Resistance">
-		<!-- Freya retail confirmed -->
+		<!-- Resistant to physical attacks. -->
 		<icon>icon.skill4084</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3184,7 +3114,7 @@
 		</effects>
 	</skill>
 	<skill id="4085" toLevel="1" name="Critical Damage">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Critical Damage. -->
 		<icon>icon.skill4085</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3197,7 +3127,7 @@
 		</effects>
 	</skill>
 	<skill id="4086" toLevel="1" name="Critical Chance">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Critical Rate. -->
 		<icon>icon.skill4086</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3210,7 +3140,6 @@
 		</effects>
 	</skill>
 	<skill id="4087" toLevel="12" name="Blaze">
-		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3272,7 +3201,7 @@
 		</effects>
 	</skill>
 	<skill id="4088" toLevel="12" name="Bleed">
-		<!-- Freya retail confirmed -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3358,7 +3287,7 @@
 		</effects>
 	</skill>
 	<skill id="4089" toLevel="1" name="Spirit Bear">
-		<!-- Freya retail confirmed -->
+		<!-- P. Atk. + 15% and Speed + 15%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3387,7 +3316,7 @@
 		</effects>
 	</skill>
 	<skill id="4090" toLevel="1" name="Spirit Wolf">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Speed by 40. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3412,7 +3341,7 @@
 		</effects>
 	</skill>
 	<skill id="4091" toLevel="3" name="Spirit Ogre">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by $s1, P. Def. by $s2, Accuracy by $s3, and Max HP by $s4. Decreases evasion by $s5 and speed by $s6. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3493,7 +3422,7 @@
 		</effects>
 	</skill>
 	<skill id="4092" toLevel="1" name="Spirit Puma">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Atk. Spd. by 30% and evasion by 4. Decreases P. Def. by 20%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -3526,7 +3455,7 @@
 		</effects>
 	</skill>
 	<skill id="4093" toLevel="1" name="Evasion">
-		<!-- Freya retail confirmed -->
+		<!-- Increases Evasion by 4. -->
 		<icon>icon.skill4093</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3539,7 +3468,6 @@
 		</effects>
 	</skill>
 	<skill id="4094" toLevel="12" name="Cancellation">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3597,7 +3525,7 @@
 		</effects>
 	</skill>
 	<skill id="4095" toLevel="1" name="Damage Shield">
-		<!-- Freya retail confirmed -->
+		<!-- Reflects back a portion of damage inflicted by the enemy P. Atk. -->
 		<icon>icon.skill4095</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3610,7 +3538,7 @@
 		</effects>
 	</skill>
 	<skill id="4096" toLevel="3" name="Hawk Eye">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. decreases momentarily by $s1 and increases Accuracy by $s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3655,7 +3583,7 @@
 		</effects>
 	</skill>
 	<skill id="4097" toLevel="12" name="Chant of Life">
-		<!-- Freya retail confirmed -->
+		<!-- HP is recovered. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3735,7 +3663,7 @@
 		</effects>
 	</skill>
 	<skill id="4098" toLevel="12" name="Silence">
-		<!-- Freya retail confirmed -->
+		<!-- Magic skills are blocked momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -3791,7 +3719,7 @@
 		</effects>
 	</skill>
 	<skill id="4099" toLevel="2" name="Berserker Spirit">
-		<!-- Freya retail confirmed -->
+		<!-- P. Def. decreases momentarily by $s1, M. Def. by $s2, and Evasion by $s3. Increases P. Atk. by $s4, M. Atk. by $s5, Atk. Spd. by $s6, Casting Spd. by $s7, and Speed by $s8. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

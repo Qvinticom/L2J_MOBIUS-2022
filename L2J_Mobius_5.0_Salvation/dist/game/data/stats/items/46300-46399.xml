@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46300" name="Christmas Talisman: M. Def." additionalName="1-hour" type="Armor">
-		<!-- Event item. M. Def. + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. M. Def. +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -22,7 +22,7 @@
 		</skills>
 	</item>
 	<item id="46301" name="Christmas Talisman: Attribute Defense" additionalName="1-hour" type="Armor">
-		<!-- Event item. All Attributes Defense + 30 when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. All Attributes Resistance +30 when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -43,63 +43,63 @@
 		</skills>
 	</item>
 	<item id="46302" name="Christmas Talisman Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: P. Skill Critical Damage (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - P. Skill Critical Damage (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46303" name="Christmas Talisman Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: M. Skill Critical Damage (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - M. Skill Critical Damage (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46304" name="Christmas Talisman Pack" additionalName="Ultimate Defense" type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: Ultimate Defense (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - Ultimate Defense (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46305" name="Christmas Talisman Pack" additionalName="Debuff Resistance" type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: Debuff Resistance (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - Debuff Resistance (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46306" name="Christmas Talisman Pack" additionalName="P. Atk." type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: P. Atk. (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - P. Atk. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46307" name="Christmas Talisman Pack" additionalName="M. Atk." type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: M. Atk. (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - M. Atk. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46308" name="Christmas Talisman Pack" additionalName="P. Def." type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: P. Def. (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - P. Def. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46309" name="Christmas Talisman Pack" additionalName="M. Def." type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: M. Def. (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - M. Def. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46310" name="Christmas Talisman Pack" additionalName="Attribute Resistance" type="EtcItem">
-		<!-- Double-click to get a Christmas Talisman: Attribute Defense (1-hour). Will be deleted after the event. -->
+		<!-- Double-click to get a Christmas Talisman - Attribute Defense (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -121,7 +121,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46312" name="Emergency Whistle - Barton" type="EtcItem">
-		<!-- Send a signal to Barton, who will use the Berserker skill. Using the Berserker skill will increase Barton's Debuff Resistance/Speed/P. Atk./P. Accuracy/P. Def./Atk. Spd./Critical Damage. Recovre 20% of HP when killing the opponent. Additionally, P. Atk. + 10% and Critical Rate + 100 when HP is below 60%. P. Atk. + 30% and Critical Rate + 300 when HP is below 30%. The whistle disappears after 2 uses. -->
+		<!-- Send a signal to Barton, who will use the Berserker skill. Using the Berserker skill will increase Barton's Debuff Resistance/ Speed/ P. Atk./ P. Accuracy/ P. Def./ Atk. Spd./ Critical Damage. Recovre 20% of HP when killing the opponent. Additionally, P. Atk. +10% and Critical Rate +100 when HP is below 60%. P. Atk. +30% and Critical Rate +300 when HP is below 30%. The whistle disappears after 2 uses. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -193,7 +193,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46317" name="Shadow Shaper" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_dagger" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -222,7 +222,7 @@
 		</stats>
 	</item>
 	<item id="46318" name="Shadow Cutter" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_onehand_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="46319" name="Shadow Slasher" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_twohand_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -278,7 +278,7 @@
 		</stats>
 	</item>
 	<item id="46320" name="Shadow Fighter" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_fist" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -307,7 +307,7 @@
 		</stats>
 	</item>
 	<item id="46321" name="Shadow Stormer" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_spear" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -339,7 +339,7 @@
 		</stats>
 	</item>
 	<item id="46322" name="Shadow Thrower" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -368,7 +368,7 @@
 		</stats>
 	</item>
 	<item id="46323" name="Shadow Shooter" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -397,7 +397,7 @@
 		</stats>
 	</item>
 	<item id="46324" name="Shadow Buster" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -425,7 +425,7 @@
 		</stats>
 	</item>
 	<item id="46325" name="Shadow Retributer" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -455,7 +455,7 @@
 		</stats>
 	</item>
 	<item id="46326" name="Shadow Dualsword" type="Weapon">
-		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
+		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -483,7 +483,7 @@
 		</stats>
 	</item>
 	<item id="46327" name="Shadow Shaper" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Damage 10%, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Damage 10%, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_dagger" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -509,7 +509,7 @@
 		</stats>
 	</item>
 	<item id="46328" name="Shadow Cutter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_onehand_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -534,7 +534,7 @@
 		</stats>
 	</item>
 	<item id="46329" name="Shadow Slasher" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_twohand_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -559,7 +559,7 @@
 		</stats>
 	</item>
 	<item id="46330" name="Shadow Fighter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_fist" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -585,7 +585,7 @@
 		</stats>
 	</item>
 	<item id="46331" name="Shadow Stormer" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_spear" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -611,7 +611,7 @@
 		</stats>
 	</item>
 	<item id="46332" name="Shadow Thrower" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Damage 10%, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Damage 10%, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -637,7 +637,7 @@
 		</stats>
 	</item>
 	<item id="46333" name="Shadow Shooter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Damage 10%, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Damage 10%, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -663,7 +663,7 @@
 		</stats>
 	</item>
 	<item id="46334" name="Shadow Buster" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, M. Atk. 7%, M. Critical Rate 100, Casting Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, M. Atk. 7%, M. Critical Rate 100, Casting Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 		</stats>
 	</item>
 	<item id="46335" name="Shadow Retributer" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P./M. Atk. 7%, M. Critical Damage 10%, Atk./Casting Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P./ M. Atk. 7%, M. Critical Damage 10%, Atk./ Casting Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -715,7 +715,7 @@
 		</stats>
 	</item>
 	<item id="46336" name="Shadow Dualsword" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1 can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -874,7 +874,7 @@
 		</stats>
 	</item>
 	<item id="46346" name="Agathion - Blessed Virgo" additionalName="30-day" type="Armor">
-		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
+		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -902,7 +902,7 @@
 		</skills>
 	</item>
 	<item id="46347" name="Agathion - Blessed Capricorn" additionalName="30-day" type="Armor">
-		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -930,7 +930,7 @@
 		</skills>
 	</item>
 	<item id="46348" name="Agathion - Blessed Libra" additionalName="30-day" type="Armor">
-		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -958,7 +958,7 @@
 		</skills>
 	</item>
 	<item id="46349" name="Agathion - Blessed Aries" additionalName="30-day" type="Armor">
-		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -986,7 +986,7 @@
 		</skills>
 	</item>
 	<item id="46350" name="Agathion - Blessed Taurus" additionalName="30-day" type="Armor">
-		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1014,7 +1014,7 @@
 		</skills>
 	</item>
 	<item id="46351" name="Agathion - Blessed Leo" additionalName="30-day" type="Armor">
-		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1042,7 +1042,7 @@
 		</skills>
 	</item>
 	<item id="46352" name="Agathion - Blessed Gemini" additionalName="30-day" type="Armor">
-		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1070,7 +1070,7 @@
 		</skills>
 	</item>
 	<item id="46353" name="Agathion - Blessed Scorpio" additionalName="30-day" type="Armor">
-		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1098,7 +1098,7 @@
 		</skills>
 	</item>
 	<item id="46354" name="Agathion - Blessed Aquarius" additionalName="30-day" type="Armor">
-		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1126,7 +1126,7 @@
 		</skills>
 	</item>
 	<item id="46355" name="Agathion - Blessed Sagittarius" additionalName="30-day" type="Armor">
-		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1154,7 +1154,7 @@
 		</skills>
 	</item>
 	<item id="46356" name="Agathion - Blessed Cancer" additionalName="30-day" type="Armor">
-		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Atk. and Def. each increases by 30. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/ Town of Rune/ Town of Giran/ Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1181,7 +1181,7 @@
 		</skills>
 	</item>
 	<item id="46357" name="Agathion - Blessed Virgo Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Virgo (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Virgo. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1192,11 +1192,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Virgo -->
+			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Virgo - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46358" name="Agathion - Blessed Capricorn Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Capricorn (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Capricorn. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1207,11 +1207,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Capricorn -->
+			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Capricorn - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46359" name="Agathion - Blessed Libra Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Libra (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Libra. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1222,11 +1222,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Libra -->
+			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Libra - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46360" name="Agathion - Blessed Aries Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Aries (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Aries. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1237,11 +1237,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aries -->
+			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aries - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46361" name="Agathion - Blessed Taurus Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Taurus (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Taurus. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1252,11 +1252,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Taurus -->
+			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Taurus - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46362" name="Agathion - Blessed Leo Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Leo (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Leo. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1267,11 +1267,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Leo -->
+			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Leo - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46363" name="Agathion - Blessed Gemini Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Gemini (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Gemini. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1282,11 +1282,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Gemini -->
+			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Gemini - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46364" name="Agathion - Blessed Scorpio Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Scorpio (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Scorpio. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1297,11 +1297,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Scorpio -->
+			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Scorpio - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46365" name="Agathion - Blessed Aquarius Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Aquarius (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Aquarius. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1312,11 +1312,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aquarius -->
+			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aquarius - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46366" name="Agathion - Blessed Pisces Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Pisces (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Pisces. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1327,11 +1327,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces -->
+			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46367" name="Agathion - Blessed Sagittarius Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Sagittarius (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Sagittarius. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1342,11 +1342,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Sagittarius -->
+			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Sagittarius - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46368" name="Agathion - Blessed Cancer Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Blessed Cancer (30-day). -->
+		<!-- Wrapped Pack containing Agathion - Blessed Cancer. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1357,7 +1357,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46356" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Cancer -->
+			<item id="46356" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Cancer - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="46369" name="Blessed Zodiac Agathion Pack (30-day)" type="EtcItem">
@@ -1925,7 +1925,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="46395" name="Shadow Ingot" type="EtcItem">
-		<!-- Item needed to craft a Shadow Weapon. Take a + 10 Shadow Weapon and 10 Shadow Ingots to Neti in Gludio to get an enhanced Shadow weapon. -->
+		<!-- Item needed to craft a Shadow Weapon. Take a +10 Shadow Weapon and 10 Shadow Ingots to Neti in Gludio to get an improved Shadow weapon. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="is_stackable" val="true" />
 	</item>

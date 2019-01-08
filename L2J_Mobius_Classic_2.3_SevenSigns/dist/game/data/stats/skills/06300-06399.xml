@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6300" toLevel="1" name="Self-destruction">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
 		<affectRange>350</affectRange>
 		<effectPoint>-574</effectPoint>
 		<attributeType>WATER</attributeType>
@@ -24,14 +22,13 @@
 				<power>3194</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>6662</skillId>
+				<skillId>6662</skillId> <!-- Freeze -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="6301" toLevel="2" name="Cold Mana Fragment">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills -->
+		<!-- Recovers MP by $s1 per sec. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -66,8 +63,7 @@
 		</effects>
 	</skill>
 	<skill id="6302" toLevel="1" name="Icy Air">
-		<!-- Confirmed CT2.5 -->
-		<!-- Freya Skills (Triggered from 6662 and 6698) -->
+		<!-- P. Def. and M. Def. +15%. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -96,8 +92,6 @@
 		</effects>
 	</skill>
 	<skill id="6303" toLevel="1" name="Trial of the Coup">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -120,8 +114,7 @@
 		</effects>
 	</skill>
 	<skill id="6304" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Stunned and unable to move for 2 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -152,8 +145,6 @@
 		</effects>
 	</skill>
 	<skill id="6305" toLevel="1" name="Divine Gnosis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>200</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -176,8 +167,7 @@
 		</effects>
 	</skill>
 	<skill id="6306" toLevel="1" name="Solina Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Causes bleeding for 10 sec., draining 139 HP per sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -213,8 +203,6 @@
 		</effects>
 	</skill>
 	<skill id="6307" toLevel="1" name="Opus of the Hand">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>180</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -241,8 +229,6 @@
 		</effects>
 	</skill>
 	<skill id="6308" toLevel="1" name="Opus of the Wave">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>270</affectRange>
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
@@ -269,8 +255,6 @@
 		</effects>
 	</skill>
 	<skill id="6309" toLevel="1" name="Pain of the Ascetic">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>180</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -297,8 +281,6 @@
 		</effects>
 	</skill>
 	<skill id="6310" toLevel="1" name="Loss of Quest">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
@@ -322,8 +304,6 @@
 		</effects>
 	</skill>
 	<skill id="6311" toLevel="1" name="Solina Thrust">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -346,8 +326,6 @@
 		</effects>
 	</skill>
 	<skill id="6312" toLevel="1" name="Launch Holy Sword Energy">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>180</affectRange>
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
@@ -373,8 +351,6 @@
 		</effects>
 	</skill>
 	<skill id="6313" toLevel="1" name="Solina Bless">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -405,8 +381,6 @@
 		</effects>
 	</skill>
 	<skill id="6314" toLevel="1" name="Divine Judgment">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>270</affectRange>
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
@@ -435,8 +409,6 @@
 		</effects>
 	</skill>
 	<skill id="6315" toLevel="1" name="Holy Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -459,8 +431,6 @@
 		</effects>
 	</skill>
 	<skill id="6316" toLevel="1" name="Execution of Authority">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>900</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -482,8 +452,6 @@
 		</effects>
 	</skill>
 	<skill id="6317" toLevel="1" name="Divinity Tacit">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>180</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -510,8 +478,7 @@
 		</effects>
 	</skill>
 	<skill id="6318" toLevel="1" name="Holy Shield Defense">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- P. Def. +10% for 3 sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -541,8 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="6319" toLevel="1" name="Divine Magic Protection">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- M. Def. +10% for 3 sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -572,8 +538,7 @@
 		</effects>
 	</skill>
 	<skill id="6320" toLevel="1" name="Summon Holy Magic Circle">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
+		<!-- Enemy's P. Def. -23% for 15 sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -608,8 +573,6 @@
 		</effects>
 	</skill>
 	<skill id="6321" toLevel="1" name="Divine Flash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -636,8 +599,6 @@
 		</effects>
 	</skill>
 	<skill id="6322" toLevel="1" name="Divine Impact">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -664,8 +625,6 @@
 		</effects>
 	</skill>
 	<skill id="6323" toLevel="1" name="Divine Bolt">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
@@ -686,8 +645,6 @@
 		</effects>
 	</skill>
 	<skill id="6324" toLevel="1" name="Divine Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>270</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -712,8 +669,6 @@
 		</effects>
 	</skill>
 	<skill id="6325" toLevel="1" name="Divine Nova">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>270</affectRange>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -738,8 +693,6 @@
 		</effects>
 	</skill>
 	<skill id="6326" toLevel="1" name="Martyr's Happiness">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-574</effectPoint>
@@ -763,8 +716,6 @@
 		</effects>
 	</skill>
 	<skill id="6327" toLevel="1" name="Divinity Worship">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -787,8 +738,6 @@
 		</effects>
 	</skill>
 	<skill id="6328" toLevel="1" name="Fighter Judgement">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<affectRange>270</affectRange>
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
@@ -816,8 +765,6 @@
 		</effects>
 	</skill>
 	<skill id="6329" toLevel="1" name="Fighter Blow">
-		<!-- Confirmed CT2.5 -->
-		<!-- Monastery of Silence Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -840,7 +787,6 @@
 		</effects>
 	</skill>
 	<skill id="6330" toLevel="1" name="Salmon Porridge Attack">
-		<!-- Confirmed CT2.5 -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -860,8 +806,7 @@
 		</effects>
 	</skill>
 	<skill id="6331" toLevel="1" name="Campfire Tired">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Atk. Spd. is decreased. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -886,8 +831,7 @@
 		</effects>
 	</skill>
 	<skill id="6332" toLevel="1" name="Campfire Full">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Speed and Atk. Spd. is decreased. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -916,8 +860,7 @@
 		</effects>
 	</skill>
 	<skill id="6333" toLevel="1" name="Electric Bolt 1">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Causes bleeding for 3 sec., draining 200 HP per sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -954,8 +897,7 @@
 		</effects>
 	</skill>
 	<skill id="6334" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Stunned and unable to move for 4 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -987,8 +929,6 @@
 		</effects>
 	</skill>
 	<skill id="6335" toLevel="1" name="Electric Rain 1">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1012,8 +952,6 @@
 		</effects>
 	</skill>
 	<skill id="6336" toLevel="1" name="Electric Rain 2">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -1037,8 +975,6 @@
 		</effects>
 	</skill>
 	<skill id="6337" toLevel="1" name="Red Slash 1">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -1059,8 +995,6 @@
 		</effects>
 	</skill>
 	<skill id="6338" toLevel="1" name="Red Slash 2">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -1081,8 +1015,7 @@
 		</effects>
 	</skill>
 	<skill id="6339" toLevel="1" name="Divine Hammer Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Causes bleeding for 3 sec, draining 200 HP per sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1121,8 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="6340" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Sel Mahum Training Grounds Skills -->
+		<!-- Stunned and unable to move for 4 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1175,7 +1107,7 @@
 		</effects>
 	</skill>
 	<skill id="6343" toLevel="2" name="Maguen Plasma - Power">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your M. Atk. and P. Atk. for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1218,7 +1150,7 @@
 		</effects>
 	</skill>
 	<skill id="6365" toLevel="2" name="Maguen Plasma - Speed">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your Speed, Atk. Spd. and Casting Spd. For $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1268,7 +1200,7 @@
 		</effects>
 	</skill>
 	<skill id="6366" toLevel="2" name="Maguen Plasma - Critical">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Wild Maguen blesses you with a buff that slightly increases your Critical Rate and Critical Damage for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1318,7 +1250,7 @@
 		</effects>
 	</skill>
 	<skill id="6367" toLevel="3" name="Maguen Plasma - Bistakon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lv. 1: The energy of Bistakon surrounds you. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1349,7 +1281,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6368" toLevel="3" name="Maguen Plasma - Kokracon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lv. 1: The energy of Kokracon surrounds you. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1380,7 +1312,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6369" toLevel="3" name="Maguen Plasma - Reptilikon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lv. 1: The energy of Reptilikon surrounds you. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1411,6 +1343,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6370" toLevel="1" name="Thunderbolt">
+		<!-- Receive damage is amplified. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DAMAGE_AMPLIFY</abnormalType>
@@ -1433,6 +1366,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6371" toLevel="1" name="Invincibility">
+		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -1450,6 +1384,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6372" toLevel="10" name="Power Up">
+		<!-- Atk. Spd. +$s1 and Physical Skill Damage +$s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1480,6 +1415,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6373" toLevel="1" name="Thunderbolt">
+		<!-- Receive damage is amplified. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DAMAGE_AMPLIFY</abnormalType>
@@ -1530,6 +1466,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6376" toLevel="9" name="Sonic Strike">
+		<!-- For $s1, 10% of max HP, $s2 of max MP and $s3 HP per sec decrease from Dopagen's Sonic Strike. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1559,6 +1496,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6377" toLevel="10" name="Speed Up">
+		<!-- Atk. Spd. +$s1 -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1589,6 +1527,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6378" toLevel="1" name="Earth Shift">
+		<!-- The ground below your feet shakes, making concentration difficult. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>VIBRATION</abnormalType>
@@ -1609,7 +1548,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6379" toLevel="1" name="Critical Blow">
-		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
+		<!-- Causes bleeding for 15 sec., draining 93 HP per sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1638,6 +1577,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6380" toLevel="1" name="Bistakon Roar">
+		<!-- Blocks all physical/ magic skills for 20 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1668,6 +1608,7 @@
 		</effects>
 	</skill>
 	<skill id="6381" toLevel="2" name="Bistakon Soul Beam">
+		<!-- Blocks all the enemy's physical and magical skills for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1702,6 +1643,7 @@
 		</effects>
 	</skill>
 	<skill id="6382" toLevel="1" name="Bistakon Rolling Claw">
+		<!-- Causes bleeding for 15 sec., draining 93 HP per sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1736,6 +1678,7 @@
 		</effects>
 	</skill>
 	<skill id="6383" toLevel="1" name="Bistakon Deadly Roar">
+		<!-- Blocks all physical/ magic skills for 20 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1789,6 +1732,7 @@
 		</effects>
 	</skill>
 	<skill id="6385" toLevel="1" name="Bistakon Critical Claw">
+		<!-- Causes bleeding for 15 sec., draining 95 HP per sec. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1824,6 +1768,7 @@
 		</effects>
 	</skill>
 	<skill id="6386" toLevel="1" name="Bistakon Earth Rise">
+		<!-- Momentarily Stuns and immobilizes the enemy for 3 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36000" name="Heavenly P. Def. Cookie" type="EtcItem">
-		<!-- For 1 hour, increases Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, Defense by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- Dimensional Item. For 1 hour, P. Def. +45%, M. Def +15%, P./ M. Critical Rates +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -19,7 +19,7 @@
 		</skills>
 	</item>
 	<item id="36001" name="Heavenly Magic Cookie" type="EtcItem">
-		<!-- For 1 hour, M. Atk. + 40%, M. Critical Rate by100%, Casting Spd. by 8%, P. Atk. by 8%, Atk. Spd. by 8%. Speed by 8, M. Def. by 14%, and MP Recovery Rate by 20%. For 1 hour, decreases Magic Skill MP Consumption by 15%, Physical Skill MP Consumption by 5%, and Skill Cooldown by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- Dimensional Item. For 1 hour, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. by 15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -55,7 +55,7 @@
 		</skills>
 	</item>
 	<item id="36003" name="Heavenly P. Atk. Special Box" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -74,7 +74,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36004" name="Heavenly P. Def. Special Box" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -93,7 +93,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36005" name="Heavenly Magic Special Box" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly Magic Cookies. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly Magic Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -112,7 +112,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36006" name="Heavenly CP Increase Special Box" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly CP Cookie s. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly CP Cookie s. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -149,7 +149,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36008" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +20% for weapons (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -166,7 +166,7 @@
 		</skills>
 	</item>
 	<item id="36009" name="High-grade Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +30% for armor (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -183,7 +183,7 @@
 		</skills>
 	</item>
 	<item id="36010" name="Heavenly P. Atk. Cookie" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, increases Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- Dimensional Item. For 1 hour, P. Atk. +22%, P. Critical Rate +100%, P. Critical Damage +70%, Atk. Spd. +10%, and Speed +10. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_attack_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -204,7 +204,7 @@
 		</skills>
 	</item>
 	<item id="36011" name="Heavenly P. Def. Cookie" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, increases Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, Defense by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- Dimensional Item. For 1 hour, P. Def. +45%, M. Def +15%, P./ M. Critical Rates +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -225,7 +225,7 @@
 		</skills>
 	</item>
 	<item id="36012" name="Heavenly Magic Cookie" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, M. Atk. + 40%, M. Critical Rate by100%, Casting Spd. by 8%, P. Atk. by 8%, Atk. Spd. by 8%. Speed by 8, M. Def. by 14%, and MP Recovery Rate by 20%. For 1 hour, decreases Magic Skill MP Consumption by 15%, Physical Skill MP Consumption by 5%, and Skill Cooldown by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- Dimensional Item. For 1 hour, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. by 15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -267,7 +267,7 @@
 		</skills>
 	</item>
 	<item id="36014" name="Heavenly P. Atk. Special Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -286,7 +286,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36015" name="Heavenly P. Def. Special Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -305,7 +305,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36016" name="Heavenly Magic Special Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly Magic Cookies. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly Magic Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -324,7 +324,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36017" name="Heavenly CP Increase Special Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly CP Cookie s. Cannot use Olympiad. -->
+		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/ 10 Heavenly CP Cookie s. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -362,7 +362,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36019" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +20% for weapons (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -381,7 +381,7 @@
 		</skills>
 	</item>
 	<item id="36020" name="High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +30% for armor (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -421,7 +421,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36022" name="Returning Hero's Health Potion" type="EtcItem">
-		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. Cannot use Olympiad. -->
+		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no cooldown. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_hero_red_potion" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -468,7 +468,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36024" name="Returning Hero's Wondrous Cubic" type="EtcItem">
-		<!-- Double-click to acquire one of the following: 30-minute Vitality Recovering Potion, 700 PC Coupon Points, 2 Heavenly Cocktails, Scroll of Escape Box: Village, and Blessed Scroll of Escape. (Can only be used once a-day) -->
+		<!-- Double-click to acquire one of the following: 30-minute Vitality Recovering Potion, 700 PA coupon Points, 2 Heavenly Cocktails, Scroll of Escape Box: Village, and Blessed Scroll of Escape. (Can only be used once a-day) -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1097,7 +1097,7 @@
 		</stats>
 	</item>
 	<item id="36052" name="Clan Cloak - Clan Hall (Auction)" type="Armor">
-		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own auction-type Clan Halls. When S or S80-grade armor set is all equipped, or upper armor above R-grade is equipped, the sealed cloak slot opens. -->
+		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own auction-type Clan Halls. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
@@ -1123,7 +1123,7 @@
 		</stats>
 	</item>
 	<item id="36053" name="Clan Cloak - Castle" type="Armor">
-		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a castle. STR + 2 / INT + 2 effect. When S or S80-grade armor set is all equipped, or upper armor above R-grade is equipped, the sealed cloak slot opens. -->
+		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a castle. STR +2/ INT +2 effect. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
@@ -1614,7 +1614,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
-		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1).  Temporary event item. -->
+		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/ SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1631,7 +1631,7 @@
 		</skills>
 	</item>
 	<item id="36080" name="Nom Nom Candy" type="EtcItem">
-		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1).  Temporary event item. -->
+		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/ SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1683,7 +1683,7 @@
 		</skills>
 	</item>
 	<item id="36083" name="Star Agathion - Innocent Heejin" type="Armor">
-		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1712,7 +1712,7 @@
 		</skills>
 	</item>
 	<item id="36084" name="Star Agathion - Dandy Hyuk" type="Armor">
-		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1741,7 +1741,7 @@
 		</skills>
 	</item>
 	<item id="36085" name="Star Agathion - Powerful Sooro" type="Armor">
-		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1770,7 +1770,7 @@
 		</skills>
 	</item>
 	<item id="36086" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1799,7 +1799,7 @@
 		</skills>
 	</item>
 	<item id="36087" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2014,7 +2014,7 @@
 		</skills>
 	</item>
 	<item id="36097" name="Star Agathion - Innocent Heejin" type="Armor">
-		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2043,7 +2043,7 @@
 		</skills>
 	</item>
 	<item id="36098" name="Star Agathion - Dandy Hyuk" type="Armor">
-		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2072,7 +2072,7 @@
 		</skills>
 	</item>
 	<item id="36099" name="Star Agathion - Powerful Sooro" type="Armor">
-		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />

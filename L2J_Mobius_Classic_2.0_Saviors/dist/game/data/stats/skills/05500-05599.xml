@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5500" toLevel="1" name="Black Dragon Claw">
-		<!-- Confirmed CT2.5 -->
-		<!-- Darion Skills -->
+		<!-- HP decreases from bleeding momentarily. Effect 10. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -39,8 +38,7 @@
 		</effects>
 	</skill>
 	<skill id="5501" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Darion Skills -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -72,8 +70,7 @@
 		</effects>
 	</skill>
 	<skill id="5502" toLevel="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Darion Skills -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -102,8 +99,6 @@
 		</effects>
 	</skill>
 	<skill id="5503" toLevel="1" name="Ultimate Guard">
-		<!-- Confirmed CT2.5 -->
-		<!-- Darion Skills -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -141,8 +136,6 @@
 		</effects>
 	</skill>
 	<skill id="5504" toLevel="1" name="Shield Defense">
-		<!-- Confirmed CT2.5 -->
-		<!-- Darion Skills -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -247,6 +240,7 @@
 		</effects>
 	</skill>
 	<skill id="5509" toLevel="1" name="Fire Power">
+		<!-- Fire resistance decreases. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_FIRE</abnormalType>
@@ -276,6 +270,7 @@
 		</effects>
 	</skill>
 	<skill id="5510" toLevel="1" name="Water Power">
+		<!-- Water resistance decreases. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
@@ -305,6 +300,7 @@
 		</effects>
 	</skill>
 	<skill id="5511" toLevel="1" name="Wind Power">
+		<!-- Wind resistance decreases. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
@@ -334,6 +330,7 @@
 		</effects>
 	</skill>
 	<skill id="5512" toLevel="1" name="Earth Power">
+		<!-- Earth resistance decreases. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ARMOR_EARTH</abnormalType>
@@ -363,6 +360,7 @@
 		</effects>
 	</skill>
 	<skill id="5513" toLevel="1" name="Fire Taint">
+		<!-- Continuously damaged by the fire attribute. -->
 		<effectPoint>-1063</effectPoint>
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -384,6 +382,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="5514" toLevel="1" name="Water Taint">
+		<!-- Continuously damaged by the water attribute. -->
 		<effectPoint>-1063</effectPoint>
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -405,6 +404,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="5515" toLevel="1" name="Wind Taint">
+		<!-- Continuously damaged by the wind attribute. -->
 		<effectPoint>-1063</effectPoint>
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -426,6 +426,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="5516" toLevel="1" name="Earth Taint">
+		<!-- Continuously damaged by the Earth attribute. -->
 		<effectPoint>-1063</effectPoint>
 		<hitTime>15000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -479,6 +480,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5519" toLevel="1" name="Chain Buff - Power Up">
+		<!-- Made the contract of greed with the devil. Cannot wait to take every soul. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -515,6 +517,7 @@
 		</effects>
 	</skill>
 	<skill id="5520" toLevel="1" name="Chain Buff - Vampiric Shield">
+		<!-- Made the contract of desire with the devil. The pain feels like pleasure. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -544,6 +547,7 @@
 		</effects>
 	</skill>
 	<skill id="5521" toLevel="1" name="Chain Buff - Critical Sense">
+		<!-- Made the contract of wrath with the devil. Every enemy will fear your wrath. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -598,6 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="5523" toLevel="1" name="Chain Magic - Unholy Castle">
+		<!-- The devil gave you the curse of jealousy. You cannot be stronger than this. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
@@ -633,6 +638,7 @@
 		</effects>
 	</skill>
 	<skill id="5524" toLevel="1" name="Chain Buff - Bow/Magic Resistance">
+		<!-- You have made the contract of arrogance with the devil. No one can stop you. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -664,6 +670,7 @@
 		</effects>
 	</skill>
 	<skill id="5525" toLevel="1" name="Chain Buff - Melee Resistance">
+		<!-- You have made the contract of gluttony with the devil. Everything you eat is good for your strength. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -698,6 +705,7 @@
 		</effects>
 	</skill>
 	<skill id="5526" toLevel="1" name="Challenger's Blessing">
+		<!-- P. Def., Shield Defense Probability and Dark Attack Resistance are greatly increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
@@ -770,7 +778,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5529" toLevel="12" name="Surrender to Dark">
-		<!-- Confirmed CT2.5 -->
+		<!-- Dark attribute weakened momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -866,6 +874,7 @@
 		</effects>
 	</skill>
 	<skill id="5530" toLevel="12" name="Blood Storm">
+		<!-- Inflicts damage and Bleed on the target simultaneously. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -964,6 +973,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5535" toLevel="1" name="Little Angel Agathion Cute Trick">
+		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -979,6 +989,7 @@
 		</conditions>
 	</skill>
 	<skill id="5536" toLevel="1" name="Little Devil Agathion Cute Trick">
+		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -994,6 +1005,7 @@
 		</conditions>
 	</skill>
 	<skill id="5537" toLevel="1" name="Rudolph Cuteness Trick">
+		<!-- See Agathion's cute trick. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1009,6 +1021,7 @@
 		</conditions>
 	</skill>
 	<skill id="5538" toLevel="1" name="Little Angel Agathion Special Skill: Firecrackers">
+		<!-- Set off firecrackers. -->
 		<icon>icon.skill_agathion_special</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1024,6 +1037,7 @@
 		</conditions>
 	</skill>
 	<skill id="5539" toLevel="1" name="Little Angel Agathion Special Skill: Mysterious Power">
+		<!-- A mysterious power that no one knows. Use with caution! -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -1046,6 +1060,7 @@
 		</conditions>
 	</skill>
 	<skill id="5540" toLevel="1" name="Little Angel Agathion Special Skill: Blessed Escape">
+		<!-- Blessed Escape is available. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
 		<icon>icon.skill_agathion_special</icon>
@@ -1069,6 +1084,7 @@
 		</effects>
 	</skill>
 	<skill id="5541" toLevel="1" name="Little Angel Agathion Special Skill: Blessed Resurrection">
+		<!-- Allows the use of Blessed Resurrection. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
@@ -1094,6 +1110,7 @@
 		</effects>
 	</skill>
 	<skill id="5542" toLevel="1" name="Little Devil Agathion Special Skill: Firecrackers">
+		<!-- Set off firecrackers. -->
 		<icon>icon.skill_agathion_special</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1109,6 +1126,7 @@
 		</conditions>
 	</skill>
 	<skill id="5543" toLevel="1" name="Little Devil Agathion Special Skill: Mysterious Power">
+		<!-- A mysterious power that no one knows. Use with caution! -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -1131,6 +1149,7 @@
 		</conditions>
 	</skill>
 	<skill id="5544" toLevel="1" name="Little Devil Agathion Special Skill: Blessed Escape">
+		<!-- Blessed Escape is available. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
 		<icon>icon.skill_agathion_special</icon>
@@ -1154,6 +1173,7 @@
 		</effects>
 	</skill>
 	<skill id="5545" toLevel="1" name="Little Devil Agathion Special Skill: Blessed Resurrection">
+		<!-- Allows the use of Blessed Resurrection. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
@@ -1192,7 +1212,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5547" toLevel="1" name="Maximum Ability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk., M. Atk., and received heal amount. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>MAXIMUM_ABILITY</abnormalType>
@@ -1235,7 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="5548" toLevel="4" name="Critical Momentum Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Absorbs Soul after Critical. -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1260,6 +1280,7 @@
 		</effects>
 	</skill>
 	<skill id="5549" toLevel="1" name="Melee Attack Vulnerability">
+		<!-- NPC Physical weakness -->
 		<magicLvl>70</magicLvl>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -1305,7 +1326,7 @@
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>5551</skillId>
+				<skillId>5551</skillId> <!-- Stun -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1324,6 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="5551" toLevel="12" name="Stun">
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1516,8 +1538,7 @@
 		</effects>
 	</skill>
 	<skill id="5556" toLevel="1" name="Protection Power">
-		<!-- Confirmed CT2.5 -->
-		<!-- Triggered Skill for Protection of Rune/Elemental/Alignment -->
+		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
@@ -1566,7 +1587,7 @@
 		</effects>
 	</skill>
 	<skill id="5557" toLevel="1" name="Blessing of Resistance">
-		<!-- Not Used Anymore -->
+		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
@@ -1582,7 +1603,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5558" toLevel="1" name="Protection of Alignment">
-		<!-- Not Used Anymore -->
+		<!-- Characteristic attack resistance maximized. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
@@ -1600,8 +1621,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5559" toLevel="1" name="Physical Pose">
-		<!-- Confirmed CT2.5 -->
-		<!-- Triggered Skill for Fighter's/Archer's Will -->
+		<!-- Critical rate and P. Atk. skill power are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>WILL</abnormalType>
@@ -1630,7 +1650,6 @@
 		</effects>
 	</skill>
 	<skill id="5560" toLevel="1" name="Archer's Will">
-		<!-- Not Used Anymore -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>WILL</abnormalType>
@@ -1648,7 +1667,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5561" toLevel="3" name="Seed of Revenge">
-		<!-- Confirmed CT2.5 -->
+		<!-- The growing seed of revenge. P. Atk. increases. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1685,7 +1704,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5561</skillId>
+				<skillId>5561</skillId> <!-- Seed of Revenge -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1715,7 +1734,7 @@
 		</effects>
 	</skill>
 	<skill id="5562" toLevel="3" name="Spirit of the Phoenix">
-		<!-- Confirmed CT2.5 -->
+		<!-- Growing Spirit of the Phoenix. Increases P. Def. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1752,7 +1771,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5562</skillId>
+				<skillId>5562</skillId> <!-- Spirit of the Phoenix -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1790,7 +1809,7 @@
 		</effects>
 	</skill>
 	<skill id="5563" toLevel="3" name="Eva's Will">
-		<!-- Confirmed CT2.5 -->
+		<!-- The growing will of Eva. Increases M. Def. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1827,7 +1846,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5563</skillId>
+				<skillId>5563</skillId> <!-- Eva's Will -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1857,7 +1876,7 @@
 		</effects>
 	</skill>
 	<skill id="5564" toLevel="3" name="Pain of Shilen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Shilen's Growing Pain - Critical Damage is increased. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1894,7 +1913,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5564</skillId>
+				<skillId>5564</skillId> <!-- Pain of Shilen -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1920,7 +1939,7 @@
 		</effects>
 	</skill>
 	<skill id="5565" toLevel="1" name="Expose Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- The probability of Critical hit has been increased, and defense power has been decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>EXPOSE_WEAK_POINT</abnormalType>
@@ -1967,7 +1986,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5567" toLevel="1" name="Fire Armor">
-		<!-- Glory Days confirmed -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<icon>icon.skill1492</icon>
@@ -1987,7 +2005,7 @@
 		</effects>
 	</skill>
 	<skill id="5568" toLevel="1" name="Frost Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed has been slowed down. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2014,7 +2032,7 @@
 		</effects>
 	</skill>
 	<skill id="5569" toLevel="1" name="Hurricane Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacking speed has been slowed down. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2041,7 +2059,7 @@
 		</effects>
 	</skill>
 	<skill id="5570" toLevel="1" name="Excessive Loyalty">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Summoner's Wrath. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SUMMON_CONDITION</abnormalType>
@@ -2077,7 +2095,6 @@
 		</effects>
 	</skill>
 	<skill id="5571" toLevel="1" name="Mutual Response">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<icon>icon.skill1498</icon>
@@ -2099,8 +2116,7 @@
 		</effects>
 	</skill>
 	<skill id="5572" toLevel="1" name="Warrior Ability: Haste">
-		<!-- CT2.5 retail confirmed -->
-		<!-- NOTE: Description says "Excludes damage caused by a skill or ranged attack" but is client typo -->
+		<!-- Warrior's Atk. Spd. Atk. Spd increases momentarily. Excludes damage caused by a skill or ranged attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_HASTE</abnormalType>
@@ -2125,7 +2141,7 @@
 		</effects>
 	</skill>
 	<skill id="5573" toLevel="1" name="Knight Ability: Defense">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Knight's P. Def. P. Def. and M. Def. increases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_DEFENCE</abnormalType>
@@ -2154,7 +2170,7 @@
 		</effects>
 	</skill>
 	<skill id="5574" toLevel="1" name="Rogue Ability: Critical Chance">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Rogue's Critical. Critical Rate increases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_CRT_RATE_UP</abnormalType>
@@ -2179,7 +2195,7 @@
 		</effects>
 	</skill>
 	<skill id="5575" toLevel="1" name="Wizard Ability: Mana Steal">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Wizard's Mana. -->
 		<icon>icon.skill1398</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
@@ -2197,7 +2213,7 @@
 		</effects>
 	</skill>
 	<skill id="5576" toLevel="1" name="Enchanter Ability: Barrier">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Enchanter's Defense Barrier. Becomes invincible momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SUB_TRIGGER_DEFENCE</abnormalType>
@@ -2229,7 +2245,7 @@
 		</effects>
 	</skill>
 	<skill id="5577" toLevel="1" name="Healer Ability: Heal">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Cure by Healer. -->
 		<icon>icon.skill1011</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
@@ -2247,7 +2263,7 @@
 		</effects>
 	</skill>
 	<skill id="5578" toLevel="1" name="Summoner Ability: Spirit">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Summoner's Possessed Soul. Due to being possessed by the ancient summoner, P. Atk./Atk. Spd./M. Atk./Casting Spd. increase. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUB_TRIGGER_SPIRIT</abnormalType>
@@ -2284,8 +2300,6 @@
 		</effects>
 	</skill>
 	<skill id="5579" toLevel="1" name="Cubic Cure">
-		<!-- Smart Cubic Skill -->
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>408</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
@@ -2306,7 +2320,7 @@
 		</effects>
 	</skill>
 	<skill id="5580" toLevel="1" name="Divine Beast Bite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Bite ferociously with sharp teeth. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-475</effectPoint>
@@ -2327,7 +2341,7 @@
 		</effects>
 	</skill>
 	<skill id="5581" toLevel="1" name="Divine Beast Stun Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Damages and stuns the target simultaneously. Over-hit. Power 704. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -2354,7 +2368,7 @@
 		</effects>
 	</skill>
 	<skill id="5582" toLevel="1" name="Divine Beast Fire Breath">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack the enemy by breathing fire. Power 875. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
 		<castRange>100</castRange>
@@ -2381,7 +2395,7 @@
 		</effects>
 	</skill>
 	<skill id="5583" toLevel="1" name="Divine Beast Roar">
-		<!-- Confirmed CT2.5 -->
+		<!-- Dominate nearby enemies with a mighty roar. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -2410,7 +2424,7 @@
 		</effects>
 	</skill>
 	<skill id="5584" toLevel="1" name="Wolf Howl">
-		<!-- Confirmed CT2.5 -->
+		<!-- Dominate nearby enemies with a mighty roar. Decrease P. Atk. and M. Atk. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -2444,7 +2458,7 @@
 		</effects>
 	</skill>
 	<skill id="5585" toLevel="1" name="Strider Roar">
-		<!-- Confirmed CT2.5 -->
+		<!-- Scare the enemies with a mighty roar. Decrease the attacking speed and Casting Spd. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -2478,6 +2492,7 @@
 		</effects>
 	</skill>
 	<skill id="5586" toLevel="3" name="Pet Might">
+		<!-- Increases attacking power temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2529,6 +2544,7 @@
 		</effects>
 	</skill>
 	<skill id="5587" toLevel="3" name="Pet Shield">
+		<!-- Increases defense power temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2580,6 +2596,7 @@
 		</effects>
 	</skill>
 	<skill id="5588" toLevel="3" name="Pet Focus">
+		<!-- Momentarily increases critical P. Atk. rate. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2631,6 +2648,7 @@
 		</effects>
 	</skill>
 	<skill id="5589" toLevel="3" name="Pet Death Whisper">
+		<!-- Momentarily increase the Critical P. Atk. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2682,6 +2700,7 @@
 		</effects>
 	</skill>
 	<skill id="5590" toLevel="12" name="Pet Battle Heal">
+		<!-- Quickly restores HP. Power $s1. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">66</value>
@@ -2769,8 +2788,6 @@
 		</effects>
 	</skill>
 	<skill id="5591" toLevel="8" name="Light Flow">
-		<!-- Confirmed CT2.5 -->
-		<!-- Curse of Life Flow effect -->
 		<icon>icon.skill1511</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2806,7 +2823,7 @@
 		</effects>
 	</skill>
 	<skill id="5592" toLevel="16" name="Lightning Barrier">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily stiffened. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2868,8 +2885,6 @@
 		</effects>
 	</skill>
 	<skill id="5593" toLevel="1" name="Vampiric Mana Burn">
-		<!-- Confirmed CT2.5 -->
-		<!-- Darion Skills -->
 		<castRange>900</castRange>
 		<effectPoint>-689</effectPoint>
 		<effectRange>1400</effectRange>
@@ -2897,6 +2912,7 @@
 		</effects>
 	</skill>
 	<skill id="5594" toLevel="1" name="Poison">
+		<!-- HP decreases from Poison momentarily. Effect 11. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2918,6 +2934,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5595" toLevel="1" name="Bleed">
+		<!-- HP decreases from bleeding momentarily. Effect 11. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -2939,8 +2956,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5596" toLevel="1" name="Flame">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- HP decreases from flame momentarily. Effect 11. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -2980,7 +2996,6 @@
 		</effects>
 	</skill>
 	<skill id="5598" toLevel="12" name="Petrification Resistance">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -3018,7 +3033,6 @@
 		</effects>
 	</skill>
 	<skill id="5599" toLevel="12" name="Stun Resistance">
-		<!-- Confirmed CT2.5 -->
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>

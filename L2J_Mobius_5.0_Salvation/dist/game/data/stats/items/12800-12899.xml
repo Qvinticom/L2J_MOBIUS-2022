@@ -1084,7 +1084,7 @@
 		</stats>
 	</item>
 	<item id="12853" name="Naga Storm - Molar {PvP} - Critical Damage" type="Weapon">
-		<!-- Masterwork Item that activates the Poison effect occasionally during an attack. <Special Option>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that activates the Poison effect occasionally during an attack. <Special Option>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1284,7 +1284,7 @@
 		</stats>
 	</item>
 	<item id="12858" name="Barakiel's Axe - Mild {PvP} - Health" type="Weapon">
-		<!-- Masterwork Item that increases HP Recovery Rate. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases HP Recovery Bonus Rate. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1323,7 +1323,7 @@
 		</stats>
 	</item>
 	<item id="12859" name="Barakiel's Axe - Mild {PvP} - Haste" type="Weapon">
-		<!-- Masterwork Item that increases HP Recovery Rate. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases HP Recovery Bonus Rate. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1362,7 +1362,7 @@
 		</stats>
 	</item>
 	<item id="12860" name="Barakiel's Axe - Mild {PvP} - Focus" type="Weapon">
-		<!-- Masterwork Item that increases HP Recovery Rate. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases HP Recovery Bonus Rate. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1401,7 +1401,7 @@
 		</stats>
 	</item>
 	<item id="12861" name="Screaming Vengeance - Concentration {PvP} - Cheap Shot" type="Weapon">
-		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Special Option>when using the P. Skills, MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of Bows/Crossbows during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Special Option>when using the P. Skills, MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of Bows/ Crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1444,7 +1444,7 @@
 		</stats>
 	</item>
 	<item id="12862" name="Screaming Vengeance - Concentration {PvP} - Focus" type="Weapon">
-		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1487,7 +1487,7 @@
 		</stats>
 	</item>
 	<item id="12863" name="Screaming Vengeance - Concentration {PvP} - Quick Recovery" type="Weapon">
-		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow conversion. <Special Option>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow conversion. <Special Option>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1607,7 +1607,7 @@
 		</stats>
 	</item>
 	<item id="12866" name="Behemoth' Tuning Fork - Destruction {PvP} - Anger" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Special Option>. Decreases Max HP by 15% and P. Atk. + 32. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases P. Atk. <Special Option>. Decreases Max HP by 15% and P. Atk. +32. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1772,7 +1772,7 @@
 		</stats>
 	</item>
 	<item id="12870" name="Shyeed's Bow - Concentration {PvP} - Cheap Shot" type="Weapon">
-		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1813,7 +1813,7 @@
 		</stats>
 	</item>
 	<item id="12871" name="Shyeed's Bow - Concentration {PvP} - Focus" type="Weapon">
-		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1854,7 +1854,7 @@
 		</stats>
 	</item>
 	<item id="12872" name="Shyeed's Bow - Concentration {PvP} - Quick Recovery" type="Weapon">
-		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Cooldown decreases by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Cooldown decreases by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2487,7 +2487,7 @@
 		</stats>
 	</item>
 	<item id="12888" name="Tallum Blade*Damascus - Landslide {PvP}" type="Weapon">
-		<!-- Masterwork Item that has the Stun effect occasionally when hitting. When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Atk. Spd. by 8%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item that has the Stun effect occasionally when hitting. When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Atk. Spd. by 8%. Increases damage inflicted during PvP, and decreases the range of bows/ crossbows occasionally during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2525,7 +2525,7 @@
 		</stats>
 	</item>
 	<item id="12889" name="Themis' Tongue - Cleverness {PvP} - Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases MP Recovery Bonus Rate. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2564,7 +2564,7 @@
 		</stats>
 	</item>
 	<item id="12890" name="Themis' Tongue - Cleverness {PvP} - Magic Mental Shield" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases MP Recovery Bonus Rate. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2603,7 +2603,7 @@
 		</stats>
 	</item>
 	<item id="12891" name="Themis' Tongue - Cleverness {PvP} - Magic Focus" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 20% chance of casting Focus on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases MP Recovery Bonus Rate. <Special Option>. Has a 20% chance of casting Focus on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2642,7 +2642,7 @@
 		</stats>
 	</item>
 	<item id="12892" name="Cabrio's Hand - Cleverness {PvP} - Conversion" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases MP Recovery Bonus Rate. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2682,7 +2682,7 @@
 		</stats>
 	</item>
 	<item id="12893" name="Cabrio's Hand - Cleverness {PvP} - Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases MP Recovery Bonus Rate. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2722,7 +2722,7 @@
 		</stats>
 	</item>
 	<item id="12894" name="Cabrio's Hand - Cleverness {PvP} - Magic Silence" type="Weapon">
-		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases MP Recovery Bonus Rate. <Special Option>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

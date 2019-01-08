@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="14044" name="Stone of Destruction" type="EtcItem">
-		<!-- P. Atk. Increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- P. Atk. Increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -636,7 +636,7 @@
 		</skills>
 	</item>
 	<item id="14045" name="Stone of Invincibility" type="EtcItem">
-		<!-- P. Def. Increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- P. Def. Increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -657,7 +657,7 @@
 		</skills>
 	</item>
 	<item id="14046" name="Stone of Great Speed" type="EtcItem">
-		<!-- Atk. Spd. and Casting Spd. Increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- Atk. Spd. and Casting Spd. Increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -678,7 +678,7 @@
 		</skills>
 	</item>
 	<item id="14047" name="Stone of Speed" type="EtcItem">
-		<!-- Speed increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- Speed increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_8_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -699,7 +699,7 @@
 		</skills>
 	</item>
 	<item id="14048" name="Stone of Concentration" type="EtcItem">
-		<!-- P. Critical Rate increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- P. Critical Rate increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_7_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -720,7 +720,7 @@
 		</skills>
 	</item>
 	<item id="14049" name="Stone of Ease" type="EtcItem">
-		<!-- Max HP increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- Max HP increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_4_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -741,7 +741,7 @@
 		</skills>
 	</item>
 	<item id="14050" name="Stone of Abundance" type="EtcItem">
-		<!-- Max MP increases for 20 minutes during use. Item exclusively for flying transformed objects. -->
+		<!-- Max MP increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_5_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1005,7 +1005,7 @@
 		</skills>
 	</item>
 	<item id="14061" name="Toy Knight Summon Whistle" type="EtcItem">
-		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge.� -->
+		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1030,7 +1030,7 @@
 		</skills>
 	</item>
 	<item id="14062" name="Spirit Shaman Summon Whistle" type="EtcItem">
-		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours.� -->
+		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hr. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1080,7 +1080,7 @@
 		</skills>
 	</item>
 	<item id="14064" name="Turtle Ascetic Summon Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a Turtle Ascetic. Hunger gauge lasts 5 hours. -->
+		<!-- Item that allows you to summon a Turtle Ascetic. Hunger gauge lasts 5 hr. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1105,7 +1105,7 @@
 		</skills>
 	</item>
 	<item id="14065" name="Superior Minion Coupon" additionalName="5-hour" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons a Superior Minion. -->
+		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons a Superior Minion. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1331,7 +1331,7 @@
 		</skills>
 	</item>
 	<item id="14074" name="Superior Minion Coupon (Event)" additionalName="5-hour" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
+		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hr.). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1419,7 +1419,7 @@
 		</skills>
 	</item>
 	<item id="14078" name="Lucky Enchant Stone: Weapon (D-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 20% for weapons (D-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +20% for weapons (D-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1440,7 +1440,7 @@
 		</skills>
 	</item>
 	<item id="14079" name="Lucky Enchant Stone: Weapon (C-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 18% for weapons (C-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +18% for weapons (C-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1461,7 +1461,7 @@
 		</skills>
 	</item>
 	<item id="14080" name="Lucky Enchant Stone: Weapon (B-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 15% for weapons (B-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +15% for weapons (B-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1482,7 +1482,7 @@
 		</skills>
 	</item>
 	<item id="14081" name="Lucky Enchant Stone: Weapon (A-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 12% for weapons (A-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +12% for weapons (A-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1503,7 +1503,7 @@
 		</skills>
 	</item>
 	<item id="14082" name="Lucky Enchant Stone: Weapon (S-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (S-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +10% for weapons (S-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -1524,7 +1524,7 @@
 		</skills>
 	</item>
 	<item id="14083" name="Lucky Enchant Stone: Armor (D-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 35% for armor (D-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +35% for armor (D-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1545,7 +1545,7 @@
 		</skills>
 	</item>
 	<item id="14084" name="Lucky Enchant Stone: Armor (C-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 27% for armor (C-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +27% for armor (C-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1566,7 +1566,7 @@
 		</skills>
 	</item>
 	<item id="14085" name="Lucky Enchant Stone: Armor (B-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 23% for armor (B-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +23% for armor (B-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1587,7 +1587,7 @@
 		</skills>
 	</item>
 	<item id="14086" name="Lucky Enchant Stone: Armor (A-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 18% for armor (A-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +18% for armor (A-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -1608,7 +1608,7 @@
 		</skills>
 	</item>
 	<item id="14087" name="Lucky Enchant Stone: Armor (S-grade) (Event)" type="EtcItem">
-		<!-- Enchant success rate + 15% for armor (S-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +15% for armor (S-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />

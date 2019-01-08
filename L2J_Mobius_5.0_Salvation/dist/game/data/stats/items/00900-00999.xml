@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="902" name="Phoenix Ring" type="Armor">
-		<!-- Phoenix Ring. Produces the effect of MP + 13. -->
+		<!-- Phoenix Ring. Produces the effect of MP +13. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -313,7 +313,7 @@
 		</stats>
 	</item>
 	<item id="920" name="Tateossian Necklace" type="Armor">
-		<!-- Tateossian Necklace. Produces the effect of MP + 42. -->
+		<!-- Tateossian Necklace. Produces the effect of MP +42. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -379,7 +379,7 @@
 		</stats>
 	</item>
 	<item id="924" name="Majestic Necklace" type="Armor">
-		<!-- Majestic Necklace. Produces the effect of MP + 33. -->
+		<!-- Majestic Necklace. Produces the effect of MP +33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -525,7 +525,7 @@
 		</stats>
 	</item>
 	<item id="933" name="Phoenix Necklace" type="Armor">
-		<!-- Phoenix Necklace. Produces the effect of MP + 26. -->
+		<!-- Phoenix Necklace. Produces the effect of MP +26. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -750,7 +750,7 @@
 		</stats>
 	</item>
 	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +4 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -767,7 +767,7 @@
 		</skills>
 	</item>
 	<item id="948" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -806,7 +806,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +4 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -823,7 +823,7 @@
 		</skills>
 	</item>
 	<item id="952" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -862,7 +862,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bows, which increases by 4. M. Atk. + 2 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +2 for all D-grade weapons with the exception of bows, which increases by 4. M. Atk. +2 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -879,7 +879,7 @@
 		</skills>
 	</item>
 	<item id="956" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -918,7 +918,7 @@
 		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -935,7 +935,7 @@
 		</skills>
 	</item>
 	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. -->
+		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />

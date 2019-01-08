@@ -563,7 +563,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15426" name="Hero's Escape Point" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, 10000 Player Commendation Points can be acquired. Cooldown is 7 days. -->
+		<!-- When Double-clicked, 10000 PA Points can be acquired. Cooldown is 7 days. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -601,7 +601,7 @@
 		</skills>
 	</item>
 	<item id="15428" name="6th Anniversary Party Earring (Event)" additionalName="30-day" type="Armor">
-		<!-- 30-day. Increases MP by 31 and Stun/Mental Attack Resistance by 20%. Increases Stun/Mental Atk. Rate by 20%. Has the Vampiric Rage Effect. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- 30-day. Increases MP by 31 and Stun/ Mental Attack Resistance by 20%. Increases Stun/ Mental Atk. Rate by 20%. Has the Vampiric Rage Effect. Only one effect is applied even when the two identical earrings are worn. -->
 		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -752,7 +752,7 @@
 		</skills>
 	</item>
 	<item id="15436" name="Halloween Transformation Stick" additionalName="7-day" type="Weapon">
-		<!-- You can transform to Halloween Pumpkin. 7-day accessory. -->
+		<!-- You can transform to Halloween Pumpkin. Requires a weapon slot. It is a Halloween event reward item that 7-day. -->
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1533,7 +1533,7 @@
 		</skills>
 	</item>
 	<item id="15474" name="Golden Spice" type="EtcItem">
-		<!-- Feed used to tame baby animals on the Beast Farm. Using this feed will allow the monster to drop Adena and/or items, but will give less XP -->
+		<!-- Feed used to tame baby animals on the Beast Farm. Using this feed will allow the monster to drop Adena and/ or items, but will give less XP -->
 		<set name="icon" val="icon.etc_golden_spice_new_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1609,7 +1609,7 @@
 		</skills>
 	</item>
 	<item id="15478" name="Golden Spice (S-grade)" type="EtcItem">
-		<!-- Better quality feed that has a chance to turn Beast Farm babies into a fully grown pets with just one application. Using this feed will allow the monster to drop Adena and/or items, but will give less XP -->
+		<!-- Better quality feed that has a chance to turn Beast Farm babies into a fully grown pets with just one application. Using this feed will allow the monster to drop Adena and/ or items, but will give less XP -->
 		<set name="icon" val="icon.etc_golden_spice_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1837,7 +1837,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15491" name="Elite Maguen Collection Box" type="EtcItem">
-		<!-- Its contents are a mystery.�The only way to find out what is inside is to open it. -->
+		<!-- Its contents are a mystery.The only way to find out what is inside is to open it. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1852,7 +1852,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15492" name="Sel Mahum Salmon Porridge" type="EtcItem">
-		<!-- Sel Mahum salmon porridge. Smells better than expected... but not by much. -->
+		<!-- Sel Mahum salmon porridge. Smells better than expected?but not by much. -->
 		<set name="icon" val="icon.etc_salmon_soup_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

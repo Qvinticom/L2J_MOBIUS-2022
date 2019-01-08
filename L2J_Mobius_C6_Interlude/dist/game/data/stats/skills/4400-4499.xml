@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" levels="3" name="Acumen">
+		<!-- Temporarily increases Casting Spd. Effect 1. -->
 		<table name="#mAtkSpd">1.15 1.23 1.3</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="1100"/>
@@ -18,6 +19,7 @@
 		</for>
 	</skill>
 	<skill id="4401" levels="3" name="Empower">
+		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<table name="#mAtk">1.55 1.65 1.75</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="1100"/>
@@ -35,6 +37,7 @@
 		</for>
 	</skill>
 	<skill id="4402" levels="2" name="Haste">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<table name="#pAtkSpd">1.15 1.33</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="1100"/>
@@ -52,6 +55,7 @@
 		</for>
 	</skill>
 	<skill id="4403" levels="3" name="Guidance">
+		<!-- Temporarily increases Accuracy. Effect 1. -->
 		<table name="#accCombat">2 3 4</table>
 		<set name="castRange" val="400"/>
 		<set name="effectRange" val="900"/>
@@ -67,7 +71,7 @@
 		</for>
 	</skill>
 	<skill id="4404" levels="3" name="Focus">
-		<!-- <table name="#rCrit">1.1 1.15 1.2</table> -->
+		<!-- Temporarily increases the probability of critical attack. Effect 1. -->
 		<table name="#rCrit">0.2 0.25 0.3</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="1100"/>
@@ -85,6 +89,7 @@
 		</for>
 	</skill>
 	<skill id="4405" levels="3" name="Death Whisper">
+		<!-- Temporarily increases critical attack power. Effect 1. -->
 		<table name="#cAtk">1.3 1.32 1.35</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="1100"/>
@@ -102,6 +107,7 @@
 		</for>
 	</skill>
 	<skill id="4406" levels="3" name="Agility">
+		<!-- Temporarily increases evasion. Effect 1. -->
 		<table name="#rEvas">2 3 4</table>
 		<set name="castRange" val="400"/>
 		<set name="effectRange" val="900"/>
@@ -117,39 +123,12 @@
 		</for>
 	</skill>
 	<skill id="4407" levels="2" name="Monster Type">
-		<!--  Description(s):
-              Lvl 1 Name - Ordinary Monster
-              Lvl 2 Name - Strong Type Monster
-        -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="4408" levels="20" name="HP Modifiers">
-		<!--
-          Description(s):
-              Lvl 1 Name - HP Increase (1x)
-              Lvl 2 Name - HP Medium-High
-              Lvl 3 Name - HP Medium-High
-              Lvl 4 Name - HP High
-              Lvl 5 Name - HP High
-              Lvl 6 Name - HP Very High
-              Lvl 7 Name - HP Very High
-              Lvl 8 Name - HP Increase (1/4x)
-              Lvl 9 Name - HP Increase (1/2x)
-              Lvl 10 Name - HP Increase (2x)
-              Lvl 11 Name - HP Increase (3x)
-              Lvl 12 Name - HP Increase (4x)
-              Lvl 13 Name - HP Increase (5x)
-              Lvl 14 Name - HP Increase (6x)
-              Lvl 15 Name - HP Increase (7x)
-              Lvl 16 Name - HP Increase (8x)
-              Lvl 17 Name - HP Increase (9x)
-              Lvl 18 Name - HP Increase (10x)
-              Lvl 19 Name - HP Increase (11x)
-              Lvl 20 Name - HP Increase (12x)
-        -->
 		<table name="#maxhp">1 1.2 1.3 2 2 4 4 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -161,28 +140,6 @@
 		</for>
 	</skill>
 	<skill id="4409" levels="20" name="MP Modifiers">
-		<!-- Description(s):
-              Lvl 1 Name - MP Increase (1x)
-              Lvl 2 Name - MP Medium-High
-              Lvl 3 Name - MP Medium-High
-              Lvl 4 Name - MP High
-              Lvl 5 Name - MP High
-              Lvl 6 Name - MP Very High
-              Lvl 7 Name - MP Very High
-              Lvl 8 Name - MP Increase (1/4x)
-              Lvl 9 Name - MP Increase (1/2x)
-              Lvl 10 Name - MP Increase (2x)
-              Lvl 11 Name - MP Increase (3x)
-              Lvl 12 Name - MP Increase (4x)
-              Lvl 13 Name - MP Increase (5x)
-              Lvl 14 Name - MP Increase (6x)
-              Lvl 15 Name - MP Increase (7x)
-              Lvl 16 Name - MP Increase (8x)
-              Lvl 17 Name - MP Increase (9x)
-              Lvl 18 Name - MP Increase (10x)
-              Lvl 19 Name - MP Increase (11x)
-              Lvl 20 Name - MP Increase (12x)
-        -->
 		<table name="#maxmp">1 1.2 1.3 2 2 4 4 0.25 0.5 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -194,30 +151,6 @@
 		</for>
 	</skill>
 	<skill id="4410" levels="22" name="P. Atk. Modifiers">
-		<!--  Description(s):
-              Lvl 1 Name - Extremely Weak P. Atk.
-              Lvl 2 Name - Extremely Weak P. Atk.
-              Lvl 3 Name - Extremely Weak P. Atk.
-              Lvl 4 Name - Extremely Weak P. Atk.
-              Lvl 5 Name - Very Weak P. Atk.
-              Lvl 6 Name - Very Weak P. Atk.
-              Lvl 7 Name - Weak P. Atk.
-              Lvl 8 Name - Weak P. Atk.
-              Lvl 9 Name - Slightly Weak P. Atk.
-              Lvl 10 Name - Slightly Weak P. Atk.
-              Lvl 11 Name - Average P. Atk.
-              Lvl 12 Name - Slightly Strong P. Atk.
-              Lvl 13 Name - Slightly Strong P. Atk.
-              Lvl 14 Name - Strong P. Atk.
-              Lvl 15 Name - Strong P. Atk.
-              Lvl 16 Name - Very Strong P. Atk.
-              Lvl 17 Name - Very Strong P. Atk.
-              Lvl 18 Name - Extremely Strong P. Atk.
-              Lvl 19 Name - Extremely Strong P. Atk.
-              Lvl 20 Name - Extremely Strong P. Atk.
-              Lvl 21 Name - Extremely Strong P. Atk.
-              Lvl 22 Name - Ultra Strong P. Atk.
-        -->
 		<table name="#patk">0.1 0.15 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 2.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -229,30 +162,6 @@
 		</for>
 	</skill>
 	<skill id="4411" levels="22" name="M. Atk. Modifiers">
-		<!--  Description(s):
-              Lvl 1 Name - Extremely Weak M. Atk.
-              Lvl 2 Name - Extremely Weak M. Atk.
-              Lvl 3 Name - Extremely Weak M. Atk.
-              Lvl 4 Name - Extremely Weak M. Atk.
-              Lvl 5 Name - Very Weak M. Atk.
-              Lvl 6 Name - Very Weak M. Atk.
-              Lvl 7 Name - Weak M. Atk.
-              Lvl 8 Name - Weak M. Atk.
-              Lvl 9 Name - Slightly Weak M. Atk.
-              Lvl 10 Name - Slightly Weak M. Atk.
-              Lvl 11 Name - Average M. Atk.
-              Lvl 12 Name - Slightly Strong M. Atk.
-              Lvl 13 Name - Slightly Strong M. Atk.
-              Lvl 14 Name - Strong M. Atk.
-              Lvl 15 Name - Strong M. Atk.
-              Lvl 16 Name - Very Strong M. Atk.
-              Lvl 17 Name - Very Strong M. Atk.
-              Lvl 18 Name - Extremely Strong M. Atk.
-              Lvl 19 Name - Extremely Strong M. Atk.
-              Lvl 20 Name - Extremely Strong M. Atk.
-              Lvl 21 Name - Extremely Strong M. Atk.
-              Lvl 22 Name - Ultra Strong M. Atk.
-        -->
 		<table name="#matk">0.1 0.15 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 2.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -264,30 +173,6 @@
 		</for>
 	</skill>
 	<skill id="4412" levels="22" name="P. Def. Modifiers">
-		<!--  Description(s):
-              Lvl 1 Name - Extremely Weak P. Def.
-              Lvl 2 Name - Extremely Weak P. Def.
-              Lvl 3 Name - Extremely Weak P. Def.
-              Lvl 4 Name - Extremely Weak P. Def.
-              Lvl 5 Name - Very Weak P. Def.
-              Lvl 6 Name - Very Weak P. Def.
-              Lvl 7 Name - Weak P. Def.
-              Lvl 8 Name - Weak P. Def.
-              Lvl 9 Name - Slightly Weak P. Def.
-              Lvl 10 Name - Slightly Weak P. Def.
-              Lvl 11 Name - Average P. Def.
-              Lvl 12 Name - Slightly Strong P. Def.
-              Lvl 13 Name - Slightly Strong P. Def.
-              Lvl 14 Name - Strong P. Def.
-              Lvl 15 Name - Strong P. Def.
-              Lvl 16 Name - Very Strong P. Def.
-              Lvl 17 Name - Very Strong P. Def.
-              Lvl 18 Name - Extremely Strong P. Def.
-              Lvl 19 Name - Extremely Strong P. Def.
-              Lvl 20 Name - Extremely Strong P. Def.
-              Lvl 21 Name - Extremely Strong P. Def.
-              Lvl 22 Name - Ultra Strong P. Def.
-        -->
 		<table name="#pdef">0.1 0.15 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 2.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -299,30 +184,6 @@
 		</for>
 	</skill>
 	<skill id="4413" levels="22" name="M. Def. Modifiers">
-		<!--  Description(s):
-              Lvl 1 Name - Extremely Weak M. Def.
-              Lvl 2 Name - Extremely Weak M. Def.
-              Lvl 3 Name - Extremely Weak M. Def.
-              Lvl 4 Name - Extremely Weak M. Def.
-              Lvl 5 Name - Very Weak M. Def.
-              Lvl 6 Name - Very Weak M. Def.
-              Lvl 7 Name - Weak M. Def.
-              Lvl 8 Name - Weak M. Def.
-              Lvl 9 Name - Slightly Weak M. Def.
-              Lvl 10 Name - Slightly Weak M. Def.
-              Lvl 11 Name - Average M. Def.
-              Lvl 12 Name - Slightly Strong M. Def.
-              Lvl 13 Name - Slightly Strong M. Def.
-              Lvl 14 Name - Strong M. Def.
-              Lvl 15 Name - Strong M. Def.
-              Lvl 16 Name - Very Strong M. Def.
-              Lvl 17 Name - Very Strong M. Def.
-              Lvl 18 Name - Extremely Strong M. Def.
-              Lvl 19 Name - Extremely Strong M. Def.
-              Lvl 20 Name - Extremely Strong M. Def.
-              Lvl 21 Name - Extremely Strong M. Def.
-              Lvl 22 Name - Ultra Strong M. Def.
-        -->
 		<table name="#mdef">0.1 0.15 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2 2.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -334,6 +195,7 @@
 		</for>
 	</skill>
 	<skill id="4414" levels="3" name="Armor Type">
+		<!-- Strong P. Def. and weak Evasion. -->
 		<table name="#pdef">1.3 1 0.7</table>
 		<table name="#evasion">0.95 1 1.05</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -347,28 +209,6 @@
 		</for>
 	</skill>
 	<skill id="4415" levels="20" name="Weapon Type">
-		<!-- Description(s):
-              Lvl 1 Name - Bare Hands
-              Lvl 2 Name - Bare Hands
-              Lvl 3 Name - One-handed Sword
-              Lvl 4 Name - One-handed Sword
-              Lvl 5 Name - Blunt Weapons
-              Lvl 6 Name - Blunt Weapons
-              Lvl 7 Name - Daggers
-              Lvl 8 Name - Daggers
-              Lvl 9 Name - Bows
-              Lvl 10 Name - Bows
-              Lvl 11 Name - Spears
-              Lvl 12 Name - Spears
-              Lvl 13 Name - Two-handed Sword
-              Lvl 14 Name - Two-handed Sword
-              Lvl 15 Name - Two-handed Blunt Weapons
-              Lvl 16 Name - Two-handed Blunt Weapons
-              Lvl 17 Name - Hand-to-hand weapons
-              Lvl 18 Name - Hand-to-hand weapons
-              Lvl 19 Name - Dual-Sword Weapons
-              Lvl 20 Name - Dual-Sword Weapons
-        -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -376,32 +216,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="4416" levels="24" name="Races">
-		<!--  Description(s):
-              Lvl 1 Name - Undead
-              Lvl 2 Name - Magic Creatures
-              Lvl 3 Name - Beasts
-              Lvl 4 Name - Animals
-              Lvl 5 Name - Plants
-              Lvl 6 Name - Humanoids
-              Lvl 7 Name - Spirits
-              Lvl 8 Name - Angels
-              Lvl 9 Name - Demons
-              Lvl 10 Name - Dragons
-              Lvl 11 Name - Giants
-              Lvl 12 Name - Bugs
-              Lvl 13 Name - Fairies
-              Lvl 14 Name - Humans
-              Lvl 15 Name - Elves
-              Lvl 16 Name - Dark Elves
-              Lvl 17 Name - Orcs
-              Lvl 18 Name - Dwarves
-              Lvl 19 Name - Others
-              Lvl 20 Name - Non-living Beings
-              Lvl 21 Name - Siege Weapons
-              Lvl 22 Name - Defending Army
-              Lvl 23 Name - Mercenaries
-              Lvl 24 Name - Unknown Creature
-        -->
+		<!-- Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids. -->
 		<table name="#holy">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
 		<table name="#dark">20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
 		<table name="#water">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</table>
@@ -423,46 +238,7 @@
 		</for>
 	</skill>
 	<skill id="4417" levels="38" name="Race Types">
-		<!--  Description(s):
-              Lvl 1 Name - Animals
-              Lvl 2 Name - Beasts
-              Lvl 3 Name - Beasts
-              Lvl 4 Name - Beasts
-              Lvl 5 Name - Beasts
-              Lvl 6 Name - Bugs
-              Lvl 7 Name - Bugs
-              Lvl 8 Name - Bugs
-              Lvl 9 Name - Magic Creatures
-              Lvl 10 Name - Magic Creatures
-              Lvl 11 Name - Magic Creatures
-              Lvl 12 Name - Demons
-              Lvl 13 Name - Demons
-              Lvl 14 Name - Demons
-              Lvl 15 Name - Angels
-              Lvl 16 Name - Angels
-              Lvl 17 Name - Angels
-              Lvl 18 Name - Dragons
-              Lvl 19 Name - Spirits
-              Lvl 20 Name - Spirits
-              Lvl 21 Name - Spirits
-              Lvl 22 Name - Spirits
-              Lvl 23 Name - Spirits
-              Lvl 24 Name - Fairies
-              Lvl 25 Name - Giants
-              Lvl 26 Name - Humanoids
-              Lvl 27 Name - Humanoids
-              Lvl 28 Name - Humanoids
-              Lvl 29 Name - Humanoids
-              Lvl 30 Name - Humanoids
-              Lvl 31 Name - Humanoids
-              Lvl 32 Name - Humanoids
-              Lvl 33 Name - Plants
-              Lvl 34 Name - Undead
-              Lvl 35 Name - Undead
-              Lvl 36 Name - Undead
-              Lvl 37 Name - Undead
-              Lvl 38 Name - Undead
-        -->
+		<!-- Animals -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="castRange" val="-1"/>
@@ -470,7 +246,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
 	<skill id="4418" levels="5" name="Fire Attacks">
-		<!--  Description(s): Launches an attack fortified with fire energy. Resistant to fire attacks. -->
+		<!-- Unleashes an attack fortified with fire energy. Resistant to fire attacks. -->
 		<table name="#Res">0.95 0.9 0.85 0.8 0.75</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -481,7 +257,7 @@
 		</for>
 	</skill>
 	<skill id="4419" levels="5" name="Water Attacks">
-		<!-- Description(s): Launches an attack fortified with water energy. Resistant to water attacks. -->
+		<!-- Unleashes an attack fortified with water energy. Resistant to water attacks. -->
 		<table name="#Res">0.95 0.9 0.85 0.8 0.75</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -492,7 +268,7 @@
 		</for>
 	</skill>
 	<skill id="4420" levels="5" name="Wind Attacks">
-		<!-- Description(s): Launches an attack fortified with wind energy. Resistant to wind attacks. -->
+		<!-- Unleashes an attack fortified with wind energy. Resistant to wind attacks. -->
 		<table name="#Res">0.95 0.9 0.85 0.8 0.75</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -503,7 +279,7 @@
 		</for>
 	</skill>
 	<skill id="4421" levels="5" name="Earth Attacks">
-		<!-- Description(s): Launches an attack fortified with earth energy. Resistant to earth attacks. -->
+		<!-- Unleashes an attack fortified with earth energy. Resistant to earth attacks. -->
 		<table name="#Res">0.95 0.9 0.85 0.8 0.75</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -514,7 +290,7 @@
 		</for>
 	</skill>
 	<skill id="4422" levels="5" name="Dark Attacks">
-		<!-- Description(s): Launches an attack fortified with dark energy. Vulnerable to dark attacks. -->
+		<!-- Unleashes an attack fortified with dark energy. Resistant to dark attacks. -->
 		<table name="#Res">0.95 0.9 0.85 0.8 0.75</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -525,7 +301,7 @@
 		</for>
 	</skill>
 	<skill id="4423" levels="5" name="Sacred Attacks">
-		<!-- fixed sacred resist monsters. If min = max resist if max = min resist -->
+		<!-- Unleashes an attack fortified with sacred energy. Resistant to sacred attacks. -->
 		<table name="#Res">2 1.7 1.3 1 0.8</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -538,7 +314,7 @@
 		</for>
 	</skill>
 	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
-		<!-- Description(s): Resistant to hand-to-hand combat weapons. -->
+		<!-- Resistant to hand-to-hand combat weapons. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -550,6 +326,7 @@
 		</for>
 	</skill>
 	<skill id="4425" levels="5" name="Resist Blunt Weapons">
+		<!-- Resistant to Blunt Weapons. -->
 		<table name="#bluntVuln">0.85 0.8 0.75 0.7 0.65</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -561,6 +338,7 @@
 		</for>
 	</skill>
 	<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
+		<!-- Resistant to Dual-Sword Weapons. -->
 		<table name="#dualVuln">0.95 0.9 0.85 0.8 0.75</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -572,6 +350,7 @@
 		</for>
 	</skill>
 	<skill id="4427" levels="5" name="Resist Swords">
+		<!-- Resistant to Sword Weapons. -->
 		<table name="#swordVuln">0.9 0.95 0.8 0.75 0.7</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -583,7 +362,7 @@
 		</for>
 	</skill>
 	<skill id="4428" levels="5" name="Resist Two-handed Weapons">
-		<!-- Description(s): Resistant to Two-Handed Weapons. -->
+		<!-- Resistant to Two-Handed Weapons. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -595,7 +374,7 @@
 		</for>
 	</skill>
 	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
-		<!-- Description(s): Very resistant to fire attacks. -->
+		<!-- Very resistant to fire attacks. -->
 		<table name="#Res">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -605,7 +384,7 @@
 		</for>
 	</skill>
 	<skill id="4430" levels="5" name="Greater Resist Water Attacks">
-		<!-- Description(s): Very resistant to water attacks. -->
+		<!-- Very resistant to water attacks. -->
 		<table name="#Res">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -615,7 +394,7 @@
 		</for>
 	</skill>
 	<skill id="4431" levels="5" name="Greater Resist Wind Attacks">
-		<!-- Description(s): Very resistant to wind attacks. -->
+		<!-- Very resistant to wind attacks. -->
 		<table name="#Res">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -625,7 +404,7 @@
 		</for>
 	</skill>
 	<skill id="4432" levels="5" name="Greater Resist Earth Attacks">
-		<!-- Description(s): Very resistant to earth attacks. -->
+		<!-- Very resistant to earth attacks. -->
 		<table name="#Res">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -635,6 +414,7 @@
 		</for>
 	</skill>
 	<skill id="4433" levels="5" name="Greater Resist Sacred Attacks">
+		<!-- Very resistant to sacred attacks. -->
 		<table name="#holy">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -646,6 +426,7 @@
 		</for>
 	</skill>
 	<skill id="4434" levels="5" name="Greater Resist Dark Attacks">
+		<!-- Very resistant to dark attacks. -->
 		<table name="#dark">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -657,6 +438,7 @@
 		</for>
 	</skill>
 	<skill id="4435" levels="5" name="Greater Resist Stun">
+		<!-- Very resistant to shock attacks. -->
 		<table name="#stun">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -668,6 +450,7 @@
 		</for>
 	</skill>
 	<skill id="4436" levels="5" name="Greater Resist Poison">
+		<!-- Very resistant to poison attacks. -->
 		<table name="#poison">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -679,6 +462,7 @@
 		</for>
 	</skill>
 	<skill id="4437" levels="5" name="Greater Resist Bleeding">
+		<!-- Very resistant to bleed attacks. -->
 		<table name="#bleed">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -690,6 +474,7 @@
 		</for>
 	</skill>
 	<skill id="4438" levels="5" name="Greater Resist Sleep">
+		<!-- Very resistant to sleep attacks. -->
 		<table name="#sleep">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -701,6 +486,7 @@
 		</for>
 	</skill>
 	<skill id="4439" levels="5" name="Greater Resist Hold">
+		<!-- Very resistant to hold attacks. -->
 		<table name="#root">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -712,6 +498,7 @@
 		</for>
 	</skill>
 	<skill id="4440" levels="5" name="Greater Resist Paralysis">
+		<!-- Very resistant to paralysis attacks. -->
 		<table name="#paralyze">0.3 0.2 0.1 0.05 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -723,7 +510,7 @@
 		</for>
 	</skill>
 	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
-		<!-- Description(s): Very resistant to mental attacks. -->
+		<!-- Very resistant to mental attacks. -->
 		<table name="#debuffVuln">70 80 90 95 100</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -733,7 +520,7 @@
 		</for>
 	</skill>
 	<skill id="4442" levels="5" name="Greater Resist Hand-to-hand Weapons">
-		<!-- Description(s): Very resistant to Hand-to-Hand Weapon attacks. -->
+		<!-- Very resistant to Hand-to-Hand Weapon attacks. -->
 		<table name="#bluntVuln">30 35 40 45 50</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -745,6 +532,7 @@
 		</for>
 	</skill>
 	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
+		<!-- Very resistant to Blunt Weapon attacks. -->
 		<table name="#bluntVuln">0.7 0.65 0.6 0.55 0.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -756,6 +544,7 @@
 		</for>
 	</skill>
 	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
+		<!-- Very resistant to Bow Weapon attacks. -->
 		<table name="#bowVuln">0.7 0.65 0.6 0.55 0.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -767,6 +556,7 @@
 		</for>
 	</skill>
 	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
+		<!-- Very resistant to Spear Weapon attacks. -->
 		<table name="#Vuln">0.7 0.65 0.6 0.55 0.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -778,6 +568,7 @@
 		</for>
 	</skill>
 	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
+		<!-- Very resistant to Dual-Sword Weapon attacks. -->
 		<table name="#Vuln">0.7 0.65 0.6 0.55 0.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -789,6 +580,7 @@
 		</for>
 	</skill>
 	<skill id="4447" levels="5" name="Greater Resist Swords">
+		<!-- Very resistant to Sword attacks. -->
 		<table name="#Vuln">0.7 0.65 0.6 0.55 0.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -800,6 +592,7 @@
 		</for>
 	</skill>
 	<skill id="4448" levels="5" name="Greater Resist Daggers">
+		<!-- Very resistant to Dagger attacks. -->
 		<table name="#Vuln">0.7 0.65 0.6 0.55 0.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -811,7 +604,7 @@
 		</for>
 	</skill>
 	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
-		<!-- Description(s): Very resistant to Two-Handed Weapon attacks. -->
+		<!-- Very resistant to Two-Handed Weapon attacks. -->
 		<table name="#vuln">0.5 0.4 0.3 0.2 0.1</table>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="BUFF"/>
@@ -824,6 +617,7 @@
 		</for>
 	</skill>
 	<skill id="4450" levels="5" name="Stun Attack Weak Point">
+		<!-- Vulnerable to shock attacks. -->
 		<table name="#stun">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -835,6 +629,7 @@
 		</for>
 	</skill>
 	<skill id="4451" levels="5" name="Poison Attack Weak Point">
+		<!-- Vulnerable to poison attacks. -->
 		<table name="#poison">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -846,6 +641,7 @@
 		</for>
 	</skill>
 	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
+		<!-- Vulnerable to bleed attacks. -->
 		<table name="#bleed">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -857,6 +653,7 @@
 		</for>
 	</skill>
 	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
+		<!-- Vulnerable to sleep attacks. -->
 		<table name="#sleep">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -868,6 +665,7 @@
 		</for>
 	</skill>
 	<skill id="4454" levels="5" name="Hold Attack Weak Point">
+		<!-- Vulnerable to hold attacks. -->
 		<table name="#root">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -879,6 +677,7 @@
 		</for>
 	</skill>
 	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
+		<!-- Vulnerable to paralysis attacks. -->
 		<table name="#paralyze">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -890,7 +689,7 @@
 		</for>
 	</skill>
 	<skill id="4456" levels="5" name="Mental Attack Weak Point">
-		<!-- Description(s): Vulnerable to mental attacks. -->
+		<!-- Vulnerable to mental attacks. -->
 		<table name="#debuffVuln">10 15 20 25 30</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -900,7 +699,7 @@
 		</for>
 	</skill>
 	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
-		<!-- Description(s): Vulnerable to hand-to-hand combat weapons. -->
+		<!-- Vulnerable to hand-to-hand combat weapons. -->
 		<table name="#fistVuln">10 15 20 25 30</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -910,6 +709,7 @@
 		</for>
 	</skill>
 	<skill id="4457" levels="5" name="Hand-to-hand Weapon Weak Point">
+		<!-- Vulnerable to hand-to-hand combat weapons. -->
 		<table name="#Vuln">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -921,6 +721,7 @@
 		</for>
 	</skill>
 	<skill id="4458" levels="5" name="Spear Weapon Weak Point">
+		<!-- Vulnerable to Pole Arm Weapons. -->
 		<table name="#Vuln">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -932,6 +733,7 @@
 		</for>
 	</skill>
 	<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
+		<!-- Vulnerable to Dual-Sword Weapons. -->
 		<table name="#Vuln">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -943,6 +745,7 @@
 		</for>
 	</skill>
 	<skill id="4460" levels="5" name="Sword Weak Point">
+		<!-- Vulnerable to Sword Weapons. -->
 		<table name="#Vuln">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -954,6 +757,7 @@
 		</for>
 	</skill>
 	<skill id="4461" levels="5" name="Dagger Weak Point">
+		<!-- Vulnerable to Dagger Weapons. -->
 		<table name="#Vuln">1.1 1.15 1.2 1.25 1.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -965,7 +769,7 @@
 		</for>
 	</skill>
 	<skill id="4462" levels="5" name="Two-handed Weapon Weak Point">
-		<!-- Description(s): Vulnerable to Two-Handed Weapons. -->
+		<!-- Vulnerable to Two-Handed Weapons. -->
 		<table name="#vuln">1.1 1.15 1.2 1.3 1.5</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -977,6 +781,7 @@
 		</for>
 	</skill>
 	<skill id="4463" levels="3" name="Surrender To Water">
+		<!-- Instantly decreases resistance to water attacks and increases resistance to fire attacks. Effect 2. -->
 		<table name="#water">1.1 1.15 1.2</table>
 		<table name="#fire">0.95 0.93 0.9</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -991,6 +796,7 @@
 		</for>
 	</skill>
 	<skill id="4464" levels="3" name="Surrender To Wind">
+		<!-- Instantly decreases resistance to wind attacks and increases resistance to earth attacks. Effect 2. -->
 		<table name="#wind">1.1 1.15 1.2</table>
 		<table name="#earth">0.95 0.93 0.9</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -1005,6 +811,7 @@
 		</for>
 	</skill>
 	<skill id="4465" levels="3" name="Surrender To Earth">
+		<!-- Instantly decreases resistance to earth attacks and increases resistance to wind attacks. Effect 2. -->
 		<table name="#earth">1.1 1.15 1.2</table>
 		<table name="#wind">0.95 0.93 0.9</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -1019,6 +826,7 @@
 		</for>
 	</skill>
 	<skill id="4466" levels="3" name="Surrender To Darkness">
+		<!-- Instantly decreases resistance to dark attacks and increases resistance to sacred attacks. Effect 2. -->
 		<table name="#dark">1.1 1.15 1.2</table>
 		<table name="#holy">0.95 0.93 0.9</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -1033,6 +841,7 @@
 		</for>
 	</skill>
 	<skill id="4467" levels="3" name="Surrender To Light">
+		<!-- Instantly decreases resistance to sacred attacks and increases resistance to dark attacks. Effect 2. -->
 		<table name="#holy">1.1 1.15 1.2</table>
 		<table name="#dark">0.95 0.93 0.9</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -1079,21 +888,7 @@
 		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="4471" levels="12" name="NPC Anger">
-		<!--
-          Description(s):
-              Lvl 1 - Increases NPC's P. Atk. and P. Def. Effect 1.
-              Lvl 2 - Increases NPC's P. Atk. and P. Def. Effect 2.
-              Lvl 3 - Increases NPC's P. Atk. and P. Def. Effect 3.
-              Lvl 4 - Increases NPC's P. Atk. and P. Def. Effect 4.
-              Lvl 5 - Increases NPC's P. Atk. and P. Def. Effect 5.
-              Lvl 6 - Increases NPC's P. Atk. and P. Def. Effect 6.
-              Lvl 7 - Increases NPC's P. Atk. and P. Def. Effect 7.
-              Lvl 8 - Increases NPC's P. Atk. and P. Def. Effect 8.
-              Lvl 9 - Increases NPC's P. Atk. and P. Def. Effect 9.
-              Lvl 10 - Increases NPC's P. Atk. and P. Def. Effect 10.
-              Lvl 11 - Increases NPC's P. Atk. and P. Def. Effect 11.
-              Lvl 12 - Increases NPC's P. Atk. and P. Def. Effect 12.
-        -->
+		<!-- Increases NPC's P. Atk. and P. Def. Effect 1. -->
 		<table name="#increase">1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.5 1.55 1.6</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1112,7 +907,7 @@
 		</for>
 	</skill>
 	<skill id="4472" levels="12" name="NPC Strike Golem">
-		<!--	Description(s): For powerful Golems that are 1.5x stronger -->
+		<!-- For powerful Golems that are 1.5x stronger -->
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -1124,7 +919,7 @@
 		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4473" levels="12" name="Shock">
-		<!-- Description(s): Shocks and instantly immobilizes. -->
+		<!-- Shocks and instantly immobilizes. -->
 		<table name="#mpConsume">27 44 62 85 109 135 157 168 177 183 187 189</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
 		<set name="magicLvl" val="48"/>
@@ -1156,6 +951,7 @@
 		<set name="isMagic" val="true"/>
 	</skill>
 	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
+		<!-- Bleed attacks don't work on target. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="hitTime" val="1500"/>
@@ -1167,7 +963,7 @@
 		</for>
 	</skill>
 	<skill id="4476" levels="5" name="Silent Move">
-		<!--  Description(s): Blocks monsters' first strike. -->
+		<!-- Blocks monsters' first strike. -->
 		<table name="#mpConsume">13 20 27 35 45</table>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1220,6 +1016,7 @@
 		<set name="effectRange" val="1200"/>
 	</skill>
 	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
+		<!-- Increases resistance to cold attacks. Effect 4. -->
 		<set name="mpConsume" val="39"/>
 		<set name="power" val="269"/>
 		<set name="target" val="TARGET_AREA"/>
@@ -1288,6 +1085,7 @@
 		</for>
 	</skill>
 	<skill id="4483" levels="12" name="Hold">
+		<!-- Temporarily holds and immobilizes target. -->
 		<table name="#mpConsume_Init">3 4 6 7 9 11 13 14 15 15 16 16</table>
 		<table name="#mpConsume">10 16 21 28 36 44 52 55 58 60 61 62</table>
 		<table name="#magiclvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1327,6 +1125,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="4486" levels="12" name="Decrease P. Def">
+		<!-- Temporarily reduces P. Def. Effect 1. -->
 		<table name="#mpConsume">14 15 17 18 19 20 22 22 23 24 25 26</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -1348,21 +1147,7 @@
 		</for>
 	</skill>
 	<skill id="4487" levels="12" name="Decrease M. Def.">
-		<!--
-          Description(s):
-              Lvl 1 - Instantly reduces M. Def. Effect 1.
-              Lvl 2 - Instantly reduces M. Def. Effect 2.
-              Lvl 3 - Instantly reduces M. Def. Effect 2.
-              Lvl 4 - Instantly reduces M. Def. Effect 3.
-              Lvl 5 - Instantly reduces M. Def. Effect 3.
-              Lvl 6 - Instantly reduces M. Def. Effect 3.
-              Lvl 7 - Instantly reduces M. Def. Effect 3.
-              Lvl 8 - Instantly reduces M. Def. Effect 3.
-              Lvl 9 - Instantly reduces M. Def. Effect 3.
-              Lvl 10 - Instantly reduces M. Def. Effect 3.
-              Lvl 11 - Instantly reduces M. Def. Effect 3.
-              Lvl 12 - Instantly reduces M. Def. Effect 3.
-        -->
+		<!-- Instantly reduces M. Def. Effect 1. -->
 		<table name="#mpConsume">14 15 17 18 19 20 22 22 23 24 25 26</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -1384,6 +1169,7 @@
 		</for>
 	</skill>
 	<skill id="4488" levels="12" name="Hold">
+		<!-- Temporarily holds and immobilizes target. -->
 		<table name="#mpConsume_Init">3 4 6 7 9 11 13 14 15 15 16 16</table>
 		<table name="#mpConsume">10 16 21 28 36 44 52 55 58 60 61 62</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1432,7 +1218,7 @@
 		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4491" levels="12" name="Holy Weapon">
-		<!--  Description(s): Makes sacred attacks. -->
+		<!-- Makes sacred attacks. -->
 		<table name="#mpConsume">41 66 93 127 164 202 236 252 265 274 280 283</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -1445,7 +1231,7 @@
 		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="4492" levels="12" name="Enlarging Head Curse">
-		<!-- Needs to be finished. Description(s): Temporarily enlarges the head. -->
+		<!-- Temporarily enlarges the head. -->
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -1472,7 +1258,7 @@
 		<set name="castRange" val="400"/>
 	</skill>
 	<skill id="4494" levels="1" name="Raid Boss">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- If the person who made the greatest contribution is 3 or more levels higher than the raid monster, then the item/adena rewards will decrease. If the difference is 9 or more levels, the monster will drop nothing at all. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1496,6 +1282,7 @@
 		<set name="effectRange" val="1400"/>
 	</skill>
 	<skill id="4496" levels="12" name="Stun">
+		<!-- A state of shock that temporarily prevents movement. -->
 		<table name="#mpConsume">36 50 69 93 118 143 166 175 182 186 189 192</table>
 		<table name="#power">176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895</table>
 		<table name="#magicLvl">14 24 34 44 54 64 74 79 84 89 94 99</table>
@@ -1516,7 +1303,7 @@
 		</for>
 	</skill>
 	<skill id="4497" levels="1" name="Treasure Chest - Level 21">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1525,7 +1312,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="4498" levels="1" name="Treasure Chest - Level 22">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1534,7 +1321,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="4499" levels="1" name="Treasure Chest - Level 25">
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2300" levels="1" name="Hair Style Change Potion">
 		<set name="target" val="TARGET_SELF"/>
@@ -7,7 +7,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="8673"/>
+		<set name="itemConsumeId" val="8673"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2301" levels="1" name="Hair Style Change Potion">
@@ -18,7 +18,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="8674"/>
+		<set name="itemConsumeId" val="8674"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2302" levels="1" name="Hair Style Change Potion">
@@ -29,7 +29,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="8675"/>
+		<set name="itemConsumeId" val="8675"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2303" levels="1" name="Hair Style Change Potion">
@@ -40,7 +40,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="8676"/>
+		<set name="itemConsumeId" val="8676"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2304" levels="1" name="Hair Style Change Potion">
@@ -51,10 +51,11 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="8677"/>
+		<set name="itemConsumeId" val="8677"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2305" levels="1" name="Primeval Potion">
+		<!-- Improves resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -69,12 +70,6 @@
 		</for>
 	</skill>
 	<skill id="2306" levels="3" name="Primeval Crystals">
-		<!--
-          Description(s):
-          Lvl 1 Name - Blue Primeval Crystal
-          Lvl 2 Name - Green Primeval Crystal
-          Lvl 3 Name - Red Primeval Crystal
-        -->
 		<table name="#power">50000 100000 200000</table>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -105,7 +100,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="2309" levels="1" name="Pig Chest">
-		<set name="itemConsumeId" val="9144"/>
+		<set name="itemConsumeId" val="9144"/> <!-- Pirate's Booty -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -113,7 +108,7 @@
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
-		<!-- Description(s): Lvl 1 - Increases Accuracy. Effect 3. -->
+		<!-- Increases Accuracy. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -128,7 +123,7 @@
 		</for>
 	</skill>
 	<skill id="2311" levels="1" name="Scroll of Death Whisper - Event Use">
-		<!-- Description(s): Lvl 1 - Increases critical attack power. Effect 3. -->
+		<!-- Increases critical attack power. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -143,7 +138,7 @@
 		</for>
 	</skill>
 	<skill id="2312" levels="1" name="Scroll of Focus - Event Use">
-		<!-- Description(s): Lvl 1 - Increases critical attack rate. Effect 3. -->
+		<!-- Increases critical attack rate. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -158,7 +153,7 @@
 		</for>
 	</skill>
 	<skill id="2313" levels="1" name="Scroll of Acumen - Event Use">
-		<!-- Description(s): Lvl 1 - Increases Casting Spd. Effect 3. -->
+		<!-- Increases Casting Spd. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -173,7 +168,7 @@
 		</for>
 	</skill>
 	<skill id="2314" levels="1" name="Scroll of Haste - Event Use">
-		<!-- Description(s): Lvl 1 - Increases Atk. Spd. Effect 2. -->
+		<!-- Increases Atk. Spd. Effect 2. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -188,7 +183,7 @@
 		</for>
 	</skill>
 	<skill id="2315" levels="1" name="Scroll of Agility - Event Use">
-		<!-- Description(s): Lvl 1 - Increases Evasion. Effect 3. -->
+		<!-- Increases Evasion. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -203,7 +198,7 @@
 		</for>
 	</skill>
 	<skill id="2316" levels="1" name="Scroll of Empower - Event Use">
-		<!-- Description(s): Lvl 1 - Increases M. Atk. Effect 3. -->
+		<!-- Increases M. Atk. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -218,7 +213,7 @@
 		</for>
 	</skill>
 	<skill id="2317" levels="1" name="Scroll of Might - Event Use">
-		<!-- Description(s): Lvl 1 - Increases P. Atk. Effect 3. -->
+		<!-- Increases P. Atk. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -233,7 +228,7 @@
 		</for>
 	</skill>
 	<skill id="2318" levels="1" name="Scroll of Wind Walk - Event Use">
-		<!-- Description(s): Lvl 1 - Increases Speed. Effect 2. -->
+		<!-- Increases Speed. Effect 2. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -248,7 +243,7 @@
 		</for>
 	</skill>
 	<skill id="2319" levels="1" name="Scroll of Shield - Event Use">
-		<!-- Description(s): Lvl 1 - Increases P. Def. Effect 3. -->
+		<!-- Increases P. Def. Effect 3. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="4000"/>
 		<set name="skillType" val="BUFF"/>
@@ -295,7 +290,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2323" levels="1" name="Red Sage's Stone">
-		<set name="itemConsumeId" val="9171"/>
+		<set name="itemConsumeId" val="9171"/> <!-- Red Philosopher's Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -305,7 +300,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2324" levels="1" name="Blue Sage's Stone">
-		<set name="itemConsumeId" val="9172"/>
+		<set name="itemConsumeId" val="9172"/> <!-- Blue Philosopher's Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -315,7 +310,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2325" levels="1" name="Orange Sage's Stone">
-		<set name="itemConsumeId" val="9173"/>
+		<set name="itemConsumeId" val="9173"/> <!-- Orange Philosopher's Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -325,7 +320,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2326" levels="1" name="Black Sage's Stone">
-		<set name="itemConsumeId" val="9174"/>
+		<set name="itemConsumeId" val="9174"/> <!-- Black Philosopher's Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -335,7 +330,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2327" levels="1" name="White Sage's Stone">
-		<set name="itemConsumeId" val="9175"/>
+		<set name="itemConsumeId" val="9175"/> <!-- White Philosopher's Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -345,7 +340,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2328" levels="1" name="Green Sage's Stone">
-		<set name="itemConsumeId" val="9176"/>
+		<set name="itemConsumeId" val="9176"/> <!-- Green Philosopher's Stone -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>

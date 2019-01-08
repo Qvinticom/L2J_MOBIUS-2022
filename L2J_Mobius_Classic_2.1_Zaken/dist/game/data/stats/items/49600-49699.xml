@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="49662" name="Stylish Color Title" type="EtcItem">
-		<!-- A dimensional item. An item which can be used to change the color of a character�s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse) -->
+		<!-- A dimensional item. An item which can be used to change the color of a character? title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse) -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39125" level="1"/> <!--Weapon Supply Box (B-grade)-->
+			<skill id="39125" level="1"/> <!-- Weapon Supply Box (B-grade) -->
 		</skills>
 	</item>
 	<item id="49665" name="Armor Supply Box (B-grade)" type="EtcItem">
@@ -37,7 +37,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39127" level="1"/> <!--Armor Supply Box (B-grade)-->
+			<skill id="39127" level="1"/> <!-- Armor Supply Box (B-grade) -->
 		</skills>
 	</item>
 	<item id="49666" name="Ornament Supply Box (B-grade)" type="EtcItem">
@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39129" level="1"/> <!--Ornament Supply Box (B-grade)-->
+			<skill id="39129" level="1"/> <!-- Ornament Supply Box (B-grade) -->
 		</skills>
 	</item>
 	<item id="49667" name="Weapon Supply Box (C-grade)" type="EtcItem">
@@ -59,7 +59,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39124" level="1"/> <!--Weapon Supply Box (B-grade)-->
+			<skill id="39124" level="1"/> <!-- Weapon Supply Box (B-grade) -->
 		</skills>
 	</item>
 	<item id="49668" name="Armor Supply Box (C-grade)" type="EtcItem">
@@ -70,7 +70,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39126" level="1"/> <!--Armor Supply Box (B-grade)-->
+			<skill id="39126" level="1"/> <!-- Armor Supply Box (B-grade) -->
 		</skills>
 	</item>
 	<item id="49669" name="Ornament Supply Box (C-grade)" type="EtcItem">
@@ -81,7 +81,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39128" level="1"/> <!--Ornament Supply Box (B-grade)-->
+			<skill id="39128" level="1"/> <!-- Ornament Supply Box (B-grade) -->
 		</skills>
 	</item>
 	<item id="49670" name="Weapon Ingredient Box (B-grade)" type="EtcItem">
@@ -113,7 +113,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49674" name="Rice Cake of Flaming Fighting Spirit" additionalName="Event" type="EtcItem">
-		<!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Reuse Time: 10 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note> The effect does not change if Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
+		<!-- Increases XP and SP gain by +30% for 20 minutes. The effect remains after character's death. Reuse Time: 10 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note> The effect does not change if Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
 		<set name="icon" val="icon.bm_rice_cake_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -200,7 +200,7 @@
 		</skills>
 	</item>
 	<item id="49680" name="Talisman of Insolence V" type="Armor">
-		<!-- P. Atk. +81, M. Atk. +131, Magic Attack Resistance +7%, Skill Power +2%, all kinds of Weapon Resistance +2%, CON +1, MEN +1, STR +1, INT +1. MP Consumption for skill use -2%. Blacksmith Baggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- P. Atk. +170, M. Atk. +235, Magic Attack Resistance +7%, Skill Power +2%, all kinds of Weapon Resistance +2%, CON +1, MEN +1, STR +1, INT +1. MP Consumption for skill use -2%. Blacksmith Baggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.tallisman_oman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -216,7 +216,7 @@
 		</skills>
 	</item>
 	<item id="49681" name="Talisman of Insolence VI" type="Armor">
-		<!-- P. Atk. +95, M. Atk. +153, Magic Attack Resistance +8%, Skill Power +3%, all kinds of Weapon Resistance +3%, CON +1, MEN +1, STR +1, INT +1. P. / M. Critical Rate +10. MP Consumption for skill use -4%. Available only for Lv. 60 and higher. Blacksmith Baggins in Giran can help exchange this Talisman and Baium�s Soul for Talisman of Baium. Effects from two such Talismans do not stack. -->
+		<!-- P. Atk. +200, M. Atk. +275, Magic Attack Resistance +8%, Skill Power +3%, all kinds of Weapon Resistance +3%, CON +1, MEN +1, STR +1, INT +1. P. / M. Critical Rate +10. MP Consumption for skill use -4%. Available only for Lv. 60 and higher. Blacksmith Baggins in Giran can help exchange this Talisman and Baium? Soul for Talisman of Baium. Effects from two such Talismans do not stack. -->
 		<set name="icon" val="icon.tallisman_oman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -235,13 +235,13 @@
 		</skills>
 	</item>
 	<item id="49682" name="Baium’s Soul" type="EtcItem">
-		<!-- Blacksmith Baggins in Giran will trade Baium�s Soul and Talisman of Insolence VI for Talisman of Baium. -->
+		<!-- Blacksmith Baggins in Giran will trade Baium? Soul and Talisman of Insolence VI for Talisman of Baium. -->
 		<set name="icon" val="icon.high_energy_condense_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49683" name="Talisman of Baium" type="Armor">
-		<!-- P. Atk. +135, M. Atk. +218, Magic Attack Resistance +10%, Skill Power +5%, all kinds of Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P. / M. Critical Rate +20. MP Consumption for skill use -5%. Skill Reuse Time -3%. Available only for Lv. 60 and higher. Effects from two such Talismans do not stack. -->
+		<!-- P. Atk. +284, M. Atk. +392, Magic Attack Resistance +10%, Skill Power +5%, all kinds of Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P. / M. Critical Rate +20. MP Consumption for skill use -5%. Skill Reuse Time -3%. Available only for Lv. 60 and higher. Effects from two such Talismans do not stack. -->
 		<set name="icon" val="icon.tallisman_baium" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -272,7 +272,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49686" name="Refined Silver Chapeau" additionalName="30-day" type="Armor">
-		<!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Reuse Time: 2 hours). Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. (30-day) -->
+		<!-- 30-day item. STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -285,7 +285,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="49687" name="Refined Silver Chapeau" additionalName="Special Trait" type="Armor">
-		<!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Reuse Time: 2 hours). Occupies 2 Hair Accessory slots. -->
+		<!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys2.icon2.pi_silverchaperon" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -336,7 +336,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49692" name="Samurai Black Long Sword" additionalName="15-day" type="Weapon">
-		<!-- Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration is 15 days. The item will be removed after the event is over. -->
+		<!-- 15-day item. Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -361,7 +361,7 @@
 		</stats>
 	</item>
 	<item id="49693" name="Magical Potion of Leaping" additionalName="Lv. 1" type="EtcItem">
-		<!-- Provides 1.2 million XP / 40 thousand SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
+		<!-- Provides 1.2 million XP / 40 thousand SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_holy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -373,7 +373,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49694" name="Magical Potion of Leaping" additionalName="Lv. 2" type="EtcItem">
-		<!-- Provides 7.8 million XP / 240 thousand SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
+		<!-- Provides 7.8 million XP / 240 thousand SP. Intended for Lv. 30 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -385,7 +385,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49695" name="Magical Potion of Leaping" additionalName="Lv. 3" type="EtcItem">
-		<!-- Provides 34.2 million XP / 1.04 million SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
+		<!-- Provides 34.2 million XP / 1.11 million SP. Intended for Lv. 40 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -397,7 +397,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49696" name="Gift from a Returned Friend" type="EtcItem">
-		<!-- Provides 37 million XP / 1.11 million SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred to between characters on the same account. The item will be removed after the event is over. -->
+		<!-- Provides 37 million XP / 1.11 million SP. Intended for Lv. 45 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -409,7 +409,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49697" name="Special Pirate Fruit" additionalName="Event" type="EtcItem">
-		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse and transferred between characters on the same account. -->
+		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_codran_i09" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -427,7 +427,7 @@
 		</skills>
 	</item>
 	<item id="49698" name="Class Transfer Coupon" type="EtcItem">
-		<!-- Take it to Luck Cat to receive the 2nd Class. Intended for Lv. 49 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
+		<!-- Take it to Luck Cat to receive the 2nd Class. Intended for Lv. 49 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.return_user_item" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -438,7 +438,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49699" name="Master’s Book Skill" type="EtcItem">
-		<!-- Take it to Luck Cat to receive all the skills corresponding to your level or class. Intended for Lv. 45-50. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
+		<!-- Take it to Luck Cat to receive all the skills corresponding to your level or class. Intended for Lv. 45-50. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.q10338_book_of_hades" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

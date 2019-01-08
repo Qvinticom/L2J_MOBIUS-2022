@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23010" level="98" type="L2Monster" name="Square Intruder">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -876,12 +876,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="4.528" /> <!-- Immortal Leather Leggings -->
-				<item id="17314" min="1" max="1" chance="3.727" /> <!-- Immortal Leather Boots -->
-				<item id="17305" min="1" max="1" chance="2.872" /> <!-- Immortal Breastplate -->
-				<item id="17316" min="1" max="1" chance="2.842" /> <!-- Immortal Tunic -->
-				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet -->
-				<item id="17307" min="1" max="1" chance="1.169" /> <!-- Immortal Gauntlets -->
+				<item id="17312" min="1" max="1" chance="4.528" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17314" min="1" max="1" chance="3.727" /> <!-- Immortal Leather Boots - Light Armor -->
+				<item id="17305" min="1" max="1" chance="2.872" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17316" min="1" max="1" chance="2.842" /> <!-- Immortal Tunic - Robe -->
+				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet - Robe -->
+				<item id="17307" min="1" max="1" chance="1.169" /> <!-- Immortal Gauntlets - Heavy Armor -->
 				<item id="17295" min="1" max="1" chance="0.75" /> <!-- Requiem Stormer -->
 				<item id="17298" min="1" max="1" chance="0.75" /> <!-- Requiem Buster -->
 				<item id="17299" min="1" max="1" chance="0.75" /> <!-- Requiem Caster -->
@@ -964,15 +964,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17317" min="1" max="1" chance="4.526" /> <!-- Immortal Stockings -->
-				<item id="17309" min="1" max="1" chance="3.728" /> <!-- Immortal Shield -->
-				<item id="17311" min="1" max="1" chance="2.775" /> <!-- Immortal Leather Armor -->
-				<item id="17320" min="1" max="1" chance="1.429" /> <!-- Immortal Sigil -->
+				<item id="17317" min="1" max="1" chance="4.526" /> <!-- Immortal Stockings - Robe -->
+				<item id="17309" min="1" max="1" chance="3.728" /> <!-- Immortal Shield - Heavy Armor -->
+				<item id="17311" min="1" max="1" chance="2.775" /> <!-- Immortal Leather Armor - Light Armor -->
+				<item id="17320" min="1" max="1" chance="1.429" /> <!-- Immortal Sigil - Robe -->
 				<item id="17292" min="1" max="1" chance="0.75" /> <!-- Requiem Slasher -->
 				<item id="17293" min="1" max="1" chance="0.75" /> <!-- Requiem Avenger -->
 				<item id="17294" min="1" max="1" chance="0.75" /> <!-- Requiem Fighter -->
 				<item id="17297" min="1" max="1" chance="0.75" /> <!-- Requiem Shooter -->
-				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters -->
+				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters - Heavy Armor -->
 				<item id="17526" min="1" max="1" chance="11.41" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="46474" min="1" max="1" chance="1.167" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="1.123" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -1052,14 +1052,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="5.081" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="1" max="1" chance="3.398" /> <!-- Immortal Shoes -->
-				<item id="17308" min="1" max="1" chance="2.528" /> <!-- Immortal Boots -->
-				<item id="17318" min="1" max="1" chance="2.072" /> <!-- Immortal Gloves -->
-				<item id="17304" min="1" max="1" chance="1.1" /> <!-- Immortal Helmet -->
+				<item id="17313" min="1" max="1" chance="5.081" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="1" max="1" chance="3.398" /> <!-- Immortal Shoes - Robe -->
+				<item id="17308" min="1" max="1" chance="2.528" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17318" min="1" max="1" chance="2.072" /> <!-- Immortal Gloves - Robe -->
+				<item id="17304" min="1" max="1" chance="1.1" /> <!-- Immortal Helmet - Heavy Armor -->
 				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
-				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet -->
+				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet - Light Armor -->
 				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
 				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
 				<item id="17526" min="1" max="1" chance="11.05" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1140,12 +1140,12 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17312" min="1" max="1" chance="4.528" /> <!-- Immortal Leather Leggings -->
-				<item id="17314" min="1" max="1" chance="3.727" /> <!-- Immortal Leather Boots -->
-				<item id="17305" min="1" max="1" chance="2.872" /> <!-- Immortal Breastplate -->
-				<item id="17316" min="1" max="1" chance="2.842" /> <!-- Immortal Tunic -->
-				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet -->
-				<item id="17307" min="1" max="1" chance="1.169" /> <!-- Immortal Gauntlets -->
+				<item id="17312" min="1" max="1" chance="4.528" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17314" min="1" max="1" chance="3.727" /> <!-- Immortal Leather Boots - Light Armor -->
+				<item id="17305" min="1" max="1" chance="2.872" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17316" min="1" max="1" chance="2.842" /> <!-- Immortal Tunic - Robe -->
+				<item id="17315" min="1" max="1" chance="1.852" /> <!-- Immortal Circlet - Robe -->
+				<item id="17307" min="1" max="1" chance="1.169" /> <!-- Immortal Gauntlets - Heavy Armor -->
 				<item id="17295" min="1" max="1" chance="0.75" /> <!-- Requiem Stormer -->
 				<item id="17298" min="1" max="1" chance="0.75" /> <!-- Requiem Buster -->
 				<item id="17299" min="1" max="1" chance="0.75" /> <!-- Requiem Caster -->
@@ -1228,15 +1228,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17317" min="1" max="1" chance="4.526" /> <!-- Immortal Stockings -->
-				<item id="17309" min="1" max="1" chance="3.728" /> <!-- Immortal Shield -->
-				<item id="17311" min="1" max="1" chance="2.775" /> <!-- Immortal Leather Armor -->
-				<item id="17320" min="1" max="1" chance="1.429" /> <!-- Immortal Sigil -->
+				<item id="17317" min="1" max="1" chance="4.526" /> <!-- Immortal Stockings - Robe -->
+				<item id="17309" min="1" max="1" chance="3.728" /> <!-- Immortal Shield - Heavy Armor -->
+				<item id="17311" min="1" max="1" chance="2.775" /> <!-- Immortal Leather Armor - Light Armor -->
+				<item id="17320" min="1" max="1" chance="1.429" /> <!-- Immortal Sigil - Robe -->
 				<item id="17292" min="1" max="1" chance="0.75" /> <!-- Requiem Slasher -->
 				<item id="17293" min="1" max="1" chance="0.75" /> <!-- Requiem Avenger -->
 				<item id="17294" min="1" max="1" chance="0.75" /> <!-- Requiem Fighter -->
 				<item id="17297" min="1" max="1" chance="0.75" /> <!-- Requiem Shooter -->
-				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters -->
+				<item id="17306" min="1" max="1" chance="0.75" /> <!-- Immortal Gaiters - Heavy Armor -->
 				<item id="17526" min="1" max="1" chance="11.41" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="46474" min="1" max="1" chance="1.167" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="1.123" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -1316,14 +1316,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="5.081" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="1" max="1" chance="3.398" /> <!-- Immortal Shoes -->
-				<item id="17308" min="1" max="1" chance="2.528" /> <!-- Immortal Boots -->
-				<item id="17318" min="1" max="1" chance="2.072" /> <!-- Immortal Gloves -->
-				<item id="17304" min="1" max="1" chance="1.1" /> <!-- Immortal Helmet -->
+				<item id="17313" min="1" max="1" chance="5.081" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="1" max="1" chance="3.398" /> <!-- Immortal Shoes - Robe -->
+				<item id="17308" min="1" max="1" chance="2.528" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17318" min="1" max="1" chance="2.072" /> <!-- Immortal Gloves - Robe -->
+				<item id="17304" min="1" max="1" chance="1.1" /> <!-- Immortal Helmet - Heavy Armor -->
 				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
-				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet -->
+				<item id="17310" min="1" max="1" chance="0.75" /> <!-- Immortal Leather Helmet - Light Armor -->
 				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
 				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
 				<item id="17526" min="1" max="1" chance="11.05" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -4387,7 +4387,7 @@
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="20.78" /> <!-- Synthetic Braid -->
-				<item id="30425" min="1" max="1" chance="0.75" /> <!-- Recipe: Blessed Spiritshot (R-grade) (for dwarves) -->
+				<item id="30425" min="1" max="1" chance="0.75" /> <!-- Recipe: Blessed Spiritshot (R-grade) -->
 			</spoil>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

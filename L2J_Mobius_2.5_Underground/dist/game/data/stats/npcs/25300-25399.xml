@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25300" level="79" type="L2Monster" name="Hekaton's Scout" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -2574,9 +2574,9 @@
 				<item id="261" min="1" max="1" chance="11.86" /> <!-- Bich'Hwa -->
 				<item id="395" min="1" max="1" chance="5.076" /> <!-- Manticore Skin Shirt -->
 				<item id="417" min="1" max="1" chance="2.47" /> <!-- Manticore Skin Gaiters -->
-				<item id="4560" min="1" max="1" chance="17.95" /> <!-- Greater INT Dye (Int  1 Wit - 1) -->
-				<item id="4561" min="1" max="1" chance="17.93" /> <!-- Greater MEN Dye (Men  1 Int - 1) -->
-				<item id="4559" min="1" max="3" chance="8.82" /> <!-- Greater INT Dye (Int  1 Men - 1) -->
+				<item id="4560" min="1" max="1" chance="17.95" /> <!-- Greater INT Dye <Int + 1 Wit - 1> -->
+				<item id="4561" min="1" max="1" chance="17.93" /> <!-- Greater MEN Dye <Men + 1 Int - 1> -->
+				<item id="4559" min="1" max="3" chance="8.82" /> <!-- Greater INT Dye <Int + 1 Men - 1> -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4695,9 +4695,9 @@
 				<item id="352" min="1" max="1" chance="1.529" /> <!-- Brigandine -->
 				<item id="279" min="1" max="1" chance="1.164" /> <!-- Reinforced Longbow -->
 				<item id="955" min="1" max="1" chance="14.16" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="4564" min="1" max="1" chance="14.06" /> <!-- Greater WIT Dye (Wit  1 Men - 1) -->
-				<item id="4563" min="1" max="1" chance="13.51" /> <!-- Greater WIT Dye (Wit  1 Int - 1) -->
-				<item id="4562" min="1" max="3" chance="6.839" /> <!-- Greater MEN Dye (Men  1 Wit - 1) -->
+				<item id="4564" min="1" max="1" chance="14.06" /> <!-- Greater WIT Dye <Wit + 1 Men - 1> -->
+				<item id="4563" min="1" max="1" chance="13.51" /> <!-- Greater WIT Dye <Wit + 1 Int - 1> -->
+				<item id="4562" min="1" max="3" chance="6.839" /> <!-- Greater MEN Dye <Men + 1 Wit - 1> -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4892,9 +4892,9 @@
 				<item id="107" min="1" max="1" chance="1.297" /> <!-- Compound Shield -->
 				<item id="517" min="1" max="1" chance="0.75" /> <!-- Compound Helmet -->
 				<item id="1149" min="1" max="1" chance="0.3" /> <!-- Shining Circlet -->
-				<item id="4604" min="1" max="1" chance="15.92" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
-				<item id="4606" min="1" max="1" chance="15.79" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
-				<item id="4605" min="1" max="1" chance="15.35" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
+				<item id="4604" min="1" max="1" chance="15.92" /> <!-- Greater CON Dye <Con + 3 DEX - 3> -->
+				<item id="4606" min="1" max="1" chance="15.79" /> <!-- Greater DEX Dye <Dex + 3 CON - 3> -->
+				<item id="4605" min="1" max="1" chance="15.35" /> <!-- Greater DEX Dye <Dex + 3 Str - 3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->

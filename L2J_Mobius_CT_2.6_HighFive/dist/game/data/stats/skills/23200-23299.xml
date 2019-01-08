@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23200" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
-		<!-- Confirmed CT2.5 -->
+		<!-- Provides a soccer ball containing the mysterious energy of cheering power. When you use the soccer ball, you can receive a gift at random. Reuse delay is 10 seconds. Consumes 500 energy. -->
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -25,6 +25,7 @@
 		</for>
 	</skill>
 	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -37,6 +38,7 @@
 		</cond>
 	</skill>
 	<skill id="23202" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -49,6 +51,7 @@
 		</cond>
 	</skill>
 	<skill id="23203" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -61,6 +64,7 @@
 		</cond>
 	</skill>
 	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -73,6 +77,7 @@
 		</cond>
 	</skill>
 	<skill id="23205" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -85,6 +90,7 @@
 		</cond>
 	</skill>
 	<skill id="23206" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -97,6 +103,7 @@
 		</cond>
 	</skill>
 	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -109,6 +116,7 @@
 		</cond>
 	</skill>
 	<skill id="23208" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -121,6 +129,7 @@
 		</cond>
 	</skill>
 	<skill id="23209" levels="1" name="Penalty Kick Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -133,6 +142,7 @@
 		</cond>
 	</skill>
 	<skill id="23210" levels="85" name="Aura Flare">
+		<!-- Attacks a contacted target with non-attribute attack and temporarily decreases one's magic attack power during PvP. Power 60. -->
 		<table name="#effectPoints"> -74 -77 -81 -85 -89 -93 -97 -101 -106 -110 -115 -120 -125 -130 -135 -140 -146 -151 -157 -163 -169 -175 -181 -188 -194 -201 -208 -214 -221 -228 -236 -243 -250 -258 -265 -273 -280 -288 -296 -303 -311 -319 -327 -335 -343 -350 -358 -366 -374 -381 -389 -396 -404 -411 -419 -426 -433 -440 -446 -453 -459 -466 -472 -478 -483 -489 -494 -499 -504 -508 -513 -517 -520 -524 -527 -530 -533 -536 -538 -541 -543 -545 -547 -549 -551 </table>
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="3" />
@@ -148,6 +158,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23211" levels="85" name="Prominence">
+		<!-- Condenses air to burst flames. Power 75. -->
 		<table name="#effectPoints"> -92 -97 -101 -106 -111 -116 -121 -126 -132 -138 -143 -149 -156 -162 -168 -175 -182 -189 -196 -204 -211 -219 -227 -235 -243 -251 -259 -268 -277 -285 -294 -303 -313 -322 -331 -341 -350 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -160,6 +171,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23212" levels="85" name="Flame Strike">
+		<!-- Hurls a fireball with a wide range that causes a burning trail. Power 38. -->
 		<table name="#effectPoints"> -92 -97 -101 -106 -111 -116 -121 -126 -132 -138 -143 -149 -156 -162 -168 -175 -182 -189 -196 -204 -211 -219 -227 -235 -243 -251 -259 -268 -277 -285 -294 -303 -313 -322 -331 -341 -350 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="blockedInOlympiad" val="true" />
@@ -173,6 +185,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23213" levels="2" name="Berserker Spirit">
+		<!-- Temporarily decreases P. Def./M. Def./evasion and increases P. Atk./M. Atk./Atk. Spd./Casting Spd./Speed. Effectiveness 1. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 331 486 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -189,8 +202,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23214" levels="1" name="Good/Bad of Life">
-		<!-- Confirmed CT2.5 -->
-		<!-- Triggered from 22175 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -205,8 +216,6 @@
 		</for>
 	</skill>
 	<skill id="23215" levels="1" name="Good/Bad of Mind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Triggered from 22176 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -221,6 +230,7 @@
 		</for>
 	</skill>
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -244,6 +254,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23218" levels="1" name="Flower Fairy Spirit Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -267,6 +278,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23220" levels="1" name="Cheerleader Orodriel Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -290,6 +302,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -313,6 +326,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23224" levels="1" name="Cheerleader Naonin Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -336,6 +350,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23226" levels="1" name="Cheerleader Mortia Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -359,6 +374,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23228" levels="1" name="Cheerleader Kaurin Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -382,6 +398,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23230" levels="1" name="Cheerleader Meruril Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -405,6 +422,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23232" levels="1" name="Handy Agathion Cute Trick">
+		<!-- You can see the summoned spirit's cute tricks. -->
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -413,7 +431,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23233" levels="1" name="Handy Agathion Special Skill - Halloween's Blessing">
-		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases resistance to darkness by 20. Reuse delay is 2 hours. -->
+		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Resistance to Dark by 20. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -443,13 +461,12 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23237" levels="1" name="Zaken Spirit Sword Special Skill - Song of the Sword">
-		<!-- "For 30 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Reuse delay is 2 hours." -->
+		<!-- For 30 minutes increases Max HP and Max MP by 40%, Atk. Spd. by 20% and P. Atk. by 10%. Re-use delay is 2 hours. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23238" levels="1" name="Master's Blessing - Eye of Pa'agrio">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combines the increased accuracy effect and critical defense effect for a more advanced effect. For 1 hour, increases accuracy by 4 and decreases the rate of being hit by a critical attack by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
@@ -476,8 +493,7 @@
 		</for>
 	</skill>
 	<skill id="23239" levels="1" name="Master's Blessing - Soul of Pa'agrio">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combines the increased M. Atk. effect and M. Def. effect for a more advanced effect. For 1 hour, increases nearby clan members' M. Atk. by 75% and M. Def. by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
@@ -504,8 +520,7 @@
 		</for>
 	</skill>
 	<skill id="23240" levels="1" name="Master's Blessing - Chant of Magnus">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP of all party members by 15%, MP recovery bonus by 1.5 when wearing light/heavy armor, MP recovery bonus by 4 when wearing a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Resistance to fire/water/wind/earth by 10, Resistance to de-buff attacks by 25, and Resistance to buff canceling attacks by 40. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -537,8 +552,7 @@
 		</for>
 	</skill>
 	<skill id="23241" levels="1" name="Master's Blessing - Chant of Blood Awakening">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combines general attack damage absorption and attack speed increase for a more advanced blood awakening effect. For 1 hour, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on the enemy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
@@ -565,8 +579,7 @@
 		</for>
 	</skill>
 	<skill id="23242" levels="1" name="Master's Blessing - Spike">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Adds a spike to a blunt weapon to increase P. Atk. by 5% and its weight for shock attacks by 8% for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -587,8 +600,7 @@
 		</for>
 	</skill>
 	<skill id="23243" levels="1" name="Master's Blessing - Bowstring">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -611,8 +623,7 @@
 		</for>
 	</skill>
 	<skill id="23244" levels="1" name="Master's Blessing - Hard Tanning">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Tans armor to increase P. Def. by 5% and evasion by 2 for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
@@ -635,8 +646,7 @@
 		</for>
 	</skill>
 	<skill id="23245" levels="1" name="Master's Blessing - Embroider">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Embroiders a robe to increase P. Def. by 5% and MP recovery bonus by 2 for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
@@ -659,8 +669,7 @@
 		</for>
 	</skill>
 	<skill id="23246" levels="1" name="Master's Blessing - Counter Critical">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases P. Def. against critical by 30%. When an attack above a certain amount of damage is received, the Critical Damage of general short-range physical attack is increased for 8 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="COUNTER_CRITICAL" />
@@ -683,8 +692,7 @@
 		</for>
 	</skill>
 	<skill id="23247" levels="1" name="Master's Blessing - Elemental Protection">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases Resistance to fire/water/wind/earth attacks by 20. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP_ATTR" />
@@ -704,8 +712,7 @@
 		</for>
 	</skill>
 	<skill id="23248" levels="1" name="Master's Blessing - Arcane Protection">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases Resistance to buff canceling attacks by 30 and Resistance to de-buff attacks by 20. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
@@ -723,8 +730,7 @@
 		</for>
 	</skill>
 	<skill id="23249" levels="1" name="Master's Call">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- Summons the target's party member somewhere near the target. -->
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2500" />
 		<set name="hitTime" val="500" />
@@ -751,8 +757,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23253" levels="1" name="Master's Blessing - Focus">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Critical attack rate by 30% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -768,8 +773,7 @@
 		</for>
 	</skill>
 	<skill id="23254" levels="1" name="Master's Blessing - Death Whisper">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Critical attack power by 35% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -785,8 +789,7 @@
 		</for>
 	</skill>
 	<skill id="23255" levels="1" name="Master's Blessing - Haste">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -802,8 +805,7 @@
 		</for>
 	</skill>
 	<skill id="23256" levels="1" name="Master's Blessing - Guidance">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases accuracy by 4 for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -819,8 +821,7 @@
 		</for>
 	</skill>
 	<skill id="23257" levels="1" name="Master's Blessing - Blessed Body">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Max HP by 35% for 1 hour. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -836,8 +837,7 @@
 		</for>
 	</skill>
 	<skill id="23258" levels="1" name="Master's Blessing - Blessed Soul">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Max MP by 35% for 1 hour. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -853,8 +853,7 @@
 		</for>
 	</skill>
 	<skill id="23259" levels="1" name="Master's Blessing - Agility">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increase Evasion by 4 for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -870,8 +869,7 @@
 		</for>
 	</skill>
 	<skill id="23260" levels="1" name="Master's Blessing - Acumen">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Casting Spd. by 30% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -887,8 +885,7 @@
 		</for>
 	</skill>
 	<skill id="23261" levels="1" name="Master's Blessing - Decrease Weight">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
@@ -904,8 +901,7 @@
 		</for>
 	</skill>
 	<skill id="23262" levels="1" name="Master's Blessing - Might">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Atk. by 15% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -921,8 +917,7 @@
 		</for>
 	</skill>
 	<skill id="23263" levels="1" name="Master's Blessing - Shield">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -938,8 +933,7 @@
 		</for>
 	</skill>
 	<skill id="23264" levels="1" name="Master's Blessing - Magic Barrier">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases M. Def. by 30% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
@@ -955,8 +949,7 @@
 		</for>
 	</skill>
 	<skill id="23265" levels="1" name="Master's Blessing - Vampiric Rage">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, 9% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -972,8 +965,7 @@
 		</for>
 	</skill>
 	<skill id="23266" levels="1" name="Master's Blessing - Empower">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases M. Atk. by 75% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -989,8 +981,7 @@
 		</for>
 	</skill>
 	<skill id="23267" levels="1" name="Master's Blessing - Wind Walk">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Speed by 33 for 1 hour. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1006,8 +997,7 @@
 		</for>
 	</skill>
 	<skill id="23268" levels="1" name="Master's Blessing - Berserker Spirit">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -1030,8 +1020,7 @@
 		</for>
 	</skill>
 	<skill id="23269" levels="1" name="Master's Blessing - Greater Might">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Atk. by 10% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -1047,8 +1036,7 @@
 		</for>
 	</skill>
 	<skill id="23270" levels="1" name="Master's Blessing - Greater Shield">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -1064,8 +1052,7 @@
 		</for>
 	</skill>
 	<skill id="23271" levels="1" name="Master's Blessing - Wild Magic">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1081,8 +1068,7 @@
 		</for>
 	</skill>
 	<skill id="23272" levels="1" name="Master's Blessing - Clarity">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -1100,8 +1086,7 @@
 		</for>
 	</skill>
 	<skill id="23273" levels="1" name="Master's Blessing - Prophecy of Water">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1130,8 +1115,7 @@
 		</for>
 	</skill>
 	<skill id="23274" levels="1" name="Master's Blessing - Prophecy of Fire">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1159,8 +1143,7 @@
 		</for>
 	</skill>
 	<skill id="23275" levels="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1187,8 +1170,7 @@
 		</for>
 	</skill>
 	<skill id="23276" levels="1" name="Master's Blessing - Chant of Victory">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and accuracy by 4. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1217,8 +1199,7 @@
 		</for>
 	</skill>
 	<skill id="23277" levels="1" name="Master's Blessing - Improve Combat">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
@@ -1246,8 +1227,7 @@
 		</for>
 	</skill>
 	<skill id="23278" levels="1" name="Master's Blessing - Improve Magic">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine magic power increase and magic resistance increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
@@ -1275,8 +1255,7 @@
 		</for>
 	</skill>
 	<skill id="23279" levels="1" name="Master's Blessing - Improve Condition">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
@@ -1304,8 +1283,7 @@
 		</for>
 	</skill>
 	<skill id="23280" levels="1" name="Master's Blessing - Improve Critical">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
@@ -1333,8 +1311,7 @@
 		</for>
 	</skill>
 	<skill id="23281" levels="1" name="Master's Blessing - Improve Shield Defense">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and shield P. Def. by 50%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
@@ -1362,8 +1339,7 @@
 		</for>
 	</skill>
 	<skill id="23282" levels="1" name="Master's Blessing - Improve Movement">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
@@ -1391,8 +1367,7 @@
 		</for>
 	</skill>
 	<skill id="23283" levels="1" name="Master's Blessing - Sharpen Edge">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -1414,8 +1389,7 @@
 		</for>
 	</skill>
 	<skill id="23284" levels="1" name="Master's Blessing - Face Harden">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
@@ -1434,8 +1408,7 @@
 		</for>
 	</skill>
 	<skill id="23285" levels="1" name="Master's Blessing - Blessing of Noblesse">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Blessing of Noblesse and the Amulet of Luck disappear. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PRESERVE_ABNORMAL" />
@@ -1450,8 +1423,7 @@
 		</for>
 	</skill>
 	<skill id="23286" levels="1" name="Master's Blessing - Eye of Pa'agrio">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combines the increased accuracy effect and critical defense effect for a more advanced effect. For 1 hour, increases accuracy by 4 and decreases the rate of being hit by a critical attack by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
@@ -1477,8 +1449,7 @@
 		</for>
 	</skill>
 	<skill id="23287" levels="1" name="Master's Blessing - Soul of Pa'agrio">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combines the increased M. Atk. effect and M. Def. effect for a more advanced effect. For 1 hour, increases nearby clan members' M. Atk. by 75% and M. Def. by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
@@ -1504,8 +1475,7 @@
 		</for>
 	</skill>
 	<skill id="23288" levels="1" name="Master's Blessing - Chant of Magnus">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP of all party members by 15%, MP recovery bonus by 1.5 when wearing light/heavy armor, MP recovery bonus by 4 when wearing a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Resistance to fire/water/wind/earth by 10, Resistance to de-buff attacks by 25, and Resistance to buff canceling attacks by 40. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1536,8 +1506,7 @@
 		</for>
 	</skill>
 	<skill id="23289" levels="1" name="Master's Blessing - Chant of Blood Awakening">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combines general attack damage absorption and attack speed increase for a more advanced blood awakening effect. For 1 hour, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on the enemy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
@@ -1563,8 +1532,7 @@
 		</for>
 	</skill>
 	<skill id="23290" levels="1" name="Master's Blessing - Spike">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Adds a spike to a blunt weapon to increase P. Atk. by 5% and its weight for shock attacks by 8% for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -1584,8 +1552,7 @@
 		</for>
 	</skill>
 	<skill id="23291" levels="1" name="Master's Blessing - Bowstring">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -1607,8 +1574,7 @@
 		</for>
 	</skill>
 	<skill id="23292" levels="1" name="Master's Blessing - Hard Tanning">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Tans armor to increase P. Def. by 5% and evasion by 2 for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
@@ -1630,8 +1596,7 @@
 		</for>
 	</skill>
 	<skill id="23293" levels="1" name="Master's Blessing - Embroider">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Embroiders a robe to increase P. Def. by 5% and MP recovery bonus by 2 for 1 hour. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
@@ -1653,8 +1618,7 @@
 		</for>
 	</skill>
 	<skill id="23294" levels="1" name="Master's Blessing - Counter Critical">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases P. Def. against critical by 30%. When an attack above a certain amount of damage is received, the Critical Damage of general short-range physical attack is increased for 8 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="COUNTER_CRITICAL" />
@@ -1676,8 +1640,7 @@
 		</for>
 	</skill>
 	<skill id="23295" levels="1" name="Master's Blessing - Elemental Protection">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases Resistance to fire/water/wind/earth attacks by 20. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP_ATTR" />
@@ -1696,8 +1659,7 @@
 		</for>
 	</skill>
 	<skill id="23296" levels="1" name="Master's Blessing - Arcane Protection">
-		<!-- High Five Skill -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases Resistance to buff canceling attacks by 30 and Resistance to de-buff attacks by 20. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
@@ -1714,12 +1676,12 @@
 		</for>
 	</skill>
 	<skill id="23297" levels="1" name="Santa Claus's Blessing">
-		<!-- "Rudolph's Blessing. For 20 minutes, increases Atk. Spd. by 10%, Casting Spd. by 10%, and Speed by 10. Rudolph consumes 2 fresh herbs." -->
+		<!-- Rudolph's Blessing. For 20 minutes, increases Atk. Spd. by 10%, Casting Spd. by 10%, and Speed by 10. Rudolph consumes 2 fresh herbs. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23298" levels="1" name="Flame Hawk">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Envelops in flames to inflict 300 fire damage every second for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FLAME_HAWK" />
@@ -1738,6 +1700,7 @@
 		</for>
 	</skill>
 	<skill id="23299" levels="1" name="Arrow Rain">
+		<!-- Envelops in a hurricane to inflict 300 wind damage every second for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ARROW_RAIN" />

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="33600" name="Bound Dynasty Leather Gloves" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -23,7 +22,6 @@
 		</stats>
 	</item>
 	<item id="33601" name="Bound Dynasty Leather Boots" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -45,7 +43,6 @@
 		</stats>
 	</item>
 	<item id="33602" name="Bound Dynasty Tunic" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +65,6 @@
 		</stats>
 	</item>
 	<item id="33603" name="Bound Dynasty Stockings" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -91,7 +87,6 @@
 		</stats>
 	</item>
 	<item id="33604" name="Bound Dynasty Circlet" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -112,7 +107,6 @@
 		</stats>
 	</item>
 	<item id="33605" name="Bound Dynasty Gloves" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -134,7 +128,6 @@
 		</stats>
 	</item>
 	<item id="33606" name="Bound Dynasty Shoes" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -156,7 +149,6 @@
 		</stats>
 	</item>
 	<item id="33607" name="Bound Dynasty Sigil" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -191,9 +183,9 @@
 		<set name="handler" val="ItemSkills" />
 		<createItems>
 			<item id="9446" count="1" chance="10" /> <!-- Dynasty Knife -->
-			<item id="33559" count="1" chance="30" /> <!-- Bound Dynasty Knife - Focus (Event) -->
-			<item id="33560" count="1" chance="30" /> <!-- Bound Dynasty Knife - Evasion (Event) -->
-			<item id="33561" count="1" chance="30" /> <!-- Bound Dynasty Knife - Critical Damage (Event) -->
+			<item id="33559" count="1" chance="30" /> <!-- Bound Dynasty Knife - Focus - Event -->
+			<item id="33560" count="1" chance="30" /> <!-- Bound Dynasty Knife - Evasion - Event -->
+			<item id="33561" count="1" chance="30" /> <!-- Bound Dynasty Knife - Critical Damage - Event -->
 		</createItems>
 		<skills>
 			<skill id="12900" level="1" /> <!-- Check Item -->
@@ -209,9 +201,9 @@
 		<set name="icon" val="icon.weapon_dynasty_blade_i00" />
 		<createItems>
 			<item id="9442" count="1" chance="10" /> <!-- Dynasty Sword -->
-			<item id="33547" count="1" chance="30" /> <!-- Bound Dynasty Sword - Focus (Event) -->
-			<item id="33548" count="1" chance="30" /> <!-- Bound Dynasty Sword - Health (Event) -->
-			<item id="33549" count="1" chance="30" /> <!-- Bound Dynasty Sword - Light Armor (Event) -->
+			<item id="33547" count="1" chance="30" /> <!-- Bound Dynasty Sword - Focus - Event -->
+			<item id="33548" count="1" chance="30" /> <!-- Bound Dynasty Sword - Health - Event -->
+			<item id="33549" count="1" chance="30" /> <!-- Bound Dynasty Sword - Light Armor - Event -->
 		</createItems>
 		<skills>
 			<skill id="12901" level="1" /> <!-- Check Item -->
@@ -227,9 +219,9 @@
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00" />
 		<createItems>
 			<item id="9444" count="1" chance="10" /> <!-- Dynasty Phantom -->
-			<item id="33553" count="1" chance="30" /> <!-- Bound Dynasty Phantom - Acumen (Event) -->
-			<item id="33554" count="1" chance="30" /> <!-- Bound Dynasty Phantom - Mana Up (Event) -->
-			<item id="33555" count="1" chance="30" /> <!-- Bound Dynasty Phantom - Conversion (Event) -->
+			<item id="33553" count="1" chance="30" /> <!-- Bound Dynasty Phantom - Acumen - Event -->
+			<item id="33554" count="1" chance="30" /> <!-- Bound Dynasty Phantom - Mana Up - Event -->
+			<item id="33555" count="1" chance="30" /> <!-- Bound Dynasty Phantom - Conversion - Event -->
 		</createItems>
 		<skills>
 			<skill id="12902" level="1" /> <!-- Check Item -->
@@ -245,9 +237,9 @@
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<createItems>
 			<item id="9376" count="1" chance="10" /> <!-- Dynasty Rapier -->
-			<item id="33582" count="1" chance="30" /> <!-- Bound Dynasty Rapier - Focus (Event) -->
-			<item id="33583" count="1" chance="30" /> <!-- Bound Dynasty Rapier - Health (Event) -->
-			<item id="33584" count="1" chance="30" /> <!-- Bound Dynasty Rapier - Light Armor (Event) -->
+			<item id="33582" count="1" chance="30" /> <!-- Bound Dynasty Rapier - Focus - Event -->
+			<item id="33583" count="1" chance="30" /> <!-- Bound Dynasty Rapier - Health - Event -->
+			<item id="33584" count="1" chance="30" /> <!-- Bound Dynasty Rapier - Light Armor - Event -->
 		</createItems>
 		<skills>
 			<skill id="12903" level="1" /> <!-- Check Item -->
@@ -263,9 +255,9 @@
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<createItems>
 			<item id="9443" count="1" chance="10" /> <!-- Dynasty Blade -->
-			<item id="33550" count="1" chance="30" /> <!-- Bound Dynasty Blade - Focus (Event) -->
-			<item id="33551" count="1" chance="30" /> <!-- Bound Dynasty Blade - Health (Event) -->
-			<item id="33552" count="1" chance="30" /> <!-- Bound Dynasty Blade - Light Armor (Event) -->
+			<item id="33550" count="1" chance="30" /> <!-- Bound Dynasty Blade - Focus - Event -->
+			<item id="33551" count="1" chance="30" /> <!-- Bound Dynasty Blade - Health - Event -->
+			<item id="33552" count="1" chance="30" /> <!-- Bound Dynasty Blade - Light Armor - Event -->
 		</createItems>
 		<skills>
 			<skill id="12904" level="1" /> <!-- Check Item -->
@@ -281,9 +273,9 @@
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<createItems>
 			<item id="9380" count="1" chance="10" /> <!-- Dynasty Ancient Sword -->
-			<item id="33585" count="1" chance="30" /> <!-- Bound Dynasty Ancient Sword - Focus (Event) -->
-			<item id="33586" count="1" chance="30" /> <!-- Bound Dynasty Ancient Sword - Health (Event) -->
-			<item id="33587" count="1" chance="30" /> <!-- Bound Dynasty Ancient Sword - Light Armor (Event) -->
+			<item id="33585" count="1" chance="30" /> <!-- Bound Dynasty Ancient Sword - Focus - Event -->
+			<item id="33586" count="1" chance="30" /> <!-- Bound Dynasty Ancient Sword - Health - Event -->
+			<item id="33587" count="1" chance="30" /> <!-- Bound Dynasty Ancient Sword - Light Armor - Event -->
 		</createItems>
 		<skills>
 			<skill id="12905" level="1" /> <!-- Check Item -->
@@ -299,9 +291,9 @@
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<createItems>
 			<item id="9447" count="1" chance="10" /> <!-- Dynasty Halberd -->
-			<item id="33562" count="1" chance="30" /> <!-- Bound Dynasty Halberd - Anger (Event) -->
-			<item id="33563" count="1" chance="30" /> <!-- Bound Dynasty Halberd - Critical Stun (Event) -->
-			<item id="33564" count="1" chance="30" /> <!-- Bound Dynasty Halberd - Light Armor (Event) -->
+			<item id="33562" count="1" chance="30" /> <!-- Bound Dynasty Halberd - Anger - Event -->
+			<item id="33563" count="1" chance="30" /> <!-- Bound Dynasty Halberd - Critical Stun - Event -->
+			<item id="33564" count="1" chance="30" /> <!-- Bound Dynasty Halberd - Light Armor - Event -->
 		</createItems>
 		<skills>
 			<skill id="12906" level="1" /> <!-- Check Item -->
@@ -317,9 +309,9 @@
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i00" />
 		<createItems>
 			<item id="9384" count="1" chance="10" /> <!-- Dynasty Crossbow -->
-			<item id="33588" count="1" chance="30" /> <!-- Bound Dynasty Crossbow - Cheap Shot (Event) -->
-			<item id="33589" count="1" chance="30" /> <!-- Bound Dynasty Crossbow - Guidance (Event) -->
-			<item id="33590" count="1" chance="30" /> <!-- Bound Dynasty Crossbow - Focus (Event) -->
+			<item id="33588" count="1" chance="30" /> <!-- Bound Dynasty Crossbow - Cheap Shot - Event -->
+			<item id="33589" count="1" chance="30" /> <!-- Bound Dynasty Crossbow - Guidance - Event -->
+			<item id="33590" count="1" chance="30" /> <!-- Bound Dynasty Crossbow - Focus - Event -->
 		</createItems>
 		<skills>
 			<skill id="12907" level="1" /> <!-- Check Item -->
@@ -335,9 +327,9 @@
 		<set name="icon" val="icon.weapon_dynasty_hammer_i00" />
 		<createItems>
 			<item id="9448" count="1" chance="10" /> <!-- Dynasty Cudgel -->
-			<item id="33565" count="1" chance="30" /> <!-- Bound Dynasty Cudgel - Anger (Event) -->
-			<item id="33566" count="1" chance="30" /> <!-- Bound Dynasty Cudgel - Health (Event) -->
-			<item id="33567" count="1" chance="30" /> <!-- Bound Dynasty Cudgel - Rsk. Focus (Event) -->
+			<item id="33565" count="1" chance="30" /> <!-- Bound Dynasty Cudgel - Anger - Event -->
+			<item id="33566" count="1" chance="30" /> <!-- Bound Dynasty Cudgel - Health - Event -->
+			<item id="33567" count="1" chance="30" /> <!-- Bound Dynasty Cudgel - Rsk. Focus - Event -->
 		</createItems>
 		<skills>
 			<skill id="12908" level="1" /> <!-- Check Item -->
@@ -353,9 +345,9 @@
 		<set name="icon" val="icon.weapon_dynasty_staff_i00" />
 		<createItems>
 			<item id="9449" count="1" chance="10" /> <!-- Dynasty Mace -->
-			<item id="33568" count="1" chance="30" /> <!-- Bound Dynasty Mace - Mana Up (Event) -->
-			<item id="33569" count="1" chance="30" /> <!-- Bound Dynasty Mace - Conversion (Event) -->
-			<item id="33570" count="1" chance="30" /> <!-- Bound Dynasty Mace - Acumen (Event) -->
+			<item id="33568" count="1" chance="30" /> <!-- Bound Dynasty Mace - Mana Up - Event -->
+			<item id="33569" count="1" chance="30" /> <!-- Bound Dynasty Mace - Conversion - Event -->
+			<item id="33570" count="1" chance="30" /> <!-- Bound Dynasty Mace - Acumen - Event -->
 		</createItems>
 		<skills>
 			<skill id="12909" level="1" /> <!-- Check Item -->
@@ -371,9 +363,9 @@
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i00" />
 		<createItems>
 			<item id="10252" count="1" chance="10" /> <!-- Dynasty Staff -->
-			<item id="33574" count="1" chance="30" /> <!-- Bound Dynasty Staff - Mana Up (Event) -->
-			<item id="33575" count="1" chance="30" /> <!-- Bound Dynasty Staff - Conversion (Event) -->
-			<item id="33576" count="1" chance="30" /> <!-- Bound Dynasty Staff - Acumen (Event) -->
+			<item id="33574" count="1" chance="30" /> <!-- Bound Dynasty Staff - Mana Up - Event -->
+			<item id="33575" count="1" chance="30" /> <!-- Bound Dynasty Staff - Conversion - Event -->
+			<item id="33576" count="1" chance="30" /> <!-- Bound Dynasty Staff - Acumen - Event -->
 		</createItems>
 		<skills>
 			<skill id="12910" level="1" /> <!-- Check Item -->
@@ -389,9 +381,9 @@
 		<set name="icon" val="icon.weapon_dynasty_crusher_i00" />
 		<createItems>
 			<item id="10253" count="1" chance="10" /> <!-- Dynasty Crusher -->
-			<item id="33577" count="1" chance="30" /> <!-- Bound Dynasty Crusher - Anger (Event) -->
-			<item id="33578" count="1" chance="30" /> <!-- Bound Dynasty Crusher - Health (Event) -->
-			<item id="33579" count="1" chance="30" /> <!-- Bound Dynasty Crusher - Rsk. Focus (Event) -->
+			<item id="33577" count="1" chance="30" /> <!-- Bound Dynasty Crusher - Anger - Event -->
+			<item id="33578" count="1" chance="30" /> <!-- Bound Dynasty Crusher - Health - Event -->
+			<item id="33579" count="1" chance="30" /> <!-- Bound Dynasty Crusher - Rsk. Focus - Event -->
 		</createItems>
 		<skills>
 			<skill id="12911" level="1" /> <!-- Check Item -->
@@ -407,9 +399,9 @@
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00" />
 		<createItems>
 			<item id="9450" count="1" chance="10" /> <!-- Dynasty Bagh-Nakh -->
-			<item id="33571" count="1" chance="30" /> <!-- Bound Dynasty Bagh-Nakh - Rsk. Evasion (Event) -->
-			<item id="33572" count="1" chance="30" /> <!-- Bound Dynasty Bagh-Nakh - Focus (Event) -->
-			<item id="33573" count="1" chance="30" /> <!-- Bound Dynasty Bagh-Nakh - Haste (Event) -->
+			<item id="33571" count="1" chance="30" /> <!-- Bound Dynasty Bagh-Nakh - Rsk. Evasion - Event -->
+			<item id="33572" count="1" chance="30" /> <!-- Bound Dynasty Bagh-Nakh - Focus - Event -->
+			<item id="33573" count="1" chance="30" /> <!-- Bound Dynasty Bagh-Nakh - Haste - Event -->
 		</createItems>
 		<skills>
 			<skill id="12912" level="1" /> <!-- Check Item -->
@@ -1024,9 +1016,9 @@
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<createItems>
 			<item id="5286" count="1" chance="10" /> <!-- Berserker Blade -->
-			<item id="31226" count="1" chance="30" /> <!-- Bound Berserker Blade - Focus -->
-			<item id="31227" count="1" chance="30" /> <!-- Bound Berserker Blade - Critical Damage -->
-			<item id="31228" count="1" chance="30" /> <!-- Bound Berserker Blade - Haste -->
+			<item id="31226" count="1" chance="30" /> <!-- Player Commendation - Apocalypse Thrower (Water) - Focus (PC-exclusive) -->
+			<item id="31227" count="1" chance="30" /> <!-- Player Commendation - Apocalypse Thrower (Wind) - Focus (PC-exclusive) -->
+			<item id="31228" count="1" chance="30" /> <!-- Player Commendation - Apocalypse Thrower (Fire) - Focus (PC-exclusive) -->
 		</createItems>
 		<skills>
 			<skill id="12941" level="1" /> <!-- Check Item -->

@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55089" level="1"/>	<!--Rare Accessory Pack-->
+			<skill id="55089" level="1"/>	<!-- Rare Accessory Pack -->
 		</skills>
 	</item>
 	<item id="49526" name="Improved Scroll of Resurrection" type="EtcItem">
@@ -505,7 +505,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39059" level="1"/> <!--Spellbook Chest -->
+			<skill id="39059" level="1"/> <!-- Spellbook Chest -->
 		</skills>
 	</item>
 	<item id="49542" name="Improved Scroll of Resurrection" type="EtcItem">
@@ -1033,10 +1033,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49589" min="180" max="180" chance="100" />
-			<item id="38154" min="180" max="180" chance="100" />
-			<item id="49502" min="5" max="5" chance="100" />
-			<item id="49503" min="5" max="5" chance="100" />
+			<item id="49589" min="180" max="180" chance="100" /> <!-- Golden Bait -->
+			<item id="38154" min="180" max="180" chance="100" /> <!-- Fishing Shot -->
+			<item id="49502" min="5" max="5" chance="100" /> <!-- Teleport: Giran Harbor -->
+			<item id="49503" min="5" max="5" chance="100" /> <!-- Teleport: Gludin Harbor -->
 		</capsuled_items>
 	</item>
 	<item id="49584" name="Golden Boot" type="EtcItem">
@@ -1048,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="45488" min="1" max="1" chance="100" />
+			<item id="45488" min="1" max="1" chance="100" /> <!-- Golden Treasure Chest -->
 		</capsuled_items>
 	</item>
 	<item id="49585" name="Golden Necklace of Mermaid" additionalName="7-day" type="EtcItem">
@@ -1106,7 +1106,7 @@
 		</stats>
 	</item>
 	<item id="49588" name="Mermaid Golden Fishing Rod Chest" additionalName="30-day" type="EtcItem">
-		<!-- You can obtain Mermaid's Golden Fishing Rod for 30 days. The item cannot be dropped. <Attention>.  Pay attention when opening the chest: relocation of specific items is restricted. -->
+		<!-- You can obtain Mermaid's Golden Fishing Rod for 30 days. The item cannot be dropped. <Attention>. Pay attention when opening the chest: relocation of specific items is restricted. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

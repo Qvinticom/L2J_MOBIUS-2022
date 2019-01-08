@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="22600" name="Mysterious Blessed Spiritshot Pack (10000) (C-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 10,000 Mysterious Blessed Spiritshots (C-grade). -->
+		<!-- Double-click to obtain 10,000 Mysterious Blessed Spiritshots (C-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -20,7 +20,7 @@
 		</skills>
 	</item>
 	<item id="22601" name="Mysterious Blessed Spiritshot Pack (5000) (C-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (C-grade). -->
+		<!-- Double-click to obtain 5,000 Mysterious Blessed Spiritshots (C-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -39,7 +39,7 @@
 		</skills>
 	</item>
 	<item id="22602" name="Mysterious Blessed Spiritshot Pack (10000) (B-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 10,000 Mysterious Blessed Spiritshots (B-grade). -->
+		<!-- Double-click to obtain 10,000 Mysterious Blessed Spiritshots (B-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_b_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -58,7 +58,7 @@
 		</skills>
 	</item>
 	<item id="22603" name="Mysterious Blessed Spiritshot Pack (5000) (B-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (B-grade). -->
+		<!-- Double-click to obtain 5,000 Mysterious Blessed Spiritshots (B-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_b_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -77,7 +77,7 @@
 		</skills>
 	</item>
 	<item id="22604" name="Mysterious Blessed Spiritshot Pack (10000) (A-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 10,000 Mysterious Blessed Spiritshots (A-grade). -->
+		<!-- Double-click to obtain 10,000 Mysterious Blessed Spiritshots (A-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -96,7 +96,7 @@
 		</skills>
 	</item>
 	<item id="22605" name="Mysterious Blessed Spiritshot Pack (5000) (A-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (A-grade). -->
+		<!-- Double-click to obtain 5,000 Mysterious Blessed Spiritshots (A-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -115,7 +115,7 @@
 		</skills>
 	</item>
 	<item id="22606" name="Mysterious Blessed Spiritshot Pack (10000) (S-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 10,000 Mysterious Blessed Spiritshots (S-grade). -->
+		<!-- Double-click to obtain 10,000 Mysterious Blessed Spiritshots (S-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_s_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -134,7 +134,7 @@
 		</skills>
 	</item>
 	<item id="22607" name="Mysterious Blessed Spiritshot Pack (5000) (S-grade)" type="EtcItem">
-		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (S-grade). -->
+		<!-- Double-click to obtain 5,000 Mysterious Blessed Spiritshots (S-grade). -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_spiritshot_s_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -149,11 +149,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21856" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshots (S-grade) -->
+			<item id="21856" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="22608" name="Vitality Maintaining Potion (30-minute) 2-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 2 Vitality Replenishing Potions. -->
+		<!-- Double-click to obtain 2 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -169,11 +169,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21251" min="2" max="2" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
+			<item id="21251" min="2" max="2" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
 	<item id="22609" name="Vitality Maintaining Potion (30-minute) 4-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 4 Vitality Replenishing Potions. -->
+		<!-- Double-click to obtain 4 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -189,11 +189,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21251" min="4" max="4" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
+			<item id="21251" min="4" max="4" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
 	<item id="22610" name="Luxury Cocktail" type="EtcItem">
-		<!-- Luxury Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody Lv. 1, Pipe Organ Melody Lv. 1, Guitar Melody Lv. 1, Harp Melody Lv. 1 and Lute Melody Lv. 1 for 30 min. -->
+		<!-- Luxury Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody Lv. 1, Pipe Organ Melody Lv. 1, Guitar Melody Lv. 1 for 30 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -252,7 +252,7 @@
 		</stats>
 	</item>
 	<item id="22612" name="XP Rune III (Lv. 1-100+) 30% Pack (3-hour)" type="EtcItem">
-		<!-- Pack containing XP Rune III (Lv. 1-100+) 30% (3-hour). Cannot be exchanged once open. -->
+		<!-- Pack containing XP Rune III (Lv. 1-100+) 30% (3-hr.). Cannot be exchanged once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -266,11 +266,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 3-hour -->
+			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 3-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="22613" name="XP Rune III (Lv. 1-100+) 30% Pack (1-hour)" type="EtcItem">
-		<!-- Pack containing XP Rune III (Lv. 1-100+) 30% (1-hour). Cannot be exchanged once open. -->
+		<!-- Pack containing XP Rune III (Lv. 1-100+) 30% (1-hr.). Cannot be exchanged once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -288,7 +288,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22614" name="XP Rune III (Lv. 1-100+) 50% Pack (1-hour)" type="EtcItem">
-		<!-- Pack containing XP Rune III (Lv. 1-100+) 50% (1-hour). Cannot be exchanged once open. -->
+		<!-- Pack containing XP Rune III (Lv. 1-100+) 50% (1-hr.). Cannot be exchanged once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -302,7 +302,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22334" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hour -->
+			<item id="22334" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="22615" name="Extra Pass: Rim Kamaloka" type="EtcItem">
@@ -405,7 +405,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22620" name="Miracle of the Tree - Vitality Recovery" additionalName="Event" type="EtcItem">
-		<!-- Item acquired upon completion of the Holiday Tree. When used, Vitality is restored as XP is acquired. Cooldown is 4 hours. -->
+		<!-- Item acquired upon completion of the Holiday Tree. When used, Vitality is restored as XP is acquired. Cooldown is 4 hr. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -424,7 +424,7 @@
 		</skills>
 	</item>
 	<item id="22621" name="Vitality Recovery Potion" additionalName="1-hour" type="EtcItem">
-		<!-- Premium user exclusive item. When the Vitality recovery potion is used, for 60 minutes, Vitality is restored as XP is acquired. -->
+		<!-- Premium user exclusive item. When the Vitality recovery potion is used, for 60 min., Vitality is restored as XP is acquired. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -563,7 +563,7 @@
 		</skills>
 	</item>
 	<item id="22627" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item. When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. -->
+		<!-- Only for premium users. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -584,7 +584,7 @@
 		</skills>
 	</item>
 	<item id="22628" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item. When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
+		<!-- Premium user exclusive item. When enchanted, P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -935,7 +935,7 @@
 		</skills>
 	</item>
 	<item id="22647" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item. When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<!-- Only for premium users. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -955,7 +955,7 @@
 		</skills>
 	</item>
 	<item id="22648" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Premium user exclusive item. When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<!-- Premium user exclusive item. When enchanted, P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -994,7 +994,7 @@
 		</skills>
 	</item>
 	<item id="22650" name="Emerald Weapon: One-handed Sword" type="Weapon">
-		<!-- Emerald Weapon. One-handed sword form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. One-handed sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1055,7 +1055,7 @@
 		</stats>
 	</item>
 	<item id="22652" name="Emerald Weapon: Two-handed Sword" type="Weapon">
-		<!-- Emerald Weapon. Two-handed sword form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Two-handed sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1214,7 +1214,7 @@
 		</stats>
 	</item>
 	<item id="22657" name="Emerald Weapon: One-handed Blunt Weapon" type="Weapon">
-		<!-- Emerald Weapon. One-handed blunt form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. One-handed blunt weapon type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1245,7 +1245,7 @@
 		</stats>
 	</item>
 	<item id="22658" name="Emerald Weapon: Two-handed Blunt Weapon" type="Weapon">
-		<!-- Emerald Weapon. Two-handed blunt form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Two-handed blunt weapon type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1276,7 +1276,7 @@
 		</stats>
 	</item>
 	<item id="22659" name="Emerald Weapon: One-handed Magic Blunt Weapon" type="Weapon">
-		<!-- Emerald Weapon. One-handed magic blunt form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. One-handed staff type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1307,7 +1307,7 @@
 		</stats>
 	</item>
 	<item id="22660" name="Emerald Weapon: Two-handed Magic Blunt Weapon" type="Weapon">
-		<!-- Emerald Weapon. Two-handed magic blunt form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Two-handed staff type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1338,7 +1338,7 @@
 		</stats>
 	</item>
 	<item id="22661" name="Emerald Weapon: Dualsword" type="Weapon">
-		<!-- Emerald Weapon. Dualsword form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Dual Sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1368,7 +1368,7 @@
 		</stats>
 	</item>
 	<item id="22662" name="Emerald Weapon: Dual Dagger" type="Weapon">
-		<!-- Emerald Weapon. Dual dagger form. Basic Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Dual dagger type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualdagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1479,7 +1479,7 @@
 		</stats>
 	</item>
 	<item id="22666" name="Emerald Weapon Appearance Stone: Sword" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed sword to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1521,7 +1521,7 @@
 		</skills>
 	</item>
 	<item id="22668" name="Emerald Weapon Appearance Stone: Two-handed Sword" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed sword to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1626,7 +1626,7 @@
 		</skills>
 	</item>
 	<item id="22673" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" type="EtcItem">
-		<!-- Changes the appearance of a one-handed blunt to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed blunt weapon to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1647,7 +1647,7 @@
 		</skills>
 	</item>
 	<item id="22674" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" type="EtcItem">
-		<!-- Changes the appearance of a two-handed blunt to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1668,7 +1668,7 @@
 		</skills>
 	</item>
 	<item id="22675" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic blunt to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed staff to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1689,7 +1689,7 @@
 		</skills>
 	</item>
 	<item id="22676" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
-		<!-- Changes the appearance of a two-handed magic blunt to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed staff to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1710,7 +1710,7 @@
 		</skills>
 	</item>
 	<item id="22677" name="Emerald Weapon Appearance Stone: Dualsword" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a dual sword to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1731,7 +1731,7 @@
 		</skills>
 	</item>
 	<item id="22678" name="Emerald Weapon Appearance Stone: Dual Dagger" type="EtcItem">
-		<!-- Changes the appearance of a dual dagger to that of an Emerald weapon. -->
+		<!-- Dimensional item. Changes the appearance of a dual dagger to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />

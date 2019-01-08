@@ -120,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90117" name="Scroll: Victories of Pa'agrio" type="EtcItem">
-		<!-- This scroll is used to learn the Victories of Pa�agrio skill. Available to Dominator. Level required to obtain the scroll: 76 -->
+		<!-- This scroll is used to learn the Victories of Pa?grio skill. Available to Dominator. Level required to obtain the scroll: 76 -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -384,7 +384,7 @@
 		</stats>
 	</item>
 	<item id="90146" name="Savior’s Cube" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to get one Enchant Savior�s Weapon Scroll and one Savior' Growth Scroll (can be used only once a day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. (30-day.) The item will be removed after the event is over. -->
+		<!-- Double-click to get one Enchant Savior? Weapon Scroll and one Savior' Growth Scroll (can be used only once a day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. (30-day.) The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_crystal_cube_event_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -395,7 +395,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="90147" name="Mark of Savior" type="EtcItem">
-		<!-- Using Dimensional Merchant, you can trade it for a Savior�s weapon (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. The item will be removed after the event is over. -->
+		<!-- Using Dimensional Merchant, you can trade it for a Savior? weapon (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -418,7 +418,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90149" name="Savior Scroll: Enchant Weapon" type="EtcItem">
-		<!-- Only for Savior�s weapons. If an enchantment is failed, the item is not destroyed preserving its current level of enchantment. Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. Intended for Lv. 75 or lower. The item will be removed after the event is over. -->
+		<!-- Only for Savior? weapons. If an enchantment is failed, the item is not destroyed preserving its current level of enchantment. Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. Intended for Lv. 75 or lower. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -683,7 +683,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="90162" name="Warrior’s Talisman Pack - Attack" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to receive one Warrior�s Talisman - Attack (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Double-click to receive one Warrior? Talisman - Attack (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -696,11 +696,11 @@
 		<set name="time" val="10080" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="90157" min="1" max="1" chance="100" />
+			<item id="90157" min="1" max="1" chance="100" /> <!-- Warrior? Talisman - Attack - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="90163" name="Warrior’s Talisman Pack - Defense" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to receive one Warrior�s Talisman - Defense (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Double-click to receive one Warrior? Talisman - Defense (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -713,7 +713,7 @@
 		<set name="time" val="10080" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="90160" min="1" max="1" chance="100" />
+			<item id="90160" min="1" max="1" chance="100" /> <!-- Warrior? Talisman - Defense - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="90164" name="Battle Cure" type="EtcItem">

@@ -213,7 +213,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="70020" name="Clan's Supplies" additionalName="Low Grade" type="EtcItem">
-		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (Low-grade). Cannot be exchanged, dropped, or sold in a private store. -->
+		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan? Special Supplies (Low-grade). Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -226,12 +226,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70024" min="1" max="1" chance="100.0" />
-			<item id="70025" min="1" max="1" chance="100.0" />
+			<item id="70024" min="1" max="1" chance="100.0" /> <!-- Daily Coin -->
+			<item id="70025" min="1" max="1" chance="100.0" /> <!-- Clan's Special Supplies - Low Grade -->
 		</capsuled_items>
 	</item>
 	<item id="70021" name="Clan's Supplies" additionalName="Medium Grade" type="EtcItem">
-		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (Medium-grade). Cannot be exchanged, dropped, or sold in a private store. -->
+		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan? Special Supplies (Medium-grade). Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -244,12 +244,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70024" min="2" max="4" chance="100.0" />
-			<item id="70026" min="1" max="1" chance="100.0" />
+			<item id="70024" min="2" max="4" chance="100.0" /> <!-- Daily Coin -->
+			<item id="70026" min="1" max="1" chance="100.0" /> <!-- Clan's Special Supplies - Medium Grade -->
 		</capsuled_items>
 	</item>
 	<item id="70022" name="Clan's Supplies" additionalName="High Grade" type="EtcItem">
-		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (High-grade). Cannot be exchanged, dropped, or sold in a private store. -->
+		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan? Special Supplies (High-grade). Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -262,12 +262,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70024" min="4" max="6" chance="100.0" />
-			<item id="70027" min="1" max="1" chance="100.0" />
+			<item id="70024" min="4" max="6" chance="100.0" /> <!-- Daily Coin -->
+			<item id="70027" min="1" max="1" chance="100.0" /> <!-- Clan's Special Supplies - High Grade -->
 		</capsuled_items>
 	</item>
 	<item id="70023" name="Clan's Supplies" additionalName="Highest Grade" type="EtcItem">
-		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (Highest-grade). Cannot be exchanged, dropped, or sold in a private store. -->
+		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan? Special Supplies (Highest-grade). Cannot be exchanged, dropped, or sold in a private store. -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -280,8 +280,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="70024" min="6" max="8" chance="100.0" />
-			<item id="70028" min="1" max="1" chance="100.0" />
+			<item id="70024" min="6" max="8" chance="100.0" /> <!-- Daily Coin -->
+			<item id="70028" min="1" max="1" chance="100.0" /> <!-- Clan's Special Supplies - Highest Grade -->
 		</capsuled_items>
 	</item>
 	<item id="70024" name="Daily Coin" type="EtcItem">
@@ -307,7 +307,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55172" level="1"/>	<!--Clan's Special Supplies-->
+			<skill id="55172" level="1"/>	<!-- Clan's Special Supplies -->
 		</skills>
 	</item>
 	<item id="70026" name="Clan's Special Supplies" additionalName="Medium Grade" type="EtcItem">
@@ -323,7 +323,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55173" level="1"/>	<!--Clan's Special Supplies-->
+			<skill id="55173" level="1"/>	<!-- Clan's Special Supplies -->
 		</skills>
 	</item>
 	<item id="70027" name="Clan's Special Supplies" additionalName="High Grade" type="EtcItem">
@@ -339,7 +339,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55174" level="1"/>	<!--Clan's Special Supplies-->
+			<skill id="55174" level="1"/>	<!-- Clan's Special Supplies -->
 		</skills>
 	</item>
 	<item id="70028" name="Clan's Special Supplies" additionalName="Highest Grade" type="EtcItem">
@@ -355,7 +355,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55175" level="1"/>	<!--Clan's Special Supplies-->
+			<skill id="55175" level="1"/>	<!-- Clan's Special Supplies -->
 		</skills>
 	</item>
 	<item id="70029" name="Yellow Talisman - P. Atk." type="Armor">

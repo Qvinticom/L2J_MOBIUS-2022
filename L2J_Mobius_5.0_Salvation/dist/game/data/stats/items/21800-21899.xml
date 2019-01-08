@@ -249,7 +249,6 @@
 		</stats>
 	</item>
 	<item id="21811" name="Dynasty Sigil of Fortune" additionalName="90-day" type="Armor">
-		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -296,7 +295,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21813" name="Tateossian Earring of Fortune" additionalName="90-day" type="Armor">
-		<!-- The effect is MP + 31. -->
+		<!-- The effect is MP +31. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -318,7 +317,7 @@
 		</stats>
 	</item>
 	<item id="21814" name="Tateossian Ring of Fortune" additionalName="90-day" type="Armor">
-		<!-- The effect is MP + 21. -->
+		<!-- The effect is MP +21. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -340,7 +339,7 @@
 		</stats>
 	</item>
 	<item id="21815" name="Tateossian Necklace of Fortune" additionalName="90-day" type="Armor">
-		<!-- The effect is MP + 42. -->
+		<!-- The effect is MP +42. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -505,7 +504,7 @@
 		</stats>
 	</item>
 	<item id="21822" name="Angel Slayer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- During Critical, P. Atk. + 265. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- During Critical, P. Atk. +265. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -724,7 +723,7 @@
 		</stats>
 	</item>
 	<item id="21828" name="Tallum Blade*Dark Legion's Edge of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Increases Max HP + 15%, Max MP + 20%, and Max CP + 30%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Increases Max HP +15%, Max MP +20%, and Max CP +30%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1731,7 +1730,7 @@
 		</skills>
 	</item>
 	<item id="21862" name="Player Commendation - Vitality Pack" type="EtcItem">
-		<!-- Player Commendation - Vitality Pack. Wrapped Pack containing 3 PC Vitality. When used, has a chance of receiving a 1h~4h PC Vitality buff. Can only be used at levels 1 - 75. -->
+		<!-- PA - Vitality Pack. Wrapped Pack containing 3 PA Vitality. When used, has a chance of receiving a 1h~4h PA Vitality buff. Can only be used at levels 1 - 75. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1772,7 +1771,7 @@
 		</skills>
 	</item>
 	<item id="21864" name="Player Commendation - Blessing Pack" type="EtcItem">
-		<!-- Player Commendation - Blessing pack. Wrapped Pack containing Player Commendation - Blessing. -->
+		<!-- PA - Blessing pack. Wrapped Pack containing PA - Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1788,7 +1787,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21863" min="1" max="1" chance="100" /> <!-- Player Commendation - Blessing -->
+			<item id="21863" min="1" max="1" chance="100" /> <!-- PA - Blessing -->
 		</capsuled_items>
 	</item>
 	<item id="21865" name="PC Vitality (2-hour)" type="EtcItem">
@@ -1966,7 +1965,7 @@
 		</skills>
 	</item>
 	<item id="21874" name="Medal of Glory" type="EtcItem">
-		<!-- Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange 1 Mark of Battle for 100 Fame points using the �Mark of Battle Exchange' list. -->
+		<!-- Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange 1 Mark of Battle for 100 Fame points using the ?ark of Battle Exchange' list. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -2088,7 +2087,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21880" name="Pa'agrio's Warm Breeze (4-hour)" type="EtcItem">
-		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -2109,7 +2108,7 @@
 		</skills>
 	</item>
 	<item id="21881" name="Party Cake" type="EtcItem">
-		<!-- Upon use, a party cake that maintains Vitality is summoned for 20 min. -->
+		<!-- Summons Party Cake that maintains all party members' Vitality for 20 minutes. -->
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -2260,7 +2259,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21889" name="Sweet Chocolate (4-hour)" type="EtcItem">
-		<!-- Upon use, replenishes Vitality while hunting for 4 hours. The effect doesn't apply while Birthday Vitality Buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
+		<!-- Upon use, replenishes Vitality while hunting for 4 hours. The effect doesn't apply while "Birthday Vitality Buff" is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -2412,7 +2411,7 @@
 		</skills>
 	</item>
 	<item id="21897" name="Scroll: Antharas Call" type="EtcItem">
-		<!-- One-time use scroll that teleports you to the entrance to Antharas' Lair. -->
+		<!-- One-time use scroll that teleports you to the entrance to Antharas' Nest. -->
 		<set name="icon" val="BranchSys2.icon.call_of_earth_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -2437,7 +2436,7 @@
 		</skills>
 	</item>
 	<item id="21898" name="Jewel of Antharas" type="EtcItem">
-		<!-- Mysterious jewel that teleports you to the entrance to Antharas' Lair. Cooldown is 60 min. -->
+		<!-- Mysterious jewel that teleports you to the entrance to Antharas' Nest. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys2.icon.orb_of_earth_dragon" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -2462,7 +2461,7 @@
 		</skills>
 	</item>
 	<item id="21899" name="Totem of Body" type="EtcItem">
-		<!-- Summons a totem that increases HP Recovery Rate by 30% and decreases damage from the topography by 80%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
+		<!-- Summons a totem that increases HP Recovery Bonus Rate by 30% and decreases damage from the topography by 80%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

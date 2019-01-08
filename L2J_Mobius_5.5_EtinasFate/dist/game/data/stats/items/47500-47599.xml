@@ -34,7 +34,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47504" name="Lias Supply Items" type="EtcItem">
-		<!-- Supplies given by Lias to agents having completed Dimensional Rift - 100-day Subjugation Operation. -->
+		<!-- Supplies given by Lias to agents having completed "Dimensional Rift - 100-day Subjugation Operation". -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
@@ -272,7 +272,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47520" name="Request - Cruma Marshlands" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -368,7 +368,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47528" name="Request - Garden of Spirits" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Spirits. The request can be accepted by characters between Lv. 98-108. Double-click to receive the request -->
+		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters near the Garden of Spirits. Characters of level 100 or higher can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -380,7 +380,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47529" name="Request - Atelia Fortress" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Atelia Fortress. The request can be accepted by characters between Lv. 98-108. Double-click to receive the request -->
+		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters near the Atelia Fortress. Characters of level 100 or higher can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -462,7 +462,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47537" name="Request - Cruma Marshlands" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -562,7 +562,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47547" name="Bait" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Blueish Box with low probability. -->
+		<!-- This Normal Bait cannot be used any more. You can sell it to NPC Shop. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -573,7 +573,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="47548" name="Bait" additionalName="R99" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Fishing bait that can be used by characters of Level 99 or higher. Fish using this bait to catch a Reddish Box with low probability. -->
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 99. Fishing with this bait has a low chance of yielding a Reddish Box. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -584,7 +584,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="47549" name="PC Cafe Bait" type="EtcItem">
-		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PC Cafes. -->
+		<!-- Fishing time: 105 sec. Standby time: 15 sec. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PAs. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
@@ -598,19 +598,19 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47550" name="Ugly Fish" type="EtcItem">
-		<!-- Can be exchanged for a Fish Stew item through a Fishing Guild member. -->
+		<!-- Can be exchanged for a Fish Dish item through a Fishing Guild Member. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47551" name="Nimble Fish" type="EtcItem">
-		<!-- Can be exchanged for a Fish Stew item or Appearance Stone item through a Fishing Guild member. -->
+		<!-- Can be exchanged for a Fish Dish or Appearance Stone item through a Fishing Guild Member. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47552" name="Powerful Fish" type="EtcItem">
-		<!-- Can be exchanged for a Stardust item or hair accessories through a Fishing Guild member. -->
+		<!-- Can be exchanged for a Hair Accessory or other items through a Fishing Guild member. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
@@ -658,7 +658,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47556" name="Stardust" type="EtcItem">
-		<!-- Ingredient used to produce the Zodiac Agathion -->
+		<!-- Ingredient needed to exchange Elementary Seed Bracelet. -->
 		<set name="icon" val="icon.star_crystal_piece" />
 		<set name="weight" val="1" />
 		<set name="price" val="1000000" />
@@ -791,7 +791,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47563" name="Zodiac Agathion Box" type="EtcItem">
-		<!-- Double click to obtain one of the 12 types of Zodiac Agathion Stage 1. -->
+		<!-- Double click to obtain one of the twelve Agathions Stage 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -899,7 +899,7 @@
 		<capsuled_items>
 			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
 			<item id="47562" min="2" max="2" chance="100" /> <!-- Santiago's Reel Fragment -->
-			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->	
+			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->
 		</capsuled_items>
 	</item>
 	<item id="47572" name="Intermediate Supply Box" additionalName="Fishing Guild" type="EtcItem">
@@ -918,13 +918,13 @@
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
-			<item id="47552" min="1" max="1" chance="100" /> <!-- Nimble Fish -->
+			<item id="47552" min="1" max="1" chance="100" /> <!-- Powerful Fish -->
 			<item id="47562" min="3" max="3" chance="100" /> <!-- Santiago's Reel Fragment -->
-			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->	
+			<item id="47550" min="15" max="15" chance="100" /> <!-- Ugly Fish -->
 		</capsuled_items>
 	</item>
 	<item id="47573" name="Magic Spices" type="EtcItem">
-		<!-- Spices created by Santiago and the numerous famous chefs of the Aden Continent through their Fish Stew research. With these spices and a fish, Fish Stew with excellent performance can be made. -->
+		<!-- A seasoning that famous chefs in Santiago and Aden developed after studying Fish Stew. With this seasoning and fish, you can make an excellent Royal Fish Soup. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -947,19 +947,19 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47575" name="Royal White Save Ticket (R)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47576" name="Royal White Save Ticket (R95)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47577" name="Royal White Save Ticket (R99)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -971,7 +971,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47579" name="Christmas Party Herb" type="EtcItem">
-		<!-- Christmas Party Herb. P. Atk./M. Atk./P. Def./M. Def. are increased by 50%, and you are turned into Santa for 2 minutes. Effect disappears when restarted. -->
+		<!-- Christmas Party Herb. P. Atk./ M. Atk./ P. Def./ M. Def. are increased by 50%, and you are turned into Santa for 2 min. Effect disappears when restarted. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1001,70 +1001,70 @@
 		</stats>
 	</item>
 	<item id="47581" name="Transformation Scroll: Tow" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Tow for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Tow for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47582" name="Transformation Scroll: Lady Tow" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Lady Tow for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Lady Tow for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47583" name="Transformation Scroll: Angry Tow" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Angry tow for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Angry tow for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47584" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Sleepy Tow for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Sleepy Tow for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47585" name="Transformation Scroll: Pig" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into a pig for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into a pig for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47586" name="Transformation Scroll: Rabbit" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into a rabbit for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into a rabbit for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47587" name="Transformation Scroll: Queen Ant" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into a Queen Ant for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into a Queen Ant for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47588" name="Transformation Scroll: Orfen" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Orfen for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Orfen for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47589" name="Transformation Scroll: Anakim" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Anakim for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Anakim for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47590" name="Transformation Scroll: Lilith" type="EtcItem">
-		<!-- No special abilities, but allows you to transform into Lilith for 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- No special abilities, but allows you to transform into Lilith for 10 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />

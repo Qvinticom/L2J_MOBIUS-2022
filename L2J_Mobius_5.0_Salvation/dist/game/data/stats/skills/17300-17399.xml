@@ -1,57 +1,49 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17300" toLevel="1" name="Shy Bounce">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., SP gained + 50%. -->
+		<!-- For 2 hr., SP gained +50%. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17301" toLevel="1" name="Lively Bounce">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., XP gained + 50%. -->
+		<!-- For 2 hr., XP gained +50%. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17302" toLevel="1" name="Spirited Bounce">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 2 hr., Stun/ Paralysis/ Mental/ Knock Back/ Knock Down/ Aerial Yoke attack and defense bonus + 50. Deleted when entering the Olympiad or Ceremony of Chaos. -->
+		<!-- For 2 hr., Stun/ Paralysis/ Mental/ Knock Back/ Knock Down/ Aerial Yoke attack and defense bonus +50. Deleted when entering the Olympiad or Ceremony of Chaos. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17303" toLevel="1" name="Prevailing Sonata - Enhanced Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., Atk. Spd. + 10%, Casting Spd. + 20%, Max HP + 20%, Max MP + 20%, MP Recovery Bonus + 10%. M. Skill MP Consumption - 5%. Decreased chance of cancellation while casting. -->
+		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 	</skill>
 	<skill id="17304" toLevel="1" name="Daring Sonata - Enhanced Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., P. Atk. + 5%, M. Atk. + 10%, Atk. Spd./ Casting Spd. + 5%. P. Def. - 4%, M. Def. - 4%, P. Evasion - 4. -->
+		<!-- For $s1, increases Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 	</skill>
 	<skill id="17305" toLevel="1" name="Refreshing Sonata - Enhanced Cocktail">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 min., HP Recovery Bonus + 10%, P. Accuracy + 2, P. Evasion + 2, Speed + 10. Skill MP Consumption - 10%, skill cooldown - 5%. -->
+		<!-- For $s1, HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. PA exclusive. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>696</effectPoint>
 	</skill>
 	<skill id="17306" toLevel="1" name="Real Tor's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17307" toLevel="24" name="Real Tor's Blessing Stage 1 (Normal)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Can acquire a Territory Card in 1hr. Can acquire up to 23 cards (23 stages total). Return to the Real Tor for a new buff when it disappears. (Note) Cannot acquire buff or card if you are dead at the time of distribution, or if your inventory is full. -->
+		<!-- Can acquire a Territory Card in $s1 hr. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. <Note> Cannot acquire buff or card if you are dead at the time of distribution, or if your inventory is full. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -84,47 +76,41 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17308" toLevel="1" name="Destruction's Shadow">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., attribute attack + 50, attribute resistance + 50. -->
+		<!-- For 30 min., attribute attack +50, attribute resistance +50. -->
 		<icon>icon.card_hero_red</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17309" toLevel="1" name="Evolving Darkness">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., attribute attack + 50. -->
+		<!-- For 30 min., attribute attack +50. -->
 		<icon>icon.card_devil_black</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17310" toLevel="1" name="Sliver of Truth">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., attribute resistance + 50. -->
+		<!-- For 30 min., attribute resistance +50. -->
 		<icon>icon.card_angel_blue</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17311" toLevel="1" name="Chaotic Ambush">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 30 min., attribute attack + 30, attribute resistance + 30. -->
+		<!-- For 30 min., attribute attack +30, attribute resistance +30. -->
 		<icon>icon.card_dragon_gold</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17312" toLevel="1" name="Real Tor's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17313" toLevel="24" name="Real Tor's Blessing Stage 1 (Premium)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Can acquire a Territory Card in 1hr. Can acquire up to 23 cards (23 stages total). Return to the Real Tor for a new buff when it disappears. Has a chance of acquiring a different gift. (Note) Cannot acquire buff or card if you are dead at the time of distribution, or if your inventory is full. -->
+		<!-- Can acquire a Territory Card in $s1 hr. Can acquire up to $s2 cards ($s3 stages total). Return to the Real Tor for a new buff when it disappears. Has a chance of acquiring a different gift.<Note> Cannot acquire buff or card if you are dead at the time of distribution, or if your inventory is full. -->
 		<icon>icon.etc_cycle_point_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -157,38 +143,32 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17314" toLevel="1" name="Territory Card Pouch: Demon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17315" toLevel="1" name="Territory Card Pouch: Undead">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17316" toLevel="1" name="Territory Card Pouch: Monster">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17317" toLevel="1" name="Territory Card Pouch: Orc">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17318" toLevel="1" name="Leona's Cube">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17319" toLevel="1" name="Leona's Will">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17320" toLevel="1" name="Leona's Scroll: Buffs">
-		<!-- For 30 min., XP/SP gain + 30%, Max HP/MP/CP + 30%, P. Def./ M. Def. + 30%, Speed + 20, P. Atk. + 10%, M. Atk. + 20%. Skill MP Consumption - 15%. Cannot use with the Art of Seduction. Cooldown is 30min. -->
+		<!-- For 30 min., XP/ SP gain +30%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction. Cooldown is 30min. -->
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
@@ -335,314 +315,252 @@
 		</effects>
 	</skill>
 	<skill id="17325" toLevel="1" name="Leona's Cube (1-time)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="17326" toLevel="1" name="Small Green Mackerel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17327" toLevel="1" name="Small Blue Mackerel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17328" toLevel="1" name="Small Flatfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17329" toLevel="1" name="Small Rockfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17330" toLevel="1" name="Small Salmon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17331" toLevel="1" name="Small Marlin">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17332" toLevel="1" name="Small Tuna">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17333" toLevel="1" name="Green Mackerel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17334" toLevel="1" name="Blue Mackerel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17335" toLevel="1" name="Flatfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17336" toLevel="1" name="Rockfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17337" toLevel="1" name="Salmon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17338" toLevel="1" name="Marlin">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17339" toLevel="1" name="Tuna">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17340" toLevel="1" name="Large Green Mackerel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17341" toLevel="1" name="Large Blue Mackerel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17342" toLevel="1" name="Large Flatfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17343" toLevel="1" name="Large Rockfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17344" toLevel="1" name="Large Salmon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17345" toLevel="1" name="Large Marlin">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17346" toLevel="1" name="Large Tuna">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17347" toLevel="1" name="Small Killifish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17348" toLevel="1" name="Small Minnow">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17349" toLevel="1" name="Small Mandarin Fish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17350" toLevel="1" name="Small Goldfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17351" toLevel="1" name="Small Eel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17352" toLevel="1" name="Small Catfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17353" toLevel="1" name="Small Carp">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17354" toLevel="1" name="Killifish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17355" toLevel="1" name="Minnow">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17356" toLevel="1" name="Mandarin Fish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17357" toLevel="1" name="Goldfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17358" toLevel="1" name="Eel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17359" toLevel="1" name="Catfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17360" toLevel="1" name="Carp">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17361" toLevel="1" name="Large Killifish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17362" toLevel="1" name="Large Minnow">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17363" toLevel="1" name="Large Mandarin Fish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17364" toLevel="1" name="Large Goldfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17365" toLevel="1" name="Large Eel">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17366" toLevel="1" name="Large Catfish">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17367" toLevel="1" name="Large Carp">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17368" toLevel="1" name="Whale">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17370" toLevel="1" name="Samurai Long Sword Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17371" toLevel="1" name="Apprentice's Spellbook Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17372" toLevel="1" name="Crystal Dagger Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17373" toLevel="1" name="Hellblade Appearance Stone (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17374" toLevel="1" name="Butcher Blades Appearance Stone (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17375" toLevel="1" name="Claw of Destruction Appearance Stone (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17376" toLevel="1" name="Blades of Delusion Appearance Stone (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17377" toLevel="1" name="Blood Brother Appearance Stone (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17378" toLevel="1" name="Mardil's Fan Appearance Stone (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17379" toLevel="1" name="Hellblade Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17380" toLevel="1" name="Butcher Blades Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17381" toLevel="1" name="Claw of Destruction Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17382" toLevel="1" name="Blades of Delusion Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17383" toLevel="1" name="Blood Brother Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17384" toLevel="1" name="Mardil's Fan Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17385" toLevel="1" name="Normal Fishing Shot">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17386" toLevel="1" name="High-grade Fishing Shot">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17387" toLevel="1" name="Fish Stew: WIT">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30min./ WIT + 3. Effect does not stack. Cooldown is 5min. -->
+		<!-- For 30 min./ WIT +3. Effect does not stack. Cooldown is 5 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
@@ -662,8 +580,7 @@
 		</effects>
 	</skill>
 	<skill id="17388" toLevel="1" name="Fish Stew: INT">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30min./ INT + 3. Effect does not stack. Cooldown is 5min. -->
+		<!-- For 30 min./ INT +3. Effect does not stack. Cooldown is 5 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
@@ -683,8 +600,7 @@
 		</effects>
 	</skill>
 	<skill id="17389" toLevel="1" name="Fish Stew: MEN">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30min./ MEN + 3. Effect does not stack. Cooldown is 5min. -->
+		<!-- For 30 min./ MEN +3. Effect does not stack. Cooldown is 5 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
@@ -704,8 +620,7 @@
 		</effects>
 	</skill>
 	<skill id="17390" toLevel="1" name="Fish Stew: DEX">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30min./ DEX + 3. Effect does not stack. Cooldown is 5min. -->
+		<!-- For 30 min./ DEX +3. Effect does not stack. Cooldown is 5 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
@@ -725,8 +640,7 @@
 		</effects>
 	</skill>
 	<skill id="17391" toLevel="1" name="Fish Stew: STR">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30min./ STR + 3. Effect does not stack. Cooldown is 5min. -->
+		<!-- For 30 min./ STR +3. Effect does not stack. Cooldown is 5 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
@@ -746,8 +660,7 @@
 		</effects>
 	</skill>
 	<skill id="17392" toLevel="1" name="Fish Stew: CON">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- For 30min./ CON + 3. Effect does not stack. Cooldown is 5min. -->
+		<!-- For 30 min./ CON +3. Effect does not stack. Cooldown is 5 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
@@ -767,7 +680,7 @@
 		</effects>
 	</skill>
 	<skill id="17393" toLevel="1" name="Lady's Hairpin: STR">
-		<!-- STR + 3. -->
+		<!-- STR +3. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -778,7 +691,7 @@
 		</effects>
 	</skill>
 	<skill id="17394" toLevel="1" name="Lady's Hairpin: DEX">
-		<!-- DEX + 3. -->
+		<!-- DEX +3. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -789,7 +702,7 @@
 		</effects>
 	</skill>
 	<skill id="17395" toLevel="1" name="Lady's Hairpin: CON">
-		<!-- CON + 3. -->
+		<!-- CON +3. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -800,7 +713,7 @@
 		</effects>
 	</skill>
 	<skill id="17396" toLevel="1" name="Lady's Hairpin: MEN">
-		<!-- MEN + 3. -->
+		<!-- MEN +3. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -811,7 +724,7 @@
 		</effects>
 	</skill>
 	<skill id="17397" toLevel="1" name="Lady's Hairpin: INT">
-		<!-- INT + 3. -->
+		<!-- INT +3. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -822,7 +735,7 @@
 		</effects>
 	</skill>
 	<skill id="17398" toLevel="1" name="Lady's Hairpin: WIT">
-		<!-- WIT + 3. -->
+		<!-- WIT +3. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -833,7 +746,7 @@
 		</effects>
 	</skill>
 	<skill id="17399" toLevel="1" name="Lady's Hairpin: Critical Rate">
-		<!-- Critical Rate + 50. -->
+		<!-- Critical Rate +50. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>

@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="23724" name="Adenian Tattoo: Wings" type="Armor">
-		<!-- Adenian Collection P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
@@ -424,7 +424,7 @@
 		</stats>
 	</item>
 	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
-		<!-- Adenian Collection P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
@@ -451,7 +451,7 @@
 		</stats>
 	</item>
 	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
-		<!-- Adenian Collection P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
@@ -768,7 +768,7 @@
 		</skills>
 	</item>
 	<item id="23744" name="Prestige Rune 30%" additionalName="10-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="23745" name="Prestige Rune 30%" additionalName="7-day" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -857,7 +857,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23749" name="Prestige Rune 50%" additionalName="3-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 50%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -873,7 +873,7 @@
 		</skills>
 	</item>
 	<item id="23750" name="Prestige Rune 50%" additionalName="10-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 50%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -889,7 +889,7 @@
 		</skills>
 	</item>
 	<item id="23751" name="Prestige Rune 50%" additionalName="7-day" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 50%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -961,7 +961,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23755" name="Prestige Rune 100%" additionalName="3-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 100%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -977,7 +977,7 @@
 		</skills>
 	</item>
 	<item id="23756" name="Prestige Rune 100%" additionalName="10-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 100%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -993,7 +993,7 @@
 		</skills>
 	</item>
 	<item id="23757" name="Prestige Rune 100%" additionalName="7-day" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 100%. -->
+		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1066,7 +1066,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23761" name="Prestige Cube" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Normal/Giant/Blessed Weapon Enchant Scroll (R-grade), Normal/Giant/Blessed Armor Enchant Scroll (R-grade), Gemstone (R-grade), or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Weapon Enchant Scroll (S - R-grade), Blessed Scroll of Resurrection, High-grade Elixir Pack, Energy of Destruction, or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1095,13 +1095,13 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35675" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of Life (R-Grade) -->
-			<item id="35676" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of Mind (R-Grade) -->
-			<item id="35677" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of CP (R-Grade) -->
+			<item id="35675" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
+			<item id="35676" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
+			<item id="35677" min="5" max="5" chance="100" /> <!-- High-grade Elixir of CP (R-grade) -->
 	</capsuled_items>
 	</item>
 	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
-		<!-- Premium User Only. For 60 min., Vitality is restored upon XP gain. Cannot apply another buff with the same effect, and when applying a similar effect, the Vitaily Maintaining Potion's buff effect will disappear. -->
+		<!-- Premium User Only. For 60 min., Vitality is restored upon XP gain. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1488,7 +1488,7 @@
 		</skills>
 	</item>
 	<item id="23785" name="Lesser Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0.  -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1506,7 +1506,7 @@
 		</skills>
 	</item>
 	<item id="23786" name="Lesser Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. .  -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />

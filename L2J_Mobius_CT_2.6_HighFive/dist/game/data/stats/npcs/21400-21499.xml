@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21400" level="78" type="L2Monster" name="Hexa Beetle">
 		<!-- Confirmed CT2.5 -->
@@ -26,20 +26,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4573" level="8" /> <!--NPC Sonic Blaster -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -101,21 +101,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4072" level="8" /> <!--Stun -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4573" level="8" /> <!--NPC Sonic Blaster -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4072" level="8" /> <!-- Stun -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -178,22 +178,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="8" /> <!--NPC Strike -->
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4072" level="8" /> <!--Stun -->
-			<skill id="4090" level="1" /> <!--NPC Wolf Spirit Totem -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4072" level="8" /> <!-- Stun -->
+			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -254,20 +254,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4643" level="8" /> <!--Decrease Speed -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4643" level="8" /> <!-- Decrease Speed -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -330,22 +330,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4157" level="9" /> <!--NPC Blaze - Magic -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="20" /> <!--Extremely Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4561" level="9" /> <!--NPC Fire Burn - Magic -->
-			<skill id="4576" level="3" /> <!--NPC Clan Buff - Damage Shield -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -409,21 +409,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4001" level="9" /> <!--NPC Windstrike -->
-			<skill id="4029" level="3" /> <!--NPC Shield -->
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4001" level="9" /> <!-- NPC Windstrike -->
+			<skill id="4029" level="3" /> <!-- NPC Shield -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -492,20 +492,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4117" level="9" /> <!--Paralysis -->
-			<skill id="4157" level="9" /> <!--NPC Blaze - Magic -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="15" /> <!--Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4561" level="9" /> <!--NPC Fire Burn - Magic -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4117" level="9" /> <!-- Paralysis -->
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -576,19 +576,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="9" /> <!--NPC Strike -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="11" /> <!--HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="15" /> <!--Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4663" level="1" /> <!--NPC Hate -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4663" level="1" /> <!-- NPC Hate -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
@@ -659,20 +659,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4036" level="9" /> <!--Poison -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4579" level="9" /> <!--Bleed -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4036" level="9" /> <!-- Poison -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4579" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -743,19 +743,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4036" level="9" /> <!--Poison -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4592" level="9" /> <!--Decrease P. Def. -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4036" level="9" /> <!-- Poison -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4592" level="9" /> <!-- Decrease P. Def. -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -829,23 +829,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="9" /> <!--Hold -->
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4073" level="9" /> <!--Stun -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4317" level="1" /> <!--Increase Rage Might -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4599" level="9" /> <!--Decrease Speed -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4073" level="9" /> <!-- Stun -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4599" level="9" /> <!-- Decrease Speed -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -912,20 +912,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4077" level="9" /> <!--NPC Aura Burn -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -995,24 +995,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4077" level="9" /> <!--NPC Aura Burn -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4568" level="9" /> <!--NPC AE Solar Flare -->
-			<skill id="4575" level="2" /> <!--NPC Clan Buff - Haste -->
-			<skill id="4577" level="9" /> <!--Decrease Accuracy -->
-			<skill id="4613" level="9" /> <!--NPC Clan Heal -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+			<skill id="4577" level="9" /> <!-- Decrease Accuracy -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -1083,21 +1083,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4047" level="9" /> <!--Hold -->
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4582" level="9" /> <!--Poison -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1168,20 +1168,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4561" level="9" /> <!--NPC Fire Burn - Magic -->
-			<skill id="4603" level="9" /> <!--Decrease P. Atk. -->
-			<skill id="4613" level="9" /> <!--NPC Clan Heal -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4603" level="9" /> <!-- Decrease P. Atk. -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -1253,18 +1253,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4579" level="9" /> <!--Bleed -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4579" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1336,19 +1336,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4160" level="9" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="17" /> <!--Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4665" level="9" /> <!--NPC 100% HP Drain - Magic -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="17" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -1412,18 +1412,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4002" level="9" /> <!--NPC HP Drain -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="18" /> <!--Extremely Strong P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -1489,18 +1489,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4572" level="9" /> <!--NPC Triple Sonic Slash -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1569,19 +1569,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4572" level="9" /> <!--NPC Triple Sonic Slash -->
-			<skill id="4573" level="9" /> <!--NPC Sonic Blaster -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -1655,21 +1655,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4072" level="7" /> <!--Stun -->
-			<skill id="4076" level="3" /> <!--Decrease Speed -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4317" level="1" /> <!--Increase Rage Might -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4572" level="7" /> <!--NPC Triple Sonic Slash -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4072" level="7" /> <!-- Stun -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4572" level="7" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1738,18 +1738,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4592" level="9" /> <!--Decrease P. Def. -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4592" level="9" /> <!-- Decrease P. Def. -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -1824,22 +1824,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4037" level="2" /> <!--Decrease P. Atk. -->
-			<skill id="4160" level="9" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4233" level="1" /> <!--Vampiric Attack -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4566" level="9" /> <!--NPC Eruption - Magic -->
-			<skill id="4657" level="9" /> <!--Hold -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4037" level="2" /> <!-- Decrease P. Atk. -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4566" level="9" /> <!-- NPC Eruption - Magic -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1904,21 +1904,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4160" level="9" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4233" level="1" /> <!--Vampiric Attack -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4566" level="9" /> <!--NPC Eruption - Magic -->
-			<skill id="4613" level="9" /> <!--NPC Clan Heal -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4566" level="9" /> <!-- NPC Eruption - Magic -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -1987,21 +1987,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4076" level="3" /> <!--Decrease Speed -->
-			<skill id="4077" level="9" /> <!--NPC Aura Burn -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!--Strong M. Atk. -->
-			<skill id="4412" level="8" /> <!--Weak P. Def. -->
-			<skill id="4413" level="8" /> <!--Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4596" level="9" /> <!--Bleed -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4596" level="9" /> <!-- Bleed -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2071,21 +2071,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4098" level="9" /> <!--Silence -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!--Strong M. Atk. -->
-			<skill id="4412" level="8" /> <!--Weak P. Def. -->
-			<skill id="4413" level="8" /> <!--Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4565" level="9" /> <!--NPC Eruption -->
-			<skill id="4584" level="9" /> <!--Reducing P. Def Stun -->
-			<skill id="4632" level="3" /> <!--NPC Buff - Acumen Empower WildMagic -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4098" level="9" /> <!-- Silence -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill id="4584" level="9" /> <!-- Reducing P. Def Stun -->
+			<skill id="4632" level="3" /> <!-- NPC Buff - Acumen Empower WildMagic -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2151,21 +2151,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="15" /> <!--Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4576" level="3" /> <!--NPC Clan Buff - Damage Shield -->
-			<skill id="4585" level="3" /> <!--NPC Clan Buff - Berserk Might -->
-			<skill id="4595" level="3" /> <!--NPC Clan Buff - Acumen Shield -->
-			<skill id="4609" level="4" /> <!--NPC Clan Buff - Vampiric Rage -->
-			<skill id="4789" level="8" /> <!--NPC High Level -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
+			<skill id="4595" level="3" /> <!-- NPC Clan Buff - Acumen Shield -->
+			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2228,18 +2228,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="15" /> <!--Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4560" level="9" /> <!--NPC Fire Burn -->
-			<skill id="4789" level="8" /> <!--NPC High Level -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2302,19 +2302,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4233" level="1" /> <!--Vampiric Attack -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4571" level="9" /> <!--NPC Blazing Circle -->
-			<skill id="4789" level="8" /> <!--NPC High Level -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -2378,20 +2378,20 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4072" level="9" /> <!--Stun -->
-			<skill id="4151" level="9" /> <!--NPC Windstrike - Magic -->
-			<skill id="4233" level="1" /> <!--Vampiric Attack -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="13" /> <!--HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4789" level="8" /> <!--NPC High Level -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4151" level="9" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>5</sNpcPropHpRate>
@@ -2461,22 +2461,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4160" level="9" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="9" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="4" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4577" level="9" /> <!--Decrease Accuracy -->
-			<skill id="4585" level="3" /> <!--NPC Clan Buff - Berserk Might -->
-			<skill id="4601" level="3" /> <!--NPC Clan Buff - Acumen Focus -->
-			<skill id="4789" level="8" /> <!--NPC High Level -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="9" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4577" level="9" /> <!-- Decrease Accuracy -->
+			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
+			<skill id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2545,18 +2545,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="4" /> <!--One-handed Sword -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4560" level="9" /> <!--NPC Fire Burn -->
-			<skill id="4789" level="8" /> <!--NPC High Level -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+			<skill id="4789" level="8" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2626,22 +2626,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4040" level="9" /> <!--NPC Bow Attack -->
-			<skill id="4065" level="9" /> <!--NPC Heal -->
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4341" level="1" /> <!--Ultimate Buff, 3rd -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="15" /> <!--Strong P. Def. -->
-			<skill id="4413" level="15" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4040" level="9" /> <!-- NPC Bow Attack -->
+			<skill id="4065" level="9" /> <!-- NPC Heal -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -2704,22 +2704,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4065" level="7" /> <!--NPC Heal -->
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4340" level="1" /> <!--Ultimate Buff, 2nd -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="15" /> <!--Strong P. Def. -->
-			<skill id="4413" level="15" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4579" level="8" /> <!--Bleed -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4065" level="7" /> <!-- NPC Heal -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4579" level="8" /> <!-- Bleed -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -2785,18 +2785,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="20" /> <!--Extremely Strong P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="9" /> <!--Demons -->
-			<skill id="4605" level="9" /> <!--Surrender To Fire -->
-			<skill id="4789" level="7" /> <!--NPC High Level -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -2862,19 +2862,19 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4091" level="1" /> <!--NPC Ogre Spirit Totem -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4663" level="1" /> <!--NPC Hate -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4663" level="1" /> <!-- NPC Hate -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -2934,18 +2934,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="14" /> <!--HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
-			<skill id="4605" level="9" /> <!--Surrender To Fire -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -3004,22 +3004,22 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="5" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="12" /> <!--Bugs -->
-			<skill id="4437" level="4" /> <!--Greater Resist Bleeding -->
-			<skill id="4605" level="8" /> <!--Surrender To Fire -->
-			<skill id="4613" level="8" /> <!--NPC Clan Heal -->
-			<skill id="4614" level="8" /> <!--NPC Death Bomb -->
-			<skill id="4789" level="6" /> <!--NPC High Level -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4605" level="8" /> <!-- Surrender To Fire -->
+			<skill id="4613" level="8" /> <!-- NPC Clan Heal -->
+			<skill id="4614" level="8" /> <!-- NPC Death Bomb -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -3088,17 +3088,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="8" /> <!--HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="1" /> <!--Undead -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3169,16 +3169,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4408" level="8" /> <!--HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!--Light Armor Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3246,18 +3246,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4040" level="6" /> <!--NPC Bow Attack -->
-			<skill id="4071" level="3" /> <!--Resist Bow/Crossbow Weapons -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="8" /> <!--HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!--Light Armor Type -->
-			<skill id="4415" level="9" /> <!--Bows -->
-			<skill id="4416" level="1" /> <!--Undead -->
+			<skill id="4040" level="6" /> <!-- NPC Bow Attack -->
+			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3332,17 +3332,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="8" /> <!--HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3417,17 +3417,17 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4408" level="8" /> <!--HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!--Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!--Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!--Slightly Weak P. Def. -->
-			<skill id="4413" level="9" /> <!--Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="1" /> <!--Undead -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3505,16 +3505,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3603,15 +3603,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3701,15 +3701,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="4" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3801,18 +3801,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4085" level="1" /> <!--Critical Damage -->
-			<skill id="4086" level="1" /> <!--Critical Chance -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3905,16 +3905,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4002,15 +4002,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4101,18 +4101,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4085" level="1" /> <!--Critical Damage -->
-			<skill id="4086" level="1" /> <!--Critical Chance -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4416" level="6" /> <!--Humanoids -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4198,16 +4198,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!--Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!--Weak M. Atk. -->
-			<skill id="4412" level="14" /> <!--Strong P. Def. -->
-			<skill id="4413" level="14" /> <!--Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="4" /> <!--One-handed Sword -->
-			<skill id="4416" level="4" /> <!--Animals -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4312,18 +4312,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="2188" level="1" /> <!--Golden Spice -->
-			<skill id="2189" level="1" /> <!--Crystal Spice -->
-			<skill id="4408" level="9" /> <!--HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="2188" level="1" /> <!-- Golden Spice -->
+			<skill id="2189" level="1" /> <!-- Crystal Spice -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4423,18 +4423,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4516,19 +4516,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="6" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="6" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4610,18 +4610,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4703,19 +4703,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4157" level="6" /> <!--NPC Blaze - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4797,18 +4797,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4905,19 +4905,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="6" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="6" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5015,18 +5015,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5126,19 +5126,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4157" level="6" /> <!--NPC Blaze - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5236,19 +5236,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5315,20 +5315,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5395,19 +5395,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5474,20 +5474,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4571" level="6" /> <!--NPC Blazing Circle -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5554,19 +5554,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5648,20 +5648,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5745,19 +5745,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5842,20 +5842,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4571" level="6" /> <!--NPC Blazing Circle -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5927,19 +5927,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4318" level="1" /> <!--Ultimate Buff -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!--Strong M. Atk. -->
-			<skill id="4412" level="8" /> <!--Weak P. Def. -->
-			<skill id="4413" level="8" /> <!--Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4589" level="6" /> <!--Decrease Speed -->
-			<skill id="4600" level="6" /> <!--Reducing P. Def Stun -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4589" level="6" /> <!-- Decrease Speed -->
+			<skill id="4600" level="6" /> <!-- Reducing P. Def Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5999,21 +5999,21 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4318" level="1" /> <!--Ultimate Buff -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!--Strong M. Atk. -->
-			<skill id="4412" level="8" /> <!--Weak P. Def. -->
-			<skill id="4413" level="8" /> <!--Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4571" level="6" /> <!--NPC Blazing Circle -->
-			<skill id="4657" level="6" /> <!--Hold -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4657" level="6" /> <!-- Hold -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6087,18 +6087,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="2188" level="1" /> <!--Golden Spice -->
-			<skill id="2189" level="1" /> <!--Crystal Spice -->
-			<skill id="4408" level="9" /> <!--HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="2188" level="1" /> <!-- Golden Spice -->
+			<skill id="2189" level="1" /> <!-- Crystal Spice -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6200,18 +6200,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6293,19 +6293,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="6" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="6" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6387,18 +6387,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6480,19 +6480,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4157" level="6" /> <!--NPC Blaze - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6574,18 +6574,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6685,19 +6685,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="6" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="6" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6794,18 +6794,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6905,19 +6905,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4157" level="6" /> <!--NPC Blaze - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7017,19 +7017,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7096,20 +7096,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7176,19 +7176,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7255,20 +7255,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4571" level="6" /> <!--NPC Blazing Circle -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7335,19 +7335,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7426,20 +7426,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7523,19 +7523,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7618,20 +7618,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4571" level="6" /> <!--NPC Blazing Circle -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7705,19 +7705,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4318" level="1" /> <!--Ultimate Buff -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!--Strong M. Atk. -->
-			<skill id="4412" level="8" /> <!--Weak P. Def. -->
-			<skill id="4413" level="8" /> <!--Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4589" level="6" /> <!--Decrease Speed -->
-			<skill id="4600" level="6" /> <!--Reducing P. Def Stun -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4589" level="6" /> <!-- Decrease Speed -->
+			<skill id="4600" level="6" /> <!-- Reducing P. Def Stun -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7777,21 +7777,21 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4318" level="1" /> <!--Ultimate Buff -->
-			<skill id="4408" level="12" /> <!--HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!--Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!--Strong M. Atk. -->
-			<skill id="4412" level="8" /> <!--Weak P. Def. -->
-			<skill id="4413" level="8" /> <!--Weak M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="6" /> <!--Blunt Weapons -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4571" level="6" /> <!--NPC Blazing Circle -->
-			<skill id="4657" level="6" /> <!--Hold -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4657" level="6" /> <!-- Hold -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7865,18 +7865,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="2188" level="1" /> <!--Golden Spice -->
-			<skill id="2189" level="1" /> <!--Crystal Spice -->
-			<skill id="4408" level="9" /> <!--HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="2188" level="1" /> <!-- Golden Spice -->
+			<skill id="2189" level="1" /> <!-- Crystal Spice -->
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -7971,18 +7971,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8064,19 +8064,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="6" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="6" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8158,18 +8158,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8251,19 +8251,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4157" level="6" /> <!--NPC Blaze - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8345,18 +8345,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8450,19 +8450,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4257" level="6" /> <!--NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="6" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8555,18 +8555,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8666,19 +8666,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4157" level="6" /> <!--NPC Blaze - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!--Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!--Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!--Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!--Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4157" level="6" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8779,19 +8779,19 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4073" level="6" /> <!--Stun -->
-			<skill id="4074" level="2" /> <!--NPC Haste -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -8858,20 +8858,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4232" level="6" /> <!--NPC AE Strike -->
-			<skill id="4408" level="10" /> <!--HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
-			<skill id="4416" level="3" /> <!--Beasts -->
-			<skill id="4438" level="2" /> <!--Greater Resist Sleep -->
-			<skill id="4566" level="6" /> <!--NPC Eruption - Magic -->
-			<skill id="4633" level="3" /> <!--NPC Buff - Acumen Empower Berserk -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>

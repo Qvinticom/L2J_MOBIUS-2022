@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23403" level="97" type="L2Monster" name="Suffering Fanatic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1387,7 +1387,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
-				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye (Men  3 Int - 3) -->
+				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
 				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
@@ -3296,7 +3296,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.964" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.964" /> <!-- Gloves -->
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
 			</drop>
@@ -3434,7 +3434,7 @@
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
 			</drop>
 			<spoil>
 				<item id="36543" min="1" max="1" chance="2.506" /> <!-- Adamantite Wire -->
@@ -3538,7 +3538,7 @@
 				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
 				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
-				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 			</drop>
 			<spoil>
 				<item id="36518" min="1" max="1" chance="7.249" /> <!-- Durable Leather -->
@@ -3583,7 +3583,7 @@
 				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
 				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
-				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
 			</drop>
 			<spoil>
 				<item id="36518" min="1" max="1" chance="7.237" /> <!-- Durable Leather -->
@@ -3815,11 +3815,11 @@
 			<drop>
 				<item id="57" min="2479" max="5786" chance="20" /> <!-- Adena -->
 				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Amaranthine Cutter Fragment -->
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35452" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35452" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Cutter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36543" min="1" max="1" chance="2.655" /> <!-- Adamantite Wire -->
@@ -3864,12 +3864,12 @@
 			<drop>
 				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
 				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Helios Stormer Fragment -->
+				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Fragment -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
 				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 			</drop>
 			<spoil>
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
@@ -3914,12 +3914,12 @@
 			<drop>
 				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
-				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Helios Buster Fragment -->
+				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Fragment -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
 				<item id="36554" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Buster (60%) -->
+				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
 			</drop>
 			<spoil>
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
@@ -3963,9 +3963,9 @@
 				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
+				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Amaranthine Caster Fragment -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="36518" min="1" max="1" chance="7.477" /> <!-- Durable Leather -->

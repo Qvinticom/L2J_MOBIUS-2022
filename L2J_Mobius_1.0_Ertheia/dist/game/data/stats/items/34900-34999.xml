@@ -498,8 +498,7 @@
 		</stats>
 	</item>
 	<item id="34925" name="Cloak of Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
-		<!-- Cloak that symbolizes glory and light. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:ﾠCastle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape: Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -540,7 +539,7 @@
 		</stats>
 	</item>
 	<item id="34926" name="Cloak of Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40, STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by marquis or higher. P. Def. 50, M. Def. 40, STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape: Castle skill. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -739,7 +738,7 @@
 		</skills>
 	</item>
 	<item id="34935" name="Star Agathion - Heejin Jang" additionalName="7-day" type="Armor">
-		<!-- 7-day Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -772,7 +771,7 @@
 		</stats>
 	</item>
 	<item id="34936" name="Star Agathion - Hyuk Jang" additionalName="7-day" type="Armor">
-		<!-- 7-day Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Atk. by 5%, and Attribute Resistance by 10.  Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. . Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -805,7 +804,7 @@
 		</stats>
 	</item>
 	<item id="34937" name="Star Agathion - Sooro Kim" additionalName="7-day" type="Armor">
-		<!-- 7-day Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10.  Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. . Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -838,7 +837,7 @@
 		</stats>
 	</item>
 	<item id="34938" name="Star Agathion - Jaebum Park" additionalName="7-day" type="Armor">
-		<!-- 7-day Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Atk. By 6%, and Attribute Resistance by 10.  Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. . Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -871,7 +870,7 @@
 		</stats>
 	</item>
 	<item id="34939" name="Star Agathion - Shin-young Kim" additionalName="7-day" type="Armor">
-		<!-- 7-day Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%.  Usable Skill: Blessed Escape. -->
+		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. . Usable Skill: Blessed Escape. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1267,7 +1266,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34965" name="Daylily" type="EtcItem">
-		<!-- "Yellow flower called a ""Daylily."" It symbolizes the alleviation of sorrow and grief." -->
+		<!-- Yellow flower called a "Daylily." It symbolizes the alleviation of sorrow and grief. -->
 		<set name="icon" val="icon.etc_flower_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1281,7 +1280,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34966" name="Peony" type="EtcItem">
-		<!-- "Red flower called a ""Peony."" It once represented wealth and honor." -->
+		<!-- Red flower called a "Peony." It once represented wealth and honor. -->
 		<set name="icon" val="icon.etc_flower_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1295,7 +1294,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34967" name="Petunia" type="EtcItem">
-		<!-- "Pink flower called a ""Petunia."" It symbolizes a calm heart." -->
+		<!-- Pink flower called a "Petunia." It symbolizes a calm heart. -->
 		<set name="icon" val="icon.etc_flower_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1309,7 +1308,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34968" name="Pansy" type="EtcItem">
-		<!-- "Purple flower called a ""Pansy."" It means, ""Think of me.""" -->
+		<!-- Purple flower called a "Pansy." It means, "Think of me." -->
 		<set name="icon" val="icon.etc_flower_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1323,7 +1322,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34969" name="Iris" type="EtcItem">
-		<!-- "Blue flower called an ""Iris"". It symbolizes the bringing of good news." -->
+		<!-- Blue flower called an "Iris". It symbolizes the bringing of good news. -->
 		<set name="icon" val="icon.etc_flower_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1337,7 +1336,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34970" name="Kuon" type="EtcItem">
-		<!-- "Black flower called a ""Kuon."" It is sometimes misunderstood as the flower of death because of its color. It actually symbolizes paying tribute to the dead." -->
+		<!-- Black flower called a "Kuon." It is sometimes misunderstood as the flower of death because of its color. It actually symbolizes paying tribute to the dead. -->
 		<set name="icon" val="icon.etc_flower_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1770,8 +1769,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34996" name="Cloak of Radiant Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:�Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
-		<!-- Cloak that symbolizes glory and light. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:ﾠCastle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape: Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1812,8 +1810,7 @@
 		</stats>
 	</item>
 	<item id="34997" name="Cloak of Cold Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:�Castle skill. Cannot be transferred between servers. -->
-		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape:ďľ Castle skill. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. Can only be equipped by a lord. STR/MEN/DEX/WIT/INT/CON + 3. Damage received during PvP decreases by 15%. Can use Escape: Castle skill. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />

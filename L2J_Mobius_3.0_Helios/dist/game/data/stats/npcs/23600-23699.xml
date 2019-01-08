@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23600" level="102" type="L2Monster" name="Atelia Flame Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -29,7 +29,7 @@
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 				<item id="36908" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Combination -->
-				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
 				<item id="36554" min="1" max="1" chance="1.682" /> <!-- Armor Fragment (High-grade) -->
@@ -64,7 +64,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings -->
+				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings - Light Armor -->
 				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="1.456" /> <!-- Quality Leather Braid -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
@@ -103,7 +103,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
+				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light Armor -->
 				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="5.78" /> <!-- Quality Leather -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
@@ -521,7 +521,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -572,7 +572,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -930,7 +930,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -981,7 +981,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -1341,7 +1341,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -1392,7 +1392,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -1752,7 +1752,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -1803,7 +1803,7 @@
 			<defence physical="272010.9" magical="12154" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -2364,7 +2364,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -2413,7 +2413,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -2463,7 +2463,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -2565,7 +2565,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc-->
+			<skill id="4416" level="17" /> <!-- Orc -->
 			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
 			<skill id="23477" level="1" /> <!-- (Assault Rush) -->
 			<skill id="23501" level="1" /> <!-- (Harp Melody) -->
@@ -2970,7 +2970,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -3019,7 +3019,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -3069,7 +3069,7 @@
 			<defence physical="191554.5" magical="24690" />
 		</stats>
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="4416" level="16" /> <!-- Dark Elf -->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -3381,8 +3381,8 @@
 				<item id="36519" min="1" max="1" chance="3.22" /> <!-- Quality Leather -->
 				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
-				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Helios Shaper Fragment -->
-				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 			</drop>
 			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
@@ -3415,7 +3415,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
+				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves - Light Armor -->
 				<item id="57" min="26676" max="62345" chance="70" /> <!-- Adena -->
 				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
@@ -3456,8 +3456,8 @@
 				<item id="36519" min="1" max="1" chance="3.278" /> <!-- Quality Leather -->
 				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
-				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Helios Retributer Fragment -->
-				<item id="35472" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35472" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Boots (60%) -->
 			</drop>
 			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2001" levels="1" name="Red Potion">
 		<set name="abnormalLvl" val="1" />
@@ -31,8 +31,6 @@
 		</for>
 	</skill>
 	<skill id="2003" levels="1" name="Squash Seed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summer Squash Event Skill -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -49,8 +47,6 @@
 		</for>
 	</skill>
 	<skill id="2004" levels="1" name="Large Squash Seed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summer Squash Event Skill -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -67,8 +63,6 @@
 		</for>
 	</skill>
 	<skill id="2005" levels="1" name="Nectar">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summer Squash Event Skill -->
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="300" />
@@ -125,6 +119,7 @@
 		</for>
 	</skill>
 	<skill id="2011" levels="1" name="Haste Potion">
+		<!-- Increases Speed. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -141,6 +136,7 @@
 		</for>
 	</skill>
 	<skill id="2012" levels="1" name="Potion of Alacrity">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -157,7 +153,6 @@
 		</for>
 	</skill>
 	<skill id="2013" levels="1" name="Scroll Of Escape">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -285,7 +280,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2026" levels="1" name="Scroll: Enchant Weapon (Grade S)">
-		<!-- Blessed Enchant -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -293,7 +287,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2027" levels="1" name="Scroll: Enchant Weapon (Grade A)">
-		<!-- Blessed Enchant -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -301,7 +294,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2028" levels="1" name="Scroll: Enchant Weapon (Grade B)">
-		<!-- Blessed Enchant -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -309,7 +301,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2029" levels="1" name="Scroll: Enchant Weapon (Grade C)">
-		<!-- Blessed Enchant -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -317,7 +308,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2030" levels="1" name="Scroll: Enchant Weapon (Grade D)">
-		<!-- Blessed Enchant -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -325,6 +315,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2031" levels="1" name="Lesser Healing Potion">
+		<!-- Sharp increase in HP recovery bonus. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -342,6 +333,7 @@
 		</for>
 	</skill>
 	<skill id="2032" levels="1" name="Healing potion">
+		<!-- Sharp increase in HP recovery bonus. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -366,6 +358,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
+		<!-- Increases Speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -382,6 +375,7 @@
 		</for>
 	</skill>
 	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
+		<!-- Increases Atk. Spd. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -398,7 +392,6 @@
 		</for>
 	</skill>
 	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
-		<!-- Confirmed CT2.5 -->
 		<table name="#itemConsumeId"> 1538 3958 </table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -423,6 +416,7 @@
 		</for>
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
+		<!-- Sharp increase in HP recovery bonus. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HP_RECOVER" />
@@ -459,7 +453,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -483,7 +476,6 @@
 		</for>
 	</skill>
 	<skill id="2041" levels="1" name="Scroll of Escape: Castle">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -573,7 +565,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2048" levels="1" name="Wolves' Food">
-		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -603,6 +594,7 @@
 		</for>
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
+		<!-- Increases Accuracy by 4 for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -622,6 +614,7 @@
 		</for>
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
+		<!-- Increases Critical Damage by 35% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -641,6 +634,7 @@
 		</for>
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
+		<!-- Increases Critical Rate by 30% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -660,6 +654,7 @@
 		</for>
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
+		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -679,6 +674,7 @@
 		</for>
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
+		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -698,6 +694,7 @@
 		</for>
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
+		<!-- Increases Evasion by 4 for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -717,6 +714,7 @@
 		</for>
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
+		<!-- Increases M. Atk. by 75% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -736,6 +734,7 @@
 		</for>
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
+		<!-- Increases P. Atk. by 15% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -755,6 +754,7 @@
 		</for>
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
+		<!-- Increases Speed by 33 for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -774,6 +774,7 @@
 		</for>
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
+		<!-- Increases P. Def. by 15% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -793,7 +794,6 @@
 		</for>
 	</skill>
 	<skill id="2060" levels="1" name="Healing Medicine">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -819,7 +819,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3959" /> <!-- Blessed Scroll of Resurrection -->
+		<set name="itemConsumeId" val="3959" /> <!-- Blessed Scroll of Resurrection - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -834,7 +834,6 @@
 		</for>
 	</skill>
 	<skill id="2063" levels="1" name="Hatchling Food">
-		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="150" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -843,6 +842,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
+		<!-- Sharp increase in MP recovery bonus. Effect 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -936,7 +936,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
-		<!-- Confirmed CT2.5 -->
+		<!-- Misdirects enemy attack and slows Speed of user. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -973,6 +973,7 @@
 		</for>
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
+		<!-- Increase lung capacity. Effect 1. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="400" />
 		<set name="abnormalType" val="MAX_BREATH_UP" />
@@ -989,7 +990,7 @@
 		</for>
 	</skill>
 	<skill id="2077" levels="1" name="Potion of Revenge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lowers user's P. Def. and reflects a certain amount of damage back to the enemy, excluding damage from skill use or remote attacks. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -1007,7 +1008,6 @@
 		</for>
 	</skill>
 	<skill id="2078" levels="1" name="Compressed Package of Soulshots: No Grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1026,7 +1026,6 @@
 		</for>
 	</skill>
 	<skill id="2079" levels="1" name="Compressed Package of Soulshots: D-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1045,7 +1044,6 @@
 		</for>
 	</skill>
 	<skill id="2080" levels="1" name="Compressed Package of Soulshots: C-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1064,7 +1062,6 @@
 		</for>
 	</skill>
 	<skill id="2081" levels="1" name="Compressed Package of Soulshots: B-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1083,7 +1080,6 @@
 		</for>
 	</skill>
 	<skill id="2082" levels="1" name="Compressed Package of Soulshots: A-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1102,7 +1098,6 @@
 		</for>
 	</skill>
 	<skill id="2083" levels="1" name="Compressed Package of Soulshots: S-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1121,7 +1116,6 @@
 		</for>
 	</skill>
 	<skill id="2084" levels="1" name="Compressed Package of Spiritshots: No Grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1140,7 +1134,6 @@
 		</for>
 	</skill>
 	<skill id="2085" levels="1" name="Compressed Package of Spiritshots: D-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1159,7 +1152,6 @@
 		</for>
 	</skill>
 	<skill id="2086" levels="1" name="Compressed Package of Spiritshots: C-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1178,7 +1170,6 @@
 		</for>
 	</skill>
 	<skill id="2087" levels="1" name="Compressed Package of Spiritshots: B-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1197,7 +1188,6 @@
 		</for>
 	</skill>
 	<skill id="2088" levels="1" name="Compressed Package of Spiritshots: A-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1216,7 +1206,6 @@
 		</for>
 	</skill>
 	<skill id="2089" levels="1" name="Compressed Package of Spiritshots: S-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1235,7 +1224,6 @@
 		</for>
 	</skill>
 	<skill id="2090" levels="1" name="Compressed Package of Blessed Spiritshots: No Grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1254,7 +1242,6 @@
 		</for>
 	</skill>
 	<skill id="2091" levels="1" name="Compressed Package of Blessed Spiritshots: D-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1273,7 +1260,6 @@
 		</for>
 	</skill>
 	<skill id="2092" levels="1" name="Compressed Package of Blessed Spiritshots: C-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1292,7 +1278,6 @@
 		</for>
 	</skill>
 	<skill id="2093" levels="1" name="Compressed Package of Blessed Spiritshots: B-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1311,7 +1296,6 @@
 		</for>
 	</skill>
 	<skill id="2094" levels="1" name="Compressed Package of Blessed Spiritshots: A-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1330,7 +1314,6 @@
 		</for>
 	</skill>
 	<skill id="2095" levels="1" name="Compressed Package of Blessed Spiritshots: S-grade">
-		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1380,7 +1363,6 @@
 		</for>
 	</skill>
 	<skill id="2098" levels="1" name="Harvesting">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="20" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />

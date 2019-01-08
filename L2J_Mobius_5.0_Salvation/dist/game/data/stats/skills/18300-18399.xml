@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18344" toLevel="1" name="Escape: Village">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports to a village. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -33,90 +32,90 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill" fromLevel="1" toLevel="1" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="1" toLevel="1" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>2</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="1" toLevel="1" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>3</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="1" toLevel="1" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>4</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="1" toLevel="1" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>5</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="2" toLevel="2" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>true</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="2" toLevel="2" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>2</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="3" toLevel="3" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>2</skillLevel>
 				<hasLearned>true</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="3" toLevel="3" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>3</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>			
 			<condition name="OpSkill" fromLevel="4" toLevel="4" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>3</skillLevel>
 				<hasLearned>true</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="4" toLevel="4" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>4</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>			
 			<condition name="OpSkill" fromLevel="5" toLevel="5" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>4</skillLevel>
 				<hasLearned>true</hasLearned>
 			</condition>
 			<condition name="OpSkill" fromLevel="5" toLevel="5" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLevel>5</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>			
 		</conditions>
 		<effects>
 			<effect name="SetSkill" fromLevel="1" toLevel="1" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLvl>1</skillLvl>
 			</effect>
 			<effect name="SetSkill" fromLevel="2" toLevel="2" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLvl>2</skillLvl>
 			</effect>
 			<effect name="SetSkill" fromLevel="3" toLevel="3" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLvl>3</skillLvl>
 			</effect>
 			<effect name="SetSkill" fromLevel="4" toLevel="4" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLvl>4</skillLvl>
 			</effect>
 			<effect name="SetSkill" fromLevel="5" toLevel="5" >
-				<skillId>19222</skillId>
+				<skillId>19222</skillId> <!-- Dignity of the Exalted -->
 				<skillLvl>5</skillLvl>
 			</effect>
 		</effects>
@@ -140,14 +139,14 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>19223</skillId>
+				<skillId>19223</skillId> <!-- Belief of the Exalted -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>19223</skillId>
+				<skillId>19223</skillId> <!-- Belief of the Exalted -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
@@ -171,14 +170,14 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>19224</skillId>
+				<skillId>19224</skillId> <!-- Blessing of the Exalted -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>19224</skillId>
+				<skillId>19224</skillId> <!-- Blessing of the Exalted -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
@@ -201,14 +200,14 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>19225</skillId>
+				<skillId>19225</skillId> <!-- Summon Battle Potion -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>19225</skillId>
+				<skillId>19225</skillId> <!-- Summon Battle Potion -->
 				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
@@ -235,7 +234,7 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>19226</skillId>
+				<skillId>19226</skillId> <!-- Favor of the Exalted -->
 				<skillLevel>1</skillLevel>
 				<skillLevel>2</skillLevel>
 				<hasLearned>false</hasLearned>
@@ -243,7 +242,7 @@
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>19226</skillId>
+				<skillId>19226</skillId> <!-- Favor of the Exalted -->
 				<skillLvl>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -252,7 +251,7 @@
 		</effects>
 	</skill>
 	<skill id="18352" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight + 12800, Inventory Slot + 18, and Damage + 6% during PvE. -->
+		<!-- Weight +12800, Inventory Slot +18, and Damage +6% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -277,7 +276,7 @@
 		</effects>
 	</skill>
 	<skill id="18353" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight + 12800, Inventory Slot + 18, and Damage Received + 7% during PvE. -->
+		<!-- Weight +12800, Inventory Slot +18, and Damage Received -7% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -302,7 +301,7 @@
 		</effects>
 	</skill>
 	<skill id="18354" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight + 12800, Inventory Slot + 18, and Damage + 6% during PvP. -->
+		<!-- Weight +12800, Inventory Slot +18, AND Damage +6% during PvP. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -327,7 +326,7 @@
 		</effects>
 	</skill>
 	<skill id="18355" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight + 12800, Inventory Slot + 18, and Damage Received + 7% during PvP. -->
+		<!-- Weight +12800, Inventory Slot +18, and Damage Received -7% during PvP. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -352,25 +351,21 @@
 		</effects>
 	</skill>
 	<skill id="18356" toLevel="1" name="Atelia Energy Combination Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18357" toLevel="1" name="Enhanced Atelia Energy Combination Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18358" toLevel="1" name="Dimensional Hero's Supply Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18359" toLevel="1" name="Summon Kableon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon Kableon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -378,23 +373,20 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18360" toLevel="1" name="Festival Buff - Yum Yum">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- You've gotten full from the food at the festival. Atk. Spd. - 5%, Casting Spd. - 5%, Speed - 20, and P. Def. + 10%, M. Def. + 10%, Max HP + 10% for 3 hours. -->
+		<!-- You've gotten full from the food at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Def. +10%, M. Def. +10%, Max HP +10% for 3 hours. -->
 		<icon>icon.ev_festival_chicken</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18361" toLevel="1" name="Festival Buff - Tipsy Tipsy">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- You've drank too much at the festival. Atk. Spd. - 5%, Casting Spd. - 5%, Speed - 20, and P. Atk. + 10%, M. Atk. + 10%, Skill Power + 10%, 10%, Damage Reflect Resistance + 10% for 3 hours. -->
+		<!-- You've drank too much at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Atk. +10%, M. Atk. +10%, Skill Power +10%, 10%, Damage Reflect Resistance +10% for 3 hours. -->
 		<icon>icon.ev_festival_herong</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18362" toLevel="1" name="Star Rating Preparation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Kableon is looking at you to give you a star rating. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
@@ -402,53 +394,46 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18363" toLevel="5" name="Star Rating">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- 1 star. -->
+		<!-- $s1 star. -->
 		<icon>icon.etc_deco_star_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18364" toLevel="1" name="Festival's Effect">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- The festival is not over yet. Obtain 300 Festival Coins after 6 hours. Receive the buff once a day. It resets at 6:30 AM every day.(Note:) Cannot receive Festival Coins if you are dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. Obtain 300 Festival Coins after 6 hours. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you are dead or don't have space in your inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18365" toLevel="1" name="Festival's Effect">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- The festival is not over yet. Obtain 300 Festival Coins after 10 minutes. Receive the buff once a day. It resets at 6:30 AM every day.(Note:) Cannot receive Festival Coins if you are dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. Obtain 300 Festival Coins after 10 minutes. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you are dead or don't have space in your inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18366" toLevel="1" name="Festival's Effect">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- The festival is not over yet. Obtain 600 Festival Coins after 6 hours. Receive the buff once a day. It resets at 6:30 AM every day.(Note:) Cannot receive Festival Coins if you are dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. Obtain 600 Festival Coins after 6 hours. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you are dead or don't have space in your inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18367" toLevel="1" name="Festival Reward">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18368" toLevel="1" name="Festival Reward">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18369" toLevel="1" name="Kableon's Concentration">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Kableon is checking your star rating. -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
@@ -456,32 +441,28 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18370" toLevel="1" name="Mid-grade Spirit Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Mid-grade Spirit Stone. Elementary Alchemy. -->
 		<icon>icon.renewal_mineral_r</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18371" toLevel="1" name="High-grade Spirit Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts High-grade Spirit Stone. Intermediate Alchemy. -->
 		<icon>icon.renewal_mineral_r95</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18372" toLevel="1" name="Top-grade Spirit Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Top-grade Spirit Stone. Advanced Alchemy. -->
 		<icon>icon.renewal_mineral_r99</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18373" toLevel="1" name="Life Stone Instilled with Giants' Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Life Stone Instilled with Giants' Power. Master Alchemy. -->
 		<icon>icon.etc_small_bubble_i00</icon>
 		<operateType>P</operateType>
 		<reuseDelay>604800000</reuseDelay>
 	</skill>
 	<skill id="18374" toLevel="1" name="Pippi's Shirt">
-		<!-- Speed + 7, STR + 1, and INT + 1. -->
+		<!-- Speed +7, STR +1, and INT +1. -->
 		<icon>icon.r1_shirt_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -500,7 +481,7 @@
 		</effects>
 	</skill>
 	<skill id="18375" toLevel="1" name="Kokko's Shirt">
-		<!-- Speed + 7, STR + 1, INT + 1, CON + 1, and MEN + 1. -->
+		<!-- Speed +7, STR +1, INT +1, CON +1, and MEN +1. -->
 		<icon>icon.r1_shirt_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -527,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="18376" toLevel="1" name="Pippi's Belt">
-		<!-- Weight + 12800 and Inventory Slot + 12. -->
+		<!-- Weight +12800 and Inventory Slot +12. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -540,7 +521,7 @@
 		</effects>
 	</skill>
 	<skill id="18377" toLevel="1" name="Kokko's Belt">
-		<!-- Weight + 12800 and Inventory Slot + 18. -->
+		<!-- Weight +12800 and Inventory Slot +18. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -553,19 +534,17 @@
 		</effects>
 	</skill>
 	<skill id="18378" toLevel="1" name="Awakened Hero's Olympiad Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18379" toLevel="1" name="Indomitable Hero's Olympiad Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18380" toLevel="1" name="Player Commendation - Talisman - STR">
-		<!-- STR + 5 when equipped. -->
+		<!-- STR +5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -576,7 +555,7 @@
 		</effects>
 	</skill>
 	<skill id="18381" toLevel="1" name="Player Commendation - Talisman - INT">
-		<!-- INT + 5 when equipped. -->
+		<!-- INT +5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -587,7 +566,7 @@
 		</effects>
 	</skill>
 	<skill id="18382" toLevel="1" name="Player Commendation - Talisman - DEX">
-		<!-- DEX + 5 when equipped. -->
+		<!-- DEX +5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -598,7 +577,7 @@
 		</effects>
 	</skill>
 	<skill id="18383" toLevel="1" name="Player Commendation - Talisman - WIT">
-		<!-- WIT + 5 when equipped. -->
+		<!-- WIT +5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -609,7 +588,7 @@
 		</effects>
 	</skill>
 	<skill id="18384" toLevel="1" name="Player Commendation - Talisman - CON">
-		<!-- CON + 5 when equipped. -->
+		<!-- CON +5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -620,7 +599,7 @@
 		</effects>
 	</skill>
 	<skill id="18385" toLevel="1" name="Player Commendation - Talisman - MEN">
-		<!-- MEN + 5 when equipped. -->
+		<!-- MEN +5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -631,7 +610,7 @@
 		</effects>
 	</skill>
 	<skill id="18386" toLevel="1" name="Player Commendation - Talisman - Attack Attribute">
-		<!-- Attack Attribute + 50 when equipped. -->
+		<!-- Attack Attribute +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -641,7 +620,7 @@
 		</effects>
 	</skill>
 	<skill id="18387" toLevel="1" name="Player Commendation - Talisman - Fire Resistance">
-		<!-- Fire Resistance + 50 when equipped. -->
+		<!-- Fire Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -652,7 +631,7 @@
 		</effects>
 	</skill>
 	<skill id="18388" toLevel="1" name="Player Commendation - Talisman - Water Resistance">
-		<!-- Water Resistance + 50 when equipped. -->
+		<!-- Water Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -663,7 +642,7 @@
 		</effects>
 	</skill>
 	<skill id="18389" toLevel="1" name="Player Commendation - Talisman - Wind Resistance">
-		<!-- Wind Resistance + 50 when equipped. -->
+		<!-- Wind Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -674,7 +653,7 @@
 		</effects>
 	</skill>
 	<skill id="18390" toLevel="1" name="Player Commendation - Talisman - Earth Resistance">
-		<!-- Earth Resistance + 50 when equipped. -->
+		<!-- Earth Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -685,7 +664,7 @@
 		</effects>
 	</skill>
 	<skill id="18391" toLevel="1" name="Player Commendation - Talisman - Holy Resistance">
-		<!-- Holy Resistance + 50 when equipped. -->
+		<!-- Holy Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -696,7 +675,7 @@
 		</effects>
 	</skill>
 	<skill id="18392" toLevel="1" name="Player Commendation - Talisman - Dark Resistance">
-		<!-- Dark Resistance + 50 when equipped. -->
+		<!-- Dark Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -707,42 +686,35 @@
 		</effects>
 	</skill>
 	<skill id="18393" toLevel="1" name="Dimensional Elcyum Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18394" toLevel="1" name="Dimensional Augment Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18395" toLevel="1" name="Dimensional Enhancement Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18396" toLevel="1" name="Player Commendation Points">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="18397" toLevel="1" name="Player Commendation Points">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="18398" toLevel="1" name="Zaken's Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18399" toLevel="1" name="Leona Blackbird's Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

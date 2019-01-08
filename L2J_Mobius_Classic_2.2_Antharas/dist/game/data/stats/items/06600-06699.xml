@@ -321,7 +321,7 @@
 		</stats>
 	</item>
 	<item id="6620" name="Infinity Dualsword" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dualsword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped. Infinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dual Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped. Infinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -400,7 +400,7 @@
 		</stats>
 	</item>
 	<item id="6645" name="Beast Soulshot" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor? info window. (Used from the master? inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -417,7 +417,7 @@
 		</skills>
 	</item>
 	<item id="6646" name="Beast Spiritshot" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor? info window. (Used from the master? inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -434,7 +434,7 @@
 		</skills>
 	</item>
 	<item id="6647" name="Blessed Beast Spiritshot" type="EtcItem">
-		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor? info window. (Used from the master? inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -489,7 +489,7 @@
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
-		<!-- MP +9, Mental Resistance and Atk. Rate +10%, P. / M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<!-- MP +9, Mental Resistance and Atk. Rate +10%, P./ M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

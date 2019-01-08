@@ -460,7 +460,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29145" name="Freya Winter Card" type="EtcItem">
-		<!-- Double-click to obtain one of the following items at a certain rate:  Lv. 4 Tanzanite/ Garnet/ Aquamarine/ Cat's Eye/ Pearl/ Vital Stone/ Obsidian/ Emerald/ Sapphire/ Diamond/ Opal/ Blue/ Red Cat's Eye/ Ruby/ Amethyst Jewelry Box, +7 Physical/ Magical Reflect Shirt Pack, +7 Shiny Elemental Shirt Pack, Bottle of Valakas'/ Antharas' Soul x2, Shadow Weapon Pack, Bottle of Baium's Soul, Talisman - Anakim, Kelbim/ Tauti Weapon Pack, Sayha's Talisman Stage 7 Pack , Blessed Valakas'/ Antharas' Necklace, Seven Signs' Energy, Talisman - Seven Signs, Ruler's Authority, Sealed Talisman - Insanity. -->
+		<!-- Double-click to obtain one of the following items at a certain rate: Lv. 4 Tanzanite/ Garnet/ Aquamarine/ Cat's Eye/ Pearl/ Vital Stone/ Obsidian/ Emerald/ Sapphire/ Diamond/ Opal/ Blue/ Red Cat's Eye/ Ruby/ Amethyst Jewelry Box, +7 Physical/ Magical Reflect Shirt Pack, +7 Shiny Elemental Shirt Pack, Bottle of Valakas'/ Antharas' Soul x2, Shadow Weapon Pack, Bottle of Baium's Soul, Talisman - Anakim, Kelbim/ Tauti Weapon Pack, Sayha's Talisman Stage 7 Pack , Blessed Valakas'/ Antharas' Necklace, Seven Signs' Energy, Talisman - Seven Signs, Ruler's Authority, Sealed Talisman - Insanity. -->
 		<set name="icon" val="icon.bm_freya_winter_card" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -618,7 +618,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29161" name="Prestige Rune 300% Pack" additionalName="30-day" type="EtcItem">
-		<!-- Wrapped Pack that contains Prestige Rune 300%  Pack (30-day) -->
+		<!-- Wrapped Pack that contains Prestige Rune 300% Pack (30-day) -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

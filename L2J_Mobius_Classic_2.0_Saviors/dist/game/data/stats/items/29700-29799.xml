@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55043" level="1"/>	<!--Rare Accessory Pack-->
+			<skill id="55043" level="1"/>	<!-- Rare Accessory Pack -->
 		</skills>
 	</item>
 	<item id="29702" name="Chant of Vampire Chest" type="EtcItem">
@@ -342,8 +342,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29704" min="1" max="1" chance="100" />
-			<item id="49469" min="10" max="10" chance="100" />
+			<item id="29704" min="1" max="1" chance="100" /> <!-- Fire Dragon Pendant - Lvl 1 -->
+			<item id="49469" min="10" max="10" chance="100" /> <!-- Pendant Polish -->
 		</capsuled_items>
 	</item>
 	<item id="29725" name="Water Dragon Pendant Chest" type="EtcItem">
@@ -383,7 +383,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29724" min="10" max="10" chance="100" />
+			<item id="29724" min="10" max="10" chance="100" /> <!-- Fire Dragon Pendant Chest -->
 		</capsuled_items>
 	</item>
 	<item id="29729" name="Special Water Dragon Pendant Chest" type="EtcItem">
@@ -423,8 +423,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29724" min="30" max="30" chance="100" />
-			<item id="90138" min="1" max="1" chance="100" />
+			<item id="29724" min="30" max="30" chance="100" /> <!-- Fire Dragon Pendant Chest -->
+			<item id="90138" min="1" max="1" chance="100" /> <!-- Pendant Shiny Varnish -->
 		</capsuled_items>
 	</item>
 	<item id="29733" name="Package: Shiny Pendant Polish for Water Dragon Pendant" type="EtcItem">
@@ -482,7 +482,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29739" name="Diana's Recommendation" additionalName="Event" type="EtcItem">
-		<!-- Allows to take part int the  Mr. and Ms. Lineage2 contest. Save it until the very end of the contest. -->
+		<!-- Allows to take part int the Mr. & Ms. Lineage2 contest. Save it until the very end of the contest. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -585,7 +585,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29746" min="100" max="100" chance="100" />
+			<item id="29746" min="100" max="100" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="29749" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs)" type="EtcItem">
@@ -598,7 +598,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29747" min="100" max="100" chance="100" />
+			<item id="29747" min="100" max="100" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
 		</capsuled_items>
 	</item>
 	<item id="29750" name="Sniper's Mysterious Package (B-grade)" type="EtcItem">
@@ -615,9 +615,9 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29746" min="3000" max="3000" chance="100" />
-			<item id="29648" min="12" max="12" chance="100" />
-			<item id="29012" min="15" max="15" chance="100" />
+			<item id="29746" min="3000" max="3000" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
+			<item id="29648" min="12" max="12" chance="100" /> <!-- XP/SP Scroll - Normal -->
+			<item id="29012" min="15" max="15" chance="100" /> <!-- 2nd Class Buff Scroll -->
 		</capsuled_items>
 	</item>
 	<item id="29751" name="Mystic's Mysterious Package (B-grade)" type="EtcItem">
@@ -634,9 +634,9 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29747" min="1000" max="1000" chance="100" />
-			<item id="29648" min="12" max="12" chance="100" />
-			<item id="29012" min="15" max="15" chance="100" />
+			<item id="29747" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="29648" min="12" max="12" chance="100" /> <!-- XP/SP Scroll - Normal -->
+			<item id="29012" min="15" max="15" chance="100" /> <!-- 2nd Class Buff Scroll -->
 		</capsuled_items>
 	</item>
 	<item id="29752" name="Halloween Suit" type="Armor">
@@ -1208,7 +1208,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29753" min="1" max="1" chance="100" />
+			<item id="29753" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Crit. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29786" name="Blue Talisman Box - P. Atk." additionalName="1 hour" type="EtcItem">
@@ -1223,7 +1223,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29754" min="1" max="1" chance="100" />
+			<item id="29754" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Atk. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29787" name="Blue Talisman Box - P. Def." additionalName="1 hour" type="EtcItem">
@@ -1238,7 +1238,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29755" min="1" max="1" chance="100" />
+			<item id="29755" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Def. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29788" name="Blue Talisman Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
@@ -1253,7 +1253,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29756" min="1" max="1" chance="100" />
+			<item id="29756" min="1" max="1" chance="100" /> <!-- Blue Talisman - P. Skills Evasion - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29789" name="Blue Talisman Box - M. Crit." additionalName="1 hour" type="EtcItem">
@@ -1268,7 +1268,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29757" min="1" max="1" chance="100" />
+			<item id="29757" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Crit. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29790" name="Blue Talisman Box - M. Atk." additionalName="1 hour" type="EtcItem">
@@ -1283,7 +1283,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29758" min="1" max="1" chance="100" />
+			<item id="29758" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Atk. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29791" name="Blue Talisman Box - M. Def." additionalName="1 hour" type="EtcItem">
@@ -1298,7 +1298,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29759" min="1" max="1" chance="100" />
+			<item id="29759" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Def. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29792" name="Blue Talisman Box - M. Skills Evasion" additionalName="1 hour" type="EtcItem">
@@ -1313,7 +1313,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29760" min="1" max="1" chance="100" />
+			<item id="29760" min="1" max="1" chance="100" /> <!-- Blue Talisman - M. Skills Evasion - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29793" name="Blue Talisman Box - Max. HP" additionalName="1 hour" type="EtcItem">
@@ -1328,7 +1328,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29761" min="1" max="1" chance="100" />
+			<item id="29761" min="1" max="1" chance="100" /> <!-- Blue Talisman - Max. HP - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29794" name="Blue Talisman Box - Max. MP" additionalName="1 hour" type="EtcItem">
@@ -1343,7 +1343,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29762" min="1" max="1" chance="100" />
+			<item id="29762" min="1" max="1" chance="100" /> <!-- Blue Talisman - Max. MP - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29795" name="Grey Talisman Box - Guard" additionalName="1 hour" type="EtcItem">
@@ -1358,7 +1358,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29763" min="1" max="1" chance="100" />
+			<item id="29763" min="1" max="1" chance="100" /> <!-- Grey Talisman Box - Guard - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29796" name="Grey Talisman Box - Denial" additionalName="1 hour" type="EtcItem">
@@ -1373,7 +1373,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29764" min="1" max="1" chance="100" />
+			<item id="29764" min="1" max="1" chance="100" /> <!-- Grey Talisman - Denial - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29797" name="Grey Talisman Box - Benefaction" additionalName="1 hour" type="EtcItem">
@@ -1388,7 +1388,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29765" min="1" max="1" chance="100" />
+			<item id="29765" min="1" max="1" chance="100" /> <!-- Grey Talisman - Benefaction - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29798" name="Grey Talisman Box - Blocking" additionalName="1 hour" type="EtcItem">
@@ -1403,7 +1403,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29766" min="1" max="1" chance="100" />
+			<item id="29766" min="1" max="1" chance="100" /> <!-- Grey Talisman - Blocking - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="29799" name="Grey Talisman Box - Gravity" additionalName="1 hour" type="EtcItem">
@@ -1418,7 +1418,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29767" min="1" max="1" chance="100" />
+			<item id="29767" min="1" max="1" chance="100" /> <!-- Grey Talisman - Gravity - 1 hour -->
 		</capsuled_items>
 	</item>
 </list>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1500" toLevel="1" name="Improve Magic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases both M. Atk. and M. Def. to have more advanced magic ability increase effect. For 40 min., M. Atk. +75% and M. Def. +30%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -39,7 +39,7 @@
 		</effects>
 	</skill>
 	<skill id="1501" toLevel="1" name="Improve Condition">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines Max HP increase and Max MP increase to have more advanced mental and physical power. For 40 min., Max HP +35% and Max MP +35%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -77,7 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="1502" toLevel="1" name="Improve Critical Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 40 min., Critical Rate +30% and Critical Damage +35%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -115,7 +115,7 @@
 		</effects>
 	</skill>
 	<skill id="1503" toLevel="1" name="Improve Shield Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 40 min., Shield Defense +30% and Shield Defense +50%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_SHIELD_RATE_DEFENCE_UP</abnormalType>
@@ -153,7 +153,7 @@
 		</effects>
 	</skill>
 	<skill id="1504" toLevel="1" name="Improve Movement">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 min., Speed +33 and Evasion +4. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
@@ -191,7 +191,7 @@
 		</effects>
 	</skill>
 	<skill id="1505" toLevel="1" name="Sublime Self-Sacrifice">
-		<!-- Confirmed CT2.5 -->
+		<!-- Sacrifices oneself to allow all other party members (excluding oneself) to fully recover their HP/ MP/ CP and to become invincible for 15 sec. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -235,6 +235,7 @@
 		</effects>
 	</skill>
 	<skill id="1506" toLevel="1" name="Blessing of Eva">
+		<!-- By casting Blessing of Eva, it recovers HP/ MP/ CP, and cancels all debuffs at a certain rate. -->
 		<castRange>400</castRange>
 		<effectPoint>668</effectPoint>
 		<effectRange>900</effectRange>
@@ -268,6 +269,7 @@
 		</effects>
 	</skill>
 	<skill id="1507" toLevel="1" name="Lord of Vampires">
+		<!-- For 30 sec., recovers as HP 80% of the physical damage inflicted on the enemy with a certain probability. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK_SPECIAL</abnormalType>
@@ -295,7 +297,7 @@
 		</effects>
 	</skill>
 	<skill id="1508" toLevel="1" name="Thorn Root">
-		<!-- Glory Days confirmed -->
+		<!-- Holds nearby enemies for 10 sec. and makes them consume 90 HP and 30 MP every sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -337,8 +339,7 @@
 		</effects>
 	</skill>
 	<skill id="1509" toLevel="9" name="Seal of Limit">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
+		<!-- During PvP, limits the CP, HP, and MP recovery of the target and nearby enemies to maximum $s2 for $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
@@ -455,7 +456,7 @@
 		</effects>
 	</skill>
 	<skill id="1511" toLevel="8" name="Curse of Life Flow">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -534,7 +535,7 @@
 				<chance>30</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>100</minDamage>
-				<skillId>5591</skillId>
+				<skillId>5591</skillId> <!-- Light Flow -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -549,7 +550,7 @@
 		</effects>
 	</skill>
 	<skill id="1512" toLevel="1" name="Soul Vortex">
-		<!-- Glory Days confirmed -->
+		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. For 30 sec., Speed -20%, Atk. Spd. -30%, and Casting Spd. -30%. Consumes 12 MP every sec. Over-hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_SOUL</abnormalType>
@@ -597,7 +598,7 @@
 		</effects>
 	</skill>
 	<skill id="1513" toLevel="1" name="Soul Vortex Extinction">
-		<!-- Glory Days confirmed -->
+		<!-- Detonates an Soul Vortex to inflict non-attribute damage on the enemy with 195 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
@@ -631,8 +632,7 @@
 		</effects>
 	</skill>
 	<skill id="1514" toLevel="7" name="Soul Barrier">
-		<!-- Updated to IO -->
-		<!-- Glory Days confirmed -->
+		<!-- Spreads the soul's defensive barrier to get your Bow Resistance +$s2, Crossbow Resistance +$s3, and M. Def. +$s4 for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
@@ -721,7 +721,7 @@
 		</effects>
 	</skill>
 	<skill id="1515" toLevel="1" name="Lightning Barrier">
-		<!-- Confirmed CT2.5 -->
+		<!-- Spreads lightning's defensive barrier for 20 minutes. Paralyzes the target that attacked you. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
@@ -748,13 +748,13 @@
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>100</minDamage>
-				<skillId>5592</skillId>
+				<skillId>5592</skillId> <!-- Lightning Barrier -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1516" toLevel="1" name="Soul Strike">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Consecutively throws souls to inflict non-attribute damage on the enemy using 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
 		<castRange>750</castRange>
 		<effectPoint>-662</effectPoint>
 		<effectRange>1250</effectRange>
@@ -778,7 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="1517" toLevel="1" name="Chant of Combat">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines party members' P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 min., P. Atk. +15% and P. Def. +15%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -816,7 +816,7 @@
 		</effects>
 	</skill>
 	<skill id="1518" toLevel="1" name="Chant of Critical">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines party members' Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. Critical Rate +30% and Critical Damage 35% for 40 min. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -854,7 +854,7 @@
 		</effects>
 	</skill>
 	<skill id="1519" toLevel="1" name="Chant of Blood Awakening">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines party members' general attack damage absorption and Atk. Spd. increase to have a more advanced blood awakening effect. For 40 min., Atk. Spd. +33% and has a chance of recovering 9% of the damage inflicted on the enemy as HP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_VAMPIRIC_HASTE</abnormalType>
@@ -892,8 +892,7 @@
 		</effects>
 	</skill>
 	<skill id="1523" toLevel="42" name="Divine Punishment">
-		<!-- Confirmed CT2.5 -->
-		<!-- Inquisitor Stance Skill -->
+		<!-- Calls down the gods' retribution to inflict damage on the enemy using $s1 Power added to M. Atk. -->
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -1219,8 +1218,7 @@
 		</effects>
 	</skill>
 	<skill id="1524" toLevel="42" name="Surrender to Holy">
-		<!-- Confirmed CT2.5 -->
-		<!-- Inquisitor Stance Skill -->
+		<!-- For $s1, the enemy's Holy Attack Resistance -$s2 and M. Def. -$s3, and Dark Attack Resistance +$s4. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
@@ -1429,8 +1427,7 @@
 		</effects>
 	</skill>
 	<skill id="1525" toLevel="42" name="Divine Curse">
-		<!-- Confirmed CT2.5 -->
-		<!-- Inquisitor Stance Skill -->
+		<!-- For $s1, casts the wrathful curse of the gods to decrease the effect of recovery magic -$s2. Decreases $s3 HP every sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -1682,7 +1679,7 @@
 		</effects>
 	</skill>
 	<skill id="1526" toLevel="3" name="Mana Drain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Has a chance to recover MP when striking. -->
 		<icon>icon.skill1526</icon>
 		<magicLvl>
 			<value level="1">44</value>
@@ -1716,7 +1713,7 @@
 		</effects>
 	</skill>
 	<skill id="1527" toLevel="3" name="Expert Casting">
-		<!-- Glory Days confirmed -->
+		<!-- Casting Cooldown -$s1, and Casting Spd. +$s2 when equipped with light armor. -->
 		<icon>icon.skill1527</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -1745,8 +1742,7 @@
 		</effects>
 	</skill>
 	<skill id="1528" toLevel="42" name="Divine Flash">
-		<!-- Confirmed CT2.5 -->
-		<!-- Inquisitor Stance Skill -->
+		<!-- Spreads divine energy to damage nearby enemies with $s1 Power. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -2075,7 +2071,7 @@
 		</effects>
 	</skill>
 	<skill id="1529" toLevel="7" name="Soul Web">
-		<!-- Confirmed CT2.5 -->
+		<!-- Spreads a soul net, Speed near the enemy -$s2 for $s1. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2133,6 +2129,7 @@
 		</effects>
 	</skill>
 	<skill id="1530" toLevel="13" name="Death Spike">
+		<!-- Throws a bone to inflict damage on the enemy with $s1 Power added to M. Atk. Requires $s2 Cursed Bone(s). -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -2228,7 +2225,7 @@
 		</effects>
 	</skill>
 	<skill id="1531" toLevel="7" name="Blessed Blood">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, bestows the blessing of blood upon party members. Recovers HP by a certain rate when being attacked. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLESS_THE_BLOOD</abnormalType>
@@ -2287,7 +2284,7 @@
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>60</minDamage>
-				<skillId>5698</skillId>
+				<skillId>5698</skillId> <!-- Blessed Blood -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -2301,6 +2298,7 @@
 		</effects>
 	</skill>
 	<skill id="1532" toLevel="1" name="Enlightenment">
+		<!-- User receives mystical enlightenment for 20 sec., M. Atk. +40%, Casting Spd. +50% and M. Critical Rate +50%, and MP Consumption -90%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
@@ -2339,6 +2337,7 @@
 		</effects>
 	</skill>
 	<skill id="1533" toLevel="1" name="Enlightenment">
+		<!-- User receives mystical enlightenment for 20 sec., M. Atk. +10%, Heal +20%, Casting Spd. + 30% and M. Critical Rate +50%, and MP Consumption -70%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
@@ -2381,7 +2380,7 @@
 		</effects>
 	</skill>
 	<skill id="1534" toLevel="1" name="Courage of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases party and clan members' Max CP. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -2410,7 +2409,7 @@
 		</effects>
 	</skill>
 	<skill id="1535" toLevel="2" name="Chant of Movement">
-		<!-- Confirmed CT2.5 -->
+		<!-- Party member's Speed +$s2 for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
@@ -2460,7 +2459,7 @@
 		</effects>
 	</skill>
 	<skill id="1536" toLevel="1" name="Combat of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines a party/ clan member's P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 min., P. Atk. +15% and P. Def. +15%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -2499,7 +2498,7 @@
 		</effects>
 	</skill>
 	<skill id="1537" toLevel="1" name="Critical of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines a party/ clan member's Critical Rate increase and Critical Damage increase effects for a more advanced critical increase effect. For 40 min., Critical Rate +30% and Critical Damage +35%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -2538,7 +2537,7 @@
 		</effects>
 	</skill>
 	<skill id="1538" toLevel="1" name="Condition of Pa'agrio">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combines a party/ clan member's Max HP increase and Max MP increase effects for more advanced mental and physical power. For 40 min., Max HP +35% and Max MP +35%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -2577,6 +2576,7 @@
 		</effects>
 	</skill>
 	<skill id="1539" toLevel="5" name="Stigma of Shilen">
+		<!-- For $s1, Short-range Weapon Resistance -$s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2697,6 +2697,7 @@
 		</effects>
 	</skill>
 	<skill id="1540" toLevel="1" name="Turn to Stone">
+		<!-- Petrifies oneself for 8 sec. to avoid incurring damage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -2733,7 +2734,7 @@
 		</effects>
 	</skill>
 	<skill id="1541" toLevel="1" name="Curse of Desparion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicts the Curse of Desparion, momentarily decreasing enemy Speed, Accuracy, P. Atk. and Atk. Spd. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -2778,6 +2779,7 @@
 		</effects>
 	</skill>
 	<skill id="1542" toLevel="2" name="Counter Critical">
+		<!-- For 20 min., Received Critical Damage -30%. When the target receives an attack above a certain amount of damage, increases Critical Damage of standard melee attack for 8 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL</abnormalType>
@@ -2812,7 +2814,7 @@
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
-				<skillId>6059</skillId>
+				<skillId>6059</skillId> <!-- Counter Critical -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceCriticalDamage">
@@ -2825,6 +2827,7 @@
 		</effects>
 	</skill>
 	<skill id="1543" toLevel="1" name="Great Fury">
+		<!-- With a certain probability, party members are seized with Great Fury after the character's attack. -->
 		<icon>icon.skill1543</icon>
 		<magicLvl>80</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2847,8 +2850,7 @@
 		</effects>
 	</skill>
 	<skill id="1544" toLevel="7" name="Death Beam">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- Attacks enemies in front of you. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<castRange>40</castRange>
@@ -2893,8 +2895,7 @@
 		</effects>
 	</skill>
 	<skill id="1545" toLevel="1" name="Soul Sucking">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kamael Final Form Skill -->
+		<!-- Continuously absorbs the enemy's soul. -->
 		<castRange>900</castRange>
 		<channelingStart>1</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -2923,7 +2924,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="1546" toLevel="1" name="Strider Fear">
-		<!-- Confirmed CT2.5 -->
+		<!-- Creates fear in enemy for 10 sec., prompting them to escape. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2956,6 +2957,7 @@
 		</effects>
 	</skill>
 	<skill id="1547" toLevel="5" name="Spirit Sharing">
+		<!-- For $s1 character's P.Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5, P./ M. Critical Rate +$s6. Transfers master's enchanced skills to the servitor. Consumes $s7 Spirit Ore. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3065,7 +3067,7 @@
 		</effects>
 	</skill>
 	<skill id="1548" toLevel="3" name="Earth Resistance">
-		<!-- High Five Skill -->
+		<!-- Earth Resistance +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3113,7 +3115,7 @@
 		</effects>
 	</skill>
 	<skill id="1549" toLevel="1" name="Chant of Elements">
-		<!-- Glory Days confirmed -->
+		<!-- For 20 min., party members' elemental resistance +20. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
@@ -3153,6 +3155,7 @@
 		</effects>
 	</skill>
 	<skill id="1550" toLevel="1" name="Mass Cure Poison">
+		<!-- Cures all poisoned party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>662</effectPoint>
 		<hitTime>4000</hitTime>
@@ -3175,6 +3178,7 @@
 		</effects>
 	</skill>
 	<skill id="1551" toLevel="1" name="Mass Purify">
+		<!-- Cancels paralysis and petrification effects, and also cures poison and bleed condition of all party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>662</effectPoint>
 		<hitTime>3000</hitTime>
@@ -3197,6 +3201,7 @@
 		</effects>
 	</skill>
 	<skill id="1552" toLevel="2" name="Mass Vitalize">
+		<!-- Restores HP of party members with 796 Power, and also cures poison and bleed condition of all party members. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>1261</effectPoint>
 		<hitTime>4000</hitTime>
@@ -3231,6 +3236,7 @@
 		</effects>
 	</skill>
 	<skill id="1553" toLevel="2" name="Chain Heal">
+		<!-- Recovers the target and the 10 most injured allies around the target +30% of their Max HP. The recovery amount decreases starting from the most injured person. Requires 4 Spirit Ore. -->
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -3270,7 +3276,7 @@
 		</effects>
 	</skill>
 	<skill id="1554" toLevel="1" name="Aura Blast">
-		<!-- Glory Days confirmed -->
+		<!-- Inflicts non-attribute damage on the target and enemies around the target with 141 Power added to M. Atk., and recovers MP. Inflicts additional non-attribute damage with 58 Power if the target is a monster. -->
 		<abnormalTime>3</abnormalTime>
 		<affectLimit>10-0-1</affectLimit>
 		<affectRange>200</affectRange>
@@ -3309,7 +3315,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="1555" toLevel="1" name="Aura Cannon">
-		<!-- Glory Days confirmed -->
+		<!-- Inflicts non-attribute damage on the enemy with 178 Power added to M. Atk. and recovers MP. Inflicts additional non-attribute damage with 124 Power if the target is a monster. -->
 		<castRange>150</castRange>
 		<effectPoint>-689</effectPoint>
 		<effectRange>300</effectRange>
@@ -3344,6 +3350,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="1556" toLevel="1" name="Arcane Shield">
+		<!-- For 10 sec., damage received -50% and turns the remaining damage into MP Consumption. When MP becomes 0, the skill's effect disappears. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
@@ -3370,6 +3377,7 @@
 		</effects>
 	</skill>
 	<skill id="1557" toLevel="1" name="Servitor Share">
+		<!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./ P. Def. by 30%, M. Atk./ M. Def. by 10%, Max HP/ MP by 10%, Atk. Spd. by 10%, and Casting Spd. by 3%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ABILITY_CHANGE</abnormalType>
@@ -3408,7 +3416,7 @@
 		</effects>
 	</skill>
 	<skill id="1558" toLevel="24" name="Dimension Spiral">
-		<!-- Glory Days confirmed -->
+		<!-- Creates a tear in the dimension to inflict damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
 		<castRange>900</castRange>
 		<effectPoint>-590</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3538,7 +3546,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="1559" toLevel="3" name="Potential Ability">
-		<!-- Glory Days confirmed -->
+		<!-- When equipped with a dagger or a dual dagger, Critical Rate +$s1 and Critical Damage +$s2. Requires a light armor to be equipped. -->
 		<icon>icon.skill1559</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -3582,7 +3590,7 @@
 		</effects>
 	</skill>
 	<skill id="1560" toLevel="1" name="Lucky Blow">
-		<!-- Glory Days confirmed -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk., causing a Spoiled state. Lethal Strike. Half-kill. Over-hit. Critical. Requires a dual dagger. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-337</effectPoint>
@@ -3622,7 +3630,7 @@
 		</effects>
 	</skill>
 	<skill id="1561" toLevel="5" name="Battle Cry">
-		<!-- Glory Days confirmed -->
+		<!-- Instantly recovers $s1 of Max HP and Max HP +$s3 for $s2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3671,7 +3679,7 @@
 		</effects>
 	</skill>
 	<skill id="1562" toLevel="2" name="Chant of Berserker">
-		<!-- High Five Skill -->
+		<!-- For $s1, all party members' P. Def. -$s2, M. Def. -$s3, and Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3766,7 +3774,7 @@
 		</effects>
 	</skill>
 	<skill id="1563" toLevel="2" name="Pa'agrio's Fury">
-		<!-- Glory Days confirmed -->
+		<!-- Clan members' Atk. Spd. +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3813,7 +3821,7 @@
 		</effects>
 	</skill>
 	<skill id="1564" toLevel="1" name="Penetrating Attack">
-		<!-- Glory Days confirmed -->
+		<!-- Chance to decrease the enemy's P. Def. -23% under normal attacks. -->
 		<icon>icon.skill1564</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -3827,13 +3835,13 @@
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
-				<skillId>6921</skillId>
+				<skillId>6921</skillId> <!-- Penetrating Attack -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1565" toLevel="6" name="Mana Pump">
-		<!-- Glory Days confirmed -->
+		<!-- Max MP +$s1 -->
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -3860,7 +3868,7 @@
 		</effects>
 	</skill>
 	<skill id="1571" toLevel="1" name="Inventory Increase">
-		<!-- Increases inventory slots by 18. -->
+		<!-- Inventory slots +18. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3872,7 +3880,7 @@
 		</effects>
 	</skill>
 	<skill id="1572" toLevel="1" name="Weight Increase">
-		<!-- Increases weight capacity by 10,000. -->
+		<!-- Weight limit +10000. -->
 		<icon>icon.skill0150</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3885,7 +3893,7 @@
 		</effects>
 	</skill>
 	<skill id="1573" toLevel="6" name="Sub - P. Atk./M. Atk. Increase">
-		<!-- Increases P. Atk. by 10 and M. Atk. by 20. -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3916,7 +3924,7 @@
 		</effects>
 	</skill>
 	<skill id="1574" toLevel="6" name="Sub - P. Def./M. Def. Increase">
-		<!-- Increases P. Def. by 15 and M. Def. by 15. -->
+		<!-- P. Def. +$s1 and M. Def. +$s2. -->
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3947,7 +3955,7 @@
 		</effects>
 	</skill>
 	<skill id="1575" toLevel="3" name="Sub - Atk. Spd./Casting Spd. Increase">
-		<!-- Increases Atk. Spd. and Casting Spd. by 10. -->
+		<!-- Atk. Spd. and Casting Spd. +$s1. -->
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3972,7 +3980,7 @@
 		</effects>
 	</skill>
 	<skill id="1576" toLevel="3" name="Sub - Critical Rate Increase">
-		<!-- Increases P./M. Critical Rate by 10. -->
+		<!-- P. Critical Rate/ M. Critical Rate +$s1. -->
 		<icon>icon.skill0814</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3997,7 +4005,7 @@
 		</effects>
 	</skill>
 	<skill id="1577" toLevel="3" name="Sub - Critical Damage Increase">
-		<!-- P. Critical Damage + 18. M. Critical Damage + 14. -->
+		<!-- P. Critical Damage +$s1, M. Critical Damage +$s2. -->
 		<icon>icon.skill0815</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4022,7 +4030,7 @@
 		</effects>
 	</skill>
 	<skill id="1578" toLevel="3" name="Sub - Physical Attribute Resistance Increase">
-		<!-- Increases resistance to physical attributes by 1. -->
+		<!-- Resistance to physical attributes +$s1. -->
 		<icon>icon.skill4084</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4039,7 +4047,7 @@
 		</effects>
 	</skill>
 	<skill id="1579" toLevel="3" name="Sub - Mental Attribute Resistance Increase">
-		<!-- Increases Mental Attack Resistance by 1. -->
+		<!-- Mental Attack Resistance +$s1. -->
 		<icon>icon.skill4116</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4056,7 +4064,7 @@
 		</effects>
 	</skill>
 	<skill id="1580" toLevel="3" name="Sub - Physical Ability Increase">
-		<!-- Max CP + 41, Max HP + 51, and Max MP + 36. -->
+		<!-- Max CP +$s1, Max HP +$s2, and Max MP +$s3. -->
 		<icon>icon.skill1397</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4089,7 +4097,7 @@
 		</effects>
 	</skill>
 	<skill id="1581" toLevel="3" name="Sub - MP Consumption/Cooldown Decrease">
-		<!-- Upon skill use, decreases MP Consumption and Cooldown by 1%. -->
+		<!-- Upon skill use, MP Consumption and Cooldown -$s1. -->
 		<icon>icon.skill6274</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4143,7 +4151,6 @@
 		</effects>
 	</skill>
 	<skill id="1584" toLevel="1" name="Equipment Craft">
-		<!-- Glory Days confirmed -->
 		<!-- Can read equipment recipe books. -->
 		<icon>icon.skill0172</icon>
 		<isMagic>2</isMagic>
@@ -4159,8 +4166,7 @@
 		</effects>
 	</skill>
 	<skill id="1585" toLevel="1" name="Rhythm of Critical Dark">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- For 2 min., party members' Critical Damage +35% and critical attack rate +100%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
@@ -4205,8 +4211,7 @@
 		</effects>
 	</skill>
 	<skill id="1586" toLevel="1" name="Rhythm of Critical">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- For 2 min., party members' Critical Damage +35% and critical attack rate +100%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
@@ -4243,8 +4248,7 @@
 		</effects>
 	</skill>
 	<skill id="1587" toLevel="1" name="Rhythm of Magic Dark">
-		<!-- Glory Days confirmed -->
-		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- All party members' M. Atk. +20% and M. Def. +30% for 2 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
@@ -4289,8 +4293,7 @@
 		</effects>
 	</skill>
 	<skill id="1588" toLevel="1" name="Rhythm of Magic">
-		<!-- Glory Days confirmed -->
-		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- All party members' M. Atk. +20% and M. Def. +30% for 2 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
@@ -4327,8 +4330,7 @@
 		</effects>
 	</skill>
 	<skill id="1589" toLevel="1" name="Rhythm of Combat Dark">
-		<!-- Glory Days confirmed -->
-		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- All party members' P. Atk. +12% and P. Def. +25% for 2 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
@@ -4373,8 +4375,7 @@
 		</effects>
 	</skill>
 	<skill id="1590" toLevel="1" name="Rhythm of Combat">
-		<!-- Glory Days confirmed -->
-		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- All party members' P. Atk. +12% and P. Def. +25% for 2 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
@@ -4411,8 +4412,7 @@
 		</effects>
 	</skill>
 	<skill id="1591" toLevel="1" name="Rhythm of Fighter Dark">
-		<!-- Glory Days confirmed -->
-		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- All party members' Atk. Spd. +15% and Max HP +30% for 2 min. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
@@ -4457,8 +4457,7 @@
 		</effects>
 	</skill>
 	<skill id="1592" toLevel="1" name="Rhythm of Fighter">
-		<!-- Glory Days confirmed -->
-		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- All party members' Atk. Spd. +15% and Max HP +30% for 2 min. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
@@ -4495,8 +4494,7 @@
 		</effects>
 	</skill>
 	<skill id="1593" toLevel="1" name="Rhythm of Revenge Dark">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. Additionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- For 2 min., gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. Additionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
@@ -4540,8 +4538,7 @@
 		</effects>
 	</skill>
 	<skill id="1594" toLevel="1" name="Rhythm of Revenge">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- For 2 min., gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
@@ -4577,8 +4574,7 @@
 		</effects>
 	</skill>
 	<skill id="1595" toLevel="1" name="Rhythm of Start Dark">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- For 2 min., all party members' damage attack magic's Critical Rate -100%, physical/ magic/ song/ dance skills' MP Consumption -5%, and physical/ magic skills' Cooldown -20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
@@ -4644,8 +4640,7 @@
 		</effects>
 	</skill>
 	<skill id="1596" toLevel="1" name="Rhythm of Start">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- For 2 min., all party members' damage attack magic's Critical Rate -100%, physical/ magic/ song/ dance skills' MP Consumption -5%, and physical/ magic skills' Cooldown -20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
@@ -4703,7 +4698,7 @@
 		</effects>
 	</skill>
 	<skill id="1597" toLevel="1" name="Weight Increase">
-		<!-- Increases weight capacity by 15000. -->
+		<!-- Weight limit +15000. -->
 		<icon>icon.skill0150</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -4715,8 +4710,7 @@
 		</effects>
 	</skill>
 	<skill id="1598" toLevel="1" name="Rhythm of Magician Dark">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<!-- For 2 min., all party members' magic cancel damage -40, MP Consumption for magic skills -10%, and Casting Spd. +30% and MP recovery bonus +20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
@@ -4770,8 +4764,7 @@
 		</effects>
 	</skill>
 	<skill id="1599" toLevel="1" name="Rhythm of Magician">
-		<!-- Glory Days confirmed -->
-		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<!-- For 2 min., all party members' magic cancel damage -40, MP Consumption for magic skills -10%, and Casting Spd. +30% and MP recovery bonus +20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>

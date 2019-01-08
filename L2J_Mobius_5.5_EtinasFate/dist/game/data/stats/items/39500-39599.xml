@@ -71,7 +71,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39505" name="Scroll of Escape: The Cemetary" type="EtcItem">
-		<!-- Teleports you to The Cemetary. -->
+		<!-- Teleports you to The Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -113,7 +113,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39508" name="Mark of Gratitude" type="EtcItem">
-		<!-- Obtained by killing Mahum's demonic spirit. Take this to Leo the refugee. -->
+		<!-- Obtained by killing Mahum's demonic spirit. Take this to Refugee Leo. -->
 		<set name="icon" val="icon.etc_yellow_rose_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -128,7 +128,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39509" name="Barrier Enforcer Key" type="EtcItem">
-		<!-- A key to activating the barrier enforcer in the Sea of Spores. -->
+		<!-- A key to activating the Barrier Enforcer in the Sea of Spores. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -519,7 +519,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39533" name="Secret Ingredient" type="EtcItem">
-		<!-- Leaf  from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
+		<!-- Leaf from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
 		<set name="icon" val="icon.etc_rune_fish_scale_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -534,7 +534,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39534" name="Dolkin's Report" type="EtcItem">
-		<!-- A report from Maestro Dolkin,  who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
+		<!-- A report from Maestro Dolkin, who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39560" name="Low-grade Wind Dye Pack" type="EtcItem">
-		<!-- Wrapped Pack containing aLv. 1 - 3 CHA/LUC Dye. -->
+		<!-- Double-click to obtain a Lv. 1 - 3 CHA/ LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -899,17 +899,17 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39386" min="1" max="1" chance="30" />
-			<item id="39381" min="1" max="1" chance="30" />
-			<item id="39387" min="1" max="1" chance="15" />
-			<item id="39382" min="1" max="1" chance="15" />
-			<item id="39388" min="1" max="1" chance="5" />
-			<item id="39383" min="1" max="1" chance="5" />
-			<item id="39592" min="1" max="1" chance="50" />
+			<item id="39386" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy LUC Dye - LUC +1 -->
+			<item id="39381" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy CHA Dye - CHA +1 -->
+			<item id="39387" min="1" max="1" chance="15" /> <!-- Lv. 2 Windy LUC Dye - LUC +2 -->
+			<item id="39382" min="1" max="1" chance="15" /> <!-- Lv. 2 Windy CHA Dye - CHA +2 -->
+			<item id="39388" min="1" max="1" chance="5" /> <!-- Lv. 3 Windy LUC Dye - LUC +3 -->
+			<item id="39383" min="1" max="1" chance="5" /> <!-- Lv. 3 Windy CHA Dye - CHA +3 -->
+			<item id="39592" min="1" max="1" chance="50" /> <!-- Tempest Stone -->
 		</capsuled_items>
 	</item>
 	<item id="39561" name="Mid-grade Wind Dye Pack" type="EtcItem">
-		<!-- Wrapped Pack containing aLv. 4 CHA/LUC Dye. -->
+		<!-- Double-click to obtain a Lv. 4 CHA/ LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -918,13 +918,13 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39389" min="1" max="1" chance="50" />
-			<item id="39384" min="1" max="1" chance="50" />
-			<item id="39592" min="1" max="1" chance="30" />
+			<item id="39389" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy LUC Dye - LUC +4 -->
+			<item id="39384" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy CHA Dye - CHA +4 -->
+			<item id="39592" min="1" max="1" chance="30" /> <!-- Tempest Stone -->
 		</capsuled_items>
 	</item>
 	<item id="39562" name="High-grade Wind Dye Pack" type="EtcItem">
-		<!-- Wrapped Pack containing aLv. 5 CHA/LUC Dye. -->
+		<!-- Double-click to obtain a Lv. 5 CHA/ LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -934,13 +934,13 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39390" min="1" max="1" chance="50" />
-			<item id="39385" min="1" max="1" chance="50" />
-			<item id="39592" min="1" max="1" chance="10" />
+			<item id="39390" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy LUC Dye - LUC +5 -->
+			<item id="39385" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy CHA Dye - CHA +5 -->
+			<item id="39592" min="1" max="1" chance="10" /> <!-- Tempest Stone -->
 		</capsuled_items>
 	</item>
 	<item id="39563" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind. -->
+		<!-- Double-click to obtain a Talisman - Wind. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -950,14 +950,14 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39564" min="1" max="1" chance="25" />
-			<item id="39565" min="1" max="1" chance="25" />
-			<item id="39566" min="1" max="1" chance="25" />
-			<item id="39567" min="1" max="1" chance="25" />
+			<item id="39564" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - P. Skill Critical Damage -->
+			<item id="39565" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - M. Skill Critical Damage -->
+			<item id="39566" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Defense -->
+			<item id="39567" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - Debuff Defense -->
 		</capsuled_items>
 	</item>
 	<item id="39564" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: P. Skill Critical Damage. Cannot be used in the Olympiad. -->
+		<!-- Wrapped Box containing a Talisman - Wind: P. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -967,11 +967,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39568" min="1" max="1" chance="100" />
+			<item id="39568" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
 		</capsuled_items>
 	</item>
 	<item id="39565" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: M. Skill Critical Damage. Cannot be used in the Olympiad. -->
+		<!-- Wrapped Box containing a Talisman - Wind: M. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -981,11 +981,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39569" min="1" max="1" chance="100" />
+			<item id="39569" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
 		</capsuled_items>
 	</item>
 	<item id="39566" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: Defense. Cannot be used in the Olympiad. -->
+		<!-- Wrapped Box containing a Talisman - Wind: Defense. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -995,11 +995,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39570" min="1" max="1" chance="100" />
+			<item id="39570" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
 		</capsuled_items>
 	</item>
 	<item id="39567" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: Debuff Resistance. Cannot be used in the Olympiad. -->
+		<!-- Wrapped Box containing a Talisman - Wind: Debuff Resistance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1009,11 +1009,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="39571" min="1" max="1" chance="100" />
+			<item id="39571" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
 		</capsuled_items>
 	</item>
 	<item id="39568" name="Talisman - Wind: P. Critical Damage" additionalName="Passive" type="Armor">
-		<!-- P. Skill Critical Damage + 10%. -->
+		<!-- P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1031,7 +1031,7 @@
 		</skills>
 	</item>
 	<item id="39569" name="Talisman - Wind: M. Critical Damage" additionalName="Passive" type="Armor">
-		<!-- M. Skill Critical Damage + 10%. -->
+		<!-- M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1049,7 +1049,7 @@
 		</skills>
 	</item>
 	<item id="39570" name="Talisman - Wind: Defense" type="Armor">
-		<!-- For 15 sec., P./M. Def. are maximized. Cooldown is 20 min. -->
+		<!-- For 15 sec., P./ M. Def. are maximized. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1085,7 +1085,7 @@
 		</skills>
 	</item>
 	<item id="39572" name="Talisman - Insanity" type="Armor">
-		<!-- Max HP/MP/CP + 800, P./M. Accuracy + 2, P./M. Evasion + 2, Atk./Casting Spd. + 60, P. Critical Rate + 30, M. Critical Rate + 10, P. Atk. + 638, M. Atk. + 742, Skill Power + 5%, Damage Reflect Resistance + 30, P. Def. + 563, M. Def. + 368, Fixed Damage Resistance + 10%, Vampiric Rage + 5, STR/INT/CON/MEN/DEX/WIT/CHA/LUC + 2. Skill MP Consumption - 3%, Skill Cooldown - 3%. -->
+		<!-- Max HP/ MP/ CP +800, P./ M. Accuracy +2, P./ M. Evasion +2, Atk. Spd./ Casting Spd +60, P. Critical Rate +30, M. Critical Rate +10, P. Atk. +638, M. Atk. +742, Skill Power +5%, Damage Reflect Resistance +30, P. Def. +563, M. Def. +368, Fixed Damage Resistance +10%, Vampiric Rage +5, STR/ INT/ CON/ MEN/ DEX/ WIT/ CHA/ LUC +2. Skill MP Consumption -3%, Skill Cooldown -3%. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -1417,7 +1417,7 @@
 		</skills>
 	</item>
 	<item id="39588" name="Yum Yum Candy Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Nom Nom Candy Box. Cannot be used in the Olympiad / Ceremony of Chaos. -->
+		<!-- Double-click to obtain a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Nom Nom Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1430,7 +1430,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="39589" name="Nom Nom Candy Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Yum Yum Candy Box. Cannot be used in the Olympiad / Ceremony of Chaos. -->
+		<!-- Double-click to obtain a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Yum Yum Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1443,7 +1443,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="39590" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
-		<!-- XP/SP Gain + 15%. Stacks with Nom Nom Candy, but not with another Yum Yum Candy. -->
+		<!-- Acquired XP/ SP +15%. Stacks with Nom Nom Candy, but not with another Yum Yum Candy. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1456,7 +1456,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="39591" name="Nom Nom Candy (30-day)" additionalName="Event" type="EtcItem">
-		<!-- XP/SP Gain + 15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
+		<!-- Acquired XP/ SP +15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1469,7 +1469,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="39592" name="Tempest Stone" type="EtcItem">
-		<!-- Precious material gained by dissecting the material world's elements. Used for the greatest of alchemical feats, this can also be double-clicked to gain either a Low/Mid/High-grade Windy Dye Pack or Talisman - Wind. -->
+		<!-- Precious material gained by dissecting the material world's elements. Used for the greatest of alchemical feats, this can also be double-clicked to gain either a Low/ Mid/ High-grade Windy Dye Pack or Talisman - Wind. -->
 		<set name="icon" val="icon.trace_of_wind2" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />

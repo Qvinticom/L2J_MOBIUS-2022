@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="40300" name="Freya's Recovery Potion" type="EtcItem">
-		<!-- Restores 3500 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad. -->
+		<!-- Restores 3500 HP. If HP is full, CP is restored. No cooldown. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_potion" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -18,14 +18,14 @@
 		</skills>
 	</item>
 	<item id="40301" name="Buff Helmet" additionalName="LUC" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. LUC + 3. -->
+		<!-- Uses 2 Hair Accessory slots. LUC +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40302" name="Buff Helmet" additionalName="CHA" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. CHA + 3. -->
+		<!-- Uses 2 Hair Accessory slots. CHA +3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -89,11 +89,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="40305" min="1" max="1" chance="100" /> <!-- Dual Expertise Rune (R99-grade) -->
+			<item id="40305" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="40307" name="Dynamic Dual Master Gift Pack" type="EtcItem">
-		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -107,7 +107,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40308" name="Dynamic Dual Knight Gift Pack" type="EtcItem">
-		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day), a Mysterious Friend Summon Bracelet Pack (30-day), and 2 Ertheia's Rare Accessory Packs. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day), a Mysterious Friend Summon Bracelet Pack (30-day), and 2 Ertheia's Rare Accessory Packs. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -200,112 +200,112 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="40314" name="Santa Hat" additionalName="STR" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
+		<!-- Uses 2 Hair Accessory slots. STR +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40315" name="Santa Hat" additionalName="DEX" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
+		<!-- Uses 2 Hair Accessory slots. DEX +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40316" name="Santa Hat" additionalName="CON" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
+		<!-- Uses 2 Hair Accessory slots. CON +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40317" name="Santa Hat" additionalName="MEN" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. MEN + 3. -->
+		<!-- Uses 2 Hair Accessory slots. MEN +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40318" name="Santa Hat" additionalName="INT" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
+		<!-- Uses 2 Hair Accessory slots. INT +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40319" name="Santa Hat" additionalName="WIT" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. WIT + 3. -->
+		<!-- Uses 2 Hair Accessory slots. WIT +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40320" name="Santa Hat" additionalName="Critical Rate" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50. -->
+		<!-- Uses 2 Hair Accessory slots. Critical Rate +50. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40321" name="Santa Hat" additionalName="Critical Damage" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68. -->
+		<!-- Uses 2 Hair Accessory slots. P. Critical Damage +90, M. Critical Damage +68. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40322" name="Santa Hat" additionalName="P. Def." type="Armor">
-		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%. -->
+		<!-- Uses 2 Hair Accessory slots. P. Def. +5%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40323" name="Santa Hat" additionalName="M. Def." type="Armor">
-		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%. -->
+		<!-- Uses 2 Hair Accessory slots. M. Def. +5%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40324" name="Santa Hat" additionalName="Evasion" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. Evasion + 5. -->
+		<!-- Uses 2 Hair Accessory slots. Evasion +5. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40325" name="Santa Hat" additionalName="P. Atk." type="Armor">
-		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%. -->
+		<!-- Uses 2 Hair Accessory slots. P. Atk. +5%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40326" name="Santa Hat" additionalName="M. Atk." type="Armor">
-		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%. -->
+		<!-- Uses 2 Hair Accessory slots. M. Atk. +10%. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40327" name="Santa Hat" additionalName="Accuracy" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. Accuracy + 5. -->
+		<!-- Uses 2 Hair Accessory slots. Accuracy +5. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40328" name="Santa Hat" additionalName="LUC" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. LUC + 3. -->
+		<!-- Uses 2 Hair Accessory slots. LUC +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40329" name="Santa Hat" additionalName="CHA" type="Armor">
-		<!-- Uses 2 Hair Accessory slots. CHA + 3. -->
+		<!-- Uses 2 Hair Accessory slots. CHA +3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -335,7 +335,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="40332" name="Mother Tree's Branch of Fortune" additionalName="90-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -389,7 +389,7 @@
 		</stats>
 	</item>
 	<item id="40334" name="Inferno Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -442,7 +442,7 @@
 		</stats>
 	</item>
 	<item id="40336" name="Imperial Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. M. Atk. +60. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -469,7 +469,7 @@
 		</stats>
 	</item>
 	<item id="40337" name="Dynasty Staff of Fortune" additionalName="90-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -556,7 +556,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40343" name="Mother Tree's Branch of Fortune" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -610,7 +610,7 @@
 		</stats>
 	</item>
 	<item id="40345" name="Inferno Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -663,7 +663,7 @@
 		</stats>
 	</item>
 	<item id="40347" name="Imperial Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. M. Atk. +60. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -690,7 +690,7 @@
 		</stats>
 	</item>
 	<item id="40348" name="Dynasty Staff of Fortune" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -765,7 +765,7 @@
 		<set name="time" val="14400" />
 	</item>
 	<item id="40353" name="Mother Tree's Branch of Fortune" additionalName="10-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -819,7 +819,7 @@
 		</stats>
 	</item>
 	<item id="40355" name="Inferno Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -872,7 +872,7 @@
 		</stats>
 	</item>
 	<item id="40357" name="Imperial Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. M. Atk. +60. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -899,7 +899,7 @@
 		</stats>
 	</item>
 	<item id="40358" name="Dynasty Staff of Fortune" additionalName="10-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. PvP damage increased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -950,7 +950,7 @@
 		<set name="time" val="14400" />
 	</item>
 	<item id="40361" name="Agathion - Joon Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Joon (30-day). Cannot be shared once open. -->
+		<!-- Double-click to obtain an Agathion - Joon Charm (30-day). Cannot be shared once open. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -965,7 +965,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
-		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., XP/ SP Gain +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max. HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -978,7 +978,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="40363" name="Carrot" type="EtcItem">
-		<!-- Give some of these to Galup and you might get a special gift. You can give it to Hungry Galup in the hunting zones. Can be used as an ingredient for alchemy. -->
+		<!-- Give some of these to High Horse Galup and you might get a special gift. -->
 		<set name="icon" val="icon.ev_carrot" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1009,35 +1009,35 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="22887" min="1" max="1" chance="0.82" /> <!-- Unicorn Bracelet -->
-			<item id="22265" min="1" max="1" chance="0.82" /> <!-- Diadem from the Pegasus Horn Event -->
+			<item id="22887" min="1" max="1" chance="0.82" /> <!-- Mount - Unicorn -->
+			<item id="22265" min="1" max="1" chance="0.82" /> <!-- Unicorn Horn Circlet - Event -->
 			<item id="39738" min="1" max="1" chance="0.82" /> <!-- Rune Stone -->
-			<item id="37008" min="1" max="1" chance="11" /> <!-- Strawberry Cake (HP Elixir) -->
-			<item id="37009" min="1" max="1" chance="11" /> <!-- Blueberry Cake (Elixir of MP) -->
-			<item id="37010" min="1" max="1" chance="11" /> <!-- Cheesecake (Elixir CP) -->
-			<item id="39381" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 1 -->
-			<item id="39382" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 2 -->
-			<item id="39383" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 3 -->
-			<item id="39384" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 4 -->
-			<item id="39385" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 5 -->
-			<item id="39386" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 1 -->
-			<item id="39387" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 2 -->
-			<item id="39388" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 3 -->
-			<item id="39389" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 4 -->
-			<item id="39390" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 5 -->
-			<item id="40063" min="1" max="1" chance="6" /> <!-- A fragment of the Ancient Book of Secrets -->
-			<item id="23861" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23862" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23863" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23864" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23865" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23866" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="23867" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
-			<item id="36513" min="1" max="1" chance="0.82" /> <!-- Elsium Power -->
-			<item id="3936" min="1" max="1" chance="21" /> <!-- Scroll of Resurrection -->
-			<item id="1538" min="1" max="1" chance="21" /> <!-- Scroll of Teleport -->
-			<item id="23860" min="1" max="1" chance="0.82" /> <!-- Chest with Raid Boss Soul -->
-			<item id="23977" min="1" max="1" chance="0.82" /> <!-- Packing: Agathion Pegasus -->
+			<item id="37008" min="1" max="1" chance="11" /> <!-- Strawberry Cake (HP) -->
+			<item id="37009" min="1" max="1" chance="11" /> <!-- Blueberry Cake (MP) -->
+			<item id="37010" min="1" max="1" chance="11" /> <!-- Cheese Cake (CP) -->
+			<item id="39381" min="1" max="1" chance="0.82" /> <!-- Lv. 1 Windy CHA Dye - CHA +1 -->
+			<item id="39382" min="1" max="1" chance="0.82" /> <!-- Lv. 2 Windy CHA Dye - CHA +2 -->
+			<item id="39383" min="1" max="1" chance="0.82" /> <!-- Lv. 3 Windy CHA Dye - CHA +3 -->
+			<item id="39384" min="1" max="1" chance="0.82" /> <!-- Lv. 4 Windy CHA Dye - CHA +4 -->
+			<item id="39385" min="1" max="1" chance="0.82" /> <!-- Lv. 5 Windy CHA Dye - CHA +5 -->
+			<item id="39386" min="1" max="1" chance="0.82" /> <!-- Lv. 1 Windy LUC Dye - LUC +1 -->
+			<item id="39387" min="1" max="1" chance="0.82" /> <!-- Lv. 2 Windy LUC Dye - LUC +2 -->
+			<item id="39388" min="1" max="1" chance="0.82" /> <!-- Lv. 3 Windy LUC Dye - LUC +3 -->
+			<item id="39389" min="1" max="1" chance="0.82" /> <!-- Lv. 4 Windy LUC Dye - LUC +4 -->
+			<item id="39390" min="1" max="1" chance="0.82" /> <!-- Lv. 5 Windy LUC Dye - LUC +5 -->
+			<item id="40063" min="1" max="1" chance="6" /> <!-- Secret Ancient Tome Fragment -->
+			<item id="23861" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Valakas' Soul -->
+			<item id="23862" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Antharas' Soul -->
+			<item id="23863" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Baium's Soul -->
+			<item id="23864" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Orfen's Soul -->
+			<item id="23865" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Queen Ant's Soul -->
+			<item id="23866" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Frintezza's Soul -->
+			<item id="23867" min="1" max="1" chance="0.82" /> <!-- Bottle Fragment of Freya's Soul -->
+			<item id="36513" min="1" max="1" chance="0.82" /> <!-- Elcyum Powder -->
+			<item id="3936" min="1" max="1" chance="21" /> <!-- Blessed Scroll of Resurrection -->
+			<item id="1538" min="1" max="1" chance="21" /> <!-- Blessed Scroll of Escape -->
+			<item id="23860" min="1" max="1" chance="0.82" /> <!-- Raid Boss' Soul Pack -->
+			<item id="23977" min="1" max="1" chance="0.82" /> <!-- Agathion - Pegasus Pack -->
 		</capsuled_items>
 	</item>
 	<item id="40366" name="Galup's Gift Pouch" type="EtcItem">

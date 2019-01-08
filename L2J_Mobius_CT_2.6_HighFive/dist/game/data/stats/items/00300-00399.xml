@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="300" type="Weapon" name="Great Axe">
+		<!-- Bestows one of the following functions: Anger, Critical Stun or Light. -->
 		<set name="icon" val="icon.weapon_great_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -17,7 +18,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="175" />
 			<set stat="mAtk" val="91" />
@@ -29,6 +30,7 @@
 		</for>
 	</item>
 	<item id="301" type="Weapon" name="Scorpion">
+		<!-- Bestows one of the following functions: Anger, Critical Stun or Wide Blow. -->
 		<set name="icon" val="icon.weapon_scorpion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -45,7 +47,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="144" />
 			<set stat="mAtk" val="78" />
@@ -57,6 +59,7 @@
 		</for>
 	</item>
 	<item id="302" type="Weapon" name="Body Slasher">
+		<!-- Bestows one of the following functions: Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -73,7 +76,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="107" />
 			<set stat="mAtk" val="61" />
@@ -85,6 +88,7 @@
 		</for>
 	</item>
 	<item id="303" type="Weapon" name="Widow Maker">
+		<!-- Bestows one of the following functions: Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_widow_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -101,7 +105,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="144" />
 			<set stat="mAtk" val="78" />
@@ -129,7 +133,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="219" />
 			<set stat="mAtk" val="109" />
@@ -141,6 +145,7 @@
 		</for>
 	</item>
 	<item id="305" type="Weapon" name="Tallum Glaive">
+		<!-- Bestows one of the following functions: Guidance, Health, or Wide Blow. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -157,7 +162,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="232" />
 			<set stat="mAtk" val="114" />
@@ -185,7 +190,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -214,7 +219,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="269" />
 			<set stat="mAtk" val="128" />
@@ -1439,6 +1444,7 @@
 		</for>
 	</item>
 	<item id="356" type="Armor" name="Full Plate Armor">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1757,6 +1763,7 @@
 		</for>
 	</item>
 	<item id="374" type="Armor" name="Armor of Nightmare">
+		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2163,6 +2170,7 @@
 		</for>
 	</item>
 	<item id="396" type="Armor" name="Salamander Skin Mail">
+		<!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

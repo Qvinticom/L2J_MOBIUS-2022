@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="200" type="Weapon" name="Sage's Staff">
+		<!-- Bestows one of the following functions: Magic Hold, Magic Poison, or Magic Weakness. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1000"/>
@@ -46,6 +47,7 @@
 		</for>
 	</item>
 	<item id="201" type="Weapon" name="Club of Nature">
+		<!-- Bestows one of the following functions: Magic Mental Shield, Magic Hold or Acumen. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1100"/>
@@ -91,6 +93,7 @@
 		</for>
 	</item>
 	<item id="202" type="Weapon" name="Mace of The Underworld">
+		<!-- Bestows one of the following functions: Mana Up, Magic Silence or Conversion. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1090"/>
@@ -136,6 +139,7 @@
 		</for>
 	</item>
 	<item id="203" type="Weapon" name="Pa'agrian Axe">
+		<!-- Bestows one of the following functions: Mana Up, Magic Weakness, or Magic Chaos. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="990"/>
@@ -181,6 +185,7 @@
 		</for>
 	</item>
 	<item id="204" type="Weapon" name="Deadman's Staff">
+		<!-- Bestows either Regeneration, Mental Shield or Hold. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1010"/>
@@ -226,6 +231,7 @@
 		</for>
 	</item>
 	<item id="205" type="Weapon" name="Ghoul's Staff">
+		<!-- Bestows either Rsk. Evasion, Mana Up or Blessed Body. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1000"/>
@@ -271,6 +277,7 @@
 		</for>
 	</item>
 	<item id="206" type="Weapon" name="Demon's Staff">
+		<!-- Bestows one of the following functions: Magic Poison, Magic Weakness, or Magic Chaos. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="990"/>
@@ -451,6 +458,7 @@
 		</for>
 	</item>
 	<item id="210" type="Weapon" name="Staff of Evil Spirits">
+		<!-- Bestows either Focus, Blessed Body or Poison. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="930"/>
@@ -541,6 +549,7 @@
 		</for>
 	</item>
 	<item id="212" type="Weapon" name="Dasparion's Staff">
+		<!-- Bestows one of the following functions: Mana Up, Conversion, or Acumen. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="920"/>
@@ -586,6 +595,7 @@
 		</for>
 	</item>
 	<item id="213" type="Weapon" name="Branch of The Mother Tree">
+		<!-- Bestows one of the following functions: Conversion, Magic Damage, or Acumen. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="900"/>
@@ -1171,6 +1181,7 @@
 		</for>
 	</item>
 	<item id="226" type="Weapon" name="Cursed Dagger">
+		<!-- Bestows Critical Bleed, Critical Poison or Rsk. Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1040"/>
@@ -1216,6 +1227,7 @@
 		</for>
 	</item>
 	<item id="227" type="Weapon" name="Stiletto">
+		<!-- Bestows either Critical Bleed or Critical Poison. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1030"/>
@@ -1261,6 +1273,7 @@
 		</for>
 	</item>
 	<item id="228" type="Weapon" name="Crystal Dagger">
+		<!-- Bestows Critical Bleed, Critical Damage or Critical Poison. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1000"/>
@@ -1306,6 +1319,7 @@
 		</for>
 	</item>
 	<item id="229" type="Weapon" name="Kris">
+		<!-- Bestows one of the following functions: Evasion, Focus, or Back Blow. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="980"/>
@@ -1396,6 +1410,7 @@
 		</for>
 	</item>
 	<item id="231" type="Weapon" name="Grace Dagger">
+		<!-- Bestows one of the following functions: Evasion, Focus, or Back Blow. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1020"/>
@@ -1441,6 +1456,7 @@
 		</for>
 	</item>
 	<item id="232" type="Weapon" name="Dark Elven Dagger">
+		<!-- Bestows one of the following functions: Focus or Back Blow. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1050"/>
@@ -1486,6 +1502,7 @@
 		</for>
 	</item>
 	<item id="233" type="Weapon" name="Dark Screamer">
+		<!-- Bestows one of the following functions: Evasion, Focus, or Critical Bleed. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1010"/>
@@ -1531,6 +1548,7 @@
 		</for>
 	</item>
 	<item id="234" type="Weapon" name="Demon Dagger">
+		<!-- Bestows Critical Bleed, Critical Damage or Critical Poison. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="970"/>
@@ -1576,6 +1594,7 @@
 		</for>
 	</item>
 	<item id="235" type="Weapon" name="Bloody Orchid">
+		<!-- Bestows one of the following functions: Focus, Back Blow, or Critical Bleed. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="960"/>
@@ -1621,6 +1640,7 @@
 		</for>
 	</item>
 	<item id="236" type="Weapon" name="Soul Separator">
+		<!-- Bestows one of the following functions: Guidance, Critical Damage, or Rsk. Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="950"/>
@@ -1891,6 +1911,7 @@
 		</for>
 	</item>
 	<item id="242" type="Weapon" name="Soulfire Dirk">
+		<!-- Bestows one of the following functions: Magic Hold, Magic Silence or Mana Up. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="750"/>
@@ -1936,6 +1957,7 @@
 		</for>
 	</item>
 	<item id="243" type="Weapon" name="Hell Knife">
+		<!-- Bestows one of the following functions: Mental Shield, Magic Weakness or Magic Regeneration. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="740"/>
@@ -2836,6 +2858,7 @@
 		</for>
 	</item>
 	<item id="263" type="Weapon" name="Chakram">
+		<!-- Bestows either Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1490"/>
@@ -2926,6 +2949,7 @@
 		</for>
 	</item>
 	<item id="265" type="Weapon" name="Fisted Blade">
+		<!-- Bestows one of the following functions: Rsk. Evasion, Rsk. Haste or Haste. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1480"/>
@@ -2971,6 +2995,7 @@
 		</for>
 	</item>
 	<item id="266" type="Weapon" name="Great Pata">
+		<!-- Bestows either Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1460"/>
@@ -3016,6 +3041,7 @@
 		</for>
 	</item>
 	<item id="267" type="Weapon" name="Arthro Nail">
+		<!-- Bestows either Critical Poison, Rsk. Evasion or Rsk. Haste. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1420"/>
@@ -3061,6 +3087,7 @@
 		</for>
 	</item>
 	<item id="268" type="Weapon" name="Bellion Cestus">
+		<!-- Bestows either Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1390"/>
@@ -3106,6 +3133,7 @@
 		</for>
 	</item>
 	<item id="269" type="Weapon" name="Blood Tornado">
+		<!-- Bestows one of the following functions: Haste, Focus, or Anger. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1370"/>
@@ -3151,6 +3179,7 @@
 		</for>
 	</item>
 	<item id="270" type="Weapon" name="Dragon Grinder">
+		<!-- Bestows one of the following functions: Rsk. Evasion, Guidance, or Health. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -3646,6 +3675,7 @@
 		</for>
 	</item>
 	<item id="281" type="Weapon" name="Crystallized Ice Bow">
+		<!-- Bestows one of the following functions: Guidance, Evasion, or Quick Recovery. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1790"/>
@@ -3691,6 +3721,7 @@
 		</for>
 	</item>
 	<item id="282" type="Weapon" name="Elemental Bow">
+		<!-- Bestows either Guidance, Miser or Quick Recovery. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1770"/>
@@ -3736,6 +3767,7 @@
 		</for>
 	</item>
 	<item id="283" type="Weapon" name="Akat Long Bow">
+		<!-- Bestows either Guidance, Evasion or Miser. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1740"/>
@@ -3781,6 +3813,7 @@
 		</for>
 	</item>
 	<item id="284" type="Weapon" name="Dark Elven Long Bow">
+		<!-- Bestows either Evasion, Critical Bleed or Miser. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1720"/>
@@ -3826,6 +3859,7 @@
 		</for>
 	</item>
 	<item id="285" type="Weapon" name="Noble Elven Bow">
+		<!-- Bestows either Evasion, Miser or Cheap Shot. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1760"/>
@@ -3871,6 +3905,7 @@
 		</for>
 	</item>
 	<item id="286" type="Weapon" name="Eminence Bow">
+		<!-- Bestows either Guidance, Miser or Cheap Shot. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1720"/>
@@ -3916,6 +3951,7 @@
 		</for>
 	</item>
 	<item id="287" type="Weapon" name="Bow of Peril">
+		<!-- Bestows either Guidance, Quick Recovery or Cheap Shot. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1700"/>
@@ -3961,6 +3997,7 @@
 		</for>
 	</item>
 	<item id="288" type="Weapon" name="Carnage Bow">
+		<!-- Bestows either Light, Critical Bleed, or Mana Up. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1670"/>
@@ -4006,6 +4043,7 @@
 		</for>
 	</item>
 	<item id="289" type="Weapon" name="Soul Bow">
+		<!-- Bestows one of the following functions: Cheap Shot, Quick Recovery, or Critical Poison. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1660"/>
@@ -4418,6 +4456,7 @@
 		</for>
 	</item>
 	<item id="298" type="Weapon" name="Orcish Glaive">
+		<!-- Bestows either Anger, Critical Stun or Towering Blow. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2030"/>
@@ -4464,6 +4503,7 @@
 		</for>
 	</item>
 	<item id="299" type="Weapon" name="Orcish Poleaxe">
+		<!-- Bestows either Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1950"/>

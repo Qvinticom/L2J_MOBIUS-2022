@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="49500" name="Greater Scroll of Escape" additionalName="Event" type="EtcItem">
-		<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
+		<!-- Magic Scroll that relocates you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49501" name="Fish Stew. The guild's gratitude." type="EtcItem">
-		<!-- Increases XP/SP gain + 10% for 20 minutes. The item cannot be dropped. -->
+		<!-- For 20 min. XP/SP +10% while hunting. Cannot be dropped. -->
 		<set name="icon" val="icon.ev_invasion_buff_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -94,7 +94,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="49506" name="Fishing Rod" additionalName="10-day" type="Weapon">
-		<!-- A Fishing Rod for 10 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Float usage: 1 -->
+		<!-- A Fishing Rod for 10 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Consumes 1 Fishing Shot. -->
 		<set name="icon" val="icon.weapon_fishing_rod_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -135,7 +135,7 @@
 		</capsuled_items>
 	</item>
 	<item id="49508" name="Normal Bait" additionalName="Event" type="EtcItem">
-		<!-- Fishing bait enables to fish. Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. -->
+		<!-- Fishing bait enables to fish. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -185,7 +185,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="49511" name="Sheep Gift" type="EtcItem">
-		<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick Healing Potion, Warrior's Major Healing Potion. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick Healing Potion, Warrior's Major Healing Potion. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -197,7 +197,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49512" name="Amulet: Prosperity" additionalName="14-day" type="EtcItem">
-		<!-- A 14-day item. When in inventory, you get STR +1, DEX +1, CON + 1, INT +1, WIT +1, MEN +1. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- A 14-day item. When in inventory, you get STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -223,7 +223,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49514" name="Agathion - Aries" additionalName="60-day" type="Armor">
-		<!-- 60-day item. Bracelet that can be used to summon Agathion - Aries. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 1. -->
+		<!-- 60-day item. Bracelet that can be used to summon Agathion - Aries. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR/ INT/ CON/ MEN by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -236,7 +236,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="49515" name="Agathion - Aries" type="Armor">
-		<!-- Bracelet that can be used to summon Agathion - Aries. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 1. -->
+		<!-- Bracelet that can be used to summon Agathion - Aries. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR/ INT/ CON/ MEN by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -245,7 +245,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="49516" name="Agathion - Aries" type="Armor">
-		<!-- Bracelet that can be used to summon Agathion - Aries. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 5. <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 1. 2.Aries Blessing: increases Resistance to mental attacks/stun/sleep/collapse +5%. -->
+		<!-- Bracelet that can be used to summon Agathion - Aries. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio/ Dion/ Giran/ Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR/ INT/ CON/ MEN by 5. <Item Skill>. 1. Aries Power: increases STR/ INT/ CON/ MEN by 1. 2.Aries Blessing: increases Resistance to mental attacks/stun/sleep/collapse +5%. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49518" name="Special Pirate Fruit" type="EtcItem">
-		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. -->
+		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by +5%. Cooldown is 1 minute. Buff remains after death. -->
 		<set name="icon" val="icon.etc_codran_i09" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -294,7 +294,7 @@
 		<set name="time" val="86400" />
 	</item>
 	<item id="49521" name="Refined Romantic Chapeau" additionalName="Special Trait" type="Armor">
-		<!-- Refined Romantic Chapeau Grants STR +1, INT +1 when equipped. Enables to use Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 hours). Occupies two slots for headpieces. -->
+		<!-- Refined Romantic Chapeau Grants STR +1, INT +1 when equipped. Enables to use Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -303,7 +303,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="49522" name="Pirate King Hat" additionalName="Special Trait" type="Armor">
-		<!-- Pirate Captain Hat. Grants STR +1, INT +1 when equipped. Enables to use Pirate Captain Hat Skill: Teleport (Cooldown: 2 hours). Occupies two slots for headpieces. -->
+		<!-- Pirate Captain Hat. Grants STR +1, INT +1 when equipped. Enables to use Pirate Captain Hat Skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys2.icon.zaken_hair_accessary" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -312,7 +312,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="49523" name="Circlet of Devil" additionalName="Special Trait" type="Armor">
-		<!-- Circlet of Devil. When equipped: STR +1, INT +1. Enables to use Circlet of Devil Skill: Teleport (Cooldown: 2 hours). Occupies two slots for headpieces. -->
+		<!-- Circlet of Devil. When equipped: STR +1, INT +1. Enables to use Circlet of Devil Skill: Teleport (Cooldown: 2 hours). Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55089" level="1"/>	<!--Rare Accessory Pack-->
+			<skill id="55089" level="1"/>	<!-- Rare Accessory Pack -->
 		</skills>
 	</item>
 	<item id="49526" name="Improved Scroll of Resurrection" type="EtcItem">
@@ -408,7 +408,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="49533" name="Quick Hero Healing Potion" type="EtcItem">
-		<!-- Magic potion that quickly restores HP. Instant cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic potion that quickly restores HP. Instant cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -433,7 +433,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="49535" name="Fishing kit of the Hero Who Came Back" type="EtcItem">
-		<!-- Double-click to receive Fishing Rod (10-day), Bait (2160 pcs, Event), Hero's Dual Swords (15-day), 3 Soulshot Tickets. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
+		<!-- Double-click to receive Fishing Rod (10-day), Bait (2160 pcs, Event), Hero's Dual Swords (15-day), 3 Soulshot Tickets. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Note>. Be careful before opening the items as their relocation is restricted. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -494,7 +494,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49541" name="Spellbook Chest" type="EtcItem">
-		<!-- Double-click the chest to receive 1 of the Spellbooks, used after the 2nd Class Transfer. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Double-click the chest to receive one of the Spellbooks, used after the 2nd Class Transfer. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -505,11 +505,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39059" level="1"/> <!--Spellbook Chest -->
+			<skill id="39059" level="1"/> <!-- Spellbook Chest -->
 		</skills>
 	</item>
 	<item id="49542" name="Improved Scroll of Resurrection" type="EtcItem">
-		<!-- Magic scroll, restoring 50% of XP and resurrecting the character. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Magic scroll, restoring 50% of XP and resurrecting the character. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -794,7 +794,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49567" name="Something Roa lost" additionalName="Event" type="EtcItem">
-		<!-- Something Roa's Helper lost. Can be exchanged for a Roa's Gift through Roa NPC that appears at times. Exchange is available once a day. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<!-- Something Roa's Helper lost. Can be exchanged for a Roa's Gift through Roa NPC that appears at times. Exchange is available once a day. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -897,7 +897,7 @@
 		</stats>
 	</item>
 	<item id="49576" name="Enhanced Ring of Core" type="Armor">
-		<!-- MP +15, Mental Resistance and Atk. Rate +15%, P. / M. Evasion +2, Received Damage -4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<!-- MP +15, Mental Resistance and Atk. Rate +15%, P./ M. Evasion +2, Received Damage -4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -916,7 +916,7 @@
 		</stats>
 	</item>
 	<item id="49577" name="Refined Queen Ant's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance and Atk. Rate +20%, P. / M. Accuracy +3, P. / M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +10%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<!-- MP +21, Poison Resistance and Atk. Rate +20%, P./ M. Accuracy +3, P./ M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +10%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -954,7 +954,7 @@
 		</stats>
 	</item>
 	<item id="49579" name="Refined Ring of Core" type="Armor">
-		<!-- MP +21, Mental Resistance and Atk. Rate + 20%, P. / M. Evasion +3, Received Damage -6%. Enables to use a special ability to remove debuffs. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<!-- MP +21, Mental Resistance and Atk. Rate +20%, P./ M. Evasion +3, Received Damage -6%. Enables to use a special ability to remove debuffs. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -974,7 +974,7 @@
 		</stats>
 	</item>
 	<item id="49580" name="Baium's Ring" type="Armor">
-		<!-- MP +9, Stun Resistance and Stun Atk. Rate +10%, Bleed Resistance and Bleed Atk. Rate +5%, Atk. Spd./Casting Spd. +2%, Skill Power +2%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+		<!-- MP +15, Stun Resistance and Stun Atk. Rate +10%, Bleed Resistance and Bleed Atk. Rate +5%, P. Atk./M. Atk. +2, Atk. Spd./Casting Spd. +3%, P./M. Skill Power +3%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -993,7 +993,7 @@
 		</stats>
 	</item>
 	<item id="49581" name="Reinforced Baium's Ring" type="Armor">
-		<!-- MP +15, Stun Resistance and Stun Atk. Rate +15%, Bleed Resistance and Bleed Atk. Rate +10%, Atk. Spd./Casting Spd. +3%, Skill Power +4%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+		<!-- MP +21, Stun Resistance and Stun Atk. Rate +15%, Bleed Resistance and Bleed Atk. Rate +10%, P. Atk./M. Atk. +3, Atk. Spd./Casting Spd. +4%, P./M. Skill Power +6%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1012,7 +1012,7 @@
 		</stats>
 	</item>
 	<item id="49582" name="Refined Baium's Ring" type="Armor">
-		<!-- MP +21, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, Atk. Spd./Casting Spd. +4%, Skill Power +6%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+		<!-- MP +27, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, P. Atk./M. Atk. +4, Atk. Spd./Casting Spd. +5%, P./M. Skill Power +10%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1040,10 +1040,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49589" min="180" max="180" chance="100" />
-			<item id="38154" min="180" max="180" chance="100" />
-			<item id="49502" min="5" max="5" chance="100" />
-			<item id="49503" min="5" max="5" chance="100" />
+			<item id="49589" min="180" max="180" chance="100" /> <!-- Golden Bait -->
+			<item id="38154" min="180" max="180" chance="100" /> <!-- Fishing Shot -->
+			<item id="49502" min="5" max="5" chance="100" /> <!-- Teleport: Giran Harbor -->
+			<item id="49503" min="5" max="5" chance="100" /> <!-- Teleport: Gludin Harbor -->
 		</capsuled_items>
 	</item>
 	<item id="49584" name="Golden Boot" type="EtcItem">
@@ -1055,11 +1055,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="45488" min="1" max="1" chance="100" />
+			<item id="45488" min="1" max="1" chance="100" /> <!-- Golden Treasure Chest -->
 		</capsuled_items>
 	</item>
 	<item id="49585" name="Golden Necklace of Mermaid" additionalName="7-day" type="EtcItem">
-		<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50% for 1 hour. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- 7-day item. Increases XP/SP gain by 50% for 1 hours. Effect remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1074,7 +1074,7 @@
 		</skills>
 	</item>
 	<item id="49586" name="Mermaid's Golden Fishing Rod" additionalName="30-day" type="Weapon">
-		<!-- 30-day item. Mermaid's Golden Fishing Rod. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Bobber usage: 1. Enables to teleport to Giran/Gludin. Cooldown: 1 min. -->
+		<!-- 30-day item. Golden Mermaid's Fishing Rod. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Bobber usage: 1. Enables to teleport to Giran/Gludin. Cooldown: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -1097,7 +1097,7 @@
 		</stats>
 	</item>
 	<item id="49587" name="Mermaid's Golden Fishing Rod" type="Weapon">
-		<!-- Mermaid's Golden Fishing Rod. Bobber usage: 1. Enables to teleport to Giran/Gludin. Cooldown: 1 min. -->
+		<!-- Golden Mermaid's Fishing Rod. Consumes 1 Fishing Shot. Enables to teleport to Giran/Gludin. Cooldown: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -1117,7 +1117,7 @@
 		</stats>
 	</item>
 	<item id="49588" name="Mermaid Golden Fishing Rod Chest" additionalName="30-day" type="EtcItem">
-		<!-- You can obtain Mermaid's Golden Fishing Rod for 30 days. The item cannot be dropped. <Attention>.  Pay attention when opening the chest: relocation of specific items is restricted. -->
+		<!-- You can obtain Golden Mermaid's Fishing Rod for 30 days. The item cannot be dropped. <Attention>. Pay attention when opening the chest: relocation of specific items is restricted. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1194,7 +1194,7 @@
 		</stats>
 	</item>
 	<item id="49593" name="Refined Ring of Core" additionalName="30-day" type="Armor">
-		<!-- 30-day item. When equipped, grants MP + 21, Mental Atk. Resistance/Chance +20%, P. / M. Evasion +3, decreases received damage by -6%. The effect does not stack, if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- 30-day item. When equipped, grants MP +21, Mental Atk. Resistance/Chance +20%, P./ M. Evasion +3, decreases received damage by -6%. The effect does not stack, if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1217,7 +1217,7 @@
 		</stats>
 	</item>
 	<item id="49594" name="Whale" type="EtcItem">
-		<!-- Double-click to get Fishing Coin or, at a certain chance, Golden Boots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Double-Click to obtain a Fishing Coin or, at a certain chance, Golden Boots. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.fish_huge_i15" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

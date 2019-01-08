@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3900" type="Armor" name="Wolf's Luxury Plate">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_armor_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -19,6 +20,7 @@
 		</for>
 	</item>
 	<item id="3901" type="Armor" name="Wolf's Mithril Armor">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_armor_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -37,6 +39,7 @@
 		</for>
 	</item>
 	<item id="3902" type="Weapon" name="Ghost Canine">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -60,6 +63,7 @@
 		</for>
 	</item>
 	<item id="3903" type="Weapon" name="Mithril Canine">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -83,6 +87,7 @@
 		</for>
 	</item>
 	<item id="3904" type="Weapon" name="Sylvan Canine">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -106,6 +111,7 @@
 		</for>
 	</item>
 	<item id="3905" type="Weapon" name="Orikarukon Canine">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -129,6 +135,7 @@
 		</for>
 	</item>
 	<item id="3906" type="Weapon" name="Fang of Saltydog">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -152,6 +159,7 @@
 		</for>
 	</item>
 	<item id="3907" type="Weapon" name="Fang of Cerberus">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -175,6 +183,7 @@
 		</for>
 	</item>
 	<item id="3908" type="Weapon" name="Fang of Coyote">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -198,6 +207,7 @@
 		</for>
 	</item>
 	<item id="3909" type="Weapon" name="Crystallized Ice Canine">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -221,6 +231,7 @@
 		</for>
 	</item>
 	<item id="3910" type="Weapon" name="Fang of the Blue Wolf">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -244,6 +255,7 @@
 		</for>
 	</item>
 	<item id="3911" type="Weapon" name="Fang of Fenrir">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
 		<set name="icon" val="icon.etc_pet_arms_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -267,6 +279,7 @@
 		</for>
 	</item>
 	<item id="3912" type="Armor" name="Hatchling's Soft Leather">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -285,6 +298,7 @@
 		</for>
 	</item>
 	<item id="3913" type="Armor" name="Hatchling's Scale Mail">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -303,6 +317,7 @@
 		</for>
 	</item>
 	<item id="3914" type="Armor" name="Hatchling's Brigandine">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -321,6 +336,7 @@
 		</for>
 	</item>
 	<item id="3915" type="Armor" name="Hatchling's Bronze Coat">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -339,6 +355,7 @@
 		</for>
 	</item>
 	<item id="3916" type="Armor" name="Hatchling's Steel Coat">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -357,6 +374,7 @@
 		</for>
 	</item>
 	<item id="3917" type="Armor" name="Hatchling's Shadowplate">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -375,6 +393,7 @@
 		</for>
 	</item>
 	<item id="3918" type="Armor" name="Hatchling's Mithril Coat">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_armor_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -393,6 +412,7 @@
 		</for>
 	</item>
 	<item id="3919" type="Weapon" name="Serpent Fang">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -416,6 +436,7 @@
 		</for>
 	</item>
 	<item id="3920" type="Weapon" name="Viperbite">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -439,6 +460,7 @@
 		</for>
 	</item>
 	<item id="3921" type="Weapon" name="Shadow Fang">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -462,6 +484,7 @@
 		</for>
 	</item>
 	<item id="3922" type="Weapon" name="Alya Fang">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -485,6 +508,7 @@
 		</for>
 	</item>
 	<item id="3923" type="Weapon" name="Torturer">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -508,6 +532,7 @@
 		</for>
 	</item>
 	<item id="3924" type="Weapon" name="Unuk Alhay Fang">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -531,6 +556,7 @@
 		</for>
 	</item>
 	<item id="3925" type="Weapon" name="Antiplague">
+		<!-- Double-click to wear. Only for hatchlings. -->
 		<set name="icon" val="icon.etc_pet_arms_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -554,6 +580,7 @@
 		</for>
 	</item>
 	<item id="3926" type="EtcItem" name="L2Day - Guidance Scroll">
+		<!-- 7th Anniversary. Increases Accuracy by 4 for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -562,13 +589,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2050-1" />
+		<set name="item_skill" val="2050-1" /> <!-- Guidance Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3927" type="EtcItem" name="L2Day - Death Whisper Scroll">
+		<!-- 7th Anniversary. Increases Critical Damage by 35% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -577,13 +605,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2051-1" />
+		<set name="item_skill" val="2051-1" /> <!-- Death Whisper Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3928" type="EtcItem" name="L2Day - Focus Scroll">
+		<!-- 7th Anniversary. Increases Critical Rate by 30% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -592,13 +621,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2052-1" />
+		<set name="item_skill" val="2052-1" /> <!-- Focus Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3929" type="EtcItem" name="L2Day - Greater Acumen Scroll">
+		<!-- 7th Anniversary. Increases Casting Spd. by 30% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -607,13 +637,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2053-1" />
+		<set name="item_skill" val="2053-1" /> <!-- Greater Acumen Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3930" type="EtcItem" name="L2Day - Haste Scroll">
+		<!-- 7th Anniversary. Increases Atk. Spd. by 33% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -622,13 +653,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2054-1" />
+		<set name="item_skill" val="2054-1" /> <!-- Haste Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3931" type="EtcItem" name="L2Day - Agility Scroll">
+		<!-- 7th Anniversary. Increases Evasion by 4 for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -637,13 +669,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2055-1" />
+		<set name="item_skill" val="2055-1" /> <!-- Agility Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3932" type="EtcItem" name="L2Day - Mystic Empower Scroll">
+		<!-- 7th Anniversary. Increases M. Atk. by 75% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -652,13 +685,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2056-1" />
+		<set name="item_skill" val="2056-1" /> <!-- Mystic Empower Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3933" type="EtcItem" name="L2Day - Might Scroll">
+		<!-- 7th Anniversary. Increases P. Atk. by 15% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -667,13 +701,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2057-1" />
+		<set name="item_skill" val="2057-1" /> <!-- Might Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3934" type="EtcItem" name="L2Day - Windwalk Scroll">
+		<!-- 7th Anniversary. Increases Speed by 33 for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -682,13 +717,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2058-1" />
+		<set name="item_skill" val="2058-1" /> <!-- Wind Walk Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3935" type="EtcItem" name="L2Day - Shield Scroll">
+		<!-- 7th Anniversary. Increases P. Def. by 15% for 60 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -697,13 +733,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2059-1" />
+		<set name="item_skill" val="2059-1" /> <!-- Shield Scroll -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="3936" type="EtcItem" name="Blessed Scroll of Resurrection">
+		<!-- A magic scroll that resurrects a dead character and restores his or her Exp. completely. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -713,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2049-1" />
+		<set name="item_skill" val="2049-1" /> <!-- Blessed Scroll of Resurrection -->
 	</item>
 	<item id="3937" type="Weapon" name="Giant Bar">
 		<set name="icon" val="icon.weapon_monster_i00" />
@@ -732,7 +769,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="for_npc" val="true" />
 		<for>
 			<set stat="pAtk" val="50" />
@@ -761,7 +798,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="for_npc" val="true" />
 		<for>
 			<set stat="pAtk" val="50" />
@@ -790,7 +827,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="for_npc" val="true" />
 		<for>
 			<set stat="pAtk" val="50" />
@@ -803,6 +840,7 @@
 		</for>
 	</item>
 	<item id="3940" type="EtcItem" name="Blueprint: Summon Siege Golem">
+		<!-- Blueprint needed to learn the Summon Siege Golem technique. Required level: 49 -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -811,6 +849,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3941" type="EtcItem" name="Spellbook: Mass Resurrection">
+		<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -819,6 +858,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3942" type="EtcItem" name="Spellbook: Party Return">
+		<!-- Spellbook needed to learn Party Return. Used by Elven Elders. Required level: 48 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -827,6 +867,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3943" type="EtcItem" name="Amulet: Pa'agrio's Heart">
+		<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords. Required level: 44 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -835,6 +876,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3944" type="EtcItem" name="Spellbook: Decrease Weight">
+		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. Required level: 35 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -843,6 +885,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3945" type="EtcItem" name="Boat Ticket: Talking Island to Giran">
+		<!-- Ship ticket: From Talking Island - To Giran -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -851,6 +894,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3946" type="EtcItem" name="Boat Ticket: Giran to Talking Island">
+		<!-- Ship ticket: From Giran - To Talking Island -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -859,6 +903,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3947" type="EtcItem" name="Blessed Spiritshot: No Grade">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No Grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -867,9 +912,10 @@
 		<set name="price" val="35" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="item_skill" val="2061-1" />
+		<set name="item_skill" val="2061-1" /> <!-- Blessed Spiritshot: No Grade -->
 	</item>
 	<item id="3948" type="EtcItem" name="Blessed Spiritshot (D-Grade)">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -880,9 +926,10 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="item_skill" val="2160-1" />
+		<set name="item_skill" val="2160-1" /> <!-- Blessed Spiritshot: D-Grade -->
 	</item>
 	<item id="3949" type="EtcItem" name="Blessed Spiritshot (C-Grade)">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -893,9 +940,10 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="item_skill" val="2161-1" />
+		<set name="item_skill" val="2161-1" /> <!-- Blessed Spiritshot: C-Grade -->
 	</item>
 	<item id="3950" type="EtcItem" name="Blessed Spiritshot (B-Grade)">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -906,9 +954,10 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="item_skill" val="2162-1" />
+		<set name="item_skill" val="2162-1" /> <!-- Blessed Spiritshot: B-Grade -->
 	</item>
 	<item id="3951" type="EtcItem" name="Blessed Spiritshot (A-Grade)">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with a-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -919,9 +968,10 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="item_skill" val="2163-1" />
+		<set name="item_skill" val="2163-1" /> <!-- Blessed Spiritshot: A-Grade -->
 	</item>
 	<item id="3952" type="EtcItem" name="Blessed Spiritshot (S-Grade)">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -932,9 +982,10 @@
 		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="item_skill" val="2164-1" />
+		<set name="item_skill" val="2164-1" /> <!-- Blessed Spiritshot: S-Grade -->
 	</item>
 	<item id="3953" type="EtcItem" name="Recipe: Blessed Spiritshot D">
+		<!-- For Dwarves only. The recipe for the Blessed Spiritshot: Grade D. Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -947,6 +998,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3954" type="EtcItem" name="Recipe: Blessed Spiritshot C">
+		<!-- For Dwarves only. The recipe for the Blessed Spiritshot: Grade C. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -959,6 +1011,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3955" type="EtcItem" name="Recipe: Blessed Spiritshot B">
+		<!-- For Dwarves only. The recipe for the Blessed Spiritshot: Grade B. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -971,6 +1024,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3956" type="EtcItem" name="Recipe: Blessed Spiritshot A">
+		<!-- For Dwarves only. The recipe for the Blessed Spiritshot: Grade A. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -983,6 +1037,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3957" type="EtcItem" name="Recipe: Blessed Spiritshot S">
+		<!-- For Dwarves only. The recipe for the Blessed Spiritshot: Grade S. Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -995,6 +1050,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3958" type="EtcItem" name="Blessed Scroll of Escape - Event">
+		<!-- 7th Anniversary. A magical scroll that relocates user to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1003,9 +1059,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2036-2" />
+		<set name="item_skill" val="2036-2" /> <!-- Blessed Scroll of Escape -->
 	</item>
 	<item id="3959" type="EtcItem" name="Blessed Scroll of Resurrection - Event">
+		<!-- 7th Anniversary. A magic scroll that resurrects a dead character and restores his or her Exp. completely. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1014,9 +1071,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2062-1" />
+		<set name="item_skill" val="2062-1" /> <!-- Blessed Scroll of Resurrection -->
 	</item>
 	<item id="3960" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Gludio/Sword/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1026,6 +1084,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3961" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Gludio/Spear/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1035,6 +1094,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3962" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Gludio/Bow/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1044,6 +1104,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3963" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Gludio/Cleric/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1053,6 +1114,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3964" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Gludio/Wizard/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1062,6 +1124,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3965" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Gludio/Sword/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1071,6 +1134,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3966" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Gludio/Spear/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1080,6 +1144,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3967" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Gludio/Bow/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1089,6 +1154,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3968" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Gludio/Cleric/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1098,6 +1164,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3969" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Gludio/Wizard/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1107,6 +1174,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3970" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1116,6 +1184,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3971" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1125,6 +1194,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3972" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1134,6 +1204,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3973" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Dion/Sword/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1143,6 +1214,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3974" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Dion/Spear/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1152,6 +1224,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3975" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Dion/Bow/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1161,6 +1234,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3976" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Dion/Cleric/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1170,6 +1244,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3977" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Dion/Wizard/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1179,6 +1254,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3978" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Dion/Sword/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1188,6 +1264,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3979" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Dion/Spear/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1197,6 +1274,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3980" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Dion/Bow/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1206,6 +1284,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3981" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Dion/Cleric/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1215,6 +1294,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3982" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Dion/Wizard/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1224,6 +1304,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3983" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+		<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1233,6 +1314,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3984" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+		<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1242,6 +1324,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3985" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+		<!-- Placed in Dion, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1251,6 +1334,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3986" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Giran/Sword/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1260,6 +1344,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3987" type="EtcItem" name="Mercenary Posting Ticket (Spear/Stationary)">
+		<!-- Giran/Spear/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1269,6 +1354,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3988" type="EtcItem" name="Mercenary Posting Ticket (Bow/Stationary)">
+		<!-- Giran/Bow/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1278,6 +1364,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3989" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Stationary)">
+		<!-- Giran/Cleric/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1287,6 +1374,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3990" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Stationary)">
+		<!-- Giran/Wizard/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1296,6 +1384,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3991" type="EtcItem" name="Mercenary Posting Ticket (Sword/Mobile)">
+		<!-- Giran/Sword/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1305,6 +1394,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3992" type="EtcItem" name="Mercenary Posting Ticket (Spear/Mobile)">
+		<!-- Giran/Spear/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1314,6 +1404,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3993" type="EtcItem" name="Mercenary Posting Ticket (Bow/Mobile)">
+		<!-- Giran/Bow/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1323,6 +1414,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3994" type="EtcItem" name="Mercenary Posting Ticket (Cleric/Mobile)">
+		<!-- Giran/Cleric/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1332,6 +1424,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3995" type="EtcItem" name="Mercenary Posting Ticket (Wizard/Mobile)">
+		<!-- Giran/Wizard/Mobile. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1341,6 +1434,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3996" type="EtcItem" name="Mercenary Posting Ticket (Teleporter1)">
+		<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1350,6 +1444,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3997" type="EtcItem" name="Mercenary Posting Ticket (Teleporter2)">
+		<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1359,6 +1454,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3998" type="EtcItem" name="Mercenary Posting Ticket (Teleporter3)">
+		<!-- Placed in Giran, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1368,6 +1464,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3999" type="EtcItem" name="Mercenary Posting Ticket (Sword/Stationary)">
+		<!-- Oren/Sword/Stationary. The seal of strife cannot be used to place a mercenary when it is possessed by the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

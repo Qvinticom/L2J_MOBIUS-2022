@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="29200" name="Returning User's Leaf" additionalName="14-day" type="Armor">
-		<!-- Special hair accessory for new warriors returning to their adventure in Aden. -->
+		<!-- Special hair accessory for heroes who've returned to the world of Aden. -->
 		<set name="icon" val="icon.armor_t79_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -19,7 +19,7 @@
 		</stats>
 	</item>
 	<item id="29201" name="New User's Leaf Box" additionalName="14-day" type="EtcItem">
-		<!-- Contains 1 New User's Leaf (14-day). -->
+		<!-- Gift Box containing 1 New User Sprout (14-day). -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -32,7 +32,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="29202" name="Returning User's Leaf Box" additionalName="14-day" type="EtcItem">
-		<!-- Contains 1 Returning User's Leaf (14-day). -->
+		<!-- Gift Box containing 1 Dormant User Sprout (14-day). -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -45,7 +45,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="29203" name="Suspicious Safe" type="EtcItem">
-		<!-- A suspicious safe being traded covertly at the Mystic Tavern. Double-click to obtain one of the following items at a certain rate: Dark Helios/ Bloody Eternal (x2)/ Eternal Enhancement Stone, Blessed Valakas' Necklace, Lindvior's/ Blessed Antharas' Earring, Dark Eternal/ Bloody Eternal Ingredient Set, Teddy Bear/ Cat Plushie/ Panda Plushie Appearance Stone, Ruler's Authority, Life Stone Instilled with Giants' Power, Shining Scroll: Enchant Elemental Shirt, Scroll: Enchant Faint Elemental Shirt, +8 Shiny Elemental Shirt Chest, Dimensional Bracelet Stage 6/ (Basic) Pack, Superior Giant's Codex - Mastery Chapter 1, Giant's Energy 3-unit (x2)/ 20-unit/ 100-unit Pack, Dimensional Bracelet Enhancement Stone Pack (x2), Energy of Destruction 20-unit/ 100-unit Pack, Superior Giant's Codex Chapter 1, Top-grade Spirit Stone, Gemstone (R-grade) (x15), Vitality Beer (x3), Shining Gold Bar (x1, x3, x10, x20, x50, x100, x500, x1000, or x10000). -->
+		<!-- A suspicious vault secretly being traded in Mystic Tavern. Double-click to obtain one of the following items at a certain rate: Dark Helios/ Bloody Eternal (x2)/ Eternal Enhancement Stone, Blessed Valakas' Necklace, Lindvior's/ Blessed Antharas' Earring, Dark Eternal/ Bloody Eternal Ingredient Set, Teddy Bear/ Cat Plushie/ Panda Plushie Appearance Stone, Ruler's Authority, Life Stone Instilled with Giants' Power, Shining Scroll: Enchant Elemental Shirt, Scroll: Enchant Faint Elemental Shirt, +8 Shiny Elemental Shirt Chest, Dimensional Bracelet Stage 6/ (Basic) Pack, Superior Giant's Codex - Mastery Chapter 1, Giant's Energy 3-unit (x2)/ 20-unit/ 100-unit Pack, Dimensional Bracelet Enhancement Stone Pack (x2), Energy of Destruction 20-unit/ 100-unit Pack, Superior Giant's Codex Chapter 1, Top-grade Spirit Stone, Gemstone (R-grade) (x15), Vitality Beer (x3), Shining Gold Bar (x1, x3, x10, x20, x50, x100, x500, x1000, or x10000). -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -53,14 +53,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29204" name="Shiny Gold Bar" type="EtcItem">
-		<!-- An expensive golden bar being traded covertly at the Mystic Tavern. Take it to the Dimensional Merchant to exchange for a useful item. -->
+		<!-- A highly expensive gold bar secretly being traded in Mystic Tavern. Take it to a Dimensional Merchant to exchange it for a useful item. -->
 		<set name="icon" val="icon.bm_gold_bar" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29205" name="Vitality Beer" type="EtcItem">
-		<!-- Popular beer at the Mystic Tavern. Recovers Vitality when used. Take it to the Dimensional Merchant to exchange for a more special beer. Cannot be used in the Olympiad. No weekly usage limit. -->
+		<!-- Popular beer at Mystic Tavern. Recovers vitality when used. Take it to Dimensional Merchant to exchange it for even more special beer. Cannot be used in Olympiad. The usage limit of 5 times per week does not apply. -->
 		<set name="icon" val="icon.bm_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -68,7 +68,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29206" name="Honey Vitality Beer" type="EtcItem">
-		<!-- Brewed with a secret special method of the Mystic Tavern. When used, recovers Vitality instantly and increases CON/ MEN/ LUC/ CHA by 1 for 10 minutes. Using additional Honey Vitality Beer while the buff is active enables up to Lv. 3 stacked effects. Honey Vitality Beer Lv.2: CON/ MEN/ LUC/ CHA +2 and Acquired XP/ SP +10% for 10 min. Honey Vitality Beer Lv.3: CON/ MEN/ LUC/ CHA +3 and Acquired XP/ SP +30% for 10 min. Cannot be used with Fish Stew. Cannot be used in the Olympiad. -->
+		<!-- Honey Vitality Beer made from Mystic Tavern's special recipe. Instantly recovers vitality when used and increases CON/ MEN/ LUC/ CHA by 1 for 10 minutes. When additional Honey Vitality Beer is used when Buff effects are still in effect, the buff will stack up to Lv. 3.. Honey Vitality Beer Lv. 2: Increases CON/ MEN/ LUC/ CHA by 2 and Acquired XP/ SP by 10% for 10 minutes. Honey Vitality Beer Lv. 3: Increases CON/ MEN/ LUC/ CHA by 3 and Acquired XP/ SP by 30% for 10 minutes. Unable to be used by Olympiad. -->
 		<set name="icon" val="icon.bm_royal_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -76,7 +76,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29207" name="Teddy Bear Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance into that of a Teddy Bear. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Teddy Bear. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Appearance Stone which changes your appearance to a teddy bear. Can be used on top or one-piece dress. Changes appearance of all armor to a teddy bear. Armors can be changed back to its original form using a Scroll: Restore Equipment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -84,7 +84,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29208" name="Cat Plushie Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance into that of a Cat Plushie. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Cat Plushie. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Appearance Stone which changes your appearance to a cat plushy. Can be used on top or one-piece dress. Changes appearance of all armor to cat plushy. Armors can be changed back to its original form using a Scroll: Restore Equipment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -92,7 +92,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29209" name="Panda Plushie Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance into that of a Panda Plushie. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Panda Plushie. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Appearance Stone which changes your appearance to a panda plushy. Can be used on top or one-piece dress. Changes appearance of all armor to panda plushy. Armors can be changed back to its original form using a Scroll: Restore Equipment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -100,7 +100,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29210" name="Dark Eternal Ingredient Set" type="EtcItem">
-		<!-- Double-click to obtain the ingredients for crafting Dark Eternal armor. -->
+		<!-- Double click to obtain ingredients required to produce Dark Eternal armor. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29211" name="Bloody Eternal Ingredient Set" type="EtcItem">
-		<!-- Double-click to obtain the ingredients for crafting Bloody Eternal armor. -->
+		<!-- Double click to obtain ingredients required to produce Bloody Eternal armor. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -118,7 +118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29212" name="Adventurer's Circlet" type="Armor">
-		<!-- A luxurious golden hair accessory for adventurers. Requires 2 hair accessory slots. Increases P. Atk. by 3% and M. Atk. by 5%. -->
+		<!-- Luxurious golden hair accessory for adventurers. It takes 2 hair accessory slots. Increases P. Atk. by 3% and M. Atk. by 5% when equipped. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -136,7 +136,7 @@
 		</stats>
 	</item>
 	<item id="29213" name="Adventurer's Bracelet" type="Armor">
-		<!-- Bracelet for adventurers. Increases STR/ DEX/ CON/ INT/ WIT/ MEN  by 1 and activates 3 talisman slots. -->
+		<!-- Bracelet for adventurers. STR/ DEX/ CON/ INT/ WIT/ MEN +1 when equipped and activates three talisman slots. -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="29214" name="Shirt Box" type="EtcItem">
-		<!-- Double-click to obtain 1 Pa'agrio, Sayha, Eva, or Maphr's shirt. -->
+		<!-- Double click to obtain one of Shirt of Pagrio/ Sayha/ Eva/ Maphr. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -201,7 +201,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29218" name="Accessory of the Gods Upgrade Set Box" additionalName="Necklace" type="EtcItem">
-		<!-- Double-click to obtain materials to upgrade Accessory of the Gods (Necklace). -->
+		<!-- Double-click to obtain ingredients required to upgrade God's Accessory (necklace). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -210,7 +210,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29219" name="Accessory of the Gods Upgrade Set Box" additionalName="Earrings" type="EtcItem">
-		<!-- Double-click to obtain materials to upgrade Accessory of the Gods (Earrings). -->
+		<!-- Double-click to obtain ingredients required to upgrade God's Accessory (earrings). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -219,7 +219,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29220" name="Accessory of the Gods Upgrade Set Box" additionalName="Ring" type="EtcItem">
-		<!-- Double-click to obtain materials to upgrade Accessory of the Gods (Ring). -->
+		<!-- Double-click to obtain ingredients required to upgrade God's Accessory (ring). -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29221" name="Accessory of the Gods Crafting Set Box" additionalName="Necklace" type="EtcItem">
-		<!-- Double-click to obtain materials to craft Accessory of the Gods (Necklace). -->
+		<!-- Double-click to obtain ingredients required to create God's Accessory (necklace). -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -237,7 +237,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29222" name="Accessory of the Gods Crafting Set Box" additionalName="Earrings" type="EtcItem">
-		<!-- Double-click to obtain materials to craft Accessory of the Gods (Earrings). -->
+		<!-- Double-click to obtain ingredients required to create God's Accessory (earrings). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -246,7 +246,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29223" name="Accessory of the Gods Crafting Set Box" additionalName="Ring" type="EtcItem">
-		<!-- Double-click to obtain materials to craft Accessory of the Gods (Ring). -->
+		<!-- Double-click to obtain ingredients required to create God's Accessory (ring). -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -255,7 +255,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29224" name="Box of War Hero's Soul" type="EtcItem">
-		<!-- Double-click to obtain various materials to create accessories of gods. -->
+		<!-- Double-click to obtain various ingredients required to create God's Accessory with random chance. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -263,7 +263,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29225" name="14th Anniversary Rune 100%" additionalName="1 hour" type="EtcItem">
-		<!-- 14th Anniversary item. When held in your inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
+		<!-- 14th Anniversary. If stored in the inventory, increases XP gain by 100% in celebration of the 14th Anniversary. The remaining time decreases even when logged out. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -273,7 +273,7 @@
 		<set name="time" val="60" />
 	</item>
 	<item id="29226" name="14th Anniversary Rune 100% Pack (1 hour)" type="EtcItem">
-		<!-- 14th Anniversary item. Double-click to obtain the 14th Anniversary Rune 100% (1 hour). -->
+		<!-- 14th Anniversary Item Pack. Pack which includes 14th Anniversary Rune 100% (1 hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -285,7 +285,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29227" name="Broken Pumpkin's Crystal Fragment" type="EtcItem">
-		<!-- A piece of crystal from a broken pumpkin. Bring it to Puss the Cat to get a special item. -->
+		<!-- Crystal shard which came out of broken gourd. Take it to Puss the Cat to exchange it for a special item. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />

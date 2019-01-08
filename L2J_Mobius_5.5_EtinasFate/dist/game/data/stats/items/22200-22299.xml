@@ -117,7 +117,7 @@
 		</skills>
 	</item>
 	<item id="22208" name="Bad Bunny's Necklace Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing 7 day or 30 day Bad Bunny's Necklace. Which one could it be? It will be automatically deleted after the regular maintenance on 2/23/2011 (Wed). -->
+		<!-- Box containing 7 day or 30 day Bad Bunny's Necklace. Which one could it be? It will be automatically deleted after the regular maintenance on 2/ 23/ 2011 (Wed). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -129,7 +129,7 @@
 		</skills>
 	</item>
 	<item id="22209" name="Bad Bunny's Earring Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing 7 day or 30 day Bad Bunny's Earring. Which one could it be? It will be automatically deleted after the regular maintenance on 2/23/2011 (Wed). -->
+		<!-- Box containing 7 day or 30 day Bad Bunny's Earring. Which one could it be? It will be automatically deleted after the regular maintenance on 2/ 23/ 2011 (Wed). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -141,7 +141,7 @@
 		</skills>
 	</item>
 	<item id="22210" name="Bad Bunny's Ring Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing 7 day or 30 day Bad Bunny's Ring. Which one could it be? It will be automatically deleted after the regular maintenance on 2/23/2011 (Wed). -->
+		<!-- Box containing 7 day or 30 day Bad Bunny's Ring. Which one could it be? It will be automatically deleted after the regular maintenance on 2/ 23/ 2011 (Wed). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -316,7 +316,7 @@
 		</skills>
 	</item>
 	<item id="22218" name="Destruction Enchant Scroll Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing one Destruction Scroll: Enchant Weapon (S-grade). -->
+		<!-- Double-click to obtain one Destruction Scroll: Enchant Weapon (S-grade). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -336,7 +336,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22219" name="Destruction Enchant Scroll Set (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Scrolls: Enchant Weapon of Destruction (S-grade) and 3 Scrolls: Enchant Armor of Destruction (S-grade). -->
+		<!-- Double-click to obtain 3 Scrolls: Enchant Weapon of Destruction (S-grade) and 3 Scrolls: Enchant Armor of Destruction (S-grade). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
@@ -369,7 +369,7 @@
 		</skills>
 	</item>
 	<item id="22221" name="Destruction Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and fist weapons. P. Atk. + 10 for bows. P. Atk. + 4 for all weapons. From + 4, P. Atk. and M. Atk. Increases by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are + 15 or above. -->
+		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -385,7 +385,7 @@
 		</skills>
 	</item>
 	<item id="22222" name="Destruction Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for S-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to + 4, HP increases according to the enchant value. Cannot be used on armor that are + 6 or above. -->
+		<!-- When enchanted, P. Def. +1 for S-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -401,7 +401,7 @@
 		</skills>
 	</item>
 	<item id="22223" name="Destruction Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and fist weapons. P. Atk. + 8 for bows. P. Atk. + 3 for all weapons. From + 4, P. Atk. and M. Atk. Increases by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are + 15 or above. -->
+		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -417,7 +417,7 @@
 		</skills>
 	</item>
 	<item id="22224" name="Destruction Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for A-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to + 4, HP increases according to the enchant value. Cannot be used on armor that are + 6 or above. -->
+		<!-- When enchanted, P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -433,7 +433,7 @@
 		</skills>
 	</item>
 	<item id="22225" name="Destruction Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and fist weapons. P. Atk. + 6 for bows. P. Atk. + 3 for all weapons. From + 4, P. Atk. and M. Atk. Increases by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are + 15 or above. -->
+		<!-- When enchanted, increases P. Atk. by 3 for B-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -449,7 +449,7 @@
 		</skills>
 	</item>
 	<item id="22226" name="Destruction Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for B-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to + 4, HP increases according to the enchant value. Cannot be used on armor that are + 6 or above. -->
+		<!-- When enchanted, P. Def. +1 for B-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -465,7 +465,7 @@
 		</skills>
 	</item>
 	<item id="22227" name="Destruction Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and fist weapons. P. Atk. + 6 for bows. P. Atk. + 3 for all weapons. From + 4, P. Atk. and M. Atk. Increases by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are + 15 or above. -->
+		<!-- When enchanted, increases P. Atk. by 3 for C-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 4 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 6 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -481,7 +481,7 @@
 		</skills>
 	</item>
 	<item id="22228" name="Destruction Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to + 4, HP increases according to the enchant value. Cannot be used on armor that are + 6 or above. -->
+		<!-- When enchanted, P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -497,7 +497,7 @@
 		</skills>
 	</item>
 	<item id="22229" name="Destruction Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 2 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 2 for two-handed swords, two-handed blunts, dualswords, and fist weapons. P. Atk. + 4 for bows. P. Atk. + 2 for all weapons. From + 4, P. Atk. and M. Atk. Increases by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are + 15 or above. -->
+		<!-- When enchanted, increases P. Atk. by 2 for D-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 2 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 4 for bow weapons. Increases M. Atk. by 2 for all weapons. P. Atk./ M. Atk doubles starting at +4. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -513,7 +513,7 @@
 		</skills>
 	</item>
 	<item id="22230" name="Destruction Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to + 4, HP increases according to the enchant value. Cannot be used on armor that are + 6 or above. -->
+		<!-- When enchanted, P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -577,7 +577,7 @@
 		</skills>
 	</item>
 	<item id="22234" name="Sweet Chocolate Box" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
+		<!-- Double-click to obtain 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -595,7 +595,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22235" name="Sweet Chocolate" type="EtcItem">
-		<!-- When used, for 30 minutes, Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- When used, for 30 min., Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -633,7 +633,7 @@
 		</skills>
 	</item>
 	<item id="22237" name="Shiny Couple Ring" type="Armor">
-		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hour. -->
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -687,7 +687,7 @@
 		</skills>
 	</item>
 	<item id="22240" name="Enhanced Rose Spirit Coupon (5-hour)" additionalName="Event" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons an improved rose spirit. -->
+		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons an improved rose spirit. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -702,7 +702,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="22241" name="Sweet Chocolate Box" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
+		<!-- Double-click to obtain 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -720,7 +720,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22242" name="Sweet Chocolate" additionalName="Event" type="EtcItem">
-		<!-- When used, for 30 minutes, Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- When used, for 30 min., Vitality is replenished when XP is acquired through hunting. Cannot be used when already receiving the same effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -974,7 +974,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22254" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
-		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. 30-day. Cooldown is 1 hour. -->
+		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. 30-day. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.bm_ring_of_friendship" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1334,7 +1334,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22274" name="Player Commendation - Transformation Scroll Pack" additionalName="Event" type="EtcItem">
-		<!-- Gift that can be received after accumulating two hours worth of PC Points. The box contains 1 random Transformation Scroll. -->
+		<!-- Gift that can be received after accumulating two hr. worth of PA Points. The box contains 1 random Transformation Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="is_clan_depositable" val="false" />
@@ -1352,7 +1352,7 @@
 		</skills>
 	</item>
 	<item id="22275" name="Player Commendation - Gift Box" additionalName="Event" type="EtcItem">
-		<!-- Gift that can be received after accumulating one hour worth of PC Points. Double-click to receive a special gift. -->
+		<!-- Gift that can be received after accumulating 1 hr. worth of PA Points. Double-click to receive a special gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="is_clan_depositable" val="false" />
@@ -1366,8 +1366,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22279" min="1" max="1" chance="100" /> <!-- PC Vitality (1-hour) - Event -->
-			<item id="22280" min="1" max="1" chance="100" /> <!-- Player Commendation - Blessing (1-hour) - Event -->
+			<item id="22279" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hr.) - Event -->
+			<item id="22280" min="1" max="1" chance="100" /> <!-- PA - Blessing (1-hr.) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="22276" name="Player Commendation - Transformation Stick Pack" additionalName="Event" type="EtcItem">
@@ -1425,7 +1425,7 @@
 		</skills>
 	</item>
 	<item id="22279" name="PC Vitality (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- Upon use, for 1 hour, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, for 1 hr., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1447,7 +1447,7 @@
 		</skills>
 	</item>
 	<item id="22280" name="Player Commendation - Blessing (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- When used, HP Recovery Bonus, Max MP, and Critical Rate + 20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->
+		<!-- When used, HP Recovery Bonus, Max MP, and Critical Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
@@ -1484,7 +1484,7 @@
 		</skills>
 	</item>
 	<item id="22281" name="Sujin Transformation Stick" additionalName="7-day (Event)" type="Weapon">
-		<!-- Stick that transforms you into a the Blessed Child Sujin. The transformation ends when you de-equip the item. Cooldown is 4 hours. -->
+		<!-- Stick that transforms you into a the Blessed Child Sujin. The transformation ends when you de-equip the item. Cooldown is 4 hr. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1535,7 +1535,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22283" name="Trejuo Transformation Stick" additionalName="7-day (Event)" type="Weapon">
-		<!-- Stick that transforms you into a the Blessed Child Trejuo. The transformation ends when you de-equip the item. Cooldown is 4 hours. -->
+		<!-- Stick that transforms you into a the Blessed Child Trejuo. The transformation ends when you de-equip the item. Cooldown is 4 hr. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1793,7 +1793,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22299" name="Miraculous Valentine Cake: Special Ingredient Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Miraculous Valentine Cake: Special Ingredient. -->
+		<!-- Double-click to obtain a Miraculous Valentine Cake: Special Ingredient. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />

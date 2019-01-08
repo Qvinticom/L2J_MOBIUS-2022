@@ -723,6 +723,7 @@
 		</for>
 	</item>
 	<item id="17" type="EtcItem" name="Wooden Arrow">
+		<!-- An arrow made of wood. It is an arrow used for a no grade bow. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="arrow"/>
 		<set name="weight" val="6"/>
@@ -1757,6 +1758,7 @@
 		</for>
 	</item>
 	<item id="60" type="Armor" name="Composite Armor">
+		<!-- Full body armor. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="heavy"/>
@@ -2116,6 +2118,7 @@
 		</for>
 	</item>
 	<item id="71" type="Weapon" name="Flamberge">
+		<!-- Bestows one of the following functions: Critical Damage, Focus or Light. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2010"/>
@@ -2161,6 +2164,7 @@
 		</for>
 	</item>
 	<item id="72" type="Weapon" name="Stormbringer">
+		<!-- Bestows one of the following functions: Critical Anger, Focus or Light. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1430"/>
@@ -2206,6 +2210,7 @@
 		</for>
 	</item>
 	<item id="73" type="Weapon" name="Shamshir">
+		<!-- Bestows one of the following functions: Guidance, Back Blow, Rsk. Or Evasion. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1420"/>
@@ -2251,6 +2256,7 @@
 		</for>
 	</item>
 	<item id="74" type="Weapon" name="Katana">
+		<!-- Bestows one of the following functions: Focus, Critical Damage or Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1420"/>
@@ -2296,6 +2302,7 @@
 		</for>
 	</item>
 	<item id="75" type="Weapon" name="Caliburs">
+		<!-- Bestows either Guidance, Focus or Critical Damage. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1400"/>
@@ -2341,6 +2348,7 @@
 		</for>
 	</item>
 	<item id="76" type="Weapon" name="Sword of Delusion">
+		<!-- Bestows one of the following functions: Focus, Health, or Rsk. Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1400"/>
@@ -2386,6 +2394,7 @@
 		</for>
 	</item>
 	<item id="77" type="Weapon" name="Tsurugi">
+		<!-- Bestows one of the following functions: Focus, Critical Damage or Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1400"/>
@@ -2431,6 +2440,7 @@
 		</for>
 	</item>
 	<item id="78" type="Weapon" name="Great Sword">
+		<!-- Bestows one of the following functions: Health, Critical Damage or Focus. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1930"/>
@@ -2476,6 +2486,7 @@
 		</for>
 	</item>
 	<item id="79" type="Weapon" name="Sword of Damascus">
+		<!-- Bestows one of the following functions: Focus, Critical Damage or Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -2521,6 +2532,7 @@
 		</for>
 	</item>
 	<item id="80" type="Weapon" name="Tallum Blade">
+		<!-- Bestows one of the following functions: Critical Poison, Haste or Anger. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1330"/>
@@ -2566,6 +2578,7 @@
 		</for>
 	</item>
 	<item id="81" type="Weapon" name="Dragon Slayer">
+		<!-- Bestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1840"/>
@@ -2701,6 +2714,7 @@
 		</for>
 	</item>
 	<item id="84" type="Weapon" name="Homunkulus's Sword">
+		<!-- Bestows one of the following functions: Acumen, Conversion or Paralyze. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="950"/>
@@ -2926,6 +2940,7 @@
 		</for>
 	</item>
 	<item id="89" type="Weapon" name="Big Hammer">
+		<!-- Bestows either Health, Rsk. Focus or Haste. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1710"/>
@@ -3016,6 +3031,7 @@
 		</for>
 	</item>
 	<item id="91" type="Weapon" name="Heavy War Axe">
+		<!-- Bestows either Anger, Health, or Rsk. Focus. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1620"/>
@@ -3061,6 +3077,7 @@
 		</for>
 	</item>
 	<item id="92" type="Weapon" name="Sprite's Staff">
+		<!-- Bestows either Regeneration, Mental Shield or Hold. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="960"/>
@@ -3152,6 +3169,7 @@
 		</for>
 	</item>
 	<item id="94" type="Weapon" name="Bec de Corbin">
+		<!-- Bestows either Critical Stun, Towering Blow or Light. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2020"/>
@@ -3198,6 +3216,7 @@
 		</for>
 	</item>
 	<item id="95" type="Weapon" name="Poleaxe">
+		<!-- Bestows one of the following functions: Wide Blow, Towering Blow or Critical Stun. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2010"/>
@@ -3244,6 +3263,7 @@
 		</for>
 	</item>
 	<item id="96" type="Weapon" name="Scythe">
+		<!-- Bestows either Anger, Critical Stun or Light. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="2040"/>
@@ -3290,6 +3310,7 @@
 		</for>
 	</item>
 	<item id="97" type="Weapon" name="Lance">
+		<!-- Bestows either Anger, Critical Stun or Towering Blow. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1920"/>
@@ -3336,6 +3357,7 @@
 		</for>
 	</item>
 	<item id="98" type="Weapon" name="Halberd">
+		<!-- Bestows one of the following functions: Haste, Critical Stun or Wide Blow. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1900"/>

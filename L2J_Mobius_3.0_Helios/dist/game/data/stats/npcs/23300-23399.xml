@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23300" level="98" type="L2Monster" name="Commander of Operations">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -221,7 +221,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1100" max="2569" chance="70" /> <!-- Adena -->
-				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes -->
+				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes - Robe -->
 				<item id="35322" min="1" max="1" chance="0.0749999999999997" /> <!-- Seraph Shoe Ingredient -->
 				<item id="36563" min="1" max="1" chance="0.0749999999999997" /> <!-- Synthetic Cokes -->
 				<item id="9552" min="1" max="1" chance="0.00550000000000006" /> <!-- Fire Crystal -->
@@ -1769,8 +1769,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="712" max="1660" chance="70" /> <!-- Adena -->
-				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
-				<item id="17305" min="1" max="1" chance="0.00550000000000004" /> <!-- Immortal Breastplate -->
+				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17305" min="1" max="1" chance="0.00550000000000004" /> <!-- Immortal Breastplate - Heavy Armor -->
 				<item id="36557" min="1" max="1" chance="0.299999999999999" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.0750000000000009" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="9550" min="1" max="1" chance="0.0299999999999999" /> <!-- Dark Stone -->
@@ -1823,9 +1823,9 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="841" max="1961" chance="70" /> <!-- Adena -->
-				<item id="17305" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Breastplate -->
-				<item id="17312" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Leather Leggings -->
-				<item id="17316" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Tunic -->
+				<item id="17305" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17312" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17316" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Tunic - Robe -->
 				<item id="36810" min="1" max="1" chance="3.714" /> <!-- Immortal Shield Ingredient -->
 				<item id="36517" min="1" max="1" chance="2.49000000000001" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.300000000000007" /> <!-- Durable Leather -->

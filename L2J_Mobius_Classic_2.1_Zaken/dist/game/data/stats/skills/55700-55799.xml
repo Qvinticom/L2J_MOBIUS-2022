@@ -1,72 +1,66 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55701" toLevel="1" name="Release Agathion's Seal - Sin Eater">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Summon Sin Eater Agathion. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55702" toLevel="1" name="Hour of Penitence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Hour of Penitence - 5 hours. Within this time monsters must be defeated and Crumbs of Penitence must be collected (Monsters that are 5 lvl lower than the character are not counted). Activates when Sin Eater is summoned. <Warning!> Removing the bracelet will end the Hour of Penitence. Remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55703" toLevel="1" name="Blessed Scroll: Enchant Weapon (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55704" toLevel="1" name="Blessed Scroll: Enchant Armor (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55705" toLevel="5" name="Red Cat's Eye">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Critical Damage +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55706" toLevel="5" name="Blue Cat's Eye">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Critical Damage +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55707" toLevel="1" name="Fortune Red Cat's Eye Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55708" toLevel="1" name="Fortune Blue Cat's Eye Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55709" toLevel="1" name="Shining Jewelry Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55710" toLevel="1" name="Put on Lv. 4 Brooch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Brooch radiates bright light. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55711" toLevel="1" name="Remove Lv. 4 Brooch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bright light fades. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55712" toLevel="1" name="Lv. 4 Brooch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Activates 5 jewel slots. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55713" toLevel="1" name="Lv. 4 Brooch - Additional Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Inventory Slot + 12. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55714" toLevel="1" name="Shining Golden Boot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -92,445 +86,430 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="90407" count="1" />
+						<item id="90407" count="1" /> <!-- Chef's Fish Stew - Victory - Event -->
 					</item>
 				</items>
 			</effect>
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="90408" count="1" />
+						<item id="90408" count="1" /> <!-- Chef's Fish Stew - Fire - Event -->
 					</item>
 				</items>
 			</effect>
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="90409" count="1" />
+						<item id="90409" count="1" /> <!-- Chef's Fish Stew - Water - Event -->
 					</item>
 				</items>
 			</effect>
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="90410" count="1" />
+						<item id="90410" count="1" /> <!-- Chef's Fish Stew - Wind - Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55716" toLevel="1" name="Letter Collector Spell">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Grants the power of the Letter Collector. For 1 hour Max. HP +5%, Max. MP +5%, Max. CP +5%, Speed +10, P. Atk. +8%, M. Atk. +10%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55717" toLevel="1" name="Shilen's Treasure Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55718" toLevel="1" name="XP Rune 50%">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- XP/SP gain +50%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55719" toLevel="1" name="Feather Rune">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases weight limit by 20%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55720" toLevel="1" name="Irene' Hourglass - 1 Hour">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- XP/SP gain + 50% for the duration of the effect. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55721" toLevel="1" name="Storm Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases XP/SP gain by 50% for 2 hours. Cooldown - 2 hours. Effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55722" toLevel="1" name="Facelifting Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55723" toLevel="1" name="Facelifting Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55724" toLevel="1" name="Facelifting Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55725" toLevel="1" name="Dye Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55726" toLevel="1" name="Dye Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55727" toLevel="1" name="Dye Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55728" toLevel="1" name="Dye Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55729" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55730" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55731" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55732" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55733" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55734" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55735" toLevel="1" name="Hair Style Change Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55736" toLevel="1" name="Elmoreden Cloak Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases PvP Attack Damage when enchanted and bestows various passive and active skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55737" toLevel="20" name="Elmoreden Cloak Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PVP Attack Damage +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55738" toLevel="1" name="Aden Cloak Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Magic PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55739" toLevel="20" name="Aden Cloak Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Magic PVE Damage to normal monsters +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55740" toLevel="1" name="Elmore Cloak Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Physical Attack PvE Damage when enchanted and bestows various passive and active skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55741" toLevel="20" name="Elmore Cloak Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Physical PvE Damage to normal monsters +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55742" toLevel="1" name="Ferios Cloak Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Decreases received damage when enchanted and bestows various passive and active skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55743" toLevel="20" name="Ferios Cloak Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received damage -$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55744" toLevel="1" name="Blessing of Elmoreden">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Makes you invincible for $s1 and increases Speed by 100. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55745" toLevel="1" name="Spirit of Aden">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases PvE Damage by $s1 when dealing magic attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55746" toLevel="1" name="Spirit of Elmore">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases PvE Damage by $s1 when dealing physical attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55747" toLevel="1" name="Blessing of Ferios">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Makes you invincible for $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55748" toLevel="4" name="Elmoreden Spirit Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Ignores CP in PvP, and deals $s1 fixed damage. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55749" toLevel="9" name="Wrath of Elmoreden">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Decreases target's CP by $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55750" toLevel="14" name="Wrath of Aden">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, PvE Damage +$s2 when dealing magic attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55751" toLevel="14" name="Wrath of Elmore">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, PvE Damage +$s2 when dealing physical attacks. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55752" toLevel="9" name="Recovery of Ferios">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- CP +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55753" toLevel="3" name="Defense of Ferios">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, P./M. Def. +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55754" toLevel="8" name="Recovery of Elmoreden">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- CP +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55755" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55756" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55757" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Atk. Spd. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55758" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Casting Spd. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55759" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Accuracy +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55760" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Accuracy +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55761" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55762" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max MP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55763" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max CP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55764" toLevel="2" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55765" toLevel="2" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- CON +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55766" toLevel="2" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- MEN +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55767" toLevel="2" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- DEX +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55768" toLevel="2" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- WIT +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55769" toLevel="2" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- INT +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55770" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Critical Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55771" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Skill Critical Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55772" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Skill Critical Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55773" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Critical Damage Boost -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55774" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Skill Critical Damage Boost -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55775" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Critical Damage Boost -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55776" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Stun Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55777" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Hold Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55778" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bleeding Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55779" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Paralysis Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55780" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Mind Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55781" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Sleep Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55782" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Poison Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55784" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pull Attack Success Rate +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55785" toLevel="9" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Petrification Attack Success Rate -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55786" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55787" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max MP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55788" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max CP +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55789" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55790" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55791" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Atk. Spd. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55792" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Speed +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55793" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Atk. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55794" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55795" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Casting Spd. +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55796" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PvP Damage +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55797" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received PvP Damage -$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55798" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- PvE Damage +$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55799" toLevel="3" name="Empire Cloak Augmentation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received PvE Damage -$s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

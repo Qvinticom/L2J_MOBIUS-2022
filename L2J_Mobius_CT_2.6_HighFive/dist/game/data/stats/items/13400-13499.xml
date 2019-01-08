@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13400" type="EtcItem" name="Scroll of Escape: Gludin Village">
+		<!-- Teleports you to Gludin Village. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -10,12 +11,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-6" />
+		<set name="item_skill" val="2609-6" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13401" type="EtcItem" name="Scroll of Escape: Town of Gludio">
+		<!-- Teleports you to the Town of Gludio. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -25,12 +27,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-7" />
+		<set name="item_skill" val="2609-7" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13402" type="EtcItem" name="Scroll of Escape: Town of Dion">
+		<!-- Teleports you to the Town of Dion. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -40,12 +43,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-8" />
+		<set name="item_skill" val="2609-8" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13403" type="EtcItem" name="Scroll of Escape: Floran Village">
+		<!-- Teleports you to Floran Village. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -55,12 +59,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-9" />
+		<set name="item_skill" val="2609-9" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13404" type="EtcItem" name="Scroll of Escape: Town of Giran">
+		<!-- Teleports you to the Town of Giran. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -70,12 +75,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-10" />
+		<set name="item_skill" val="2609-10" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13405" type="EtcItem" name="Scroll of Escape: Hardin's Academy">
+		<!-- Teleports you to Hardin's Academy. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -85,12 +91,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-11" />
+		<set name="item_skill" val="2609-11" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13406" type="EtcItem" name="Scroll of Escape: Heine">
+		<!-- Teleports you to Heine. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -100,12 +107,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-12" />
+		<set name="item_skill" val="2609-12" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13407" type="EtcItem" name="Scroll of Escape: Town of Oren">
+		<!-- Teleports you to the Town of Oren. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -115,12 +123,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-13" />
+		<set name="item_skill" val="2609-13" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13408" type="EtcItem" name="Scroll of Escape: Ivory Tower">
+		<!-- Teleports you to the Ivory Tower. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -130,12 +139,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-14" />
+		<set name="item_skill" val="2609-14" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13409" type="EtcItem" name="Scroll of Escape: Hunters Village">
+		<!-- Teleports you to Hunters Village. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -145,12 +155,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-15" />
+		<set name="item_skill" val="2609-15" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13410" type="EtcItem" name="Scroll of Escape: Town of Aden">
+		<!-- Teleports you to the Town of Aden. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -160,12 +171,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-16" />
+		<set name="item_skill" val="2609-16" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13411" type="EtcItem" name="Scroll of Escape: Town of Goddard">
+		<!-- Teleports you to the Town of Goddard. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -175,12 +187,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-17" />
+		<set name="item_skill" val="2609-17" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13412" type="EtcItem" name="Scroll of Escape: Rune Township">
+		<!-- Teleports you to Rune Township. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -190,12 +203,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-18" />
+		<set name="item_skill" val="2609-18" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13413" type="EtcItem" name="Scroll of Escape: Town of Schuttgart">
+		<!-- Teleports you to the Town of Schuttgart. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -205,12 +219,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-19" />
+		<set name="item_skill" val="2609-19" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13414" type="EtcItem" name="Scroll of Escape: Kamael Village">
+		<!-- Teleports you to Kamael Village. Cannot be sold, exchanged or dropped. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -220,12 +235,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2609-20" />
+		<set name="item_skill" val="2609-20" /> <!-- Escape - Talking Island Village -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13415" type="Armor" name="Frog Hat">
+		<!-- This unique Frog Hat requires 2 hair accessory slots. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_frog_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -237,6 +253,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13416" type="Armor" name="Chicken Hat">
+		<!-- This unique Chicken Hat requires 2 hair accessory slots. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -248,18 +265,21 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13417" type="EtcItem" name="L2day - Y">
+		<!-- Items for L2day event. Combine special letters to spell "Angel Cat," and you'll get a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_y_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13418" type="EtcItem" name="L2day - Letter 5">
+		<!-- Items for L2day event. Combine special letters to spell "Angel Cat," and you'll get a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_5_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13419" type="EtcItem" name="Lineage II Commemorative Mark">
+		<!-- Keep this Lineage II Commemorative Mark safe and it will bring you luck. If destroyed, it loses its effect. Cannot be exchanged or dropped. May be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_scroll_of_memory_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -270,6 +290,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13420" type="EtcItem" name="Multi-colored Honey Rice Cake">
+		<!-- Fully replenishes your Vitality. The effect does not apply to pets. Reuse time is 60 minutes. -->
 		<set name="icon" val="icon.etc_five_color_honey_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -279,9 +300,10 @@
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2645-1" />
+		<set name="item_skill" val="2645-1" /> <!-- Multi-Colored Honey Rice Cake -->
 	</item>
 	<item id="13421" type="EtcItem" name="Honey Wheat Cake">
+		<!-- Fully replenishes your Vitality. Cannot be exchanged or dropped. Can be stored in a private warehouse. Reuse time is 60 minutes. -->
 		<set name="icon" val="icon.etc_cake_of_wheatlfour_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -294,9 +316,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2646-1" />
+		<set name="item_skill" val="2646-1" /> <!-- Honey Wheat Cake -->
 	</item>
 	<item id="13422" type="EtcItem" name="Medium Parchment Box">
+		<!-- Event Item. Reward box containing two village Scrolls of Escape. Double-click on this item to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -307,9 +330,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2644-1" />
+		<set name="item_skill" val="2644-1" /> <!-- Five-Year Anniversary Event Box -->
 	</item>
 	<item id="13423" type="EtcItem" name="Medium Mineral Box">
+		<!-- Event Item. Reward box containing various attribute stones. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -320,9 +344,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2639-1" />
+		<set name="item_skill" val="2639-1" /> <!-- Five-year anniversary event box -->
 	</item>
 	<item id="13424" type="EtcItem" name="Large Libation Box">
+		<!-- Event Item. Reward box containing unusual liquid refreshments. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -333,9 +358,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2642-1" />
+		<set name="item_skill" val="2642-1" /> <!-- Five-Year Anniversary Event Box -->
 	</item>
 	<item id="13425" type="EtcItem" name="Small Parchment Box">
+		<!-- Event Item. Reward box containing one village Scroll of Escape. Double-click on this item to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -346,9 +372,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2643-1" />
+		<set name="item_skill" val="2643-1" /> <!-- Five-Year Anniversary Event Box -->
 	</item>
 	<item id="13426" type="EtcItem" name="Small Mineral Box">
+		<!-- Event Item. Reward box containing various attribute stones. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -359,9 +386,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2638-1" />
+		<set name="item_skill" val="2638-1" /> <!-- Five-year anniversary event box -->
 	</item>
 	<item id="13427" type="EtcItem" name="Medium Libation Box">
+		<!-- Event Item. Reward box containing unusual liquid refreshments. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -372,9 +400,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2641-1" />
+		<set name="item_skill" val="2641-1" /> <!-- Five-Year Anniversary Event Box -->
 	</item>
 	<item id="13428" type="EtcItem" name="Small Libation Box">
+		<!-- Event Item. Reward box containing unusual liquid refreshments. Double-click on the container to see what you've won. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -385,9 +414,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2640-1" />
+		<set name="item_skill" val="2640-1" /> <!-- Five-year anniversary event box -->
 	</item>
 	<item id="13429" type="Armor" name="Teddy Bear Hat (Event)">
+		<!-- Interesting hair accessory that looks like a teddy bear. Uses 2 hair accessory slots. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -399,6 +429,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13430" type="Armor" name="Piggy Hat (Event)">
+		<!-- Interesting hair accessory that looks like a piggy. Uses 2 hair accessory slots. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -410,6 +441,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13431" type="Armor" name="Jester Hat (Event)">
+		<!-- A unique jester hat that is split at the end. Uses 2 hair accessory slots. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -910,6 +942,7 @@
 		</for>
 	</item>
 	<item id="13457" type="Weapon" name="Vesper Cutter">
+		<!-- It can bestow one of the following functions: Haste, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -938,6 +971,7 @@
 		</for>
 	</item>
 	<item id="13458" type="Weapon" name="Vesper Slasher">
+		<!-- It can bestow one of the following functions: Haste, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -966,6 +1000,7 @@
 		</for>
 	</item>
 	<item id="13459" type="Weapon" name="Vesper Buster">
+		<!-- It can bestow one of the following functions: Acumen, Mana Up, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -994,6 +1029,7 @@
 		</for>
 	</item>
 	<item id="13460" type="Weapon" name="Vesper Shaper">
+		<!-- It can bestow one of the following functions: Critical Damage, HP Drain, or Haste. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1022,6 +1058,7 @@
 		</for>
 	</item>
 	<item id="13461" type="Weapon" name="Vesper Fighter">
+		<!-- It can bestow one of the following functions: Focus, Health, or Critical Stun. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1050,6 +1087,7 @@
 		</for>
 	</item>
 	<item id="13462" type="Weapon" name="Vesper Stormer">
+		<!-- It can bestow one of the following functions: Health, Guidance, or Haste. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1067,7 +1105,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1079,6 +1117,7 @@
 		</for>
 	</item>
 	<item id="13463" type="Weapon" name="Vesper Avenger">
+		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1107,6 +1146,7 @@
 		</for>
 	</item>
 	<item id="13464" type="Weapon" name="Vesper Retributer">
+		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1135,6 +1175,7 @@
 		</for>
 	</item>
 	<item id="13465" type="Weapon" name="Vesper Caster">
+		<!-- It can bestow one of the following functions: Acumen, MP Regeneration, or Mana Up. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1164,6 +1205,7 @@
 		</for>
 	</item>
 	<item id="13466" type="Weapon" name="Vesper Singer">
+		<!-- It can bestow one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1193,6 +1235,7 @@
 		</for>
 	</item>
 	<item id="13467" type="Weapon" name="Vesper Thrower">
+		<!-- It can bestow one of the following functions: Cheap Shot, Critical Slow, or Focus. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1224,6 +1267,7 @@
 		</for>
 	</item>
 	<item id="13468" type="Weapon" name="Vesper Pincer">
+		<!-- Kamael Exclusive Weapon: Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1257,6 +1301,7 @@
 		</for>
 	</item>
 	<item id="13469" type="Weapon" name="Vesper Shooter">
+		<!-- Kamael Exclusive Weapon: Vesper Thrower Conversion. Cheap Shot, Critical Slow, or Focus can be bestowed. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1290,6 +1335,7 @@
 		</for>
 	</item>
 	<item id="13470" type="Weapon" name="Vesper Nagan">
+		<!-- Kamael Exclusive Weapon: Vesper Slasher Conversion. Haste, Focus, or Health can be bestowed. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1343,6 +1389,7 @@
 		</for>
 	</item>
 	<item id="13472" type="Armor" name="Circlet of Innadril Valor">
+		<!-- Circlet that symbolizes the valor of Innadril. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair1_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1355,6 +1402,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13473" type="Armor" name="Circlet of Aden Valor">
+		<!-- Circlet that symbolizes the valor of Aden. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1367,6 +1415,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13474" type="Armor" name="Circlet of Dion Valor">
+		<!-- Circlet that symbolizes the valor of Dion. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair3_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1379,6 +1428,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13475" type="Armor" name="Circlet of Dion Sniper">
+		<!-- Circlet that symbolizes the unity of Dion. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair4_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1391,6 +1441,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13476" type="Armor" name="Circlet of Innadril Sniper">
+		<!-- Circlet that symbolizes the unity of Innadril. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair5_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1403,6 +1454,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13477" type="Armor" name="Circlet of Oren Sniper">
+		<!-- Circlet that symbolizes the unity of Oren. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair6_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1415,6 +1467,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13478" type="Armor" name="Circlet of Gludio Sage">
+		<!-- Circlet that symbolizes the wisdom of Gludio. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair7_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1427,6 +1480,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13479" type="Armor" name="Circlet of Rune Sage">
+		<!-- Circlet that symbolizes the wisdom of Rune. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair8_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1439,6 +1493,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13480" type="Armor" name="Circlet of Giran Sage">
+		<!-- Circlet that symbolizes the wisdom of Giran. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair9_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1451,6 +1506,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13481" type="Armor" name="Goddard Circlet of Combat">
+		<!-- Circlet that symbolizes the power of Goddard. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair10_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1463,6 +1519,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13482" type="Armor" name="Circlet of Schuttgart Combat">
+		<!-- Circlet that symbolizes the power of Schuttgart. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair12_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1475,6 +1532,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13483" type="Armor" name="Circlet of Oren Combat">
+		<!-- Circlet that symbolizes the power of Oren. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair11_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1487,6 +1545,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13484" type="Armor" name="Gludio Circlet Silence">
+		<!-- Circlet that symbolizes the peace of Gludio. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair13_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1499,6 +1558,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13485" type="Armor" name="Circlet of Schuttgart Silence">
+		<!-- Circlet that symbolizes the peace of Schuttgart. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair14_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1511,6 +1571,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13486" type="Armor" name="Circlet of Aden Unity">
+		<!-- Circlet that symbolizes the peace of Aden. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair15_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1523,6 +1584,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13487" type="Armor" name="Circlet of Rune Silence">
+		<!-- Circlet that symbolizes the peace of Rune. Uses 2 hair accessory slots. No exchange/drop available -->
 		<set name="icon" val="icon.accessory_pledge_hair16_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1535,6 +1597,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13488" type="Armor" name="Birthday Hat">
+		<!-- A hat to celebrate a birthday. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_birthday_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1544,6 +1607,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="13489" type="Armor" name="Halloween Hat">
+		<!-- Halloween Pumpkin Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_halloween_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1553,6 +1617,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="13490" type="Armor" name="Arrow-Pierced Apple">
+		<!-- Arrow-pierced Apple. It can be worn on the head. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1562,6 +1627,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="13491" type="Armor" name="Popped-Out Eye">
+		<!-- Popped-out eye shaped hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_beetle_eye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1571,6 +1637,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="13492" type="Armor" name="Graduation Cap">
+		<!-- Graduation Cap. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_graduation_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1580,6 +1647,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="13493" type="Armor" name="Refined Carnival Circlet">
+		<!-- Refined Carnival Circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_carnival_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1589,6 +1657,7 @@
 		<set name="price" val="2000000" />
 	</item>
 	<item id="13494" type="Armor" name="Refined Angel Ring">
+		<!-- Refined Angel Ring. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1598,6 +1667,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="13495" type="Armor" name="Refined Devil Horn">
+		<!-- Refined Devil Horn. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1607,6 +1677,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="13496" type="Armor" name="Refined Pirate Hat">
+		<!-- Refined Pirate Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_captain_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1616,6 +1687,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="13497" type="Armor" name="Refined Chick Hat">
+		<!-- Refined chick shaped hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1625,6 +1697,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="13498" type="Armor" name="Refined Wizard Hat">
+		<!-- Refined Wizard Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_magician_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1634,6 +1707,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="13499" type="Armor" name="Refined Jester Hat">
+		<!-- Refined Jester Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_jester_cap_2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48100" name="Agathion Charm - Little Angel" type="Armor">
 		<!-- Charm that summons a cute Little Angel Agathion. -->
@@ -390,7 +390,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48129" name="Bae Kisung Agathion Charm" additionalName="90-day" type="Armor">
-		<!-- Charm that summons a Bae Kisung Agathion. 90-day limited item. Cannot be used in the Olympiad. <Active>. 1. Bae Kisung Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Physical/ magic skill MP consumption -3%. 2. Kisung's Great Power: Atk. Spd./ Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
+		<!-- Charm that summons a Bae Kisung Agathion. 90-day limited item. Cannot be used in the Olympiad. <Active Skill>. 1. Bae Kisung Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Physical/ Magic Skill MP Consumption -3%. 2. Kisung's Great Power: Atk. Spd./ Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -404,7 +404,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="48130" name="Bae Kisung Agathion Charm" additionalName="1-day" type="Armor">
-		<!-- Charm that summons a Bae Kisung Agathion. 1-day limited item. Cannot be used in the Olympiad. <Active>. 1. Bae Kisung Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Physical/ magic skill MP consumption -3%. 2. Kisung's Great Power: Atk. Spd./ Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
+		<!-- Charm that summons a Bae Kisung Agathion. 1-day limited item. Cannot be used in the Olympiad. <Active Skill>. 1. Bae Kisung Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Physical/ Magic Skill MP Consumption -3%. 2. Kisung's Great Power: Atk. Spd./ Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -418,7 +418,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="48131" name="Agathion Charm - Anakim Holly Barrier" type="Armor">
-		<!-- Charm that summons an Anakim Holy Barrier Agathion, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Attack Boost: Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack +30. 3. Anakim Blessing: XP and SP gained +3%. -->
+		<!-- Charm that summons an Anakim Holy Barrier Agathion, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchant Attribute Attack Boost: Attribute Attack +30 each. 3. Anakim Blessing: XP and SP gained +3%. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -428,7 +428,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48132" name="Agathion Charm - Anakim Holly Barrier" additionalName="30-day" type="Armor">
-		<!-- Charm that summons an Anakim Holy Barrier Agathion, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchant Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack +30. 3. Anakim Blessing: XP and SP gained +3%. -->
+		<!-- Charm that summons an Anakim Holy Barrier Agathion, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchant Attribute Attack Boost: Attribute Attack +30 each. 3. Anakim Blessing: XP and SP gained +3%. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -442,7 +442,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48133" name="Agathion - Joon Charm (30-day)" type="Armor">
-		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad. <Item Skill>. 1. Joon's Magic: For 30 min, XP/ SP gained +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Buff effect persists through death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hours. -->
+		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad.. <Item Skill>. 1. Joon's Magic: For 30 min, Acquired XP/ SPed +10%, Atk. Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Movement Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Buff effect persists through death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hr. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -455,7 +455,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48134" name="Agathion - Shiny Charm" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village/ Town of Giran/ Town of Goddard/ Town of Schuttgart. (Cooldown 30 min). <Item Skill>. 1. Chase Down: For 15 sec, Speed +66. <Item Skill>. 2. Sneak: Monsters do not attack first. -->
+		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village/ Town of Giran/ Town of Goddard/ Town of Schuttgart. (Cooldown 30 min). <Item Skill>. 1. Chase Down: For 15 sec, Movement Speed +66. <Item Skill>. 2. Sneak: Monsters do not attack first. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -482,7 +482,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48136" name="Agathion - Lantern Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive an Agathion - Lantern. -->
+		<!-- Double-click to receive an Agathion Lantern. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -791,7 +791,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="48160" name="Elysium Special Stew" additionalName="Event" type="EtcItem">
-		<!-- When used, all basic stats +3 and XP/ SP gained +30%. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, January 18, 2017, after regular maintenance. -->
+		<!-- When used, all basic stats +3 and Acquired XP/ SP +30% for 30 mins. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, January 18, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.red_libra_pochouse" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -855,7 +855,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48166" name="Hunter's Stone Piece" type="EtcItem">
-		<!-- One of the pieces used to craft the Hunter's Stone. After gathering 3 Hunter's Stone Pieces, talk to Histie to swap them for a Hunter's Stone. -->
+		<!-- One of the pieces used to craft the Hunter's Stone. After gathering 3 Hunter's Stone Fragments, talk to Histie to swap them for a Hunter's Stone. -->
 		<set name="icon" val="icon.etc_chaser_stone_piece" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -866,7 +866,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48167" name="Hunter's Stone" type="EtcItem">
-		<!-- Item crafted by putting the Hunter's Stone Pieces together. Using it nullifies the effects of the Superion Barrier. -->
+		<!-- Item crafted by putting the Hunter's Stone Fragments together. Using it nullifies the effects of the Superion Barrier. -->
 		<set name="icon" val="icon.etc_chaser_stone" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -901,7 +901,7 @@
 		</stats>
 	</item>
 	<item id="48169" name="Attribute Practice Fire Stone" type="EtcItem">
-		<!-- Fire elemental attack attribute increases by 5 when bestowed on a weapon. Water elemental defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of elemental defense attribute can be bestowed, and one type of elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Fire elemental attack attribute increases by 5 when bestowed on a weapon. Water Attribute Resistance attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of elemental defense attribute can be bestowed, and one type of elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -950,7 +950,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48172" name="Herphah's Mission List" type="EtcItem">
-		<!-- A list of missions that Herphah instructed you to complete. Complete missions for the following people and return with the certificates they give you.- Fishing Guild Leader Santiago in Heine, Blacksmith Rupio in the Town of Giran, Head Blacksmith Flutter in the Town of Oren, Blacksmith Vincenz in the Town of Rune, Head Blacksmith Ferris in the Town of Aden -->
+		<!-- A list of missions that Herphah instructed you to complete. "Complete missions for the following people and return with the certificates they give you. - Fishing Guild Leader Santiago in Heine, Blacksmith Rupio in the Town of Giran, Head Blacksmith Flutter in the Town of Oren, Blacksmith Vincenz in the Town of Rune, Head Blacksmith Ferris in the Town of Aden" -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -972,7 +972,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48174" name="Certificate from Rupio" type="EtcItem">
-		<!-- Certificate received from Blacksmith Rupio after completing equipment enchanting mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
+		<!-- Certificate received from Blacksmith Rupio after completing equipment enchantment mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -983,7 +983,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48175" name="Certificate from Flutter" type="EtcItem">
-		<!-- Certificate received from Head Blacksmith Flutter after completing the equipment augmenting mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
+		<!-- Certificate received from Head Blacksmith Flutter after completing the equipment augmentation mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -994,7 +994,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48176" name="Certificate from Vincenz" type="EtcItem">
-		<!-- Certificate received from Blacksmith Vincenz after completing the Soul Crystal enhancing mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
+		<!-- Certificate received from Blacksmith Vincenz after completing the Soul Crystal enchantment mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1005,7 +1005,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48177" name="Certificate from Ferris" type="EtcItem">
-		<!-- Certificate received from Head Blacksmith Ferris after completing the attribute assigning mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
+		<!-- Certificate received from Head Blacksmith Ferris after completing the attribute assignment mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1115,7 +1115,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48187" name="Certificate of Maphr" type="EtcItem">
-		<!-- A certificate of Maphr you received from Daichir, Head Priest of the Earth in the Town of Schuttgart, as the proof that you have completed the Seed of Earth mission. -->
+		<!-- A certificate of Maphr you received from Head Priest of the Earth Daichir in the Town of Schuttgart, as the proof that you have completed the Seed of Earth mission. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1170,7 +1170,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48192" name="Hatchling Scales" type="EtcItem">
-		<!-- Scales fell out from a hatchling. Take them to Stig Mach to join the Balthus Knights. -->
+		<!-- Scales fell out from a hatchling. Take them to Stig Mach to become a member of the Balthus Knights. -->
 		<set name="icon" val="icon.etc_earth_dragon_scale" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

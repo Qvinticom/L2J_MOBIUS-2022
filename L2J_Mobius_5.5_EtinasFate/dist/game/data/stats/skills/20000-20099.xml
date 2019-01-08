@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="20000" toLevel="1" name="Block Checker Search">
-		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
+		<!-- Open your mind and stare at the horizon, and you may find a hidden treasure chest. -->
 		<operateType>A1</operateType>
 		<effectPoint>1000</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -24,7 +24,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="20001" toLevel="1" name="Block Checker Hammer Punch">
-		<!-- Slams down on the treasure chest with a hammer to open it. -->
+		<!-- Slams the treasure chest down with a hammer to break it open. -->
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -44,7 +44,7 @@
 		</conditions>
 	</skill>
 	<skill id="20002" toLevel="1" name="Dragon Kick">
-		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
+		<!-- Powerful blow containing the power of a dragon. Attack targets with 3420 Power added to P. Atk. Over-hit. Critical. -->
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
@@ -69,7 +69,7 @@
 		</effects>
 	</skill>
 	<skill id="20003" toLevel="1" name="Dragon Slash">
-		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
+		<!-- Powerful blow containing the power of a dragon. Attack targets with 3420 Power added to P. Atk. Over-hit. Critical. -->
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
@@ -93,7 +93,7 @@
 		</effects>
 	</skill>
 	<skill id="20004" toLevel="1" name="Dragon Dash">
-		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
+		<!-- Increases Speed by 100% for 5 sec. with a dragon's strength. -->
 		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>
 		<reuseDelay>25000</reuseDelay>
@@ -117,7 +117,7 @@
 		</effects>
 	</skill>
 	<skill id="20005" toLevel="1" name="Dragon Aura">
-		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
+		<!-- For 20 min., increases Critical Rate by 30% and Critical Damage by 35% with the power of a Dragon. -->
 		<abnormalTime>1200</abnormalTime>
 		<hitTime>4000</hitTime>
 		<operateType>A2</operateType>
@@ -144,7 +144,7 @@
 		</effects>
 	</skill>
 	<skill id="20006" toLevel="1" name="Soul Roar">
-		<!-- High Five Skill -->
+		<!-- Instantly recovers Max HP/ CP by 15% and for 10 min., and increases your Max HP/ CP by 15%. -->
 		<abnormalTime>600</abnormalTime>
 		<effectPoint>635</effectPoint>
 		<hitTime>1500</hitTime>
@@ -176,9 +176,7 @@
 		</effects>
 	</skill>
 	<skill id="20007" toLevel="1" name="Block Invincibility">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Skill activates once Celestial Aegis wears off. -->
-		<!-- For 2 min., HP/MP Recovery Bonus increase, and Speed + 5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
+		<!-- For 2 min., HP/ MP Recovery Bonus increase, and Speed +5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
 		<icon>icon.skill11560</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -209,8 +207,7 @@
 		</effects>
 	</skill>
 	<skill id="20008" toLevel="1" name="Clan Advent (Event)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When the clan leader logs in, clan members' P. Atk. / P. Def. / M. Def. + 5%, M. Atk. + 6%, HP/MP Recovery Bonus + 5, and XP gain + 100%. -->
+		<!-- When the clan leader logs in, clan members' P. Atk./ P. Def./ M. Def. +5%, M. Atk. +6%, HP/ MP Recovery Bonus +5, and XP gain +100%. -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>

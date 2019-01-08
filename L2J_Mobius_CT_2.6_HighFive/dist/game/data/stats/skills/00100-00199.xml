@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" levels="15" name="Stun Attack" enchantGroup1="2">
+		<!-- Supplements the user's P. Atk. with 36 Power to stun the enemy for 9 seconds. Requires a blunt weapon. Over-hit is possible. -->
 		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 19 19 20 21 21 22 24 25 26 27 28 29 31 32 33 </table>
@@ -42,7 +43,7 @@
 		</for>
 	</skill>
 	<skill id="101" levels="40" name="Stun Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's P. Atk. with 344 Power to fire an arrow that stuns the enemy for 9 seconds. Requires a bow. Over-hit and target cancel are possible. -->
 		<table name="#effectPoints"> -327 -337 -346 -366 -375 -385 -395 -405 -415 -425 -435 -445 -455 -465 -474 -484 -494 -503 -513 -522 -532 -541 -550 -558 -567 -575 -583 -591 -599 -607 -614 -621 -627 -634 -640 -646 -651 -656 -661 -665 </table>
 		<table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 46 48 49 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
@@ -119,6 +120,7 @@
 		</enchant4for>
 	</skill>
 	<skill id="102" levels="16" name="Entangle" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Decreases the enemy's Speed by 20% for 1 minute. -->
 		<table name="#abnormalLvls"> 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#effectPoints"> -341 -379 -408 -438 -467 -495 -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
@@ -167,6 +169,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="103" levels="4" name="Corpse Plague">
+		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for 30 seconds, and makes them consume 41 HP every second. -->
 		<table name="#abnormalLvls"> 5 6 7 8 </table>
 		<table name="#dot"> 41 50 58 63 </table>
 		<table name="#effectPoints"> -438 -549 -582 -635 </table>
@@ -203,6 +206,7 @@
 		</for>
 	</skill>
 	<skill id="104" levels="1" name="Detect Plant Weakness">
+		<!-- Increases the user's P. Atk. toward plants by 30% for 10 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DETECT_WEAKNESS" />
@@ -222,6 +226,7 @@
 		</for>
 	</skill>
 	<skill id="105" levels="24" name="Freezing Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+		<!-- Temporarily freezes the surrounding air, inflicting Water damage on the enemy with 26 Power and decreasing their Speed by 20% for 1 minute. -->
 		<table name="#effectPoints"> -322 -341 -360 -379 -399 -408 -428 -438 -457 -467 -486 -495 -514 -523 -541 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 34 36 38 40 42 43 45 46 48 49 51 52 54 55 57 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 24 24 26 27 30 30 32 32 34 34 37 38 39 40 41 42 43 46 48 48 50 51 53 55 </table>
@@ -279,6 +284,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="106" levels="14" name="Veil">
+		<!-- Creates an illusion of nearby monsters for 2 minutes. -->
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 19 21 22 24 25 27 28 29 30 31 32 33 34 34 </table>
 		<set name="abnormalLvl" val="1" />
@@ -303,6 +309,7 @@
 		</for>
 	</skill>
 	<skill id="107" levels="9" name="Divine Aura" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Holds nearby undead monsters for 10 seconds. -->
 		<table name="#effectPoints"> -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 40 42 43 45 46 48 49 50 51 </table>
@@ -354,7 +361,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="109" levels="1" name="Ogre Spirit Totem">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Becomes possessed by an Ogre's soul. Increases one's own P. Atk./P. Def./M. Def. by 30% and Critical Damage by 10% for 5 minutes. Requires a hand-to-hand weapon. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -384,6 +391,7 @@
 		</for>
 	</skill>
 	<skill id="110" levels="2" name="Ultimate Defense" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- For 30 seconds, increases P. Def. by 1800, M. Def. by 1620, and Resistance to buff canceling attacks by 80%, and restricts movement. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 204 438 </table>
 		<table name="#magicLvl"> 20 46 </table>
@@ -446,6 +454,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="111" levels="2" name="Ultimate Evasion" enchantGroup1="1" enchantGroup2="1">
+		<!-- For 30 seconds, increases Evasion by 20, physical attack skill Evasion Rate by 25%, and Resistance to buff-canceling attacks by 80. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 268 523 </table>
 		<table name="#magicLvl"> 28 55 </table>
@@ -480,6 +489,7 @@
 		</for>
 	</skill>
 	<skill id="112" levels="4" name="Deflect Arrow" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases Resistance to bow attacks by 16% and Resistance to crossbow attacks by 8% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#effectPoints"> 10 20 30 40 </table>
 		<table name="#magicLvl"> 24 32 43 49 </table>
@@ -521,6 +531,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="113" levels="2" name="Long Shot">
+		<!-- Increases the bow's range by 200. -->
 		<table name="#dist"> 200 400 </table>
 		<table name="#magicLvl"> 20 40 </table>
 		<set name="icon" val="icon.skill0113" />
@@ -536,6 +547,7 @@
 		</for>
 	</skill>
 	<skill id="115" levels="17" name="Power Break" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Decreases the enemy's P. Atk. by 20% for 30 seconds. -->
 		<table name="#abnormalLvls"> 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#effectPoints"> -152 -171 -190 -204 -219 -234 -248 -262 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
@@ -585,6 +597,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="116" levels="14" name="Howl" enchantGroup1="1" enchantGroup2="1">
+		<!-- Decreases P. Atk. of nearby enemies by 23% for 30 seconds. -->
 		<table name="#effectPoints"> -204 -219 -234 -248 -262 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 29 31 33 35 38 40 42 43 45 46 48 50 51 53 </table>
@@ -620,7 +633,7 @@
 		</for>
 	</skill>
 	<skill id="118" levels="1" name="Magician's Movement">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Atk. Spd. when equipped with a robe jacket and robe pants. -->
 		<set name="icon" val="icon.skill0118" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -636,6 +649,7 @@
 		</for>
 	</skill>
 	<skill id="120" levels="15" name="Stunning Fist">
+		<!-- Attacks the enemy with 42 Power added to P. Atk. and stuns them for 9 seconds. Requires a hand-to-hand weapon. Over-hit is possible. -->
 		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 19 19 20 21 21 22 24 25 26 27 28 29 31 32 33 </table>
@@ -673,6 +687,7 @@
 		</for>
 	</skill>
 	<skill id="121" levels="6" name="Battle Roar" enchantGroup1="1" enchantGroup2="1">
+		<!-- Regenerates 10% of the user's original HP and increases the user's Max HP by 10% for 10 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#power"> 10 15 20 25 30 35 </table>
 		<table name="#effectPoints"> 268 379 467 549 597 635 </table>
@@ -713,6 +728,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="122" levels="15" name="Hex" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
+		<!-- Decreases the enemy's P. Def. by 23% for 30 seconds. -->
 		<table name="#effectPoints"> -190 -204 -219 -234 -248 -262 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
@@ -758,6 +774,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="123" levels="3" name="Spirit Barrier" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases the user's M. Def. by 15% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 379 467 549 </table>
 		<table name="#magicLvl"> 40 49 58 </table>
@@ -796,6 +813,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="127" levels="14" name="Hamstring" enchantGroup1="1" enchantGroup2="1">
+		<!-- Decreases the enemy's Speed by 30% for 1 minute. -->
 		<table name="#effectPoints"> -408 -438 -467 -495 -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 15 17 18 19 20 22 22 23 24 25 26 26 27 28 </table>
@@ -833,6 +851,7 @@
 		</for>
 	</skill>
 	<skill id="129" levels="5" name="Poison">
+		<!-- Poisons the target, causing loss of 24 HP per second for 30 seconds. -->
 		<table name="#abnormalLvls"> 3 5 6 7 8 </table>
 		<table name="#dot"> 24 41 50 58 63 </table>
 		<table name="#effectPoints"> -204 -467 -549 -611 -655 </table>
@@ -868,7 +887,7 @@
 		</for>
 	</skill>
 	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases user's Speed by 20% and increases Atk. Spd. by 5% for 5 minutes. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 438 523 </table>
 		<table name="#magicLvl"> 46 55 </table>
@@ -903,6 +922,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="131" levels="3" name="Hawk Eye" enchantGroup1="1">
+		<!-- Decreases user's P. Def. by 10% and increases Accuracy by 6 for 5 minutes. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 6 8 10 </table>
 		<table name="#effectPoints"> 379 467 549 </table>
@@ -932,6 +952,7 @@
 		</for>
 	</skill>
 	<skill id="134" levels="1" name="Toughness" enchantGroup1="1">
+		<!-- Increases Resistance to Sleep, Hold, and Poison attacks by 20. -->
 		<table name="#ench1Traits"> 21 21 21 22 22 22 23 23 23 24 24 24 24 25 25 25 26 26 26 27 27 27 27 28 28 28 29 29 29 30 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="icon" val="icon.skill0134" />
@@ -955,6 +976,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="137" levels="4" name="Critical Chance" enchantGroup1="1">
+		<!-- Increases Critical Rate by 20%. -->
 		<table name="#magicLvl"> 28 40 49 58 </table>
 		<table name="#rate"> 1.2 1.3 1.4 1.5 </table>
 		<table name="#ench1rate"> 1.5 1.5 1.51 1.51 1.51 1.52 1.52 1.52 1.53 1.53 1.53 1.54 1.54 1.54 1.55 1.55 1.55 1.56 1.56 1.56 1.57 1.57 1.57 1.58 1.58 1.58 1.59 1.59 1.59 1.6 </table>
@@ -976,7 +998,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="139" levels="3" name="Guts">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. by 100% for 1 minute 30 seconds. Available when HP is 30% or lower. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 341 408 495 </table>
 		<table name="#magicLvl"> 36 43 52 </table>
@@ -1004,7 +1026,7 @@
 		</for>
 	</skill>
 	<skill id="141" levels="3" name="Weapon Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by 8.5% and additionally by 2. -->
 		<table name="#magicLvl"> 5 10 15 </table>
 		<table name="#pAtk"> 2 3 4 </table>
 		<set name="icon" val="icon.skill0141" />
@@ -1019,7 +1041,7 @@
 		</for>
 	</skill>
 	<skill id="142" levels="5" name="Armor Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. by 9 and MP Recovery Bonus by 10%. -->
 		<table name="#magicLvl"> 5 8 10 13 15 </table>
 		<table name="#pDef"> 9 11 12 13 14 </table>
 		<table name="#rEvas"> 0 0 0 3 3 </table>
@@ -1038,7 +1060,7 @@
 		</for>
 	</skill>
 	<skill id="143" levels="2" name="Cubic Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Ability to summon 2 Cubics at once. -->
 		<table name="#cubicCount"> 2 3 </table>
 		<table name="#magicLvl"> 43 55 </table>
 		<set name="icon" val="icon.skill0143" />
@@ -1052,6 +1074,7 @@
 		</for>
 	</skill>
 	<skill id="144" levels="37" name="Dual Weapon Mastery" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases P. Atk. by 23.7 when using a dualsword. -->
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pAtk"> 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
 		<table name="#ench1pAtk"> 137 138 139 140 141 142 143 144 145 146 147 148 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 </table>
@@ -1089,6 +1112,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="146" levels="45" name="Anti Magic" enchantGroup1="1">
+		<!-- Increases M. Def. by 10. -->
 		<table name="#magicLvl"> 4 7 11 14 17 20 23 25 28 30 33 35 38 39 40 42 43 44 46 47 48 50 51 52 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#magicSuccRes"> 1 1 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.25 1.25 1.25 1.25 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 </table>
 		<table name="#mDef"> 10 12 14 16 18 20 23 25 28 30 34 36 40 42 43 46 47 49 52 54 56 59 61 63 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
@@ -1113,6 +1137,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="147" levels="51" name="Magic Resistance" enchantGroup1="1">
+		<!-- Increases M. Def. by 22. -->
 		<table name="#magicLvl"> 18 20 22 23 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#magicSuccRes"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 </table>
 		<table name="#mDef"> 22 24 26 28 29 31 32 33 36 37 39 42 43 45 48 50 51 53 55 57 59 61 62 64 67 69 71 73 75 77 79 82 84 86 89 91 94 96 98 101 103 106 109 111 114 116 119 122 124 127 130 </table>
@@ -1137,6 +1162,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="148" levels="8" name="Vital Force">
+		<!-- Increases HP Recovery Bonus by 1.9 and MP Recovery Bonus by 1.9 when sitting. -->
 		<table name="#hp"> 1.9 2.7 2.9 3.6 4.5 4.7 5.6 6.7 </table>
 		<table name="#magicLvl"> 24 32 40 46 52 58 64 72 </table>
 		<table name="#mp"> 1.9 2.1 2.2 2.5 2.7 2.8 3.1 3.5 </table>
@@ -1156,6 +1182,7 @@
 		</for>
 	</skill>
 	<skill id="150" levels="3" name="Weight Limit">
+		<!-- Double your weight limit. -->
 		<table name="#magicLvl"> 10 24 46 </table>
 		<table name="#rate"> 2 3 4 </table>
 		<set name="icon" val="icon.skill0150" />
@@ -1169,6 +1196,7 @@
 		</for>
 	</skill>
 	<skill id="153" levels="4" name="Shield Mastery" enchantGroup1="1">
+		<!-- Increases Shield Defense by 30% and Defense Rate by 50%. -->
 		<table name="#magicLvl"> 20 28 40 52 </table>
 		<table name="#Pdef"> 1 1 1.1 1.1 </table>
 		<table name="#rShld"> 1.5 1.7 1.85 2 </table>
@@ -1201,7 +1229,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="163" levels="1" name="Spellcraft">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. when equipped with a robe jacket and robe pants. -->
 		<set name="icon" val="icon.skill0163" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1217,6 +1245,7 @@
 		</for>
 	</skill>
 	<skill id="164" levels="3" name="Quick Recycle">
+		<!-- Decreases re-use time for magic by 10%. -->
 		<table name="#magicLvl"> 20 30 48 </table>
 		<table name="#reuse"> 0.9 0.85 0.8 </table>
 		<set name="icon" val="icon.skill0164" />
@@ -1230,8 +1259,7 @@
 		</for>
 	</skill>
 	<skill id="165" levels="5" name="Trade">
-		<!-- Confirmed CT2.5 -->
-		<!-- This Skill Is Only For Description In The Client -->
+		<!-- Enables you to purchase high quality weapons with a discount up to 5 percent. -->
 		<table name="#magicLvl"> 15 24 36 43 49 </table>
 		<set name="icon" val="icon.skill0165" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1239,6 +1267,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="168" levels="3" name="Boost Attack Speed" enchantGroup1="1">
+		<!-- Increases Atk. Spd. by 5%. -->
 		<table name="#magicLvl"> 36 46 58 </table>
 		<table name="#rate"> 1.05 1.07 1.1 </table>
 		<table name="#ench1rate"> 1.101 1.102 1.103 1.104 1.105 1.106 1.107 1.108 1.109 1.11 1.111 1.112 1.113 1.114 1.115 1.116 1.117 1.118 1.119 1.12 1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 </table>
@@ -1258,6 +1287,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="169" levels="2" name="Quick Step" enchantGroup1="1">
+		<!-- Increases Speed by 7. -->
 		<table name="#magicLvl"> 28 43 </table>
 		<table name="#spd"> 7 11 </table>
 		<table name="#ench1spd"> 12 12 12 12 12 12 12 12 12 13 13 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 14 14 14 15 </table>
@@ -1277,7 +1307,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="171" levels="8" name="Esprit">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases HP Recovery Bonus by 2.5 and MP Recovery Bonus by 1.8 when running. -->
 		<table name="#hp"> 2.5 3 3.5 4 4.5 5 5.5 6 </table>
 		<table name="#magicLvl"> 36 43 46 49 52 62 68 74 </table>
 		<table name="#mp"> 1.8 1.9 2 2.1 2.2 2.3 2.4 2.5 </table>
@@ -1300,6 +1330,7 @@
 		</for>
 	</skill>
 	<skill id="172" levels="10" name="Create Item">
+		<!-- Allows the user to manufacture level 1 items. -->
 		<table name="#magicLvl"> 5 20 28 36 43 49 55 62 70 82 </table>
 		<set name="icon" val="icon.skill0172" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1307,7 +1338,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="173" levels="2" name="Acrobatics">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases the maximum height user can fall without taking damage by 60. -->
 		<table name="#fall"> 60 100 </table>
 		<table name="#magicLvl"> 20 55 </table>
 		<set name="icon" val="icon.skill0173" />
@@ -1321,7 +1352,7 @@
 		</for>
 	</skill>
 	<skill id="176" levels="3" name="Frenzy">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases P. Atk. by 10% for 1 minute 30 seconds. Additionally increases P. Atk. by 20% when using a sword/blunt weapon. Increases Accuracy by 2 and P. Atk. by 5% when using a two-handed sword/blunt weapon. Available when HP is 60% or lower. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 2 4 6 </table>
 		<table name="#all"> 1.1 1.12 1.15 </table>
@@ -1373,6 +1404,7 @@
 		</for>
 	</skill>
 	<skill id="181" levels="1" name="Revival">
+		<!-- Restores to full HP in an emergency. Only usable if HP is 10 percent or lower. -->
 		<set name="effectPoint" val="562" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0181" />
@@ -1392,6 +1424,7 @@
 		</for>
 	</skill>
 	<skill id="190" levels="37" name="Fatal Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2">
+		<!-- Attacks the enemy with 738 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit and Critical hit are possible. Ignores Shield Defense. -->
 		<table name="#effectPoints"> -183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 36 37 38 38 40 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
@@ -1441,6 +1474,7 @@
 		</for>
 	</skill>
 	<skill id="191" levels="6" name="Focus Mind" enchantGroup1="1">
+		<!-- Increases MP Recovery Bonus by 3.1. -->
 		<table name="#magicLvl"> 36 43 49 55 64 72 </table>
 		<table name="#regMp"> 3.1 3.5 3.9 4.3 4.7 5.1 </table>
 		<table name="#ench1regMp"> 5.6 5.7 5.8 5.8 5.9 6 6.1 6.2 6.3 6.3 6.4 6.5 6.6 6.7 6.8 6.8 6.9 7 7.1 7.2 7.3 7.3 7.4 7.5 7.6 7.7 7.8 7.8 7.9 8 </table>
@@ -1460,6 +1494,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="193" levels="7" name="Critical Power" enchantGroup1="1">
+		<!-- Increases Critical Damages by 32. -->
 		<table name="#crit"> 32 56 93 177 295 384 406 </table>
 		<table name="#magicLvl"> 24 32 40 52 64 72 74 </table>
 		<table name="#ench1crit"> 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 474 477 480 483 486 489 492 495 498 501 504 507 510 513 516 </table>
@@ -1479,7 +1514,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="194" levels="1" name="Lucky">
-		<!-- Confirmed CT2.5 -->
+		<!-- At lv 9 or lower, the user will not experience loss of Exp. and Vitality points, and after-death effect upon death. -->
 		<set name="icon" val="icon.skill0194" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1489,6 +1524,7 @@
 		</for>
 	</skill>
 	<skill id="195" levels="2" name="Breath Boost">
+		<!-- Increases lung capacity by 180. -->
 		<table name="#breath"> 180 300 </table>
 		<table name="#magicLvl"> 20 55 </table>
 		<set name="icon" val="icon.skill0195" />
@@ -1502,6 +1538,7 @@
 		</for>
 	</skill>
 	<skill id="196" levels="1" name="Holy Blade">
+		<!-- Ability to attack with sacred power. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="icon" val="icon.skill0196" />
@@ -1517,6 +1554,7 @@
 		</for>
 	</skill>
 	<skill id="197" levels="2" name="Holy Armor">
+		<!-- Increases Resistance to Dark. -->
 		<table name="#darkRes"> 7 10 </table>
 		<table name="#magicLvl"> 40 46 </table>
 		<table name="#mpConsume"> 7 9 </table>
@@ -1534,6 +1572,7 @@
 		</for>
 	</skill>
 	<skill id="198" levels="3" name="Boost Evasion" enchantGroup1="1">
+		<!-- Increases Evasion by 2. -->
 		<table name="#magicLvl"> 24 46 58 </table>
 		<table name="#rEvas"> 2 3 4 </table>
 		<table name="#ench1rEvas"> 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 8 </table>

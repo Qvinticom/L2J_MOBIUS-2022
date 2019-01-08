@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19300" level="95" type="L2Monster" name="Spicula Elite Lieutenant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -453,7 +453,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield - Heavy Armor -->
 				<item id="57" min="1072" max="2504" chance="20" /> <!-- Adena -->
 				<item id="36841" min="1" max="1" chance="1.775" /> <!-- Twilight Shield Ingredient -->
 				<item id="36779" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Shield (60%) -->

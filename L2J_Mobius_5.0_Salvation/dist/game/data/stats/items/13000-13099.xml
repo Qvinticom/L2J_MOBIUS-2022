@@ -155,7 +155,6 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13009" name="Inventory3" type="EtcItem">
-		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -391,7 +390,7 @@
 		</skills>
 	</item>
 	<item id="13021" name="Color Title" type="EtcItem">
-		<!-- Item that allows you to change your character's title color. You can change back to the original color by using the /resetname command after changing the title color. -->
+		<!-- Item that allows you to change your character's title color. You can change back to the original color by using the "/ resetname" command after changing the title color. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -1746,7 +1745,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13083" name="Agathion - Love Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Pumpkin Transformation Stick (30 days). -->
+		<!-- Dimensional Item Pack. A pack containing Love Agathion Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1788,7 +1787,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13085" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Feline Queen Hat (30-day). -->
+		<!-- Wrapped Pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

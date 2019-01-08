@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -28,7 +28,7 @@
 		</stats>
 	</item>
 	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -51,7 +51,7 @@
 		</stats>
 	</item>
 	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers only. -->
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -703,7 +703,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28376" name="Greater Cat's Eye" type="Armor">
-		<!-- Decreases damage received from Reflect Damage by 50 and there's a chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Decreases damage received from Reflect Damage by 50 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -715,7 +715,7 @@
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" type="Armor">
-		<!-- PvP Damage + 15%, chance of receiving a critical attack - 25%. Can remove invincibility. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- PvP Damage + 15%, chance of receiving a critical attack - 25%. Can remove invincibility and debuff invincibility. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -823,7 +823,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28386" name="Race Change Ticket" type="EtcItem">
-		<!-- After purchasing a Race Change ticket, you can contact support at, support.lineage2.com, with the subject title of Character Race Change. \\Only characters that have reached at least level 85 and who have completed the 4th Class transfer can request a race change.  Note that the following race and class restrictions apply to the race change service. 1.) Ertheia and Kamael classes cannot change to a different race. 2.) Human/Elf/Dark Elf/Orc/Dwarf races cannot change to the Ertheia or Kamael race. 3.) Orc Overlord/Dominator/Iss Dominator as a Mainclass/Dualclass/Sublcass cannot change to a different race. 4.) Dwarven Warsmith/Maestro/Tyrr Maestro as a Mainclass/Dualclass/Sublcass cannot change to a different race. 5.) If switching from a Dwarven race to Human/Elf/Dark Elf/Orc, the character will lose the Dwarven inventory/warehouse/private shop bonus slots. -->
+		<!-- After purchasing a Race Change ticket, you can contact support at, support.lineage2.com, with the subject title of "Character Race Change". \Only characters that have reached at least level 85 and who have completed the 4th Class transfer can request a race change. Note that the following race and class restrictions apply to the race change service. 1.) Ertheia and Kamael classes cannot change to a different race. 2.) Human/Elf/Dark Elf/Orc/Dwarf races cannot change to the Ertheia or Kamael race. 3.) Orc Overlord/Dominator/Iss Dominator as a Mainclass/Dualclass/Sublcass cannot change to a different race. 4.) Dwarven Warsmith/Maestro/Tyrr Maestro as a Mainclass/Dualclass/Sublcass cannot change to a different race. 5.) If switching from a Dwarven race to Human/Elf/Dark Elf/Orc, the character will lose the Dwarven inventory/warehouse/private shop bonus slots. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -973,11 +973,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="33776" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) -->
-			<item id="33777" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) -->
-			<item id="33778" min="10000" max="10000" chance="100" /> <!-- Soulshot (A-grade) -->
-			<item id="33779" min="10000" max="10000" chance="100" /> <!-- Soulshot (S-grade) -->
-			<item id="33780" min="10000" max="10000" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="33776" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) - Event -->
+			<item id="33777" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) - Event -->
+			<item id="33778" min="10000" max="10000" chance="100" /> <!-- Soulshot (A-grade) - Event -->
+			<item id="33779" min="10000" max="10000" chance="100" /> <!-- Soulshot (S-grade) - Event -->
+			<item id="33780" min="10000" max="10000" chance="100" /> <!-- Soulshot (R-grade) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="28399" name="Today's To-do Blessed Spiritshot Box" type="EtcItem">
@@ -992,11 +992,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) -->
-			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) -->
-			<item id="33792" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (A-grade) -->
-			<item id="33793" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (S-grade) -->
-			<item id="33794" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
+			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) - Event -->
+			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) - Event -->
+			<item id="33792" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (A-grade) - Event -->
+			<item id="33793" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (S-grade) - Event -->
+			<item id="33794" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (R-grade) - Event -->
 		</capsuled_items>
 	</item>
 </list>

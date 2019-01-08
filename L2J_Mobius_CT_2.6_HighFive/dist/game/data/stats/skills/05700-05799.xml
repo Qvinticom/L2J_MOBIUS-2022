@@ -1,13 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5700" levels="7" name="Magic Resistance Decrease">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- Magic resistance is decreased. Effect 3. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_DOWN" />
@@ -25,13 +19,7 @@
 		</for>
 	</skill>
 	<skill id="5701" levels="7" name="Decrease P. Atk">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- P. Atk. is decreased. Effect 2. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_DOWN" />
@@ -49,7 +37,6 @@
 		</for>
 	</skill>
 	<skill id="5702" levels="2" name="Adiantum Round Fighter">
-		<!-- Confirmed CT2.5 -->
 		<table name="#castRange"> 0 40 </table>
 		<table name="#effectRange"> 0 400 </table>
 		<table name="#targetType"> AURA ONE </table>
@@ -105,6 +92,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5706" levels="1" name="Poison">
+		<!-- HP decreased momentarily by poison. The body is paralyzed after a set amount of time. Effect 7. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -125,6 +113,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5707" levels="1" name="Paralysis">
+		<!-- A temporary paralysis which prevents movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -195,6 +184,7 @@
 		</for>
 	</skill>
 	<skill id="5711" levels="1" name="Power of Rage">
+		<!-- Attack ability is greatly increased because of rage. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
@@ -212,6 +202,7 @@
 		</for>
 	</skill>
 	<skill id="5712" levels="1" name="Energy Ditch">
+		<!-- Delivers one's own energy to Lematan. The delivery status is cancelled when damage is incurred. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="1300" />
 		<set name="effectPoint" val="1" />
@@ -229,6 +220,7 @@
 		</for>
 	</skill>
 	<skill id="5713" levels="5" name="Energy Ditch">
+		<!-- Has received the magical powers of a subordinate. Recovery bonus is increased. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
@@ -251,7 +243,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5715" levels="1" name="Electric Flame">
-		<!-- Confirmed CT2.5 -->
+		<!-- Incurring continuous flame damage and has decreased Speed. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FIRE_DOT" />
@@ -282,6 +274,7 @@
 		</for>
 	</skill>
 	<skill id="5716" levels="1" name="Stun">
+		<!-- A state of instant paralysis caused by the shock -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -313,6 +306,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5718" levels="1" name="Anger">
+		<!-- P. Def. is decreased and P. Atk. is greatly increased because of rage. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
@@ -339,8 +333,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5720" levels="6" name="Blade Cut">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 1136 1626 1876 2112 2320 2487 </table>
@@ -361,8 +353,6 @@
 		</for>
 	</skill>
 	<skill id="5721" levels="6" name="Blade Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 2272 3252 3752 4224 4640 4974 </table>
@@ -382,8 +372,6 @@
 		</for>
 	</skill>
 	<skill id="5722" levels="6" name="Hammer Assault">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 1136 1626 1876 2112 2320 2487 </table>
@@ -403,8 +391,6 @@
 		</for>
 	</skill>
 	<skill id="5723" levels="6" name="Hammer Swing">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 625 895 1032 1162 1276 1368 </table>
@@ -425,8 +411,6 @@
 		</for>
 	</skill>
 	<skill id="5724" levels="6" name="Broom Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 1250 1789 2064 2323 2552 2736 </table>
@@ -446,8 +430,6 @@
 		</for>
 	</skill>
 	<skill id="5725" levels="6" name="Broom Trusting">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 121 142 151 159 165 168 </table>
 		<table name="#power"> 2272 3252 3752 4224 4640 4974 </table>
@@ -467,8 +449,6 @@
 		</for>
 	</skill>
 	<skill id="5726" levels="6" name="Scissors Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 1136 1626 1876 2112 2320 2487 </table>
@@ -488,8 +468,6 @@
 		</for>
 	</skill>
 	<skill id="5727" levels="6" name="Scissors Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 121 142 151 159 165 168 </table>
 		<table name="#power"> 2329 3333 3845 4329 4756 5099 </table>
@@ -509,8 +487,6 @@
 		</for>
 	</skill>
 	<skill id="5728" levels="6" name="Shobel Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 1136 1626 1876 2112 2320 2487 </table>
@@ -530,8 +506,6 @@
 		</for>
 	</skill>
 	<skill id="5729" levels="6" name="Shobel Whirlwind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 568 813 938 1056 1160 1244 </table>
@@ -550,8 +524,6 @@
 		</for>
 	</skill>
 	<skill id="5730" levels="6" name="Made Fireball">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 44 52 55 58 60 61 </table>
 		<table name="#mpInitialConsume"> 11 13 14 15 15 16 </table>
@@ -576,8 +548,6 @@
 		</for>
 	</skill>
 	<skill id="5731" levels="6" name="Incense of Death">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 44 52 55 58 60 61 </table>
 		<table name="#mpInitialConsume"> 11 13 14 15 15 16 </table>
@@ -599,8 +569,6 @@
 		</for>
 	</skill>
 	<skill id="5732" levels="6" name="Flame Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#effectPoints"> -574 -641 -662 -679 -692 -702 </table>
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 44 52 55 58 60 61 </table>
@@ -629,8 +597,7 @@
 		</for>
 	</skill>
 	<skill id="5733" levels="6" name="Fear of Steward">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Fear grips your heart and makes you flee heedlessly. -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 44 52 55 58 60 61 </table>
 		<table name="#mpInitialConsume"> 11 13 14 15 15 16 </table>
@@ -665,8 +632,6 @@
 		</for>
 	</skill>
 	<skill id="5734" levels="6" name="Gust of Wind">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 44 52 55 58 60 61 </table>
 		<table name="#mpInitialConsume"> 11 13 14 15 15 16 </table>
@@ -691,8 +656,7 @@
 		</for>
 	</skill>
 	<skill id="5735" levels="6" name="Curse of Steward">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Instantly inflicts Sleep on the enemy. Decrease probability of additional sleep state while effects last. -->
 		<table name="#effectPoints"> -566 -635 -659 -676 -689 -700 </table>
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 44 52 55 58 60 61 </table>
@@ -732,8 +696,6 @@
 		</for>
 	</skill>
 	<skill id="5736" levels="6" name="Katar Trusting">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 182 212 227 238 247 252 </table>
 		<table name="#power"> 3408 4878 5627 6335 6960 7461 </table>
@@ -753,8 +715,6 @@
 		</for>
 	</skill>
 	<skill id="5737" levels="6" name="Power Stamp">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 568 813 938 1056 1160 1244 </table>
@@ -773,8 +733,6 @@
 		</for>
 	</skill>
 	<skill id="5738" levels="6" name="Power Roar">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<table name="#magicLvl"> 60 70 75 80 85 90 </table>
 		<table name="#mpConsume"> 61 71 76 80 83 84 </table>
 		<table name="#power"> 568 813 938 1056 1160 1244 </table>
@@ -793,8 +751,7 @@
 		</for>
 	</skill>
 	<skill id="5739" levels="1" name="Invincible">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
+		<!-- Recently resurrected and temporarily invincible. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -812,8 +769,6 @@
 		</for>
 	</skill>
 	<skill id="5740" levels="1" name="Recovery Pet">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -834,8 +789,6 @@
 		</for>
 	</skill>
 	<skill id="5741" levels="1" name="Mental Pot">
-		<!-- Confirmed CT2.5 -->
-		<!-- Kratei Cube Skills -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -864,6 +817,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5744" levels="1" name="Invincible">
+		<!-- Temporarily invincible. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -878,6 +832,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5745" levels="12" name="Death Blow">
+		<!-- Draws on your HP to summon your strength and unleash a punishing attack. Power 183. -->
 		<table name="#effectPoints"> -206 -305 -428 -568 -715 -849 -953 -988 -1013 -1033 -1050 -1063 </table>
 		<table name="#hpConsume"> 49 79 112 152 197 242 283 302 318 329 336 340 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -907,6 +862,7 @@
 		</for>
 	</skill>
 	<skill id="5746" levels="12" name="Double Attack">
+		<!-- Inflicts 2 devastatingly rapid attacks. Power 137. -->
 		<table name="#effectPoints"> -172 -254 -357 -474 -596 -708 -794 -823 -844 -861 -875 -886 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 16 25 35 48 62 76 89 95 100 103 105 107 </table>
@@ -929,6 +885,7 @@
 		</for>
 	</skill>
 	<skill id="5747" levels="12" name="Spin Attack">
+		<!-- Simultaneously inflicts damage and shock. Momentarily causes shock on the enemy. Power 55. -->
 		<table name="#effectPoints"> -172 -179 -187 -194 -202 -210 -218 -227 -235 -244 -253 -262 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
@@ -962,6 +919,7 @@
 		</for>
 	</skill>
 	<skill id="5748" levels="12" name="Meteor Shower">
+		<!-- Drops meteors to attack surrounding enemies. Power 23. -->
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -635 -659 -676 -689 -700 -709 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="coolTime" val="720" />
@@ -976,6 +934,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5749" levels="12" name="Thunder Bolt">
+		<!-- Pours forth the power of thunder upon the enemy. Power 18. -->
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -635 -659 -676 -689 -700 -709 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -999,6 +958,7 @@
 		</for>
 	</skill>
 	<skill id="5750" levels="12" name="Flash">
+		<!-- Inflicts a swift magic attack upon contacted enemies nearby. Power 11. -->
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -635 -659 -676 -689 -700 -709 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -1023,6 +983,7 @@
 		</for>
 	</skill>
 	<skill id="5751" levels="12" name="Lightning Wave">
+		<!-- Inflicts the power of thunder upon surrounding enemies. Power 9. -->
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -635 -659 -676 -689 -700 -709 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
@@ -1046,6 +1007,7 @@
 		</for>
 	</skill>
 	<skill id="5752" levels="12" name="Flare">
+		<!-- Consumes one's own HP to inflict powerful magic on the enemy. Power 35. -->
 		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -635 -659 -676 -689 -700 -709 </table>
 		<table name="#hpConsume"> 49 79 112 152 197 242 283 302 318 329 336 340 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1143,6 +1105,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5760" levels="9" name="Critical Hit">
+		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. Effect 1. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
@@ -1155,6 +1118,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5761" levels="2" name="Power Strike">
+		<!-- Strong pounding attack. -->
 		<table name="#mpConsume"> 91 122 </table>
 		<table name="#power"> 2500 2800 </table>
 		<set name="castRange" val="40" />
@@ -1173,6 +1137,7 @@
 		</for>
 	</skill>
 	<skill id="5762" levels="1" name="Blessing of Pathfinder">
+		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1185,6 +1150,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5763" levels="1" name="Wink">
+		<!-- See a summoned Agathion perform tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1194,6 +1160,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5764" levels="1" name="Terror of the Pumpkin Ghost">
+		<!-- Curse of the Pumpkin Ghost. Causes spontaneous movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -1302,6 +1269,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5771" levels="1" name="Buff Control">
+		<!-- Limits to prevent a buff upon the master. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGICAL_STANCE" />
@@ -1318,6 +1286,7 @@
 		</for>
 	</skill>
 	<skill id="5772" levels="1" name="Surrender to Fire">
+		<!-- Instantly decrease Resistance to fire attacks and increase Resistance to water attacks. Effect 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
@@ -1332,6 +1301,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5773" levels="1" name="Surrender to Water">
+		<!-- Instantly decrease Resistance to water attacks and increase Resistance to fire attacks. Effect 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_WATER" />
@@ -1346,7 +1316,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5774" levels="2" name="Pailaka Reward Energy Replenishing">
-		<!-- Confirmed CT2.5 -->
 		<table name="#value"> 10000 20000 </table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="100" />
@@ -1363,6 +1332,7 @@
 		</for>
 	</skill>
 	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
+		<!-- The Pathfinder's blessing. All battle abilities are increased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1375,21 +1345,21 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5776" levels="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost Warden: Kamaloka - Leader of those who watch over the Labyrinth of the Abyss. He watches over those inside Kamaloka to make sure they properly perform their roles. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5777" levels="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Lost Captain: Kamaloka - Leader of those who guard the Labyrinth of the Abyss. They protect Kamaloka from all enemies to try to infiltrate Kamaloka. -->
 		<set name="icon" val="icon.skillraid" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5778" levels="1" name="Invincible After-effect">
-		<!-- skill after ct2.3 not used -->
+		<!-- Temporarily cannot receive invincible effect. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1403,12 +1373,14 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5779" levels="42" name="Transform Effect">
+		<!-- Transforms both your physical form and abilities. -->
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="magicLvl" val="7" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5780" levels="9" name="Agathion Collection">
+		<!-- Summons a Sprite to collect the essence of the Seeds of Infinity and Destruction. -->
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="6000" />
@@ -1427,7 +1399,6 @@
 		</cond>
 	</skill>
 	<skill id="5781" levels="1" name="Presentation - Lindvior Approach">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="17000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1435,7 +1406,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5782" levels="1" name="Presentation - Lindvior Gust">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="10000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1443,7 +1413,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5783" levels="1" name="Presentation - Lindvior Descent">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="15000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1451,7 +1420,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5784" levels="1" name="Presentation - Lindvior Dust">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1459,14 +1427,12 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5785" levels="1" name="Presentation - Dimensional Door">
-		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5786" levels="1" name="Presentation - Ekimus Separation">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="22000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1475,7 +1441,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5787" levels="1" name="Presentation - Ekimus Approach">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="11000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1484,7 +1449,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5788" levels="1" name="Presentation - Ekimus Blood Hail">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1493,7 +1457,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5789" levels="1" name="Presentation - Ekimus Sneer">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="13000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1502,14 +1465,12 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5790" levels="1" name="Presentation - Ekimus Aftereffect">
-		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5791" levels="1" name="Presentation - Magyun's Entrance">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="4200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1518,7 +1479,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5792" levels="1" name="Presentation - Summon Banshee Queen Boomi">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1526,7 +1486,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5793" levels="1" name="Presentation - Summon Boomi">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1534,6 +1493,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5794" levels="1" name="Decrease Spd.">
+		<!-- Temporarily decreases Spd. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1554,6 +1514,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5795" levels="1" name="Poison">
+		<!-- Poisons the target, causing them to lose 66 HP every second for 30 seconds. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -1574,6 +1535,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5796" levels="1" name="Decrease Spd.">
+		<!-- Temporarily decreases Spd. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1616,6 +1578,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5799" levels="1" name="Bleed">
+		<!-- Causes the target to bleed and lose 78 HP every second for 20 seconds. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />

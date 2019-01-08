@@ -331,7 +331,7 @@
 		</skills>
 	</item>
 	<item id="9915" name="Blue Talisman - M. Critical Rate" type="Armor">
-		<!-- Increases P. Critical Rate of magic attacks temporarily. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases M. Critical Rate temporarily. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -353,7 +353,7 @@
 		</skills>
 	</item>
 	<item id="9916" name="Blue Talisman - Berserker" type="Armor">
-		<!-- Temporarily decreases P. Def./M. Def./Evasion. Increases P. Atk./M. Atk./Atk. Spd./Casting Spd./speed. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Temporarily decreases P. Def./ M. Def./ Evasion. Increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd./ speed. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -529,7 +529,7 @@
 		</skills>
 	</item>
 	<item id="9924" name="Blue Talisman - Healing" type="Armor">
-		<!-- It increases HP Recovery Magic temporarily. Effect does not stack with additional Talismans of the same type. -->
+		<!-- It increases HP Recovery Bonus Magic temporarily. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -551,7 +551,7 @@
 		</skills>
 	</item>
 	<item id="9925" name="Red Talisman - HP/CP Recovery" type="Armor">
-		<!-- It recovers HP/CP. Effect does not stack with additional Talismans of the same type. -->
+		<!-- It recovers HP/ CP. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -617,7 +617,7 @@
 		</skills>
 	</item>
 	<item id="9928" name="Red Talisman - Mental Regeneration" type="Armor">
-		<!-- When used, it Speeds up MP Recovery. Effect does not stack with additional Talismans of the same type. -->
+		<!-- When used, it Speeds up MP Recovery Bonus. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -683,7 +683,7 @@
 		</skills>
 	</item>
 	<item id="9931" name="Red Talisman - Meditation" type="Armor">
-		<!-- When used, it greatly increases MP Recovery Rate. You cannot move during recovery. Effect does not stack with additional Talismans of the same type. -->
+		<!-- When used, it greatly increases MP Recovery Bonus Rate. You cannot move during recovery. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1000,7 +1000,7 @@
 		</skills>
 	</item>
 	<item id="9946" name="Yellow Talisman - Healing" type="Armor">
-		<!-- Increases HP Recovery Magic temporarily. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases HP Recovery Bonus Magic temporarily. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1042,7 +1042,7 @@
 		</skills>
 	</item>
 	<item id="9948" name="Yellow Talisman - HP Regeneration" type="Armor">
-		<!-- Increases HP Recovery. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases HP Recovery Bonus. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1063,7 +1063,7 @@
 		</skills>
 	</item>
 	<item id="9949" name="Yellow Talisman - MP Regeneration" type="Armor">
-		<!-- Increases MP Recovery. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Increases MP Recovery Bonus. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1281,7 +1281,7 @@
 		</skills>
 	</item>
 	<item id="9959" name="Black Talisman - Free Speech" type="Armor">
-		<!-- Breaks physical/magical Silence. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Breaks physical/ magical Silence. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />

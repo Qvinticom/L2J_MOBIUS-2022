@@ -141,7 +141,7 @@
 		</skills>
 	</item>
 	<item id="23529" name="Fantasy Isle Instant Camera" additionalName="Event" type="Armor">
-		<!-- Instant Camera given once a day during the Fantasy Isle Festival for quests. 3-hour. Cannot be exchanged or dropped. Can be destroyed and stored in a private warehouse. -->
+		<!-- Instant Camera given once a day during the Fantasy Isle Festival for quests. 3-hr. Cannot be exchanged or dropped. Can be destroyed and stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -161,7 +161,7 @@
 		</skills>
 	</item>
 	<item id="23530" name="Automatic Appearance Stone: Emerald Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -181,7 +181,7 @@
 		</skills>
 	</item>
 	<item id="23531" name="Automatic Appearance Stone: Japanese Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -223,7 +223,7 @@
 		</skills>
 	</item>
 	<item id="23534" name="Monster Weapon Appearance Stone Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Appearance Stone for either Hellblade, Claw of Destruction, Butcher Blade, Blades of Delusion, Blood Brother, or Mardil's Fan. -->
+		<!-- Double-click to obtain an Appearance Stone for either Hellblade, Claw of Destruction, Butcher Blade, Blades of Delusion, Blood Brother, or Mardil's Fan. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -236,7 +236,7 @@
 		</skills>
 	</item>
 	<item id="23535" name="Hellblade Appearance Stone" additionalName="Event" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Hellblade. -->
+		<!-- Changes the appearance of a one-handed sword to that of the Hellblade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -290,7 +290,7 @@
 		</skills>
 	</item>
 	<item id="23538" name="Blades of Delusion Appearance Stone" additionalName="Event" type="EtcItem">
-		<!-- Changes the appearance of a dualsword into that of Blades of Delusion. -->
+		<!-- Changes the appearance of a dual sword into that of Blades of Delusion. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -308,7 +308,7 @@
 		</skills>
 	</item>
 	<item id="23539" name="Blood Brother Appearance Stone" additionalName="Event" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword into that of Blood Brother. -->
+		<!-- Changes the appearance of a two-handed sword to that of the Blood Brother. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -326,7 +326,7 @@
 		</skills>
 	</item>
 	<item id="23540" name="Mardil's Fan Appearance Stone" additionalName="Event" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Mardil's Fan. -->
+		<!-- Changes the appearance of a one-handed sword to that of Mardil's Fan. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -967,7 +967,7 @@
 		</skills>
 	</item>
 	<item id="23575" name="Fantasy Top Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Top Appearance Stone (7-day) or Vorpal Light Armor Top Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Top Appearance Stone (7-day) or Vorpal Light Armor Top Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -980,7 +980,7 @@
 		</skills>
 	</item>
 	<item id="23576" name="Fantasy Pants Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Pants Appearance Stone (7-day) or Vorpal Light Armor Pants Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Pants Appearance Stone (7-day) or Vorpal Light Armor Pants Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -993,7 +993,7 @@
 		</skills>
 	</item>
 	<item id="23577" name="Fantasy Gloves Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Gloves Appearance Stone (7-day) or Vorpal Light Armor Gloves Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Gloves Appearance Stone (7-day) or Vorpal Light Armor Gloves Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1006,7 +1006,7 @@
 		</skills>
 	</item>
 	<item id="23578" name="Fantasy Shoes Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Vesper Noble Light Armor Shoes Appearance Stone (7-day) or Vorpal Light Armor Shoes Appearance Stone (7-day). -->
+		<!-- Double-click to obtain either Vesper Noble Light Armor Shoes Appearance Stone (7-day) or Vorpal Light Armor Shoes Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1019,7 +1019,7 @@
 		</skills>
 	</item>
 	<item id="23579" name="Shining Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either Istina's Earring, Baium's Ring or Octavis' Necklace. -->
+		<!-- Double-click to obtain either Istina's Earring, Baium's Ring or Octavis' Necklace. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1202,7 +1202,7 @@
 		</skills>
 	</item>
 	<item id="23589" name="Monster Weapon Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Appearance Stone for either Hellblade (7-day), Claw of Destruction (7-day), Butcher Blade (7-day), Blades of Delusion (7-day), Blood Brother (7-day), or Mardil's Fan (7-day). -->
+		<!-- Double-click to obtain an Appearance Stone for either Hellblade (7-day), Claw of Destruction (7-day), Butcher Blade (7-day), Blades of Delusion (7-day), Blood Brother (7-day), or Mardil's Fan (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1215,7 +1215,7 @@
 		</skills>
 	</item>
 	<item id="23590" name="Hellblade Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Hellblade. -->
+		<!-- Changes the appearance of a one-handed sword to that of the Hellblade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1269,7 +1269,7 @@
 		</skills>
 	</item>
 	<item id="23593" name="Blades of Delusion Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
-		<!-- Changes the appearance of a dualsword into that of Blades of Delusion. -->
+		<!-- Changes the appearance of a dual sword into that of Blades of Delusion. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1287,7 +1287,7 @@
 		</skills>
 	</item>
 	<item id="23594" name="Blood Brother Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword into that of Blood Brother. -->
+		<!-- Changes the appearance of a two-handed sword to that of the Blood Brother. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1305,7 +1305,7 @@
 		</skills>
 	</item>
 	<item id="23595" name="Mardil's Fan Appearance Stone" additionalName="7-day (Event)" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword into that of a Mardil's Fan. -->
+		<!-- Changes the appearance of a one-handed sword to that of Mardil's Fan. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1323,7 +1323,7 @@
 		</skills>
 	</item>
 	<item id="23596" name="Blessed Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1340,7 +1340,7 @@
 		</skills>
 	</item>
 	<item id="23597" name="Blessed Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/accessories (R-grade) + 2. When enchanted to + 4 or above, P. Def. Increases greatly. Can be safely enchanted up to + 3. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+		<!-- When enchanted, increases P. Def. by 2 for R-grade armor and accessories, and increases greatly starting at +4. Can be enhanced safely to +3. When enhanced to +4 or higher, HP also increases according to the enchantment value. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1357,7 +1357,7 @@
 		</skills>
 	</item>
 	<item id="23599" name="Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R-grade).Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +10% for weapons (R-grade).Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />

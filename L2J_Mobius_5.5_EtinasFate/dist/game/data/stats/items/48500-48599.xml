@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48500" name="Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to randomly obtain one of various items. Will be deleted on Wednesday, December 27, 2017, after regular maintenance. -->
@@ -9,7 +9,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48501" name="Shining Dragon's Relic Chest" type="EtcItem">
-		<!-- Double-click to randomly obtain one of very rare items. There is also chance to obtain a Mysterious and Special Weapon Enchant Scroll. Shining Dragon's Relic Chests can be obtained until the regular maintenance on Wednesday, July 12, 2017. Will be deleted on Wednesday, December 27, 2017, after regular maintenance. -->
+		<!-- Double-click the box to obtain a very rare item at random. Will be deleted after the event. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -17,7 +17,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48502" name="Mysterious Weapon Enchant Scroll" type="EtcItem">
-		<!-- Weapon enchant scroll that can only be used on a Mysterious Dragon Slayer. The οΏ½Mysterious Dragon Slayer' weapon can be purchased from Dragon Slayer Luna on the event platform in the each town. Cannot use enchant success rate boosting items. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
+		<!-- Weapon enchant scroll that can only be used on a Mysterious Dragon Slayer. The Mysterious Dragon Slayer weapon can be purchased from Dragon Slayer Luna on the event platform in the each town. Cannot use enchant success rate boosting items. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48503" name="Mysterious and Special Weapon Enchant Scroll" type="EtcItem">
-		<!-- Weapon enchant scroll that can only be used on a Mysterious Dragon Slayer. The οΏ½Mysterious Dragon Slayer' weapon can be purchased from Dragon Slayer Luna on the event platform in the each town. Enchants the weapon randomly from +1 to +3. Can enchant up to +14, and the weapon is destroyed when enchanting fails. Cannot use enchant success rate boosting items. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
+		<!-- Weapon enchant scroll that can only be used on a Mysterious Dragon Slayer. The Mysterious Dragon Slayer weapon can be purchased from Dragon Slayer Luna on the event platform in the each town. Enchants the weapon randomly from +1 to +3. Can enchant up to +14, and the weapon is destroyed when enchanting fails. Cannot use enchant success rate boosting items. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -35,7 +35,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48504" name="+10 Bloody Armor set Pack" type="EtcItem">
-		<!-- Use to obtain one of +10 Bloody Eternal Light Armor/ Heavy Armor/ Robe sets. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
+		<!-- Use to obtain +10 Bloody Eternal Light Armor, Heavy Armor, or Robe set. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -94,7 +94,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48509" name="+6 Zodiac Agathion Box" type="EtcItem">
-		<!-- Use to obtain a +6 Zodiac Agathion. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
+		<!-- Use it to obtain one +6 Zodiac Agathion Charm. Will be deleted during maintenance on Wednesday, January 10th, 2018. -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -106,7 +106,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48510" name="+7 Zodiac Agathion Box" type="EtcItem">
-		<!-- Use to obtain a +7 Zodiac Agathion. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
+		<!-- Use it to obtain one +7 Zodiac Agathion Charm. Will be deleted during maintenance on Wednesday, January 10th, 2018. -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -118,7 +118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48511" name="Royal Red Save Ticket Treasure Chest" type="EtcItem">
-		<!-- Use to obtain one of R/ R95/ R99 Royal Red Save Tickets. -->
+		<!-- Use to obtain a R, R95, or R99 Royal Red Save Ticket. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />

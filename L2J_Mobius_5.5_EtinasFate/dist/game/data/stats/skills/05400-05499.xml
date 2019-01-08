@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5400" toLevel="1" name="Presentation - Solar Spark">
-		<!-- Confirmed CT2.5 -->
 		<castRange>750</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -16,7 +15,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5401" toLevel="1" name="Stun">
-		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>FLY_AWAY</abnormalType>
@@ -42,7 +41,7 @@
 		</effects>
 	</skill>
 	<skill id="5402" toLevel="1" name="Presentation - Baylor 2">
-		<!-- Balor - Magic Skill1 -->
+		<!-- Baylor - Magic Skill1 -->
 		<coolTime>500</coolTime>
 		<hitTime>4000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -54,7 +53,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5403" toLevel="1" name="Presentation - Baylor 3">
-		<!-- Balor - Magic Skill2 -->
+		<!-- Baylor - Magic Skill2 -->
 		<coolTime>500</coolTime>
 		<hitTime>4000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -66,7 +65,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5404" toLevel="1" name="Presentation - Baylor 4">
-		<!-- Balor - Instant Cast Skill -->
+		<!-- Baylor - Instant Cast Skill -->
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectRange>1100</effectRange>
@@ -106,7 +105,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5407" toLevel="1" name="Presentation - Crystalline Golem 1">
-		<!-- Crystaline-Instant Cast Skill -->
+		<!-- Crystalline-Instant Cast Skill -->
 		<hitTime>2000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -117,7 +116,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5408" toLevel="1" name="Presentation - Crystalline Golem 2">
-		<!-- Crystaline-General Long Range Magic Skill -->
+		<!-- Crystalline-General Long Range Magic Skill -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -131,7 +130,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5409" toLevel="1" name="Presentation - Crystalline Golem 3">
-		<!-- Crystaline Golem -->
+		<!-- Crystalline Golem -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -145,7 +144,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5410" toLevel="1" name="Presentation - Baylor 10">
-		<!-- Balor Social. -->
+		<!-- Baylor Social. -->
 		<hitTime>17000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -178,7 +177,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5413" toLevel="1" name="Agathion Cute Trick - Beast Farm">
-		<!-- TODO: Needs to be verified -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -194,7 +193,7 @@
 		</conditions>
 	</skill>
 	<skill id="5414" toLevel="1" name="Agathion Cute Trick - Rainbow Clan Hall">
-		<!-- TODO: Needs to be verified -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -210,7 +209,7 @@
 		</conditions>
 	</skill>
 	<skill id="5415" toLevel="1" name="Agathion Cute Trick - Castle">
-		<!-- TODO: Needs to be verified -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -240,7 +239,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5417" toLevel="1" name="Invincibility">
-		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<!-- Invincible against standard attack and skill, buff/ de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -258,7 +257,7 @@
 		</effects>
 	</skill>
 	<skill id="5418" toLevel="1" name="Invincibility">
-		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<!-- Invincible against standard attack and skill, buff/ de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -276,7 +275,7 @@
 		</effects>
 	</skill>
 	<skill id="5419" toLevel="1" name="Invincible Blow">
-		<!-- Crystaline Golem -->
+		<!-- Crystalline Golem -->
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
@@ -290,7 +289,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5420" toLevel="1" name="Invincibility">
-		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<!-- Invincible against standard attack and skill, buff/ de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -385,7 +384,7 @@
 		</effects>
 	</skill>
 	<skill id="5423" toLevel="12" name="Poison">
-		<!-- Condition causing target to be poisoned. -->
+		<!-- HP decreases from poison momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -446,7 +445,7 @@
 		</effects>
 	</skill>
 	<skill id="5424" toLevel="12" name="Bleed">
-		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 2-10. -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -507,7 +506,7 @@
 		</effects>
 	</skill>
 	<skill id="5425" toLevel="1" name="Iron Shield">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition causing target to increase Shield Defense. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>IRON_SHIELD_I</abnormalType>
@@ -532,7 +531,7 @@
 		</effects>
 	</skill>
 	<skill id="5426" toLevel="1" name="Counter Chance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. and decreases Skill MP Consumption. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL</abnormalType>
@@ -564,7 +563,7 @@
 		</effects>
 	</skill>
 	<skill id="5427" toLevel="1" name="Counter Rapid Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Bow/ Crossbow Atk. Spd. has been increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL</abnormalType>
@@ -595,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="5428" toLevel="1" name="Counter Dash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Condition causing target to increase speed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL_I</abnormalType>
@@ -622,7 +621,6 @@
 		</effects>
 	</skill>
 	<skill id="5429" toLevel="1" name="Counter Mind">
-		<!-- Confirmed CT2.5 -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
 		<operateType>A1</operateType>
@@ -639,8 +637,6 @@
 		</effects>
 	</skill>
 	<skill id="5430" toLevel="1" name="Spoil Bomb">
-		<!-- Confirmed CT2.5 -->
-		<!-- Spoil Bomb effect -->
 		<affectRange>300</affectRange>
 		<icon>icon.skill0537</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -660,7 +656,7 @@
 		</effects>
 	</skill>
 	<skill id="5431" toLevel="1" name="Decrease Speed">
-		<!-- Condition causing target to temporarily decrease attack speed and casting speed. -->
+		<!-- Atk. Spd. and Casting Spd. decreases temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -700,7 +696,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5434" toLevel="1" name="Gust">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with gust and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -728,13 +724,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5494</skillId>
+				<skillId>5494</skillId> <!-- Gust -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="5435" toLevel="1" name="Gust">
-		<!-- Confirmed CT2.5 -->
+		<!-- Inflicted with gust and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -762,13 +758,13 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5494</skillId>
+				<skillId>5494</skillId> <!-- Gust -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>
 	<skill id="5436" toLevel="1" name="Increase Recovery Rate">
-		<!-- Condition causing target to increase recovery rate of HP and MP. -->
+		<!-- HP and MP recovery bonus are increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ALL_REGEN_UP</abnormalType>
@@ -784,7 +780,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5437" toLevel="2" name="Dissonance">
-		<!-- Confirmed CT2.5 -->
+		<!-- A dissonance of body and soul that causes a condition rendering you unable to control your body. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -968,6 +964,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5442" toLevel="4" name="Bite Attack">
+		<!-- Bite ferociously with sharp teeth. -->
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1008,6 +1005,7 @@
 		</effects>
 	</skill>
 	<skill id="5443" toLevel="4" name="Cry of the Wolf">
+		<!-- Dominate nearby enemies with a mighty roar. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1047,6 +1045,7 @@
 		</effects>
 	</skill>
 	<skill id="5444" toLevel="2" name="Maul">
+		<!-- Attacks with fore-claws to create wound. Power $s1. Effect $s2. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1095,6 +1094,7 @@
 		</effects>
 	</skill>
 	<skill id="5445" toLevel="1" name="Awakening">
+		<!-- Brings out the instinct of the wolf. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
@@ -1146,6 +1146,7 @@
 		</effects>
 	</skill>
 	<skill id="5446" toLevel="45" name="Soul Expansion">
+		<!-- Soul increased to Lv. $s1. -->
 		<icon>
 			<value level="1">icon.skill5446_1</value>
 			<value level="2">icon.skill5446_2</value>
@@ -1198,8 +1199,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5447" toLevel="7" name="Paralysis">
-		<!-- Confirmed CT2.5 -->
-		<!-- Imbue Dark Seed effect -->
+		<!-- Paralyzed and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1232,7 +1232,6 @@
 		</effects>
 	</skill>
 	<skill id="5448" toLevel="1" name="Oblivion">
-		<!-- Confirmed CT2.5 -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
 		<operateType>A1</operateType>
@@ -1246,7 +1245,7 @@
 		</effects>
 	</skill>
 	<skill id="5449" toLevel="1" name="Weak Constitution">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1265,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="5450" toLevel="7" name="Thin Skin">
-		<!-- Confirmed CT2.5 -->
+		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">4</value>
 			<value level="2">5</value>
@@ -1323,7 +1322,7 @@
 		</effects>
 	</skill>
 	<skill id="5451" toLevel="1" name="Enervation">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases attack and Casting Spd. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
@@ -1353,7 +1352,7 @@
 		</effects>
 	</skill>
 	<skill id="5452" toLevel="3" name="Spite">
-		<!-- Confirmed CT2.5 -->
+		<!-- Greatly increases the amount of Critical Damage received -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_DMG_UP</abnormalType>
@@ -1387,7 +1386,6 @@
 		</effects>
 	</skill>
 	<skill id="5453" toLevel="4" name="Mental Impoverish">
-		<!-- Confirmed CT2.5 -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
 			<value level="1">68</value>
@@ -1447,6 +1445,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5456" toLevel="1" name="Stubborn Resistance">
+		<!-- Atk. Spd. and Speed decreases momentarily due to stubborn resistance. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1488,7 +1487,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5458" toLevel="1" name="Agathion Cute Trick - Fortress">
-		<!-- TODO: Needs to be verified -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1504,7 +1503,7 @@
 		</conditions>
 	</skill>
 	<skill id="5459" toLevel="1" name="Paralysis">
-		<!-- A temporary paralysis that prevents movement. -->
+		<!-- Paralyzed and unable to move temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1546,7 +1545,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5461" toLevel="12" name="Power Shot">
-		<!-- Confirmed CT2.5 -->
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1605,6 +1603,7 @@
 		</effects>
 	</skill>
 	<skill id="5462" toLevel="1" name="Fire Attack">
+		<!-- Strong against the element of fire. -->
 		<icon>icon.skill4279_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1617,6 +1616,7 @@
 		</effects>
 	</skill>
 	<skill id="5463" toLevel="1" name="Water Attack">
+		<!-- Strong against the element of water. -->
 		<icon>icon.skill4280_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1629,6 +1629,7 @@
 		</effects>
 	</skill>
 	<skill id="5464" toLevel="1" name="Wind Attack">
+		<!-- Strong against the element of wind. -->
 		<icon>icon.skill4281_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1641,6 +1642,7 @@
 		</effects>
 	</skill>
 	<skill id="5465" toLevel="1" name="Earth Attack">
+		<!-- Strong against the element of earth. -->
 		<icon>icon.skill4282_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1653,6 +1655,7 @@
 		</effects>
 	</skill>
 	<skill id="5466" toLevel="1" name="Holy Attacks">
+		<!-- Strong against the holy elemental. -->
 		<icon>icon.skill4275_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1665,6 +1668,7 @@
 		</effects>
 	</skill>
 	<skill id="5467" toLevel="1" name="Dark Attack">
+		<!-- Strong against the dark elemental. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1677,7 +1681,6 @@
 		</effects>
 	</skill>
 	<skill id="5468" toLevel="12" name="Fire Shot">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>80</affectRange>
 		<castRange>300</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1739,77 +1742,77 @@
 		</effects>
 	</skill>
 	<skill id="5469" toLevel="1" name="Raid Boss (Lv. 22)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Past the secure entrance to this large cavern waits Mother Nornil, the ruler of Nornil's Garden. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5470" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This cruel, soulless woman handled much of Beleth' dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5471" toLevel="1" name="Raid Boss (Lv. 82)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5472" toLevel="1" name="Raid Boss (Lv. 83)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5473" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5474" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5475" toLevel="1" name="Raid Boss (Lv. 83)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This high-Lv. Demon general, royalty even to the infernal, was ordered by Darion to capture the Tower of Infinitum. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5476" toLevel="1" name="Raid Boss (Lv. 83)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth' invasion of the mainland. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5477" toLevel="1" name="Raid Boss (Lv. 83)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Beleth' right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5478" toLevel="1" name="Raid Boss (Lv. 83)">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5479" toLevel="1" name="Boss Petrification Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resist against Petrification. -->
 		<hitTime>4000</hitTime>
 		<icon>icon.skill5479</icon>
 		<magicLvl>1</magicLvl>
@@ -1822,8 +1825,6 @@
 		</effects>
 	</skill>
 	<skill id="5480" toLevel="1" name="Cancel Baylor Invincibility">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
@@ -1908,7 +1909,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5485" toLevel="1" name="Endurance Defense Up">
-		<!-- Increases P. Def. Effect 1. -->
+		<!-- M. Def. is increased. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -1924,7 +1925,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5486" toLevel="1" name="Endurance Offense Up">
-		<!-- Increases P. Atk. Effect 1. -->
+		<!-- P. Atk. is increased. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1952,7 +1953,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5488" toLevel="1" name="Counter Critical Damage Up">
-		<!-- Increases critical attack power. Effect 1. -->
+		<!-- Critical Damage is increased. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -2006,7 +2007,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5491" toLevel="1" name="Decrease Bow/Crossbow Atk. Spd.">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases Atk. Spd. when equipped with bow/ crossbow while transformed. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2029,7 +2030,6 @@
 		</effects>
 	</skill>
 	<skill id="5492" toLevel="12" name="Power Shot">
-		<!-- NPC Skill -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2089,7 +2089,7 @@
 	</skill>
 	<skill id="5493" toLevel="1" name="Naia Production">
 		<castRange>800</castRange>
-		<channelingSkillId>5106</channelingSkillId>
+		<channelingSkillId>5106</channelingSkillId> <!-- Capture A State -->
 		<effectPoint>1</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>25000</hitTime>
@@ -2116,7 +2116,6 @@
 		</conditions>
 	</skill>
 	<skill id="5494" toLevel="1" name="Gust">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>1</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>86</magicLvl>
@@ -2133,8 +2132,7 @@
 		</effects>
 	</skill>
 	<skill id="5495" toLevel="1" name="Bleed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Beleth Skills -->
+		<!-- HP decreases from bleeding momentarily. Effect 10. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -2168,8 +2166,6 @@
 		</effects>
 	</skill>
 	<skill id="5496" toLevel="1" name="Dark Fireball">
-		<!-- Confirmed CT2.5 -->
-		<!-- Beleth Skills -->
 		<affectRange>200</affectRange>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2193,8 +2189,7 @@
 		</effects>
 	</skill>
 	<skill id="5497" toLevel="1" name="Horn of Rising Darkness">
-		<!-- Confirmed CT2.5 -->
-		<!-- Beleth Skills -->
+		<!-- Temporarily immobile due to the Stun and Bleed effect and your HP is draining. Effect 1 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2228,8 +2223,6 @@
 		</effects>
 	</skill>
 	<skill id="5498" toLevel="1" name="Self-Destruct">
-		<!-- Confirmed CT2.5 -->
-		<!-- Beleth Skills -->
 		<affectRange>150</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
@@ -2247,8 +2240,6 @@
 		</effects>
 	</skill>
 	<skill id="5499" toLevel="1" name="Dark Lightening">
-		<!-- Confirmed CT2.5 -->
-		<!-- Beleth Skills -->
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>

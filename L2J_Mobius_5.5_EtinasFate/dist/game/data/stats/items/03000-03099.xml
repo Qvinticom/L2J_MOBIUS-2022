@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3000" name="Recipe: Dwarven Chain Shield" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Dwarven Chain Shield. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for a Dwarven Chain Shield. Requires Create Item Skill Lv. 5. 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -267,7 +267,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3019" name="Recipe: Full Plate Shield" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Full Plate Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for a Full Plate Shield. Requires Create Item Skill Lv. 6. 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -525,7 +525,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3031" name="Spirit Ore" type="EtcItem">
-		<!-- Material used by Dwarves in item manufacturing. Also used to summon and maintain servitors.� Can be sold in any shop. -->
+		<!-- Material used by Dwarves in item manufacturing. Also used to summon and maintain servitors. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_stone_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

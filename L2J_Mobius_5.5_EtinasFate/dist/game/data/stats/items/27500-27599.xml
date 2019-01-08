@@ -145,7 +145,7 @@
 		</skills>
 	</item>
 	<item id="27511" name="Novice Adventurer's Shirt" type="Armor">
-		<!-- Novice Adventurer's shirt. M. Def. + 11 when equipped. -->
+		<!-- Novice Adventurer's shirt. M. Def. +11 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_none_i00" />
 		<set name="weight" val="130" />
 		<set name="armor_type" val="LIGHT" />
@@ -163,7 +163,7 @@
 		</stats>
 	</item>
 	<item id="27512" name="Novice Adventurer's Circlet" type="Armor">
-		<!-- Novice Adventurer's brass-hued hair accessory. Requires 2 hair accessory slots. Critical Rate + 10 when equipped. -->
+		<!-- Novice Adventurer's brass-hued hair accessory. Requires 2 hair accessory slots. Critical Rate +10 when equipped. -->
 		<set name="icon" val="icon.accessory_au_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -184,7 +184,7 @@
 		</skills>
 	</item>
 	<item id="27513" name="Novice Adventurer's Bracelet" type="Armor">
-		<!-- Novice Adventurer's bracelet. MP + 60 and uses 3 talisman slots when equipped. -->
+		<!-- Novice Adventurer's bracelet. MP +60 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -218,7 +218,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27515" name="Experienced Adventurer's Shirt" type="Armor">
-		<!-- Experienced Adventurer's shirt. M. Def. + 12 and CON + 2 when equipped. -->
+		<!-- Experienced Adventurer's shirt. M. Def. +12 and CON +2 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="weight" val="130" />
 		<set name="armor_type" val="LIGHT" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="27516" name="Experienced Adventurer's Circlet" type="Armor">
-		<!-- Experienced Adventurer's silver-hued hair accessory. Requires 2 hair accessory slots. Critical Rate + 20 when equipped. -->
+		<!-- Experienced Adventurer's silver-hued hair accessory. Requires 2 hair accessory slots. Critical Rate +20 when equipped. -->
 		<set name="icon" val="icon.accessory_ar_karm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -260,7 +260,7 @@
 		</skills>
 	</item>
 	<item id="27517" name="Experienced Adventurer's Bracelet" type="Armor">
-		<!-- Experienced Adventurer's bracelet. MP + 90 and uses 3 talisman slots when equipped. -->
+		<!-- Experienced Adventurer's bracelet. MP +90 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -295,7 +295,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27519" name="Adventurer's Shirt" type="Armor">
-		<!-- Adventurer's shirt. INT + 2, STR + 2, Speed + 7 when equipped. -->
+		<!-- Adventurer's shirt. INT +2, STR +2, Speed +7 when equipped. -->
 		<set name="icon" val="BranchIcon.icon.shirt_of_explorer_i00" />
 		<set name="weight" val="130" />
 		<set name="armor_type" val="LIGHT" />
@@ -316,7 +316,7 @@
 		</stats>
 	</item>
 	<item id="27520" name="Adventurer's Circlet" type="Armor">
-		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. + 3%, M. Atk. + 5% when equipped. -->
+		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. +3%, M. Atk. +5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -334,7 +334,7 @@
 		</skills>
 	</item>
 	<item id="27521" name="Adventurer's Bracelet" type="Armor">
-		<!-- Adventurer's Bracelet. STR/DEX/CON/INT/WIT/MEN + 1 and uses 3 talisman slots when equipped. -->
+		<!-- Adventurer's Bracelet. STR/ DEX/ CON/ INT/ WIT/ MEN +1 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -350,7 +350,7 @@
 		</skills>
 	</item>
 	<item id="27522" name="Support Cube" additionalName="30-day" type="EtcItem">
-		<!-- Cube that can be used for 30 days. Double-click to get one of the following: Specter weapon / Seraph armor / (Blessed) Scroll: Enchant Weapon (R-grade) / (Blessed) Scroll: Enchant Armor (R-grade) / Spirit Stone / Attribute Crystal. (Can only be used once a-day) -->
+		<!-- Cube that can be used for 30 days. Double-click to get one of the following: Specter weapon/ Seraph armor/ (Blessed) Scroll: Enchant Weapon (R-grade)/ (Blessed) Scroll: Enchant Armor (R-grade)/ Spirit Stone/ Attribute Crystal. (Can only be used once a-day) -->
 		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -431,7 +431,7 @@
 		<set name="is_commissionable" val="false" />
 	</item>
 	<item id="27530" name="Scroll of Escape Pack" type="EtcItem">
-		<!-- Pack containing Scrolls of Escape for Alligator Island/Outlaw Forest/Sea of Spores/Forsaken Plains/Fields of Massacre/Swamp of Screams/Forest of the Dead/Wall of Argos/Varka Silenos Barracks/Ketra Orc Outpost/Den of Evil/Sel Mahum Training Grounds/Plains of the Lizardmen/Field of Silence/ Field of Whispers. -->
+		<!-- Pack containing Scrolls of Escape for Alligator Island/ Outlaw Forest/ Sea of Spores/ Forsaken Plains/ Fields of Massacre/ Swamp of Screams/ Forest of the Dead/ Wall of Argos/ Varka Silenos Barracks/ Ketra Orc Outpost/ Den of Evil/ Sel Mahum Training Grounds/ Plains of the Lizardmen/ Field of Silence/ Field of Whispers. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -481,7 +481,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="27534" name="Diana's Recommendation" additionalName="Event" type="EtcItem">
-		<!-- Diana's recommendation. You can participate in the Miss/Mr. event. -->
+		<!-- With this you can participate in the Mr. & Ms. Lineage 2 contest. Save it until the very end of the contest. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -493,7 +493,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Shiny Elemental Shirt. -->
+		<!-- Double-click to get a +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -501,11 +501,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37718" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- + 8 Shiny Elemental Shirt -->
+			<item id="37718" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Shiny Elemental Shirt -->
 		</capsuled_items>
 	</item>
 	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Reflect Attack T-shirt. -->
+		<!-- Double-click to get a +8 enchanted Reflect Attack Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -513,11 +513,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46193" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- + 8 Reflect Attack T-shirt -->
+			<item id="46193" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Physical Reflect Shirt -->
 		</capsuled_items>
 	</item>
 	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Reflect Magic T-shirt. -->
+		<!-- Double-click to get a +8 enchanted Reflect Magic Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -525,11 +525,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46194" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- + 8 Reflect Magic T-shirt -->
+			<item id="46194" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
 	<item id="27538" name="+ 7 Bloody Amaranthine Pack" type="EtcItem">
-		<!-- Double-click to get a + 7 enchanted Bloody Amaranthine weapon. -->
+		<!-- Double-click to get a +7 enchanted Bloody Helios weapon. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -557,7 +557,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27541" name="Mysterious Abnormal State Resistance Dye" additionalName="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day" type="EtcItem">
-		<!-- Bring this to the village symbol maker to imprint a 30-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance + 20 / Buff-canceling Attack Resistance + 20 / 5% chance of reflecting physical and magical abnormal status). All classes. -->
+		<!-- Bring this to the village symbol maker to imprint a 30-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance +20/ Buff-canceling Attack Resistance +20/ 5% chance of reflecting physical and magical abnormal status). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_debuff" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -673,11 +673,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27552" min="1" max="1" chance="100" /> <!-- Ruler's Authority -->
-			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Anthara's Earring -->
-			<item id="37668" min="1" max="1" chance="100" /> <!-- Blessed Valaka's Necklace -->
-			<item id="37669" min="1" max="1" chance="100" /> <!-- Blessed Tauti's Ring -->
-			<item id="37670" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring -->
+			<item id="27552" min="1" max="1" chance="100" /> <!-- Ruler's Authority - 30-day -->
+			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring - 30-day -->
+			<item id="37668" min="1" max="1" chance="100" /> <!-- Blessed Valakas' Necklace - 30-day -->
+			<item id="37669" min="1" max="1" chance="100" /> <!-- Tauti's Ring - 30-day -->
+			<item id="37670" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="27552" name="Ruler's Authority" additionalName="30-day" type="Armor">
@@ -768,7 +768,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27559" name="Lineage II Baseball Uniform Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
+		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_sellable" val="false" />
@@ -801,7 +801,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="time" val="43200" />
 		<capsuled_items>
-			<item id="27522" min="1" max="1" chance="100" /> <!-- Ultimate Support Cube -->
+			<item id="27522" min="1" max="1" chance="100" /> <!-- Support Cube - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="27562" name="Noble Pack" type="EtcItem">
@@ -815,14 +815,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26414" min="1" max="1" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% (7-day) x1 -->
-			<item id="39637" min="1" max="1" chance="100" /> <!-- Venir's Talisman Stage 4 x1 -->
-			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box x1 -->
-			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack x1 -->
-			<item id="45573" min="1" max="1" chance="100" /> <!-- Radiant Zodiac Agathion Pack (30-day) x1 -->
-			<item id="36308" min="5" max="5" chance="100" /> <!-- Beauty Shop Ticket x5 -->
-			<item id="38099" min="10" max="10" chance="100" /> <!-- Leona's Scroll: Buffs x10 -->
-			<item id="37730" min="10" max="10" chance="100" /> <!-- Dandy's Scroll: Passion x10 -->
+			<item id="26414" min="1" max="1" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% - 7-day -->
+			<item id="39637" min="1" max="1" chance="100" /> <!-- Venir's Talisman - Stage 4 -->
+			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box -->
+			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack -->
+			<item id="45573" min="1" max="1" chance="100" /> <!-- Zodiac Agathion Box (30-day) -->
+			<item id="36308" min="5" max="5" chance="100" /> <!-- Royal Beauty Ticket -->
+			<item id="38099" min="10" max="10" chance="100" /> <!-- Leona's Scroll: Buffs -->
+			<item id="37730" min="10" max="10" chance="100" /> <!-- Dandy's Scroll: Passion -->
 		</capsuled_items>
 	</item>
 	<item id="27563" name="Divine Pack" type="EtcItem">
@@ -836,19 +836,19 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26414" min="2" max="2" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% (7-day) x1 -->
-			<item id="27525" min="1" max="1" chance="100" /> <!-- Requiem Weapon Coupon x1 -->
-			<item id="27526" min="1" max="1" chance="100" /> <!-- Immortal Armor Set Coupon x1 -->
-			<item id="27555" min="10" max="10" chance="100" /> <!-- Lv. 3 Giant Dye Exchange Coupon x10 -->
-			<item id="39639" min="1" max="1" chance="100" /> <!-- Venir's Talisman Stage 6 x1 -->
-			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box x1, Talisman - Abundance Pack x1 -->
-			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack x1 -->
-			<item id="45574" min="1" max="1" chance="100" /> <!-- Twinkling Zodiac Agathion Pack (30-day) x1 -->
-			<item id="36308" min="10" max="10" chance="100" /> <!-- Beauty Shop Ticket x10 -->
-			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs x20 -->
-			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion x20 -->
-			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye (30-day) x1 -->
-			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack (30-day) x1 -->
+			<item id="26414" min="2" max="2" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% - 7-day -->
+			<item id="27525" min="1" max="1" chance="100" /> <!-- Requiem Weapon Coupon -->
+			<item id="27526" min="1" max="1" chance="100" /> <!-- Immortal Armor Set Coupon -->
+			<item id="27555" min="10" max="10" chance="100" /> <!-- Lv. 3 Giant Dye Exchange Coupon -->
+			<item id="39639" min="1" max="1" chance="100" /> <!-- Venir's Talisman - Stage 6 -->
+			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box -->
+			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack -->
+			<item id="45574" min="1" max="1" chance="100" /> <!-- Zodiac Agathion Box (30-day) -->
+			<item id="36308" min="10" max="10" chance="100" /> <!-- Royal Beauty Ticket -->
+			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs -->
+			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion -->
+			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye - Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day -->
+			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack -->
 		</capsuled_items>
 	</item>
 	<item id="27564" name="Ultimate Pack" type="EtcItem">
@@ -862,23 +862,23 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27561" min="1" max="1" chance="100" /> <!-- Ultimate Support Cube x1 -->
-			<item id="27525" min="1" max="1" chance="100" /> <!-- Requiem Weapon Coupon x1 -->
-			<item id="27526" min="1" max="1" chance="100" /> <!-- Immortal Armor Set Coupon x1 -->
-			<item id="27556" min="10" max="10" chance="100" /> <!-- Lv. 4 Legendary Dye Exchange Coupon x10 -->
-			<item id="39641" min="1" max="1" chance="100" /> <!-- Venir's Talisman Stage 8 x1 -->
-			<item id="26414" min="4" max="4" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% (7-day) x4 -->
-			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box x1 -->
-			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack x1 -->
-			<item id="40236" min="1" max="1" chance="100" /> <!-- Giant's Energy 100-unit Pack x1 -->
-			<item id="38763" min="1" max="1" chance="100" /> <!-- Energy of Destruction 100-unit Pack x1 -->
-			<item id="46369" min="1" max="1" chance="100" /> <!-- Blessed Zodiac Agathion Pack (30-day) x1 -->
-			<item id="36308" min="20" max="20" chance="100" /> <!-- Beauty Shop Ticket x20 -->
-			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs x40 -->
-			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion x40 -->
-			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye (30-day) x1 -->
-			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack (30-day) x1 -->
-			<item id="27542" min="1" max="1" chance="100" /> <!-- Riding Manual: Riding Wolf x1 -->
+			<item id="27561" min="1" max="1" chance="100" /> <!-- Ultimate Support Cube Box -->
+			<item id="27525" min="1" max="1" chance="100" /> <!-- Requiem Weapon Coupon -->
+			<item id="27526" min="1" max="1" chance="100" /> <!-- Immortal Armor Set Coupon -->
+			<item id="27556" min="10" max="10" chance="100" /> <!-- Lv. 4 Legendary Dye Exchange Coupon -->
+			<item id="39641" min="1" max="1" chance="100" /> <!-- Venir's Talisman - Stage 8 -->
+			<item id="26414" min="4" max="4" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% - 7-day -->
+			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box -->
+			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack -->
+			<item id="40236" min="1" max="1" chance="100" /> <!-- Giant's Energy 100-unit Pack -->
+			<item id="38763" min="1" max="1" chance="100" /> <!-- Energy of Destruction 100-unit Pack -->
+			<item id="46369" min="1" max="1" chance="100" /> <!-- Blessed Zodiac Agathion Pack (30-day) -->
+			<item id="36308" min="20" max="20" chance="100" /> <!-- Royal Beauty Ticket -->
+			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs -->
+			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion -->
+			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye - Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day -->
+			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack -->
+			<item id="27542" min="1" max="1" chance="100" /> <!-- Riding Manual: Wolf -->
 		</capsuled_items>
 	</item>
 	<item id="27565" name="Weapon Pack (C-grade)" type="EtcItem">
@@ -924,7 +924,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38705" min="1" max="1" chance="100" /> <!-- Steel Spell Breaker -->
-			<item id="38706" min="1" max="1" chance="100" /> <!-- Steel StormBringer*Ultimate Sword -->
+			<item id="38706" min="1" max="1" chance="100" /> <!-- Steel Stormbringer*Ultimate Sword -->
 			<item id="38707" min="1" max="1" chance="100" /> <!-- Steel Wizard's Tear -->
 			<item id="38708" min="1" max="1" chance="100" /> <!-- Steel Great Axe -->
 			<item id="38709" min="1" max="1" chance="100" /> <!-- Steel Twilight Knife -->
@@ -953,15 +953,15 @@
 		<capsuled_items>
 			<item id="38718" min="1" max="1" chance="100" /> <!-- Steel Keshanberk*Keshanberk -->
 			<item id="38719" min="1" max="1" chance="100" /> <!-- Steel Sword of Miracles -->
-			<item id="38720" min="1" max="1" chance="100" /> <!-- Steel Halberd-->
+			<item id="38720" min="1" max="1" chance="100" /> <!-- Steel Halberd -->
 			<item id="38721" min="1" max="1" chance="100" /> <!-- Steel Bloody Orchid -->
-			<item id="38722" min="1" max="1" chance="100" /> <!-- Steel Carnage Bow-->
+			<item id="38722" min="1" max="1" chance="100" /> <!-- Steel Carnage Bow -->
 			<item id="38723" min="1" max="1" chance="100" /> <!-- Steel White Lightning -->
 			<item id="38724" min="1" max="1" chance="100" /> <!-- Steel Doomchanter -->
 			<item id="38725" min="1" max="1" chance="100" /> <!-- Steel Divine Pain -->
 			<item id="38726" min="1" max="1" chance="100" /> <!-- Steel Infernal Master -->
 			<item id="38727" min="1" max="1" chance="100" /> <!-- Steel Blood Tornado -->
-			<item id="40293" min="1" max="1" chance="100" /> <!-- Steel Dasparion's Staff -->
+			<item id="40293" min="1" max="1" chance="100" /> <!-- Steel Dasparion's Staff - Acumen -->
 		</capsuled_items>
 	</item>
 	<item id="27568" name="Weapon Pack (S-grade)" type="EtcItem">
@@ -980,16 +980,16 @@
 		<capsuled_items>
 			<item id="38598" min="1" max="1" chance="100" /> <!-- Steel Draconic Bow -->
 			<item id="38728" min="1" max="1" chance="100" /> <!-- Steel Forgotten Blade -->
-			<item id="38729" min="1" max="1" chance="100" /> <!-- Steel Basalt Battlehammer 1-->
+			<item id="38729" min="1" max="1" chance="100" /> <!-- Steel Basalt Battlehammer -->
 			<item id="38730" min="1" max="1" chance="100" /> <!-- Steel Tallum Blade*Dark Legion's Edge -->
-			<item id="38731" min="1" max="1" chance="100" /> <!-- Steel Arcana Mace 1-->
+			<item id="38731" min="1" max="1" chance="100" /> <!-- Steel Arcana Mace -->
 			<item id="38732" min="1" max="1" chance="100" /> <!-- Steel Saint Spear -->
-			<item id="38733" min="1" max="1" chance="100" /> <!-- Steel Angel Slayer 1-->
+			<item id="38733" min="1" max="1" chance="100" /> <!-- Steel Angel Slayer -->
 			<item id="38734" min="1" max="1" chance="100" /> <!-- Steel Gram -->
 			<item id="38735" min="1" max="1" chance="100" /> <!-- Steel Laevateinn -->
 			<item id="38736" min="1" max="1" chance="100" /> <!-- Steel Sarunga -->
 			<item id="38737" min="1" max="1" chance="100" /> <!-- Steel Heaven's Divider -->
-			<item id="38738" min="1" max="1" chance="100" /> <!-- Steel Demon Splinter 1-->
+			<item id="38738" min="1" max="1" chance="100" /> <!-- Steel Demon Splinter -->
 		</capsuled_items>
 	</item>
 	<item id="27569" name="Dynasty Weapon Pack" type="EtcItem">
@@ -1009,7 +1009,7 @@
 			<item id="38599" min="1" max="1" chance="100" /> <!-- Steel Dynasty Sword -->
 			<item id="38739" min="1" max="1" chance="100" /> <!-- Steel Dynasty Phantom -->
 			<item id="38740" min="1" max="1" chance="100" /> <!-- Steel Dynasty Cudgel -->
-			<item id="38741" min="1" max="1" chance="100" /> <!-- Steel Dynasty Dualsword -->
+			<item id="38741" min="1" max="1" chance="100" /> <!-- Steel Dynasty Dual Sword -->
 			<item id="38742" min="1" max="1" chance="100" /> <!-- Steel Dynasty Halberd -->
 			<item id="38743" min="1" max="1" chance="100" /> <!-- Steel Dynasty Knife -->
 			<item id="38744" min="1" max="1" chance="100" /> <!-- Steel Dynasty Crossbow -->
@@ -1125,7 +1125,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27578" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hour)" type="EtcItem">
-		<!-- Premium User Only. Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (1-hour). -->
+		<!-- Premium User Only. Double-click to obtain a XP Rune III (Lv. 1-100+) 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1142,11 +1142,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<capsuled_items>
-			<item id="27581" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% Pack (30-day) -->
+			<item id="27581" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% Pack (30-day) - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="27579" name="SP Rune 100% Pack (1-hour)" type="EtcItem">
-		<!-- Premium User Only. Wrapped Pack containing SP Rune 100% (1-hour). -->
+		<!-- Premium User Only. Double-click to obtain a SP Rune 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1163,11 +1163,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<capsuled_items>
-			<item id="27582" min="1" max="1" chance="100" /> <!-- SP Rune 100% -->
+			<item id="27582" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="27580" name="Prestige Rune 100% Pack" type="EtcItem">
-		<!-- Premium User Only. Wrapped Pack containing Prestige Rune 100% (1-hour). -->
+		<!-- Premium User Only. Double-click to obtain a Prestige Rune 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1184,7 +1184,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<capsuled_items>
-			<item id="27583" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% -->
+			<item id="27583" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="27581" name="XP Rune III (Lv. 1-100+) 100% Pack (30-day)" additionalName="1-hour" type="EtcItem">
@@ -1222,7 +1222,7 @@
 		</skills>
 	</item>
 	<item id="27583" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
-		<!-- Premium User Only. When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
+		<!-- Premium User Only. When carried during a hunt, Adena/ item drop rate/ item acquisition through Spoil +30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_depositable" val="false" />
@@ -1334,8 +1334,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27593" min="1" max="1" chance="95" />
-			<item id="27585" min="1" max="1" chance="5" />
+			<item id="27593" min="1" max="1" chance="95" /> <!-- Daily Coin -->
+			<item id="27585" min="1" max="1" chance="5" /> <!-- Special Supply Box - Standard -->
 		</capsuled_items>
 	</item>
 	<item id="27590" name="Supply Box" additionalName="Mid-grade" type="EtcItem">
@@ -1352,8 +1352,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27593" min="3" max="3" chance="95" />
-			<item id="27586" min="1" max="1" chance="5" />
+			<item id="27593" min="3" max="3" chance="95" /> <!-- Daily Coin -->
+			<item id="27586" min="1" max="1" chance="5" /> <!-- Special Supply Box - Mid-grade -->
 		</capsuled_items>
 	</item>
 	<item id="27591" name="Supply Box" additionalName="High-grade" type="EtcItem">
@@ -1370,8 +1370,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27593" min="4" max="4" chance="95" />
-			<item id="27587" min="1" max="1" chance="5" />
+			<item id="27593" min="4" max="4" chance="95" /> <!-- Daily Coin -->
+			<item id="27587" min="1" max="1" chance="5" /> <!-- Special Supply Box - High-grade -->
 		</capsuled_items>
 	</item>
 	<item id="27592" name="Supply Box" additionalName="Top-grade" type="EtcItem">
@@ -1388,8 +1388,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="27593" min="5" max="5" chance="95" />
-			<item id="27588" min="1" max="1" chance="5" />
+			<item id="27593" min="5" max="5" chance="95" /> <!-- Daily Coin -->
+			<item id="27588" min="1" max="1" chance="5" /> <!-- Special Supply Box - Top-grade -->
 		</capsuled_items>
 	</item>
 	<item id="27593" name="Daily Coin" type="EtcItem">
@@ -1406,7 +1406,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27594" name="Maphr's Wind Scroll" type="EtcItem">
-		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption +200% and Acquired XP/ SP +200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1429,7 +1429,7 @@
 		</skills>
 	</item>
 	<item id="27595" name="Vitality Maintaining Potion" type="EtcItem">
-		<!-- Retains Vitality for 10 min. Cooldown is 30min. Vitality item with limited usage. -->
+		<!-- Retains Vitality for 10 min. Cooldown is 30 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="weight" val="36" />
@@ -1469,7 +1469,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27598" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
-		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Amaranthine equipment for Blessed equipment. -->
+		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Helios equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />

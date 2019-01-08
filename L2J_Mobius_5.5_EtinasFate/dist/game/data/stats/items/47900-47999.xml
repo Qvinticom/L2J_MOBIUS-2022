@@ -95,7 +95,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47911" name="Angel's Gift Package" additionalName="Lv3" type="EtcItem">
-		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced RedandBlue Cat's Eye (30-day fixed period). -->
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced Red&Blue Cat's Eye (30-day fixed period). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -104,7 +104,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47912" name="Angel's Gift Package" additionalName="Lv4" type="EtcItem">
-		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced RedandBlue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced Red&Blue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -113,7 +113,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47913" name="Greater Transport Box" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term). -->
+		<!-- Double-click to obtain a Greater Vital Stone Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -123,7 +123,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47914" name="Advanced RedandBlue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term) and a Blue Cat's Eye (30-day fixed term). -->
+		<!-- Double-click to obtain a Greater Red Cat's Eye Lv. 1 (30-day) and a Blue Cat's Eye Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47915" name="Greater Tanzanite Box" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Greater Tanzanite (30-day fixed term). -->
+		<!-- Double-click to obtain a Greater Tanzanite Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -184,7 +184,7 @@
 		</stats>
 	</item>
 	<item id="47918" name="Nevit's Gold Hourglass" type="EtcItem">
-		<!-- When used, increases EXP/SP from hunting by 50%, and every 5 billion EXP, a Stand of Shining Growth is obtained for 30 minutes. Cannot be used with Fall of the Dragon, Dandy's Home Run Ball, and Agathion - EXP Bottle. Cooldown 5 minutes. -->
+		<!-- When used, increases Acquired XP/ SP by 50% for 30 min. and obtains 1 Shining Sroll of Growth each time you obtain 5 billion EXP. Cannot be used with Fall of the Dragon, Dandy's Home Run Ball, and Agathion - EXP Bottle. Cooldown 5 min. -->
 		<set name="icon" val="icon.bm_nebit_bonus_time_up" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47919" name="Shining Scroll of Growth" type="EtcItem">
-		<!-- When used, 1 billion EXP obtained, is only 20% effective after Lv 99. Can be used above Lv 85. -->
+		<!-- When used, 1 billion EXP obtained, is only 20% effective while below Lv 99. Can be used above Lv 85. This scroll cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.bm_nebit_exp_book" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -272,7 +272,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
-		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. A character of level 101 or over can receive the request by double-clicking the item. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. Can be performed twice a day. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shilen. Characters of level 103 or higher can receive the request by double-clicking the item. Will be deleted after the event. Can be played twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -285,7 +285,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47926" name="Red Libra Request - Altar of Shilen" type="EtcItem">
-		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. -->
+		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shilen. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -339,7 +339,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47930" name="Elvish Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the �The Power of Gods, Giants and the almighty Exalted which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "The Power of Gods, Giants and the almighty Exalted" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_elf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -348,7 +348,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47931" name="Dark Elf Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the �The Power That Brings Everything Together which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "The Power That Brings Everything Together" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_darkelf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -357,7 +357,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47932" name="Orc Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Rise of the Exiled People, the Ashen Shadow Revolutionaries which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Rise of the Exiled People, the Ashen Shadow Revolutionaries" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_orc_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47933" name="Dwarvish Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Mystic Tavern of the Continent�s Hidden Stories which is known by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Mystic Tavern of the Continent's Hidden Stories" which is known by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_dwarf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -375,7 +375,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47934" name="Human Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Kain Van Halter and Giselle's (Camille) Tragic Love Story which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Kain Van Halter and Giselle's (Camille) Tragic Love Story" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_human_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -384,7 +384,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47935" name="Kamael Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Kamael, the Race Created by Giants which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Kamael, the Race Created by Giants" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_kamael_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -393,7 +393,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47936" name="Ertheia Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Pureblood Surr and Half-blood Nann, Reconciliation and Harmony which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Pureblood Surr and Half-blood Nann, Reconciliation and Harmony" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_ertheia_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -402,7 +402,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47937" name="Lineage 2 Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the The Seven Signs, Giants and Embryos which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "The Seven Signs, Giants and Embryos" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -477,7 +477,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47944" name="13th Anniversary Item" type="EtcItem">
-		<!-- An event item for the 13th anniversary of Lineage 2. Village event NPC Bliss needs it for the event. Will be deleted when the event has concluded. -->
+		<!-- An event item for the 6th anniversary of Lineage 2. Village event NPC Bliss needs it for the event. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_13th" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -519,7 +519,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47947" name="Request - Instanced Zone Dungeon" type="EtcItem">
-		<!-- Double-click to receive an instanced zone dungeon request. You can complete the mission if you carry out 1 type of daily quest in an instanced zone dungeon of at least level 85. Will be deleted when the event has concluded. Can be carried out once a day. -->
+		<!-- Double-click to receive an Instance Zone dungeon request. You can complete the mission if you carry out 1 type of daily quest in an Instance Zone dungeon of at least level 85. Will be deleted when the event has concluded. Can be carried out once a day. -->
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -543,7 +543,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="47949" name="Request - Instanced Zone Dungeon" type="EtcItem">
-		<!-- You can complete the mission if you carry out 1 type of daily quest in an instanced zone dungeon of at least level 85. Will be deleted when the event has concluded. -->
+		<!-- You can complete the mission if you carry out 1 type of daily quest in an Instance Zone dungeon of at least level 85. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
@@ -575,7 +575,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47953" name="Shaper of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -599,7 +599,7 @@
 		</stats>
 	</item>
 	<item id="47954" name="Dicing Death of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -623,7 +623,7 @@
 		</stats>
 	</item>
 	<item id="47955" name="Slasher of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -648,7 +648,7 @@
 		</stats>
 	</item>
 	<item id="47956" name="Avenger of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -673,7 +673,7 @@
 		</stats>
 	</item>
 	<item id="47957" name="Fighter of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -699,7 +699,7 @@
 		</stats>
 	</item>
 	<item id="47958" name="Stormer of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -728,7 +728,7 @@
 		</stats>
 	</item>
 	<item id="47959" name="Thrower of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -754,7 +754,7 @@
 		</stats>
 	</item>
 	<item id="47960" name="Shooter of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -780,7 +780,7 @@
 		</stats>
 	</item>
 	<item id="47961" name="Buster of Challenger" type="Weapon">
-		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -804,7 +804,7 @@
 		</stats>
 	</item>
 	<item id="47962" name="Caster of Challenger" type="Weapon">
-		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -829,7 +829,7 @@
 		</stats>
 	</item>
 	<item id="47963" name="Retributer of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -855,7 +855,7 @@
 		</stats>
 	</item>
 	<item id="47964" name="Dual Sword of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -880,7 +880,7 @@
 		</stats>
 	</item>
 	<item id="47965" name="Dual Dagger of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -906,7 +906,7 @@
 		</stats>
 	</item>
 	<item id="47966" name="Dual Blunt of Challenger" type="Weapon">
-		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1404,14 +1404,14 @@
 		</stats>
 	</item>
 	<item id="47991" name="Brooch Spirit Stone" additionalName="Rare" type="EtcItem">
-		<!-- Item crated by infusing a brooch accessory Spirit Stone with a special power. Can be used to inject the special power into an enhanced Glorious Brooch through Shadai in Heine. -->
+		<!-- Item crated by infusing a brooch accessory Spirit Stone with a special power. However, it cannot be used as an Augment Stone. Can be used to inject the special power into an enhanced Glorious Brooch through Shadai in Heine. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47992" name="Fish Chilli Stew - WIT" additionalName="Event" type="EtcItem">
-		<!-- When used, WIT +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, WIT +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1419,7 +1419,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47993" name="Fish Chilli Stew - INT" additionalName="Event" type="EtcItem">
-		<!-- When used, INT +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, INT +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1427,7 +1427,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47994" name="Fish Chilli Stew - MEN" additionalName="Event" type="EtcItem">
-		<!-- When used, MEN +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, MEN +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1435,7 +1435,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47995" name="Fish Chilli Stew - DEX" additionalName="Event" type="EtcItem">
-		<!-- When used, DEX +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, DEX +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1443,7 +1443,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47996" name="Fish Chilli Stew - STR" additionalName="Event" type="EtcItem">
-		<!-- When used, STR +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, STR +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1451,7 +1451,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47997" name="Fish Chilli Stew - CON" additionalName="Event" type="EtcItem">
-		<!-- When used, CON +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, CON +3 and LUC +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1459,7 +1459,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47998" name="Fish Cream Stew - WIT" additionalName="Event" type="EtcItem">
-		<!-- When used, WIT +3 and CHA +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, WIT +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1467,7 +1467,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47999" name="Fish Cream Stew - INT" additionalName="Event" type="EtcItem">
-		<!-- When used, INT +3 and CHA +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, INT +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

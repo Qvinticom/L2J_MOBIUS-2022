@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7000" toLevel="1" name="NPC Default">
 		<magicLvl>1</magicLvl>
@@ -49,7 +49,6 @@
 		</effects>
 	</skill>
 	<skill id="7003" toLevel="1" name="Dispel All">
-		<!-- Confirmed CT2.5 -->
 		<castRange>400</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>900</effectRange>
@@ -74,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="7004" toLevel="2" name="Dispel Petrification">
-		<!-- This skill only has one level, 2. -->
+		<!-- Cures petrification with the effect of 2 or less. -->
 		<effectPoint>566</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
@@ -91,7 +90,7 @@
 		</effects>
 	</skill>
 	<skill id="7005" toLevel="4" name="Greater Chant of Vampire">
-		<!-- This skill only has one level, 4. -->
+		<!-- Momentarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability. Effect 4. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -124,8 +123,7 @@
 		</effects>
 	</skill>
 	<skill id="7006" toLevel="13" name="The Love of Pa'agrio">
-		<!-- TODO: Needs to be done -->
-		<!-- This skill only has one level, 13. -->
+		<!-- Momentarily increases target's allies HP recovery bonus. Effect 6. -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
@@ -150,8 +148,7 @@
 		</conditions>
 	</skill>
 	<skill id="7007" toLevel="4" name="Greater Seal of Flame">
-		<!-- Needs to be done -->
-		<!-- This skill only has one level, 4. -->
+		<!-- Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP. Effect 8. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -179,6 +176,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7008" toLevel="1" name="Feather of Blessing">
+		<!-- Once used, the Feather of Blessing cannot be reused for another 5 minutes. -->
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -223,6 +221,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7014" toLevel="1" name="Test - Critical Damage Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -230,6 +229,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7015" toLevel="1" name="Test - Critical Damage Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -237,6 +237,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7016" toLevel="1" name="Test - Critical Damage Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -244,6 +245,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7017" toLevel="1" name="Test - Critical Damage Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -251,6 +253,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7018" toLevel="1" name="Test - Critical Rate Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -258,6 +261,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7019" toLevel="1" name="Test - Critical Rate Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -265,6 +269,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7020" toLevel="1" name="Test - Critical Rate Up">
+		<!-- Increases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -272,6 +277,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7021" toLevel="1" name="Test - Critical Rate Down">
+		<!-- Decreases received Critical Damage -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -279,6 +285,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="7022" toLevel="1" name="Test - Find Hidden Door">
+		<!-- Look for hidden door. -->
 		<affectLimit>6-12</affectLimit>
 		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -318,7 +325,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7028" toLevel="1" name="Stationary NPCs">
-		<!-- TODO: Implement me! -->
 		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -329,7 +335,7 @@
 		</effects>
 	</skill>
 	<skill id="7029" toLevel="4" name="Super Haste">
-		<!-- GM Skill -->
+		<!-- Speed is increased. -->
 		<effectPoint>1</effectPoint>
 		<icon>icon.skill7029</icon>
 		<magicLvl>1</magicLvl>
@@ -454,7 +460,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Summon">
-				<npcId>20150</npcId>
+				<npcId>20150</npcId> <!-- King Bugbear -->
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>
@@ -474,7 +480,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Summon">
-				<npcId>20169</npcId>
+				<npcId>20169</npcId> <!-- Skeleton Royal Guard -->
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>
@@ -494,7 +500,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Summon">
-				<npcId>20241</npcId>
+				<npcId>20241</npcId> <!-- Hunter Gargoyle -->
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects>
@@ -540,7 +546,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7041" toLevel="1" name="Master's Blessing - Focus">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Critical attack rate by 30% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -567,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="7042" toLevel="1" name="Master's Blessing - Death Whisper">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Critical P. Atk. by 35% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -594,7 +600,7 @@
 		</effects>
 	</skill>
 	<skill id="7043" toLevel="1" name="Master's Blessing - Haste">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -621,7 +627,7 @@
 		</effects>
 	</skill>
 	<skill id="7044" toLevel="1" name="Master's Blessing - Guidance">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Accuracy by 4 for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -648,7 +654,7 @@
 		</effects>
 	</skill>
 	<skill id="7045" toLevel="1" name="Master's Blessing - Blessed Body">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Max HP by 35% for 1 hour. -->
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -675,7 +681,7 @@
 		</effects>
 	</skill>
 	<skill id="7046" toLevel="1" name="Master's Blessing - Blessed Soul">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Max MP by 35% for 1 hour. -->
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -702,7 +708,7 @@
 		</effects>
 	</skill>
 	<skill id="7047" toLevel="1" name="Master's Blessing - Agility">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increase Evasion by 4 for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
@@ -729,7 +735,7 @@
 		</effects>
 	</skill>
 	<skill id="7048" toLevel="1" name="Master's Blessing - Acumen">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Casting Spd. by 30% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -756,7 +762,7 @@
 		</effects>
 	</skill>
 	<skill id="7049" toLevel="1" name="Master's Blessing - Decrease Weight">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
@@ -782,7 +788,7 @@
 		</effects>
 	</skill>
 	<skill id="7050" toLevel="1" name="Master's Blessing - Might">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Atk. by 15% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -809,7 +815,7 @@
 		</effects>
 	</skill>
 	<skill id="7051" toLevel="1" name="Master's Blessing - Shield">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -836,7 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="7052" toLevel="1" name="Master's Blessing - Magic Barrier">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases M. Def. by 30% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -863,7 +869,7 @@
 		</effects>
 	</skill>
 	<skill id="7053" toLevel="1" name="Master's Blessing - Vampiric Rage">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -890,7 +896,7 @@
 		</effects>
 	</skill>
 	<skill id="7054" toLevel="1" name="Master's Blessing - Empower">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases M. Atk. by 75% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -917,7 +923,7 @@
 		</effects>
 	</skill>
 	<skill id="7055" toLevel="1" name="Master's Blessing - Wind Walk">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases Speed by 33 for 1 hour. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -944,7 +950,7 @@
 		</effects>
 	</skill>
 	<skill id="7056" toLevel="1" name="Master's Blessing - Berserker Spirit">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -999,7 +1005,7 @@
 		</effects>
 	</skill>
 	<skill id="7057" toLevel="1" name="Master's Blessing - Greater Might">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Atk. by 10% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
@@ -1026,7 +1032,7 @@
 		</effects>
 	</skill>
 	<skill id="7058" toLevel="1" name="Master's Blessing - Greater Shield">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
@@ -1053,7 +1059,7 @@
 		</effects>
 	</skill>
 	<skill id="7059" toLevel="1" name="Master's Blessing - Wild Magic">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
@@ -1080,7 +1086,7 @@
 		</effects>
 	</skill>
 	<skill id="7060" toLevel="1" name="Master's Blessing - Clarity">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
@@ -1118,8 +1124,7 @@
 		</effects>
 	</skill>
 	<skill id="7061" toLevel="1" name="Master's Blessing - Prophecy of Water">
-		<!-- GM Skill -->
-		<!-- Confirmed CT2.5 -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1198,7 +1203,7 @@
 		</effects>
 	</skill>
 	<skill id="7062" toLevel="1" name="Master's Blessing - Prophecy of Fire">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1273,7 +1278,7 @@
 		</effects>
 	</skill>
 	<skill id="7063" toLevel="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1344,7 +1349,7 @@
 		</effects>
 	</skill>
 	<skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and Accuracy by 4. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1416,6 +1421,7 @@
 		</effects>
 	</skill>
 	<skill id="7065" toLevel="1" name="Test - Charge">
+		<!-- Charges into the enemy. -->
 		<coolTime>200</coolTime>
 		<hitTime>800</hitTime>
 		<magicLvl>75</magicLvl>
@@ -1434,6 +1440,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="7066" toLevel="1" name="Test Stun Charge">
+		<!-- Charges into enemy and Stuns. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1466,6 +1473,7 @@
 		</effects>
 	</skill>
 	<skill id="7067" toLevel="1" name="Test Range Charge">
+		<!-- Charges into enemy and causes bleeding -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1494,6 +1502,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="7068" toLevel="1" name="Test Steal Abnormal State">
+		<!-- Steals enemy's abnormal state. -->
 		<coolTime>200</coolTime>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1513,6 +1522,7 @@
 		</conditions>
 	</skill>
 	<skill id="7069" toLevel="1" name="Test Abnormal State DD">
+		<!-- Inflicts damage according to the enemy's number of abnormal states. -->
 		<coolTime>200</coolTime>
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1532,11 +1542,13 @@
 		</conditions>
 	</skill>
 	<skill id="7070" toLevel="1" name="Test - Soul Eating Passive">
+		<!-- Absorbs soul. -->
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="7071" toLevel="1" name="Test - Soul Transfer">
+		<!-- Transfers soul to party member. -->
 		<hitTime>900</hitTime>
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
@@ -1553,7 +1565,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="7072" toLevel="1" name="Test - Basic Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Summons trap. -->
 		<hitTime>3000</hitTime>
 		<magicLvl>20</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -1566,11 +1578,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonTrap">
-				<npcId>30048</npcId>
+				<npcId>30048</npcId> <!-- Darin -->
 			</effect>
 		</effects>
 	</skill>
 	<skill id="7073" toLevel="1" name="Test - Find Trap">
+		<!-- Locates trap. -->
 		<hitTime>1000</hitTime>
 		<magicLvl>20</magicLvl>
 		<operateType>A1</operateType>
@@ -1582,6 +1595,7 @@
 		<affectScope>RANGE</affectScope>
 	</skill>
 	<skill id="7074" toLevel="1" name="Test - Cancel Trap">
+		<!-- Cancels trap. -->
 		<hitTime>4000</hitTime>
 		<magicLvl>20</magicLvl>
 		<operateType>A1</operateType>
@@ -1594,6 +1608,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7075" toLevel="1" name="Test - Distance DD">
+		<!-- Magic damage changes by distance. -->
 		<effectPoint>-1</effectPoint>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1610,6 +1625,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7076" toLevel="1" name="Test - Delay Debuff">
+		<!-- Bleeds for 20 seconds and Stuns. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1634,6 +1650,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7077" toLevel="1" name="Test - Delay Debuff - Call">
+		<!-- Currently stunned. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1650,7 +1667,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7078" toLevel="1" name="Test - Blink">
-		<!-- Confirmed CT2.5 -->
+		<!-- Stun -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1687,6 +1704,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="7079" toLevel="1" name="Test - Party Damage Absorb">
+		<!-- Transfers party damage to tanker. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1704,6 +1722,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="7080" toLevel="1" name="Test - General Attack Prohibited">
+		<!-- Cannot perform general attack. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>40</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1721,6 +1740,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7081" toLevel="1" name="Effect Test - Land Shot">
+		<!-- Shoots toward ground. -->
 		<affectLimit>5-12</affectLimit>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -1738,6 +1758,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7082" toLevel="1" name="Effect Test - Chain Lightning">
+		<!-- Chain Lightning -->
 		<affectLimit>5-12</affectLimit>
 		<effectPoint>-1</effectPoint>
 		<hitTime>5000</hitTime>
@@ -1757,6 +1778,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7083" toLevel="1" name="Test - Trap Skill">
+		<!-- Trap Range Skill -->
 		<affectLimit>6-12</affectLimit>
 		<effectPoint>-1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1772,6 +1794,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7084" toLevel="1" name="Test - Trap Skill">
+		<!-- Trap Range Skill -->
 		<affectLimit>6-12</affectLimit>
 		<effectPoint>-1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1831,8 +1854,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="7088" toLevel="1" name="Master's Blessing - Improve Combat">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -1870,8 +1892,7 @@
 		</effects>
 	</skill>
 	<skill id="7089" toLevel="1" name="Master's Blessing - Improve Magic">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1909,8 +1930,7 @@
 		</effects>
 	</skill>
 	<skill id="7090" toLevel="1" name="Master's Blessing - Improve Condition">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -1948,8 +1968,7 @@
 		</effects>
 	</skill>
 	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -1987,8 +2006,7 @@
 		</effects>
 	</skill>
 	<skill id="7092" toLevel="1" name="Master's Blessing - Improve Shield Defense">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and Shield Defense by 50%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_SHIELD_RATE_DEFENCE_UP</abnormalType>
@@ -2026,8 +2044,7 @@
 		</effects>
 	</skill>
 	<skill id="7093" toLevel="1" name="Master's Blessing - Improve Movement">
-		<!-- Confirmed CT2.5 -->
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
@@ -2065,7 +2082,7 @@
 		</effects>
 	</skill>
 	<skill id="7094" toLevel="1" name="Master's Blessing - Sharpen Edge">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
@@ -2117,7 +2134,7 @@
 		</effects>
 	</skill>
 	<skill id="7095" toLevel="1" name="Master's Blessing - Face Harden">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10% for 1 hour. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
@@ -2148,7 +2165,7 @@
 		</effects>
 	</skill>
 	<skill id="7096" toLevel="1" name="Master's Blessing - Blessing of Noblesse">
-		<!-- GM Skill -->
+		<!-- The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
@@ -2192,7 +2209,6 @@
 		</effects>
 	</skill>
 	<skill id="7098" toLevel="1" name="Clan-exclusive Pet Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Recovers all of your HP. Power 3000 -->
 		<icon>icon.skill1401</icon>
 		<operateType>A1</operateType>
@@ -2213,7 +2229,6 @@
 		</effects>
 	</skill>
 	<skill id="7099" toLevel="1" name="Clan-exclusive Pet Fear">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts fear on the target for 3 seconds. -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>

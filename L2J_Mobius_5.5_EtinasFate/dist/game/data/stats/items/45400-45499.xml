@@ -164,7 +164,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45415" name="Dandy's Home Run Ball" type="EtcItem">
-		<!-- For 1 hr., XP/SP gain + 100%, and changes the appearance of your armor into that of a NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
+		<!-- For 1 hr., Acquired XP/ SP +100%, and changes the appearance of your armor into that of a Lineage II Uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. Buff remains after death. -->
 		<set name="icon" val="icon.ev_dinos_baseball" />
 		<set name="handler" val="ItemSkills" />	
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -183,7 +183,7 @@
 		</skills>
 	</item>
 	<item id="45416" name="Blue Save Card (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -192,7 +192,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45417" name="Blue Save Card (R95-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r95" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -201,7 +201,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45418" name="Blue Save Card (R99-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r99" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -210,7 +210,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45419" name="Red Save Card (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -219,7 +219,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45420" name="Red Save Card (R95-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r95" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45421" name="Red Save Card (R99-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r99" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -237,7 +237,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45422" name="Royal Blue Save Card (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -246,7 +246,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45423" name="Royal Blue Save Card (R95-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r95" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -255,7 +255,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45424" name="Royal Blue Save Card (R99-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r99" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -264,7 +264,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45425" name="Royal Red Save Card (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -273,7 +273,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45426" name="Royal Red Save Card (R95-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r95" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -282,7 +282,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45427" name="Royal Red Save Card (R99-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
+		<!-- Enchant success rate +10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r99" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -291,7 +291,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45428" name="Orichalcum Arrow" additionalName="Event" type="EtcItem">
-		<!-- Used for R-grade bows. -->
+		<!-- Arrow made of Orichalcum. Used as arrows for R-grade bows. -->
 		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -306,7 +306,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="45429" name="Orichalcum Bolt" additionalName="Event" type="EtcItem">
-		<!-- Used for R-grade crossbows. -->
+		<!-- Bolt made of Orichalcum. Used as bolts for R-grade ?rossbows. -->
 		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -367,7 +367,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="45434" name="NC Dinos Hat Appearance Stone Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing an NC Dinos Hat Appearance Stone (30-day). -->
+		<!-- Double-click to obtain an NC Dinos Hat Appearance Stone (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -396,7 +396,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="45436" name="NC Dinos Uniform Appearance Stone Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing an NC Dinos Uniform Appearance Stone (30-day). -->
+		<!-- Double-click to obtain an NC Dinos Uniform Appearance Stone (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -409,7 +409,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="45437" name="Baium's Ring" additionalName="30-day" type="Armor">
-		<!-- MP + 21, Poison Resistance + 40%, Poison Atk. Rate + 40%, Hold Resistance + 30%, Hold Atk. Rate + 30%, increases Accuracy, P. Critical Damage, Atk. Spd. and Casting Spd. Equipping two gives the effect of one. 30-day. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Hold Resistance +30%, Hold Atk. Rate +30%, increases Accuracy, P. Critical Damage, Atk. Spd. and Casting Spd. Equipping two gives the effect of one. 30-day. -->
 		<set name="icon" val="icon.bm_ring_of_baium" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -430,7 +430,7 @@
 		</stats>
 	</item>
 	<item id="45438" name="Baium's Ring Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing a Baium's Ring (30-day). -->
+		<!-- Double-click to obtain a Baium's Ring (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -443,7 +443,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="45439" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +20% for weapons (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -470,7 +470,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="45441" name="Agathion - Alien Celebrity Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Kisung. -->
+		<!-- Double-click to obtain a Kisung. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -483,7 +483,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45442" name="Alien's Gulp Potion" additionalName="Event" type="EtcItem">
-		<!-- Restores 3000 HP and remaining power restores CP. No duration. -->
+		<!-- Restores 3000 HP and remaining power restores CP. No cooldown. -->
 		<set name="icon" val="icon.etc_ev_draco_purple_bottle" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
@@ -611,7 +611,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45452" name="Flower Petal" additionalName="Event" type="EtcItem">
-		<!-- A flower petal that marks the beginning of spring. Collect a certain amount and exchange them for a reward by clicking on the Points button in the Player Commendation Points screen. -->
+		<!-- A flower petal that marks the beginning of spring. Collect a certain amount and exchange them for a reward by clicking on the Points button in the PA Points screen. -->
 		<set name="icon" val="icon.etc_flower_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -623,14 +623,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45453" name="Cool Hat Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing either a Napoleon Hat Appearance Stone (1-day), Zorro Hat Appearance Stone (1-day), or a Ruthless Tribe Mask Appearance Stone (1-day). -->
+		<!-- Double-click to obtain either a Napoleon Hat Appearance Stone (1-day), Zorro Hat Appearance Stone (1-day), or a Ruthless Tribe Mask Appearance Stone (1-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45454" name="Kokko's Love" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Attack Attribute by 100, P. Atk. by 20%, M. Atk. by 30%, Atk. Spd./Casting Spd. by 10%, P. Accuracy by 4, M. Atk. by 4, Movement Speed by 10, Max HP/MP/CP by 10%, P. Def by 10%, M. Def by 10%, and reduces Skills MP cost by 10% for 30 minutes. Cannot be used with Art of Seduction. Due to be deleted on September 24, 2014 (Wed) after regular maintenance. -->
+		<!-- When used, increases Atk. Attribute by 100, P. Atk. by 20%, M. Atk. by 30%, Atk. Spd./ Casting Spd. by 10%, P. Accuracy by 4, M. Atk. by 4, Movement Speed by 10, Max HP/ MP/ CP by 10%, P. Def by 10%, M. Def by 10%, and reduces Skills MP cost by 10% for 30 min. Cannot be used with Art of Seduction. Due to be deleted on September 24, 2014 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -713,7 +713,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="45463" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
-		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. -->
+		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1082,7 +1082,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45499" name="Fishing Rod Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing a Fishing Rod prepared by Goldeen. Double-click to get a Fishing Rod. -->
+		<!-- Double-click to obtain a Fishing Rod prepared by Goldeen. Double-click to get a Fishing Rod. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

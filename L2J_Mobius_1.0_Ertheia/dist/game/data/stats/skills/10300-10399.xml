@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10300" toLevel="6" name="Last Attack">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 52746 Power added to P. Atk. Cuts regular monsters' HP down to 1. Usable when target's HP is 10% or below. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -102,7 +101,6 @@
 		</effects>
 	</skill>
 	<skill id="10302" toLevel="4" name="Triple Sonic Slash">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Gathers Momentum to inflict 22531 damage onto the enemy, increasing the damage as Momentum is consumed. Damage + 30% at max Momentum consumption of 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
 		<icon>icon.skill10302</icon>
 		<operateType>A1</operateType>
@@ -295,7 +293,6 @@
 		</effects>
 	</skill>
 	<skill id="10307" toLevel="1" name="Fist of Fury">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Greatly increases Atk. Spd. Continuously consumes HP. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
 		<icon>icon.skill10307new</icon>
 		<operateType>T</operateType>
@@ -507,7 +504,6 @@
 		</effects>
 	</skill>
 	<skill id="10312" toLevel="4" name="Crafting Mastery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- There is a small chance that the item quantity will double upon crafting. Critical level 1. -->
 		<icon>icon.skill10312</icon>
 		<operateType>P</operateType>
@@ -568,7 +564,6 @@
 		</effects>
 	</skill>
 	<skill id="10314" toLevel="4" name="Disarmament">
-		<!-- Updated to IO -->
 		<!-- Disarms enemies for 5 sec. and decreases their P. Atk./ M. Atk. by 40%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -796,7 +791,7 @@
 		</effects>
 	</skill>
 	<skill id="10319" toLevel="3" name="Duelist's Fury">
-		<!-- PvP Damage + 20%, Speed + 66, Debuff Resistance + 90%. -->
+		<!-- P. Atk. + 30%, Spd. + 66, and increases debuff resistance. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
@@ -844,7 +839,7 @@
 		</effects>
 	</skill>
 	<skill id="10320" toLevel="3" name="Faceoff">
-		<!-- Engages target in 1:1 combat. Invincible for 30 seconds, and Duelist's Fury is applied, increasing PvP Damage by 20%, Speed by 66, and Debuff Resistance by 90%. -->
+		<!-- Engages target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. Increases your P. Atk., Spd., and debuff resistance. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
@@ -869,7 +864,7 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Duelist's Fury -->
-				<skillId>10319</skillId>
+				<skillId>10319</skillId> <!-- Duelist's Fury -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1016,13 +1011,13 @@
 		<operateType>P</operateType>
 		<conditions>
 			<condition name="OpCheckSkill">
-				<skillId>261</skillId>
-				<skillId>10258</skillId>
-				<skillId>10260</skillId>
-				<skillId>10262</skillId>
-				<skillId>10265</skillId>
-				<skillId>10269</skillId>
-				<skillId>10318</skillId>
+				<skillId>261</skillId> <!-- Triple Sonic Slash -->
+				<skillId>10258</skillId> <!-- Armor Destruction -->
+				<skillId>10260</skillId> <!-- Mega Strike -->
+				<skillId>10262</skillId> <!-- Power Bomber -->
+				<skillId>10265</skillId> <!-- Eruption -->
+				<skillId>10269</skillId> <!-- Jump Attack -->
+				<skillId>10318</skillId> <!-- Sonic Flash -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>

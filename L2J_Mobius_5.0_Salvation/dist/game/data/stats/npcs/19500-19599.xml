@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19501" level="99" type="L2Npc" name="Beleth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -371,14 +371,14 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="40046" min="1" max="1" chance="6.29" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40048" min="1" max="1" chance="6.273" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40041" min="1" max="1" chance="6.246" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40045" min="1" max="1" chance="6.235" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40044" min="1" max="1" chance="6.227" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40047" min="1" max="1" chance="6.211" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40043" min="1" max="1" chance="6.201" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40042" min="1" max="1" chance="6.186" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="1" chance="6.29" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
+				<item id="40048" min="1" max="1" chance="6.273" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+				<item id="40041" min="1" max="1" chance="6.246" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40045" min="1" max="1" chance="6.235" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="40044" min="1" max="1" chance="6.227" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+				<item id="40047" min="1" max="1" chance="6.211" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40043" min="1" max="1" chance="6.201" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40042" min="1" max="1" chance="6.186" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -408,14 +408,14 @@
 		<dropLists>
 			<drop>
 				<item id="40063" min="1" max="2" chance="100" /> <!-- Secret Ancient Tome Fragment -->
-				<item id="40042" min="1" max="1" chance="13.11" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40043" min="1" max="1" chance="12.97" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40044" min="1" max="1" chance="12.97" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40041" min="1" max="1" chance="12.75" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40047" min="1" max="1" chance="12.62" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40048" min="1" max="1" chance="12.43" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40045" min="1" max="1" chance="12.18" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40046" min="1" max="1" chance="11.96" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40042" min="1" max="1" chance="13.11" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
+				<item id="40043" min="1" max="1" chance="12.97" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40044" min="1" max="1" chance="12.97" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+				<item id="40041" min="1" max="1" chance="12.75" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40047" min="1" max="1" chance="12.62" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40048" min="1" max="1" chance="12.43" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+				<item id="40045" min="1" max="1" chance="12.18" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="40046" min="1" max="1" chance="11.96" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -445,14 +445,14 @@
 		<dropLists>
 			<drop>
 				<item id="40063" min="2" max="4" chance="100" /> <!-- Secret Ancient Tome Fragment -->
-				<item id="40048" min="1" max="2" chance="12.82" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40042" min="1" max="2" chance="12.61" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40044" min="1" max="2" chance="12.6" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40043" min="1" max="2" chance="12.58" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40047" min="1" max="2" chance="12.56" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40041" min="1" max="2" chance="12.51" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40045" min="1" max="2" chance="12.28" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				<item id="40046" min="1" max="2" chance="11.92" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="2" chance="12.82" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+				<item id="40042" min="1" max="2" chance="12.61" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
+				<item id="40044" min="1" max="2" chance="12.6" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+				<item id="40043" min="1" max="2" chance="12.58" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40047" min="1" max="2" chance="12.56" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40041" min="1" max="2" chance="12.51" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40045" min="1" max="2" chance="12.28" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="40046" min="1" max="2" chance="11.92" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
 			</drop>
 		</dropLists>
 		<collision>

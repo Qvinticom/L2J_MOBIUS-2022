@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25200" level="71" type="L2Monster" name="Sheshark's Family" title="Raid Fighter">
 		<parameters>
@@ -772,7 +772,7 @@
 				<item id="226" min="1" max="1" chance="0.75" /> <!-- Cursed Dagger -->
 				<item id="230" min="1" max="1" chance="0.75" /> <!-- Needle Wolverine -->
 				<item id="232" min="1" max="1" chance="0.75" /> <!-- Dark Elven Dagger -->
-				<item id="72" min="1" max="1" chance="0.75" /> <!-- Stormbringer -->
+				<item id="72" min="1" max="1" chance="0.75" /> <!-- StormBringer -->
 				<item id="263" min="1" max="1" chance="0.75" /> <!-- Chakram -->
 				<item id="281" min="1" max="1" chance="0.75" /> <!-- Crystallized Ice Bow -->
 				<item id="89" min="1" max="1" chance="0.75" /> <!-- Big Hammer -->
@@ -785,7 +785,7 @@
 				<item id="173" min="1" max="1" chance="0.75" /> <!-- Skull Graver -->
 				<item id="193" min="1" max="1" chance="0.75" /> <!-- Stick of Faith -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="30.61" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1056,7 +1056,7 @@
 				<item id="261" min="1" max="1" chance="3.234" /> <!-- Bich'Hwa -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1218,7 +1218,7 @@
 				<item id="95" min="1" max="1" chance="1.248" /> <!-- Poleaxe -->
 				<item id="75" min="1" max="1" chance="1.242" /> <!-- Caliburs -->
 				<item id="134" min="1" max="1" chance="1.239" /> <!-- Sword of Nightmare -->
-				<item id="301" min="1" max="1" chance="1.238" /> <!-- Scorpion -->
+				<item id="301" min="1" max="1" chance="1.238" /> <!-- scorpion -->
 				<item id="201" min="1" max="1" chance="1.231" /> <!-- Club of Nature -->
 				<item id="233" min="1" max="1" chance="1.218" /> <!-- Dark Screamer -->
 				<item id="200" min="1" max="1" chance="1.212" /> <!-- Sage's Staff -->
@@ -1229,7 +1229,7 @@
 				<item id="203" min="1" max="1" chance="1.196" /> <!-- Pa'agrio Axe -->
 				<item id="174" min="1" max="1" chance="1.19" /> <!-- Nirvana Axe -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="12" max="35" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="12" max="35" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="30.06" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1424,7 +1424,7 @@
 				<item id="195" min="1" max="1" chance="4.1455" /> <!-- Cursed Staff -->
 				<item id="325" min="1" max="1" chance="4.1185" /> <!-- Horn of Glory -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="10" max="29" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="10" max="29" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="31.26" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1634,7 +1634,7 @@
 				<item id="196" min="1" max="1" chance="1.031" /> <!-- Stick of Eternity -->
 				<item id="231" min="1" max="1" chance="1.01" /> <!-- Grace Dagger -->
 				<item id="201" min="1" max="1" chance="1.01" /> <!-- Club of Nature -->
-				<item id="301" min="1" max="1" chance="1.007" /> <!-- Scorpion -->
+				<item id="301" min="1" max="1" chance="1.007" /> <!-- scorpion -->
 				<item id="265" min="1" max="1" chance="1.007" /> <!-- Fisted Blade -->
 				<item id="162" min="1" max="1" chance="1.001" /> <!-- War Axe -->
 				<item id="198" min="1" max="1" chance="0.998" /> <!-- Inferno Staff -->
@@ -1646,7 +1646,7 @@
 				<item id="303" min="1" max="1" chance="0.98" /> <!-- Widow Maker -->
 				<item id="75" min="1" max="1" chance="0.979" /> <!-- Caliburs -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="28.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1953,7 +1953,7 @@
 				<item id="74" min="1" max="1" chance="3.457" /> <!-- Katana -->
 				<item id="131" min="1" max="1" chance="3.447" /> <!-- Spirit Sword -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="29.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -2454,7 +2454,7 @@
 				<item id="2406" min="1" max="1" chance="3.826" /> <!-- Avadon Robe -->
 				<item id="2402" min="1" max="1" chance="3.825" /> <!-- Stockings of Zubei -->
 				<item id="600" min="1" max="1" chance="3.823" /> <!-- Sealed Avadon Boots -->
-				<item id="2415" min="1" max="1" chance="3.822" /> <!-- Sealed Avadon Circlet -->
+				<item id="2415" min="1" max="1" chance="3.822" /> <!-- Avadon Circlet -->
 				<item id="2464" min="1" max="1" chance="3.817" /> <!-- Sealed Avadon Gloves -->
 				<item id="2404" min="1" max="1" chance="3.814" /> <!-- Stockings of Doom -->
 				<item id="110" min="1" max="1" chance="3.797" /> <!-- Doom Shield -->
@@ -2463,7 +2463,7 @@
 				<item id="2376" min="1" max="1" chance="3.777" /> <!-- Avadon Breastplate -->
 				<item id="357" min="1" max="1" chance="3.765" /> <!-- Zubei's Breastplate -->
 				<item id="2384" min="1" max="1" chance="3.755" /> <!-- Zubei's Leather Shirt -->
-				<item id="503" min="1" max="1" chance="3.746" /> <!-- Sealed Zubei's Helmet -->
+				<item id="503" min="1" max="1" chance="3.746" /> <!-- Zubei's Helmet -->
 				<item id="633" min="1" max="1" chance="3.746" /> <!-- Zubei's Shield -->
 				<item id="2388" min="1" max="1" chance="3.743" /> <!-- Zubei's Leather Gaiters -->
 				<item id="142" min="1" max="1" chance="1.381" /> <!-- Keshanberk -->
@@ -2474,7 +2474,7 @@
 				<item id="267" min="1" max="1" chance="1.358" /> <!-- Arthro Nail -->
 				<item id="171" min="1" max="1" chance="1.331" /> <!-- Deadman's Glory -->
 				<item id="284" min="1" max="1" chance="1.325" /> <!-- Dark Elven Longbow -->
-				<item id="79" min="1" max="1" chance="1.32" /> <!-- Damascus -->
+				<item id="79" min="1" max="1" chance="1.32" /> <!-- Damascus Sword -->
 				<item id="78" min="1" max="1" chance="1.306" /> <!-- Great Sword -->
 				<item id="148" min="1" max="1" chance="1.297" /> <!-- Sword of Valhalla -->
 				<item id="264" min="1" max="1" chance="1.297" /> <!-- Pata -->
@@ -2485,7 +2485,7 @@
 				<item id="210" min="1" max="1" chance="1.271" /> <!-- Staff of Evil Spirits -->
 				<item id="91" min="1" max="1" chance="1.255" /> <!-- Heavy War Axe -->
 				<item id="175" min="1" max="1" chance="1.246" /> <!-- Art of Battle Axe -->
-				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="948" min="1" max="1" chance="81.15" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.37" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
@@ -2636,7 +2636,7 @@
 				<item id="267" min="1" max="1" chance="2.45" /> <!-- Arthro Nail -->
 				<item id="229" min="1" max="1" chance="2.437" /> <!-- Kris -->
 				<item id="300" min="1" max="1" chance="2.434" /> <!-- Great Axe -->
-				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="948" min="1" max="1" chance="50.26" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="49.56" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
@@ -2724,7 +2724,7 @@
 				<item id="204" min="1" max="1" chance="2.295" /> <!-- Deadman's Staff -->
 				<item id="228" min="1" max="1" chance="2.277" /> <!-- Crystal Dagger -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="30.81" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -2908,7 +2908,7 @@
 				<item id="322" min="1" max="1" chance="5.393" /> <!-- Vajra Wand -->
 				<item id="188" min="1" max="1" chance="5.391" /> <!-- Ghost Staff -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="955" min="1" max="1" chance="50.18" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 		</dropLists>
@@ -3038,12 +3038,12 @@
 				<item id="2404" min="1" max="1" chance="2.451" /> <!-- Stockings of Doom -->
 				<item id="2397" min="1" max="1" chance="2.423" /> <!-- Tunic of Zubei -->
 				<item id="600" min="1" max="1" chance="2.422" /> <!-- Sealed Avadon Boots -->
-				<item id="2415" min="1" max="1" chance="2.42" /> <!-- Sealed Avadon Circlet -->
+				<item id="2415" min="1" max="1" chance="2.42" /> <!-- Avadon Circlet -->
 				<item id="612" min="1" max="1" chance="2.407" /> <!-- Sealed Zubei's Gauntlets -->
 				<item id="2388" min="1" max="1" chance="2.404" /> <!-- Zubei's Leather Gaiters -->
 				<item id="2402" min="1" max="1" chance="2.399" /> <!-- Stockings of Zubei -->
 				<item id="383" min="1" max="1" chance="2.396" /> <!-- Zubei's Gaiters -->
-				<item id="503" min="1" max="1" chance="2.39" /> <!-- Sealed Zubei's Helmet -->
+				<item id="503" min="1" max="1" chance="2.39" /> <!-- Zubei's Helmet -->
 				<item id="673" min="1" max="1" chance="2.379" /> <!-- Avadon Shield -->
 				<item id="2390" min="1" max="1" chance="2.378" /> <!-- Avadon Leather Armor -->
 				<item id="110" min="1" max="1" chance="2.3765" /> <!-- Doom Shield -->
@@ -3057,7 +3057,7 @@
 				<item id="554" min="1" max="1" chance="2.325" /> <!-- Sealed Zubei's Boots -->
 				<item id="2376" min="1" max="1" chance="2.324" /> <!-- Avadon Breastplate -->
 				<item id="300" min="1" max="1" chance="1.123" /> <!-- Great Axe -->
-				<item id="79" min="1" max="1" chance="1.109" /> <!-- Damascus -->
+				<item id="79" min="1" max="1" chance="1.109" /> <!-- Damascus Sword -->
 				<item id="268" min="1" max="1" chance="1.107" /> <!-- Bellion Cestus -->
 				<item id="243" min="1" max="1" chance="1.103" /> <!-- Twilight Knife -->
 				<item id="287" min="1" max="1" chance="1.099" /> <!-- Bow of Peril -->
@@ -3075,7 +3075,7 @@
 				<item id="142" min="1" max="1" chance="1.006" /> <!-- Keshanberk -->
 				<item id="267" min="1" max="1" chance="0.999" /> <!-- Arthro Nail -->
 				<item id="264" min="1" max="1" chance="0.993" /> <!-- Pata -->
-				<item id="70000" min="14" max="41" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="70000" min="14" max="41" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="948" min="1" max="1" chance="80.04" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.58" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>

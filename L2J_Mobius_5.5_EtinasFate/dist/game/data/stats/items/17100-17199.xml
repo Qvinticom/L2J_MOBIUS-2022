@@ -804,7 +804,7 @@
 		</skills>
 	</item>
 	<item id="17138" name="Freya's Gift" type="EtcItem">
-		<!-- Wrapped Pack containing Freya's heart. -->
+		<!-- Double-click to obtain a Freya's heart. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1148,7 +1148,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="17158" name="Vesper's Mighty Power" type="EtcItem">
-		<!-- P. Atk. + 15%, M. Atk. by 20%, and Speed by 10 for 10 min. -->
+		<!-- P. Atk. +15%, M. Atk. by 20%, and Speed by 10 for 10 min. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1223,7 +1223,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="17163" name="Event - Leaf of Appreciation" type="EtcItem">
-		<!-- When used, can feel yourself becoming stronger by the Leaf of Appreciation for 1 hour. -->
+		<!-- When used, can feel yourself becoming stronger by the Leaf of Appreciation for 1 hr. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1280,11 +1280,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="14744" min="5" max="5" chance="100" /> <!-- Event - Vitality Replenishing Potion (30-minute) -->
+			<item id="14744" min="5" max="5" chance="100" /> <!-- Event - Vitality Replenishing Potion (30-min.) -->
 		</capsuled_items>
 	</item>
 	<item id="17166" name="Vesper Noble Enhancement Stone 10-unit Pack" type="EtcItem">
-		<!-- Wrapped Pack containing 10 Vesper Noble Enhancement Stones -->
+		<!-- Double-click to obtain 10 Vesper Noble Enhancement Stones -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -1724,7 +1724,7 @@
 		</stats>
 	</item>
 	<item id="17187" name="Olympic Athlete's Necklace" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 3-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 3-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1748,7 +1748,7 @@
 		</stats>
 	</item>
 	<item id="17188" name="Olympic Athlete's Earring" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 3-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 3-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1794,7 +1794,7 @@
 		</stats>
 	</item>
 	<item id="17190" name="Olympic Athlete's Necklace" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 7-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 7-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1818,7 +1818,7 @@
 		</stats>
 	</item>
 	<item id="17191" name="Olympic Athlete's Earring" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 7-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 7-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="17193" name="Olympic Athlete's Necklace" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 10-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 10-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1888,7 +1888,7 @@
 		</stats>
 	</item>
 	<item id="17194" name="Olympic Athlete's Earring" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 10-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 10-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1934,7 +1934,7 @@
 		</stats>
 	</item>
 	<item id="17196" name="Olympic Athlete's Necklace" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 30-day. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. 30-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1958,7 +1958,7 @@
 		</stats>
 	</item>
 	<item id="17197" name="Olympic Athlete's Earring" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Earring. 30-day. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Olympic Athlete's Earring. 30-day. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2003,7 +2003,7 @@
 		</stats>
 	</item>
 	<item id="17199" name="Olympic Athlete's Necklace" type="Armor">
-		<!-- Olympic Athlete's Necklace. MP+ 42, Sleep/Paralysis/Stun Resistance increases by 15%. Sleep/Paralysis/Stun Atk. Rate increases by 15%. Decreased skill cooldown and damage shield effects. -->
+		<!-- Olympic Athlete's Necklace. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

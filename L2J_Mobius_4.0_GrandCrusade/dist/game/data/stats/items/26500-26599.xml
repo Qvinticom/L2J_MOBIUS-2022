@@ -99,7 +99,7 @@
 		</skills>
 	</item>
 	<item id="26506" name="Amethyst" additionalName="Lv. 5" type="Armor">
-		<!-- PvP Damage + 15%. Can remove invincibility. Effect does not stack with additional jewels of the same type. -->
+		<!-- PvP Damage + 15%. Can remove invincibility and debuff invincibility. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -125,7 +125,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="26497" min="1" max="1" chance="100" />
+			<item id="26497" min="1" max="1" chance="100" /> <!-- Cat's Eye - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="26508" name="La Vie En Rose's Amethyst Chest" type="EtcItem">
@@ -142,7 +142,7 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="26502" min="1" max="1" chance="100" />
+			<item id="26502" min="1" max="1" chance="100" /> <!-- Amethyst - Lv. 1 -->
 		</capsuled_items>
 	</item>
 	<item id="26509" name="Summon Scroll: Pomona" additionalName="Event" type="EtcItem">
@@ -183,8 +183,8 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="26388" min="1" max="1" chance="100" />
-			<item id="46186" min="1" max="1" chance="100" />
+			<item id="26388" min="1" max="1" chance="100" /> <!-- Anakim Outfit Appearance Stone - 30-day -->
+			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion - Anakim Holy Barrier - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="26512" name="Mysterious Wind Scroll Pack" type="EtcItem">

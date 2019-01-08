@@ -57,7 +57,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="26304" name="Campfire Flint" type="EtcItem">
-		<!-- You can start a campfire by using this flint. The warmth of the bonfire will decrease Skill Cooldown by 10%, increase PVE Damage by 10%, and bestow the Vampirig Rage effect. It will be effective only when the fire is started at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
+		<!-- You can start a campfire by using this flint. The warmth of the bonfire will decrease Skill Cooldown, increase PVE Damage, and bestow the Vampirig Rage effect. It will be effective only when the fire is started at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="price" val="1" />
 		<set name="is_commissionable" val="false" />
@@ -66,7 +66,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26305" name="Kotatsu" type="EtcItem">
-		<!-- Increases Speed by 20, and reduces Skill MP Consumption by 20% and PvE Damage by 10%. It will be effective only when summoned at a certain distance away from the village. It lasts 10 minutes. Does not stack with the Christmas Tree effect. -->
+		<!-- Increases Speed, and reduces MP Consumption of Skills and PVE Damage. It will be effective only when summoned at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
@@ -423,7 +423,7 @@
 		</skills>
 	</item>
 	<item id="26342" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
-		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 1. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 1. Requires Create Item - Skill Lv. 14. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -435,7 +435,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26343" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
-		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 2. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 2. Requires Create Item - Skill Lv. 14. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -447,7 +447,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26344" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
-		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 3. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 3. Requires Create Item - Skill Lv. 14. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -459,7 +459,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26345" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
-		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 4. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 4. Requires Create Item - Skill Lv. 14. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -523,7 +523,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />

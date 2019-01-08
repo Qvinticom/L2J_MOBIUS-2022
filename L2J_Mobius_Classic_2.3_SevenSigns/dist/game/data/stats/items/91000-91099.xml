@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91008" name="Dragon's Relic Chest" type="EtcItem">
-		<!-- Double-click to obtain Special Dragon's Fruit. Additionally can be obtained 1 random item: Fire Dragon's Relic Chest/ Land Dragon's Relic Chest/ Dragon's Heart and other items. Cannot be dropped or sold. The item will be removed after the event is over. -->
+		<!-- Double-click to obtain Special Dragon Fruit. Additionally can be obtained 1 random item: Fire Dragon Relic Chest/ Land Dragon Relic Chest/ Dragon Heart and other items. Cannot be dropped or sold. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -107,7 +107,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91010" name="Land Dragon's Relic Chest" type="EtcItem">
-		<!-- Double-click to obtain 1 random item: rare accessory, Dragon's Dye Box and other rare items. Cannot be dropped or sold. The item will be removed after the event is over. -->
+		<!-- Double-click to obtain 1 random item: rare accessory, Dragon Dye Box and other rare items. Cannot be dropped or sold. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -247,14 +247,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91026" name="Dragon's Heart" type="EtcItem">
-		<!-- Ingredient for Dragon's Miracle Potion. Cannot be dropped. -->
+		<!-- Ingredient for Dragon Miracle Potion. May be exchanged for various items during certaing time periods. Cannot be dropped. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91027" name="Dragon's Miracle Potion" type="EtcItem">
-		<!-- For 20 min. Sayha Grace points +5000, XP and SP gain +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. If you use Special Dragon's Fruit or Special Pirate Fruit during the effect, these items will dissapear without an effect. Cannot be dropped. -->
+		<!-- For 20 min. Sayha Grace points +5000, Acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Cannot be dropped. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
@@ -263,6 +263,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91028" name="Dragon's Recovery Potion" additionalName="Not Available" type="EtcItem">
+		<!-- Instant HP recovery. Provides HP +1000 and uses the remaining points to recover CP. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -366,6 +367,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91043" name="Nebula’s Old Necklace" additionalName="Lv1" type="Armor">
+		<!-- MP +35, Water Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -384,6 +386,7 @@
 		</stats>
 	</item>
 	<item id="91044" name="Nebula’s Old Necklace" additionalName="Lv2" type="Armor">
+		<!-- MP +37, Water Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -402,6 +405,7 @@
 		</stats>
 	</item>
 	<item id="91045" name="Nebula’s Old Necklace" additionalName="Lv3" type="Armor">
+		<!-- MP +40, Water Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -420,6 +424,7 @@
 		</stats>
 	</item>
 	<item id="91046" name="Ignis’ Old Necklace" additionalName="Lv1" type="Armor">
+		<!-- MP +35, Fire Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -438,6 +443,7 @@
 		</stats>
 	</item>
 	<item id="91047" name="Ignis’ Old Necklace" additionalName="Lv2" type="Armor">
+		<!-- MP +37, Fire Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -456,6 +462,7 @@
 		</stats>
 	</item>
 	<item id="91048" name="Ignis’ Old Necklace" additionalName="Lv3" type="Armor">
+		<!-- MP +40, Fire Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -474,6 +481,7 @@
 		</stats>
 	</item>
 	<item id="91049" name="Procella’s Old Necklace" additionalName="Lv1" type="Armor">
+		<!-- MP +35, Wind Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -492,6 +500,7 @@
 		</stats>
 	</item>
 	<item id="91050" name="Procella’s Old Necklace" additionalName="Lv2" type="Armor">
+		<!-- MP +37, Wind Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -510,6 +519,7 @@
 		</stats>
 	</item>
 	<item id="91051" name="Procella’s Old Necklace" additionalName="Lv3" type="Armor">
+		<!-- MP +40, Wind Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -528,6 +538,7 @@
 		</stats>
 	</item>
 	<item id="91052" name="Petram’s Old Necklace" additionalName="Lv1" type="Armor">
+		<!-- MP +35, Earth Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -546,6 +557,7 @@
 		</stats>
 	</item>
 	<item id="91053" name="Petram’s Old Necklace" additionalName="Lv2" type="Armor">
+		<!-- MP +37, Earth Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -564,6 +576,7 @@
 		</stats>
 	</item>
 	<item id="91054" name="Petram’s Old Necklace" additionalName="Lv3" type="Armor">
+		<!-- MP +40, Earth Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -582,6 +595,7 @@
 		</stats>
 	</item>
 	<item id="91055" name="Nebula’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<!-- 7-day item. MP+35, Water Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -601,6 +615,7 @@
 		</stats>
 	</item>
 	<item id="91056" name="Ignis’ Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<!-- 7-day item. MP+35, Fire Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -620,6 +635,7 @@
 		</stats>
 	</item>
 	<item id="91057" name="Procella’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<!-- 7-day item. MP+35, Wind Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -639,6 +655,7 @@
 		</stats>
 	</item>
 	<item id="91058" name="Petram’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<!-- 7-day item. MP+35, Earth Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

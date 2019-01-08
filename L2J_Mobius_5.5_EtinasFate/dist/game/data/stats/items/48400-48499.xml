@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48400" name="Items Seal Scroll" type="EtcItem">
-		<!-- Scroll used for sealing an item. The sealed item cannot be used for any enchantment related systems and is restricted from functions such as exchange/ drop/ destroy/ clan warehouse. The item can be unsealed by using a οΏ½Item Unseal Scroll'. -->
+		<!-- Scroll used for sealing an item. The sealed item cannot be used for any enchantment related systems and is restricted from functions such as exchange/ drop/ destroy/ clan warehouse. The item can be unsealed by using a Release Seal Scroll. -->
 		<set name="icon" val="icon.scrl_item_lock" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="1000" />
@@ -64,7 +64,7 @@
 		</stats>
 	</item>
 	<item id="48406" name="Scarlet Scarab" type="Weapon">
-		<!-- Material item for crafting Scarlett Scarab Shield appearance. -->
+		<!-- Material item for crafting Scarlet Scarab Shield appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield20" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -100,7 +100,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Appearance Stone that gives a shield Scarlett Scarab appearance for 30 days. -->
+		<!-- Appearance Stone that gives a shield Scarlet Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -116,7 +116,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-minute" type="EtcItem">
-		<!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
+		<!-- Double-click to obtain 10 Release Seal Scrolls (15-min). -->
 		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -148,7 +148,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="48414" name="GM Lassana's Present Box" additionalName="30-day" type="EtcItem">
-		<!-- Presents prepared with care by GM Lassana. Double-click to obtain various consumables. When you are in luck, you may get a very good item. -->
+		<!-- Presents prepared with care by GM Lassana. Double-click to obtain various consumables. If you are in luck, you may get a very good item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -170,7 +170,7 @@
 		</stats>
 	</item>
 	<item id="48416" name="Clan Hall Belt Stage 2" type="Armor">
-		<!-- Belt imbued with the concentrated energies of Nurka, Gustav, and Lidia. Max HP/ MP/ CP +500, Damage +7%, Received Damage -7%, Weight +12800, Inventory Slots +18, and all Attribute defenses +10. -->
+		<!-- Belt imbued with the concentrated energies of Nurka, Gustav, and Lidia. Max HP/ MP/ CP +500, Damage +7%, Received Damage -7%, Weight +12800, Inventory Slots +18, and all Attribute Resistance +10. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -181,7 +181,7 @@
 		</stats>
 	</item>
 	<item id="48417" name="Enhanced Ruler's Authority" type="Armor">
-		<!-- Enhanced Ruler's Authority. Max CP/ HP/ MP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflect Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute defenses +20. -->
+		<!-- Enhanced Ruler's Authority. Max HP/ MP/ CP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflect Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute Resistance +20. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -219,14 +219,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48422" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Double-click to obtain a box containing a Talisman- Wind (30-day). -->
+		<!-- Double-click to obtain a box containing a Talisman - Wind (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48423" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
-		<!-- Double-click to obtain a Talisman- Wind: P. Skill Critical Damage (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Talisman - Wind: P. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -234,7 +234,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48424" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
-		<!-- Double-click to obtain a Talisman- Wind: M. Skill Critical Damage (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Talisman- Wind: M. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -242,7 +242,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48425" name="Talisman - Wind Pack" additionalName="Defense" type="EtcItem">
-		<!-- Double-click to obtain a Talisman- Wind: Defense (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Talisman - Wind: Defense (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -250,7 +250,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48426" name="Talisman - Wind Pack" additionalName="Debuff Defense" type="EtcItem">
-		<!-- Double-click to obtain a Talisman- Wind: Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain a Talisman - Wind: Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -285,7 +285,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48429" name="Talisman - Wind: Defense" additionalName="30-day" type="Armor">
-		<!-- When used, P./ M. Def. are maximized for 15 sec. Cooldown of 20 min. -->
+		<!-- When used, Physical and Magic Def. are maximized for 15 sec. Cooldown of 20 min. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -391,7 +391,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48437" name="PA Talisman - Atk. Attribute Boost" additionalName="2-hour" type="Armor">
-		<!-- When equipped, Attack Attribute +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, Atk. Attribute +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -404,7 +404,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48438" name="PA Talisman - Attribute Defense Boost" additionalName="2-hour" type="Armor">
-		<!-- When equipped, Attack Resistance +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, P. Def. +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -431,7 +431,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="48440" name="Fortress Talisman - P. Skill Power" additionalName="15-day" type="Armor">
-		<!-- When equipped, P. Skill Power +10%. -->
+		<!-- When equipped, P. Skill Power +5%. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -445,7 +445,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="48441" name="Fortress Talisman - M. Skill Power" additionalName="15-day" type="Armor">
-		<!-- When equipped, M. Skill Power +10%. -->
+		<!-- When equipped, M. Skill Power +5%. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -459,7 +459,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="48442" name="Fortress Talisman - P. Atk." additionalName="15-day" type="Armor">
-		<!-- When equipped, P. Atk. +10%. -->
+		<!-- When equipped, P. Atk. +5%. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -613,7 +613,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="48453" name="Fortress Talisman - Speed" additionalName="15-day" type="Armor">
-		<!-- When equipped, Speed +15. -->
+		<!-- When equipped, Movement Speed +15. -->
 		<set name="icon" val="icon.sayha2017_panda" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -634,7 +634,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48455" name="Fortress Talisman - Vitality Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Vitality (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Vitality (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -650,7 +650,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48457" name="Fortress Talisman - M. Skill Power Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- M. Skill Power (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - M. Skill Power (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -658,7 +658,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48458" name="Fortress Talisman - P. Atk. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- P. Atk. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - P. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -666,7 +666,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48459" name="Fortress Talisman - M. Atk. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- M. Atk. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - M. Atk. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -674,7 +674,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48460" name="Fortress Talisman - P. Def. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- P. Def. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - P. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -682,7 +682,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48461" name="Fortress Talisman - M. Def. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- M. Def. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - M. Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -690,7 +690,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48462" name="Fortress Talisman - Atk. Spd. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Atk. Spd. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Atk. Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -698,7 +698,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48463" name="Fortress Talisman - Casting Spd. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Casting Spd. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Casting Spd. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -706,7 +706,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48464" name="Fortress Talisman - P. Accuracy Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- P. Accuracy (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - P. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -714,7 +714,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48465" name="Fortress Talisman - M. Accuracy Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- M. Accuracy (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - M. Accuracy (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -722,7 +722,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48466" name="Fortress Talisman - Shield Def. Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Shield Def. (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Shield Def. (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -730,7 +730,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48467" name="Fortress Talisman - Max HP Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Max HP (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Max HP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48468" name="Fortress Talisman - Max MP Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Max MP (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Max MP (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -746,7 +746,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48469" name="Fortress Talisman - Speed Box" type="EtcItem">
-		<!-- Double-click to obtain a Fortress Talisman- Speed (15-day). -->
+		<!-- Double-click to obtain a Fortress Talisman - Movement Speed (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +754,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48470" name="Adventure Guild Supply Box" type="EtcItem">
-		<!-- A supply box received from Herphah for completing the Adventure Guild missions. Double-click to obtain a variety of supplies. -->
+		<!-- A supply box received from Herphah for completing the Adventure Guild missions. Double-click to obtain a variety of supply items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -765,7 +765,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48471" name="Adventure Guild Supply Box" type="EtcItem">
-		<!-- A supply box received from Herphah for completing the Adventure Guild missions. Double-click to obtain a variety of supplies. -->
+		<!-- A supply box received from Herphah for completing the Adventure Guild missions. Double-click to obtain a variety of supply items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48473" name="Night Goblin Coin (500) Box" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 500 Night Goblin Coins. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<!-- Use it to obtain 500 Night Goblin Coins. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -819,7 +819,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48476" name="Dark/ Bloody Helios Enhancement Stone Treasure Chest" type="EtcItem">
-		<!-- Use to obtain a Dark Helios Enhancement Stone or a Bloody Helios Enhancement Stone. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<!-- Use it to obtain a Dark Helios Enhancement Stone or Bloody Helios Enhancement Stone. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -840,7 +840,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48478" name="Knights' Basic Supplies" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 3 Vitality Replenishing Star Candy and 1 PA Points Coupon (720 Points). Also, there is a chance to obtain 1 of PA- Art of Seduction, Freya's Art of Seduction, Freya's Art of Seduction- Barrier or Freya's Art of Seduction- XP. -->
+		<!-- Use to obtain 3 Vitality Replenishing Star Candies and 1 PA Points Coupon (720 Points). Also, there is a chance to obtain 1 of PA - Art of Seduction, Freya's Art of Seduction, Freya's Art of Seduction - Barrier or Freya's Art of Seduction - XP. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48482" name="+8 Reflect Magical Shirt Pack" type="EtcItem">
-		<!-- Double-click to obtain a +8 Reflect Magical Shirt. -->
+		<!-- Double-click to obtain a +8 Reflect Magic Shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48483" name="+7 Shiny Elemental Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical Shirt infused with Einhasad's energy. <Item Skill>. M. Def. +15. Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflect Resistance +5. Vampiric Rage +5%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active Skills>. Einhasad's Wrath/ Einhasad's Protection. Cannot be enchanted. -->
+		<!-- A magical Shirt infused with Einhasad's energy. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflect Resistance +5. Vampiric Rage +5%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active Skills>. Einhasad's Wrath/ Einhasad's Protection. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -906,7 +906,7 @@
 		</stats>
 	</item>
 	<item id="48484" name="+7 Reflect Attack Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical Shirt specialized for physical defense. <Item Skill>. M. Def. +15. Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +3%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs. Cannot be enchanted. -->
+		<!-- A magical Shirt specialized for physical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -922,7 +922,7 @@
 		</stats>
 	</item>
 	<item id="48485" name="+7 Reflect Magical Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical Shirt specialized for magical defense. <Item Skill>. M. Def. +15. Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +3%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs. Cannot be enchanted. -->
+		<!-- A magical Shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_jindo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -939,7 +939,7 @@
 		</stats>
 	</item>
 	<item id="48486" name="Sayha Talisman Stage 6" additionalName="1-day" type="Armor">
-		<!-- When equipped, P. Def. + 1126, M. Def. + 736, XP/ SP Gain + 10%. If equipped with Venir's Talisman Stage 12 or above, Skill Power + 3%, Skill Cooldown - 3%. Active Skills Sayha's Protection Lv. 1 Sayha's Encouragement Lv1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
+		<!-- When equipped, Sayha's power increases P. Def. by 1126, M. Def. by 736, and Acquired XP/ SPed by 10%. Equipping it with Venir Talisman Stage 10 or higher increases Skill Power by 3% and reduces cooldown by 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is applies. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.accessory_sapsal_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -953,7 +953,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="48487" name="Merlot's Promise" type="EtcItem">
-		<!-- A note from Merlot who promised to help at the time of greatest need. Take it to Merlot when you have to stand against the greatest threat. Will be deleted on Wednesday, June 28, 2017, after regular maintenance. -->
+		<!-- A certificate stating Merlot's promise to help you during crisis. Take it to Merlot before facing a great challenge. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -964,7 +964,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48488" name="Merlot's Special Order" type="EtcItem">
-		<!-- A note that exudes the force of the Exalted. Take it to Merlot in the Hunter's Village. Will be deleted on Wednesday, June 28, 2017, after regular maintenance. -->
+		<!-- Merlot's special order that radiates the aura of Honor Force. Take it to Merlot in the Hunters Village. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
 		<set name="icon" val="icon.fairy_encounter_letter" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -986,7 +986,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48490" name="Merlot's Gift" type="EtcItem">
-		<!-- A gift from Merlot that can be used while the force of the Exalted remains. Restores 2 blocks of the four Vitality Gauge blocks. No weekly usage limit. Will be deleted on Wednesday, June 28, 2017, after regular maintenance. -->
+		<!-- Merlot's gift that can be used as long as the influence of Honor Force remains. Recovers two of the four Vitality Gauge bars. The usage limit of 5 times per week does not apply. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -997,7 +997,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48491" name="Dragon shirt" type="Armor">
-		<!-- A Dragon Shirt. <Upgrade Condition>. Can be upgraded to Dragon Leather Shirt when enchanted to +5. Level 85 or higher. -->
+		<!-- A Dragon Shirt. <Upgrade Condition>. Can be upgraded to Dragon Leather Shirt when enhanced to +5. Level 85 or higher. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1014,7 +1014,7 @@
 		</stats>
 	</item>
 	<item id="48492" name="Dragon Leather Shirt" type="Armor">
-		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to Dragon Rind Leather Shirt when enchanted to +5. Level 99 or higher. -->
+		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to Dragon Rind Leather Shirt when enhanced to +5. Level 99 or higher. -->
 		<set name="icon" val="icon.s_newbie_user_display" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1064,7 +1064,7 @@
 		</stats>
 	</item>
 	<item id="48495" name="Noble Leather Upgrade Stone" type="EtcItem">
-		<!-- Material needed to upgrade a Dragon Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith Ferris in the Town of Aden to upgrade a +5 Dragon Shirt to a Dragon Leather Shirt. -->
+		<!-- Material needed to upgrade a Dragon Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith Ferris at Aden Castle to upgrade a +5 Dragon Shirt to a Dragon Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_1" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="material" val="PAPER" />
@@ -1080,7 +1080,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48497" name="Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
-		<!-- When used, Attack Attribute +70, all Defense Attributes +70, and XP/ SP gained +30% for 30 min. Buff effect persists through death. Cooldown of 5 minutes. Cannot be used in Olympiad. Cannot be stacked with 'Art of Seduction'. -->
+		<!-- When used, Atk. Attribute +70, all Attribute Resistance +70, and Acquired XP/ SPed +30% for 30 min. Buff effect persists through death. Cooldown of 5 min. Cannot be used in Olympiad. Cannot be stacked with Art of Seduction. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1089,7 +1089,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48498" name="Blessed Dragon Shirt Enchant Scroll" type="EtcItem">
-		<!-- Enchant scroll for the Dragon Shirt. Can enchant up to +5, and the Dragon Shirt's enchantment level resets when enchanting fails. Will be deleted on Wednesday, July 12, 2017, after regular maintenance. -->
+		<!-- Enchant Scroll that is exclusively for Dragon Shirts. The scroll can enchant up to +5. Failure to enchant resets the enchantment level of the Dragon Shirt. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1098,7 +1098,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48499" name="Relics of the Dragons" type="EtcItem">
-		<!-- Use to obtain 2 Dragon's Potion (XP) and 1 Mysterious Weapon Enchant Scroll. There is also chance to obtain a Dragon's Relic Chest or a Shining Dragon's Relic Chest. Shining Dragon's Relic Chests can be obtained until the regular maintenance on Wednesday, July 12, 2017. Will be deleted on Wednesday, December 27, 2017, after regular maintenance. -->
+		<!-- Use it to obtain 2 Dragon Attribute Tonic (XP). There is a chance to obtain a Dragon's Relic Chest or Shining Dragon's Relic Chest. Will be deleted after the event. -->
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />

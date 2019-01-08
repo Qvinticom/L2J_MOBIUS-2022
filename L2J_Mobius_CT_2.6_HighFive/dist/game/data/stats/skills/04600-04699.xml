@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4600" levels="12" name="Reducing P. Def Stun">
+		<!-- Instantly decreases P. Def. and throws the enemy into a temporary state of shock. Effect 1. -->
 		<table name="#abnormalLvls"> 11 12 12 13 13 13 13 13 13 13 13 13 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
@@ -59,6 +60,7 @@
 		</for>
 	</skill>
 	<skill id="4602" levels="12" name="Decrease P. Atk.">
+		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
@@ -93,6 +95,7 @@
 		</for>
 	</skill>
 	<skill id="4603" levels="12" name="Decrease P. Atk.">
+		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
@@ -125,6 +128,7 @@
 		</for>
 	</skill>
 	<skill id="4604" levels="12" name="Decrease P. Atk.">
+		<!-- Reduces P. Atk. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 53 70 90 110 130 138 145 150 153 155 </table>
@@ -158,6 +162,7 @@
 		</for>
 	</skill>
 	<skill id="4605" levels="12" name="Surrender To Fire">
+		<!-- Instantly decreases Resistance to fire attack and increases Resistance to water attack. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 3 4 4 4 4 4 4 4 4 4 </table>
 		<table name="#fireRes"> 20 25 25 30 30 30 30 30 30 30 30 30 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -195,6 +200,7 @@
 		</for>
 	</skill>
 	<skill id="4606" levels="12" name="Poison">
+		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -395,7 +401,6 @@
 		</for>
 	</skill>
 	<skill id="4614" levels="12" name="NPC Death Bomb">
-		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<table name="#power"> 52 78 112 155 203 255 305 328 348 364 377 387 </table>
@@ -413,6 +418,7 @@
 		</for>
 	</skill>
 	<skill id="4615" levels="12" name="Bleed">
+		<!-- You suffer a wound that continually reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dmg"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -463,7 +469,6 @@
 		</for>
 	</skill>
 	<skill id="4617" levels="1" name="Dispel Petrification">
-		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
@@ -514,6 +519,7 @@
 		</for>
 	</skill>
 	<skill id="4620" levels="12" name="Paralysis">
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
 		<set name="abnormalLvl" val="1" />
@@ -613,8 +619,7 @@
 		</for>
 	</skill>
 	<skill id="4624" levels="12" name="Decrease HP Regeneration Rate">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Decreases recovery from heal spells -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
@@ -637,8 +642,7 @@
 		</for>
 	</skill>
 	<skill id="4625" levels="12" name="Decrease Speed">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
+		<!-- Decreases Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
@@ -1043,6 +1047,7 @@
 		</for>
 	</skill>
 	<skill id="4640" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1103,6 +1108,7 @@
 		</for>
 	</skill>
 	<skill id="4643" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
@@ -1135,8 +1141,6 @@
 		</for>
 	</skill>
 	<skill id="4644" levels="2" name="Area Buff - Haste">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#magicLvl"> 30 70 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
@@ -1155,8 +1159,6 @@
 		</for>
 	</skill>
 	<skill id="4645" levels="3" name="Area Buff - Focus">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#rCrit"> 1.15 1.25 1.3 </table>
@@ -1175,8 +1177,6 @@
 		</for>
 	</skill>
 	<skill id="4646" levels="3" name="Area Buff - Death Whisper">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
@@ -1195,8 +1195,6 @@
 		</for>
 	</skill>
 	<skill id="4647" levels="3" name="Area Buff - Might">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
@@ -1215,8 +1213,6 @@
 		</for>
 	</skill>
 	<skill id="4648" levels="3" name="Area Buff - Shield">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
@@ -1235,6 +1231,7 @@
 		</for>
 	</skill>
 	<skill id="4649" levels="12" name="Poison">
+		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -1396,6 +1393,7 @@
 		</for>
 	</skill>
 	<skill id="4657" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 22 37 50 67 86 106 124 132 139 143 147 149 </table>
 		<table name="#mpInitialConsume"> 6 10 13 17 22 27 31 33 35 36 37 38 </table>
@@ -1431,6 +1429,7 @@
 		</for>
 	</skill>
 	<skill id="4658" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 11 19 25 34 43 53 62 66 70 72 74 75 </table>
 		<table name="#mpInitialConsume"> 3 5 7 9 11 14 16 17 18 18 19 19 </table>
@@ -1465,6 +1464,7 @@
 		</for>
 	</skill>
 	<skill id="4659" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 16 26 36 48 61 75 88 94 98 102 104 105 </table>
 		<table name="#mpInitialConsume"> 4 7 9 12 16 19 22 24 25 26 26 27 </table>
@@ -1499,6 +1499,7 @@
 		</for>
 	</skill>
 	<skill id="4660" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 22 37 50 67 86 106 124 132 139 143 147 149 </table>
 		<table name="#mpInitialConsume"> 6 10 13 17 22 27 31 33 35 36 37 38 </table>
@@ -1535,6 +1536,7 @@
 		</for>
 	</skill>
 	<skill id="4661" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 11 19 25 34 43 53 62 66 70 72 74 75 </table>
 		<table name="#mpInitialConsume"> 3 5 7 9 11 14 16 17 18 18 19 19 </table>
@@ -1570,6 +1572,7 @@
 		</for>
 	</skill>
 	<skill id="4662" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 16 26 36 48 61 75 88 94 98 102 104 105 </table>
 		<table name="#mpInitialConsume"> 4 7 9 12 16 19 22 24 25 26 26 27 </table>
@@ -1771,6 +1774,7 @@
 		</for>
 	</skill>
 	<skill id="4670" levels="12" name="Short Stun">
+		<!-- A blow that momentarily confuses you, inhibiting your ability to move. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 23 31 40 49 57 61 64 66 68 68 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1810,7 +1814,6 @@
 		</for>
 	</skill>
 	<skill id="4672" levels="1" name="NPC Corpse Remove">
-		<!-- TODO: Needs to be done -->
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="40" />
@@ -1945,8 +1948,7 @@
 		</for>
 	</skill>
 	<skill id="4679" levels="1" name="Valakas">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
+		<!-- Vulnerable to water, impervious to fire. -->
 		<set name="icon" val="icon.skillboss" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1959,8 +1961,6 @@
 		</for>
 	</skill>
 	<skill id="4680" levels="1" name="Valakas Lava Skin">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -1977,9 +1977,6 @@
 		</for>
 	</skill>
 	<skill id="4681" levels="1" name="Valakas Trample">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Trample Left -->
 		<set name="affectRange" val="250" />
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="50" />
@@ -2001,9 +1998,6 @@
 		</for>
 	</skill>
 	<skill id="4682" levels="1" name="Valakas Trample">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Trample Right -->
 		<set name="affectRange" val="250" />
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="50" />
@@ -2025,9 +2019,7 @@
 		</for>
 	</skill>
 	<skill id="4683" levels="1" name="Valakas Dragon Breath">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Dragon Breath Low -->
+		<!-- Deadly flames envelope your entire body, causing your HP to drop rapidly. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="DRAGON_BREATH" />
@@ -2058,9 +2050,7 @@
 		</for>
 	</skill>
 	<skill id="4684" levels="1" name="Valakas Dragon Breath">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Dragon Breath High -->
+		<!-- Deadly flames envelope your entire body, causing your HP to drop rapidly. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="DRAGON_BREATH" />
@@ -2091,9 +2081,6 @@
 		</for>
 	</skill>
 	<skill id="4685" levels="1" name="Valakas Tail Stomp">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Tail Stomp A from Behind -->
 		<set name="affectRange" val="1000" />
 		<set name="baseCritRate" val="10" />
 		<set name="coolTime" val="1000" />
@@ -2112,9 +2099,6 @@
 		</for>
 	</skill>
 	<skill id="4686" levels="1" name="Valakas Tail Stomp">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Tail Stomp B from Behind -->
 		<set name="affectRange" val="500" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -2130,9 +2114,6 @@
 		</for>
 	</skill>
 	<skill id="4687" levels="1" name="Valakas Tail Stomp">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Tail Stomp Visual -->
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -2140,9 +2121,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4688" levels="1" name="Valakas Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Tail Lash from Behind -->
+		<!-- You are thrown into an immobilizing state of shock. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="FLY_AWAY" />
@@ -2174,10 +2153,7 @@
 		</for>
 	</skill>
 	<skill id="4689" levels="2" name="Valakas Fear">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Lvl 1: Valakas Fear from Front -->
-		<!-- Lvl 2: Valakas Fear Visual -->
+		<!-- Overcome by terror, you flee aimlessly in fear. -->
 		<table name="#activateRates"> 80 -1 </table>
 		<table name="#basicProperties"> MEN NONE </table>
 		<table name="#coolTime"> 2000 0 </table>
@@ -2208,8 +2184,6 @@
 		</for>
 	</skill>
 	<skill id="4690" levels="1" name="Valakas Meteor Storm">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
@@ -2226,8 +2200,6 @@
 		</for>
 	</skill>
 	<skill id="4691" levels="5" name="Valakas Regeneration">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 </table>
 		<table name="#regHp"> 0.15 0.3 0.5 0.8 1 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -2259,7 +2231,6 @@
 		</for>
 	</skill>
 	<skill id="4693" levels="1" name="Quest BOSS Dispel Big Body">
-		<!-- Confirmed CT2.5 -->
 		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
@@ -2328,7 +2299,6 @@
 		</for>
 	</skill>
 	<skill id="4697" levels="12" name="NPC Monster Hate">
-		<!-- TODO: Needs to be done -->
 		<table name="#effectPoints"> -410 -608 -853 -1134 -1427 -1695 -1903 -1973 -2024 -2064 -2097 -2123 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 100 104 109 113 115 117 </table>
@@ -2341,8 +2311,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4698" levels="12" name="Area Buff - HP Regeneration">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 9 10 11 12 13 14 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#regHp"> 1.2 1.3 1.4 1.5 1.75 2 3 4 5 6 8.5 11 </table>
@@ -2362,7 +2330,7 @@
 		</for>
 	</skill>
 	<skill id="4699" levels="13" name="Blessing of Queen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Queen's buff magic Temporarily increases your party member's Critical Damage amount rate and power. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#abnormalTime"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#cAtk"> 1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>

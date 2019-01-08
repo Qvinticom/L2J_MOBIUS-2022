@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25100" level="55" type="L2Monster" name="Spirit of the Sea of Spores" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -128,9 +128,9 @@
 				<item id="917" min="1" max="1" chance="8.505" /> <!-- Necklace of Mermaid -->
 				<item id="885" min="1" max="1" chance="5.945" /> <!-- Ring of Ages -->
 				<item id="326" min="1" max="1" chance="2.477" /> <!-- Heathen's Book -->
-				<item id="4607" min="1" max="1" chance="11.01" /> <!-- Greater INT Dye (Int  3 Men - 3) -->
-				<item id="4609" min="1" max="1" chance="10.76" /> <!-- Greater MEN Dye (Men  3 Int - 3) -->
-				<item id="4608" min="1" max="1" chance="10.49" /> <!-- Greater INT Dye (Int  3 Wit - 3) -->
+				<item id="4607" min="1" max="1" chance="11.01" /> <!-- Greater INT Dye <Int +3 Men -3> -->
+				<item id="4609" min="1" max="1" chance="10.76" /> <!-- Greater MEN Dye <Men +3 Int -3> -->
+				<item id="4608" min="1" max="1" chance="10.49" /> <!-- Greater INT Dye <Int +3 Wit -3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -149,7 +149,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="60.57" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="60.57" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -236,7 +236,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="69.45" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="69.45" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -397,7 +397,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="81.81" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="81.81" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -680,7 +680,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="50.77" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="50.77" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -826,10 +826,10 @@
 				<item id="2452" min="1" max="1" chance="10.37" /> <!-- Reinforced Mithril Gloves -->
 				<item id="2453" min="1" max="1" chance="9.558" /> <!-- Chain Gloves -->
 				<item id="263" min="1" max="1" chance="4.721" /> <!-- Chakram -->
-				<item id="4596" min="1" max="1" chance="24.36" /> <!-- Greater INT Dye (Int  2 Wit - 2) -->
+				<item id="4596" min="1" max="1" chance="24.36" /> <!-- Greater INT Dye <Int +2 Wit -2> -->
 				<item id="952" min="3" max="9" chance="15.49" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="4594" min="2" max="6" chance="5.826" /> <!-- Greater DEX Dye (Dex  2 CON - 2) -->
-				<item id="4595" min="2" max="6" chance="4.588" /> <!-- Greater INT Dye (Int  2 Men - 2) -->
+				<item id="4594" min="2" max="6" chance="5.826" /> <!-- Greater DEX Dye <Dex +2 CON -2> -->
+				<item id="4595" min="2" max="6" chance="4.588" /> <!-- Greater INT Dye <Int +2 Men -2> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -847,7 +847,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="61.31" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="61.31" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1037,9 +1037,9 @@
 				<item id="268" min="1" max="1" chance="1.248" /> <!-- Bellion Cestus -->
 				<item id="948" min="1" max="1" chance="16.27" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="4082" min="28" max="84" chance="12.89" /> <!-- Blue Wolf Leather Armor Texture -->
-				<item id="4616" min="1" max="1" chance="9.22" /> <!-- Greater CON Dye (Con  4 DEX - 4) -->
-				<item id="4618" min="1" max="1" chance="9.204" /> <!-- Greater DEX Dye (Dex  4 CON - 4) -->
-				<item id="4617" min="1" max="1" chance="9.185" /> <!-- Greater DEX Dye (Dex  4 Str - 4) -->
+				<item id="4616" min="1" max="1" chance="9.22" /> <!-- Greater CON Dye <Con +4 DEX -4> -->
+				<item id="4618" min="1" max="1" chance="9.204" /> <!-- Greater DEX Dye <Dex +4 CON -4> -->
+				<item id="4617" min="1" max="1" chance="9.185" /> <!-- Greater DEX Dye <Dex +4 Str -4> -->
 				<item id="4083" min="60" max="180" chance="6.106" /> <!-- Leather Armor of Doom Design -->
 				<item id="4120" min="27" max="81" chance="4.057" /> <!-- Bellion Cestus Edge -->
 				<item id="46474" min="1" max="1" chance="1.145" /> <!-- Leona's Soul Crystal - Stage 1 -->
@@ -1064,7 +1064,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="71.51" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="71.51" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1234,7 +1234,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.01" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.01" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1358,7 +1358,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="38.6" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="38.6" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1434,7 +1434,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="49.56" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="49.56" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1574,9 +1574,9 @@
 				<item id="2402" min="1" max="1" chance="2.344" /> <!-- Stockings of Zubei -->
 				<item id="92" min="1" max="1" chance="2.07" /> <!-- Spirit's Staff -->
 				<item id="91" min="1" max="1" chance="2.053" /> <!-- Heavy War Axe -->
-				<item id="4611" min="1" max="1" chance="13.47" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
-				<item id="4612" min="1" max="1" chance="13.21" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
-				<item id="4610" min="1" max="1" chance="12.68" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
+				<item id="4611" min="1" max="1" chance="13.47" /> <!-- Greater WIT Dye <Wit +3 Int -3> -->
+				<item id="4612" min="1" max="1" chance="13.21" /> <!-- Greater WIT Dye <Wit +3 Men -3> -->
+				<item id="4610" min="1" max="1" chance="12.68" /> <!-- Greater MEN Dye <Men +3 Wit -3> -->
 				<item id="6574" min="1" max="1" chance="3.414" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -1595,7 +1595,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="68.46" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="68.46" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1727,9 +1727,9 @@
 				<item id="2495" min="1" max="1" chance="7.228" /> <!-- Chain Shield -->
 				<item id="2413" min="1" max="1" chance="3.258" /> <!-- Chain Hood -->
 				<item id="631" min="1" max="1" chance="1.667" /> <!-- Eldarake -->
-				<item id="4599" min="1" max="1" chance="15.05" /> <!-- Greater WIT Dye (Wit  2 Int - 2) -->
-				<item id="4598" min="1" max="1" chance="14.39" /> <!-- Greater MEN Dye (Men  2 Wit - 2) -->
-				<item id="4597" min="1" max="1" chance="14.29" /> <!-- Greater MEN Dye (Men  2 Int - 2) -->
+				<item id="4599" min="1" max="1" chance="15.05" /> <!-- Greater WIT Dye <Wit +2 Int -2> -->
+				<item id="4598" min="1" max="1" chance="14.39" /> <!-- Greater MEN Dye <Men +2 Wit -2> -->
+				<item id="4597" min="1" max="1" chance="14.29" /> <!-- Greater MEN Dye <Men +2 Int -2> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -1748,7 +1748,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="60.28" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="60.28" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1885,10 +1885,10 @@
 				<item id="2415" min="1" max="1" chance="5.132" /> <!-- Avadon Circlet -->
 				<item id="633" min="1" max="1" chance="3.099" /> <!-- Zubei's Shield -->
 				<item id="267" min="1" max="1" chance="2.319" /> <!-- Arthro Nail -->
-				<item id="673" min="1" max="1" chance="1.782" /> <!-- Avadon Shield -->
-				<item id="4615" min="1" max="1" chance="8.957" /> <!-- Greater CON Dye (Con  4 Str - 4) -->
-				<item id="4614" min="1" max="1" chance="8.956" /> <!-- Greater STR Dye (STR  4 DEX - 4) -->
-				<item id="4613" min="1" max="1" chance="8.926" /> <!-- Greater STR Dye (STR  4 CON - 4) -->
+				<item id="673" min="1" max="1" chance="1.782" /> <!-- Abaddon Shield -->
+				<item id="4615" min="1" max="1" chance="8.957" /> <!-- Greater CON Dye <Con +4 Str -4> -->
+				<item id="4614" min="1" max="1" chance="8.956" /> <!-- Greater STR Dye <STR +4 DEX -4> -->
+				<item id="4613" min="1" max="1" chance="8.926" /> <!-- Greater STR Dye <STR +4 CON -4> -->
 				<item id="6571" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -1902,7 +1902,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="70.99" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="70.99" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2199,7 +2199,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.65" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.65" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2350,7 +2350,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="39.69" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="39.69" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2483,13 +2483,13 @@
 			<drop>
 				<item id="144" min="1" max="1" chance="7.604" /> <!-- Sword of Occult -->
 				<item id="436" min="1" max="1" chance="5.908" /> <!-- Tunic of Knowledge -->
-				<item id="124" min="1" max="1" chance="5.604" /> <!-- Two-handed Sword -->
+				<item id="124" min="1" max="1" chance="5.604" /> <!-- Two-Handed Sword -->
 				<item id="130" min="1" max="1" chance="5.594" /> <!-- Elven Sword -->
 				<item id="127" min="1" max="1" chance="5.572" /> <!-- Crimson Sword -->
 				<item id="469" min="1" max="1" chance="1.996" /> <!-- Stockings of Knowledge -->
 				<item id="83" min="1" max="1" chance="0.75" /> <!-- Sword of Magic -->
 				<item id="6576" min="1" max="1" chance="23.18" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
-				<item id="2026" min="120" max="360" chance="1.034" /> <!-- Two-handed Sword Edge -->
+				<item id="2026" min="120" max="360" chance="1.034" /> <!-- Two-handed Sword Blade -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2502,7 +2502,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="39.3" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="39.3" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2643,9 +2643,9 @@
 			<drop>
 				<item id="262" min="1" max="1" chance="8.308" /> <!-- Scallop Jamadhr -->
 				<item id="438" min="1" max="1" chance="3.961" /> <!-- Sage's Rags -->
-				<item id="4594" min="1" max="1" chance="13" /> <!-- Greater DEX Dye (Dex  2 CON - 2) -->
-				<item id="4595" min="1" max="1" chance="12.48" /> <!-- Greater INT Dye (Int  2 Men - 2) -->
-				<item id="4596" min="1" max="1" chance="12.44" /> <!-- Greater INT Dye (Int  2 Wit - 2) -->
+				<item id="4594" min="1" max="1" chance="13" /> <!-- Greater DEX Dye <Dex +2 CON -2> -->
+				<item id="4595" min="1" max="1" chance="12.48" /> <!-- Greater INT Dye <Int +2 Men -2> -->
+				<item id="4596" min="1" max="1" chance="12.44" /> <!-- Greater INT Dye <Int +2 Wit -2> -->
 				<item id="1953" min="105" max="315" chance="8.808" /> <!-- Sage's Rag Lining -->
 				<item id="2053" min="108" max="324" chance="2.247" /> <!-- Scallop Jamadhr Edge -->
 				<item id="6574" min="1" max="1" chance="2.222" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
@@ -2661,7 +2661,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="49.8" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="49.8" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2795,7 +2795,7 @@
 				<item id="2387" min="1" max="1" chance="2.375" /> <!-- Reinforced Mithril Gaiters -->
 				<item id="226" min="1" max="1" chance="1.649" /> <!-- Cursed Dagger -->
 				<item id="232" min="1" max="1" chance="1.465" /> <!-- Dark Elven Dagger -->
-				<item id="4600" min="1" max="3" chance="23.71" /> <!-- Greater WIT Dye (Wit  2 Men - 2) -->
+				<item id="4600" min="1" max="3" chance="23.71" /> <!-- Greater WIT Dye <Wit +2 Men -2> -->
 				<item id="6574" min="1" max="1" chance="8.05" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -2814,7 +2814,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="59.62" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="59.62" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -2957,9 +2957,9 @@
 				<item id="5286" min="1" max="1" chance="4.013" /> <!-- Berserker Blade -->
 				<item id="401" min="1" max="1" chance="2.921" /> <!-- Drake Leather Armor -->
 				<item id="400" min="1" max="1" chance="1.622" /> <!-- Theca Leather Armor -->
-				<item id="4611" min="1" max="1" chance="17.59" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
-				<item id="4612" min="1" max="1" chance="17.39" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
-				<item id="4610" min="1" max="3" chance="8.988" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
+				<item id="4611" min="1" max="1" chance="17.59" /> <!-- Greater WIT Dye <Wit +3 Int -3> -->
+				<item id="4612" min="1" max="1" chance="17.39" /> <!-- Greater WIT Dye <Wit +3 Men -3> -->
+				<item id="4610" min="1" max="3" chance="8.988" /> <!-- Greater MEN Dye <Men +3 Wit -3> -->
 				<item id="6574" min="1" max="1" chance="4.606" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -2978,7 +2978,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="60.88" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="60.88" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3124,7 +3124,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="80.03" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="80.03" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3197,7 +3197,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="39.83" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="39.83" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3343,9 +3343,9 @@
 				<item id="2449" min="1" max="1" chance="14.09" /> <!-- Brigandine Gauntlets -->
 				<item id="2450" min="1" max="1" chance="12.64" /> <!-- Elven Mithril Gloves -->
 				<item id="129" min="1" max="1" chance="5.805" /> <!-- Sword of Revolution -->
-				<item id="4555" min="1" max="1" chance="19.13" /> <!-- Greater CON Dye (Con  1 Str - 1) -->
-				<item id="4554" min="1" max="1" chance="18.34" /> <!-- Greater STR Dye (STR  1 DEX - 1) -->
-				<item id="4553" min="1" max="3" chance="9.547" /> <!-- Greater STR Dye (STR  1 CON - 1) -->
+				<item id="4555" min="1" max="1" chance="19.13" /> <!-- Greater CON Dye <Con +1 Str -1> -->
+				<item id="4554" min="1" max="1" chance="18.34" /> <!-- Greater STR Dye <STR +1 DEX -1> -->
+				<item id="4553" min="1" max="3" chance="9.547" /> <!-- Greater STR Dye <STR +1 CON -1> -->
 				<item id="6575" min="1" max="1" chance="1.032" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3359,7 +3359,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="49.44" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="49.44" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3431,7 +3431,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="49.5" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="49.5" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3563,9 +3563,9 @@
 				<item id="64" min="1" max="1" chance="11" /> <!-- Compound Boots -->
 				<item id="608" min="1" max="1" chance="4.83" /> <!-- Mithril Gauntlets -->
 				<item id="326" min="1" max="1" chance="3.681" /> <!-- Heathen's Book -->
-				<item id="4611" min="1" max="1" chance="11.28" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
-				<item id="4610" min="1" max="1" chance="11.03" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
-				<item id="4612" min="1" max="1" chance="10.91" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
+				<item id="4611" min="1" max="1" chance="11.28" /> <!-- Greater WIT Dye <Wit +3 Int -3> -->
+				<item id="4610" min="1" max="1" chance="11.03" /> <!-- Greater MEN Dye <Men +3 Wit -3> -->
+				<item id="4612" min="1" max="1" chance="10.91" /> <!-- Greater WIT Dye <Wit +3 Men -3> -->
 				<item id="6574" min="1" max="1" chance="2.767" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -3584,7 +3584,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="58.56" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="58.56" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3878,7 +3878,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.84" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.84" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4034,7 +4034,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="70.91" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="70.91" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4173,9 +4173,9 @@
 				<item id="882" min="1" max="1" chance="3.278" /> <!-- Mithril Ring -->
 				<item id="914" min="1" max="1" chance="2.277" /> <!-- Dark Necklace -->
 				<item id="280" min="1" max="1" chance="0.75" /> <!-- Light Bow -->
-				<item id="4597" min="1" max="1" chance="13.23" /> <!-- Greater MEN Dye (Men  2 Int - 2) -->
-				<item id="4598" min="1" max="1" chance="13.13" /> <!-- Greater MEN Dye (Men  2 Wit - 2) -->
-				<item id="4599" min="1" max="1" chance="12.41" /> <!-- Greater WIT Dye (Wit  2 Int - 2) -->
+				<item id="4597" min="1" max="1" chance="13.23" /> <!-- Greater MEN Dye <Men +2 Int -2> -->
+				<item id="4598" min="1" max="1" chance="13.13" /> <!-- Greater MEN Dye <Men +2 Wit -2> -->
+				<item id="4599" min="1" max="1" chance="12.41" /> <!-- Greater WIT Dye <Wit +2 Int -2> -->
 				<item id="951" min="1" max="1" chance="7.02" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4189,7 +4189,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="49.99" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="49.99" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4328,9 +4328,9 @@
 				<item id="2411" min="1" max="1" chance="2.029" /> <!-- Brigandine Helmet -->
 				<item id="629" min="1" max="1" chance="0.96" /> <!-- Kite Shield -->
 				<item id="88" min="1" max="1" chance="0.75" /> <!-- Morning Star -->
-				<item id="4556" min="1" max="1" chance="13.72" /> <!-- Greater CON Dye (Con  1 DEX - 1) -->
-				<item id="4557" min="1" max="1" chance="13.48" /> <!-- Greater DEX Dye (Dex  1 Str - 1) -->
-				<item id="4558" min="1" max="1" chance="13.07" /> <!-- Greater DEX Dye (Dex  1 CON - 1) -->
+				<item id="4556" min="1" max="1" chance="13.72" /> <!-- Greater CON Dye <Con +1 DEX -1> -->
+				<item id="4557" min="1" max="1" chance="13.48" /> <!-- Greater DEX Dye <Dex +1 Str -1> -->
+				<item id="4558" min="1" max="1" chance="13.07" /> <!-- Greater DEX Dye <Dex +1 CON -1> -->
 				<item id="6576" min="1" max="1" chance="6.553" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4344,7 +4344,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="50.72" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="50.72" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4414,7 +4414,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="50.82" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="50.82" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4574,7 +4574,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="61.06" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="61.06" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4741,7 +4741,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.38" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.38" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -4830,7 +4830,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="79.81" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="79.81" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>

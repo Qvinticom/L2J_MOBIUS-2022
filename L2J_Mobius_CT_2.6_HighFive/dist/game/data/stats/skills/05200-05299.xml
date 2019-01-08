@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" levels="8" name="Pet Recharge">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Regenerates MP. -->
 		<table name="#amount"> 120 124 128 138 144 149 153 155 </table>
 		<table name="#effectPoints"> 604 617 630 659 676 689 700 709 </table>
 		<table name="#magicLvl"> 65 67 69 75 80 85 90 95 </table>
@@ -27,7 +27,7 @@
 		</for>
 	</skill>
 	<skill id="5201" levels="6" name="Pet Concentration">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken. Effect 1. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#cancel"> 18 25 36 42 48 53 </table>
 		<table name="#effectPoints"> 204 285 418 495 566 624 </table>
@@ -57,7 +57,7 @@
 		</for>
 	</skill>
 	<skill id="5202" levels="12" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<set name="abnormalLvl" val="1" />
@@ -85,7 +85,7 @@
 		</for>
 	</skill>
 	<skill id="5203" levels="12" name="Fear">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily becomes overcome with fear and flees mindlessly. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<set name="abnormalLvl" val="1" />
@@ -113,7 +113,6 @@
 		</for>
 	</skill>
 	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="5800" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
@@ -121,7 +120,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5205" levels="1" name="Boss Regeneration">
-		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
@@ -133,7 +131,7 @@
 		</for>
 	</skill>
 	<skill id="5206" levels="1" name="Decrease Speed">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Curse of mutated animals: Movement speed is decreased momentarily. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -161,7 +159,7 @@
 		</for>
 	</skill>
 	<skill id="5207" levels="1" name="Decrease Atk. Spd.">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Curse of mutated animals: Attack speed is decreased momentarily. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -189,7 +187,7 @@
 		</for>
 	</skill>
 	<skill id="5208" levels="1" name="Event Wind walk">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -208,7 +206,7 @@
 		</for>
 	</skill>
 	<skill id="5209" levels="1" name="Event Shield">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases P. Def. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -227,7 +225,7 @@
 		</for>
 	</skill>
 	<skill id="5210" levels="1" name="Event Bless the body">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases maximum HP. Effect 6. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -246,7 +244,7 @@
 		</for>
 	</skill>
 	<skill id="5211" levels="1" name="Event Vampiric rage">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Uses damage inflicted upon the enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4. -->
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -265,7 +263,7 @@
 		</for>
 	</skill>
 	<skill id="5212" levels="1" name="Event Regeneration">
-		<!-- CT2.5 retail confirmed -->
+		<!-- HP recovery bonus is increased for a fixed time. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HP_REGEN_UP" />
@@ -284,7 +282,7 @@
 		</for>
 	</skill>
 	<skill id="5213" levels="1" name="Event Haste">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -303,7 +301,7 @@
 		</for>
 	</skill>
 	<skill id="5214" levels="1" name="Event Bless the soul">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases maximum MP. Effect 6. -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -322,7 +320,7 @@
 		</for>
 	</skill>
 	<skill id="5215" levels="1" name="Event Acumen">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -341,7 +339,7 @@
 		</for>
 	</skill>
 	<skill id="5216" levels="1" name="Event Concentration">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
@@ -360,7 +358,7 @@
 		</for>
 	</skill>
 	<skill id="5217" levels="1" name="Event Empower">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily increases M. Atk. Effect 1. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -379,7 +377,6 @@
 		</for>
 	</skill>
 	<skill id="5218" levels="1" name="Production: Event Teleport">
-		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
@@ -389,7 +386,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5219" levels="1" name="Stun of giant mutated animal">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Curse of giant mutated animal: Stuns and paralyzes target. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -417,7 +414,7 @@
 		</for>
 	</skill>
 	<skill id="5220" levels="1" name="Fear of giant mutated animal">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Curse of giant mutated animal: Creates fear, making target run away uncontrollably. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -444,8 +441,6 @@
 		</for>
 	</skill>
 	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
@@ -464,8 +459,6 @@
 		</for>
 	</skill>
 	<skill id="5222" levels="1" name="Balor - Physical Long Range Weak Point">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
@@ -478,8 +471,6 @@
 		</for>
 	</skill>
 	<skill id="5223" levels="1" name="Balor - Magic Weak Point">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
@@ -492,8 +483,7 @@
 		</for>
 	</skill>
 	<skill id="5224" levels="1" name="Berserk">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Increases P. Atk. and P. Def. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -513,8 +503,7 @@
 		</for>
 	</skill>
 	<skill id="5225" levels="1" name="Invincible">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Invincible against general attack and skill, buff/de-buff. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -532,8 +521,7 @@
 		</for>
 	</skill>
 	<skill id="5226" levels="1" name="Imprison">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Transfers to prison. -->
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -547,8 +535,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5227" levels="1" name="Ground Strike">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="20" />
 		<set name="effectPoint" val="-100" />
@@ -564,8 +551,7 @@
 		</for>
 	</skill>
 	<skill id="5228" levels="1" name="Jump Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="20" />
 		<set name="effectPoint" val="-100" />
@@ -582,8 +568,7 @@
 		</for>
 	</skill>
 	<skill id="5229" levels="1" name="Strong Punch">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
+		<!-- Stunned by a Heavy Punch Attack. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -614,8 +599,7 @@
 		</for>
 	</skill>
 	<skill id="5230" levels="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -641,8 +625,7 @@
 		</for>
 	</skill>
 	<skill id="5231" levels="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -668,8 +651,7 @@
 		</for>
 	</skill>
 	<skill id="5232" levels="1" name="Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -695,8 +677,7 @@
 		</for>
 	</skill>
 	<skill id="5233" levels="1" name="Weight Spin Attack - Weak">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="5000" />
@@ -711,8 +692,7 @@
 		</for>
 	</skill>
 	<skill id="5234" levels="1" name="Weight Spin Attack - Mid">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3000" />
@@ -727,8 +707,7 @@
 		</for>
 	</skill>
 	<skill id="5235" levels="1" name="Weight Spin Attack - Strong">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Powerful attack on surrounding area. -->
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
@@ -743,8 +722,7 @@
 		</for>
 	</skill>
 	<skill id="5236" levels="1" name="Speed Up">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Increases speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -762,8 +740,7 @@
 		</for>
 	</skill>
 	<skill id="5237" levels="1" name="Speed Down">
-		<!-- Confirmed CT2.5 -->
-		<!-- Tully Skills -->
+		<!-- Decreases speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -781,7 +758,7 @@
 		</for>
 	</skill>
 	<skill id="5238" levels="1" name="Freezing">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Instantly freezes and immobilizes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FREEZING" />
@@ -813,7 +790,7 @@
 		</for>
 	</skill>
 	<skill id="5239" levels="5" name="Event Timer">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Battle cannot be continued when the corresponding effect disappears. Corresponding effects will disappear even if you ride a vehicle. -->
 		<table name="#abnormalTime"> 300 600 900 1200 1800 </table>
 		<table name="#Time"> 300 600 900 1200 1800 </table>
 		<set name="abnormalLvl" val="1" />
@@ -833,7 +810,7 @@
 		</for>
 	</skill>
 	<skill id="5240" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -861,7 +838,7 @@
 		</for>
 	</skill>
 	<skill id="5241" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -888,7 +865,7 @@
 		</for>
 	</skill>
 	<skill id="5242" levels="1" name="Sickness">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporary illness that makes you queasy and blurs your vision. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MAX_BREATH_UP" />
@@ -912,7 +889,7 @@
 		</for>
 	</skill>
 	<skill id="5243" levels="1" name="Blind">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily cannot see. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MAX_BREATH_UP" />
@@ -931,6 +908,7 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5244" levels="1" name="Physical Up">
+		<!-- Increases P. Atk. and P. Def. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -950,6 +928,7 @@
 		</for>
 	</skill>
 	<skill id="5245" levels="1" name="Magical Up">
+		<!-- Increases magic power and magic resistance. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="MA_MD_UP" />
@@ -969,7 +948,6 @@
 		</for>
 	</skill>
 	<skill id="5246" levels="12" name="Boss Dark Explosion">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 23 32 44 58 74 89 102 107 112 114 116 118 </table>
 		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
@@ -992,7 +970,7 @@
 		</for>
 	</skill>
 	<skill id="5247" levels="12" name="Seed of Darkness">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Instantly decreases HP. Critical Damage will be inflicted by the full grown seed if it is not removed. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#dot"> 60 91 131 177 225 270 305 305 334 334 360 360 </table>
@@ -1033,7 +1011,6 @@
 		</endEffects>
 	</skill>
 	<skill id="5248" levels="12" name="Seed Explosion">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#power"> 81 121 171 231 298 367 431 458 481 500 513 526 </table>
 		<set name="affectRange" val="300" />
@@ -1055,7 +1032,6 @@
 		</for>
 	</skill>
 	<skill id="5249" levels="12" name="Boss Dark Circle">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
@@ -1078,7 +1054,7 @@
 		</for>
 	</skill>
 	<skill id="5250" levels="1" name="Stun">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Target temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
@@ -1105,7 +1081,7 @@
 		</for>
 	</skill>
 	<skill id="5251" levels="12" name="Poison">
-		<!-- CT2.5 retail confirmed -->
+		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#dot"> 32 47 63 82 100 115 126 126 132 132 132 135 </table>
@@ -1143,7 +1119,7 @@
 		</endEffects>
 	</skill>
 	<skill id="5252" levels="12" name="Paralysis">
-		<!-- CT2.5 retail confirmed -->
+		<!-- You are stunned and temporarily prohibited from movement. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -1170,7 +1146,7 @@
 		</for>
 	</skill>
 	<skill id="5253" levels="12" name="Bleed">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP decreasing caused by bleeding. Effect 2. -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#dot"> 35 50 68 87 107 123 134 134 139 139 142 142 </table>
@@ -1210,7 +1186,7 @@
 		</endEffects>
 	</skill>
 	<skill id="5254" levels="12" name="Invasion of Spirit">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Decreases MP. Effect 2. -->
 		<table name="#abnormalLvls"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
 		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<table name="#dot"> 4 6 8 11 14 17 20 21 22 23 23 23 </table>
@@ -1247,7 +1223,6 @@
 		</endEffects>
 	</skill>
 	<skill id="5255" levels="12" name="Mana Burn">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 26 39 56 78 102 128 153 164 174 182 189 194 </table>
 		<set name="effectPoint" val="-100" />
@@ -1264,7 +1239,7 @@
 		</for>
 	</skill>
 	<skill id="5256" levels="1" name="Announcement of Death">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Announcement of Death. Dead after 30 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DEATH_CLACK" />
@@ -1290,7 +1265,6 @@
 		</endEffects>
 	</skill>
 	<skill id="5257" levels="2" name="Death">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#lethalStrikeRate"> 99 5 </table>
 		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1306,7 +1280,6 @@
 		</for>
 	</skill>
 	<skill id="5258" levels="12" name="Mana Burn">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
@@ -1328,7 +1301,7 @@
 		</for>
 	</skill>
 	<skill id="5259" levels="12" name="Fear">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Temporarily becomes overcome with fear and flees mindlessly. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
@@ -1360,7 +1333,7 @@
 		</for>
 	</skill>
 	<skill id="5260" levels="12" name="Disarm">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Equipment Cancel Condition. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1386,7 +1359,7 @@
 		</for>
 	</skill>
 	<skill id="5261" levels="1" name="Zombie">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Condition causing target to transform into zombie. Condition to decrease physical ability. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1408,7 +1381,6 @@
 		</for>
 	</skill>
 	<skill id="5262" levels="12" name="NPC - Rise Shot">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#power"> 31 70 146 278 481 758 1084 1251 1408 1521 1658 1728 </table>
@@ -1431,7 +1403,6 @@
 		</for>
 	</skill>
 	<skill id="5263" levels="12" name="NPC _ Chain Lightning">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
@@ -1455,7 +1426,7 @@
 		</for>
 	</skill>
 	<skill id="5264" levels="12" name="Death Mark">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Marked with the brand of darkness. Effect 1. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
@@ -1484,7 +1455,6 @@
 		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
@@ -1510,7 +1480,7 @@
 		</for>
 	</skill>
 	<skill id="5266" levels="12" name="Magical Backfire">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Increased MP consumption. Effect 1. -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
@@ -1544,7 +1514,6 @@
 		</for>
 	</skill>
 	<skill id="5267" levels="21" name="Trap Explosion">
-		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 28 36 43 49 55 60 64 68 72 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 35 46 57 66 77 85 92 99 105 107 111 112 114 115 116 117 119 120 121 122 123 </table>
 		<set name="castRange" val="600" />
@@ -1564,7 +1533,7 @@
 		</for>
 	</skill>
 	<skill id="5268" levels="17" name="Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- A toxin that gradually reduces HP. -->
 		<table name="#dmg"> 18 22 26 26 26 28 55 55 55 55 57 57 57 57 57 57 57 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1591,7 +1560,7 @@
 		</for>
 	</skill>
 	<skill id="5269" levels="17" name="Slow Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Decreases Atk. Spd. and Casting Spd. Effect 3. -->
 		<table name="#magicLvl"> 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
@@ -1617,7 +1586,7 @@
 		</for>
 	</skill>
 	<skill id="5270" levels="16" name="Flash Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Receives instant impact and stunned after losing the target. -->
 		<table name="#magicLvl"> 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -1644,7 +1613,7 @@
 		</for>
 	</skill>
 	<skill id="5271" levels="19" name="Hold">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily immobilized. -->
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#traits"> NONE HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD </table>
 		<set name="abnormalLvl" val="1" />
@@ -1674,7 +1643,6 @@
 		</for>
 	</skill>
 	<skill id="5272" levels="17" name="Decoy Provocation">
-		<!-- Confirmed CT2.5 -->
 		<table name="#effectPoints"> -4080 -4950 -5657 -6104 -6349 -6542 -6582 -6620 -6656 -6690 -6722 -6752 -6781 -6809 -6836 -6862 -6887 </table>
 		<table name="#magicLvl"> 43 52 60 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="affectRange" val="200" />
@@ -1691,7 +1659,6 @@
 		</for>
 	</skill>
 	<skill id="5273" levels="9" name="NPC(party) - Physical Single Close Range Attack">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1711,7 +1678,6 @@
 		</for>
 	</skill>
 	<skill id="5274" levels="9" name="NPC(party) - Physical Single Long Range Attack">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1730,7 +1696,6 @@
 		</for>
 	</skill>
 	<skill id="5275" levels="9" name="NPC(party) - Physical Range Close Range Attack">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1749,7 +1714,6 @@
 		</for>
 	</skill>
 	<skill id="5276" levels="9" name="NPC(party) - Physical Range Long Range Attack">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1770,7 +1734,6 @@
 		</for>
 	</skill>
 	<skill id="5277" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1792,7 +1755,6 @@
 		</for>
 	</skill>
 	<skill id="5278" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1813,7 +1775,6 @@
 		</for>
 	</skill>
 	<skill id="5279" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -1833,7 +1794,6 @@
 		</for>
 	</skill>
 	<skill id="5280" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1856,7 +1816,6 @@
 		</for>
 	</skill>
 	<skill id="5281" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1879,7 +1838,6 @@
 		</for>
 	</skill>
 	<skill id="5282" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1900,7 +1858,6 @@
 		</for>
 	</skill>
 	<skill id="5283" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -1920,7 +1877,6 @@
 		</for>
 	</skill>
 	<skill id="5284" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -1943,7 +1899,6 @@
 		</for>
 	</skill>
 	<skill id="5285" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -1966,7 +1921,6 @@
 		</for>
 	</skill>
 	<skill id="5286" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -1987,7 +1941,6 @@
 		</for>
 	</skill>
 	<skill id="5287" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -2007,7 +1960,6 @@
 		</for>
 	</skill>
 	<skill id="5288" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -2030,7 +1982,6 @@
 		</for>
 	</skill>
 	<skill id="5289" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -2053,7 +2004,6 @@
 		</for>
 	</skill>
 	<skill id="5290" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -2074,7 +2024,6 @@
 		</for>
 	</skill>
 	<skill id="5291" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -2094,7 +2043,6 @@
 		</for>
 	</skill>
 	<skill id="5292" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -2117,7 +2065,6 @@
 		</for>
 	</skill>
 	<skill id="5293" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -2140,7 +2087,6 @@
 		</for>
 	</skill>
 	<skill id="5294" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -2161,7 +2107,6 @@
 		</for>
 	</skill>
 	<skill id="5295" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
@@ -2181,7 +2126,6 @@
 		</for>
 	</skill>
 	<skill id="5296" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
@@ -2204,7 +2148,6 @@
 		</for>
 	</skill>
 	<skill id="5297" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
@@ -2226,7 +2169,6 @@
 		</for>
 	</skill>
 	<skill id="5298" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
@@ -2247,7 +2189,6 @@
 		</for>
 	</skill>
 	<skill id="5299" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
-		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25100" level="55" type="L2Monster" name="Spirit of the Sea of Spores" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -130,9 +130,9 @@
 				<item id="885" min="1" max="1" chance="6.01300000000013" /> <!-- Ring of Ages -->
 				<item id="9816" min="1" max="3" chance="41.596183040555" /> <!-- Earth Egg -->
 				<item id="8176" min="1" max="1" chance="40.153979613967" /> <!-- Destruction Tombstone -->
-				<item id="4609" min="1" max="1" chance="6.1320754716981" /> <!-- Greater MEN Dye (Men + 3 Int - 3) -->
-				<item id="4607" min="1" max="1" chance="6.072435480373" /> <!-- Greater INT Dye (Int + 3 Men - 3) -->
-				<item id="4608" min="1" max="1" chance="5.8826718716114" /> <!-- Greater INT Dye (Int + 3 Wit - 3) -->
+				<item id="4609" min="1" max="1" chance="6.1320754716981" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
+				<item id="4607" min="1" max="1" chance="6.072435480373" /> <!-- Greater INT Dye <Int + 3 Men - 3> -->
+				<item id="4608" min="1" max="1" chance="5.8826718716114" /> <!-- Greater INT Dye <Int + 3 Wit - 3> -->
 				<item id="6573" min="1" max="1" chance="0.16265452179571" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
@@ -769,10 +769,10 @@
 				<item id="2453" min="1" max="1" chance="3.8909007488489" /> <!-- Chain Gloves -->
 				<item id="9817" min="1" max="4" chance="41.391655111559" /> <!-- Nonliving Nucleus -->
 				<item id="8176" min="1" max="2" chance="33.702256397328" /> <!-- Destruction Tombstone -->
-				<item id="4596" min="1" max="1" chance="11.975293079541" /> <!-- Greater INT Dye (Int + 2 Wit - 2) -->
+				<item id="4596" min="1" max="1" chance="11.975293079541" /> <!-- Greater INT Dye <Int + 2 Wit - 2> -->
 				<item id="952" min="3" max="9" chance="7.6541031135762" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="4594" min="2" max="6" chance="2.9229799571411" /> <!-- Greater DEX Dye (Dex + 2 CON - 2) -->
-				<item id="4595" min="2" max="6" chance="2.3537123408547" /> <!-- Greater INT Dye (Int + 2 Men - 2) -->
+				<item id="4594" min="2" max="6" chance="2.9229799571411" /> <!-- Greater DEX Dye <Dex + 2 CON - 2> -->
+				<item id="4595" min="2" max="6" chance="2.3537123408547" /> <!-- Greater INT Dye <Int + 2 Men - 2> -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="58.59" /> <!-- Fortune Pocket - Stage 1 -->
@@ -966,9 +966,9 @@
 				<item id="383" min="1" max="1" chance="1.29699999999999" /> <!-- Zubei's Gaiters -->
 				<item id="8176" min="1" max="2" chance="42.533411379298" /> <!-- Destruction Tombstone -->
 				<item id="9818" min="2" max="5" chance="38.445835936232" /> <!-- Angelic Essence -->
-				<item id="4609" min="1" max="1" chance="10.231235766039" /> <!-- Greater MEN Dye (Men + 3 Int - 3) -->
-				<item id="4607" min="1" max="3" chance="5.0516726594818" /> <!-- Greater INT Dye (Int + 3 Men - 3) -->
-				<item id="4608" min="1" max="3" chance="3.3689295077693" /> <!-- Greater INT Dye (Int + 3 Wit - 3) -->
+				<item id="4609" min="1" max="1" chance="10.231235766039" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
+				<item id="4607" min="1" max="3" chance="5.0516726594818" /> <!-- Greater INT Dye <Int + 3 Men - 3> -->
+				<item id="4608" min="1" max="3" chance="3.3689295077693" /> <!-- Greater INT Dye <Int + 3 Wit - 3> -->
 				<item id="6573" min="1" max="1" chance="0.3689147511793" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
@@ -1120,9 +1120,9 @@
 				<item id="9816" min="1" max="4" chance="41.115681317082" /> <!-- Earth Egg -->
 				<item id="8176" min="1" max="2" chance="35.272047050959" /> <!-- Destruction Tombstone -->
 				<item id="948" min="1" max="1" chance="8.7546697861467" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="4618" min="1" max="1" chance="4.9838006264117" /> <!-- Greater DEX Dye (Dex + 4 CON - 4) -->
-				<item id="4617" min="1" max="1" chance="4.9412132549151" /> <!-- Greater DEX Dye (Dex + 4 Str - 4) -->
-				<item id="4616" min="1" max="1" chance="4.9325879644854" /> <!-- Greater CON Dye (Con + 4 DEX - 4) -->
+				<item id="4618" min="1" max="1" chance="4.9838006264117" /> <!-- Greater DEX Dye <Dex + 4 CON - 4> -->
+				<item id="4617" min="1" max="1" chance="4.9412132549151" /> <!-- Greater DEX Dye <Dex + 4 Str - 4> -->
+				<item id="4616" min="1" max="1" chance="4.9325879644854" /> <!-- Greater CON Dye <Con + 4 DEX - 4> -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="71.54" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1595,9 +1595,9 @@
 				<item id="2402" min="1" max="1" chance="2.28600000000006" /> <!-- Stockings of Zubei -->
 				<item id="8176" min="1" max="1" chance="40.770862473022" /> <!-- Destruction Tombstone -->
 				<item id="9814" min="1" max="3" chance="39.719517956223" /> <!-- Memento Mori -->
-				<item id="4610" min="1" max="1" chance="6.1598599442371" /> <!-- Greater MEN Dye (Men + 3 Wit - 3) -->
-				<item id="4611" min="1" max="1" chance="5.9051288939115" /> <!-- Greater WIT Dye (Wit + 3 Int - 3) -->
-				<item id="4612" min="1" max="1" chance="5.8588141574886" /> <!-- Greater WIT Dye (Wit + 3 Men - 3) -->
+				<item id="4610" min="1" max="1" chance="6.1598599442371" /> <!-- Greater MEN Dye <Men + 3 Wit - 3> -->
+				<item id="4611" min="1" max="1" chance="5.9051288939115" /> <!-- Greater WIT Dye <Wit + 3 Int - 3> -->
+				<item id="4612" min="1" max="1" chance="5.8588141574886" /> <!-- Greater WIT Dye <Wit + 3 Men - 3> -->
 				<item id="6574" min="1" max="1" chance="1.5858165751179" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<lucky>
@@ -1735,9 +1735,9 @@
 				<item id="2413" min="1" max="1" chance="3.234" /> <!-- Chain Hood -->
 				<item id="9816" min="1" max="2" chance="42.612598507385" /> <!-- Earth Egg -->
 				<item id="8176" min="1" max="1" chance="33.672564062418" /> <!-- Destruction Tombstone -->
-				<item id="4598" min="1" max="1" chance="7.880590783362" /> <!-- Greater MEN Dye (Men + 2 Wit - 2) -->
-				<item id="4599" min="1" max="1" chance="7.880590783362" /> <!-- Greater WIT Dye (Wit + 2 Int - 2) -->
-				<item id="4597" min="1" max="1" chance="7.7970878346642" /> <!-- Greater MEN Dye (Men + 2 Int - 2) -->
+				<item id="4598" min="1" max="1" chance="7.880590783362" /> <!-- Greater MEN Dye <Men + 2 Wit - 2> -->
+				<item id="4599" min="1" max="1" chance="7.880590783362" /> <!-- Greater WIT Dye <Wit + 2 Int - 2> -->
+				<item id="4597" min="1" max="1" chance="7.7970878346642" /> <!-- Greater MEN Dye <Men + 2 Int - 2> -->
 				<item id="6573" min="1" max="1" chance="0.15656802880852" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
@@ -1881,9 +1881,9 @@
 				<item id="2415" min="1" max="1" chance="5.16400000000002" /> <!-- Avadon Circlet -->
 				<item id="8176" min="1" max="4" chance="42.622183592967" /> <!-- Destruction Tombstone -->
 				<item id="9814" min="1" max="4" chance="42.254462793341" /> <!-- Memento Mori -->
-				<item id="4613" min="1" max="1" chance="5.0015600276348" /> <!-- Greater STR Dye (STR + 4 CON - 4) -->
-				<item id="4615" min="1" max="1" chance="4.9848454458336" /> <!-- Greater CON Dye (Con + 4 Str - 4) -->
-				<item id="4614" min="1" max="1" chance="4.9698023222126" /> <!-- Greater STR Dye (STR + 4 DEX - 4) -->
+				<item id="4613" min="1" max="1" chance="5.0015600276348" /> <!-- Greater STR Dye <STR + 4 CON - 4> -->
+				<item id="4615" min="1" max="1" chance="4.9848454458336" /> <!-- Greater CON Dye <Con + 4 Str - 4> -->
+				<item id="4614" min="1" max="1" chance="4.9698023222126" /> <!-- Greater STR Dye <STR + 4 DEX - 4> -->
 				<item id="6571" min="1" max="1" chance="0.16714581801163" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
 			</drop>
 			<lucky>
@@ -2585,9 +2585,9 @@
 				<item id="2053" min="108" max="324" chance="2.21000000000003" /> <!-- Scallop Jamadhr Edge -->
 				<item id="438" min="1" max="1" chance="3.89800000000002" /> <!-- Sage's Rags -->
 				<item id="1953" min="105" max="315" chance="8.71199999999998" /> <!-- Sage's Rag Lining -->
-				<item id="4596" min="1" max="1" chance="13.22" /> <!-- Greater INT Dye (Int + 2 Wit - 2) -->
-				<item id="4594" min="1" max="1" chance="12.8500000000002" /> <!-- Greater DEX Dye (Dex + 2 CON - 2) -->
-				<item id="4595" min="1" max="1" chance="12.7900000000001" /> <!-- Greater INT Dye (Int + 2 Men - 2) -->
+				<item id="4596" min="1" max="1" chance="13.22" /> <!-- Greater INT Dye <Int + 2 Wit - 2> -->
+				<item id="4594" min="1" max="1" chance="12.8500000000002" /> <!-- Greater DEX Dye <Dex + 2 CON - 2> -->
+				<item id="4595" min="1" max="1" chance="12.7900000000001" /> <!-- Greater INT Dye <Int + 2 Men - 2> -->
 				<item id="6574" min="1" max="1" chance="2.18600000000001" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<lucky>
@@ -2727,7 +2727,7 @@
 				<item id="2387" min="1" max="1" chance="2.42600000000002" /> <!-- Reinforced Mithril Gaiters -->
 				<item id="9814" min="1" max="4" chance="46.075717617314" /> <!-- Memento Mori -->
 				<item id="8176" min="1" max="2" chance="36.714544146815" /> <!-- Destruction Tombstone -->
-				<item id="4600" min="1" max="3" chance="12.875700180903" /> <!-- Greater WIT Dye (Wit + 2 Men - 2) -->
+				<item id="4600" min="1" max="3" chance="12.875700180903" /> <!-- Greater WIT Dye <Wit + 2 Men - 2> -->
 				<item id="6574" min="1" max="1" chance="4.3340380549683" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<lucky>
@@ -2876,9 +2876,9 @@
 				<item id="400" min="1" max="1" chance="1.68400000000004" /> <!-- Theca Leather Armor -->
 				<item id="8176" min="1" max="2" chance="38.477555998453" /> <!-- Destruction Tombstone -->
 				<item id="9817" min="2" max="4" chance="37.332302109052" /> <!-- Nonliving Nucleus -->
-				<item id="4611" min="1" max="1" chance="8.9934656076787" /> <!-- Greater WIT Dye (Wit + 3 Int - 3) -->
-				<item id="4612" min="1" max="1" chance="8.4679378489058" /> <!-- Greater WIT Dye (Wit + 3 Men - 3) -->
-				<item id="4610" min="1" max="3" chance="4.4764057867547" /> <!-- Greater MEN Dye (Men + 3 Wit - 3) -->
+				<item id="4611" min="1" max="1" chance="8.9934656076787" /> <!-- Greater WIT Dye <Wit + 3 Int - 3> -->
+				<item id="4612" min="1" max="1" chance="8.4679378489058" /> <!-- Greater WIT Dye <Wit + 3 Men - 3> -->
+				<item id="4610" min="1" max="3" chance="4.4764057867547" /> <!-- Greater MEN Dye <Men + 3 Wit - 3> -->
 				<item id="6574" min="1" max="1" chance="2.2523326491557" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<lucky>
@@ -2942,9 +2942,9 @@
 				<item id="2376" min="1" max="1" chance="1.93100000000004" /> <!-- Avadon Breastplate -->
 				<item id="9818" min="1" max="3" chance="43.94992908919" /> <!-- Angelic Essence -->
 				<item id="8176" min="1" max="1" chance="43.117711944532" /> <!-- Destruction Tombstone -->
-				<item id="4621" min="1" max="1" chance="4.2827174598172" /> <!-- Greater MEN Dye (Men + 4 Int - 4) -->
-				<item id="4619" min="1" max="1" chance="4.2531712890009" /> <!-- Greater INT Dye (Int + 4 Men - 4) -->
-				<item id="4620" min="1" max="1" chance="4.2487393633785" /> <!-- Greater INT Dye (Int + 4 Wit - 4) -->
+				<item id="4621" min="1" max="1" chance="4.2827174598172" /> <!-- Greater MEN Dye <Men + 4 Int - 4> -->
+				<item id="4619" min="1" max="1" chance="4.2531712890009" /> <!-- Greater INT Dye <Int + 4 Men - 4> -->
+				<item id="4620" min="1" max="1" chance="4.2487393633785" /> <!-- Greater INT Dye <Int + 4 Wit - 4> -->
 				<item id="6571" min="1" max="1" chance="0.14773085408131" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
 			</drop>
 			<lucky>
@@ -3357,9 +3357,9 @@
 				<item id="2448" min="1" max="1" chance="7.7710233029382" /> <!-- Manticore Skin Gloves -->
 				<item id="2449" min="1" max="1" chance="7.1985815602837" /> <!-- Brigandine Gauntlets -->
 				<item id="2450" min="1" max="1" chance="6.0182370820669" /> <!-- Elven Mithril Gloves -->
-				<item id="4554" min="1" max="1" chance="19.1299999999998" /> <!-- Greater STR Dye (STR + 1 DEX - 1) -->
-				<item id="4555" min="1" max="1" chance="18.9799999999998" /> <!-- Greater CON Dye (Con + 1 Str - 1) -->
-				<item id="4553" min="1" max="3" chance="9.51700000000019" /> <!-- Greater STR Dye (STR + 1 CON - 1) -->
+				<item id="4554" min="1" max="1" chance="19.1299999999998" /> <!-- Greater STR Dye <STR + 1 DEX - 1> -->
+				<item id="4555" min="1" max="1" chance="18.9799999999998" /> <!-- Greater CON Dye <Con + 1 Str - 1> -->
+				<item id="4553" min="1" max="3" chance="9.51700000000019" /> <!-- Greater STR Dye <STR + 1 CON - 1> -->
 				<item id="6575" min="1" max="1" chance="0.995999999999987" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 			<lucky>
@@ -3559,9 +3559,9 @@
 				<item id="608" min="1" max="1" chance="4.86000000000001" /> <!-- Mithril Gauntlets -->
 				<item id="9816" min="1" max="3" chance="41.265302572354" /> <!-- Earth Egg -->
 				<item id="8176" min="1" max="1" chance="39.770379873448" /> <!-- Destruction Tombstone -->
-				<item id="4611" min="1" max="1" chance="5.9579464654591" /> <!-- Greater WIT Dye (Wit + 3 Int - 3) -->
-				<item id="4610" min="1" max="1" chance="5.7568114114245" /> <!-- Greater MEN Dye (Men + 3 Wit - 3) -->
-				<item id="4612" min="1" max="1" chance="5.7241949161756" /> <!-- Greater WIT Dye (Wit + 3 Men - 3) -->
+				<item id="4611" min="1" max="1" chance="5.9579464654591" /> <!-- Greater WIT Dye <Wit + 3 Int - 3> -->
+				<item id="4610" min="1" max="1" chance="5.7568114114245" /> <!-- Greater MEN Dye <Men + 3 Wit - 3> -->
+				<item id="4612" min="1" max="1" chance="5.7241949161756" /> <!-- Greater WIT Dye <Wit + 3 Men - 3> -->
 				<item id="6574" min="1" max="1" chance="1.5253647611385" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<lucky>
@@ -4128,9 +4128,9 @@
 				<item id="851" min="1" max="1" chance="6.81500000000005" /> <!-- Onyx Beast's Eye Earring -->
 				<item id="882" min="1" max="1" chance="3.28700000000002" /> <!-- Mithril Ring -->
 				<item id="914" min="1" max="1" chance="2.25600000000005" /> <!-- Dark Necklace -->
-				<item id="4597" min="1" max="1" chance="13.3" /> <!-- Greater MEN Dye (Men + 2 Int - 2) -->
-				<item id="4599" min="1" max="1" chance="13.0400000000001" /> <!-- Greater WIT Dye (Wit + 2 Int - 2) -->
-				<item id="4598" min="1" max="1" chance="12.33" /> <!-- Greater MEN Dye (Men + 2 Wit - 2) -->
+				<item id="4597" min="1" max="1" chance="13.3" /> <!-- Greater MEN Dye <Men + 2 Int - 2> -->
+				<item id="4599" min="1" max="1" chance="13.0400000000001" /> <!-- Greater WIT Dye <Wit + 2 Int - 2> -->
+				<item id="4598" min="1" max="1" chance="12.33" /> <!-- Greater MEN Dye <Men + 2 Wit - 2> -->
 				<item id="951" min="1" max="1" chance="6.95099999999992" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 			<lucky>
@@ -4273,9 +4273,9 @@
 				<item id="629" min="1" max="1" chance="0.983999999999992" /> <!-- Kite Shield -->
 				<item id="88" min="1" max="1" chance="0.750000000000009" /> <!-- Morning Star -->
 				<item id="2411" min="1" max="1" chance="1.984" /> <!-- Brigandine Helmet -->
-				<item id="4557" min="1" max="1" chance="13.6000000000001" /> <!-- Greater DEX Dye (Dex + 1 Str - 1) -->
-				<item id="4556" min="1" max="1" chance="13.03" /> <!-- Greater CON Dye (Con + 1 DEX - 1) -->
-				<item id="4558" min="1" max="1" chance="12.8300000000002" /> <!-- Greater DEX Dye (Dex + 1 CON - 1) -->
+				<item id="4557" min="1" max="1" chance="13.6000000000001" /> <!-- Greater DEX Dye <Dex + 1 Str - 1> -->
+				<item id="4556" min="1" max="1" chance="13.03" /> <!-- Greater CON Dye <Con + 1 DEX - 1> -->
+				<item id="4558" min="1" max="1" chance="12.8300000000002" /> <!-- Greater DEX Dye <Dex + 1 CON - 1> -->
 				<item id="6576" min="1" max="1" chance="6.59100000000014" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
 			</drop>
 			<lucky>

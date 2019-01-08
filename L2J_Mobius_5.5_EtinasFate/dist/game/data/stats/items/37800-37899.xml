@@ -19,7 +19,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37803" name="Master Yogi's Special Scroll: Enchant Weapon" type="EtcItem">
-		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to + 15 or above. Lucky Enchant Stones cannot be used with this item. -->
+		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to +15 or above. Lucky Enchant Stones cannot be used with this item. -->
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -28,7 +28,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37804" name="Replica Tiara" type="Armor">
-		<!-- A replica of the Exalted Tiara. Attack Attribute Bonus + 30 when equipped. -->
+		<!-- A replica of the Exalted Tiara. Atk. Attribute Bonus +30 when equipped. -->
 		<set name="icon" val="icon.accessory_noblesse2_tiara_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -133,7 +133,7 @@
 		</stats>
 	</item>
 	<item id="37809" name="Mysterious Crystal" type="EtcItem">
-		<!-- Master Yogi's power assembly. Bring it to Master Yogi with a +15 ~ +17 Master Yogi's Staff to increase the Staff' enchant level by 1. -->
+		<!-- Master Yogi's power assembly. Bring it to Master Yogi with a +15 ~ +17 Master Yogi's Staff to increase the Staff' enchant value by 1. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -270,7 +270,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37823" name="Leona's Gift" type="EtcItem">
-		<!-- Blackbird's present that is given to the heroes who help in defeating the evil on Hellbound. -->
+		<!-- Leona Blackbird's present that is given to the heroes who help in defeating the evil on Hellbound. Must be under level 99 to use. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -380,7 +380,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37833" name="Valentine Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -391,7 +391,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37834" name="Valentine Appearance Stone: Two-handed Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -457,7 +457,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37840" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a magic sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -468,7 +468,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a one-handed staff to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -479,7 +479,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a two-handed staff to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -490,7 +490,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37843" name="Valentine Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a dual sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -501,7 +501,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37844" name="Valentine Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon.15-day. -->
+		<!-- Changes the appearance of a dagger dual sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -556,7 +556,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37849" name="Valentine Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a one-handed sword to that of a Valentine weapon for 30 days. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -567,7 +567,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37850" name="Valentine Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.30-day. -->
+		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -633,7 +633,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37856" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 30-day. -->
+		<!-- Changes the appearance of a magic sword to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -644,7 +644,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37857" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
+		<!-- Changes the appearance of a one-handed staff to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -655,7 +655,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37858" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
+		<!-- Changes the appearance of a two-handed staff to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -666,7 +666,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37859" name="Valentine Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of a Valentine's Day weapon. 30-day. -->
+		<!-- Changes the appearance of a dual sword to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -677,7 +677,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37860" name="Valentine Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon. 30-day. -->
+		<!-- Changes the appearance of a dagger dual sword to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -748,7 +748,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
-		<!-- For 30 minutes, P. Atk. + 10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
+		<!-- For 30 min., P. Atk. +10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_cave_page_i00" />
 		<set name="weight" val="30" />
 		<set name="is_commissionable" val="false" />
@@ -765,7 +765,7 @@
 		</skills>
 	</item>
 	<item id="37868" name="Hero's Weapon: Dagger" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -798,7 +798,7 @@
 		</stats>
 	</item>
 	<item id="37869" name="Hero's Weapon: One-handed Sword" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -830,7 +830,7 @@
 		</stats>
 	</item>
 	<item id="37870" name="Hero's Weapon: Two-handed Sword" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -862,7 +862,7 @@
 		</stats>
 	</item>
 	<item id="37871" name="Hero's Weapon: One-handed Blunt Weapon" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -895,7 +895,7 @@
 		</stats>
 	</item>
 	<item id="37872" name="Hero's Weapon: Fist Weapon" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -928,7 +928,7 @@
 		</stats>
 	</item>
 	<item id="37873" name="Hero's Weapon: Spear" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -962,7 +962,7 @@
 		</stats>
 	</item>
 	<item id="37874" name="Hero's Weapon: Bow" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -995,7 +995,7 @@
 		</stats>
 	</item>
 	<item id="37875" name="Hero's Weapon: Crossbow" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1028,7 +1028,7 @@
 		</stats>
 	</item>
 	<item id="37876" name="Hero's Weapon: One-handed Magic Sword" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1060,7 +1060,7 @@
 		</stats>
 	</item>
 	<item id="37877" name="Hero's Weapon: One-handed Magic Blunt Weapon" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1093,7 +1093,7 @@
 		</stats>
 	</item>
 	<item id="37878" name="Hero's Weapon: Two-handed Magic Blunt Weapon" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1126,7 +1126,7 @@
 		</stats>
 	</item>
 	<item id="37879" name="Hero's Weapon: Dualsword" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -1158,7 +1158,7 @@
 		</stats>
 	</item>
 	<item id="37880" name="Hero's Weapon: Dual Dagger" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1191,7 +1191,7 @@
 		</stats>
 	</item>
 	<item id="37881" name="Hero's Weapon: Dual Blunt Weapon" additionalName="15-day" type="Weapon">
-		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
+		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1303,7 +1303,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="37889" name="Herb of Growth" type="EtcItem">
-		<!-- For 10 min., XP/SP obtained through hunting + 50%. -->
+		<!-- For 10 min., Acquired XP/ SP +50%. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1311,7 +1311,7 @@
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 	</item>
 	<item id="37890" name="Major Herb of Growth" type="EtcItem">
-		<!-- For 10 min., XP/SP obtained through hunting + 100%. -->
+		<!-- For 10 min., Acquired XP/ SP +100%. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1319,7 +1319,7 @@
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 	</item>
 	<item id="37891" name="Superior Herb of Growth" type="EtcItem">
-		<!-- For 5 min., XP/SP obtained through hunting + 200%. -->
+		<!-- For 5 min., Acquired XP/ SP +200%. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1354,7 +1354,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37894" name="Improved Warrior's Recovery Potion" type="EtcItem">
-		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
+		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
 		<set name="is_stackable" val="true" />
@@ -1419,7 +1419,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37899" name="SP Rune Pack (Mid-grade) (1-day)" type="EtcItem">
-		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. Cannot be used in the auction house. -->
+		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hr.) and 150 Rose Essences. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

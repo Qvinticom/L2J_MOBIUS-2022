@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23234" toLevel="1" name="Singer and Dancer Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- See Agathion's cute trick. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -17,6 +17,7 @@
 		</conditions>
 	</skill>
 	<skill id="23298" toLevel="1" name="Flame Hawk">
+		<!-- For 10 sec., inflames the target and inflicts damage of 150 every sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -43,6 +44,7 @@
 		</effects>
 	</skill>
 	<skill id="23299" toLevel="1" name="Arrow Rain">
+		<!-- For 10 sec., sweeps the target in Cyclone and inflicts damage of 150 every sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>

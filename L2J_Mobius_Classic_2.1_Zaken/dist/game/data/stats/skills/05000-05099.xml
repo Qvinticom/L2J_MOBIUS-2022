@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5000" toLevel="1" name="Alfred Strike">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -21,7 +20,6 @@
 		</effects>
 	</skill>
 	<skill id="5001" toLevel="1" name="Alfred Life Drain">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -41,7 +39,6 @@
 		</effects>
 	</skill>
 	<skill id="5002" toLevel="1" name="Giselle Vampiric Rage">
-		<!-- CT2.5 retail confirmed -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -67,7 +64,6 @@
 		</effects>
 	</skill>
 	<skill id="5003" toLevel="1" name="Giselle Tempest">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -91,8 +87,7 @@
 		</effects>
 	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza Pose">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Frintezza is in temporary state of paralysis. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -114,8 +109,7 @@
 		</effects>
 	</skill>
 	<skill id="5006" toLevel="1" name="Frintezza Music">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A general performance. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>34000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -128,8 +122,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5007" toLevel="5" name="Frintezza Heal Music">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Music to soothe the soul. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>
 			<value level="1">32000</value>
@@ -148,8 +141,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5008" toLevel="5" name="Frintezza Heal Music">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Music to soothe the soul. -->
 		<abnormalType>
 			<value level="1">NONE</value>
 			<value level="2">NONE</value>
@@ -317,8 +309,7 @@
 		</effects>
 	</skill>
 	<skill id="5009" toLevel="1" name="Frintezza Ghost Fighter">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A portrait ghost that can make physical attacks. -->
 		<affectRange>150</affectRange>
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
@@ -340,8 +331,7 @@
 		</effects>
 	</skill>
 	<skill id="5010" toLevel="1" name="Frintezza Ghost Mage">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A portrait ghost that can make magical attacks. -->
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -364,8 +354,7 @@
 		</effects>
 	</skill>
 	<skill id="5011" toLevel="1" name="Frintezza Ghost Bomb">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- A portrait ghost who can create a suicide explosion. -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -386,8 +375,7 @@
 		</effects>
 	</skill>
 	<skill id="5012" toLevel="1" name="Breath of Scarlet">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -413,8 +401,7 @@
 		</effects>
 	</skill>
 	<skill id="5013" toLevel="1" name="Frintezza Energy Drain">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Portrait ghost drains HP. -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -436,8 +423,7 @@
 		</effects>
 	</skill>
 	<skill id="5014" toLevel="3" name="Frintezza Demon Attack">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon $s1 general attack. -->
 		<affectRange>150</affectRange>
 		<castRange>150</castRange>
 		<coolTime>1200</coolTime>
@@ -474,8 +460,7 @@
 		</effects>
 	</skill>
 	<skill id="5016" toLevel="1" name="Yoke of Scarlet">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Yoked status. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -504,8 +489,7 @@
 		</effects>
 	</skill>
 	<skill id="5017" toLevel="1" name="Demons">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon Transformation -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BIG_BODY</abnormalType>
@@ -536,8 +520,7 @@
 		</effects>
 	</skill>
 	<skill id="5018" toLevel="2" name="Frintezza Demon Field">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon $s1 magic field. -->
 		<affectRange>
 			<value level="1">700</value>
 			<value level="2">1000</value>
@@ -564,8 +547,7 @@
 		</effects>
 	</skill>
 	<skill id="5019" toLevel="1" name="Frintezza Demon Energy Drain">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
+		<!-- Demon 3 HP drain range. -->
 		<affectRange>1000</affectRange>
 		<coolTime>4000</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -608,6 +590,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5021" toLevel="12" name="Inspiration of Einhasad">
+		<!-- Makes Holy attacks. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -635,6 +618,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5022" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -682,6 +666,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5023" toLevel="12" name="Hold">
+		<!-- Inflicted with Hold and unable to move. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -718,6 +703,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5024" toLevel="12" name="Decrease Atk. Spd.">
+		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -765,90 +751,91 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5025" toLevel="1" name="Raid Boss (Lv. 30)">
-		<!-- Confirmed CT2.5 -->
+		<!-- His exploits are famous among Wererats. After assigning the South to the Sukar Wererats, he and a group of followers journeyed north in search of wealth. Unlike other Wererats, he possesses an enterprising spirit and began plundering the tombs of Orc tribal chiefs. Chased away by vengeful spirits, now he and his band rob unwary travelers passing through the region. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5026" toLevel="1" name="Raid Boss (Lv. 39)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Once a human magician with an almost Dwarven interest in machinery, he heard about Lesser Giant Age Sky Wagon Relic and theorized that a combination of Dwarven skills and magic could reproduce the flying wagon. He died without succeeding in his goal, but his spirit still wanders the area. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5027" toLevel="1" name="Raid Boss (Lv. 37)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This villain preys on adventurers who travel between the Dwarven Village and the Town of Schuttgart. He summoned all the northern Goblin powers to create a great bandit force and rule over them, but he made a serious mistake by stealing tribute intended for Schuttgart. Hearing rumors that the lord was preparing an army to clear out the bandits, he and his followers fled to the mountains. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5028" toLevel="1" name="Raid Boss (Lv. 53)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Originally worshiped Pa'agrio, but he is a shaman who tries to rule Orcs and Elmoaden by using the evil power of Kasha. They are extending their territory by using evil spirits, insects and Ragna Orcs who follow them. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5029" toLevel="1" name="Raid Boss (Lv. 52)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5030" toLevel="1" name="Raid Boss (Lv. 59)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This captain secretly loved the Princess Felicia. Saddened by her disappearance, he set out to learn her fate. Finding her transformed into the Ice Queen, Freya, he was turned into a Gargoyle and now protects the Frozen Labyrinth from interlopers. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5031" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This Queen of Spike Stakatos conducts breeding experiments using top-ranking Spike Stakatos. She knows that her life running out and is desperately trying to grow a new Stakato queen in her nest, despite the low chances for success. Nursing her power, she dreams of a resurgence of her weakened race. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5032" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5033" toLevel="1" name="Raid Boss (Lv. 99)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This aristocrat of Rune secretly worships Triol, even conducting the occasional bloody worship ceremony in the Temple. Despite her claims of nobility, much of her background is still unknown. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5034" toLevel="1" name="Raid Boss (Lv. 73)">
-		<!-- Confirmed CT2.5 -->
+		<!-- This Golem was originally a follower of Argos during the war between Giants and Humans. He remained with his master after Argos' imprisonment by Einhasad into the cliff wall. He has devolved to the point that he no longer resembles a Lesser Giant and isn't sure why he is still there. Even Daimon the White-eyed cannot harm him in the Wall of Argos. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5035" toLevel="1" name="Raid Boss (Lv. 76)">
-		<!-- Confirmed CT2.5 -->
+		<!-- Artificial creature made from Hardin's magic experiment. Although it has the body of a monster erupting lava all over, it used to be an obedient golem that followed Hardin like a father. It went crazy after Hardin left this Swamp of Flames with the thought that it was deserted. When King Astaire invaded Aden Kingdom, some Elmore soldiers trapped in the Swamp of Flames witnessed a giant covered with lava. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5036" toLevel="1" name="Raid Boss (Lv. 60)">
-		<!-- Confirmed CT2.5 -->
+		<!-- The Ice Fairy who came to Freya after Princess Felicia was turned, she oversees everything in the Frozen Labyrinth on behalf of Freya. She has watched the movements of the Zinnia Guild ever since the Order of Canna Knights disappeared. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5037" toLevel="3" name="Decrease Casting Spd.">
+		<!-- Casting Spd. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -884,7 +871,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5040" toLevel="12" name="Healing Potion">
-		<!-- CT2.5 retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -978,13 +964,13 @@
 		</effects>
 	</skill>
 	<skill id="5041" toLevel="1" name="Charm of Courage">
+		<!-- If you die on the battleground during a castle siege/fortress siege/clan hall siege, you can resurrect from the same stop. -->
 		<icon>icon.skill5041</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5042" toLevel="12" name="Bomb Dispel">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<magicLvl>
@@ -1047,7 +1033,6 @@
 		</effects>
 	</skill>
 	<skill id="5043" toLevel="12" name="Supersonic Blaster">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>1200</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1700</effectRange>
@@ -1106,7 +1091,7 @@
 		</effects>
 	</skill>
 	<skill id="5044" toLevel="3" name="Ultimate Defense">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Increases P. Def., M. Def., and Buff-canceling Attack Resistance. Becomes immobile. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1396,7 +1381,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5051" toLevel="12" name="Blazing Circle">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -1471,7 +1455,6 @@
 		</effects>
 	</skill>
 	<skill id="5052" toLevel="12" name="Flame Strike">
-		<!-- CT2.5 retail confirmed -->
 		<affectRange>200</affectRange>
 		<castRange>1500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1666,7 +1649,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5056" toLevel="12" name="Hurricane">
-		<!-- CT2.5 retail confirmed -->
 		<castRange>1500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2000</effectRange>
@@ -2089,6 +2071,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5068" toLevel="12" name="Decrease Speed">
+		<!-- Speed decreases momentarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2124,6 +2107,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5069" toLevel="12" name="Decrease Atk. Spd.">
+		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2159,6 +2143,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5070" toLevel="12" name="Decrease Casting Spd.">
+		<!-- Casting Spd. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
@@ -2194,6 +2179,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5071" toLevel="12" name="P. Atk. Decrease">
+		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -2229,6 +2215,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5072" toLevel="12" name="Decrease M. Atk.">
+		<!-- M. Atk. decreases momentarily. Effect $s1. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
@@ -2308,6 +2295,7 @@
 		</effects>
 	</skill>
 	<skill id="5074" toLevel="1" name="The Victor of War">
+		<!-- Maximum CP is increased. -->
 		<icon>icon.skill5074</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2320,6 +2308,7 @@
 		</effects>
 	</skill>
 	<skill id="5075" toLevel="1" name="The Vanquished of War">
+		<!-- Maximum CP is decreased. -->
 		<icon>icon.skill5075</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2332,6 +2321,7 @@
 		</effects>
 	</skill>
 	<skill id="5076" toLevel="15" name="Death Penalty">
+		<!-- Combat ability is decreased due to death. Effect $s1. -->
 		<icon>
 			<value level="1">icon.skill5076_a</value>
 			<value level="2">icon.skill5076_a</value>
@@ -2549,7 +2539,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5078" toLevel="1" name="Frintezza Critical Damage">
-		<!-- CT2.5 retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2561,7 +2550,6 @@
 		</effects>
 	</skill>
 	<skill id="5079" toLevel="1" name="Haste Focus">
-		<!-- CT2.5 retail confirmed -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -2593,7 +2581,6 @@
 		</effects>
 	</skill>
 	<skill id="5080" toLevel="1" name="Haste Might">
-		<!-- CT2.5 retail confirmed -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -2625,6 +2612,7 @@
 		</effects>
 	</skill>
 	<skill id="5081" toLevel="4" name="Silence">
+		<!-- Blocks the ability to use physical skills. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
@@ -2688,6 +2676,7 @@
 		</effects>
 	</skill>
 	<skill id="5083" toLevel="4" name="Stun">
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2766,7 +2755,7 @@
 		</effects>
 	</skill>
 	<skill id="5085" toLevel="1" name="Anesthesia">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily stunned and immobilized. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ANESTHESIA</abnormalType>
@@ -2792,7 +2781,7 @@
 		</effects>
 	</skill>
 	<skill id="5086" toLevel="1" name="Deadly Poison">
-		<!-- Confirmed CT2.5 -->
+		<!-- HP decreases from poison momentarily. If HP falls to 0, death will ensue. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CRITICAL_POISON</abnormalType>
@@ -2825,7 +2814,6 @@
 		</effects>
 	</skill>
 	<skill id="5087" toLevel="2" name="Berserk">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>4000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
@@ -2857,7 +2845,6 @@
 		</effects>
 	</skill>
 	<skill id="5088" toLevel="1" name="Signal">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>300</affectRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
@@ -2871,7 +2858,6 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="5089" toLevel="1" name="Presentation -  Enter the Sailren Nest Quest">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2885,7 +2871,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5090" toLevel="1" name="Sailren Production">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
@@ -2897,7 +2882,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5091" toLevel="1" name="Sailren Production">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2908,8 +2892,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5092" toLevel="1" name="Antharas Fear">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<!-- Antharas Skills -->
+		<!-- Afflicted with Fear and moving against own will momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2939,8 +2922,6 @@
 		</effects>
 	</skill>
 	<skill id="5093" toLevel="1" name="Antharas Meteor">
-		<!-- Confirmed CT2.5 -->
-		<!-- Antharas Skills -->
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2965,7 +2946,6 @@
 		</effects>
 	</skill>
 	<skill id="5094" toLevel="1" name="Antharas Self-destruction">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>250</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -2987,7 +2967,6 @@
 		</effects>
 	</skill>
 	<skill id="5095" toLevel="1" name="Antharas Strike">
-		<!-- Confirmed CT2.5 -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
@@ -3006,7 +2985,6 @@
 		</effects>
 	</skill>
 	<skill id="5096" toLevel="1" name="Antharas Power Shot">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3025,7 +3003,6 @@
 		</effects>
 	</skill>
 	<skill id="5097" toLevel="1" name="Antharas Self-destruction">
-		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -3046,7 +3023,6 @@
 		</effects>
 	</skill>
 	<skill id="5098" toLevel="2" name="Capture Penalty">
-		<!-- TODO: Implement me! -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18900" level="84" type="L2FeedableBeast" name="Full Grown Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -2954,8 +2954,8 @@
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -3026,8 +3026,8 @@
 				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
 				<item id="35301" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Fragment -->
 				<item id="35309" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
@@ -3099,8 +3099,8 @@
 				<item id="35303" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Fragment -->
 				<item id="35314" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Armor Ingredient -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -3167,12 +3167,12 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate -->
-				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings -->
-				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic -->
+				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic - Robe -->
 				<item id="57" min="3237" max="7559" chance="70" /> <!-- Adena -->
 				<item id="9555" min="1" max="1" chance="0.075" /> <!-- Wind Crystal -->
-				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="3.66" /> <!-- Synthetic Braid -->
@@ -3239,16 +3239,16 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17398" min="1" max="1" chance="0.0009" /> <!-- Seraph Gaiters -->
-				<item id="17403" min="1" max="1" chance="0.0009" /> <!-- Seraph Leather Armor -->
-				<item id="17409" min="1" max="1" chance="0.0009" /> <!-- Seraph Stockings -->
+				<item id="17398" min="1" max="1" chance="0.0009" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17403" min="1" max="1" chance="0.0009" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17409" min="1" max="1" chance="0.0009" /> <!-- Seraph Stockings - Robe -->
 				<item id="57" min="4109" max="9597" chance="70" /> <!-- Adena -->
 				<item id="35326" min="1" max="1" chance="0.3" /> <!-- Seraph Ring Gem -->
-				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
+				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil - Robe -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3308,14 +3308,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4109" max="9597" chance="70" /> <!-- Adena -->
-				<item id="17401" min="1" max="1" chance="0.00300000000000003" /> <!-- Seraph Shield -->
+				<item id="17401" min="1" max="1" chance="0.00300000000000003" /> <!-- Seraph Shield - Heavy Armor -->
 				<item id="35301" min="1" max="1" chance="0.300000000000003" /> <!-- Specter Stormer Fragment -->
 				<item id="35304" min="1" max="1" chance="0.300000000000003" /> <!-- Specter Buster Fragment -->
-				<item id="17412" min="1" max="1" chance="0.003" /> <!-- Seraph Sigil -->
+				<item id="17412" min="1" max="1" chance="0.003" /> <!-- Seraph Sigil - Robe -->
 				<item id="9557" min="1" max="1" chance="0.075" /> <!-- Holy Crystal -->
 			</drop>
 			<spoil>
-				<item id="17403" min="1" max="1" chance="0.0055" /> <!-- Seraph Leather Armor -->
+				<item id="17403" min="1" max="1" chance="0.0055" /> <!-- Seraph Leather Armor - Light Armor -->
 			</spoil>
 		</dropLists>
 		<collision>

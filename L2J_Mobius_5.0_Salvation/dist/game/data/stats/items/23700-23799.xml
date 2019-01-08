@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="23724" name="Adenian Tattoo: Wings" type="Armor">
-		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. +35, M. Def. +15, Attribute Resistance +15, and Speed +7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
@@ -424,7 +424,7 @@
 		</stats>
 	</item>
 	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
-		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. +35, M. Def. +15, Attribute Resistance +15, and Speed +7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
@@ -451,7 +451,7 @@
 		</stats>
 	</item>
 	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
-		<!-- Adenian Collection. P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
+		<!-- Adenian Collection. P. Def. +35, M. Def. +15, Attribute Resistance +15, and Speed +7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
@@ -491,7 +491,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23728" name="Erupting Vitality XP Potion" type="EtcItem">
-		<!-- For 1 hr., XP Bonus + 100% with current Vitality. Note that Vitality Bonus does not apply to boss monsters. -->
+		<!-- For 1 hr., Vitality XP Bonus +100% if vitality is present. Note that Vitality Bonus does not apply to boss monsters. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -506,7 +506,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23729" name="Erupting Vitality Replenishing Potion" type="EtcItem">
-		<!-- For 1 hr., Vitality Recovery + 100%. -->
+		<!-- For 1 hr., Vitality Recovery +100%. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -536,7 +536,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23731" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (A-grade) +4, and two-handed sword/ blunt/ fist, dagger, crossbow +5. P. Atk. for bows +8. M. Atk. for all weapons +3. From +4, P. Atk./ M. Atk. Increase twofold. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -556,7 +556,7 @@
 		</skills>
 	</item>
 	<item id="23732" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (S-grade) +5, and two-handed sword/ blunt/ fist, dagger, crossbow +6. P. Atk. for bows +10. M. Atk. for all weapons +4. From +4, P. Atk./ M. Atk. Increase twofold. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -576,7 +576,7 @@
 		</skills>
 	</item>
 	<item id="23733" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (R-grade) +6, and two-handed sword/ blunt/ fist, dagger, crossbow +7. P. Atk. for bows +12. M. Atk. for all weapons +5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -596,7 +596,7 @@
 		</skills>
 	</item>
 	<item id="23734" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Def. for armor and accessories (A-grade) +1. Starting from +4, P. Def. +3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -616,7 +616,7 @@
 		</skills>
 	</item>
 	<item id="23735" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Def. for armor and accessories (S-grade) +1. Starting from +4, P. Def. +3, and HP gradually increases. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_am_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -636,7 +636,7 @@
 		</skills>
 	</item>
 	<item id="23736" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Def. for armor and accessories (R-grade) +2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -656,7 +656,7 @@
 		</skills>
 	</item>
 	<item id="23737" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (A-grade) +4, and two-handed sword/ blunt/ fist, dagger, crossbow +5. P. Atk. for bows +8. M. Atk. for all weapons +3. From +4, P. Atk./ M. Atk. Increase twofold. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -672,7 +672,7 @@
 		</skills>
 	</item>
 	<item id="23738" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (S-grade) +5, and two-handed sword/ blunt/ fist, dagger, crossbow +6. P. Atk. for bows +10. M. Atk. for all weapons +4. From +4, P. Atk./ M. Atk. Increase twofold. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -688,7 +688,7 @@
 		</skills>
 	</item>
 	<item id="23739" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (R-grade) +6, and two-handed sword/ blunt/ fist, dagger, crossbow +7. P. Atk. for bows +12. M. Atk. for all weapons +5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -704,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="23740" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Def. for armor and accessories (A-grade) +1. Starting from +4, P. Def. +3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -720,7 +720,7 @@
 		</skills>
 	</item>
 	<item id="23741" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Def. for armor and accessories (S-grade) +1. Starting from +4, P. Def. +3, and HP gradually increases. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_am_s" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -736,7 +736,7 @@
 		</skills>
 	</item>
 	<item id="23742" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
+		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Def. for armor and accessories (R-grade) +2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -752,7 +752,7 @@
 		</skills>
 	</item>
 	<item id="23743" name="Prestige Rune 30%" additionalName="3-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +30%, amount of dropped Adena +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -768,7 +768,7 @@
 		</skills>
 	</item>
 	<item id="23744" name="Prestige Rune 30%" additionalName="10-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +30%, amount of dropped Adena +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="23745" name="Prestige Rune 30%" additionalName="7-day" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +30%, amount of dropped Adena +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -838,7 +838,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23748" name="Prestige Rune 30% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Pack containing Drop Rate Rune 30% (7-day. -->
+		<!-- Wrapped Pack containing Drop Rate Rune 30% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -857,7 +857,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23749" name="Prestige Rune 50%" additionalName="3-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 50%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +50%, amount of dropped Adena +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -873,7 +873,7 @@
 		</skills>
 	</item>
 	<item id="23750" name="Prestige Rune 50%" additionalName="10-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 50%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +50%, amount of dropped Adena +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -889,7 +889,7 @@
 		</skills>
 	</item>
 	<item id="23751" name="Prestige Rune 50%" additionalName="7-day" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 50%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +50%, amount of dropped Adena +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -942,7 +942,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23754" name="Prestige Rune 50% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Pack containing Drop Rate Rune 50% (7-day. -->
+		<!-- Wrapped Pack containing Drop Rate Rune 50% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -961,7 +961,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23755" name="Prestige Rune 100%" additionalName="3-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 100%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -977,7 +977,7 @@
 		</skills>
 	</item>
 	<item id="23756" name="Prestige Rune 100%" additionalName="10-hour" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 100%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -993,7 +993,7 @@
 		</skills>
 	</item>
 	<item id="23757" name="Prestige Rune 100%" additionalName="7-day" type="EtcItem">
-		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 100%. -->
+		<!-- When possessed in the inventory while hunting, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1009,7 +1009,7 @@
 		</skills>
 	</item>
 	<item id="23758" name="Prestige Rune 100% Pack" additionalName="3-hour" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 100% (3-hour). -->
+		<!-- Wrapped Pack containing Prestige Rune 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -1047,7 +1047,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23760" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Wrapped Pack containing Drop Rate Rune 100% (7-day. -->
+		<!-- Wrapped Pack containing Drop Rate Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -1066,7 +1066,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23761" name="Prestige Cube" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Normal/Giant/Blessed Weapon Enchant Scroll (R-grade), Normal/Giant/Blessed Armor Enchant Scroll (R-grade), Gemstone (R-grade), or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain either Dark/ Bloody Eternal Enhancement Stone, Normal/ Giant/ Blessed Weapon Enchant Scroll (R-grade), Normal/ Giant/ Blessed Armor Enchant Scroll (R-grade), Gemstone (R-grade), or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1081,7 +1081,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23762" name="High-grade Elixir Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 5 each of High-grade Elixir of Life/Mind/CP. Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain 5 each of High-grade Elixir of Life/ Mind/ CP. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="weight" val="10" />
 		<set name="immediate_effect" val="true" />
@@ -1095,9 +1095,9 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35675" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of Life (R-Grade) -->
-			<item id="35676" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of Mind (R-Grade) -->
-			<item id="35677" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of CP (R-Grade) -->
+			<item id="35675" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
+			<item id="35676" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
+			<item id="35677" min="5" max="5" chance="100" /> <!-- High-grade Elixir of CP (R-grade) -->
 	</capsuled_items>
 	</item>
 	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
@@ -1121,7 +1121,7 @@
 		</skills>
 	</item>
 	<item id="23764" name="Heavenly Cocktail" additionalName="1-day" type="EtcItem">
-		<!-- Premium User Only. For 60 min., you receive all 6 Melody buffs Lv. 2. Cooldown is 60 min. -->
+		<!-- Premium User Only. For 60 min., you receive the effects of Horn Melody Lv. 2, Pipe Organ Melody Lv. 2, Guitar Melody Lv. 2. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1173,7 +1173,7 @@
 		</skills>
 	</item>
 	<item id="23767" name="Fortune Reading Ticket" type="EtcItem">
-		<!-- Ticket used in a Fortune Reading. -->
+		<!-- Ticket used in a Fortune Reading. Cannot be exchanged, dropped, sold in a private store, or stored in a private warehouse. Can be destroyed. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1186,7 +1186,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23768" name="Luxury Fortune Reading Ticket" type="EtcItem">
-		<!-- Ticket used in a Luxury Fortune Reading. -->
+		<!-- Card used in a Lucky Game. It can be purchased at Eve's Card Shop using a special coupon. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1199,7 +1199,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23769" name="Improved Lucky Enchant Stone: Weapon (D-grade)" type="EtcItem">
-		<!-- Enchant success rate + 20% for weapons (D-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +20% for weapons (D-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1217,7 +1217,7 @@
 		</skills>
 	</item>
 	<item id="23770" name="Improved Lucky Enchant Stone: Weapon (C-grade)" type="EtcItem">
-		<!-- Enchant success rate + 18% for weapons (C-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +18% for weapons (C-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1235,7 +1235,7 @@
 		</skills>
 	</item>
 	<item id="23771" name="Improved Lucky Enchant Stone: Weapon (B-grade)" type="EtcItem">
-		<!-- Enchant success rate + 15% for weapons (B-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +15% for weapons (B-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1253,7 +1253,7 @@
 		</skills>
 	</item>
 	<item id="23772" name="Improved Lucky Enchant Stone: Weapon (A-grade)" type="EtcItem">
-		<!-- Enchant success rate + 12% for weapons (A-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +12% for weapons (A-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1271,7 +1271,7 @@
 		</skills>
 	</item>
 	<item id="23773" name="Improved Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons (S-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +10% for weapons (S-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1289,7 +1289,7 @@
 		</skills>
 	</item>
 	<item id="23774" name="Improved Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 7% for weapons (R-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +7% for weapons (R-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1308,7 +1308,7 @@
 		</skills>
 	</item>
 	<item id="23775" name="Improved Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
-		<!-- Enchant success rate + 35% for armor (D-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +35% for armor (D-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1326,7 +1326,7 @@
 		</skills>
 	</item>
 	<item id="23776" name="Improved Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
-		<!-- Enchant success rate + 27% for armor (C-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +27% for armor (C-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1344,7 +1344,7 @@
 		</skills>
 	</item>
 	<item id="23777" name="Improved Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
-		<!-- Enchant success rate + 23% for armor (B-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +23% for armor (B-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1362,7 +1362,7 @@
 		</skills>
 	</item>
 	<item id="23778" name="Improved Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
-		<!-- Enchant success rate + 18% for armor (A-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +18% for armor (A-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1380,7 +1380,7 @@
 		</skills>
 	</item>
 	<item id="23779" name="Improved Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
-		<!-- Enchant success rate + 15% for armor (S-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +15% for armor (S-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1398,7 +1398,7 @@
 		</skills>
 	</item>
 	<item id="23780" name="Improved Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for armor (R-grade). Only for items enchanted between + 10 and + 15. -->
+		<!-- Enchant success rate +10% for armor (R-grade). Only for items enchanted between +10 and +15. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1416,7 +1416,7 @@
 		</skills>
 	</item>
 	<item id="23781" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for weapons when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- Enchant success rate +10% for weapons when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1434,7 +1434,7 @@
 		</skills>
 	</item>
 	<item id="23782" name="Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 15% for armor when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +15% for armor when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1452,7 +1452,7 @@
 		</skills>
 	</item>
 	<item id="23783" name="Blessed Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1470,7 +1470,7 @@
 		</skills>
 	</item>
 	<item id="23784" name="Blessed Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1488,7 +1488,7 @@
 		</skills>
 	</item>
 	<item id="23785" name="Lesser Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Enchant rate rises to between +2 and +4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between +3 and +9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1506,7 +1506,7 @@
 		</skills>
 	</item>
 	<item id="23786" name="Lesser Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- Enchant rate rises to between +2 and +4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1524,7 +1524,7 @@
 		</skills>
 	</item>
 	<item id="23787" name="Blessed Lucky Enchant Stone: Weapon (D-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (D-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Weapon (D-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1542,7 +1542,7 @@
 		</skills>
 	</item>
 	<item id="23788" name="Blessed Lucky Enchant Stone: Weapon (C-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (C-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Weapon (C-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i01" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1560,7 +1560,7 @@
 		</skills>
 	</item>
 	<item id="23789" name="Blessed Lucky Enchant Stone: Weapon (B-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (B-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Weapon (B-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i02" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1578,7 +1578,7 @@
 		</skills>
 	</item>
 	<item id="23790" name="Blessed Lucky Enchant Stone: Weapon (A-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (A-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Weapon (A-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i03" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1596,7 +1596,7 @@
 		</skills>
 	</item>
 	<item id="23791" name="Blessed Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (S-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Weapon (S-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i04" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1614,7 +1614,7 @@
 		</skills>
 	</item>
 	<item id="23792" name="Blessed Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Weapon (R-grade). Only for items enchanted between +3 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_blessed_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1632,7 +1632,7 @@
 		</skills>
 	</item>
 	<item id="23793" name="Blessed Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (D-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Armor (D-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1650,7 +1650,7 @@
 		</skills>
 	</item>
 	<item id="23794" name="Blessed Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (C-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Armor (C-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i01" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1668,7 +1668,7 @@
 		</skills>
 	</item>
 	<item id="23795" name="Blessed Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (B-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Armor (B-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i02" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1686,7 +1686,7 @@
 		</skills>
 	</item>
 	<item id="23796" name="Blessed Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (A-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Armor (A-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i03" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1704,7 +1704,7 @@
 		</skills>
 	</item>
 	<item id="23797" name="Blessed Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (S-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Armor (S-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i04" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1722,7 +1722,7 @@
 		</skills>
 	</item>
 	<item id="23798" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using a Scroll: Enchant Armor (R-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_bleseed_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />

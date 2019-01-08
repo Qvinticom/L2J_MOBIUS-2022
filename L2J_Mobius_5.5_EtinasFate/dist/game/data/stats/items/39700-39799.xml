@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="39700" name="Little Angel Wings" additionalName="LUC" type="Armor">
-		<!-- LUC + 3. -->
+		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
 	</item>
 	<item id="39701" name="Little Angel Wings" additionalName="CHA" type="Armor">
-		<!-- CHA + 3. -->
+		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_hair_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
 	</item>
 	<item id="39702" name="Fairy Antennae" additionalName="LUC" type="Armor">
-		<!-- LUC + 3. -->
+		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
 	</item>
 	<item id="39703" name="Fairy Antennae" additionalName="CHA" type="Armor">
-		<!-- CHA + 3. -->
+		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_hair_feeler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
 	</item>
 	<item id="39704" name="Chapeau" additionalName="LUC" type="Armor">
-		<!-- LUC + 3. -->
+		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
 	</item>
 	<item id="39705" name="Chapeau" additionalName="CHA" type="Armor">
-		<!-- CHA + 3. -->
+		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
 	</item>
 	<item id="39706" name="Artisan's Goggles" additionalName="LUC" type="Armor">
-		<!-- LUC + 3. -->
+		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
 	</item>
 	<item id="39707" name="Artisan's Goggles" additionalName="CHA" type="Armor">
-		<!-- CHA + 3. -->
+		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
 	</item>
 	<item id="39708" name="Arrow-pierced Apple" additionalName="LUC" type="Armor">
-		<!-- LUC + 3. -->
+		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
 	</item>
 	<item id="39709" name="Arrow-pierced Apple" additionalName="CHA" type="Armor">
-		<!-- CHA + 3. -->
+		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_arrow_apple_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -161,7 +161,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39716" name="Regeneration Device Core" type="EtcItem">
-		<!-- A device for restoring the broken machine in Cruma Tower Underground Lv. 3, made by Belkadhi. You can use the machine to briefly meet an ancient Giant. -->
+		<!-- A device for restoring the broken machine in Cruma Tower Underground Lv. 2, made by Belkadhi. You can use the machine to briefly meet an ancient Giant. -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -260,7 +260,7 @@
 		</stats>
 	</item>
 	<item id="39720" name="Maphr's Luck Potion" type="EtcItem">
-		<!-- For 15 sec., LUC + 5. -->
+		<!-- For 15 sec., LUC +5. -->
 		<set name="icon" val="icon.etc_instant_lucky_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -458,7 +458,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39733" name="Monster Blood" type="EtcItem">
-		<!-- Obtained by killing Stakatos in the Swamp of Screams. Bring these to Mercenary Kahman for rrewardrs. -->
+		<!-- Obtained by killing creatures in the Forest of the Dead. Bring these to Mysterious Wizard for rewards. -->
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -608,7 +608,7 @@
 		</skills>
 	</item>
 	<item id="39748" name="Dimensional Bracelet - Stage 1" additionalName="STR" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives STR Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives STR Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -627,7 +627,7 @@
 		</skills>
 	</item>
 	<item id="39749" name="Dimensional Bracelet - Stage 1" additionalName="DEX" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives DEX Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives DEX Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -646,7 +646,7 @@
 		</skills>
 	</item>
 	<item id="39750" name="Dimensional Bracelet - Stage 1" additionalName="CON" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives CON Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives CON Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -665,7 +665,7 @@
 		</skills>
 	</item>
 	<item id="39751" name="Dimensional Bracelet - Stage 1" additionalName="INT" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives INT Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives INT Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -684,7 +684,7 @@
 		</skills>
 	</item>
 	<item id="39752" name="Dimensional Bracelet - Stage 1" additionalName="MEN" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives MEN Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives MEN Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -703,7 +703,7 @@
 		</skills>
 	</item>
 	<item id="39753" name="Dimensional Bracelet - Stage 1" additionalName="WIT" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives WIT Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives WIT Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -722,7 +722,7 @@
 		</skills>
 	</item>
 	<item id="39754" name="Dimensional Bracelet - Stage 1" additionalName="LUC" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives LUC Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives LUC Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -741,7 +741,7 @@
 		</skills>
 	</item>
 	<item id="39755" name="Dimensional Bracelet - Stage 1" additionalName="CHA" type="Armor">
-		<!-- Activates 1 talisman slot when equipped. Gives CHA Options / Can be Enhanced. -->
+		<!-- Activates 1 talisman slot when equipped. Gives CHA Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1579,7 +1579,7 @@
 		</skills>
 	</item>
 	<item id="39797" name="Dimensional Bracelet - Stage 2" additionalName="STR" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. Gives STR Options / Can be Enhanced. -->
+		<!-- Activates 2 talisman slots when equipped. Gives STR Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1598,7 +1598,7 @@
 		</skills>
 	</item>
 	<item id="39798" name="Dimensional Bracelet - Stage 2" additionalName="DEX" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. Gives DEX Options / Can be Enhanced. -->
+		<!-- Activates 2 talisman slots when equipped. Gives DEX Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -1617,7 +1617,7 @@
 		</skills>
 	</item>
 	<item id="39799" name="Dimensional Bracelet - Stage 2" additionalName="CON" type="Armor">
-		<!-- Activates 2 talisman slots when equipped. Gives CON Options / Can be Enhanced. -->
+		<!-- Activates 2 talisman slots when equipped. Gives CON Options/ Can be Enhanced. -->
 		<set name="icon" val="icon.dimension_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />

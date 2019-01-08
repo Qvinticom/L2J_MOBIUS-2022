@@ -1,6 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="205" levels="45" name="Blunt Mastery" enchantLevels1="30" enchantLevels2="30">
+		<!-- Increases P. Atk. when a blunt weapon is used. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -36,6 +37,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="208" levels="52" name="Bow Mastery">
+		<!-- Increases P. Atk. when using a bow. -->
 		<table name="#pAtk">10.3 11.4 27.6 32.8 35.6 38.6 45.2 48.9 52.7 61.1 65.6 70.4 80.9 86.5 92.4 105.1 111.9 178.8 189.9 201.4 213.5 226 239.1 252.7 266.7 281.3 296.4 311.9 328 344.5 361.6 379.1 397 415.4 434.3 453.5 473.2 493.1 513.5 534.2 555.1 576.3 597.8 619.4 641.2 663.1 685 707.1 729.1 751 772.9 794.6</table>
 		<set name="weaponsAllowed" val="32"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -50,6 +52,7 @@
 		</for>
 	</skill>
 	<skill id="209" levels="45" name="Dagger Mastery">
+		<!-- Increases P. Atk. when using a dagger. -->
 		<table name="#pAtk">3.6 6 7.4 9 10.8 12.8 15.1 17.6 20.3 21.8 23.4 25 26.6 28.4 30.2 32.1 34.1 36.1 38.2 40.4 42.7 45 47.4 49.9 52.4 55 57.7 60.4 63.2 66.1 69 71.9 74.9 78 81.1 84.2 87.3 90.5 93.7 96.8 100 103.2 106.4 109.6 112.8</table>
 		<set name="weaponsAllowed" val="16"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -64,6 +67,7 @@
 		</for>
 	</skill>
 	<skill id="210" levels="45" name="Fist Mastery">
+		<!-- Increases P. Atk. when using a hand-to-hand combat weapon. -->
 		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
 		<set name="weaponsAllowed" val="1280"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -78,6 +82,7 @@
 		</for>
 	</skill>
 	<skill id="211" levels="10" name="Boost HP" enchantLevels1="30" enchantLevels2="30">
+		<!-- Increases maximum HP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -101,6 +106,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="212" levels="8" name="Fast HP Recovery">
+		<!-- Increases HP regeneration. -->
 		<table name="#hp">1.1 1.6 1.7 2.1 2.6 2.7 3.4 4</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -112,6 +118,7 @@
 		</for>
 	</skill>
 	<skill id="213" levels="8" name="Boost Mana">
+		<!-- Increases maximum MP. -->
 		<table name="#mp">30 50 70 100 140 152 180 200</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -123,6 +130,7 @@
 		</for>
 	</skill>
 	<skill id="214" levels="1" name="Mana Recovery">
+		<!-- Increases MP regeneration when wearing a robe jacket and robe pants. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -135,6 +143,7 @@
 		</for>
 	</skill>
 	<skill id="216" levels="45" name="Polearm Mastery">
+		<!-- Increases P. Atk. when using a Polearm. -->
 		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
 		<table name="#atkCountMax">5 5 5 5 5 5 5 5 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10</table>
 		<set name="weaponsAllowed" val="64"/>
@@ -153,6 +162,7 @@
 		</for>
 	</skill>
 	<skill id="217" levels="45" name="Sword Blunt Mastery">
+		<!-- Increases P. Atk. when using a sword or blunt weapon. -->
 		<table name="#pAtk">1.5 3.1 4.1 5.2 6.5 7.9 9.4 11.1 13 14 15.1 16.2 17.3 18.5 19.8 21.1 22.4 23.8 25.3 26.8 28.3 29.9 31.6 33.3 35 36.8 38.6 40.5 42.4 44.4 46.4 48.4 50.4 52.5 54.6 56.8 58.9 61.1 63.3 65.5 67.6 69.8 72 74.2 76.4</table>
 		<set name="weaponsAllowed" val="18444"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -167,6 +177,7 @@
 		</for>
 	</skill>
 	<skill id="221" levels="1" name="Silent Move">
+		<!-- Disables preemptive attacks from enemies. Continuously consumes MP. -->
 		<set name="mpConsume" val="7"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
@@ -180,6 +191,7 @@
 		</for>
 	</skill>
 	<skill id="222" levels="1" name="Fist Fury">
+		<!-- Greatly increases one's Atk. Spd. Continuously consumes HP. -->
 		<set name="weaponsAllowed" val="1024"/>
 		<set name="mpConsume" val="8"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -199,6 +211,7 @@
 		</for>
 	</skill>
 	<skill id="223" levels="49" name="Sting" enchantLevels1="30" enchantLevels2="30">
+		<!-- Inflict an injury by aiming at a weak spot and applying damage. Inflicts a serious wound that causes the enemy to bleed momentarily. An equipped sword, dagger or Dual-Sword Weapon is required to use this skill. Over-hit possible. Power 41. Effect 3. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -236,6 +249,7 @@
 		</for>
 	</skill>
 	<skill id="225" levels="3" name="Acrobatic Move">
+		<!-- Dodging abilities increase when running. -->
 		<table name="#gain">4 5 6</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="condition" val="1"/>
@@ -250,6 +264,7 @@
 		</for>
 	</skill>
 	<skill id="226" levels="1" name="Relax">
+		<!-- Recovers HP quickly when sitting. -->
 		<set name="mpConsume" val="2"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
@@ -263,6 +278,7 @@
 		</for>
 	</skill>
 	<skill id="227" levels="50" name="Light Armor Mastery">
+		<!-- Increases P. Def. and Evasion when wearing light armor. -->
 		<table name="#pDef">4.2 5.3 6.5 7.7 9 9.9 10.8 12.7 13.7 14.8 16.9 18 19.1 21.5 22.7 24 25.3 26.6 27.9 29.3 30.7 32.1 33.6 35 36.5 38.1 39.6 41.2 42.8 44.5 46.1 47.8 49.5 51.3 53 54.8 56.6 58.4 60.2 62.1 64 65.8 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.3</table>
 		<table name="#rEvas">3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -280,6 +296,7 @@
 		</for>
 	</skill>
 	<skill id="228" levels="3" name="Fast Spell Casting">
+		<!-- Spell casting speed increases. -->
 		<table name="#rate">1.05 1.07 1.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -291,6 +308,7 @@
 		</for>
 	</skill>
 	<skill id="229" levels="7" name="Fast Mana Recovery">
+		<!-- Increases MP regeneration. -->
 		<table name="#regMp">1.1 1.5 1.9 2.3 2.7 3.1 3.4</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -302,6 +320,7 @@
 		</for>
 	</skill>
 	<skill id="230" levels="2" name="Sprint" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases Speed. Effect 1. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -337,6 +356,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="231" levels="50" name="Heavy Armor Mastery">
+		<!-- Increases P. Def. when wearing heavy armor. -->
 		<table name="#pDef">1.9 3.3 4.8 6.4 8.1 8.9 9.8 11.7 12.7 13.7 15.8 16.9 18 20.4 21.6 22.8 24.1 25.4 26.7 28 29.4 30.8 32.2 33.7 35.2 36.7 38.2 39.8 41.4 43 44.6 46.3 48 49.7 51.4 53.2 55 56.7 58.6 60.4 62.2 64.1 66 67.8 69.7 71.6 73.6 75.5 77.4 79.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -350,6 +370,7 @@
 		</for>
 	</skill>
 	<skill id="232" levels="52" name="Heavy Armor Mastery">
+		<!-- Increases P. Def. when wearing heavy armor. -->
 		<table name="#pDef">17.7 19.1 20.5 23.5 25 26.7 30 31.8 33.6 37.4 39.3 41.3 45.6 47.7 50 54.6 57.1 59.5 62.1 64.6 67.3 70 72.7 75.5 78.4 81.3 84.3 87.3 90.4 93.5 96.7 99.9 103.2 106.5 109.9 113.3 116.8 120.3 123.8 127.4 131 134.7 138.4 142.1 145.8 149.6 153.4 157.2 161 164.9 168.7 172.6</table>
 		<table name="#critVuln">0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.85 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.75 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -367,6 +388,7 @@
 		</for>
 	</skill>
 	<skill id="233" levels="47" name="Light Armor Mastery">
+		<!-- Increases P. Def. when wearing light armor. -->
 		<table name="#pDef">1.3 2.2 3.2 4.2 5.3 6.8 8.4 10.1 11.9 13.7 15.7 16.7 17.8 18.8 19.9 21.1 22.2 23.4 24.5 25.8 27 28.2 29.5 30.8 32.1 33.5 34.8 36.2 37.6 39.1 40.5 42 43.5 44.9 46.5 48 49.5 51.1 52.7 54.2 55.8 57.4 59.1 60.7 62.3 63.9 65.6</table>
 		<table name="#rEvas">4 4 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -384,6 +406,7 @@
 		</for>
 	</skill>
 	<skill id="234" levels="41" name="Robe Mastery">
+		<!-- Increases P. Def. when wearing a robe. -->
 		<table name="#pDef">1.7 2.7 4.3 5.4 7.2 8.5 10.6 12.1 14.5 15.3 16.2 17.9 18.8 19.8 21.7 22.7 23.7 25.8 26.8 27.9 30.1 31.2 32.4 33.5 34.7 35.9 37.1 38.4 39.6 40.8 42.1 43.4 44.7 45.9 47.3 48.6 49.9 51.2 52.5 53.9 55.2</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -397,6 +420,7 @@
 		</for>
 	</skill>
 	<skill id="235" levels="41" name="Robe Mastery">
+		<!-- Increases P. Def. when wearing a robe. -->
 		<table name="#pDef">7.2 8.6 11 12.7 15.4 17.4 20.5 22.7 26.3 27.6 28.8 31.5 32.9 34.2 37.1 38.6 40.1 43.2 44.8 46.4 49.8 51.5 53.2 54.9 56.7 58.5 60.3 62.1 64 65.9 67.7 69.7 71.6 73.5 75.5 77.4 79.4 81.4 83.4 85.4 87.4</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -410,6 +434,7 @@
 		</for>
 	</skill>
 	<skill id="236" levels="41" name="Light Armor Mastery">
+		<!-- Increases P. Def., Casting Spd., Atk. Spd. and MP regeneration when wearing light armor. -->
 		<table name="#pDef">5.4 6.3 7.8 8.8 10.9 12.5 15 16.9 19.8 20.8 21.8 24 25.1 26.3 28.6 29.8 31 33.6 34.9 36.2 38.9 40.3 41.7 43.1 44.6 46 47.5 49 50.5 52.1 53.6 55.2 56.7 58.3 59.9 61.5 63.1 64.7 66.4 68 69.6</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -432,6 +457,7 @@
 		</for>
 	</skill>
 	<skill id="239" levels="5" name="Expertise S">
+		<!-- You become familiar with D-grade equipment. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -472,6 +498,7 @@
 		<set name="canLearn" val=""/>
 	</skill>
 	<skill id="244" levels="3" name="Armor Mastery">
+		<!-- Defense increase. -->
 		<table name="#pDef">6.7 8 9.2</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -483,6 +510,7 @@
 		</for>
 	</skill>
 	<skill id="245" levels="15" name="Wild Sweep">
+		<!-- Strike multiple enemies while equipping a pole-arm. Power 90. Over-hit possible. -->
 		<table name="#mpConsume">22 22 22 23 24 25 27 29 30 31 31 33 35 36 37</table>
 		<table name="#power">90 97 105 123 132 143 165 177 191 219 235 251 287 306 326</table>
 		<table name="#magicLvl">18 19 20 22 23 24 26 27 28 30 31 32 34 35 36</table>
@@ -504,6 +532,7 @@
 		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="246" levels="1" name="Seal of Ruler">
+		<!-- Engraves on the ancient holy artifact guarding the castle of which you are the ruler. -->
 		<set name="mpInitialConsume" val="50"/>
 		<set name="mpConsume" val="0"/>
 		<set name="target" val="TARGET_HOLY"/>
@@ -517,9 +546,10 @@
 		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="247" levels="1" name="Build Headquarters">
+		<!-- Establishes a headquarters during a siege that aids in recovery and reinforcement of forces. Consumes 300 Gemstones: C-Grade. -->
 		<set name="mpInitialConsume" val="30"/>
 		<set name="mpConsume" val="0"/>
-		<set name="itemConsumeId" val="2131"/>
+		<set name="itemConsumeId" val="2131"/> <!-- Gemstone C -->
 		<set name="itemConsumeCount" val="300"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -530,12 +560,14 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="248" levels="5" name="Crystallize">
+		<!-- Makes crystallization possible. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="castRange" val="-1"/>
 	</skill>
 	<skill id="249" levels="42" name="Weapon Mastery">
+		<!-- Increases P. Atk. and M. Atk. -->
 		<table name="#pAtk">1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16 17 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33 34.6 38 39.8 41.7 43.5 45.4 47.4 49.4 51.4 53.5 55.6 57.7 59.9 62 64.1 66.8 68.5 70.7 72.9 75.1 77.2 79.4</table>
 		<table name="#mAtk">1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3</table>
 		<table name="#mulpAtk">1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45</table>
@@ -563,6 +595,7 @@
 		</for>
 	</skill>
 	<skill id="250" levels="42" name="Weapon Mastery">
+		<!-- Increases P. Atk. and M. Atk. -->
 		<table name="#pAtk">1.5 2.8 4.5 5.7 6.7 8.3 9.5 11.6 13.3 16 17 18.1 20.4 21.6 22.8 25.5 26.9 28.3 31.4 33 34.6 38 39.8 41.7 43.5 45.4 47.4 49.4 51.4 53.5 55.6 57.7 59.9 62 64.1 66.8 68.5 70.7 72.9 75.1 77.2 79.4</table>
 		<table name="#mAtk">1.9 3.5 5.7 7.2 8.3 10.3 11.9 14.6 16.6 20 21.3 22.6 25.4 26.9 28.5 31.8 33.6 35.4 39.2 41.2 43.2 47.5 49.8 52.1 54.4 56.8 59.2 61.7 64.3 66.8 69.4 72.1 74.8 77.4 80.2 82.9 85.6 88.4 91.1 93.8 96.5 99.3</table>
 		<table name="#mulpAtk">1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45 1.45</table>
@@ -590,6 +623,7 @@
 		</for>
 	</skill>
 	<skill id="251" levels="45" name="Robe Mastery">
+		<!-- Increases P. Def. when wearing a robe. -->
 		<table name="#pDef">11.6 13.4 16.1 18.4 20.9 23.8 26.9 29.1 32.8 35.4 39.6 42.6 47.3 49 50.7 54.2 56.1 57.9 61.8 63.7 65.7 69.9 72 74.2 78.6 80.9 83.2 85.5 87.8 90.2 92.6 95.1 97.6 100.1 102.6 105.1 107.7 110.3 112.9 115.5 118.1 120.8 123.4 126.1 128.8</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -608,6 +642,7 @@
 		</for>
 	</skill>
 	<skill id="252" levels="45" name="Light Armor Mastery">
+		<!-- Increases P. Def., Casting Spd., Atk. Spd. and MP regeneration when wearing light armor. -->
 		<table name="#pDef">12.6 14.5 17.5 19.3 21.2 23.2 25.5 27 30.1 32.5 36.3 39.1 43.5 45 46.6 49.8 51.5 53.2 56.7 58.5 60.4 64.2 66.1 68.1 72.2 74.2 76.3 78.5 80.6 82.8 85.1 87.3 89.6 91.9 94.2 96.5 98.9 101.2 103.6 106 108.5 110.9 113.3 115.8 118.2</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -650,6 +685,7 @@
 		</for>
 	</skill>
 	<skill id="253" levels="43" name="Heavy Armor Mastery">
+		<!-- Increases P. Def., Casting Spd., and Atk. Spd. when wearing heavy armor. -->
 		<table name="#pDef">11.6 13.3 15.2 17.2 19.5 21.1 23.7 25.6 28.7 30.8 34.3 35.5 36.7 39.3 40.6 41.9 44.7 46.1 47.6 50.6 52.1 53.7 56.9 58.6 60.2 61.9 63.6 65.3 67.1 68.9 70.7 72.5 74.3 76.1 78 79.9 81.7 83.6 85.5 87.5 89.4 91.3 93.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -684,6 +720,7 @@
 		</for>
 	</skill>
 	<skill id="254" levels="11" name="Spoil" enchantLevels1="30" enchantLevels2="30">
+		<!-- Imbues a monster with magic that renders it susceptible to the Sweeper skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -713,6 +750,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="255" levels="15" name="Power Smash">
+		<!-- Harness a mighty power to smite foes down with. Usable when a sword or blunt weapon is equipped. Power 90. Over-hit possible. -->
 		<table name="#mpConsume">22 22 22 23 24 25 27 29 30 31 31 33 35 36 37</table>
 		<table name="#magicLvl">18 19 20 22 23 24 26 27 28 30 31 32 34 35 36</table>
 		<table name="#power">90 97 105 123 132 143 165 177 191 219 235 251 287 306 326</table>
@@ -733,6 +771,7 @@
 		<set name="effectRange" val="400"/>
 	</skill>
 	<skill id="256" levels="1" name="Accuracy" enchantLevels1="30">
+		<!-- Increases one's Accuracy. Continuously consumes MP. -->
 		<table name="#ench1val">0.19 0.19 0.19 0.19 0.19 0.19 0.18 0.18 0.18 0.18 0.18 0.18 0.17 0.17 0.17 0.17 0.17 0.17 0.16 0.16 0.16 0.16 0.16 0.16 0.15 0.15 0.15 0.15 0.15 0.15</table>
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
@@ -753,6 +792,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="257" levels="45" name="Sword Blunt Mastery">
+		<!-- Increases P. Atk when using a sword or blunt weapon. -->
 		<table name="#pAtk">4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3</table>
 		<set name="weaponsAllowed" val="18444"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -769,6 +809,7 @@
 		</for>
 	</skill>
 	<skill id="258" levels="33" name="Light Armor Mastery">
+		<!-- Increases P. Def., Casting Spd., Atk. Spd. and MP regeneration when wearing light armor. -->
 		<table name="#pDef">11.1 11.8 12.5 14 14.8 15.6 17.3 18.1 19 20.8 21.7 22.6 24.5 25.5 26.4 27.4 28.4 29.5 30.5 31.6 32.6 33.7 34.8 35.9 37 38.1 39.2 40.3 41.4 42.6 43.7 44.8 46</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -811,6 +852,7 @@
 		</for>
 	</skill>
 	<skill id="259" levels="33" name="Heavy Armor Mastery">
+		<!-- Increases P. Def., Casting Spd., and Atk. Spd. when wearing heavy armor. -->
 		<table name="#pDef">14.8 15.6 16.5 18.3 19.2 20.2 22.1 23.1 24.1 26.2 27.3 28.4 30.6 31.8 33 34.1 35.3 36.5 37.8 39 40.3 41.5 42.8 44.1 45.4 46.7 48 49.4 50.7 52 53.4 54.7 56.1</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -845,6 +887,7 @@
 		</for>
 	</skill>
 	<skill id="260" levels="37" name="Hammer Crush" enchantLevels1="30" enchantLevels2="30">
+		<!-- Simultaneously shock and inflict melee damage. An equipped blunt weapon is required to use this skill. Shield defense is ignored. Over-hit is possible. Power 406. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -881,6 +924,7 @@
 		</for>
 	</skill>
 	<skill id="261" levels="22" name="Triple Sonic Slash" enchantLevels1="30" enchantLevels2="30">
+		<!-- You are pumped-up with sonic force causing your weapon to strike three times the norm. An equipped Dual-Sword Weapon is required to use this skill. Requires Level 4 or above Sonic Focus charge. Ignores Shield Defense. A critical hit is possible. Power 1948. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -908,11 +952,12 @@
 		<set name="effectRange" val="400"/>
 		<set name="baseCritRate" val="15"/>
 		<set name="num_charges" val="4"/>
-		<set name="charge_skill_id" val="8"/>
+		<set name="charge_skill_id" val="8"/> <!-- Sonic Focus -->
 		<enchant1 name="power" val="#ench1Power"/>
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
 	</skill>
 	<skill id="262" levels="37" name="Holy Blessing" enchantLevels1="30" enchantLevels2="30">
+		<!-- Restores your target's HP. Power 236. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -939,6 +984,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
 	</skill>
 	<skill id="263" levels="37" name="Deadly Blow" enchantLevels1="30" enchantLevels2="30">
+		<!-- Attempts a potentially deadly attack. A Lethal Strike is possible. An equipped dagger weapon is required to use this skill. Power 1107. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -967,6 +1013,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
 	</skill>
 	<skill id="264" levels="1" name="Song of Earth" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases P. Def. of party members. Continuous singing consumes additional MP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -999,6 +1046,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="265" levels="1" name="Song of Life" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' HP regeneration. Continuous singing consumes additional MP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1031,6 +1079,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="266" levels="1" name="Song of Water" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party's Evasion. Continuous singing consumes additional MP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1063,6 +1112,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="267" levels="1" name="Song of Warding" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' M. Def. When singing continuously, additional MP is consumed. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1095,6 +1145,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="268" levels="1" name="Song of Wind" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party's movement. Continuous singing consumes additional MP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1127,6 +1178,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="269" levels="1" name="Song of Hunter" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' critical rate. Continuous singing consumes additional MP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1159,6 +1211,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="270" levels="1" name="Song of Invocation" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' resistance to dark magic attacks. Continuous singing consumes additional MP. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1191,6 +1244,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="271" levels="1" name="Dance of Warrior" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily boosts party members' P. Atk. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1224,6 +1278,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="272" levels="1" name="Dance of Inspiration" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' accuracy. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1257,6 +1312,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="273" levels="1" name="Dance of the Mystic" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' M. Atk. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1290,6 +1346,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="274" levels="1" name="Dance of Fire" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' critical damage. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1323,6 +1380,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="275" levels="1" name="Dance of Fury" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily increases party members' attack speed. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1356,6 +1414,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="276" levels="1" name="Dance of Concentration" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily decreases party members' magic cancel rate to damage and increases Casting Spd. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1391,6 +1450,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="277" levels="1" name="Dance of Light" enchantLevels1="30" enchantLevels2="30">
+		<!-- Temporarily bestows sacred power to party members' physical attack. Continuous dancing consumes additional MP. An equipped Dual-Sword Weapon is required to use this skill. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1422,13 +1482,14 @@
 		</enchant1for>
 	</skill>
 	<skill id="278" levels="6" name="Summon Viper Cubic">
+		<!-- Summons Viper Cubic. Viper Cubic uses magic that poisons a targeted enemy. Requires 3 Crystals: D-Grade. -->
 		<table name="#mpConsume_Init">9 10 11 12 13 14</table>
 		<table name="#mpConsume">35 40 44 48 51 53</table>
 		<table name="#itemConsumeCount">3 4 5 6 6 6</table>
 		<table name="#mAtk">531 773 1026 1264 1530 1822</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1458"/>
+		<set name="itemConsumeId" val="1458"/> <!-- Crystal: D-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1449,6 +1510,7 @@
 		<set name="isCubic" val="true"/>
 	</skill>
 	<skill id="279" levels="5" name="Lightning Strike" enchantLevels1="30" enchantLevels2="30">
+		<!-- Strikes an enemy with lightning, instantly paralyzing them. Power 82. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1481,6 +1543,7 @@
 		</for>
 	</skill>
 	<skill id="280" levels="37" name="Burning Fist" enchantLevels1="30" enchantLevels2="30">
+		<!-- Propels a powerful fiery iron fist. An equipped hand-to-hand combat weapon is required to use this skill. Ignores Shield Defense. Over-hit is possible. Power 431. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1509,6 +1572,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
 	</skill>
 	<skill id="281" levels="37" name="Soul Breaker" enchantLevels1="30" enchantLevels2="30">
+		<!-- An iron-fisted attack that stuns and damages an enemy. An equipped hand-to-hand combat weapon is required to use this skill. Shield Defense is ignored. Over-hit is possible. Power 406. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1546,6 +1610,7 @@
 		</for>
 	</skill>
 	<skill id="282" levels="1" name="Puma Spirit Totem">
+		<!-- The spirit of the puma possesses you, temporarily increasing Accuracy and Atk. Spd. when using hand-to-hand combat weapons. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024"/>
 		<set name="mpConsume" val="18"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1568,6 +1633,7 @@
 		</for>
 	</skill>
 	<skill id="283" levels="7" name="Summon Dark Panther" enchantLevels1="30">
+		<!-- Summons a Dark Panther capable of agile attacks. When summoning it, 1 Crystal: C-Grade will be consumed. Afterwards, 1 additional crystal will be consumed at a regular interval for 4 times. 15% of acquired Exp will also be consumed. -->
 		<table name="#enchantMagicLvl">78 78 78 78 79 79 79 79 79 80 80 80 81 81 81 81 81 82 82 82 83 83 83 83 84 84 84 84 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchDarkPanther">14806 14807 14808 14809 14810 14811 14812 14813 14814 14815 14816 14817 14818 14819 14820 14821 14822 14823 14824 14825 14826 14827 14828 14829 14830 14831 14832 14833 14834 14835</table>
@@ -1577,9 +1643,9 @@
 		<table name="#itemConsumeCountOT">1 1 2 3 4 4 4</table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1459"/>
+		<set name="itemConsumeId" val="1459"/> <!-- Crystal: C-Grade -->
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
-		<set name="itemConsumeIdOT" val="1459"/>
+		<set name="itemConsumeIdOT" val="1459"/> <!-- Crystal: C-Grade -->
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
 		<set name="itemConsumeSteps" val="4"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
@@ -1600,6 +1666,7 @@
 		<enchant1 name="npcId" val="#enchDarkPanther"/>
 	</skill>
 	<skill id="284" levels="40" name="Hurricane Assault" enchantLevels1="30" enchantLevels2="30">
+		<!-- A flurry of combat strikes. An equipped hand-to-hand combat weapon is required to use this skill. Level 2 Sonic Focus charge required. Ignores Shield Defense. A critical hit is possible. Power 501. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1627,11 +1694,12 @@
 		<set name="effectRange" val="400"/>
 		<set name="baseCritRate" val="15"/>
 		<set name="num_charges" val="2"/>
-		<set name="charge_skill_id" val="50"/>
+		<set name="charge_skill_id" val="50"/> <!-- Focused Force -->
 		<enchant1 name="power" val="#ench1Power"/>
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
 	</skill>
 	<skill id="285" levels="27" name="Higher Mana Gain">
+		<!-- Increases the recovery rate when MP is being recovered by recharge. -->
 		<table name="#gainMp">22 24 28 29 31 32 38 39 41 42 48 49 50 52 53 59 61 62 64 66 72 73 75 76 78 79 81</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1643,6 +1711,7 @@
 		</for>
 	</skill>
 	<skill id="286" levels="3" name="Provoke">
+		<!-- Draws in monsters towards oneself from a large surrounding area. -->
 		<table name="#magicLvl">43 55 60</table>
 		<table name="#mpConsume">57 75 89</table>
 		<table name="#skillRadius">500 700 900</table>
@@ -1658,6 +1727,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="287" levels="3" name="Lionheart">
+		<!-- Temporarily but significantly increases resistance to Paralysis, Hold, Sleep, Shock or buff-lifting attacks. Effect 1. -->
 		<table name="#mpConsume">16 22 29</table>
 		<table name="#vuln">0.6 0.4 0.2</table>
 		<table name="#aggro">341 467 582</table>
@@ -1681,6 +1751,7 @@
 		</for>
 	</skill>
 	<skill id="288" levels="4" name="Guard Stance" enchantLevels1="30" enchantLevels2="30">
+		<!-- Increases P. Def. and the success rate of a shield defense. MP will be consumed continuously. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1718,6 +1789,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="289" levels="15" name="Life Leech" enchantLevels1="30" enchantLevels2="30">
+		<!-- Absorbs an enemy's HP. Power 26 -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<enchant2 name="magicLvl" val="#enchantMagicLvl"/>
@@ -1747,6 +1819,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpConsume_Init"/>
 	</skill>
 	<skill id="290" levels="14" name="Final Frenzy">
+		<!-- Automatically increases P. Atk when HP level falls. -->
 		<table name="#final">32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.1 93.1 100.2 107.5 114.8 122.1 129.3</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1760,6 +1833,7 @@
 		</for>
 	</skill>
 	<skill id="291" levels="11" name="Final Fortress">
+		<!-- Automatically increases P. Def. when HP level falls. -->
 		<table name="#final">116.9 129 141.6 150.4 159.3 168.4 177.7 187 196.5 206.2 215.8</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1773,6 +1847,7 @@
 		</for>
 	</skill>
 	<skill id="292" levels="1" name="Bison Spirit Totem">
+		<!-- The spirit of the bison possesses you, temporarily increasing Accuracy when using hand-to-hand combat weapons. When HP is low, P. Atk. and critical attack rate are also increased. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024"/>
 		<set name="mpConsume" val="32"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1813,6 +1888,7 @@
 		</for>
 	</skill>
 	<skill id="293" levels="20" name="Two-handed Weapon Mastery">
+		<!-- Increases P. Atk. and Accuracy when using a two-handed type sword or a two-handed type blunt weapon. -->
 		<table name="#Attack">4.5 7.3 10.7 15.1 20.5 27.1 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.1 93.1 100.2 107.5 114.8 122.1 129.3</table>
 		<table name="#Accuracy">3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</table>
 		<set name="weaponsAllowed" val="18432"/>
@@ -1831,6 +1907,7 @@
 		</for>
 	</skill>
 	<skill id="294" levels="1" name="Shadow Sense">
+		<!-- Increases Accuracy at night. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1844,6 +1921,7 @@
 		</for>
 	</skill>
 	<skill id="295" levels="1" name="Iron Body">
+		<!-- Resist damage from falling. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1854,6 +1932,7 @@
 		</for>
 	</skill>
 	<skill id="296" levels="1" name="Chameleon Rest">
+		<!-- Allows one to sit and rest while being protected from a monster's pre-emptive attack. MP will continuously be consumed. -->
 		<set name="mpConsume" val="9"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
@@ -1865,6 +1944,7 @@
 		</for>
 	</skill>
 	<skill id="297" levels="2" name="Duelist Spirit">
+		<!-- Temporarily increases Dual-Sword Weapon Atk. Spd. and ordinary/skill attack damage when in PVP. Effect 1. -->
 		<table name="#pAtkSpd">1.08 1.12</table>
 		<table name="#mpConsume">30 34</table>
 		<table name="#aggro">597 646</table>
@@ -1893,6 +1973,7 @@
 		</for>
 	</skill>
 	<skill id="298" levels="1" name="Rabbit Spirit Totem">
+		<!-- The spirit of the rabbit possesses you, temporarily increasing Speed and Evasion when using hand-to-hand combat weapons. Accuracy and P. Atk. are decreased while the effect lasts. An equipped hand-to-hand combat weapon is required to use this skill. -->
 		<set name="weaponsAllowed" val="1024"/>
 		<set name="mpConsume" val="29"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1922,14 +2003,15 @@
 		</for>
 	</skill>
 	<skill id="299" levels="1" name="Summon Wild Hog Cannon" enchantLevels1="30">
+		<!-- Summons a siege weapon capable of movement in general mode and remote attack in siege mode. Switching modes takes 30 seconds. Summoning requires 120 Crystals: B-Grade and an additional 30 Gemstones: B-Grade per minute. -->
 		<table name="#enchantMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85</table>
 		<enchant1 name="magicLvl" val="#enchantMagicLvl"/>
 		<table name="#enchWildHogCannon">14769 14770 14771 14772 14773 14774 14775 14776 14777 14778 14779 14780 14781 14782 14783 14784 14785 14786 14787 14788 14789 14790 14791 14792 14793 14794 14795 14796 14797 14798</table>
 		<set name="mpInitialConsume" val="530"/>
-		<set name="itemConsumeIdOT" val="2132"/>
+		<set name="itemConsumeIdOT" val="2132"/> <!-- Gemstone B -->
 		<set name="itemConsumeCountOT" val="30"/>
 		<set name="itemConsumeCount" val="120"/>
-		<set name="itemConsumeId" val="1460"/>
+		<set name="itemConsumeId" val="1460"/> <!-- Crystal: B-Grade -->
 		<set name="itemConsumeSteps" val="20"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
 		<set name="summonTimeLostIdle" val="1000"/>
@@ -1941,7 +2023,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
-		<set name="npcId" val="14768"/>
+		<set name="npcId" val="14768"/> <!-- Wild Hog Cannon -->
 		<set name="expPenalty" val="0.0"/>
 		<set name="isCubic" val="false"/>
 		<enchant1 name="npcId" val="#enchWildHogCannon"/>

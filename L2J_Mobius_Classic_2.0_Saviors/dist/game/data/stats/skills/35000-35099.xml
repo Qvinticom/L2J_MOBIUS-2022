@@ -1,36 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="35000" toLevel="1" name="Blessing of Fire Dragon">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Buff / debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35001" toLevel="1" name="Fire Dragon's Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Fully restores a dying character. Buff / debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35002" toLevel="1" name="Land Dragon Breath">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 15 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35003" toLevel="1" name="Land Dragon Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 15 sec., increases P. Def. by 3600, M. Def. by 3240, and Buff-canceling Attack Resistance by 80%, and restricts movement. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35004" toLevel="1" name="Land Dragon Pendant Basic Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases M. Def. by 9. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35005" toLevel="10" name="Land Dragon Pendant Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- M. Def. + $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35006" toLevel="1" name="Fire Dragon Pendant Basic Effect">
+		<!-- Increases M. Def. by 9. -->
 		<icon>icon.skill35006</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -43,6 +44,7 @@
 		</effects>
 	</skill>
 	<skill id="35007" toLevel="10" name="Fire Dragon Pendant Enchant Effect">
+		<!-- M. Def. + $s1. -->
 		<icon>icon.skill35007</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -134,17 +136,17 @@
 		</effects>
 	</skill>
 	<skill id="35008" toLevel="1" name="Fire Dragon Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Debuff Resistance + 50%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35009" toLevel="1" name="Black Mask Power">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR + 1, INT + 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35010" toLevel="1" name="Refined Romantic Chapeau">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR + 1, INT + 1. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -170,6 +172,7 @@
 		</effects>
 	</skill>
 	<skill id="35011" toLevel="1" name="Refined Romantic Chapeau: Teleport">
+		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
 		<icon>icon.skill35011</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -194,26 +197,27 @@
 		</effects>
 	</skill>
 	<skill id="35012" toLevel="1" name="Pirate King Hat">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR + 1, INT + 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35013" toLevel="1" name="Pirate King Hat: Teleport">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35014" toLevel="1" name="Demon's Circlet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR + 1, INT + 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35015" toLevel="1" name="Circlet of Devil: Teleport">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35016" toLevel="1" name="Refined Ring of Core - Special Ability">
+		<!-- Cancel all debuffs. -->
 		<icon>icon.skill35016</icon>
 		<reuseDelay>1800000</reuseDelay>
 		<hitTime>200</hitTime>
@@ -230,6 +234,7 @@
 		</effects>	
 	</skill>
 	<skill id="35017" toLevel="7" name="Talisman of Insolence I">
+		<!-- P. Atk. +14, M. Atk. +22. Effects from two such Talismans do not stack. -->
 		<icon>
 			<value level="1">icon.tallisman_oman_i02</value>
 			<value level="2">icon.tallisman_oman_i02</value>
@@ -516,6 +521,7 @@
 		</effects>
 	</skill>
 	<skill id="35018" toLevel="1" name="Talisman of Insolence VI">
+		<!-- Imbues with Talisman of Insolence power. -->
 		<icon>icon.tallisman_oman_i01</icon>
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN5</abnormalVisualEffect>
@@ -536,6 +542,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="35019" toLevel="1" name="Talisman of Insolence VI - removal">
+		<!-- The effect of Talisman of Insolence weakens. -->
 		<icon>icon.tallisman_oman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -554,6 +561,7 @@
 		</effects>
 	</skill>
 	<skill id="35020" toLevel="1" name="Talisman of Baium">
+		<!-- Imbues with Talisman of Baium power. -->
 		<icon>icon.skill35020</icon>
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN4</abnormalVisualEffect>
@@ -574,6 +582,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="35021" toLevel="1" name="Talisman of Baium - Removal">
+		<!-- The effect of Talisman of Baium weakens. -->
 		<icon>icon.skill35021</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -592,16 +601,17 @@
 		</effects>
 	</skill>
 	<skill id="35022" toLevel="1" name="Chic Silver Chapeau">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR + 1, INT + 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35023" toLevel="1" name="Chic Silver Chapeau Teleport">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35024" toLevel="11" name="Talisman of Border Lv. 1">
+		<!-- M. Def. + 12, P. Def. + +12. -->
 		<icon>
 			<value level="1">icon.bm_magic_square_talisman</value>
 			<value level="2">icon.bm_magic_square_talisman</value>
@@ -863,7 +873,7 @@
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>111</maxAttackerLevel>
-				<skillId>35027</skillId>
+				<skillId>35027</skillId> <!-- Border Power - Lv. 1 -->
 				<skillLevel>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -884,6 +894,7 @@
 		</effects>
 	</skill>
 	<skill id="35025" toLevel="1" name="Border Purification">
+		<!-- Cancels paralysis and petrification and cures severe poison/bleed condition. -->
 		<icon>icon.skill35025</icon>
 		<reuseDelay>60000</reuseDelay>
 		<castRange>600</castRange>
@@ -911,10 +922,12 @@
 		</effects>
 	</skill>
 	<skill id="35026" toLevel="1" name="Blessing of Borders">
+		<!-- Restores 50% HP / MP / CP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35027" toLevel="4" name="Border Power - Lv. 1">
+		<!-- During an attack P. / M. Atk. +2%, P. / M. Critical Damage +10% with some probability. -->
 		<icon>icon.skill35027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -966,46 +979,47 @@
 		</effects>
 	</skill>
 	<skill id="35028" toLevel="1" name="Bracelet of Borders">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- HP / MP Recovery Bonus + 7%, P./M. Accuracy + +1, Weight Limit + +7000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35029" toLevel="5" name="Item Skill: Might in Duel - PvE">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Item Skill: P. Atk increase in PvE. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35030" toLevel="5" name="Item Skill: Defense in Duel - PvP">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Item Skill: P. Def increase in PvE. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35031" toLevel="5" name="Item Skill: Defense in Duel - PvE">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Item Skill: P. Def increase in PvE. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35032" toLevel="5" name="Item Skill: Enhance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Item Skill: XP/SP bonus increase -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35033" toLevel="3" name="Item Skill: Boost Atk. Spd.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Skill: Increases Atk. Spd. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35034" toLevel="3" name="Item Skill: Fast Spell Casting">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Skill: Increases Casting Spd. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35035" toLevel="1" name="Item Skill: Cleanse">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Skill: Cancels debuffs. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35036" toLevel="1" name="Warrior�s Talisman - Attack">
+		<!-- Damage dealt in PvE +3%, M. / P. Critical Damage +20, M. / P. Skill Power +2%, M. / P. Accuracy +1. -->
 		<icon>icon.skill35036</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1056,6 +1070,7 @@
 		</effects>
 	</skill>
 	<skill id="35037" toLevel="1" name="Warrior�s Talisman - Defense">
+		<!-- P. Def in PvE +3%, Magic Attack Resistance +2%, magic / physical skill Evasion Rate +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
 		<icon>icon.skill35037</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1097,7 +1112,7 @@
 		</effects>
 	</skill>
 	<skill id="35038" toLevel="1" name="Hero�s Talisman - Attack">
-		<!-- PvP Damage +3%, P./M. Critical Damage +20, Skill Power +2%, P./M. Accuracy +1. Duration: 30 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- PvP Damage +3%, M. / P. Critical Damage +20, Skill Power +2%, M. / P. Accuracy +1. -->
 		<icon>icon.skill35038</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1140,7 +1155,7 @@
 		</effects>
 	</skill>
 	<skill id="35039" toLevel="1" name="Hero�s Talisman - Defense">
-		<!-- Received PvP damage +3%, Magic Attack Resistance +2%, P./M. Skill Evasion +4%, Debuff Resistance +3%. Duration: 30 days. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Received PvP damage +3%, Magic Attack Resistance +2%, P. / M. Skill Evasion +4%, Debuff Resistance +3%. -->
 		<icon>icon.skill35039</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1179,31 +1194,32 @@
 		</effects>
 	</skill>
 	<skill id="35040" toLevel="1" name="Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using the Belt, Inventory slot +2, weight limit +1000. You can enhance it to Rag Belt with magic. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35041" toLevel="1" name="Rag Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using the Belt, Inventory slot +2, weight limit +2000. HP Recovery +1.24, MP Recovery +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35042" toLevel="1" name="Leather Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using the Belt, Inventory slot +3, weight limit +3000. HP Recovery +1.47, MP Recovery +0.98, CP Recovery +1.96, Max HP / MP / CP +100. You can enhance it to Iron Belt with magic. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35043" toLevel="1" name="Iron Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using the Belt, Inventory slot +4, weight limit +4000. HP Recovery +1.70, MP Recovery +1.13, CP Recovery +2.26, Max HP / MP / CP +150. You can enhance it to Mithril Belt with magic. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35044" toLevel="1" name="Mithril Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When using the Belt, Inventory slot +5, weight limit +5000. HP Recovery +1.92, MP Recovery +1.28, CP Recovery +2.56, Max HP / MP / CP +200. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35045" toLevel="1" name="Talisman of Battle - Liberate">
+		<!-- Removes all debuffs when used. Cooldown: 60 min. Can be used only at the Olympiad. -->
 		<icon>icon.skill35045</icon>
 		<operateType>A1</operateType>
 		<mpConsume>50</mpConsume>

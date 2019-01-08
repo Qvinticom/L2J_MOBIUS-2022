@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25200" level="71" type="L2Monster" name="Sheshark's Family" title="Raid Fighter">
 		<parameters>
@@ -1218,7 +1218,7 @@
 				<item id="95" min="1" max="1" chance="1.248" /> <!-- Poleaxe -->
 				<item id="75" min="1" max="1" chance="1.242" /> <!-- Caliburs -->
 				<item id="134" min="1" max="1" chance="1.239" /> <!-- Sword of Nightmare -->
-				<item id="301" min="1" max="1" chance="1.238" /> <!-- Scorpion -->
+				<item id="301" min="1" max="1" chance="1.238" /> <!-- scorpion -->
 				<item id="201" min="1" max="1" chance="1.231" /> <!-- Club of Nature -->
 				<item id="233" min="1" max="1" chance="1.218" /> <!-- Dark Screamer -->
 				<item id="200" min="1" max="1" chance="1.212" /> <!-- Sage's Staff -->
@@ -1634,7 +1634,7 @@
 				<item id="196" min="1" max="1" chance="1.031" /> <!-- Stick of Eternity -->
 				<item id="231" min="1" max="1" chance="1.01" /> <!-- Grace Dagger -->
 				<item id="201" min="1" max="1" chance="1.01" /> <!-- Club of Nature -->
-				<item id="301" min="1" max="1" chance="1.007" /> <!-- Scorpion -->
+				<item id="301" min="1" max="1" chance="1.007" /> <!-- scorpion -->
 				<item id="265" min="1" max="1" chance="1.007" /> <!-- Fisted Blade -->
 				<item id="162" min="1" max="1" chance="1.001" /> <!-- War Axe -->
 				<item id="198" min="1" max="1" chance="0.998" /> <!-- Inferno Staff -->
@@ -3474,7 +3474,7 @@
 				<item id="220" min="1" max="1" chance="5.614" /> <!-- Crafted Dagger -->
 				<item id="168" min="1" max="1" chance="5.597" /> <!-- Work Hammer -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>

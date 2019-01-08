@@ -116,7 +116,7 @@
 		</stats>
 	</item>
 	<item id="14503" name="Vesper Caster {PvP} - MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases MP Recovery Bonus Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -194,7 +194,7 @@
 		</stats>
 	</item>
 	<item id="14505" name="Vesper Singer {PvP} - Empower" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 151. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. M. Atk. +151. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -233,7 +233,7 @@
 		</stats>
 	</item>
 	<item id="14506" name="Vesper Singer {PvP} - MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases MP Recovery Bonus Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -311,7 +311,7 @@
 		</stats>
 	</item>
 	<item id="14508" name="Vesper Thrower {PvP} - Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Decreases MP consumption by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Decreases MP consumption by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -351,7 +351,7 @@
 		</stats>
 	</item>
 	<item id="14509" name="Vesper Thrower {PvP} - Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -391,7 +391,7 @@
 		</stats>
 	</item>
 	<item id="14510" name="Vesper Thrower {PvP} - Critical Slow" type="Weapon">
-		<!-- <Special Option>. Has a 33% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Has a 33% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -557,7 +557,7 @@
 		</stats>
 	</item>
 	<item id="14514" name="Vesper Shooter {PvP} - Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>when using the. Skill MP consumption decreases by 12%. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>when using the. Skill MP consumption decreases by 12%. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/ crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -599,7 +599,7 @@
 		</stats>
 	</item>
 	<item id="14515" name="Vesper Shooter {PvP} - Focus" type="Weapon">
-		<!-- Kamael-exclusive weapon Vesper Thrower Conversion. <Special Option>. Critical Attack increases by 133. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/crossbows at a fixed rate during an attack. -->
+		<!-- Kamael-exclusive weapon Vesper Thrower Conversion. <Special Option>. Critical Attack increases by 133. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/ crossbows at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -641,7 +641,7 @@
 		</stats>
 	</item>
 	<item id="14516" name="Vesper Shooter {PvP} - Critical Slow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -964,7 +964,7 @@
 		</stats>
 	</item>
 	<item id="14526" name="Dynasty Dual Dagger - Great Gale" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Atk. Spd. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1004,7 +1004,7 @@
 		</stats>
 	</item>
 	<item id="14527" name="Icarus Dual Daggers - Confusion" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Evasion. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1700,7 +1700,7 @@
 		</skills>
 	</item>
 	<item id="14558" name="Dynasty Dual Dagger {PvP}" type="Weapon">
-		<!-- Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- Dual daggers, P. Atk. +more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1745,7 +1745,7 @@
 		</stats>
 	</item>
 	<item id="14559" name="PC Cafe Points" type="EtcItem">
-		<!-- When double-clicked, 700 Player Commendation Points can be acquired. -->
+		<!-- When double-clicked, 700 PA Points can be acquired. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -1764,7 +1764,7 @@
 		</skills>
 	</item>
 	<item id="14560" name="Dagger of Val Turner Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1797,7 +1797,7 @@
 		</stats>
 	</item>
 	<item id="14561" name="Slasher of Val Turner Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1830,7 +1830,7 @@
 		</stats>
 	</item>
 	<item id="14562" name="Sword of Ashton Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1863,7 +1863,7 @@
 		</stats>
 	</item>
 	<item id="14563" name="Claw of Ashton Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1896,7 +1896,7 @@
 		</stats>
 	</item>
 	<item id="14564" name="Slasher of Esthus Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1929,7 +1929,7 @@
 		</stats>
 	</item>
 	<item id="14565" name="Great Hammer of Esthus Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1962,7 +1962,7 @@
 		</stats>
 	</item>
 	<item id="14566" name="Staff of Dake Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1996,7 +1996,7 @@
 		</stats>
 	</item>
 	<item id="14567" name="Hall of Dake Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2030,7 +2030,7 @@
 		</stats>
 	</item>
 	<item id="14568" name="Bow of Cadmus Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2066,7 +2066,7 @@
 		</stats>
 	</item>
 	<item id="14569" name="Mace of Cadmus Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2099,7 +2099,7 @@
 		</stats>
 	</item>
 	<item id="14570" name="Dualsword of Hunter Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2131,7 +2131,7 @@
 		</stats>
 	</item>
 	<item id="14571" name="Spear of Hunter Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2167,7 +2167,7 @@
 		</stats>
 	</item>
 	<item id="14572" name="Staff of Abygail Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2201,7 +2201,7 @@
 		</stats>
 	</item>
 	<item id="14573" name="Great Hammer of Abygail Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2234,7 +2234,7 @@
 		</stats>
 	</item>
 	<item id="14574" name="Spear of Halter Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2270,7 +2270,7 @@
 		</stats>
 	</item>
 	<item id="14575" name="Dagger of Halter Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2303,7 +2303,7 @@
 		</stats>
 	</item>
 	<item id="14576" name="Mace of Orwen Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2336,7 +2336,7 @@
 		</stats>
 	</item>
 	<item id="14577" name="Claw of Orwen Family" type="Weapon">
-		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2369,7 +2369,7 @@
 		</stats>
 	</item>
 	<item id="14578" name="Slicer of Val Turner Family" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Val Turner Family's Slasher Conversion. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Kamael-exclusive Weapon: Val Turner Family's Slasher Conversion. Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2406,7 +2406,7 @@
 		</stats>
 	</item>
 	<item id="14579" name="Épée of Ashton Family" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ashton Family's Sword conversion. Enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Kamael-exclusive Weapon: Ashton Family's Sword conversion. Enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2443,7 +2443,7 @@
 		</stats>
 	</item>
 	<item id="14580" name="Slicer of Esthus Family" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Esthus Family's Slasher Conversion. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Kamael-exclusive Weapon: Esthus Family's Slasher Conversion. Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2480,7 +2480,7 @@
 		</stats>
 	</item>
 	<item id="14581" name="Estoc of Cadmus Family" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Cadmus Family's Bow Conversion. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<!-- Kamael-exclusive Weapon: Cadmus Family's Bow Conversion. Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2792,7 +2792,7 @@
 		</stats>
 	</item>
 	<item id="14592" name="Gludio Earth Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Gludio territory. Earth Resistance + 12. Only one effect is applied even when wearing two earrings having the same effect. -->
+		<!-- Ring given to the guardian of Gludio territory. Earth Resistance +12. Only one effect is applied even when wearing two earrings having the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2818,7 +2818,7 @@
 		</stats>
 	</item>
 	<item id="14593" name="Dion Water Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Dion territory. Water Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Dion territory. Water Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2844,7 +2844,7 @@
 		</stats>
 	</item>
 	<item id="14594" name="Giran Fire Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Giran territory. Fire Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Giran territory. Fire Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2870,7 +2870,7 @@
 		</stats>
 	</item>
 	<item id="14595" name="Oren Earth Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Oren territory. Earth Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Oren territory. Earth Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2896,7 +2896,7 @@
 		</stats>
 	</item>
 	<item id="14596" name="Aden Holy Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Aden territory. Holy Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Aden territory. Holy Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2922,7 +2922,7 @@
 		</stats>
 	</item>
 	<item id="14597" name="Innadril Holy Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Innadril territory. Holy Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Innadril territory. Holy Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2948,7 +2948,7 @@
 		</stats>
 	</item>
 	<item id="14598" name="Goddard Dark Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Goddard territory. Dark Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Goddard territory. Dark Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2974,7 +2974,7 @@
 		</stats>
 	</item>
 	<item id="14599" name="Rune Wind Resistance Ring" type="Armor">
-		<!-- Ring given to the guardian of Rune territory. Wind Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Rune territory. Wind Resistance +12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

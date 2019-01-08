@@ -109,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36708" name="Experiment Material" type="EtcItem">
-		<!-- Pouch containing unknown experiment material from Workman Chen on Alligator Island. Take it to the Superior he mentioned. -->
+		<!-- Pouch containing unknown experiment material from Workman Chen on Alligator Island. Take it to the "Superior" he mentioned. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -467,7 +467,7 @@
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 	</item>
 	<item id="36731" name="Life Stone Instilled with Giants' Power" type="EtcItem">
-		<!-- Mineral with mysterious power. Can be augmented to high-grade and used by characters of level 85 or higher. -->
+		<!-- Mineral with mysterious power. Can get an advanced augmentation effect. Can be used by characters of level 85 or above. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />

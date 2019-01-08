@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="46404" name="Emergency Whistle - Aden Vanguard" type="EtcItem">
-		<!-- The party leader can use it during the battle against Burnstein inside the Command Post on the 3rd floor to randomly summon one of the 5 Aden Vanguard members as reinforcement. Does not work on the 1st and 2nd floors. 30-minute. Can only be used inside the Command Post. -->
+		<!-- The party leader can use it during the battle against Burnstein inside the Command Post on the 3rd floor to randomly summon one of the 5 Aden Vanguard members as reinforcement. Does not work on the 1st and 2nd floors. 30-min. Can only be used inside the Command Post. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -45,7 +45,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46405" name="Mr. K's Gift Basket" type="EtcItem">
-		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hour Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/White Uniform Hat/Ribbon Hairband. -->
+		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hr. Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/ White Uniform Hat/ Ribbon Hairband. -->
 		<set name="icon" val="icon.mrk_basket_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -59,7 +59,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46406" name="Angel Cat's Energy" type="EtcItem">
-		<!-- For 30 minutes, P. Atk. + 5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/MP by 5%, and XP and SP acquired through hunting increase by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Angel Cat's Blessing and Letter Collector's Gift. -->
+		<!-- For 30 min., P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting increase by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Angel Cat's Blessing and Letter Collector's Gift. -->
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -171,7 +171,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46414" name="Sheep Hat - Physical" additionalName="7-day" type="Armor">
-		<!-- STR + 3, P. Atk. + 3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
+		<!-- STR +3, P. Atk. +3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -185,7 +185,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
-		<!-- INT + 3, M. Atk. + 5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
+		<!-- INT +3, M. Atk. +5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -199,7 +199,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
-		<!-- CON + 3, P./M. Def + 3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
+		<!-- CON +3, P./ M. Def +3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -225,7 +225,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46418" name="Perfect Charm" additionalName="14-day" type="EtcItem">
-		<!-- STR, INT, CON, DEX, WIT, MEN, LUC, CHA + 1 when placed in the inventory. Deleted after event. -->
+		<!-- If stored in the inventory, will receive STR, INT, CON, DEX, WIT, MEN, LUC, CHA +1. Will be deleted after the event. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -247,7 +247,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="46420" name="Sheep Bait" type="EtcItem">
-		<!-- Bait for fishing. Catch the same items as when fishing with regular bait, and get more XP. Under Lv. 85 only. Deleted after event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters below level 85. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46421" name="R Sheep Bait" type="EtcItem">
-		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Can be used by characters Lv. 85 - 94. Deleted after event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 85-94. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -277,7 +277,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46422" name="R95 Sheep Bait" type="EtcItem">
-		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Can be used by characters Lv. 95 - 98. Deleted after event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters from level 95-98. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -292,7 +292,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46423" name="R99 Sheep Bait" type="EtcItem">
-		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Lv. 99 or above. Deleted after event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 99 or higher. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -307,7 +307,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46424" name="Sheep Hat" additionalName="14-day" type="Armor">
-		<!-- Hat that looks like a sheep. Uses 2 hair accessory slots. <Active Skill>. 1.Blessed Resurrection (Cooldown 60 min). 2.Baa~: Can obtain 2 Sheep Bait Coupons when using the skill.(Only once a day). Deleted after event. -->
+		<!-- A sheep-shaped hat. Occupies 2 Hair Accessory slots. <Active Skill>. 1. Blessed Resurrection (Cooldown: 60 min). 2. Baa~: Use the skill to obtain 2 Sheep Bait Coupons (can be used only once a day). Will be deleted after the event. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -321,7 +321,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
-		<!-- Exchange for 30 Sheep Bait for your corresponding level through a fishing guild member. Deleted after event. -->
+		<!-- Can be exchanged for 30 Sheep Bait of your level through the Fishing Guild Member in each town. Will be deleted after the event. -->
 		<set name="icon" val="branchsys2.action5016" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -471,7 +471,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46435" name="Heine Special Bait (85-89)" type="EtcItem">
-		<!-- Fishing Bait. When used, various types of fish can be caught, Wind Vitality Tonic, Heine Treasure Chest, Zodiac Agathion Pack have a small chance of being obtained. Can only be used by Lv.85~Lv.89. -->
+		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used by Lv.85-Lv.89. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -486,7 +486,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46436" name="Heine Special Bait (90-94)" type="EtcItem">
-		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Zodiac Agathion Box. Can be used by characters Lv. 90 - 94. -->
+		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Seed Bracelet Treasure Chest. Can be used by characters Lv. 90- 94. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -501,7 +501,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46437" name="Heine Special Bait (95-98)" type="EtcItem">
-		<!-- Fishing Bait. When used, various types of fish can be caught, Wind Vitality Tonic, Heine Treasure Chest, Zodiac Agathion Pack have a small chance of being obtained. Can only be used by Lv.95~Lv.98. -->
+		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used by Lv.95-Lv.98. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -516,7 +516,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46438" name="Heine Special Bait (99~)" type="EtcItem">
-		<!-- Fishing Bait. When used, various types of fish can be caught, Wind Vitality Tonic, Heine Treasure Chest, Zodiac Agathion Pack have a small chance of being obtained. Can only be used above Lv.99. -->
+		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used above Lv.99. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -545,7 +545,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46441" name="Zodiac Agathion Box" type="EtcItem">
-		<!-- Double-click to get a random Zodiac Agathion. -->
+		<!-- Double-click to randomly obtain one Zodiac Agathion. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />

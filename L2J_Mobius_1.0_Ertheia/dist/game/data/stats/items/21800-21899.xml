@@ -249,7 +249,6 @@
 		</stats>
 	</item>
 	<item id="21811" name="Dynasty Sigil of Fortune" additionalName="90-day" type="Armor">
-		<!-- Description: Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +796,7 @@
 		</stats>
 	</item>
 	<item id="21830" name="Gram of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive weapon Increases Critical by 84. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive weapon. Increases Critical by 84. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -837,7 +836,7 @@
 		</stats>
 	</item>
 	<item id="21831" name="Laevateinn of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive weapon Increases Critical by 84. Increases damage inflicted during PvP. During Critical, party members including yourself will receive increased P. Atk., M. Atk., and healing capacity by a fixed rate. But decreased MP consumption per skill during a Critical Attack. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive weapon. Increases Critical by 84. Increases damage inflicted during PvP. During Critical, party members including yourself will receive increased P. Atk., M. Atk., and healing capacity by a fixed rate. But decreased MP consumption per skill during a Critical Attack. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -875,7 +874,7 @@
 		</stats>
 	</item>
 	<item id="21832" name="Sarunga of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive weapon Increases Critical by 88. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive weapon. Increases Critical by 88. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1241,7 +1240,7 @@
 		</stats>
 	</item>
 	<item id="21842" name="Dynasty Ancient Sword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive weapon Increases P. Critical Rate by 111. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive weapon. Increases P. Critical Rate by 111. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1281,7 +1280,7 @@
 		</stats>
 	</item>
 	<item id="21843" name="Dynasty Rapier of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive weapon Increases P. Critical Rate by 111. Increases damage inflicted during PvP. Has a chance that party members including yourself will get increased P. Atk., M. Atk., healing power received, and decreased Skill MP consumption during a Critical Attack. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive weapon. Increases P. Critical Rate by 111. Increases damage inflicted during PvP. Has a chance that party members including yourself will get increased P. Atk., M. Atk., healing power received, and decreased Skill MP consumption during a Critical Attack. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1319,7 +1318,7 @@
 		</stats>
 	</item>
 	<item id="21844" name="Dynasty Crossbow of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-exclusive weapon Increases P. Critical Rate by 116. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-exclusive weapon. Increases P. Critical Rate by 116. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1357,7 +1356,7 @@
 		</stats>
 	</item>
 	<item id="21845" name="Mysterious No-grade Soulshot" type="EtcItem">
-		<!-- "Soulshot containing the light of Spirits -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1378,7 +1377,7 @@
 		</skills>
 	</item>
 	<item id="21846" name="Mysterious Soulshot (D-grade)" type="EtcItem">
-		<!-- "Soulshot containing the light of Spirits -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1400,7 +1399,7 @@
 		</skills>
 	</item>
 	<item id="21847" name="Mysterious Soulshot (C-grade)" type="EtcItem">
-		<!-- "Soulshot containing the light of Spirits -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1422,7 +1421,7 @@
 		</skills>
 	</item>
 	<item id="21848" name="Mysterious Soulshot (B-grade)" type="EtcItem">
-		<!-- "Soulshot containing the light of Spirits -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1444,7 +1443,7 @@
 		</skills>
 	</item>
 	<item id="21849" name="Mysterious Soulshot (A-grade)" type="EtcItem">
-		<!-- "Soulshot containing the light of Spirits -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1466,7 +1465,7 @@
 		</skills>
 	</item>
 	<item id="21850" name="Mysterious Soulshot (S-grade)" type="EtcItem">
-		<!-- "Soulshot containing the light of Spirits -->
+		<!-- Soulshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1488,7 +1487,7 @@
 		</skills>
 	</item>
 	<item id="21851" name="Mysterious Blessed No-grade Spiritshot" type="EtcItem">
-		<!-- "Spiritshot containing the light of Spirits -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1509,7 +1508,7 @@
 		</skills>
 	</item>
 	<item id="21852" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- "Spiritshot containing the light of Spirits -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1531,7 +1530,7 @@
 		</skills>
 	</item>
 	<item id="21853" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- "Spiritshot containing the light of Spirits -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1553,7 +1552,7 @@
 		</skills>
 	</item>
 	<item id="21854" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- "Spiritshot containing the light of Spirits -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1575,7 +1574,7 @@
 		</skills>
 	</item>
 	<item id="21855" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- "Spiritshot containing the light of Spirits -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1597,7 +1596,7 @@
 		</skills>
 	</item>
 	<item id="21856" name="Mysterious Blessed Spiritshot (S-grade)" type="EtcItem">
-		<!-- "Spiritshot containing the light of Spirits -->
+		<!-- Spiritshot containing the light of Spirits -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1619,7 +1618,7 @@
 		</skills>
 	</item>
 	<item id="21857" name="Hero's Gold Chest" additionalName="90-day" type="EtcItem">
-		<!-- Hero's Gold Chest Wrapped Pack containing each of a Hero's Treasure Chest, Dimensional Support Pack, Potion Support Pack, and Supplies Support Pack. -->
+		<!-- Hero's Gold Chest. Wrapped Pack containing each of a Hero's Treasure Chest, Dimensional Support Pack, Potion Support Pack, and Supplies Support Pack. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1642,7 +1641,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21858" name="Dimensional Support Pack" additionalName="90-day" type="EtcItem">
-		<!-- Dimensional support pack Wrapped Pack containing 2 Superior Minion coupon, 3 feathers of blessing, 5 Kamaloka (Near Kamaloka, Hall of the Abyss, Labyrinth of the Abyss) entrance passes, and 3 Vitality Replenishing Potions. -->
+		<!-- Dimensional support pack. Wrapped Pack containing 2 Superior Minion coupon, 3 feathers of blessing, 5 Kamaloka (Near Kamaloka, Hall of the Abyss, Labyrinth of the Abyss) entrance passes, and 3 Vitality Replenishing Potions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1667,7 +1666,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21859" name="Potion Support Pack" additionalName="90-day" type="EtcItem">
-		<!-- Potion support pack Wrapped Pack containing 20 Superior Quick Healing Potions, 50 Superior Healing Potions, 5 fresh milks, and 5 Leaf of Appreciations. -->
+		<!-- Potion support pack. Wrapped Pack containing 20 Superior Quick Healing Potions, 50 Superior Healing Potions, 5 fresh milks, and 5 Leaf of Appreciations. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1690,7 +1689,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21860" name="Supplies Support Pack" additionalName="90-day" type="EtcItem">
-		<!-- Supplies support pack Wrapped Pack containing 200,000 mysterious soulshots and spirits according to grade. -->
+		<!-- Supplies support pack. Wrapped Pack containing 200,000 mysterious soulshots and spirits according to grade. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1743,7 +1742,7 @@
 		</skills>
 	</item>
 	<item id="21862" name="Player Commendation - Vitality Pack" type="EtcItem">
-		<!-- Player Commendation - Vitality Pack Wrapped Pack containing 3 PC Vitality. When used, has a chance of receiving a 1h~4h PC Vitality buff. Can only be used at levels 1 - 75. -->
+		<!-- Player Commendation - Vitality Pack. Wrapped Pack containing 3 PC Vitality. When used, has a chance of receiving a 1h~4h PC Vitality buff. Can only be used at levels 1 - 75. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1784,7 +1783,7 @@
 		</skills>
 	</item>
 	<item id="21864" name="Player Commendation - Blessing Pack" type="EtcItem">
-		<!-- Player Commendation - Blessing pack Wrapped Pack containing Player Commendation - Blessing. -->
+		<!-- Player Commendation - Blessing pack. Wrapped Pack containing Player Commendation - Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1886,7 +1885,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21869" name="Hero's Gold Chest Pack" type="EtcItem">
-		<!-- Hero's Gold Chest Pack Wrapped Pack that contains a Hero's Gold Chest. -->
+		<!-- Hero's Gold Chest Pack. Wrapped Pack that contains a Hero's Gold Chest. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2079,7 +2078,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21879" name="XP Buff 50% Pack (4-hour)" type="EtcItem">
-		<!-- Dimensional pack Wrapped Pack containing 15 XP Buff 50%es (4-hour). -->
+		<!-- Dimensional pack. Wrapped Pack containing 15 XP Buff 50%es (4-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2100,7 +2099,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21880" name="Pa'agrio's Warm Breeze (4-hour)" type="EtcItem">
-		<!-- "Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the ""Birthday Joy"" buff is in effect. Cooldown is 60 min. Vitality item with limited usage." -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -2272,7 +2271,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21889" name="Sweet Chocolate (4-hour)" type="EtcItem">
-		<!-- "Upon use, replenishes Vitality while hunting for 4 hours. The effect doesn't apply while ""Birthday Vitality Buff"" is in effect. Cooldown is 60 minutes. Vitality item with limited usage." -->
+		<!-- Upon use, replenishes Vitality while hunting for 4 hours. The effect doesn't apply while "Birthday Vitality Buff" is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -2476,7 +2475,7 @@
 		</skills>
 	</item>
 	<item id="21899" name="Totem of Body" type="EtcItem">
-		<!-- "Summons a totem that increases HP Recovery Rate by 30% and decreases damage from the topography by 80%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in ""Balthus Knights - Antharas Expedition."" cooldown is 10 min." -->
+		<!-- Summons a totem that increases HP Recovery Rate by 30% and decreases damage from the topography by 80%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

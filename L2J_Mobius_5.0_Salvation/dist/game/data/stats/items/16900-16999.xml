@@ -2117,7 +2117,7 @@
 			<item id="16978" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack (D-grade) - 90-day -->
 			<item id="16990" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 90-day -->
 			<item id="16991" min="1" max="1" chance="100" /> <!-- One-handed Sword of Fortune Set - 90-day -->
-			<item id="16994" min="1" max="1" chance="100" /> <!-- Dualsword of Fortune Set - 90-day -->
+			<item id="16994" min="1" max="1" chance="100" /> <!-- Dual Sword of Fortune Set - 90-day -->
 			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
 			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
 			<item id="16999" min="1" max="1" chance="100" /> <!-- Jewelry Pack (A-grade) - 90-day -->
@@ -2180,7 +2180,7 @@
 			<item id="16977" min="1" max="1" chance="100" /> <!-- Full Plate of Fortune Set Pack (C-grade) - 90-day -->
 			<item id="16978" min="1" max="1" chance="100" /> <!-- Brigandine of Fortune Set Pack (D-grade) - 90-day -->
 			<item id="16990" min="1" max="1" chance="100" /> <!-- Blunt Weapon of Fortune Set - 90-day -->
-			<item id="16994" min="1" max="1" chance="100" /> <!-- Dualsword of Fortune Set - 90-day -->
+			<item id="16994" min="1" max="1" chance="100" /> <!-- Dual Sword of Fortune Set - 90-day -->
 			<item id="16995" min="1" max="1" chance="100" /> <!-- Spear of Fortune Set - 90-day -->
 			<item id="21820" min="1" max="1" chance="100" /> <!-- Dynasty Accessory of Fortune Pack (S-grade) - 90-day -->
 			<item id="21816" min="1" max="1" chance="100" /> <!-- Tateossian Accessory of Fortune Pack (S-grade) - 90-day -->
@@ -2692,7 +2692,7 @@
 			<item id="16928" min="1" max="1" chance="100" /> <!-- Shyeed's Bow of Fortune - 90-day -->
 			<item id="16929" min="1" max="1" chance="100" /> <!-- Bow of Peril of Fortune - 90-day -->
 			<item id="16930" min="1" max="1" chance="100" /> <!-- Eminence Bow of Fortune - 90-day -->
-			<item id="16931" min="1" max="1" chance="100" /> <!-- Light Crossbow of Fortune - 90-day -->
+			<item id="16931" min="1" max="1" chance="100" /> <!-- Light Bow of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16990" name="Blunt Weapon of Fortune Set" additionalName="90-day" type="EtcItem">
@@ -2796,7 +2796,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16994" name="Dualsword of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 dualswords at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- When used, you acquire 6 dual swords at S~D-grade s. Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2812,7 +2812,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="21840" min="1" max="1" chance="100" /> <!-- Dynasty Dualsword of Fortune - 90-day -->
+			<item id="21840" min="1" max="1" chance="100" /> <!-- Dynasty Dual Sword of Fortune - 90-day -->
 			<item id="21828" min="1" max="1" chance="100" /> <!-- Tallum Blade*Dark Legion's Edge of Fortune - 90-day -->
 			<item id="16948" min="1" max="1" chance="100" /> <!-- Tallum Blade*Damascus of Fortune - 90-day -->
 			<item id="16949" min="1" max="1" chance="100" /> <!-- Samurai Long Sword*Samurai Long Sword of Fortune - 90-day -->
@@ -2889,10 +2889,10 @@
 		<capsuled_items>
 			<item id="21843" min="1" max="1" chance="100" /> <!-- Dynasty Rapier of Fortune - 90-day -->
 			<item id="21831" min="1" max="1" chance="100" /> <!-- Laevateinn of Fortune - 90-day -->
-			<item id="16960" min="1" max="1" chance="100" /> <!-- Éclair Bijou of Fortune - 90-day -->
+			<item id="16960" min="1" max="1" chance="100" /> <!-- ?clair Bijou of Fortune - 90-day -->
 			<item id="16961" min="1" max="1" chance="100" /> <!-- Colichemarde of Fortune - 90-day -->
 			<item id="16962" min="1" max="1" chance="100" /> <!-- Admiral's Estoc of Fortune - 90-day -->
-			<item id="16963" min="1" max="1" chance="100" /> <!-- Grand Épée of Fortune - 90-day -->
+			<item id="16963" min="1" max="1" chance="100" /> <!-- Grand ?p?e of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
 	<item id="16998" name="Crossbow of Fortune Set" additionalName="90-day" type="EtcItem">

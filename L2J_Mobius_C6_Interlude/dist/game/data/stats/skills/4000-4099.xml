@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4001" levels="12" name="NPC Wind Strike">
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
@@ -119,6 +119,7 @@
 		</for>
 	</skill>
 	<skill id="4009" levels="6" name="Resist Fire">
+		<!-- Resistant to fire attacks. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="6000"/>
@@ -132,6 +133,7 @@
 		</for>
 	</skill>
 	<skill id="4010" levels="6" name="Resist Water">
+		<!-- Resistant to water attacks. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="6000"/>
@@ -145,6 +147,7 @@
 		</for>
 	</skill>
 	<skill id="4011" levels="6" name="Resist Wind">
+		<!-- Resistant to wind attacks. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="6000"/>
@@ -158,6 +161,7 @@
 		</for>
 	</skill>
 	<skill id="4012" levels="6" name="Resist Earth">
+		<!-- Resistant to earth attacks. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="6000"/>
@@ -219,7 +223,6 @@
 		</for>
 	</skill>
 	<skill id="4017" levels="1" name="Queen Ant Brandish">
-		<!-- Queen Ant Skills -->
 		<set name="magicLvl" val="40"/>
 		<set name="power" val="271"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -233,7 +236,7 @@
 		<set name="aggroPoints" val="100"/>
 	</skill>
 	<skill id="4018" levels="1" name="Decrease Speed">
-		<!-- Queen Ant Skills -->
+		<!-- Instantly reduces Speed. Effect 3. -->
 		<set name="magicLvl" val="40"/>
 		<set name="saveVs" val="DEX"/>
 		<set name="power" val="542"/>
@@ -253,7 +256,7 @@
 		</for>
 	</skill>
 	<skill id="4019" levels="1" name="Decrease Speed">
-		<!-- Queen Ant Skills -->
+		<!-- Instantly reduces Speed. Effect 3. -->
 		<set name="magicLvl" val="40"/>
 		<set name="saveVs" val="DEX"/>
 		<set name="power" val="40"/>
@@ -274,7 +277,6 @@
 		</for>
 	</skill>
 	<skill id="4020" levels="1" name="Heal Queen Ant1">
-		<!-- Nurse Heal Skill -->
 		<set name="magicLvl" val="35"/>
 		<set name="power" val="10845"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -287,7 +289,7 @@
 		<set name="aggroPoints" val="100"/>
 	</skill>
 	<skill id="4021" levels="1" name="Queen Ant">
-		<!-- Queen Ant Skills -->
+		<!-- Vulnerable to fire attack but possesses great resistance against archery attack. -->
 		<set name="magicLvl" val="40"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="WEAKNESS"/>
@@ -300,7 +302,6 @@
 		</for>
 	</skill>
 	<skill id="4022" levels="1" name="Body Of Nurse Ant">
-		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -309,7 +310,6 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="4023" levels="1" name="Body Of Royal Guard Ant">
-		<!-- This Skill Is Only For Description In The Client -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -318,7 +318,6 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="4024" levels="1" name="Heal Queen Ant2">
-		<!-- Nurse Heal Skill -->
 		<set name="power" val="10845"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="3000"/>
@@ -422,7 +421,6 @@
 		</for>
 	</skill>
 	<skill id="4030" levels="3" name="NPC Clan Might">
-		<!-- SHOULD BUFF FACTION MOBS -->
 		<table name="#pAtk">1.08 1.12 1.15</table>
 		<table name="#mpConsume">10 18 33</table>
 		<table name="#magicLvl">20 40 70</table>
@@ -499,6 +497,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="4034" levels="12" name="Decrease Speed">
+		<!-- Instantly reduces Speed. Effect 2. -->
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<table name="#power">11 16 23 31 41 51 61 66 70 73 76 78</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -523,6 +522,7 @@
 		</for>
 	</skill>
 	<skill id="4035" levels="12" name="Poison">
+		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#dmg">40 60 80 103 127 147 160 160 167 167 170 170</table>
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 83 77 78</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -546,6 +546,7 @@
 		</for>
 	</skill>
 	<skill id="4036" levels="12" name="Poison">
+		<!-- A toxin that gradually reduces HP. Effect 2. -->
 		<table name="#dmg">40 60 80 103 127 147 160 160 167 167 170 170</table>
 		<table name="#mpConsume">18 29 40 53 68 83 98 104 109 113 115 117</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -570,6 +571,7 @@
 		</for>
 	</skill>
 	<skill id="4037" levels="2" name="Decrease P.Atk">
+		<!-- Instantly reduces P. Atk. Effect 1. -->
 		<table name="#pAtk">0.85 0.7</table>
 		<table name="#mpConsume">22 46</table>
 		<table name="#magicLvl">30 70</table>
@@ -593,6 +595,7 @@
 		</for>
 	</skill>
 	<skill id="4038" levels="5" name="Decrease Atk.Spd.">
+		<!-- Instantly reduces Atk. Spd. Effect 1. -->
 		<table name="#pAtkSpd">0.9 0.8 0.7 0.6 0.5</table>
 		<table name="#mpConsume">13 20 27 45 65</table>
 		<table name="#magicLvl">10 20 30 50 70</table>
@@ -731,6 +734,7 @@
 		</for>
 	</skill>
 	<skill id="4046" levels="12" name="Sleep">
+		<!-- You are in an unconscious state that prohibits movement. -->
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -752,6 +756,7 @@
 		</for>
 	</skill>
 	<skill id="4047" levels="12" name="Hold">
+		<!-- You are immobilized, as if rooted to the ground by an unseen force. -->
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -834,7 +839,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="4052" levels="15" name="Poison">
-		<!-- Cubic skill -->
+		<!-- A toxin that gradually reduces HP. Effect 5. -->
 		<table name="#dmg">93 114 132 132 132 144 144 144 156 156 156 162 162 171 171</table>
 		<table name="#magicLvl">49 55 60 64 68 72 74 76 78 80 81 82 83 84 85</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -854,6 +859,7 @@
 		</for>
 	</skill>
 	<skill id="4053" levels="16" name="Decrease P.Atk">
+		<!-- Instantly reduces P. Atk. Effect 3. -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
 		<set name="magicLvl" val="#magicLvl"/>
 		<set name="lvlDepend" val="2"/>
@@ -871,6 +877,7 @@
 		</for>
 	</skill>
 	<skill id="4054" levels="16" name="Decrease P. Def">
+		<!-- Temporarily reduces P. Def. Effect 3. -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
 		<set name="magicLvl" val="#magicLvl"/>
 		<set name="lvlDepend" val="2"/>
@@ -888,6 +895,7 @@
 		</for>
 	</skill>
 	<skill id="4055" levels="16" name="Decrease Atk.Speed">
+		<!-- Temporarily reduces Atk. Spd. Effect 3. -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 76 78 80 81 82 83 84 85</table>
 		<set name="magicLvl" val="#magicLvl"/>
 		<set name="lvlDepend" val="2"/>
@@ -968,7 +976,7 @@
 		</for>
 	</skill>
 	<skill id="4062" levels="1" name="Orfen">
-		<!-- Orfen Skills -->
+		<!-- Vulnerable to fire attack but possesses great resistance against archery attack. -->
 		<set name="magicLvl" val="50"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -981,7 +989,7 @@
 		</for>
 	</skill>
 	<skill id="4063" levels="1" name="Paralysis">
-		<!-- Orfen Skills -->
+		<!-- A temporary paralysis which prevents movement. -->
 		<set name="magicLvl" val="50"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="saveVs" val="MEN"/>
@@ -998,7 +1006,7 @@
 		</for>
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">
-		<!-- Orfen Skills -->
+		<!-- A temporary paralysis which prevents movement. -->
 		<set name="magicLvl" val="50"/>
 		<set name="saveVs" val="MEN"/>
 		<set name="power" val="30"/>
@@ -1100,6 +1108,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="4070" levels="1" name="Decrease Atk. Spd.">
+		<!-- Reduction in Atk.Speed. Effect 3. -->
 		<set name="lvlDepend" val="1"/>
 		<set name="saveVs" val="DEX"/>
 		<set name="power" val="10"/>
@@ -1116,6 +1125,7 @@
 		</for>
 	</skill>
 	<skill id="4071" levels="6" name="Resist Archery">
+		<!-- Resistant to archery attacks. -->
 		<table name="#vuln">0.85 0.7 0.5 0.3 0.1 0</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1127,6 +1137,7 @@
 		</for>
 	</skill>
 	<skill id="4072" levels="12" name="Shock">
+		<!-- You are in a state of shock that temporarily prohibits movement. -->
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1147,6 +1158,7 @@
 		</for>
 	</skill>
 	<skill id="4073" levels="12" name="Shock">
+		<!-- You are in a state of shock that temporarily prohibits movement. -->
 		<table name="#mpConsume">14 22 31 43 55 68 79 84 89 92 94 95</table>
 		<table name="#power">16 35 73 139 241 379 542 626 704 774 829 873</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1189,6 +1201,7 @@
 		</for>
 	</skill>
 	<skill id="4075" levels="12" name="Shock">
+		<!-- You are in a state of shock that temporarily prohibits movement. -->
 		<table name="#mpConsume">14 23 32 43 55 68 79 84 89 92 94 95</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>
@@ -1208,6 +1221,7 @@
 		</for>
 	</skill>
 	<skill id="4076" levels="3" name="Reduction in movement speed">
+		<!-- Instantly reduces Speed. Effect 1. -->
 		<table name="#runSpd">0.85 0.7 0.5</table>
 		<table name="#mpConsume">20 35 65</table>
 		<table name="#magicLvl">20 40 70</table>
@@ -1267,6 +1281,7 @@
 		<set name="effectRange" val="900"/>
 	</skill>
 	<skill id="4079" levels="1" name="Siege Hammer">
+		<!-- Powerfully attacks castle gates, castle walls etc. -->
 		<set name="mpConsume" val="150"/>
 		<set name="magicLvl" val="49"/>
 		<set name="lvlDepend" val="1"/>
@@ -1305,6 +1320,7 @@
 		<set name="effectPoint" val="1100"/>
 	</skill>
 	<skill id="4082" levels="1" name="Poison of Death">
+		<!-- You have been infected by a fatal poison. -->
 		<set name="power" val="90000"/>
 		<set name="saveVs" val="WIT"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1335,6 +1351,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="4084" levels="10" name="Resist Physical Attack">
+		<!-- Resistant to physical attacks. -->
 		<table name="#pDef">1.05 1.11 1.17 1.25 1.33 1.43 1.67 2 3.33 10</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1346,6 +1363,7 @@
 		</for>
 	</skill>
 	<skill id="4085" levels="1" name="Critical Power">
+		<!-- Provides powerful critical attack capability. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1356,6 +1374,7 @@
 		</for>
 	</skill>
 	<skill id="4086" levels="1" name="Critical Chance">
+		<!-- Increased critical attack rate. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1384,6 +1403,7 @@
 		<set name="effectRange" val="1100"/>
 	</skill>
 	<skill id="4088" levels="12" name="Bleed">
+		<!-- Inflicts a wound, reducing HP. Effect 2. -->
 		<table name="#damage">27 39 51 66 81 93 102 102 105 105 108 108</table>
 		<table name="#mpConsume">9 13 17 22 27 31 34 34 35 35 36 36</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1470,6 +1490,7 @@
 		</for>
 	</skill>
 	<skill id="4093" levels="1" name="Evasion">
+		<!-- High rate of evasion. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1498,6 +1519,7 @@
 		<set name="negatePower" val="5"/>
 	</skill>
 	<skill id="4095" levels="1" name="Damage Shield">
+		<!-- Reflects back a portion of damage inflicted by an enemy P. Atk. -->
 		<set name="power" val="20"/>
 		<set name="magicLvl" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1549,6 +1571,7 @@
 		</for>
 	</skill>
 	<skill id="4098" levels="12" name="Magic Skill Block">
+		<!-- Instantly blocks magic skills. -->
 		<table name="#mpConsume">13 20 27 35 45 55 65 69 73 75 77 78</table>
 		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="magicLvl" val="#magicLvl"/>

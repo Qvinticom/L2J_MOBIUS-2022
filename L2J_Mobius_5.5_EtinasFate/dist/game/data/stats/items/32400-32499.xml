@@ -137,7 +137,7 @@
 		</stats>
 	</item>
 	<item id="32405" name="Fantasy Sword of Revolution*Sword of Revolution" additionalName="Not in Use" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -165,7 +165,7 @@
 		</stats>
 	</item>
 	<item id="32406" name="Fantasy StormBringer*StormBringer" additionalName="Not in Use" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Accuracy by 2. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -485,7 +485,7 @@
 		</stats>
 	</item>
 	<item id="32424" name="Fantasy Military Fleuret" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Keshanberk. Bestows one of the following functions: Guidance, Focus or Back Blow. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Keshanberk. Bestows one of the following functions: Guidance, Focus or Back Blow. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -752,7 +752,7 @@
 		</stats>
 	</item>
 	<item id="32434" name="Fantasy Sword of Delusion*Sword of Delusion" additionalName="Not in Use" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 4. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Accuracy by 4. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1130,7 +1130,7 @@
 		</stats>
 	</item>
 	<item id="32454" name="Fantasy White Lightning" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions: Critical Poison, Haste or Anger. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tallum Blade Conversion. Bestows one of the following functions: Critical Poison, Haste or Anger. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1159,7 +1159,7 @@
 		</stats>
 	</item>
 	<item id="32455" name="Fantasy Lacerator" additionalName="Not in Use" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. Bestows one of the following functions: Critical Damage, Health or Rsk. Focus. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Dark Legion Conversion. Bestows one of the following functions: Critical Damage, Health or Rsk. Focus. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1612,7 +1612,7 @@
 		</stats>
 	</item>
 	<item id="32472" name="Fantasy Keshanberk*Keshanberk" additionalName="Not in Use" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Atk. Spd. by 8%. Inflicts more damage during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1640,7 +1640,7 @@
 		</stats>
 	</item>
 	<item id="32473" name="Fantasy Keshanberk*Damascus" additionalName="Not in Use" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%. Inflicts additional damage to target during PvP. -->
+		<!-- When a dual sword is enchanted together with a two-handed sword, two-handed blunt, or fist weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or higher, increases Max HP by 25%. Inflicts more damage during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

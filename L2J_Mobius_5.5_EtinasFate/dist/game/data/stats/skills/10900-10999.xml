@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10903" toLevel="4" name="Hawk Eye">
-		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Skill Power + 5%, and received M. Critical Damage - 5%. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -91,7 +90,7 @@
 		</effects>
 	</skill>
 	<skill id="10904" toLevel="4" name="Superior Skill Mastery">
-		<!-- Skill power + 5%. -->
+		<!-- Skill power +$s1. -->
 		<icon>icon.skill11874</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -113,7 +112,7 @@
 		</effects>
 	</skill>
 	<skill id="10905" toLevel="3" name="Fatal Arrow">
-		<!-- Attacks target with 29176 Power added to P. Atk. Damage increases as your HP decreases. Requires a bow. Over-hit. -->
+		<!-- Fires an agony-inducing arrow at the target with $s1 Power added to P. Atk. The power of the attack increases as the enemy's HP decreases. Requires a bow. Over-hit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -152,7 +151,6 @@
 		</effects>
 	</skill>
 	<skill id="10950" toLevel="4" name="Vengeful Sniper">
-		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, PvP damage + 5%, received magic skill damage during PvP - 5%. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -269,7 +267,7 @@
 		</effects>
 	</skill>
 	<skill id="10951" toLevel="4" name="Superior Instinct Mastery">
-		<!-- PvP damage + 5%, and P. Atk. + 5% when equipped with a crossbow. -->
+		<!-- PvP damage +$s1, and P. Atk. +$s2 when equipped with a crossbow. -->
 		<icon>icon.skill10951</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -334,7 +332,6 @@
 		</effects>
 	</skill>
 	<skill id="10952" toLevel="1" name="Survival Instinct">
-		<!-- For 60 seconds, own P. Atk +20%, P. Skill Power +15%, Atk. Spd. +15%, P. Def. +20%, M. Def. +20%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -383,7 +380,6 @@
 		</effects>
 	</skill>
 	<skill id="10953" toLevel="1" name="Hunting Instinct">
-		<!-- For 60 seconds, own P. Atk +10%, P. Skill Power +15%, P. Skill Critical Rate +15%, P. Skill Critical Damage +15%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -428,7 +424,6 @@
 		</effects>
 	</skill>
 	<skill id="10954" toLevel="1" name="Counter Instinct">
-		<!-- For 60 seconds, own P. Atk +10%, P. Skill Power +15%, P. Skill Critical Damage +25%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -469,7 +464,6 @@
 		</effects>
 	</skill>
 	<skill id="10955" toLevel="1" name="Bloody Instinct">
-		<!-- For 60 seconds, own PvP damage +15%, P. Atk. +10%, P. Skill Damage +15%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -529,15 +523,13 @@
 		</effects>
 	</skill>
 	<skill id="10997" toLevel="1" name="Archer - Individual Passive">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill0217</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="10998" toLevel="1" name="Archer - Individual">
-		<!-- Glory Days confirmed -->
-		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<!-- Atk. Spd. +30% for 5 sec. -->
 		<icon>icon.skill1543</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -563,7 +555,6 @@
 		</effects>
 	</skill>
 	<skill id="10999" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks long-range enemies. Hurls arrows like rain near target to inflict damage with 19158 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>

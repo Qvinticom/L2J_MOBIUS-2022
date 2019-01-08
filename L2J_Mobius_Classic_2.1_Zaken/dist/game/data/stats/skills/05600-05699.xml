@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5600" toLevel="1" name="Betrayal Mark">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="castRange" val="900" / -->
-		<!-- set name="effectRange" val="1400" / -->
 		<affectRange>1000</affectRange>
 		<effectPoint>-100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -25,7 +22,7 @@
 		</effects>
 	</skill>
 	<skill id="5601" toLevel="12" name="Melee Attack Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistant to melee attacks. -->
 		<icon>icon.skill5601</icon>
 		<magicLvl>
 			<value level="1">10</value>
@@ -161,7 +158,7 @@
 		</effects>
 	</skill>
 	<skill id="5602" toLevel="1" name="Transform Sacrifice">
-		<!-- Glory Days Confirmed -->
+		<!-- Sacrifice. A state in which HP cannot be recovered. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM_SCRIFICE_P</abnormalType>
@@ -190,7 +187,7 @@
 		</effects>
 	</skill>
 	<skill id="5603" toLevel="1" name="Dagger Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- A state in which MP consumption of skills is greatly decreased, and the vital points attacks success rate is increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
@@ -219,7 +216,7 @@
 		</effects>
 	</skill>
 	<skill id="5604" toLevel="1" name="Sword/Blunt Weapon Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- A state in which MP consumption of skills is greatly decreased, and the success rate of stun attack is increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>WEAPON_MASTERY</abnormalType>
@@ -247,8 +244,7 @@
 		</effects>
 	</skill>
 	<skill id="5605" toLevel="2" name="Power of Apella">
-		<!-- Confirmed CT2.5 -->
-		<!-- Apella Heavy -->
+		<!-- Power of Apella. Increased M. Def., increased Critical Rate, and decreased Critical Damage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
@@ -291,8 +287,7 @@
 		</effects>
 	</skill>
 	<skill id="5607" toLevel="2" name="Power of Apella">
-		<!-- Confirmed CT2.5 -->
-		<!-- Apella Light -->
+		<!-- Power of Apella. Increased Evasion, increased Atk. Spd., and decreased Critical Damage. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
@@ -335,8 +330,7 @@
 		</effects>
 	</skill>
 	<skill id="5608" toLevel="2" name="Power of Apella">
-		<!-- Confirmed CT2.5 -->
-		<!-- Apella Robe -->
+		<!-- Power of Apella. Increased P. Def., increased M. Atk., and decreased Speed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>APELLA</abnormalType>
@@ -416,7 +410,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5613" toLevel="4" name="Vampiric Rage">
-		<!-- This skill only has one level, 4. -->
+		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -431,35 +425,35 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5614" toLevel="1" name="Raid Boss (Lv. 87)">
-		<!-- Confirmed CT2.5 -->
+		<!-- He was one of the Devil's retainers from Asmodae, and Beleth placed him among the people in order to rule Hellbound. Although he took over the power and turned Hellbound into the devil's territory after Beleth disappeared for magic experiments. Beleth does not really care about it. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5615" toLevel="1" name="Raid Boss (Lv. 87)">
-		<!-- Confirmed CT2.5 -->
+		<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5616" toLevel="1" name="Raid Boss (Lv. 87)">
-		<!-- Confirmed CT2.5 -->
+		<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5617" toLevel="1" name="Raid Boss (Lv. 87)">
-		<!-- Confirmed CT2.5 -->
+		<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5618" toLevel="1" name="Raid Boss (Lv. 87)">
-		<!-- Confirmed CT2.5 -->
+		<!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -475,7 +469,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5620" toLevel="12" name="Melee Attack Vulnerability">
-		<!-- Confirmed CT2.5 -->
+		<!-- Renders target vulnerable to melee attacks. -->
 		<icon>icon.skill5620</icon>
 		<magicLvl>
 			<value level="1">10</value>
@@ -611,8 +605,6 @@
 		</effects>
 	</skill>
 	<skill id="5621" toLevel="12" name="Aerial Recharge">
-		<!-- Confirmed CT2.5 -->
-		<!-- Zone Skill -->
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -681,6 +673,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5624" toLevel="1" name="Soul Confinement">
+		<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -701,6 +694,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5625" toLevel="1" name="Soul Confinement">
+		<!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -721,13 +715,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5626" toLevel="1" name="Raid Boss">
-		<!-- Confirmed CT2.5 -->
+		<!-- Mutants that suddenly appeared in Aden world. They often possess great strength and special abilities, but their activity is limited, so they seem unable to directly walk around on Aden's ground. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5627" toLevel="1" name="Adventurer's Wind Walk">
+		<!-- Speed increases temporarily. Effect 2. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -751,6 +746,7 @@
 		</effects>
 	</skill>
 	<skill id="5628" toLevel="1" name="Adventurer's Shield">
+		<!-- For 60 minutes P. Def. increases by 15% -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -774,6 +770,7 @@
 		</effects>
 	</skill>
 	<skill id="5629" toLevel="1" name="Adventurer's Blessed Body">
+		<!-- For 60 minutes, Max HP increases by 35%. -->
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -797,6 +794,7 @@
 		</effects>
 	</skill>
 	<skill id="5630" toLevel="1" name="Adventurer's Vampiric Rage">
+		<!-- For 60 minutes, recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -820,6 +818,7 @@
 		</effects>
 	</skill>
 	<skill id="5631" toLevel="1" name="Adventurer's Regeneration">
+		<!-- For 60 min., HP Recovery Bonus + 20%. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
@@ -843,6 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="5632" toLevel="1" name="Adventurer's Haste">
+		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -866,6 +866,7 @@
 		</effects>
 	</skill>
 	<skill id="5633" toLevel="1" name="Adventurer's Blessed Soul">
+		<!-- For 60 minutes, Max HP is increased by 35%. -->
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -889,6 +890,7 @@
 		</effects>
 	</skill>
 	<skill id="5634" toLevel="1" name="Adventurer's Acumen">
+		<!-- For 60 minutes, Casting Spd. increases by 30% -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -912,6 +914,7 @@
 		</effects>
 	</skill>
 	<skill id="5635" toLevel="1" name="Adventurer's Concentration">
+		<!-- For 60 minutes, decreases magic cancel rate by 18. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
@@ -935,6 +938,7 @@
 		</effects>
 	</skill>
 	<skill id="5636" toLevel="1" name="Adventurer's Empower">
+		<!-- For 60 minutes, M. Atk. increases by 55%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -958,6 +962,7 @@
 		</effects>
 	</skill>
 	<skill id="5637" toLevel="1" name="Adventurer's Magic Barrier">
+		<!-- Increases M. Def. by 30% for 60 minutes. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -981,7 +986,7 @@
 		</effects>
 	</skill>
 	<skill id="5638" toLevel="4" name="Feline Queen - Blessed Body">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases maximum HP temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1039,7 +1044,7 @@
 		</effects>
 	</skill>
 	<skill id="5639" toLevel="4" name="Feline Queen - Blessed Soul">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases maximum MP temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1097,7 +1102,7 @@
 		</effects>
 	</skill>
 	<skill id="5640" toLevel="2" name="Feline Queen - Haste">
-		<!-- Confirmed CT2.5 -->
+		<!-- Atk. Spd. increases temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1198,7 +1203,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5643" toLevel="1" name="Seraphim the Unicorn - Acumen">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Casting Spd. temporarily. Effect 3. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -1297,10 +1302,7 @@
 		</effects>
 	</skill>
 	<skill id="5646" toLevel="3" name="Seraphim the Unicorn - Wild Magic">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Guessed -->
-		<!-- Guessed -->
-		<!-- Guessed -->
+		<!-- Momentarily increases the Critical Rate of magic damage. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1360,7 +1362,7 @@
 		</effects>
 	</skill>
 	<skill id="5647" toLevel="3" name="Seraphim the Unicorn - Clarity">
-		<!-- Confirmed CT2.5 -->
+		<!-- Momentarily decreases the MP consumption of skills of the target. Consumes $s1 Spirit Ore. Effect $s2. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1437,7 +1439,7 @@
 		</effects>
 	</skill>
 	<skill id="5648" toLevel="2" name="Seraphim the Unicorn - Empower">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Atk. power temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1561,8 +1563,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5652" toLevel="3" name="Nightshade - Death Whisper">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Momentarily increase the Critical P. Atk. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1614,8 +1615,7 @@
 		</effects>
 	</skill>
 	<skill id="5653" toLevel="2" name="Nightshade - Focus">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Momentarily increases critical P. Atk. rate. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1661,8 +1661,7 @@
 		</effects>
 	</skill>
 	<skill id="5654" toLevel="3" name="Nightshade - Guidance">
-		<!-- Confirmed CT2.5 -->
-		<!-- Summon Nightshade Skill -->
+		<!-- Increases Accuracy temporarily. Effect $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1714,6 +1713,7 @@
 		</effects>
 	</skill>
 	<skill id="5657" toLevel="85" name="Gatekeeper Prominence">
+		<!-- Condenses air to burst flames. Power $s1. -->
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-92</value>
@@ -2172,6 +2172,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5658" toLevel="85" name="Gatekeeper Flame Strike">
+		<!-- Hurls a fireball with a wide range that causes a burning trail. Power $s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -2633,6 +2634,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5659" toLevel="2" name="Gatekeeper Berserker Spirit">
+		<!-- P. Def. decreases momentarily./M. Def./evasion and increases P. Atk./M. Atk./Atk. Spd./Casting Spd./Speed. Effectiveness $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2728,7 +2730,7 @@
 		</effects>
 	</skill>
 	<skill id="5660" toLevel="5" name="Battleground Death Syndrome">
-		<!-- Confirmed CT2.5 -->
+		<!-- Combat power is decreased after death on the battleground. Condition is removed at the end of the war. Effect $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>DEATH_PENALTY</abnormalType>
@@ -2810,6 +2812,7 @@
 		</effects>
 	</skill>
 	<skill id="5661" toLevel="1" name="Match Participation">
+		<!-- You have already participated in a match and cannot participate in the next match. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>ENTRY_FOR_GAME</abnormalType>
@@ -2841,7 +2844,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5663" toLevel="5" name="Ancient Sword Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Strong against ancient sword attacks. -->
 		<icon>icon.skill5663</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2859,7 +2862,7 @@
 		</effects>
 	</skill>
 	<skill id="5664" toLevel="5" name="Ancient Sword Resistance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Weak against ancient sword attacks. -->
 		<icon>icon.skill5664</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2877,7 +2880,7 @@
 		</effects>
 	</skill>
 	<skill id="5665" toLevel="1" name="Stun">
-		<!-- Masterwork Sword of Stun (3829) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2904,7 +2907,7 @@
 		</effects>
 	</skill>
 	<skill id="5666" toLevel="1" name="Stun">
-		<!-- Masterwork Rapier of Stun (3834) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2931,7 +2934,7 @@
 		</effects>
 	</skill>
 	<skill id="5667" toLevel="1" name="Stun">
-		<!-- Masterwork Dual-Blade of Stun (3839) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2958,7 +2961,7 @@
 		</effects>
 	</skill>
 	<skill id="5668" toLevel="1" name="Poison">
-		<!-- Masterwork Dagger of Poison (3861) -->
+		<!-- HP decreases from Poison momentarily. Effect 8. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2990,7 +2993,7 @@
 		</effects>
 	</skill>
 	<skill id="5669" toLevel="1" name="Stun">
-		<!-- Masterwork Pole of Stun (3876) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3017,7 +3020,7 @@
 		</effects>
 	</skill>
 	<skill id="5670" toLevel="1" name="Stun">
-		<!-- Masterwork Fist of Stun (3882) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3044,7 +3047,7 @@
 		</effects>
 	</skill>
 	<skill id="5671" toLevel="1" name="Stun">
-		<!-- Masterwork Blunt of Stun (3885-1) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3071,7 +3074,7 @@
 		</effects>
 	</skill>
 	<skill id="5672" toLevel="1" name="Stun">
-		<!-- Masterwork Blunt of Stun (3885-2) -->
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3125,6 +3128,7 @@
 		</effects>
 	</skill>
 	<skill id="5674" toLevel="1" name="Evasion Chance">
+		<!-- For 2 minutes, increases vital points attacks success rate by 10%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>EVASION_BUFF</abnormalType>
@@ -3149,6 +3153,7 @@
 		</effects>
 	</skill>
 	<skill id="5675" toLevel="1" name="Evasion Haste">
+		<!-- Increases Atk. Spd. by 15% for 10 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>EVASION_BUFF</abnormalType>
@@ -3173,7 +3178,6 @@
 		</effects>
 	</skill>
 	<skill id="5676" toLevel="1" name="Mana Drain">
-		<!-- Confirmed CT2.5 -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>46</magicLvl>
 		<operateType>A1</operateType>
@@ -3191,7 +3195,6 @@
 		</effects>
 	</skill>
 	<skill id="5677" toLevel="1" name="Mana Drain">
-		<!-- Confirmed CT2.5 -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>56</magicLvl>
 		<operateType>A1</operateType>
@@ -3209,7 +3212,6 @@
 		</effects>
 	</skill>
 	<skill id="5678" toLevel="1" name="Mana Drain">
-		<!-- Confirmed CT2.5 -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>64</magicLvl>
 		<operateType>A1</operateType>
@@ -3227,6 +3229,7 @@
 		</effects>
 	</skill>
 	<skill id="5679" toLevel="3" name="Oblivion Trap">
+		<!-- Trap of forgetfulness. when attacking, the enemy has a chance to lose their target. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MIRAGE_TRAP</abnormalType>
@@ -3263,7 +3266,7 @@
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>5680</skillId>
+				<skillId>5680</skillId> <!-- Oblivion Trap -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -3285,9 +3288,6 @@
 		</effects>
 	</skill>
 	<skill id="5681" toLevel="1" name="PvP Weapon - CP Drain">
-		<!-- Confirmed CT2.5 -->
-		<!-- set name="castRange" val="600" / -->
-		<!-- set name="effectRange" val="1100" / -->
 		<effectPoint>1</effectPoint>
 		<hitTime>100</hitTime>
 		<icon>icon.skill1306</icon>
@@ -3311,7 +3311,6 @@
 		</effects>
 	</skill>
 	<skill id="5682" toLevel="1" name="PvP Weapon - Cancel">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3337,7 +3336,7 @@
 		</effects>
 	</skill>
 	<skill id="5683" toLevel="1" name="PvP Weapon - Ignore Shield Defense">
-		<!-- Confirmed CT2.5 -->
+		<!-- Shield Defense greatly decreases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
@@ -3366,7 +3365,6 @@
 		</effects>
 	</skill>
 	<skill id="5684" toLevel="1" name="PvP Weapon - Attack Rate">
-		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3390,7 +3388,7 @@
 		</effects>
 	</skill>
 	<skill id="5685" toLevel="1" name="PvP Weapon - Casting">
-		<!-- Confirmed CT2.5 -->
+		<!-- Casting Spd. increases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
@@ -3418,7 +3416,7 @@
 		</effects>
 	</skill>
 	<skill id="5686" toLevel="1" name="PvP Weapon - Rapid Fire">
-		<!-- Confirmed CT2.5 -->
+		<!-- Temporarily increases bow/crossbow Atk. Spd. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
@@ -3445,7 +3443,7 @@
 		</effects>
 	</skill>
 	<skill id="5687" toLevel="1" name="PvP Weapon - Decrease Range">
-		<!-- Confirmed CT2.5 -->
+		<!-- Bow/Crossbow range decreases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
@@ -3478,7 +3476,7 @@
 		</effects>
 	</skill>
 	<skill id="5688" toLevel="1" name="PvP Weapon - Decrease Resist">
-		<!-- Confirmed CT2.5 -->
+		<!-- Resistance against all attributes decreases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_DEBUFF</abnormalType>
@@ -3527,7 +3525,7 @@
 		</effects>
 	</skill>
 	<skill id="5689" toLevel="1" name="PvP Shield - Reflect Damage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Able to return some of the received damage back to the enemy momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PVP_WEAPON_BUFF</abnormalType>
@@ -3554,7 +3552,6 @@
 		</effects>
 	</skill>
 	<skill id="5695" toLevel="1" name="Talisman - Increase Momentum">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>1</effectPoint>
 		<hitTime>100</hitTime>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -3578,6 +3575,7 @@
 		</effects>
 	</skill>
 	<skill id="5696" toLevel="1" name="Dizziness">
+		<!-- Speed and Atk. Spd. decreases temporarily due to the side effect of poisoning. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -3605,7 +3603,7 @@
 		</effects>
 	</skill>
 	<skill id="5697" toLevel="4" name="Seal">
-		<!-- Imbue Seed of Destruction end effect. -->
+		<!-- Unable to use physical/magic skills momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -3636,7 +3634,6 @@
 		</effects>
 	</skill>
 	<skill id="5698" toLevel="37" name="Blessed Blood">
-		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -3732,13 +3729,7 @@
 		</effects>
 	</skill>
 	<skill id="5699" toLevel="7" name="Decrease P. Def.">
-		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
-		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
-		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
-		<!-- Lvl 4 - Kamaloka (Labyrinth of the Abyss) 59 -->
-		<!-- Lvl 5 - Kamaloka (Labyrinth of the Abyss) 69 -->
-		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
-		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
+		<!-- P. Def. is decreased. Effect $s1. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>

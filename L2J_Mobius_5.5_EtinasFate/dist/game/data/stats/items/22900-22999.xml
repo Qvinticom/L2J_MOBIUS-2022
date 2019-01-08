@@ -73,7 +73,7 @@
 		</skills>
 	</item>
 	<item id="22904" name="Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. -->
+		<!-- Enchant Scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant value starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -92,7 +92,7 @@
 		</skills>
 	</item>
 	<item id="22905" name="Blessed Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3 and can be enchanted up to a max of + 10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from + 4. At + 5, + 7, + 8, and + 9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant value starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -111,7 +111,7 @@
 		</skills>
 	</item>
 	<item id="22906" name="XP Rune III (Lv. 1-100+) 50% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (1-hour). Cannot be exchanged once opened. -->
+		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 50% (1-hr.). Cannot be exchanged once opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -126,7 +126,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22944" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hour -->
+			<item id="22944" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="22907" name="Straw Hat" type="Armor">
@@ -182,7 +182,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="22910" name="Wedding Cake Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Honeymoon Ticket and a Big Wedding Cake. -->
+		<!-- Double-click to obtain a Honeymoon Ticket and a Big Wedding Cake. -->
 		<set name="icon" val="BranchSys2.Icon.br_wedding_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -218,7 +218,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="22912" name="Formal Wear Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Formal Wear. 30-day. -->
+		<!-- Double-click to obtain a Formal Wear. 30-day. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -361,7 +361,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="22919" name="Fire Stone" type="EtcItem">
-		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Fire +5. When used with your armor, Fire +6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -384,7 +384,7 @@
 		</skills>
 	</item>
 	<item id="22920" name="Water Stone" type="EtcItem">
-		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Water +5. When used with your armor, Water +6 with increased resistance against Fire. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -407,7 +407,7 @@
 		</skills>
 	</item>
 	<item id="22921" name="Earth Stone" type="EtcItem">
-		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Earth +5. When used with your armor, Earth +6 with increased resistance against Wind. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -430,7 +430,7 @@
 		</skills>
 	</item>
 	<item id="22922" name="Wind Stone" type="EtcItem">
-		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Fire +5. When used with your armor, Fire +6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -453,7 +453,7 @@
 		</skills>
 	</item>
 	<item id="22923" name="Dark Stone" type="EtcItem">
-		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-3 only. Additional Elemental attributes cannot be bestowed. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Dark +5. When used with your armor, Dark +6 with increased resistance against Holy. Attribute Lv. 1-3 only. Additional Elemental attributes cannot be bestowed. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -476,7 +476,7 @@
 		</skills>
 	</item>
 	<item id="22924" name="Holy Stone" type="EtcItem">
-		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
+		<!-- When used with your weapon, Holy +5. When used with your armor, Holy +6 with increased resistance against Dark. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -499,7 +499,7 @@
 		</skills>
 	</item>
 	<item id="22925" name="Fire Crystal" type="EtcItem">
-		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-6 only -->
+		<!-- When used with your weapon, Fire +5. When used with your armor, Fire +6 with increased resistance against Water. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -519,7 +519,7 @@
 		</skills>
 	</item>
 	<item id="22926" name="Water Crystal" type="EtcItem">
-		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-6 only -->
+		<!-- When used with your weapon, Water +5. When used with your armor, Water +6 with increased resistance against Fire. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -539,7 +539,7 @@
 		</skills>
 	</item>
 	<item id="22927" name="Earth Crystal" type="EtcItem">
-		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-6 only -->
+		<!-- When used with your weapon, Earth +5. When used with your armor, Earth +6 with increased resistance against Wind. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -559,7 +559,7 @@
 		</skills>
 	</item>
 	<item id="22928" name="Wind Crystal" type="EtcItem">
-		<!-- When used with your weapon, Wind + 5. When used with your armor, Wind + 6 with increased resistance against Earth. Attribute Lv. 1-6 only -->
+		<!-- When used with your weapon, Wind +5. When used with your armor, Wind +6 with increased resistance against Earth. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -579,7 +579,7 @@
 		</skills>
 	</item>
 	<item id="22929" name="Dark Crystal" type="EtcItem">
-		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-6 only -->
+		<!-- When used with your weapon, Dark +5. When used with your armor, Dark +6 with increased resistance against Holy. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -599,7 +599,7 @@
 		</skills>
 	</item>
 	<item id="22930" name="Holy Crystal" type="EtcItem">
-		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-6 only -->
+		<!-- When used with your weapon, Holy +5. When used with your armor, Holy +6 with increased resistance against Dark. Attribute Lv. 1-6 only -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -865,7 +865,7 @@
 		</skills>
 	</item>
 	<item id="22945" name="Honeymoon Ticket (7-day)" additionalName="7-day" type="EtcItem">
-		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 hour. Vitality item with limited usage. -->
+		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 hr. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -902,7 +902,7 @@
 		</skills>
 	</item>
 	<item id="22947" name="Agathion - Singer and Dancer" additionalName="30-day" type="Armor">
-		<!-- Can summon Singer and Dancer that gleefully sings and dances when equipped. -->
+		<!-- Can summon Singer & Dancer that gleefully sings and dances when equipped. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1265,7 +1265,7 @@
 		</skills>
 	</item>
 	<item id="22967" name="Agathion - Singer and Dancer Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Singer and Dancer (30-day). -->
+		<!-- Double-click to obtain a Singer & Dancer (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1280,11 +1280,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22947" min="1" max="1" chance="100" /> <!-- Agathion - Singer and Dancer - 30-day -->
+			<item id="22947" min="1" max="1" chance="100" /> <!-- Agathion - Singer & Dancer - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="22968" name="Mount - Black Bear Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Black Bear (30-day). -->
+		<!-- Double-click to obtain a Black Bear (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1303,7 +1303,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22969" name="Black Gem Mask Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Black Gem Mask (30-day). -->
+		<!-- Double-click to obtain a Black Gem Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1322,7 +1322,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22970" name="Refined Angel Ring Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Refined Angel Ring (30-day). -->
+		<!-- Double-click to obtain a Refined Angel Ring (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1341,7 +1341,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22971" name="Refined Devil Horn Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Devil Horn (30-day). -->
+		<!-- Double-click to obtain a Devil Horn (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1360,7 +1360,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22972" name="Ruthless Tribe Mask Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Ruthless Tribe Mask (30-day). -->
+		<!-- Double-click to obtain a Ruthless Tribe Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1379,7 +1379,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22973" name="Agathion - Uthanka Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Uthanka (30-day). -->
+		<!-- Double-click to obtain an Uthanka (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1398,7 +1398,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22974" name="Agathion - Cheerleader Orodriel Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Cheerleader Orodriel (30-day). -->
+		<!-- Double-click to obtain a Cheerleader Orodriel (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1417,7 +1417,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22975" name="Mount - Tame Princess Ant Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Tame Princess Ant (30-day). -->
+		<!-- Double-click to obtain a Tame Princess Ant (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1436,7 +1436,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22976" name="Agathion - Dryad Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Dryad (30-day). -->
+		<!-- Double-click to obtain a Dryad (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1455,7 +1455,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22977" name="Pink Paper Mask Set Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Pink Paper Mask Set (30-day). -->
+		<!-- Double-click to obtain a Pink Paper Mask Set (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1474,7 +1474,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22978" name="Arrow-pierced Apple Pack (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Arrow-pierced Apple (30-day). -->
+		<!-- Double-click to obtain an Arrow-pierced Apple (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1493,7 +1493,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22979" name="SP Rune 50% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 50% (1-hour). Cannot be exchanged once open. -->
+		<!-- Double-click to obtain a SP Rune 50% (1-hr.). Cannot be exchanged once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1508,11 +1508,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
+			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="22980" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (1-hour). -->
+		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1527,11 +1527,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22960" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% - 1-hour -->
+			<item id="22960" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="22981" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (1-hour). -->
+		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1546,11 +1546,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22961" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% - 1-hour -->
+			<item id="22961" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="22982" name="Lv. 1 Giant STR Dye" additionalName="STR + 3 / DEX - 2" type="EtcItem">
-		<!-- STR + 3 / DEX - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- STR +3/ DEX -2. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1564,7 +1564,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22983" name="Lv. 1 Giant DEX Dye" additionalName="DEX + 3 / CON - 2" type="EtcItem">
-		<!-- DEX + 3 / CON - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- DEX +3/ CON -2. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1578,7 +1578,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22984" name="Lv. 1 Giant CON Dye" additionalName="CON + 3 / STR - 2" type="EtcItem">
-		<!-- CON + 3 / STR - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- CON +3/ STR -2. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1592,7 +1592,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22985" name="Lv. 1 Giant INT Dye" additionalName="INT + 3 / WIT - 2" type="EtcItem">
-		<!-- INT + 3 / WIT - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- INT +3/ WIT -2. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1606,7 +1606,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22986" name="Lv. 1 Giant WIT Dye" additionalName="WIT + 3 / MEN - 2" type="EtcItem">
-		<!-- WIT + 3 / MEN - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- WIT +3/ MEN -2. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1620,7 +1620,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22987" name="Lv. 1 Giant MEN Dye" additionalName="MEN + 3 / INT - 2" type="EtcItem">
-		<!-- MEN + 3 / INT - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- MEN +3/ INT -2. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1634,7 +1634,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22988" name="Lv. 1 Ancient STR Dye" additionalName="STR + 3 / DEX - 2 / Fire Resistance + 5" type="EtcItem">
-		<!-- STR + 3 / DEX - 2 / Fire Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- STR +3/ DEX -2/ Fire Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_2_dye_str" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1648,7 +1648,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22989" name="Lv. 1 Ancient DEX Dye" additionalName="DEX + 3 / CON - 2 / Earth Resistance + 5" type="EtcItem">
-		<!-- DEX + 3 / CON - 2 / Earth Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- DEX +3/ CON -2/ Earth Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_2_dye_dex" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1662,7 +1662,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22990" name="Lv. 1 Ancient CON Dye" additionalName="CON + 3 / STR - 2 / Dark Resistance + 5" type="EtcItem">
-		<!-- CON + 3 / STR - 2 / Dark Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- CON +3/ STR -2/ Dark Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_2_dye_con" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1676,7 +1676,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22991" name="Lv. 1 Ancient INT Dye" additionalName="INT + 3 / WIT - 2 / Water Resistance + 5" type="EtcItem">
-		<!-- INT + 3 / WIT - 2 / Water Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- INT +3/ WIT -2/ Water Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_2_dye_int" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1690,7 +1690,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22992" name="Lv. 1 Ancient WIT Dye" additionalName="WIT + 3 / MEN - 2 / Wind Resistance + 5" type="EtcItem">
-		<!-- WIT + 3 / MEN - 2 / Wind Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- WIT +3/ MEN -2/ Wind Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_2_dye_wit" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1704,7 +1704,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22993" name="Lv. 1 Ancient MEN Dye" additionalName="MEN + 3 / INT - 2 / Holy Resistance + 5" type="EtcItem">
-		<!-- MEN + 3 / INT - 2 / Holy Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- MEN +3/ INT -2/ Holy Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_2_dye_men" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1718,7 +1718,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22994" name="Lv. 1 Legendary STR Dye" additionalName="STR + 3 / DEX - 1 / Fire Resistance + 5" type="EtcItem">
-		<!-- STR + 3 / DEX - 1 / Fire Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- STR +3/ DEX -1/ Fire Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_3_dye_str" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1732,7 +1732,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22995" name="Lv. 1 Legendary DEX Dye" additionalName="DEX + 3 / CON - 1 / Earth Resistance + 5" type="EtcItem">
-		<!-- DEX + 3 / CON - 1 / Earth Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- DEX +3/ CON -1/ Earth Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_3_dye_dex" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1746,7 +1746,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22996" name="Lv. 1 Legendary CON Dye" additionalName="CON + 3 / STR - 1 / Dark Resistance + 5" type="EtcItem">
-		<!-- CON + 3 / STR - 1 / Dark Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- CON +3/ STR -1/ Dark Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_3_dye_con" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1760,7 +1760,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22997" name="Lv. 1 Legendary INT Dye" additionalName="INT + 3 / WIT - 1 / Water Resistance + 5" type="EtcItem">
-		<!-- INT + 3 / WIT - 1 / Water Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- INT +3/ WIT -1/ Water Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_3_dye_int" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1774,7 +1774,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22998" name="Lv. 1 Legendary WIT Dye" additionalName="WIT + 3 / MEN - 1 / Wind Resistance + 5" type="EtcItem">
-		<!-- WIT + 3 / MEN - 1 / Wind Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- WIT +3/ MEN -1/ Wind Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_3_dye_wit" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1788,7 +1788,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22999" name="Lv. 1 Legendary MEN Dye" additionalName="MEN + 3 / INT - 1 / Holy Resistance + 5" type="EtcItem">
-		<!-- MEN + 3 / INT - 1 / Holy Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
+		<!-- MEN +3/ INT -1/ Holy Resistance +5. Collect and take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used after Awakening, or 3rd Liberation. All classes. -->
 		<set name="icon" val="icon.lv1_3_dye_men" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

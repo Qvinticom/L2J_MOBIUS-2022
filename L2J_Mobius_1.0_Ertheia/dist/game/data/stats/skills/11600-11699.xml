@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11600" toLevel="1" name="Frenzied Prevailing Sonata">
-		<!-- Updated to IO -->
 		<!-- For 5 minutes, increases clan members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases MP Consumption for magic skills - 10% and the magic cancel rate. -->
 		<icon>icon.skill11600</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -57,7 +56,6 @@
 		</effects>
 	</skill>
 	<skill id="11601" toLevel="1" name="Frenzied Daring Sonata">
-		<!-- Updated to IO -->
 		<!-- For 5 minutes, increases clan members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
 		<icon>icon.skill11601</icon>
 		<affectRange>1000</affectRange>
@@ -121,8 +119,7 @@
 		</effects>
 	</skill>
 	<skill id="11602" toLevel="1" name="Frenzied Refreshing Sonata">
-		<!-- Updated to IO -->
-		<!-- For 5 minutes, increases clan members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
+		<!-- For 5 minutes, increases clan members' HP Recovery Bonus + 20%, P. Accuracy + 4, P. Evasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<icon>icon.skill11602</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -193,7 +190,6 @@
 		</effects>
 	</skill>
 	<skill id="11603" toLevel="4" name="Mass Restriction">
-		<!-- Updated to IO -->
 		<!-- During PvP, limits the CP, HP, and MP recovery of target and nearby enemies to maximum 60% for 30 seconds. -->
 		<icon>icon.skill11603</icon>
 		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
@@ -251,7 +247,6 @@
 		</effects>
 	</skill>
 	<skill id="11604" toLevel="7" name="Shocking Blow">
-		<!-- Updated to IO -->
 		<!-- Removes Invincibility of target and nearby enemies during PvP. -->
 		<icon>icon.skill11604</icon>
 		<affectLimit>10-10</affectLimit> <!-- Custom -->
@@ -295,7 +290,6 @@
 		</effects>
 	</skill>
 	<skill id="11605" toLevel="1" name="Shield Song">
-		<!-- Updated to IO -->
 		<!-- For 30 min., P. Def. + 5%, Attribute Def. + 20, Resistance to bows/crossbows + 10%, and Debuff Resistance + 10%. -->
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
@@ -333,7 +327,6 @@
 		</effects>
 	</skill>
 	<skill id="11606" toLevel="1" name="Dance of Might">
-		<!-- Updated to IO -->
 		<!-- For 30 min., P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 10, and Speed + 10. -->
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
@@ -491,7 +484,7 @@
 		</effects>
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
-		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
+		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P. Accuracy + 4, P. Evasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -682,7 +675,7 @@
 		</effects>
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
-		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P.ﾠAccuracy + 4, P.ﾠEvasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
+		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P. Accuracy + 4, P. Evasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -749,7 +742,6 @@
 		</effects>
 	</skill>
 	<skill id="11613" toLevel="4" name="Song of Protection">
-		<!-- Updated to IO -->
 		<!-- For 30 sec., increases your P. Def. + 5000 and M. Def. + 5000. Restores 1000 HP. -->
 		<icon>icon.skill11613</icon>
 		<abnormalLvl>1</abnormalLvl> <!-- Guessed -->
@@ -791,7 +783,6 @@
 		</effects>
 	</skill>
 	<skill id="11614" toLevel="4" name="Battle Rhapsody Dance">
-		<!-- Updated to IO -->
 		<!-- For 30 sec., increases your P. Atk./M. Atk./Atk. Spd./Casting Spd. + 50%. -->
 		<icon>icon.skill11614</icon>
 		<abnormalTime>
@@ -850,7 +841,6 @@
 		</effects>
 	</skill>
 	<skill id="11615" toLevel="1" name="Battle Ditty">
-		<!-- Updated to IO -->
 		<!-- For 30 min., selected party member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11615</icon>
 		<abnormalTime>
@@ -897,7 +887,6 @@
 		</effects>
 	</skill>
 	<skill id="11616" toLevel="1" name="Protective Ditty">
-		<!-- Updated to IO -->
 		<!-- For 30 min., selected party member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11616</icon>
 		<abnormalTime>
@@ -945,7 +934,6 @@
 		</effects>
 	</skill>
 	<skill id="11617" toLevel="1" name="Frezied Battle Ditty">
-		<!-- Updated to IO -->
 		<!-- For 30 min., selected clan member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11617</icon>
 		<abnormalTime>
@@ -995,7 +983,6 @@
 		</effects>
 	</skill>
 	<skill id="11618" toLevel="1" name="Frenzied Protective Ditty">
-		<!-- Updated to IO -->
 		<!-- For 30 min., selected clan member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11618</icon>
 		<abnormalTime>
@@ -1041,7 +1028,6 @@
 		</effects>
 	</skill>
 	<skill id="11619" toLevel="3" name="Soul Ditty">
-		<!-- Updated to IO -->
 		<!-- Entire party's P. Atk. + 3%, P. Critical Damage + 3%, Atk. Spd. + 2%, M. Atk. + 2%, Casting Spd. + 2%, P. Def. + 2%, M. Def. + 2%, Skill Power + 2%. -->
 		<icon>icon.skill11529</icon>
 		<abnormalTime>1800</abnormalTime> <!-- Custom -->

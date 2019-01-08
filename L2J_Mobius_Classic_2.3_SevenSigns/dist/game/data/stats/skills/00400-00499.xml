@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" toLevel="20" name="Tribunal">
+		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's Critical Rate -$s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -169,6 +170,7 @@
 		</effects>
 	</skill>
 	<skill id="401" toLevel="20" name="Judgment">
+		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's Critical Damage -$s3 for $s2 sec. when a sword, blunt weapon or dual sword is used. Over-hit. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -339,6 +341,7 @@
 		</effects>
 	</skill>
 	<skill id="402" toLevel="12" name="Arrest">
+		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -408,6 +411,7 @@
 		</effects>
 	</skill>
 	<skill id="403" toLevel="10" name="Shackle">
+		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -471,8 +475,7 @@
 		</effects>
 	</skill>
 	<skill id="404" toLevel="17" name="Mass Shackling">
-		<!-- Confirmed CT2.5 and Updated to IO -->
-		<!-- Guessed -->
+		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -574,7 +577,7 @@
 		</effects>
 	</skill>
 	<skill id="405" toLevel="10" name="Banish Undead">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fills undead with fear, causing them to flee for $s1. Consumes $s2 Soulstone(s). Lethal strike is possible. -->
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-523</value>
@@ -652,7 +655,7 @@
 		</effects>
 	</skill>
 	<skill id="406" toLevel="3" name="Angelic Archon">
-		<!-- Confirmed CT2.5 -->
+		<!-- Channels the gods' strength to greatly increase your combat effectiveness. For $s1, Debuff Resistance +$s2, P. Def. +$s3, M. Def. +$s4, P. Accuracy +$s5 when a sword/ blunt weapon is equipped, Speed +$s6, Atk. Spd. +$s7 when a sword/ blunt weapon is equipped, P. Critical Rate +$s8 when a sword is equipped, P. Critical Damage +$s9 when a blunt weapon is equipped, and Buff-canceling Attack Resistance +$s10. Effect of recovery magic -$s11. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -798,7 +801,7 @@
 		</effects>
 	</skill>
 	<skill id="407" toLevel="10" name="Psycho Symphony">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and Speed/ Atk. Spd./ Casting Spd. -$s3 for $s2. Over-hit. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -929,7 +932,7 @@
 		</effects>
 	</skill>
 	<skill id="408" toLevel="10" name="Demonic Blade Dance">
-		<!-- Glory Days Confirmed -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and P. Atk./ M. Atk. -$s3 for $s2. Over-hit. Critical. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1053,8 +1056,7 @@
 		</effects>
 	</skill>
 	<skill id="409" toLevel="10" name="Critical Blow">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Vital points attacks success rate +$s3 for $s2. Requires a dagger. Over-hit. Half-kill. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1167,8 +1169,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="410" toLevel="8" name="Mortal Strike">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Guessed -->
+		<!-- Vital points attacks success rate +$s2 for $s1. Requires a dagger or dual dagger. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1282,6 +1283,7 @@
 		</effects>
 	</skill>
 	<skill id="411" toLevel="3" name="Stealth">
+		<!-- Prevents being pre-emptively attacked by monsters for $s1, and Evasion -$s2, P. Def. -$s3, M. Def. -$s4, Accuracy -$s5 and P. Atk. -$s6. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1353,7 +1355,7 @@
 		</effects>
 	</skill>
 	<skill id="412" toLevel="11" name="Sand Bomb">
-		<!-- Confirmed CT2.5 -->
+		<!-- Hurls a sand cloud onto the enemy. For $s1, target s P. Accuracy -$s2 and M. Accuracy -$s3. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1442,6 +1444,7 @@
 		</effects>
 	</skill>
 	<skill id="413" toLevel="9" name="Rapid Fire">
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, Range -$s4. Requires a bow. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1548,6 +1551,7 @@
 		</effects>
 	</skill>
 	<skill id="414" toLevel="9" name="Dead Eye">
+		<!-- For $s1, when using a bow, one's own P. Accuracy +$s2, P. Atk. +$s3, and P. Critical Damage +$s4. Atk. Spd. -$s5. Requires a bow. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1661,6 +1665,7 @@
 		</effects>
 	</skill>
 	<skill id="415" toLevel="1" name="Spirit of Sagittarius">
+		<!-- Physical skill MP Consumption -$s2 for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_COST_DOWN</abnormalType>
@@ -1685,6 +1690,7 @@
 		</effects>
 	</skill>
 	<skill id="416" toLevel="3" name="Blessing of Sagittarius">
+		<!-- Physical skill Cooldown -$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">4</value>
@@ -1729,6 +1735,7 @@
 		</effects>
 	</skill>
 	<skill id="417" toLevel="5" name="Pain of Sagittarius">
+		<!-- Sacrifices your own HP to regenerate MP with $s1 Power. -->
 		<effectPoint>
 			<value level="1">549</value>
 			<value level="2">582</value>
@@ -1772,6 +1779,7 @@
 		</effects>
 	</skill>
 	<skill id="418" toLevel="3" name="Quiver of Holding">
+		<!-- Weight limit +$s1. -->
 		<icon>icon.skill0418</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1792,6 +1800,7 @@
 		</effects>
 	</skill>
 	<skill id="420" toLevel="3" name="Zealot">
+		<!-- Channels the power of your guardian deity for $s1, Debuff Resistance +$s2, Buff-canceling Attack Resistance +$s3, Speed +$s4, P. Accuracy +$s5 when using a sword, blunt weapon or spear/ fist weapon, Atk. Spd. +$s6, P. Critical Rate +$s7 when using a sword/ spear, and P. Critical Damage +$s8 when using a sword/ blunt/ fist weapon. Physical skill MP Consumption -$s9 and the Healing power received -$s10. Available when HP is $s11 or lower. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1912,6 +1921,7 @@
 		</effects>
 	</skill>
 	<skill id="421" toLevel="5" name="Fell Swoop">
+		<!-- For $s1, number of attacked enemies +$s2. Requires a polearm. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1972,6 +1982,7 @@
 		</effects>
 	</skill>
 	<skill id="422" toLevel="3" name="Polearm Accuracy">
+		<!-- Accuracy +$s1 when using a spear. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0422</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -2006,6 +2017,7 @@
 		</effects>
 	</skill>
 	<skill id="423" toLevel="3" name="Dark Form">
+		<!-- For $s1, Fire P. Atk. +$s2 and Fire Resistance +$s3. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -2054,6 +2066,7 @@
 		</effects>
 	</skill>
 	<skill id="424" toLevel="3" name="War Frenzy">
+		<!-- Stun Resistance +$s1 and Sleep Resistance +$s2. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0424</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -2089,6 +2102,7 @@
 		</effects>
 	</skill>
 	<skill id="425" toLevel="1" name="Hawk Spirit Totem">
+		<!-- Possessed by a Hawk's Spirit. For 5 min., when using a fist weapon, Accuracy +6, Critical Rate +100, and Critical Damage +30%. Requires a fist weapon. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -2136,9 +2150,9 @@
 		</effects>
 	</skill>
 	<skill id="426" toLevel="1" name="Battle Stance">
-		<!-- Not Used Anymore -->
+		<!-- Transfers your strength to a party member. The effect can be canceled if you incur damage. -->
 		<castRange>400</castRange>
-		<channelingSkillId>5104</channelingSkillId>
+		<channelingSkillId>5104</channelingSkillId> <!-- Battle Force -->
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>15000</hitTime>
@@ -2162,9 +2176,9 @@
 		</conditions>
 	</skill>
 	<skill id="427" toLevel="1" name="Spell Stance">
-		<!-- Not Used Anymore -->
+		<!-- Transfers your magical strength to a party member. The effect can be canceled if you incur damage. -->
 		<castRange>400</castRange>
-		<channelingSkillId>5105</channelingSkillId>
+		<channelingSkillId>5105</channelingSkillId> <!-- Spell Force -->
 		<effectPoint>1</effectPoint>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
@@ -2189,6 +2203,7 @@
 		</conditions>
 	</skill>
 	<skill id="428" toLevel="1" name="Inner Rhythm">
+		<!-- MP Consumption for song/ dance skills -10%. -->
 		<icon>icon.skill0428</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2207,7 +2222,7 @@
 		</effects>
 	</skill>
 	<skill id="429" toLevel="7" name="Knighthood">
-		<!-- Phoenix Knight, Hell Knight, Evas Templar, Shillien Templar -->
+		<!-- P. Def. +87.1, Shield Defense +10%, and Bow Resistance +10% when equipped with heavy armor. -->
 		<icon>icon.skill0429</icon>
 		<magicLvl>
 			<value level="1">78</value>
@@ -2249,6 +2264,7 @@
 		</effects>
 	</skill>
 	<skill id="430" toLevel="1" name="Master of Combat">
+		<!-- Max CP +$s1 and Max HP +$s2. -->
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2265,6 +2281,7 @@
 		</effects>
 	</skill>
 	<skill id="431" toLevel="1" name="Archery">
+		<!-- When using a bow, P. Atk. +200 and maximum range +50. -->
 		<icon>icon.skill0431</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2287,7 +2304,7 @@
 		</effects>
 	</skill>
 	<skill id="432" toLevel="1" name="Assassination">
-		<!-- NOTE: Description says critical attack rate, but is client typo -->
+		<!-- When using a dagger, P. Atk. +70 and vital points attacks success rate +3%. -->
 		<icon>icon.skill0432</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2308,6 +2325,7 @@
 		</effects>
 	</skill>
 	<skill id="433" toLevel="1" name="Arcane Roar">
+		<!-- Elemental Resistance +5, M. Atk. +3%. -->
 		<icon>icon.skill0433</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2336,6 +2354,7 @@
 		</effects>
 	</skill>
 	<skill id="434" toLevel="1" name="Necromancy">
+		<!-- Resistance to Dark +5, M. Atk. +3%. -->
 		<icon>icon.skill0434</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2352,6 +2371,7 @@
 		</effects>
 	</skill>
 	<skill id="435" toLevel="1" name="Summon Lore">
+		<!-- When equipped with light armor, P. Def. +80 and Casting Spd. +5%. When equipped with a robe, P. Def. +60 and Casting Spd. +7%, and MP Consumption for magic skills -3%. -->
 		<icon>icon.skill0435</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2396,6 +2416,7 @@
 		</effects>
 	</skill>
 	<skill id="436" toLevel="1" name="Divine Lore">
+		<!-- MP Consumption for physical skills -5%. -->
 		<icon>icon.skill0436</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2409,6 +2430,7 @@
 		</effects>
 	</skill>
 	<skill id="437" toLevel="1" name="Song of Silence">
+		<!-- Sings a Song of Silence. Blocks all the enemies' physical/ magic skills for $s1. -->
 		<abnormalLvl>1</abnormalLvl>
 		
 		<abnormalTime>10</abnormalTime>
@@ -2440,6 +2462,7 @@
 		</effects>
 	</skill>
 	<skill id="439" toLevel="1" name="Shield of Revenge">
+		<!-- For 5 min., has a chance of reflecting melee damage to the attacker. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
@@ -2462,6 +2485,7 @@
 		</effects>
 	</skill>
 	<skill id="440" toLevel="1" name="Braveheart">
+		<!-- Increases combat spirit and restores 1000 CP. -->
 		<effectPoint>669</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0440</icon>
@@ -2481,7 +2505,7 @@
 		</effects>
 	</skill>
 	<skill id="441" toLevel="1" name="Force Meditation">
-		<!-- Confirmed CT2.5 -->
+		<!-- Uses Momentum to recover 60 HP and 10 MP per sec. for 1 min. While skill is in effect, user is unable to move, and P. Def. -80%. The effect is canceled if user is stunned. Must recharge 3rd Momentum level. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
@@ -2521,6 +2545,7 @@
 		</effects>
 	</skill>
 	<skill id="442" toLevel="1" name="Sonic Barrier">
+		<!-- Uses Momentum make user invincible against standard attacks, skills and debuffs for 10 sec. Requires a dual sword. Requires Momentum level 3. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -2564,6 +2589,7 @@
 		</effects>
 	</skill>
 	<skill id="443" toLevel="1" name="Force Barrier">
+		<!-- Uses spirit to make user invincible against standard attacks, skills and debuffs for 10 sec. Requires a fist weapon. Momentum level 4. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -2607,7 +2633,7 @@
 		</effects>
 	</skill>
 	<skill id="444" toLevel="1" name="Sweeper Festival">
-		<!-- High Five Skill -->
+		<!-- Use on the corpses of Spoiled monsters to obtain extra items. -->
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<hitTime>500</hitTime>
@@ -2627,6 +2653,7 @@
 		</effects>
 	</skill>
 	<skill id="445" toLevel="1" name="Mirage">
+		<!-- For 2 min., provides a chance to cancel the target of an attacking enemy. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>MIRAGE</abnormalType>
@@ -2651,12 +2678,13 @@
 				<chance>80</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
-				<skillId>5144</skillId>
+				<skillId>5144</skillId> <!-- Mirage -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="446" toLevel="1" name="Evasion">
+		<!-- Allows user to evade short-range and long-range physical attack skills for 15 sec. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
@@ -2680,6 +2708,7 @@
 		</effects>
 	</skill>
 	<skill id="447" toLevel="1" name="Counterattack">
+		<!-- For 15 sec., transfers damage from melee attacks and skills back to the enemy. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
@@ -2702,6 +2731,7 @@
 		</effects>
 	</skill>
 	<skill id="448" toLevel="1" name="Summon Swoop Cannon">
+		<!-- Summons a Swoop Cannon. -->
 		<hitTime>10000</hitTime>
 		<icon>icon.skill0448</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2723,15 +2753,15 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14839</npcId>
+				<npcId>14839</npcId> <!-- Swoop Cannon -->
 				<lifeTime>1200</lifeTime>
-				<consumeItemId>2132</consumeItemId>
+				<consumeItemId>2132</consumeItemId> <!-- Gemstone (B-grade) -->
 				<consumeItemCount>13</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="449" toLevel="4" name="Summon Attractive Cubic">
-		<!-- Confirmed CT2.5 -->
+		<!-- Summons Attractive Cubic. Attractive Cubic can continuously use hate and hold magic on the enemy. Consumes $s1 Spirit Ore. -->
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0449</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2776,7 +2806,7 @@
 		</effects>
 	</skill>
 	<skill id="450" toLevel="10" name="Banish Seraph">
-		<!-- Confirmed CT2.5 -->
+		<!-- For $s1, frightens an angel into fleeing. Consumes $s2 Soulstone(s). Lethal Strike is possible. -->
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-523</value>
@@ -2854,6 +2884,7 @@
 		</effects>
 	</skill>
 	<skill id="451" toLevel="5" name="Sonic Move">
+		<!-- Momentum blast. For $s1, Speed +$s2. Requires Momentum level $s3. Requires dual swords to be equipped. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -2925,7 +2956,7 @@
 		</effects>
 	</skill>
 	<skill id="452" toLevel="5" name="Stun Stomp">
-		<!-- Confirmed CT2.5 -->
+		<!-- Performs a mighty foot stomp that stuns nearby enemies for $s1 Requires a polearm. Target cancel is possible. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2977,7 +3008,7 @@
 		</effects>
 	</skill>
 	<skill id="453" toLevel="1" name="Escape Shackle">
-		<!-- Confirmed CT2.5 -->
+		<!-- Allows you to escape from a captured state. -->
 		<effectPoint>597</effectPoint>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0453</icon>
@@ -2996,6 +3027,7 @@
 		</effects>
 	</skill>
 	<skill id="461" toLevel="3" name="Break Duress">
+		<!-- Use your spirit to escape from an immobile state. Requires Momentum level $s1. -->
 		<chargeConsume>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -3040,7 +3072,7 @@
 		</effects>
 	</skill>
 	<skill id="462" toLevel="1" name="Guilted Body">
-		<!-- Confirmed CT2.5 -->
+		<!-- Body of original sin. Only light armor types can equip it. -->
 		<icon>icon.skill0462</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3057,7 +3089,7 @@
 		</effects>
 	</skill>
 	<skill id="463" toLevel="3" name="Weapon Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. +$s1, additionally +$s2. -->
 		<icon>icon.skill0141</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3082,7 +3114,7 @@
 		</effects>
 	</skill>
 	<skill id="464" toLevel="5" name="Armor Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Def. +$s1 and MP Recovery Bonus +$s2. -->
 		<icon>icon.skill0142</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3121,6 +3153,7 @@
 		</effects>
 	</skill>
 	<skill id="465" toLevel="50" name="Light Armor Mastery">
+		<!-- When equipped with light armor, P. Def. +$s1 and Evasion +$s2, and the enemy's Critical Rate/ Damage -$s3. -->
 		<icon>icon.skill0465</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -3311,7 +3344,7 @@
 		</effects>
 	</skill>
 	<skill id="466" toLevel="55" name="Magic Immunity">
-		<!-- Confirmed CT2.5 -->
+		<!-- M. Def. +$s1. -->
 		<icon>icon.skill0466</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3496,7 +3529,7 @@
 		</effects>
 	</skill>
 	<skill id="467" toLevel="23" name="Soul Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Absorbs a soul. $s1 or more XP is needed to absorb a soul. Maximum of $s2 souls can be absorbed. -->
 		<icon>icon.skill0467</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3581,7 +3614,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Critical Spiritual Energy Attack -->
 				<isCritical>true</isCritical>
-				<skillId>5548</skillId>
+				<skillId>5548</skillId> <!-- Critical Momentum Attack -->
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>L2Character</attackerType>
@@ -3618,7 +3651,7 @@
 		</effects>
 	</skill>
 	<skill id="468" toLevel="9" name="Fallen Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks an enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon or short sword. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -3691,7 +3724,7 @@
 		</effects>
 	</skill>
 	<skill id="469" toLevel="1" name="Rapid Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 20 min., Atk. Spd. +15%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -3717,7 +3750,7 @@
 		</effects>
 	</skill>
 	<skill id="472" toLevel="45" name="Ancient Sword Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. +$s1 when using an ancient sword. -->
 		<icon>icon.skill0472</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3825,7 +3858,7 @@
 		</effects>
 	</skill>
 	<skill id="473" toLevel="45" name="Crossbow Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- P. Atk. +$s1 when using a crossbow. -->
 		<icon>icon.skill0473</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3933,7 +3966,7 @@
 		</effects>
 	</skill>
 	<skill id="474" toLevel="45" name="Rapier Mastery">
-		<!-- Glory Days Confirmed -->
+		<!-- P. Atk. +$s1 when using a short sword. -->
 		<icon>icon.skill0474</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -4094,7 +4127,7 @@
 		</effects>
 	</skill>
 	<skill id="475" toLevel="1" name="Strike Back">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transfers damage received from melee attacks and skills back to the enemy. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0475</icon>
 		<magicLvl>20</magicLvl>
 		<operateType>T</operateType>
@@ -4112,7 +4145,7 @@
 		</effects>
 	</skill>
 	<skill id="476" toLevel="15" name="Dark Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a sword, blunt weapon, or ancient sword. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4210,7 +4243,7 @@
 		</effects>
 	</skill>
 	<skill id="477" toLevel="37" name="Dark Smash">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4400,7 +4433,7 @@
 		</effects>
 	</skill>
 	<skill id="478" toLevel="15" name="Double Thrust">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4496,7 +4529,7 @@
 		</effects>
 	</skill>
 	<skill id="479" toLevel="1" name="Hard March">
-		<!-- Confirmed CT2.5 -->
+		<!-- Speed +20. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0479</icon>
 		<magicLvl>24</magicLvl>
 		<operateType>T</operateType>
@@ -4515,7 +4548,7 @@
 		</effects>
 	</skill>
 	<skill id="480" toLevel="1" name="Dark Blade">
-		<!-- Confirmed CT2.5 -->
+		<!-- Dark attacks +10. -->
 		<icon>icon.skill0480</icon>
 		<magicLvl>36</magicLvl>
 		<operateType>T</operateType>
@@ -4530,7 +4563,7 @@
 		</effects>
 	</skill>
 	<skill id="481" toLevel="2" name="Dark Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Dark Attack Resistance -$s1. -->
 		<icon>icon.skill0481</icon>
 		<magicLvl>
 			<value level="1">32</value>
@@ -4551,7 +4584,7 @@
 		</effects>
 	</skill>
 	<skill id="482" toLevel="2" name="Furious Soul">
-		<!-- Glory Days Confirmed -->
+		<!-- For $s1, Critical Rate +$s2 and Critical Damage +$s3. P. Def. -$s4. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4601,7 +4634,7 @@
 		</effects>
 	</skill>
 	<skill id="483" toLevel="8" name="Sword Shield">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- For $s1, P. Def. +$s2 and Speed -$s3. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4693,7 +4726,7 @@
 		</effects>
 	</skill>
 	<skill id="484" toLevel="1" name="Elementary Rush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Charges into the enemy. Can be used while dagger, ancient sword, short sword is equipped. -->
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-303</effectPoint>
@@ -4722,7 +4755,7 @@
 		</conditions>
 	</skill>
 	<skill id="485" toLevel="19" name="Disarm">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -4831,7 +4864,7 @@
 		</effects>
 	</skill>
 	<skill id="486" toLevel="2" name="Increase Range">
-		<!-- Confirmed CT2.5 -->
+		<!-- Crossbow's range +$s1. -->
 		<icon>icon.skill0486</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -4853,7 +4886,7 @@
 		</effects>
 	</skill>
 	<skill id="487" toLevel="15" name="Penetrating Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fires a powerful bolt to attack the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a crossbow. Over-hit. -->
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -4950,7 +4983,7 @@
 		</effects>
 	</skill>
 	<skill id="489" toLevel="1" name="Shift Target">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transfers the Aggression of nearby enemies to a selected party members only. Requires a crossbow. -->
 		<affectRange>300</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
@@ -4985,7 +5018,7 @@
 		</effects>
 	</skill>
 	<skill id="490" toLevel="2" name="Fast Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Crossbow Atk. Spd. +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5027,7 +5060,6 @@
 		</effects>
 	</skill>
 	<skill id="491" toLevel="1" name="Not in Use">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill0491</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5048,7 +5080,7 @@
 		</conditions>
 	</skill>
 	<skill id="492" toLevel="25" name="Spread Wing">
-		<!-- Confirmed CT2.5 -->
+		<!-- Spreads wings to attack nearby enemies with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<rideState>NONE</rideState>
@@ -5179,7 +5211,7 @@
 		</effects>
 	</skill>
 	<skill id="493" toLevel="28" name="Storm Assault">
-		<!-- Confirmed CT2.5 -->
+		<!-- Makes a hurricane-like assault on the enemy's surroundings with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>
@@ -5396,7 +5428,7 @@
 		</effects>
 	</skill>
 	<skill id="494" toLevel="37" name="Shoulder Charge">
-		<!-- Confirmed CT2.5 -->
+		<!-- Rushes in with the shoulder to attack the enemy. Inflicted with fear for $s1. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -5639,7 +5671,7 @@
 		</effects>
 	</skill>
 	<skill id="495" toLevel="10" name="Blade Rush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for $s1 sec. Makes them consume $s2 HP every sec. Increases Power upon the consumption of up to $s3 souls. Requires an ancient sword or sword to be equipped. Over-hit. -->
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">6</value>
@@ -5769,7 +5801,7 @@
 		</effects>
 	</skill>
 	<skill id="496" toLevel="31" name="Slashing Blade">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<coolTime>300</coolTime>
@@ -5935,7 +5967,7 @@
 		</effects>
 	</skill>
 	<skill id="497" toLevel="16" name="Crushing Pain">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. Ignores shield defense. -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -6042,7 +6074,7 @@
 		</effects>
 	</skill>
 	<skill id="498" toLevel="12" name="Contagion">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy's wound with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s1 souls. Requires an ancient sword or a sword. Over-hit. Ignores Shield Defense. -->
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
@@ -6135,7 +6167,7 @@
 		</effects>
 	</skill>
 	<skill id="499" toLevel="3" name="Courage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Mental Attack Resistance +$s2 for $s1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

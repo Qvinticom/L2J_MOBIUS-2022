@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10244" toLevel="3" name="True Vanguard">
-		<!-- Glory Days confirmed -->
 		<!-- Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%. -->
 		<icon>icon.skill0810</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -46,7 +45,6 @@
 		</effects>
 	</skill>
 	<skill id="10245" toLevel="1" name="Wizard - Individual Passive">
-		<!-- Glory Days confirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 		<operateType>P</operateType>
@@ -54,7 +52,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="10246" toLevel="1" name="Wizard - Individual">
-		<!-- Glory Days confirmed -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -83,7 +80,6 @@
 		</effects>
 	</skill>
 	<skill id="10247" toLevel="1" name="Knight - Individual Passive">
-		<!-- Glory Days confirmed -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 		<icon>icon.skill0217</icon>
@@ -91,7 +87,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="10248" toLevel="1" name="Knight - Individual">
-		<!-- Glory Days confirmed -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -120,7 +115,6 @@
 		</effects>
 	</skill>
 	<skill id="10249" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -151,7 +145,6 @@
 		</effects>
 	</skill>
 	<skill id="10250" toLevel="1" name="Heavy Hit">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -181,8 +174,7 @@
 		</effects>
 	</skill>
 	<skill id="10251" toLevel="10" name="Superior Weapon Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 30%, additional P. Atk. + 1689, Atk. Spd + 25%, P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR + 2. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->
+		<!-- STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. Depending on your STR, the Cooldown resets or the duration increases by 2 times. -->
 		<icon>icon.skill10251</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -258,8 +250,7 @@
 		</effects>
 	</skill>
 	<skill id="10252" toLevel="10" name="Superior Dual Weapon Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- P. Atk. + 30%, additional P. Atk. + 1689, Atk. Spd. + 25%, and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon. STR + 2. -->
+		<!-- STR + 2. P. Atk. + 1252 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon. -->
 		<icon>icon.skill10252</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -325,8 +316,7 @@
 		</effects>
 	</skill>
 	<skill id="10253" toLevel="10" name="Superior Heavy Armor Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- Max HP + 5368 and P. Def. + 1731 when equipped with Heavy Armor. STR + 2. -->
+		<!-- STR + 2. Max HP + 5368 and P. Def. + 1327 when equipped with Heavy Armor. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -375,7 +365,6 @@
 		</effects>
 	</skill>
 	<skill id="10254" toLevel="10" name="Superior Light Armor Mastery">
-		<!-- Glory Days confirmed -->
 		<!-- STR + 2. Max HP + 5368, P. Def. + 1271, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -460,7 +449,6 @@
 		</effects>
 	</skill>
 	<skill id="10255" toLevel="10" name="Superior Momentum Mastery">
-		<!-- Glory Days confirmed -->
 		<!-- Absorbs Momentum by 20% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels. -->
 		<icon>icon.skill10255</icon>
 		<operateType>P</operateType>
@@ -484,7 +472,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Increase Momentum -->
 				<isCritical>false</isCritical>
-				<skillId>10283</skillId>
+				<skillId>10283</skillId> <!-- Increase Momentum -->
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>L2Character</attackerType>
@@ -508,7 +496,7 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Increase Momentum -->
 				<isCritical>true</isCritical>
-				<skillId>10283</skillId>
+				<skillId>10283</skillId> <!-- Increase Momentum -->
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<minDamage>1</minDamage>
@@ -526,14 +514,13 @@
 				<chance>50</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>10284</skillId>
+				<skillId>10284</skillId> <!-- Lightning Force -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10256" toLevel="10" name="Superior HP Mastery">
-		<!-- Glory Days confirmed -->
-		<!-- Max HP + 606, Max CP + 296, HP Recovery Bonus + 12, MP Recovery Bonus + 6. When HP falls below 60%, P. Atk. + 1027. STR + 2. When receiving damage, has a chance of recovering 10% of Max HP. -->
+		<!-- STR + 2, Max HP + 606, Max CP + 296 and HP Recovery Bonus + 7.3. While sitting, HP Recovery Bonus + 7 and MP recovery bonus + 3.7. When HP falls below 60%, P. Atk. + 629. When damaged to a point, has a chance of recovering 10% of Max HP. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -618,13 +605,12 @@
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>10323</skillId>
+				<skillId>10323</skillId> <!-- Self Heal (Warrior) -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10257" toLevel="1" name="Superior Spirit Mastery">
-		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -645,7 +631,6 @@
 		</effects>
 	</skill>
 	<skill id="10258" toLevel="11" name="Armor Destruction">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 11159 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -758,7 +743,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="10260" toLevel="11" name="Mega Strike">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 19893 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. -->
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -853,7 +837,6 @@
 		</effects>
 	</skill>
 	<skill id="10262" toLevel="9" name="Power Bomber">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful strike on target with 20483 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Critical. Ignores Shield Defense. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -966,7 +949,6 @@
 		</effects>
 	</skill>
 	<skill id="10263" toLevel="11" name="Hurricane Blaster">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 551 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1073,7 +1055,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="10265" toLevel="11" name="Eruption">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1180,7 +1161,6 @@
 		</effects>
 	</skill>
 	<skill id="10266" toLevel="11" name="Giant Punch">
-		<!-- Glory Days confirmed -->
 		<!-- Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1284,7 +1264,6 @@
 		</effects>
 	</skill>
 	<skill id="10267" toLevel="9" name="Hurricane Rush">
-		<!-- Glory Days confirmed -->
 		<!-- Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1370,7 +1349,6 @@
 		</effects>
 	</skill>
 	<skill id="10268" toLevel="6" name="Rolling Thunder">
-		<!-- Glory Days confirmed -->
 		<!-- Becomes enveloped with the energy of a whirlwind. Continuously decreases nearby enemies' HP. Continuously decreases your MP. -->
 		<abnormalVisualEffect>HURRICANE_SELF</abnormalVisualEffect>
 		<icon>icon.skill10268</icon>
@@ -1399,7 +1377,7 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="CallSkillOnActionTime">
-				<skillId>10287</skillId>
+				<skillId>10287</skillId> <!-- Rolling Thunder -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1413,7 +1391,6 @@
 		</effects>
 	</skill>
 	<skill id="10269" toLevel="10" name="Jump Attack">
-		<!-- Glory Days confirmed -->
 		<!-- Jumps to attack frontal enemies with 10508 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1523,7 +1500,6 @@
 		</effects>
 	</skill>
 	<skill id="10270" toLevel="1" name="Second Wind">
-		<!-- Glory Days confirmed -->
 		<!-- Instantly recovers 35% of Max HP and 15% of Max CP. For 2 minutes, Max HP + 35% and Max CP + 15%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1560,7 +1536,6 @@
 		</effects>
 	</skill>
 	<skill id="10271" toLevel="2" name="Power Provoke">
-		<!-- Glory Days confirmed and updated to IO -->
 		<!-- Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1611,7 +1586,6 @@
 		</effects>
 	</skill>
 	<skill id="10273" toLevel="4" name="Lightning Disarm">
-		<!-- Glory Days confirmed -->
 		<!-- Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1681,7 +1655,6 @@
 		</effects>
 	</skill>
 	<skill id="10274" toLevel="4" name="Berserker">
-		<!-- Glory Days confirmed -->
 		<!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. Can be used when HP is below 70%. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1839,7 +1812,6 @@
 		</effects>
 	</skill>
 	<skill id="10275" toLevel="4" name="Infinity Strike">
-		<!-- Glory Days confirmed and updated to IO -->
 		<!-- Inflicts a powerful attack on target with 65085 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10275</icon>
 		<operateType>A1</operateType>
@@ -1989,7 +1961,6 @@
 		</effects>
 	</skill>
 	<skill id="10277" toLevel="4" name="Final Cry">
-		<!-- Glory Days confirmed -->
 		<!-- Increases P. Atk. + 20% and skill damage + 10% for 2 minutes. Increases general/skill attack damage + 5% during PvP. -->
 		<icon>icon.skill10277</icon>
 		<operateType>A2</operateType>
@@ -2057,7 +2028,6 @@
 		</effects>
 	</skill>
 	<skill id="10278" toLevel="8" name="Reduce Anger">
-		<!-- Glory Days confirmed -->
 		<!-- Decreases the aggression of nearby enemies toward the caster. -->
 		<icon>icon.skill10278</icon>
 		<operateType>A1</operateType>
@@ -2109,7 +2079,6 @@
 		</effects>
 	</skill>
 	<skill id="10279" toLevel="1" name="Giant Barrier">
-		<!-- Glory Days confirmed -->
 		<!-- Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>
@@ -2184,7 +2153,6 @@
 		</effects>
 	</skill>
 	<skill id="10280" toLevel="1" name="Momentum Charge">
-		<!-- Glory Days confirmed -->
 		<!-- Continuously consumes HP to produce Momentum. -->
 		<icon>icon.skill10283</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2204,7 +2172,6 @@
 		</effects>
 	</skill>
 	<skill id="10281" toLevel="5" name="Sonic Star">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks and knocks down nearby enemies at the speed of light with 44711 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2283,7 +2250,6 @@
 		</effects>
 	</skill>
 	<skill id="10283" toLevel="1" name="Increase Momentum">
-		<!-- Glory Days confirmed -->
 		<icon>icon.skill10283</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -2355,7 +2321,7 @@
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
-				<skillId>10284</skillId>
+				<skillId>10284</skillId> <!-- Lightning Force -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -2381,7 +2347,6 @@
 		</effects>
 	</skill>
 	<skill id="10285" toLevel="1" name="HP Drain">
-		<!-- Glory Days confirmed -->
 		<!-- Recovers HP by 20%. -->
 		<icon>icon.skill10285</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2402,8 +2367,7 @@
 		</effects>
 	</skill>
 	<skill id="10286" toLevel="10" name="Superior Resistance">
-		<!-- Glory Days confirmed -->
-		<!-- M. Def. + 776, and Fire/Water/Wind/Earth Resistance + 20. STR + 2. -->
+		<!-- STR + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. -->
 		<icon>icon.skill10257</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2502,7 +2466,6 @@
 		</effects>
 	</skill>
 	<skill id="10287" toLevel="6" name="Rolling Thunder">
-		<!-- Glory Days confirmed -->
 		<!-- HP decreases by 225 per second. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2560,7 +2523,6 @@
 		</effects>
 	</skill>
 	<skill id="10288" toLevel="11" name="Hurricane Storm">
-		<!-- Glory Days confirmed -->
 		<!-- Attacks near the enemy with 11557 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2648,7 +2610,6 @@
 		</effects>
 	</skill>
 	<skill id="10289" toLevel="4" name="Boost">
-		<!-- Glory Days confirmed -->
 		<!-- Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2718,7 +2679,6 @@
 		</effects>
 	</skill>
 	<skill id="10290" toLevel="8" name="Hurricane Slasher">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks around the enemy with 11557 Power added to P. Atk. Decreases power - 10% when equipped with a sword/blunt/fist weapon. Increases power + 50% when equipped with a spear. Requires a dagger, blunt, spear, fist weapon, dual blunt weapon, or dualsword to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill0007</icon>
 		<operateType>A1</operateType>
@@ -2766,8 +2726,7 @@
 		</conditions>
 	</skill>
 	<skill id="10291" toLevel="1" name="Feral Bear Cry">
-		<!-- Glory Days confirmed -->
-		<!-- Shouts loudly to invoke the power of the Bear. Increases P. Atk. And Critical Damage by 30% for 5 minutes 30 seconds. -->
+		<!-- Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P. Critical Damage by 30%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -2804,7 +2763,6 @@
 		</effects>
 	</skill>
 	<skill id="10292" toLevel="1" name="Feral Ogre Cry">
-		<!-- Glory Days confirmed -->
 		<!-- Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2855,7 +2813,6 @@
 		</effects>
 	</skill>
 	<skill id="10293" toLevel="1" name="Feral Puma Cry">
-		<!-- Glory Days confirmed -->
 		<!-- Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2894,7 +2851,6 @@
 		</effects>
 	</skill>
 	<skill id="10294" toLevel="1" name="Feral Rabbit Cry">
-		<!-- Glory Days confirmed -->
 		<!-- Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2936,7 +2892,6 @@
 		</effects>
 	</skill>
 	<skill id="10295" toLevel="1" name="Hawk Cry">
-		<!-- Glory Days confirmed -->
 		<!-- Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2978,7 +2933,6 @@
 		</effects>
 	</skill>
 	<skill id="10296" toLevel="1" name="Spirit of the Hunter">
-		<!-- Glory Days confirmed -->
 		<!-- For 30 minutes, increases damage against insects/plants/animals + 10%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -3007,7 +2961,6 @@
 		</effects>
 	</skill>
 	<skill id="10297" toLevel="1" name="Spirit of the Slayer">
-		<!-- Glory Days confirmed -->
 		<!-- For 30 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -3037,7 +2990,6 @@
 		</effects>
 	</skill>
 	<skill id="10298" toLevel="1" name="Power Revival">
-		<!-- Glory Days confirmed and Updated to IO -->
 		<!-- Recovers all of your HP. -->
 		<effectPoint>707</effectPoint>
 		<icon>icon.skill10298</icon>
@@ -3064,7 +3016,6 @@
 		</effects>
 	</skill>
 	<skill id="10299" toLevel="1" name="Stun Spear">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicted with stun and unable to move for 3 seconds. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

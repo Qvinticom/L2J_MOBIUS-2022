@@ -312,7 +312,7 @@
 		</stats>
 	</item>
 	<item id="9820" name="Shadow Item: Clan Oath Helm" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of a Clan Oath Helm. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -334,7 +334,7 @@
 		</stats>
 	</item>
 	<item id="9821" name="Shadow Item: Clan Oath Armor" type="Armor">
-		<!-- Shadow item possessing the power of the Clan Oath Armor. It cannot be crystallized or granted functions besides enchantment. Full body armor. It can be equipped by characters in the Academy. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1001_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -364,7 +364,7 @@
 		</stats>
 	</item>
 	<item id="9822" name="Shadow Item: Clan Oath Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of Clan Oath Gauntlets. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1001_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -393,7 +393,7 @@
 		</stats>
 	</item>
 	<item id="9823" name="Shadow Item: Clan Oath Sabaton" additionalName="Heavy Armor" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of Clan Oath Sabaton. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1001_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -422,7 +422,7 @@
 		</stats>
 	</item>
 	<item id="9824" name="Shadow Item: Clan Oath Brigandine" type="Armor">
-		<!-- Shadow item possessing the power of the Clan Oath Brigandine. It cannot be crystallized or granted functions besides enchantment. Full body armor. It can be equipped by characters in the Academy. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1002_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -445,7 +445,7 @@
 		</stats>
 	</item>
 	<item id="9825" name="Shadow Item: Clan Oath Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of Clan Oath Leather Gloves. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1002_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -467,7 +467,7 @@
 		</stats>
 	</item>
 	<item id="9826" name="Shadow Item: Clan Oath Boots" additionalName="Light Armor" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of Clan Oath Booths. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1002_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -489,7 +489,7 @@
 		</stats>
 	</item>
 	<item id="9827" name="Shadow Item: Clan Oath Aketon" type="Armor">
-		<!-- Shadow item possessing the power of the Clan Oath Aketon. It cannot be crystallized or granted functions besides enchantment. Full body armor. It can be equipped by characters in the Academy. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1003_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -520,7 +520,7 @@
 		</stats>
 	</item>
 	<item id="9828" name="Shadow Item: Clan Oath Padded Gloves" additionalName="Robe" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of Clan Oath Padded Gloves. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1003_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -549,7 +549,7 @@
 		</stats>
 	</item>
 	<item id="9829" name="Shadow Item: Clan Oath Sandals" additionalName="Robe" type="Armor">
-		<!-- This Shadow Item contains the mirrored power of Clan Oath Sandals. It cannot be crystallized or granted functions besides enchantment. -->
+		<!-- Not in Use -->
 		<set name="icon" val="icon.armor_t1003_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -578,7 +578,6 @@
 		</stats>
 	</item>
 	<item id="9830" name="Enhanced Apella Helm" type="Armor">
-		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -598,7 +597,7 @@
 		</stats>
 	</item>
 	<item id="9831" name="Enhanced Apella Plate Armor" type="Armor">
-		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -623,7 +622,6 @@
 		</stats>
 	</item>
 	<item id="9832" name="Enhanced Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -647,7 +645,6 @@
 		</stats>
 	</item>
 	<item id="9833" name="Enhanced Apella Solleret" additionalName="Heavy Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -671,7 +668,7 @@
 		</stats>
 	</item>
 	<item id="9834" name="Enhanced Apella Brigandine" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -693,7 +690,6 @@
 		</stats>
 	</item>
 	<item id="9835" name="Enhanced Apella Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -714,7 +710,6 @@
 		</stats>
 	</item>
 	<item id="9836" name="Enhanced Apella Boots" additionalName="Light Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -735,7 +730,7 @@
 		</stats>
 	</item>
 	<item id="9837" name="Enhanced Apella Doublet" type="Armor">
-		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -761,7 +756,6 @@
 		</stats>
 	</item>
 	<item id="9838" name="Enhanced Apella Silk Gloves" additionalName="Robe" type="Armor">
-		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -785,7 +779,6 @@
 		</stats>
 	</item>
 	<item id="9839" name="Enhanced Apella Sandals" additionalName="Robe" type="Armor">
-		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

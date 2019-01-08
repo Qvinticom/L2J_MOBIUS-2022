@@ -715,7 +715,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90362" name="Fortune Jade Chest" type="EtcItem">
-		<!-- Double-click to obtain  Lv. 1-5 Jade. Cannot be dropped. -->
+		<!-- Double-click to obtain Lv. 1-5 Jade. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />

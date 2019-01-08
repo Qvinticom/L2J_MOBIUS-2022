@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2200" levels="3" name="Item - Jade Treasue Box">
 		<table name="#itemConsumeId">6495 6496 6497</table>
@@ -129,8 +129,6 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2213" levels="22" name="Escape - to X Town">
-		<!--need check -->
-		<!-- <table name="#itemConsumeId">7117 7118 7119 7120 7121 7122 7123 7124 7125 7126 7127 7128 7129 7130 7131 7132 7133 7134 7135 7618 7619 9647</table><set name="itemConsumeId" val="#itemConsumeId"/><set name="itemConsumeCount" val="1"/> -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="20000"/>
 		<set name="skillType" val="RECALL"/>
@@ -139,8 +137,6 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
-		<!-- skill levels are 1-5 & 10 ... names correspond with 2213 levels -->
-		<!-- <table name="#itemConsumeId">7554 7555 7556 7557 7558 9716 0 0 0 7559</table><set name="itemConsumeId" val="#itemConsumeId"/><set name="itemConsumeCount" val="1"/> -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="20000"/>
 		<set name="skillType" val="RECALL"/>
@@ -305,16 +301,16 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7062"/>
+		<set name="itemConsumeId" val="7062"/> <!-- Echo Crystal - Theme of Wedding -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
-		<!-- Done by DJ MELERIX -->
+		<!-- Amulet: Protection of Valakas. Increases one's resistance to attack when Valakas' attacks with its front claws. -->
 		<set name="isMagic" val="true"/>
 		<set name="itemConsumeCount" val="1"/>
-		<set name="itemConsumeId" val="6652"/>
+		<set name="itemConsumeId" val="6652"/> <!-- Scroll: Protection of Valakas -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="75"/>
@@ -329,12 +325,13 @@
 		</for>
 	</skill>
 	<skill id="2232" levels="1" name="Amulet: Slay Valakas">
+		<!-- Amulet: Slay Valakas. Increases one's P. Atk. when fighting against Valakas. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="hitTime" val="1000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="itemConsumeCount" val="1"/>
-		<set name="itemConsumeId" val="6655"/>
+		<set name="itemConsumeId" val="6655"/> <!-- Scroll: Slay Valakas -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="75"/>
@@ -360,6 +357,7 @@
 		<set name="target" val="TARGET_SELF"/>
 	</skill>
 	<skill id="2234" levels="1" name="Disrupting Arrow">
+		<!-- Shock temporarily Immobilizes target. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="4500"/>
 		<set name="reuseDelay" val="10000"/>
@@ -374,7 +372,7 @@
 		<set name="target" val="TARGET_UNLOCKABLE"/>
 		<set name="hitTime" val="500"/>
 		<set name="activateRate" val="100"/>
-		<set name="itemConsumeId" val="8273"/>
+		<set name="itemConsumeId" val="8273"/> <!-- Anteroom Key -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="skillType" val="UNLOCK"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -385,7 +383,7 @@
 		<set name="target" val="TARGET_UNLOCKABLE"/>
 		<set name="hitTime" val="500"/>
 		<set name="activateRate" val="100"/>
-		<set name="itemConsumeId" val="8274"/>
+		<set name="itemConsumeId" val="8274"/> <!-- Chapel Key -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="skillType" val="UNLOCK"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -396,7 +394,7 @@
 		<set name="target" val="TARGET_UNLOCKABLE"/>
 		<set name="hitTime" val="500"/>
 		<set name="activateRate" val="100"/>
-		<set name="itemConsumeId" val="8275"/>
+		<set name="itemConsumeId" val="8275"/> <!-- Key of Darkness -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="skillType" val="UNLOCK"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -407,7 +405,7 @@
 		<set name="target" val="TARGET_UNLOCKABLE"/>
 		<set name="hitTime" val="500"/>
 		<set name="activateRate" val="100"/>
-		<set name="itemConsumeId" val="8056"/>
+		<set name="itemConsumeId" val="8056"/> <!-- Key of Splendor Room -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="skillType" val="UNLOCK"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -415,6 +413,7 @@
 		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="2239" levels="1" name="Petrifaction Scroll">
+		<!-- Turns target to stone. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -476,6 +475,7 @@
 		<set name="isPotion" val="true"/>
 	</skill>
 	<skill id="2246" levels="1" name="Herb of Power">
+		<!-- Herb increases P. Atk. -->
 		<set name="power" val="0"/>
 		<set name="hitTime" val="100"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -491,6 +491,7 @@
 		</for>
 	</skill>
 	<skill id="2247" levels="1" name="Herb of Magic">
+		<!-- Herb increases M. Atk. -->
 		<set name="power" val="0"/>
 		<set name="hitTime" val="100"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -507,12 +508,13 @@
 		</for>
 	</skill>
 	<skill id="2248" levels="1" name="Bless of Fire">
+		<!-- Causes normal physical attacks to become fire attacks. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="1000"/>
 		<set name="reuseDelay" val="500"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7906"/>
+		<set name="itemConsumeId" val="7906"/> <!-- Blessing of Fire -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0">
@@ -522,12 +524,13 @@
 		</for>
 	</skill>
 	<skill id="2249" levels="1" name="Bless of Water">
+		<!-- Causes normal physical attacks to become water attacks. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="1000"/>
 		<set name="reuseDelay" val="500"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7907"/>
+		<set name="itemConsumeId" val="7907"/> <!-- Blessing of Water -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0">
@@ -536,12 +539,13 @@
 		</for>
 	</skill>
 	<skill id="2250" levels="1" name="Bless of Wind">
+		<!-- Causes normal physical attacks to become wind attacks. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="1000"/>
 		<set name="reuseDelay" val="500"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7908"/>
+		<set name="itemConsumeId" val="7908"/> <!-- Blessing of Wind -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0">
@@ -550,12 +554,13 @@
 		</for>
 	</skill>
 	<skill id="2251" levels="1" name="Bless of Earth">
+		<!-- Causes normal physical attacks to become earth attacks. -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="1000"/>
 		<set name="reuseDelay" val="500"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7909"/>
+		<set name="itemConsumeId" val="7909"/> <!-- Blessing of Earth -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0">
@@ -564,6 +569,7 @@
 		</for>
 	</skill>
 	<skill id="2252" levels="1" name="Bless of Darkness">
+		<!-- Causes normal physical attacks to become dark attacks. -->
 		<set name="isMagic" val="2"/>
 		<!-- Static Skill -->
 		<set name="element" val="5"/>
@@ -573,7 +579,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7910"/>
+		<set name="itemConsumeId" val="7910"/> <!-- Blessing of Darkness -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="holy_attack">
@@ -582,6 +588,7 @@
 		</for>
 	</skill>
 	<skill id="2253" levels="1" name="Bless of Sacredness">
+		<!-- Causes normal physical attacks to become sacred attacks. -->
 		<set name="isMagic" val="2"/>
 		<!-- Static Skill -->
 		<set name="element" val="4"/>
@@ -591,7 +598,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7911"/>
+		<set name="itemConsumeId" val="7911"/> <!-- Blessing of Sanctity -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="600" val="0" abnormalLvl="1" abnormalType="holy_attack">
@@ -604,7 +611,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7912"/>
+		<set name="itemConsumeId" val="7912"/> <!-- Fire Crystal -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="CrystalAtr">
@@ -617,7 +624,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7913"/>
+		<set name="itemConsumeId" val="7913"/> <!-- Water Crystal -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="CrystalAtr">
@@ -630,7 +637,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7914"/>
+		<set name="itemConsumeId" val="7914"/> <!-- Wind Crystal -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="CrystalAtr">
@@ -643,7 +650,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="7915"/>
+		<set name="itemConsumeId" val="7915"/> <!-- Earth Crystal -->
 		<set name="itemConsumeCount" val="1"/>
 		<for>
 			<effect count="1" name="Buff" time="1200" val="0" stackOrder="1" stackType="CrystalAtr">
@@ -663,7 +670,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="1000"/>
 		<set name="staticHitTime" val="true"/>
-		<set name="itemConsumeId" val="7916"/>
+		<set name="itemConsumeId" val="7916"/> <!-- Dark Crystal -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2259" levels="3" name="Crystal of Sacredness">
@@ -678,7 +685,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="1000"/>
 		<set name="staticHitTime" val="true"/>
-		<set name="itemConsumeId" val="7917"/>
+		<set name="itemConsumeId" val="7917"/> <!-- Sanctity Crystal -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2260" levels="1" name="Key of Riddles">
@@ -686,9 +693,9 @@
 		<set name="skillType" val="CREATE_ITEM"/>
 		<set name="hitTime" val="500"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="itemConsumeId" val="8058"/>
+		<set name="itemConsumeId" val="8058"/> <!-- Lockup Research Report -->
 		<set name="itemConsumeCount" val="1"/>
-		<set name="create_item_id" val="8059"/>
+		<set name="create_item_id" val="8059"/> <!-- Research Report -->
 		<set name="create_item_count" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -794,7 +801,6 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="2271" levels="1" name="Item - Hot Spring Fish">
-		<!--<set name="itemConsumeId" val=""/><set name="itemConsumeCount" val="1"/> -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -802,7 +808,7 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="2272" levels="1" name="Item - Fight Song Crystal">
-		<set name="itemConsumeId" val="8555"/>
+		<set name="itemConsumeId" val="8555"/> <!-- Echo Crystal - Viva Victory Korea -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
@@ -811,7 +817,6 @@
 		<set name="effectRange" val="-1"/>
 	</skill>
 	<skill id="2273" levels="1" name="Item - Red Devil Support Box">
-		<!--<set name="itemConsumeId" val=""/><set name="itemConsumeCount" val="1"/> -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="COREDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -820,6 +825,7 @@
 		<set name="magicLvl" val="1"/>
 	</skill>
 	<skill id="2274" levels="9" name="Fisherman's Potion">
+		<!-- Fisherman's Potion Green. Fishing Mastery Level is now reduced.You can now catch green fish. -->
 		<table name="#power">2 5 8 11 14 17 20 23 26</table>
 		<table name="#itemConsumeId">8193 8194 8195 8196 8197 8198 8199 8200 8201</table>
 		<set name="itemConsumeId" val="#itemConsumeId"/>
@@ -838,7 +844,7 @@
 		</for>
 	</skill>
 	<skill id="2275" levels="1" name="Fishing Potion">
-		<set name="itemConsumeId" val="8202"/>
+		<set name="itemConsumeId" val="8202"/> <!-- Fishing Potion -->
 		<set name="itemConsumeCount" val="1"/>
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
@@ -894,6 +900,7 @@
 		<set name="isPotion" val="true"/>
 	</skill>
 	<skill id="2280" levels="1" name="Herb of Power">
+		<!-- Temporarily increases P. Atk. Effect 3. -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -911,6 +918,7 @@
 		</for>
 	</skill>
 	<skill id="2281" levels="1" name="Herb of Magic">
+		<!-- Temporarily increases M. Atk. Effect 3. -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -928,6 +936,7 @@
 		</for>
 	</skill>
 	<skill id="2282" levels="1" name="Herb of Atk. Spd.">
+		<!-- Temporarily increases Atk. Spd. Effect 2. -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -945,6 +954,7 @@
 		</for>
 	</skill>
 	<skill id="2283" levels="1" name="Herb of Casting Spd.">
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -962,6 +972,7 @@
 		</for>
 	</skill>
 	<skill id="2284" levels="1" name="Herb of Critical Attack">
+		<!-- Temporarily increases critical attack rate. Effect 3. -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -979,6 +990,7 @@
 		</for>
 	</skill>
 	<skill id="2285" levels="1" name="Herb of Speed">
+		<!-- Temporarily increases Speed. Effect 2. -->
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
@@ -1050,7 +1062,7 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
-		<set name="itemConsumeId" val="8659"/>
+		<set name="itemConsumeId" val="8659"/> <!-- Coffer of Shadows -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2291" levels="1" name="Facelifting Potion">
@@ -1061,7 +1073,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8664"/>
+		<set name="itemConsumeId" val="8664"/> <!-- Masking Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2292" levels="1" name="Facelifting Potion">
@@ -1072,7 +1084,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8665"/>
+		<set name="itemConsumeId" val="8665"/> <!-- Masking Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2293" levels="1" name="Facelifting Potion">
@@ -1083,7 +1095,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8666"/>
+		<set name="itemConsumeId" val="8666"/> <!-- Masking Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2294" levels="1" name="Dye Potion">
@@ -1094,7 +1106,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8667"/>
+		<set name="itemConsumeId" val="8667"/> <!-- Chameleon Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2295" levels="1" name="Dye Potion">
@@ -1105,7 +1117,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8668"/>
+		<set name="itemConsumeId" val="8668"/> <!-- Chameleon Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2296" levels="1" name="Dye Potion">
@@ -1116,7 +1128,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8669"/>
+		<set name="itemConsumeId" val="8669"/> <!-- Chameleon Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2297" levels="1" name="Dye Potion">
@@ -1127,7 +1139,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8670"/>
+		<set name="itemConsumeId" val="8670"/> <!-- Chameleon Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2298" levels="1" name="Hair Style Change Potion">
@@ -1138,7 +1150,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8671"/>
+		<set name="itemConsumeId" val="8671"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 	<skill id="2299" levels="1" name="Hair Style Change Potion">
@@ -1149,7 +1161,7 @@
 		<set name="effectRange" val="-1"/>
 		<set name="magicLvl" val="1"/>
 		<set name="hitTime" val="500"/>
-		<set name="itemConsumeId" val="8672"/>
+		<set name="itemConsumeId" val="8672"/> <!-- Luxury Oil -->
 		<set name="itemConsumeCount" val="1"/>
 	</skill>
 </list>

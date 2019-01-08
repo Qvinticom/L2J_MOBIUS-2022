@@ -12,7 +12,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46201" name="Halloween Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a weapon into that of a Halloween weapon. -->
+		<!-- Changes the appearance of a weapon into that of a Halloween weapon. Can be used on shields and sigils. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -345,7 +345,7 @@
 		</stats>
 	</item>
 	<item id="46218" name="Magic Number Cube" additionalName="Event" type="EtcItem">
-		<!-- A Magic Number Cube that will allow you to participate in the Market Eleven giveaway. Use it on Eleveny, which is summoned at 11 AM and 11 PM in order to participate in the giveaway. Will be deleted once the event ends. -->
+		<!-- A Magic Number Cube that will allow you to participate in the Market Five giveaway. In order to participate in the giveaway, use it on Cube Five, which is summoned at 09:00 and 21:00 in Fantasy Isle. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_11th_event_group" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -358,7 +358,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46219" name="Summon Scroll: Piero" additionalName="Event" type="EtcItem">
-		<!-- Scroll that summons Market Eleven's mascot, Piero. Use it to play 'Win Against Piero'. Will be deleted once the event ends. -->
+		<!-- Scroll that summons Market Five's mascot, Piero. Use it to play the 'Win Against Piero' game. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_11th_event_solo" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -371,7 +371,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46220" name="Membership Card - Market Eleven" additionalName="Event" type="EtcItem">
-		<!-- A membership card for the Eleven Market that was opened to celebrate Lineage 2's 11th anniversary. Will be deleted once the event ends. -->
+		<!-- A membership card for the Market Five that was opened to celebrate the 5th anniversary of Lineage II in Europe. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.ev_buff_11th" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -399,7 +399,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46222" name="L2 Market +8 Amaranthine Weapon Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a + 8 Amaranthine weapon. Will be deleted once the event ends. -->
+		<!-- Get a +8 Helios weapon. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -427,7 +427,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46224" name="L2 Market +4 Eternal Armor Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a + 4 Eternal armor set. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a +4 Eternal armor set. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -497,7 +497,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46229" name="L2 Market R99 Weapon Enhancement Stone Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Amaranthine Enhancement Stone. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Helios Enhancement Stone. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -511,7 +511,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46230" name="+8 Amaranthine Shaper Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Shaper. -->
+		<!-- Double-click to get a +8 enchanted Helios Shaper. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -523,7 +523,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46231" name="+8 Amaranthine Cutter Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Cutter. -->
+		<!-- Double-click to get a +8 enchanted Helios Cutter. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -535,7 +535,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46232" name="+8 Amaranthine Slasher Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Slasher. -->
+		<!-- Double-click to get a +8 enchanted Helios Slasher. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -547,7 +547,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46233" name="+8 Amaranthine Avenger Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Dualsword. -->
+		<!-- Double-click to get a +8 enchanted Helios dual sword. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -559,7 +559,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46234" name="+8 Amaranthine Fighter Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Dual Dagger. -->
+		<!-- Double-click to get a +8 enchanted Helios Dual Dagger. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -571,7 +571,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46235" name="+8 Amaranthine Stormer Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Dual Blunt Weapon. -->
+		<!-- Double-click to get a +8 enchanted Helios Dual Blunt Weapon. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -583,7 +583,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46236" name="+8 Amaranthine Thrower Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Avenger. -->
+		<!-- Double-click to get a +8 enchanted Helios Avenger. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -595,7 +595,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46237" name="+8 Amaranthine Shooter Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Fighter. -->
+		<!-- Double-click to get a +8 enchanted Helios Fighter. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -607,7 +607,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46238" name="+8 Amaranthine Buster Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Stormer. -->
+		<!-- Double-click to get a +8 enchanted Helios Stormer. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -619,7 +619,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46239" name="+8 Amaranthine Caster Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Thrower. -->
+		<!-- Double-click to get a +8 enchanted Helios Thrower. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -631,7 +631,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46240" name="+8 Amaranthine Retributer Capsule" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to get a + 8 enchanted Amaranthine Shooter. -->
+		<!-- Double-click to get a +8 enchanted Helios Shooter. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -643,7 +643,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46241" name="+4 Eternal Heavy Armor Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 4 enchanted Eternal Heavy Armor set. -->
+		<!-- Double-click to get a +4 enchanted Eternal Heavy Armor set. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -656,7 +656,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46242" name="+4 Eternal Light Armor Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 4 enchanted Eternal Light Armor set. -->
+		<!-- Double-click to get a +4 enchanted Eternal Light Armor set. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -669,7 +669,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46243" name="+4 Eternal Robe Armor Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a + 4 enchanted Eternal Robe Armor set. -->
+		<!-- Double-click to get a +4 enchanted Eternal Robe Armor set. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -682,7 +682,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46244" name="11th Anniversary Coin" additionalName="Event" type="EtcItem">
-		<!-- 11th Anniversary coin. Purchase various items at Market Eleven. Will be deleted once the event ends. -->
+		<!-- 5th Anniversary coin. Used to purchase various items at the Market Five in Fantasy Isle. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -764,7 +764,7 @@
 		</stats>
 	</item>
 	<item id="46250" name="Blessed Venezia Rune" type="EtcItem">
-		<!-- Keep this in your inventory to gain XP/SP + 11% when hunting. All levels. Will be deleted once the event ends. -->
+		<!-- Keep this in your inventory to gain XP/ SP +11% when hunting. All levels. Will be deleted once the event ends. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -792,7 +792,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46252" name="Venezia Rune" type="EtcItem">
-		<!-- Keep this in your inventory to gain XP/SP + 22% when hunting. The effect only applies to characters below Lv. 99. Will be deleted once the event ends. -->
+		<!-- Keep this in your inventory to gain XP/ SP +22% when hunting. The effect only applies to characters below Lv. 99. Will be deleted once the event ends. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -820,7 +820,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46254" name="Dandy's Golden Ball" type="EtcItem">
-		<!-- For 1 hr., XP/SP gain + 100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
+		<!-- For 1 hr., XP/ SP gain +100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
 		<set name="icon" val="icon.ev_dinos_baseball_gold" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -932,7 +932,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46264" name="Freya's Art of Seduction" type="EtcItem">
-		<!-- Dimensional Item. When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20 MP Cost 15% for 30 minutes. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in Olympiad. -->
+		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/ M. Def 30%, and Speed by 20 MP Cost 15% for 30 minutes. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1006,7 +1006,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46270" name="Dark Knight Suit Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of a Dark Knight Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Dark Knight suit. -->
+		<!-- Modifies the appearance of armor into that of a Dark Knight Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Dark Knight Suit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1044,7 +1044,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46274" name="Wind Vitality Tonic" type="EtcItem">
-		<!-- Water of Vitality containing the strength of the wind. Recovers half of a Vitality slot. Cooldown time is 1 minute. Cannot be used in the Olympiad. The 5 uses in 1 week limit does not apply. -->
+		<!-- Water of Vitality containing the strength of the wind. Recovers half of a Vitality slot. Cooldown time is 1 minute. Cannot be used in the Olympiad. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1170,7 +1170,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46286" name="Christmas Fishing Rod" type="Weapon">
-		<!-- Fishing rod purchased from Santa Claus. Changes appearance to that into that of Santa Claus. Consumes 1 Fishing Shot. Will be deleted after the event. -->
+		<!-- Fishing rod made for fishing during Christmas. Changes appearance into that of Santa Claus. Consumes 1 Fishing Shot. Will be deleted after the event. -->
 		<set name="icon" val="icon.christmas_fishingrod_i00" />
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="default_action" val="EQUIP" />
@@ -1193,7 +1193,7 @@
 		</stats>
 	</item>
 	<item id="46287" name="Fish Gift Box" type="EtcItem">
-		<!-- Fish that has swallowed one of Santa Claus' gift box. Take it to Santa Claus to exchange for a Christmas Talisman Box. Will be deleted after the event. -->
+		<!-- Fish that has swallowed one of Santa Claus' gift box. Collect these and take them to Santa Claus. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_swallowing_gift_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1203,7 +1203,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46288" name="Holiday Blessing" type="EtcItem">
-		<!-- Double-click to get + 10% XP/SP for 2 hours, Vitality Consumption - 20%. Additionaly, recovers 1 bar of Vitality and changes the appearance into that of Santa Claus. Will be deleted after the event. -->
+		<!-- Double-click to get +10% XP/ SP and Vitality Consumption -20% for 2 hours. Additionaly, recovers 1 bar of Vitality and changes the appearance into that of Santa Claus. Will be deleted after the event. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1233,7 +1233,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46291" name="Christmas Talisman" additionalName="ALL STAT +2" type="Armor">
-		<!-- Event item. All Stats + 2 when equipped. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Event item. All Stats +2 when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1247,7 +1247,7 @@
 		</skills>
 	</item>
 	<item id="46292" name="Christmas Talisman" additionalName="ALL STAT +1" type="Armor">
-		<!-- Event item. All Stats + 1 when equipped. Effect does not stack with additional Talismans of the same type. -->
+		<!-- Event item. All Stats +1 when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1261,7 +1261,7 @@
 		</skills>
 	</item>
 	<item id="46293" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. P. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1282,7 +1282,7 @@
 		</skills>
 	</item>
 	<item id="46294" name="Christmas Talisman: M. Skill Critical Damage" additionalName="1-hour" type="Armor">
-		<!-- Event item. M. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. M. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1303,7 +1303,7 @@
 		</skills>
 	</item>
 	<item id="46295" name="Christmas Talisman: Ultimate Defense" additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Atk. + 5000 and M. Def. + 5000 for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. P. Def. +5000 and M. Def. +5000 for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1324,7 +1324,7 @@
 		</skills>
 	</item>
 	<item id="46296" name="Christmas Talisman: Debuff Resistance" additionalName="1-hour" type="Armor">
-		<!-- Event Item. Defends against Debuffs 5 times for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event Item. Defends against Debuffs 5 times for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1345,7 +1345,7 @@
 		</skills>
 	</item>
 	<item id="46297" name="Christmas Talisman: P. Atk." additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Atk. + 5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. P. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1366,7 +1366,7 @@
 		</skills>
 	</item>
 	<item id="46298" name="Christmas Talisman: M. Atk." additionalName="1-hour" type="Armor">
-		<!-- Event item. M. Atk. + 5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. M. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1387,7 +1387,7 @@
 		</skills>
 	</item>
 	<item id="46299" name="Christmas Talisman: P. Def." additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Def. + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
+		<!-- Event item. P. Def. +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />

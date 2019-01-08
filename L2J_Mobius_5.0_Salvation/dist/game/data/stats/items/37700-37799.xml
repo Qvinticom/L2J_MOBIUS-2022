@@ -101,7 +101,7 @@
 		</skills>
 	</item>
 	<item id="37705" name="Chocolate Truffle" type="EtcItem">
-		<!-- Recovers vitality in peace zones. Double click to cast Decadence on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. Cannot be stored in a warehouse. -->
+		<!-- Double click to cast Decadence (For 2 hours, STR +2, INT +2, and Attribute Resistance +20) on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -122,7 +122,7 @@
 		</skills>
 	</item>
 	<item id="37706" name="Candy Heart" type="EtcItem">
-		<!-- Recovers vitality in peace zones. Double click to cast Sugar Rush on the entire party. Can be stacked with Decadence and Forever Alone effects. Cannot be stored in a warehouse. -->
+		<!-- Double click to cast Sugar Rush (For 2 hours, STR +2, INT +2, DEX +2, and WIT +2) on the entire party. Can be stacked with Decadence and Forever Alone effects. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -143,7 +143,7 @@
 		</skills>
 	</item>
 	<item id="37707" name="Comfort Cookie" type="EtcItem">
-		<!-- Recovers vitality in peace zones. Double click to cast Forever Alone on the entire party. Can be stacked with Decadence and Sugar Rush effects. Cannot be stored in a warehouse. -->
+		<!-- Double click to cast Forever Alone (For 2 hours, STR +2, INT +2, CON +2, and MEN +2) on the entire party. Can be stacked with Decadence and Sugar Rush effects. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -164,7 +164,7 @@
 		</skills>
 	</item>
 	<item id="37708" name="Coco's Transformation Chocolate" type="EtcItem">
-		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. Cannot be stored in a warehouse. -->
+		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -184,7 +184,7 @@
 		</skills>
 	</item>
 	<item id="37709" name="Coco's Transformation Candy" type="EtcItem">
-		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. Cannot be stored in a warehouse. -->
+		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -204,7 +204,7 @@
 		</skills>
 	</item>
 	<item id="37710" name="Coco's Transformation Cookie" type="EtcItem">
-		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. Cannot be stored in a warehouse. -->
+		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -224,7 +224,7 @@
 		</skills>
 	</item>
 	<item id="37711" name="Coco's Friend Summon Chocolate" type="EtcItem">
-		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. Cannot be stored in a warehouse. -->
+		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -244,7 +244,7 @@
 		</skills>
 	</item>
 	<item id="37712" name="Coco's Friend Summon Candy" type="EtcItem">
-		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. Cannot be stored in a warehouse. -->
+		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -264,7 +264,7 @@
 		</skills>
 	</item>
 	<item id="37713" name="Coco's Friend Summon Cookie" type="EtcItem">
-		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. Cannot be stored in a warehouse. -->
+		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -284,7 +284,7 @@
 		</skills>
 	</item>
 	<item id="37714" name="Talisman - Lilith" type="Armor">
-		<!-- When equipped, M. Def. + 552, MP Recovery by 3, Dark Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
+		<!-- When equipped, M. Def. +552, MP Recovery Bonus by 3, Dark Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.lilith_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -300,7 +300,7 @@
 		</skills>
 	</item>
 	<item id="37715" name="Talisman - Anakim" type="Armor">
-		<!-- When equipped, P. Def. + 971, HP Recovery by 6, Dark Resistance and Holy Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
+		<!-- When equipped, P. Def. +971, HP Recovery Bonus by 6, Dark Resistance and Holy Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.anakim_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -321,7 +321,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37717" name="Talisman - Seven Signs" type="Armor">
-		<!-- When equipped, M. Def. + 736, P. Def. by 1126, MP Recovery by 4, HP Recovery by 8, Attribute Resistance by 10, and Damage Reflect Resistance by 14. When equipped with Talisman - Longing, Attribute Attack increases by 50 and all weapon resistance increases by 3%. Equipping two talismans will give the effect of one. -->
+		<!-- When equipped, M. Def. +736, P. Def. +1126, MP Recovery Bonus +4, HP Recovery Bonus +8, all attribute resistance +10, and damage reflect resistance +14. When equipped with Talisman - Longing, Attribute Attack +50 and all weapon resistance +3%. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.sevensign_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -337,7 +337,7 @@
 		</skills>
 	</item>
 	<item id="37718" name="Shiny Elemental Shirt" type="Armor">
-		<!-- Sparkly magic shirt containing Einhasad's energy. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed. -->
+		<!-- Shining magic shirt containing Einhasad's energy. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or above, passive stats are increased. When enchanted to +6 or above, various active skills are bestowed. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -372,7 +372,7 @@
 		</stats>
 	</item>
 	<item id="37719" name="Pa'agrio's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -382,12 +382,12 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23240" min="1" max="1" chance="100" />
-			<item id="37710" min="1" max="1" chance="5" />
+			<item id="23240" min="1" max="1" chance="100" /> <!-- Pa'agrio's Shirt -->
+			<item id="37710" min="1" max="1" chance="5" /> <!-- Coco's Transformation Cookie -->
 		</capsuled_items>
 	</item>
 	<item id="37720" name="Maphr's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -397,12 +397,12 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23307" min="1" max="1" chance="100" />
-			<item id="37710" min="1" max="1" chance="5" />
+			<item id="23307" min="1" max="1" chance="100" /> <!-- Maphr's Shirt -->
+			<item id="37710" min="1" max="1" chance="5" /> <!-- Coco's Transformation Cookie -->
 		</capsuled_items>
 	</item>
 	<item id="37721" name="Sayha's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -412,12 +412,12 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23301" min="1" max="1" chance="100" />
-			<item id="37710" min="1" max="1" chance="5" />
+			<item id="23301" min="1" max="1" chance="100" /> <!-- Sayha's Shirt -->
+			<item id="37710" min="1" max="1" chance="5" /> <!-- Coco's Transformation Cookie -->
 		</capsuled_items>
 	</item>
 	<item id="37722" name="Eva's Special Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -427,12 +427,12 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23304" min="1" max="1" chance="100" />
-			<item id="37710" min="1" max="1" chance="5" />
+			<item id="23304" min="1" max="1" chance="100" /> <!-- Eva's Shirt -->
+			<item id="37710" min="1" max="1" chance="5" /> <!-- Coco's Transformation Cookie -->
 		</capsuled_items>
 	</item>
 	<item id="37723" name="Shiny Elemental Shirt Exchange Stone" type="EtcItem">
-		<!-- Bring Pa'agrio's Shirt, Maphr's Shirt, Sayha's Shirt, or Eva's Shirt to the Fantasy Isle Paddy to exchange for a Shiny Elemental Shirt. -->
+		<!-- Bring this to the Fantasy Isle Paddy to exchange your +8 shirt for the same shirt but enchanted to +10. Note: the shirt cannot be traded after exchange. -->
 		<set name="icon" val="icon.shirt_stone" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -472,12 +472,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37732" min="1" max="1" chance="100" /> <!-- Blessed Antharas's Earring -->
-			<item id="37733" min="1" max="1" chance="100" /> <!-- Blessed Valakas's Necklace -->
-			<item id="37734" min="1" max="1" chance="100" /> <!-- Tauti's Ring -->
-			<item id="37735" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring -->
-			<item id="37736" min="1" max="1" chance="100" /> <!-- Blessed Zaken's Earring -->
-			<item id="37737" min="1" max="1" chance="100" /> <!-- Ruler's Authority Belt -->
+			<item id="37732" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring - 7-day -->
+			<item id="37733" min="1" max="1" chance="100" /> <!-- Blessed Valakas' Necklace - 7-day -->
+			<item id="37734" min="1" max="1" chance="100" /> <!-- Tauti's Ring - 7-day -->
+			<item id="37735" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring - 7-day -->
+			<item id="37736" min="1" max="1" chance="100" /> <!-- Blessed Zaken's Earring - 7-day -->
+			<item id="37737" min="1" max="1" chance="100" /> <!-- Ruler's Authority - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="37728" name="Dandy's Challenge Box" type="EtcItem">
@@ -495,12 +495,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37731" min="1" max="1" chance="100" /> <!-- Dandy's Challenge Scroll -->
+			<item id="37731" min="1" max="1" chance="100" /> <!-- Dandy's Scroll: Challenge -->
 			<item id="37725" min="1" max="1" chance="100" /> <!-- NC Dinos Uniform -->
 		</capsuled_items>
 	</item>
 	<item id="37729" name="Dandy's Scroll: Faith" type="EtcItem">
-		<!-- For 60 minutes, decreases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Dandy's Cheer and Dandy's Passion buffs are not applied at the same time. -->
+		<!-- For 60 minutes, increases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Toy Knight's Cheer and Toy Knight's Passion buffs are not applied at the same time. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -564,7 +564,7 @@
 		</skills>
 	</item>
 	<item id="37732" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
-		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -586,7 +586,7 @@
 		</stats>
 	</item>
 	<item id="37733" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
-		<!-- HP +625, MP +79, Sleep Resistance 50% increase, Sleep Attack Rate 50% increase, physical/magic skill cooldown decrease, Wild Magic Effect, damage shield effect, fire resistance 30 increase, Dark Resistance 20 increase, STR +3, INT +3. P. Skill Atk. 5% increase, P. Atk. 10% increase, M. Atk. 20% increase, hold resistance skill use. Hold resistance 100% increase momentarily. Cannot be used in the Olympiad. -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -608,7 +608,7 @@
 		</stats>
 	</item>
 	<item id="37734" name="Tauti's Ring" additionalName="7-day" type="Armor">
-		<!-- Tauti's Ring. Fire/Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/yoke/exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/M. Def.) Cannot be used in the Olympiad. -->
+		<!-- Tauti's Ring. Fire/ Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/ yoke/ exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. P. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/ M. Def.) Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -632,7 +632,7 @@
 		</stats>
 	</item>
 	<item id="37735" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
-		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling, Danger Zone Resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
+		<!-- MP +38, P./ M. Debuff Resistance +15, MP Regeneration +3, P. Critical Damage +20%, and P. Accuracy +5. Poison Resistance +50%, Poison Atk. Rate +50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance +20%, Atk. Spd. and Casting Spd. +6%, and Wind/ Water Resistance +30. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two of the same rings are equipped. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -655,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="37736" name="Blessed Zaken's Earring" additionalName="7-day" type="Armor">
-		<!-- MP +37, Bleed Resistance 30% increase, Bleed Attack Rate 30% increase, Heal Amount 15% increase, Vampiric Rage Effect, Stun/Mental resistance 30% increase, Stun/Mental attack rate 30% increase, Dark Resistance 15 increase. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
+		<!-- MP +37, Bleed Resistance +30%, Bleed Attack Rate +30%, Heal Amount +15%, Vampiric Rage Effect, Stun/ Mental resistance +30%, Stun/ Mental attack rate +30%, Dark Resistance +15. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -943,7 +943,7 @@
 		<set name="icon" val="icon.etc_magic_energy_i02" />
 	</item>
 	<item id="37763" name="Exalted Cloak" type="Armor">
-		<!-- A cloak that symbolizes the Exalted status. STR/DEX/CON/INT/WIT/MEN/LUC/CHA +1. -->
+		<!-- A cloak that symbolizes the Exalted status. STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +1. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1060,7 +1060,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37772" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
-		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Amaranthine equipment for Blessed equipment. -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Helios equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="price" val="155659040" />
@@ -1306,7 +1306,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37799" name="Potion of Protection: Knock Back/ Knock Down" additionalName="Low-grade" type="EtcItem">
-		<!-- When used, increases Resistance to Knock back/Knock Down Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
+		<!-- When used, increases Resistance to Knock back/ Knock Down Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />

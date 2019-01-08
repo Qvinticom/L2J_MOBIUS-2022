@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11300" type="Weapon" name="Icarus Dual Sword - Destruction">
+		<!-- Masterwork Item that increases P. Atk. When enchanted, P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon will increase more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -19,7 +20,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3411-1" />
-		<set name="item_skill" val="3835-3;3552-1" />
+		<set name="item_skill" val="3835-3;3552-1" /> <!-- Dual-Blade Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -30,6 +31,7 @@
 		</for>
 	</item>
 	<item id="11301" type="Weapon" name="Icarus Disperser - Confusion">
+		<!-- Masterwork Item that increases Evasion. Bestows one of the following functions: Focus, Evasion, or Critical Damage. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -47,7 +49,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3858-3" />
+		<set name="item_skill" val="3858-3" /> <!-- Dagger of Avoid -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -59,6 +61,7 @@
 		</for>
 	</item>
 	<item id="11302" type="Weapon" name="Icarus Disperser - Confusion - Focus">
+		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -76,7 +79,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3858-3;3567-2" />
+		<set name="item_skill" val="3858-3;3567-2" /> <!-- Dagger of Avoid -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -88,6 +91,7 @@
 		</for>
 	</item>
 	<item id="11303" type="Weapon" name="Icarus Disperser - Confusion - Evasion">
+		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -105,7 +109,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3009-8;3552-1;3858-3" />
+		<set name="item_skill" val="3009-8;3552-1;3858-3" /> <!-- Special Ability: Evasion -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -117,6 +121,7 @@
 		</for>
 	</item>
 	<item id="11304" type="Weapon" name="Icarus Disperser - Confusion - Critical Damage">
+		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -134,7 +139,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3858-3;3066-4" />
+		<set name="item_skill" val="3858-3;3066-4" /> <!-- Dagger of Avoid -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -146,6 +151,7 @@
 		</for>
 	</item>
 	<item id="11305" type="Weapon" name="Icarus Sawsword - Destruction">
+		<!-- Masterwork Item that increases P. Atk. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -164,7 +170,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3825-3" />
+		<set name="item_skill" val="3825-3" /> <!-- Sword of Might -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -175,6 +181,7 @@
 		</for>
 	</item>
 	<item id="11306" type="Weapon" name="Icarus Sawsword - Destruction - Focus">
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -193,7 +200,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3825-3;3566-2" />
+		<set name="item_skill" val="3825-3;3566-2" /> <!-- Sword of Might -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -204,6 +211,7 @@
 		</for>
 	</item>
 	<item id="11307" type="Weapon" name="Icarus Sawsword - Destruction - Health">
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -222,7 +230,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3825-3;3013-3" />
+		<set name="item_skill" val="3825-3;3013-3" /> <!-- Sword of Might -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -233,6 +241,7 @@
 		</for>
 	</item>
 	<item id="11308" type="Weapon" name="Icarus Sawsword - Destruction - Light">
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -251,7 +260,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3552-1;3498-1;3825-3" />
+		<set name="item_skill" val="3552-1;3498-1;3825-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -262,6 +271,7 @@
 		</for>
 	</item>
 	<item id="11309" type="Weapon" name="Icarus Shooter - Concentration">
+		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -281,7 +291,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3868-3" />
+		<set name="item_skill" val="3868-3" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -296,6 +306,7 @@
 		</for>
 	</item>
 	<item id="11310" type="Weapon" name="Icarus Shooter - Concentration - Cheap Shot">
+		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement> . Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -315,7 +326,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3868-3;3360-1" />
+		<set name="item_skill" val="3868-3;3360-1" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -330,6 +341,7 @@
 		</for>
 	</item>
 	<item id="11311" type="Weapon" name="Icarus Shooter - Concentration - Guidance">
+		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -349,7 +361,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3868-3;3573-2" />
+		<set name="item_skill" val="3868-3;3573-2" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -364,6 +376,7 @@
 		</for>
 	</item>
 	<item id="11312" type="Weapon" name="Icarus Shooter - Concentration - Focus">
+		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -383,7 +396,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3868-3;3567-2" />
+		<set name="item_skill" val="3868-3;3567-2" /> <!-- Crossbow of Guidance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -398,6 +411,7 @@
 		</for>
 	</item>
 	<item id="11313" type="Weapon" name="Icarus Stinger - Destruction">
+		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. Focus, Health, or Light can be bestowed. When When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -417,7 +431,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3830-3" />
+		<set name="item_skill" val="3830-3" /> <!-- Rapier of Might -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -432,6 +446,7 @@
 		</for>
 	</item>
 	<item id="11314" type="Weapon" name="Icarus Stinger - Destruction - Focus">
+		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -451,7 +466,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3830-3;3566-2" />
+		<set name="item_skill" val="3830-3;3566-2" /> <!-- Rapier of Might -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -466,6 +481,7 @@
 		</for>
 	</item>
 	<item id="11315" type="Weapon" name="Icarus Stinger - Destruction - Health">
+		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -485,7 +501,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3830-3;3013-3" />
+		<set name="item_skill" val="3830-3;3013-3" /> <!-- Rapier of Might -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -500,6 +516,7 @@
 		</for>
 	</item>
 	<item id="11316" type="Weapon" name="Icarus Stinger - Destruction - Light">
+		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Enchanted to . 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -519,7 +536,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3552-1;3498-1;3830-3" />
+		<set name="item_skill" val="3552-1;3498-1;3830-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -534,6 +551,7 @@
 		</for>
 	</item>
 	<item id="11317" type="Weapon" name="Icarus Spirit - Nature">
+		<!-- Masterwork Item that increases Max MP. Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -552,7 +570,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3852-3" />
+		<set name="item_skill" val="3852-3" /> <!-- Sword of Mana Boost -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -563,6 +581,7 @@
 		</for>
 	</item>
 	<item id="11318" type="Weapon" name="Icarus Spirit - Nature - Acumen">
+		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -581,7 +600,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3852-3;3047-2" />
+		<set name="item_skill" val="3852-3;3047-2" /> <!-- Sword of Mana Boost -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -592,6 +611,7 @@
 		</for>
 	</item>
 	<item id="11319" type="Weapon" name="Icarus Spirit - Nature - Mana Up">
+		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -610,7 +630,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3852-3;3014-2" />
+		<set name="item_skill" val="3852-3;3014-2" /> <!-- Sword of Mana Boost -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -621,6 +641,7 @@
 		</for>
 	</item>
 	<item id="11320" type="Weapon" name="Icarus Spirit - Nature - Conversion">
+		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -639,7 +660,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3852-3;3048-2" />
+		<set name="item_skill" val="3852-3;3048-2" /> <!-- Sword of Mana Boost -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -650,6 +671,7 @@
 		</for>
 	</item>
 	<item id="11321" type="Weapon" name="Icarus Spitter - Concentration">
+		<!-- Masterwork Item that increases Accuracy. . Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -670,7 +692,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3863-3" />
+		<set name="item_skill" val="3863-3" /> <!-- Bow of Guidance -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -682,6 +704,7 @@
 		</for>
 	</item>
 	<item id="11322" type="Weapon" name="Icarus Spitter - Concentration - Cheap Shot">
+		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -702,7 +725,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3863-3;3552-1;8312-1" />
+		<set name="item_skill" val="3863-3;3552-1;8312-1" /> <!-- Bow of Guidance -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -714,6 +737,7 @@
 		</for>
 	</item>
 	<item id="11323" type="Weapon" name="Icarus Spitter - Concentration - Guidance">
+		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Accuracy by 5.32 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -734,7 +758,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3863-3;3573-2" />
+		<set name="item_skill" val="3863-3;3573-2" /> <!-- Bow of Guidance -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -746,6 +770,7 @@
 		</for>
 	</item>
 	<item id="11324" type="Weapon" name="Icarus Spitter - Concentration - Focus">
+		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Critical by 116 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -766,7 +791,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3863-3;3567-2" />
+		<set name="item_skill" val="3863-3;3567-2" /> <!-- Bow of Guidance -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -778,6 +803,7 @@
 		</for>
 	</item>
 	<item id="11325" type="Weapon" name="Icarus Wingblade - Lightning">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -796,7 +822,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3851-2" />
+		<set name="item_skill" val="3851-2" /> <!-- Ancient Sword of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -811,6 +837,7 @@
 		</for>
 	</item>
 	<item id="11326" type="Weapon" name="Icarus Wingblade - Lightning - Focus">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -829,7 +856,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3851-2;3566-2" />
+		<set name="item_skill" val="3851-2;3566-2" /> <!-- Ancient Sword of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -844,6 +871,7 @@
 		</for>
 	</item>
 	<item id="11327" type="Weapon" name="Icarus Wingblade - Lightning - Health">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -862,7 +890,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3851-2;3013-3" />
+		<set name="item_skill" val="3851-2;3013-3" /> <!-- Ancient Sword of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -877,6 +905,7 @@
 		</for>
 	</item>
 	<item id="11328" type="Weapon" name="Icarus Wingblade - Lightning - Light">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -895,7 +924,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3552-1;3498-1;3851-2" />
+		<set name="item_skill" val="3552-1;3498-1;3851-2" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -910,6 +939,7 @@
 		</for>
 	</item>
 	<item id="11329" type="Weapon" name="Icarus Trident - Thunder">
+		<!-- Masterwork Item that increases Critical Damage. Bestows one of the following functions: Anger, Critical Stun, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -927,7 +957,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3873-2;3599-1" />
+		<set name="item_skill" val="3873-2;3599-1" /> <!-- Polearm of Critical Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -939,6 +969,7 @@
 		</for>
 	</item>
 	<item id="11330" type="Weapon" name="Icarus Trident - Thunder - Anger">
+		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. +78. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -956,7 +987,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3873-2;3600-10" />
+		<set name="item_skill" val="3873-2;3600-10" /> <!-- Polearm of Critical Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -968,6 +999,7 @@
 		</for>
 	</item>
 	<item id="11331" type="Weapon" name="Icarus Trident - Thunder - Critical Stun">
+		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Has a 48% chance of stunning a target during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -987,7 +1019,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="48" />
 		<set name="oncrit_skill" val="3070-4" />
-		<set name="item_skill" val="3873-2;3552-2" />
+		<set name="item_skill" val="3873-2;3552-2" /> <!-- Polearm of Critical Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -999,6 +1031,7 @@
 		</for>
 	</item>
 	<item id="11332" type="Weapon" name="Icarus Trident - Thunder - Light">
+		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1016,7 +1049,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3552-2;3498-1;3873-2" />
+		<set name="item_skill" val="3552-2;3498-1;3873-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1028,6 +1061,7 @@
 		</for>
 	</item>
 	<item id="11333" type="Weapon" name="Icarus Hammer - Earth">
+		<!-- Masterwork Item that increases Max HP. . Bestows one of the following functions: Anger, Health, or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1045,7 +1079,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3884-3" />
+		<set name="item_skill" val="3884-3" /> <!-- Blunt Weapon of Boost HP -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1057,6 +1091,7 @@
 		</for>
 	</item>
 	<item id="11334" type="Weapon" name="Icarus Hammer - Earth - Anger">
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Your own HP decreases by 15% and P. Atk. +78 during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1074,7 +1109,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3884-3;3057-4" />
+		<set name="item_skill" val="3884-3;3057-4" /> <!-- Blunt Weapon of Boost HP -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1086,6 +1121,7 @@
 		</for>
 	</item>
 	<item id="11335" type="Weapon" name="Icarus Hammer - Earth - Health">
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1103,7 +1139,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3884-3;3013-3" />
+		<set name="item_skill" val="3884-3;3013-3" /> <!-- Blunt Weapon of Boost HP -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1115,6 +1151,7 @@
 		</for>
 	</item>
 	<item id="11336" type="Weapon" name="Icarus Hammer - Earth - Rsk. Focus">
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 164 when HP is 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1132,7 +1169,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3884-3;3027-7" />
+		<set name="item_skill" val="3884-3;3027-7" /> <!-- Blunt Weapon of Boost HP -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1144,6 +1181,7 @@
 		</for>
 	</item>
 	<item id="11337" type="Weapon" name="Icarus Hand - Destruction">
+		<!-- Masterwork Item that increases P. Atk. Bestows one of the following functions: Rsk. Evasion, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1161,7 +1199,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3879-3" />
+		<set name="item_skill" val="3879-3" /> <!-- Fist Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1173,6 +1211,7 @@
 		</for>
 	</item>
 	<item id="11338" type="Weapon" name="Icarus Hand - Destruction - Rsk. Evasion">
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP is 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1190,7 +1229,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3069-1;3552-1;3879-3" />
+		<set name="item_skill" val="3069-1;3552-1;3879-3" /> <!-- Special Ability: Rsk. Evasion -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1202,6 +1241,7 @@
 		</for>
 	</item>
 	<item id="11339" type="Weapon" name="Icarus Hand - Destruction - Focus">
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1219,7 +1259,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3879-3;3565-2" />
+		<set name="item_skill" val="3879-3;3565-2" /> <!-- Fist Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1231,6 +1271,7 @@
 		</for>
 	</item>
 	<item id="11340" type="Weapon" name="Icarus Hand - Destruction - Haste">
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Atk. Spd. increases by about 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1248,7 +1289,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3879-3;3564-2" />
+		<set name="item_skill" val="3879-3;3564-2" /> <!-- Fist Weapon of Might -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1260,6 +1301,7 @@
 		</for>
 	</item>
 	<item id="11341" type="Weapon" name="Icarus Heavy Arms - Lightning">
+		<!-- Masterwork Item that increases Critical Rate. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1278,7 +1320,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3845-2" />
+		<set name="item_skill" val="3845-2" /> <!-- Two-handed Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1289,6 +1331,7 @@
 		</for>
 	</item>
 	<item id="11342" type="Weapon" name="Icarus Heavy Arms - Lightning - Focus">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1307,7 +1350,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3845-2;3566-2" />
+		<set name="item_skill" val="3845-2;3566-2" /> <!-- Two-handed Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1318,6 +1361,7 @@
 		</for>
 	</item>
 	<item id="11343" type="Weapon" name="Icarus Heavy Arms - Lightning - Health">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1336,7 +1380,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3845-2;3013-3" />
+		<set name="item_skill" val="3845-2;3013-3" /> <!-- Two-handed Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1347,6 +1391,7 @@
 		</for>
 	</item>
 	<item id="11344" type="Weapon" name="Icarus Heavy Arms - Lightning - Light">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1365,7 +1410,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3552-1;3498-1;3845-2" />
+		<set name="item_skill" val="3552-1;3498-1;3845-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1376,6 +1421,7 @@
 		</for>
 	</item>
 	<item id="11345" type="Weapon" name="Icarus Hall - Hail">
+		<!-- Masterwork Item that increases M. Atk. Bestows one of the following functions: Mana Up, Conversion, or Acumen. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1394,7 +1440,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3889-3" />
+		<set name="item_skill" val="3889-3" /> <!-- Blunt Weapon of Empower -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1406,6 +1452,7 @@
 		</for>
 	</item>
 	<item id="11346" type="Weapon" name="Icarus Hall - Hail - Mana Up">
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1424,7 +1471,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3889-3;3014-2" />
+		<set name="item_skill" val="3889-3;3014-2" /> <!-- Blunt Weapon of Empower -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1436,6 +1483,7 @@
 		</for>
 	</item>
 	<item id="11347" type="Weapon" name="Icarus Hall - Hail - Conversion">
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1454,7 +1502,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3889-3;3048-2" />
+		<set name="item_skill" val="3889-3;3048-2" /> <!-- Blunt Weapon of Empower -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1466,6 +1514,7 @@
 		</for>
 	</item>
 	<item id="11348" type="Weapon" name="Icarus Hall - Hail - Acumen">
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1484,7 +1533,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3889-3;3047-2" />
+		<set name="item_skill" val="3889-3;3047-2" /> <!-- Blunt Weapon of Empower -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1496,6 +1545,7 @@
 		</for>
 	</item>
 	<item id="11349" type="Armor" name="Sealed Zubei's Gauntlet">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1512,6 +1562,7 @@
 		</for>
 	</item>
 	<item id="11350" type="Armor" name="Sealed Zubei's Boots">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t64_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1528,6 +1579,7 @@
 		</for>
 	</item>
 	<item id="11351" type="Armor" name="Sealed Avadon Gloves">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1544,6 +1596,7 @@
 		</for>
 	</item>
 	<item id="11352" type="Armor" name="Sealed Avadon Boots">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1560,6 +1613,7 @@
 		</for>
 	</item>
 	<item id="11353" type="Armor" name="Zubei's Leather Gaiters">
+		<!-- Masterwork Item that increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1571,13 +1625,14 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="748300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3668-1" />
+		<set name="item_skill" val="3668-1" /> <!-- Zubei's Leather Gaiters -->
 		<for>
 			<add order="0" stat="pDef" val="73" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11354" type="Armor" name="Zubei's Leather Shirt">
+		<!-- Masterwork Item that increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1589,13 +1644,14 @@
 		<set name="weight" val="4330" />
 		<set name="price" val="1197000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3669-1" />
+		<set name="item_skill" val="3669-1" /> <!-- Zubei's Leather Shirt -->
 		<for>
 			<add order="0" stat="pDef" val="117" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11355" type="Armor" name="Zubei's Gaiters">
+		<!-- Masterwork Item that increases P. Def. and HP -->
 		<set name="icon" val="icon.armor_t64_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1607,7 +1663,7 @@
 		<set name="weight" val="3570" />
 		<set name="price" val="997700" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3672-1" />
+		<set name="item_skill" val="3672-1" /> <!-- Zubei's Gaiters -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1617,6 +1673,7 @@
 		</for>
 	</item>
 	<item id="11356" type="Armor" name="Zubei's Gauntlet - Heavy Armor">
+		<!-- Masterwork Item that increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1627,7 +1684,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3673-1" />
+		<set name="item_skill" val="3673-1" /> <!-- Zubei's Gauntlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1637,6 +1694,7 @@
 		</for>
 	</item>
 	<item id="11357" type="Armor" name="Zubei's Gauntlet - Light Armor Use">
+		<!-- Masterwork Item that increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1647,13 +1705,14 @@
 		<set name="weight" val="590" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3670-1" />
+		<set name="item_skill" val="3670-1" /> <!-- Zubei's Gauntlet -->
 		<for>
 			<add order="0" stat="pDef" val="41" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11358" type="Armor" name="Zubei's Gauntlet - Robe">
+		<!-- Masterwork Item that increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1664,7 +1723,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3679-1" />
+		<set name="item_skill" val="3679-1" /> <!-- Zubei's Gauntlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1674,6 +1733,7 @@
 		</for>
 	</item>
 	<item id="11359" type="Armor" name="Zubei's Boots - Heavy Armor">
+		<!-- Masterwork Item that increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1684,7 +1744,7 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3674-1" />
+		<set name="item_skill" val="3674-1" /> <!-- Zubei's Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1694,6 +1754,7 @@
 		</for>
 	</item>
 	<item id="11360" type="Armor" name="Zubei's Boots - Light Armor Use">
+		<!-- Masterwork Item that increases Evasion. -->
 		<set name="icon" val="icon.armor_t65_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1704,13 +1765,14 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3671-1" />
+		<set name="item_skill" val="3671-1" /> <!-- Zubei's Boots -->
 		<for>
 			<add order="0" stat="pDef" val="41" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11361" type="Armor" name="Zubei's Boots - Robe">
+		<!-- Masterwork Item that increases M. Def. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1721,7 +1783,7 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3680-1" />
+		<set name="item_skill" val="3680-1" /> <!-- Zubei's Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1731,6 +1793,7 @@
 		</for>
 	</item>
 	<item id="11362" type="Armor" name="Zubei's Shield">
+		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1741,7 +1804,7 @@
 		<set name="weight" val="1210" />
 		<set name="price" val="419000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3681-1" />
+		<set name="item_skill" val="3681-1" /> <!-- Zubei's Shield -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1753,6 +1816,7 @@
 		</for>
 	</item>
 	<item id="11363" type="Armor" name="Zubei's Helmet - Heavy Armor">
+		<!-- Masterwork Item that increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1763,7 +1827,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="598600" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3675-1" />
+		<set name="item_skill" val="3675-1" /> <!-- Zubei's Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1773,6 +1837,7 @@
 		</for>
 	</item>
 	<item id="11364" type="Armor" name="Zubei's Breastplate">
+		<!-- Masterwork Item that increases P. Def. and Max HP. -->
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1784,7 +1849,7 @@
 		<set name="weight" val="7970" />
 		<set name="price" val="1596000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3676-1" />
+		<set name="item_skill" val="3676-1" /> <!-- Zubei's Breastplate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1794,6 +1859,7 @@
 		</for>
 	</item>
 	<item id="11365" type="Armor" name="Avadon Gloves - Heavy Armor">
+		<!-- Masterwork Item that increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1804,7 +1870,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3682-1" />
+		<set name="item_skill" val="3682-1" /> <!-- Avadon Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1814,6 +1880,7 @@
 		</for>
 	</item>
 	<item id="11366" type="Armor" name="Avadon Gloves - Light Armor Use">
+		<!-- Masterwork Item that increases M. Def. and decreases Weight Limit. -->
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1824,13 +1891,14 @@
 		<set name="weight" val="590" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3689-1" />
+		<set name="item_skill" val="3689-1" /> <!-- Avadon Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="41" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11367" type="Armor" name="Avadon Gloves - Robe">
+		<!-- Masterwork Item that increases P. Def. -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1841,7 +1909,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3693-1" />
+		<set name="item_skill" val="3693-1" /> <!-- Avadon Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1851,6 +1919,7 @@
 		</for>
 	</item>
 	<item id="11368" type="Armor" name="Avadon Leather Armor">
+		<!-- Masterwork Item that increases M. Def. and decreases Weight Limit. -->
 		<set name="icon" val="icon.armor_t67_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1862,13 +1931,14 @@
 		<set name="weight" val="5600" />
 		<set name="price" val="1946000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3690-1" />
+		<set name="item_skill" val="3690-1" /> <!-- Avadon Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="191" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11369" type="Armor" name="Avadon Robe">
+		<!-- Masterwork Item that increases P. Def. and Casting Spd. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1880,7 +1950,7 @@
 		<set name="weight" val="2540" />
 		<set name="price" val="1946000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3694-1" />
+		<set name="item_skill" val="3694-1" /> <!-- Avadon Robe -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1891,6 +1961,7 @@
 		</for>
 	</item>
 	<item id="11370" type="Armor" name="Avadon Boots - Heavy Armor">
+		<!-- Masterwork Item that increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1901,7 +1972,7 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3683-1" />
+		<set name="item_skill" val="3683-1" /> <!-- Avadon Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1911,6 +1982,7 @@
 		</for>
 	</item>
 	<item id="11371" type="Armor" name="Avadon Boots - Light Armor Use">
+		<!-- Masterwork Item that increases M. Def. and decreases Weight Limit. -->
 		<set name="icon" val="icon.armor_t67_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1921,13 +1993,14 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3691-1" />
+		<set name="item_skill" val="3691-1" /> <!-- Avadon Boots -->
 		<for>
 			<add order="0" stat="pDef" val="41" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11372" type="Armor" name="Avadon Boots - Robe">
+		<!-- Masterwork Item that increases P. Def. -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1938,7 +2011,7 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="399100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3695-1" />
+		<set name="item_skill" val="3695-1" /> <!-- Avadon Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1948,6 +2021,7 @@
 		</for>
 	</item>
 	<item id="11373" type="Armor" name="Avadon Circlet - Heavy Armor">
+		<!-- Masterwork Item that increases Max HP. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1958,7 +2032,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="598600" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3684-1" />
+		<set name="item_skill" val="3684-1" /> <!-- Avadon Circlet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1968,6 +2042,7 @@
 		</for>
 	</item>
 	<item id="11374" type="Armor" name="Avadon Shield">
+		<!-- Masterwork Item that Increases M. Def. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1978,7 +2053,7 @@
 		<set name="weight" val="1210" />
 		<set name="price" val="419000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3687-1" />
+		<set name="item_skill" val="3687-1" /> <!-- Avadon Shield -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -1990,6 +2065,7 @@
 		</for>
 	</item>
 	<item id="11375" type="Armor" name="Avadon Gaiters">
+		<!-- Masterwork Item that increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2001,7 +2077,7 @@
 		<set name="weight" val="3520" />
 		<set name="price" val="997700" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3685-1" />
+		<set name="item_skill" val="3685-1" /> <!-- Avadon Gaiters -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2011,6 +2087,7 @@
 		</for>
 	</item>
 	<item id="11376" type="Armor" name="Avadon Breastplate">
+		<!-- Masterwork Item that increases Max HP. -->
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2022,7 +2099,7 @@
 		<set name="weight" val="7920" />
 		<set name="price" val="1596000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3686-1" />
+		<set name="item_skill" val="3686-1" /> <!-- Avadon Breastplate -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2032,6 +2109,7 @@
 		</for>
 	</item>
 	<item id="11377" type="Armor" name="Tunic of Zubei">
+		<!-- Masterwork Item that increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2043,7 +2121,7 @@
 		<set name="weight" val="1960" />
 		<set name="price" val="1197000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3677-1" />
+		<set name="item_skill" val="3677-1" /> <!-- Tunic of Zubei -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2054,6 +2132,7 @@
 		</for>
 	</item>
 	<item id="11378" type="Armor" name="Stockings of Zubei">
+		<!-- Masterwork Item that increases M. Atk. -->
 		<set name="icon" val="icon.armor_t56_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2065,7 +2144,7 @@
 		<set name="weight" val="940" />
 		<set name="price" val="748300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3678-1" />
+		<set name="item_skill" val="3678-1" /> <!-- Stockings of Zubei -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2076,6 +2155,7 @@
 		</for>
 	</item>
 	<item id="11379" type="Armor" name="Doom Gloves - Heavy Armor">
+		<!-- Masterwork Item that increases Max HP and Breath Gauge -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2086,7 +2166,7 @@
 		<set name="weight" val="580" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3696-1" />
+		<set name="item_skill" val="3696-1" /> <!-- Doom Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2096,6 +2176,7 @@
 		</for>
 	</item>
 	<item id="11380" type="Armor" name="Doom Gloves - Light Armor Use">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Rate, Resistance to Poison, and Breath Gauge -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2106,13 +2187,14 @@
 		<set name="weight" val="580" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3702-1" />
+		<set name="item_skill" val="3702-1" /> <!-- Doom Gloves -->
 		<for>
 			<add order="0" stat="pDef" val="44" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11381" type="Armor" name="Doom Gloves - Robe">
+		<!-- Masterwork Item that increases Speed, Breath Gauge and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2123,7 +2205,7 @@
 		<set name="weight" val="580" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3705-1" />
+		<set name="item_skill" val="3705-1" /> <!-- Doom Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2133,6 +2215,7 @@
 		</for>
 	</item>
 	<item id="11382" type="Armor" name="Doom Boots - Heavy Armor">
+		<!-- Masterwork Item that increases Max HP and Breath Gauge -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2143,7 +2226,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3697-1" />
+		<set name="item_skill" val="3697-1" /> <!-- Doom Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2153,6 +2236,7 @@
 		</for>
 	</item>
 	<item id="11383" type="Armor" name="Doom Boots - Light Armor Use">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Rate, Resistance to Poison, and Breath Gauge -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2163,13 +2247,14 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3703-1" />
+		<set name="item_skill" val="3703-1" /> <!-- Doom Boots -->
 		<for>
 			<add order="0" stat="pDef" val="44" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11384" type="Armor" name="Doom Boots - Robe">
+		<!-- Masterwork Item that increases Speed, Breath Gauge and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2180,7 +2265,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3706-1" />
+		<set name="item_skill" val="3706-1" /> <!-- Doom Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2190,6 +2275,7 @@
 		</for>
 	</item>
 	<item id="11385" type="Armor" name="Doom Shield">
+		<!-- Masterwork Item that increases M. Def. -->
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -2200,7 +2286,7 @@
 		<set name="weight" val="1200" />
 		<set name="price" val="649800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3700-1" />
+		<set name="item_skill" val="3700-1" /> <!-- Doom Shield -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2212,6 +2298,7 @@
 		</for>
 	</item>
 	<item id="11386" type="Armor" name="Doom Plate Armor">
+		<!-- Masterwork Item that increases Max HP and Breath Gauge -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2223,7 +2310,7 @@
 		<set name="weight" val="9980" />
 		<set name="price" val="4022000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3698-1" />
+		<set name="item_skill" val="3698-1" /> <!-- Doom Plate Armor -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2233,6 +2320,7 @@
 		</for>
 	</item>
 	<item id="11387" type="Armor" name="Doom Helmet - Heavy Armor">
+		<!-- Masterwork Item that increases Max HP and Breath Gauge -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2243,7 +2331,7 @@
 		<set name="weight" val="580" />
 		<set name="price" val="928300" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3699-1" />
+		<set name="item_skill" val="3699-1" /> <!-- Doom Helmet -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2253,6 +2341,7 @@
 		</for>
 	</item>
 	<item id="11388" type="Armor" name="Leather Armor of Doom">
+		<!-- Masterwork Item that increases P. Atk., MP Recovery Rate, Resistance to Poison, and Breath Gauge -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2264,13 +2353,14 @@
 		<set name="weight" val="5500" />
 		<set name="price" val="3017000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3701-1" />
+		<set name="item_skill" val="3701-1" /> <!-- Leather Armor of Doom -->
 		<for>
 			<add order="0" stat="pDef" val="202" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11389" type="Armor" name="Sealed Doom Gloves">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t71_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2287,6 +2377,7 @@
 		</for>
 	</item>
 	<item id="11390" type="Armor" name="Sealed Doom Boots">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t71_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2303,6 +2394,7 @@
 		</for>
 	</item>
 	<item id="11391" type="Armor" name="Sealed Blue Wolf Boots">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t68_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2319,6 +2411,7 @@
 		</for>
 	</item>
 	<item id="11392" type="Armor" name="Sealed Blue Wolf Gloves">
+		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
 		<set name="icon" val="icon.armor_t68_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2335,6 +2428,7 @@
 		</for>
 	</item>
 	<item id="11393" type="Armor" name="Tunic of Doom">
+		<!-- Masterwork Item that increases Speed, Breath Gauge and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -2346,7 +2440,7 @@
 		<set name="weight" val="1900" />
 		<set name="price" val="1857000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3707-1" />
+		<set name="item_skill" val="3707-1" /> <!-- Tunic of Doom -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2357,6 +2451,7 @@
 		</for>
 	</item>
 	<item id="11394" type="Armor" name="Blue Wolf Gaiters">
+		<!-- Masterwork Item that increases Speed and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t68_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -2368,7 +2463,7 @@
 		<set name="weight" val="3370" />
 		<set name="price" val="1547100" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3711-1" />
+		<set name="item_skill" val="3711-1" /> <!-- Blue Wolf Gaiters -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2378,6 +2473,7 @@
 		</for>
 	</item>
 	<item id="11395" type="Armor" name="Blue Wolf Leather Armor">
+		<!-- Masterwork Item that increases P. Def. and Casting Spd. -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -2389,13 +2485,14 @@
 		<set name="weight" val="5500" />
 		<set name="price" val="3017000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3715-1" />
+		<set name="item_skill" val="3715-1" /> <!-- Blue Wolf Leather Armor -->
 		<for>
 			<add order="0" stat="pDef" val="202" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11396" type="Armor" name="Blue Wolf Boots - Heavy Armor">
+		<!-- Masterwork Item that increases Speed and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2406,7 +2503,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3712-1" />
+		<set name="item_skill" val="3712-1" /> <!-- Blue Wolf Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2416,6 +2513,7 @@
 		</for>
 	</item>
 	<item id="11397" type="Armor" name="Blue Wolf Boots - Light Armor Use">
+		<!-- Masterwork Item that increases P. Def. -->
 		<set name="icon" val="icon.armor_t69_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2426,13 +2524,14 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3716-1" />
+		<set name="item_skill" val="3716-1" /> <!-- Blue Wolf Boots -->
 		<for>
 			<add order="0" stat="pDef" val="44" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11398" type="Armor" name="Blue Wolf Boots - Robe">
+		<!-- Masterwork Item that increases Max MP and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2443,7 +2542,7 @@
 		<set name="weight" val="1130" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3719-1" />
+		<set name="item_skill" val="3719-1" /> <!-- Blue Wolf Boots -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>
@@ -2453,6 +2552,7 @@
 		</for>
 	</item>
 	<item id="11399" type="Armor" name="Blue Wolf Gloves - Heavy Armor">
+		<!-- Masterwork Item that increases Speed and MP Recovery Rate. -->
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2463,7 +2563,7 @@
 		<set name="weight" val="590" />
 		<set name="price" val="618800" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3713-1" />
+		<set name="item_skill" val="3713-1" /> <!-- Blue Wolf Gloves -->
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 		</cond>

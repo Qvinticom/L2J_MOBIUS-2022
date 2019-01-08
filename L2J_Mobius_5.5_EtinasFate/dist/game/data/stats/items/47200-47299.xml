@@ -137,7 +137,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47214" name="Ring of Creation" type="Armor">
-		<!-- MP +42, Stun/Paralysis/Knock Back Atk. Rate +15%, Stun/Paralysis/Knock Back Resistance +15%, Additional Damage to the Giants +5%, P./M. Critical Damage +15%, P./M. Atk. +3%. Effect does not stack with identical ones. -->
+		<!-- MP +42, Stun/ Paralysis/ Knock Back Atk. Rate +15%, Stun/ Paralysis/ Knock Back Resistance +15%, Additional Damage to the Giants +5%, P./ M. Critical Damage +15%, P./ M. Atk. +3%. Only one effect is applied when two identical rings are worn. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_Black" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -156,7 +156,7 @@
 		</stats>
 	</item>
 	<item id="47215" name="Ring of Authority" type="Armor">
-		<!-- MP +43, Stun/Paralysis/Knock Back Atk. Rate +25%, Stun/Paralysis/Knock Back Resistance +25%, Additional Damage to the Giants +5%, P. Critical Damage +15%, P. Atk. +4%. Effect does not stack with identical ones. -->
+		<!-- MP +43, Stun/ Paralysis/ Knock Back Atk. Rate +25%, Stun/ Paralysis/ Knock Back Resistance +25%, Additional Damage to the Giants +5%, P. Critical Damage +15%, P. Atk. +4%. Only one effect is applied when two identical rings are worn. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -174,7 +174,7 @@
 		</stats>
 	</item>
 	<item id="47216" name="Ruler's Ring of Authority" type="Armor">
-		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/CHA +2, Stun/Paralysis/Knock Back Atk./Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Paralysis when single P. skill is used. Only one effect is applied when two identical rings are worn. Can be crafted. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -192,7 +192,7 @@
 		</stats>
 	</item>
 	<item id="47217" name="Ring of the Truth" type="Armor">
-		<!-- MP +43, Stun/Paralysis/Knock Back Atk. Rate +25%, Stun/Paralysis/Knock Back Resistance +25%, Additional Damage to the Giants +5%, M. Critical Damage +15%, M. Atk. +4%. Effect does not stack with identical ones. -->
+		<!-- MP +43, Stun/ Paralysis/ Knock Back Atk. Rate +25%, Stun/ Paralysis/ Knock Back Resistance +25%, Additional Damage to the Giants +5%, M. Critical Damage +15%, M. Atk. +4%. Only one effect is applied when two identical rings are worn. -->
 		<set name="icon" val="icon.accessory_ring_of_helios" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -210,7 +210,7 @@
 		</stats>
 	</item>
 	<item id="47218" name="Ring of the Truth-Seeker" type="Armor">
-		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/CHA +2, Stun/Paralysis/Knock Back Atk./Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Knock Down when single M. Atk. skill is used. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Knock Down when single M. skill is used. Only one effect is applied when two identical rings are worn. Can be crafted. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -228,7 +228,7 @@
 		</stats>
 	</item>
 	<item id="47219" name="Source of the Emperor" type="EtcItem">
-		<!-- Take this to Rafforty to enhance the Ring of the Creation. -->
+		<!-- Take it to Denign to enhance the ability of the Ring of the Beginning. -->
 		<set name="icon" val="icon.source of the load" />
 		<set name="price" val="278000" />
 		<set name="is_stackable" val="true" />
@@ -478,7 +478,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47244" name="Ramona's Fancy Earrings" type="Armor">
-		<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +64, Additional Damage to the Giants +5%, Vampiric Rage +5%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
+		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 64, additional damage to Giants by 5%, and Vampiric Rage by 5%. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.glossy_earing_of_ramona" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -497,7 +497,7 @@
 		</stats>
 	</item>
 	<item id="47245" name="Helios' Majestic Earrings" type="Armor">
-		<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +64, Additional Damage to the Giants +5%, Vampiric Rage +5%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
+		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 64, additional damage to Giants by 5%, and Vampiric Rage by 5%. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.grand_earing_of_helios" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -516,7 +516,7 @@
 		</stats>
 	</item>
 	<item id="47246" name="Harnak's Deformed Necklace" type="Armor">
-		<!-- Take it to Rafforty to exchange for the Source of the Emperor Exchange. MP +79, Additional Damage to the Giants +5%, Skill Cooldown -10%. Enchantment, Augment, Crystallization not possible -->
+		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 79, additional damage to Giants by 5%, and decreases Skill Cooldown by 10%. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.transform_necklace_of_harnak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -535,7 +535,7 @@
 		</stats>
 	</item>
 	<item id="47247" name="Mimir's Worn Ring" type="Armor">
-		<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +42, Additional Damage to the Giants +5%, P. Critical Damage +15%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
+		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 42, additional damage to Giants by 5%, and P. Critical Damage by 15%. Only one effect is applied when two identical rings are worn. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.old_ring_of_mimir" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -554,7 +554,7 @@
 		</stats>
 	</item>
 	<item id="47248" name="Forgotten Ring of the Core" type="Armor">
-		<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +39, Additional Damage to the Giants +5%, M. Critical Damage +15%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
+		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 39, additional damage to Giants by 5%, and M. Critical Damage by 15%. Only one effect is applied when two identical rings are worn. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.forgotten_ring_of_core" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1200,7 +1200,7 @@
 		</skills>
 	</item>
 	<item id="47288" name="Kingdom's Royal Guard Talisman Stage 8" type="Armor">
-		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -8%, P. Atk. against Embryo +3%, P./M. Def +1%. -->
+		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -8%, P. Atk. against Embryo +3%, P./ M. Def +1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1219,7 +1219,7 @@
 		</skills>
 	</item>
 	<item id="47289" name="Kingdom's Royal Guard Talisman Stage 9" type="Armor">
-		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -9%, P. Atk. against Embryo +4%, P./M. Def +2%. -->
+		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -9%, P. Atk. against Embryo +4%, P./ M. Def +2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1238,7 +1238,7 @@
 		</skills>
 	</item>
 	<item id="47290" name="Kingdom's Royal Guard Talisman Stage 10" type="Armor">
-		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -10%, P. Atk. against Embryo +5%, P./M. Def +3%. -->
+		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -10%, P. Atk. against Embryo +5%, P./ M. Def +3%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />

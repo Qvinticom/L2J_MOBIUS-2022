@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22300" level="82" type="L2Monster" name="Dolph's Subordinate">
 		<!-- Confirmed CT2.5 -->
@@ -55,17 +55,17 @@
 				<item id="5495" min="1" max="1" chance="1.04226088224435" /> <!-- Sealed Shield of Nightmare Fragment -->
 				<item id="5317" min="1" max="1" chance="0.00675592341613769" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="0.820636279154062" /> <!-- Sealed Majestic Circlet Design -->
-				<item id="1871" min="4" max="12" chance="8.58006971811485" /> <!-- Charcoal -->
-				<item id="1866" min="1" max="3" chance="15.2534636214485" /> <!-- Suede -->
-				<item id="1877" min="1" max="1" chance="2.74563601456451" /> <!-- Adamantite Nugget -->
-				<item id="4041" min="1" max="1" chance="0.596871187601089" /> <!-- Mold Hardener -->
-				<item id="4040" min="1" max="1" chance="1.37281800728226" /> <!-- Mold Lubricant -->
-				<item id="959" min="1" max="1" chance="0.00274095355224609" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="1871" min="4" max="12" chance="8.58006971811485" /> <!-- Corroded Charcoal -->
+				<item id="1866" min="1" max="3" chance="15.2534636214485" /> <!-- Corroded Suede -->
+				<item id="1877" min="1" max="1" chance="2.74563601456451" /> <!-- Corroded Adamantite Nugget -->
+				<item id="4041" min="1" max="1" chance="0.596871187601089" /> <!-- Corroded Mold Hardener -->
+				<item id="4040" min="1" max="1" chance="1.37281800728226" /> <!-- Corroded Mold Lubricant -->
+				<item id="959" min="1" max="1" chance="0.00274095355224609" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<spoil>
 				<item id="5533" min="1" max="1" chance="2.2932" /> <!-- Elysian Head -->
-				<item id="1808" min="1" max="1" chance="0.3716" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5534" min="1" max="1" chance="2.2952" /> <!-- Soul Bow Stave -->
+				<item id="1808" min="1" max="1" chance="0.3716" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5534" min="1" max="1" chance="2.2952" /> <!-- Soul Bow Shaft -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -130,17 +130,17 @@
 				<item id="5546" min="1" max="1" chance="1.09782153442955" /> <!-- Sword of Miracles Edge -->
 				<item id="2500" min="1" max="1" chance="0.00351435634875298" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.999466166165114" /> <!-- Dark Legion's Edge Blade -->
-				<item id="1865" min="28" max="84" chance="5.57832944353104" /> <!-- Varnish -->
-				<item id="1870" min="60" max="180" chance="2.60319557695389" /> <!-- Coal -->
-				<item id="1879" min="3" max="9" chance="8.67734962738037" /> <!-- Cokes -->
-				<item id="1875" min="1" max="1" chance="20.8256577282333" /> <!-- Stone of Purity -->
-				<item id="4040" min="1" max="1" chance="6.24771594099045" /> <!-- Mold Lubricant -->
-				<item id="960" min="1" max="1" chance="0.124957112197876" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="1865" min="28" max="84" chance="5.57832944353104" /> <!-- Corroded Varnish -->
+				<item id="1870" min="60" max="180" chance="2.60319557695389" /> <!-- Corroded Coal -->
+				<item id="1879" min="3" max="9" chance="8.67734962738037" /> <!-- Corroded Cokes -->
+				<item id="1875" min="1" max="1" chance="20.8256577282333" /> <!-- Corroded Stone of Purity -->
+				<item id="4040" min="1" max="1" chance="6.24771594099045" /> <!-- Corroded Mold Lubricant -->
+				<item id="960" min="1" max="1" chance="0.124957112197876" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="9546" min="1" max="1" chance="2.4990956876564" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="7" chance="73.9835" /> <!-- Stone of Purity -->
-				<item id="4040" min="1" max="1" chance="88.7802" /> <!-- Mold Lubricant -->
+				<item id="1875" min="1" max="7" chance="73.9835" /> <!-- Corroded Stone of Purity -->
+				<item id="4040" min="1" max="1" chance="88.7802" /> <!-- Corroded Mold Lubricant -->
 				<item id="5537" min="1" max="1" chance="12.1784" /> <!-- Soul Separator Head -->
 			</spoil>
 		</dropLists>
@@ -218,16 +218,16 @@
 				<item id="8342" min="1" max="1" chance="0.450574900092602" /> <!-- Flaming Dragon Skull Piece -->
 				<item id="7902" min="1" max="1" chance="0.00158389558696747" /> <!-- Doom Crusher -->
 				<item id="8349" min="1" max="1" chance="0.450484495093346" /> <!-- Doom Crusher Head -->
-				<item id="1895" min="1" max="3" chance="37.5452730094719" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="5.25635403438568" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="2.06132533895493" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="1.38322413541794" /> <!-- Orichalcum -->
-				<item id="6901" min="1" max="1" chance="0.262822352619171" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="1895" min="1" max="3" chance="37.5452730094719" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.25635403438568" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="2.06132533895493" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="1.38322413541794" /> <!-- Corroded Orichalcum -->
+				<item id="6901" min="1" max="1" chance="0.262822352619171" /> <!-- Recipe: Arrow of Light -->
 			</drop>
 			<spoil>
-				<item id="3036" min="1" max="1" chance="1.1856" /> <!-- Recipe: Spiritshot S -->
+				<item id="3036" min="1" max="1" chance="1.1856" /> <!-- Recipe: Spiritshot (S-grade) -->
 				<item id="5538" min="1" max="1" chance="7.3171" /> <!-- Dragon Grinder Edge -->
-				<item id="3957" min="1" max="1" chance="1.1856" /> <!-- Recipe: Blessed Spiritshot S -->
+				<item id="3957" min="1" max="1" chance="1.1856" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -289,16 +289,16 @@
 				<item id="57" min="18630" max="38159" chance="70" /> <!-- Adena -->
 				<item id="270" min="1" max="1" chance="0.00660911021959782" /> <!-- Dragon Grinder -->
 				<item id="5538" min="1" max="1" chance="1.88009092392194" /> <!-- Dragon Grinder Edge -->
-				<item id="1869" min="7" max="21" chance="15.2310591055794" /> <!-- Iron Ore -->
-				<item id="1864" min="24" max="72" chance="9.5193974340744" /> <!-- Stem -->
-				<item id="1880" min="3" max="9" chance="3.26378456365967" /> <!-- Steel -->
-				<item id="5550" min="1" max="1" chance="3.04621955813599" /> <!-- Durable Metal Plate -->
+				<item id="1869" min="7" max="21" chance="15.2310591055794" /> <!-- Corroded Iron Ore -->
+				<item id="1864" min="24" max="72" chance="9.5193974340744" /> <!-- Corroded Stem -->
+				<item id="1880" min="3" max="9" chance="3.26378456365967" /> <!-- Corroded Steel -->
+				<item id="5550" min="1" max="1" chance="3.04621955813599" /> <!-- Corroded Reinforced Metal Plate -->
 				<item id="4043" min="1" max="1" chance="7.61551021023941" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.0091296837310791" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0091296837310791" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<spoil>
 				<item id="5541" min="1" max="1" chance="7.6313" /> <!-- Tallum Glaive Edge -->
-				<item id="5550" min="1" max="1" chance="37.1029" /> <!-- Durable Metal Plate -->
+				<item id="5550" min="1" max="1" chance="37.1029" /> <!-- Corroded Reinforced Metal Plate -->
 				<item id="4043" min="1" max="1" chance="92.7572" /> <!-- Asofe -->
 			</spoil>
 		</dropLists>
@@ -360,21 +360,21 @@
 			<drop>
 				<item id="57" min="18705" max="38313" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.00663565003871918" /> <!-- Soul Bow -->
-				<item id="5534" min="1" max="1" chance="1.8892643610239" /> <!-- Soul Bow Stave -->
-				<item id="1867" min="4" max="12" chance="22.9388239130592" /> <!-- Animal Skin -->
-				<item id="1872" min="7" max="21" chance="12.234023196331" /> <!-- Animal Bone -->
-				<item id="1882" min="3" max="9" chance="5.09750560914612" /> <!-- Leather -->
-				<item id="1894" min="1" max="1" chance="4.82922608695984" /> <!-- Crafted Leather -->
-				<item id="4042" min="1" max="1" chance="2.29385805535507" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.0550479208259583" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.955770133739471" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.238930365459442" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0238979037361145" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.00481851826858521" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="5534" min="1" max="1" chance="1.8892643610239" /> <!-- Soul Bow Shaft -->
+				<item id="1867" min="4" max="12" chance="22.9388239130592" /> <!-- Corroded Animal Skin -->
+				<item id="1872" min="7" max="21" chance="12.234023196331" /> <!-- Corroded Animal Bone Fragment -->
+				<item id="1882" min="3" max="9" chance="5.09750560914612" /> <!-- Corroded Leather -->
+				<item id="1894" min="1" max="1" chance="4.82922608695984" /> <!-- Corroded Quality Leather -->
+				<item id="4042" min="1" max="1" chance="2.29385805535507" /> <!-- Corroded Enria -->
+				<item id="960" min="1" max="1" chance="0.0550479208259583" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9573" min="1" max="1" chance="0.955770133739471" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.238930365459442" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9575" min="1" max="1" chance="0.0238979037361145" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.00481851826858521" /> <!-- Top-grade Life Stone - Lv. 80 -->
 			</drop>
 			<spoil>
 				<item id="5544" min="1" max="1" chance="7.6561" /> <!-- Branch of the Mother Tree Head -->
-				<item id="5157" min="1" max="1" chance="1.2418" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5157" min="1" max="1" chance="1.2418" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
 				<item id="5545" min="1" max="1" chance="7.6652" /> <!-- Dark Legion's Edge Blade -->
 			</spoil>
 		</dropLists>
@@ -438,18 +438,18 @@
 			<drop>
 				<item id="57" min="4339" max="8887" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.00153929997980595" /> <!-- Soul Bow -->
-				<item id="5534" min="1" max="1" chance="0.438260694250464" /> <!-- Soul Bow Stave -->
-				<item id="1895" min="1" max="1" chance="15.2016102590618" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="1.06411289255333" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="0.417297463560104" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.280029708566666" /> <!-- Orichalcum -->
-				<item id="6901" min="1" max="1" chance="0.0531977957725525" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="5534" min="1" max="1" chance="0.438260694250464" /> <!-- Soul Bow Shaft -->
+				<item id="1895" min="1" max="1" chance="15.2016102590618" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="1.06411289255333" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="0.417297463560104" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.280029708566666" /> <!-- Corroded Orichalcum -->
+				<item id="6901" min="1" max="1" chance="0.0531977957725525" /> <!-- Recipe: Arrow of Light -->
 				<item id="9547" min="1" max="1" chance="0.425652133781433" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
-				<item id="5162" min="1" max="1" chance="0.288" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+				<item id="5162" min="1" max="1" chance="0.288" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
 				<item id="5546" min="1" max="1" chance="1.9529" /> <!-- Sword of Miracles Edge -->
-				<item id="1895" min="1" max="3" chance="92.5777" /> <!-- Metallic Fiber -->
+				<item id="1895" min="1" max="3" chance="92.5777" /> <!-- Corroded Metallic Fiber -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -524,17 +524,17 @@
 				<item id="57" min="9969" max="20420" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.00353666970849037" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="1.00636330416083" /> <!-- Soul Separator Head -->
-				<item id="1864" min="36" max="108" chance="2.91082677752686" /> <!-- Stem -->
-				<item id="1865" min="25" max="75" chance="2.09577957815552" /> <!-- Varnish -->
-				<item id="1866" min="3" max="9" chance="11.6432743983078" /> <!-- Suede -->
-				<item id="1873" min="4" max="12" chance="5.23948165718842" /> <!-- Silver Nugget -->
-				<item id="1868" min="10" max="30" chance="9.9799448111496" /> <!-- Thread -->
-				<item id="959" min="1" max="1" chance="0.0041871103515625" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="1864" min="36" max="108" chance="2.91082677752686" /> <!-- Corroded Stem -->
+				<item id="1865" min="25" max="75" chance="2.09577957815552" /> <!-- Corroded Varnish -->
+				<item id="1866" min="3" max="9" chance="11.6432743983078" /> <!-- Corroded Suede -->
+				<item id="1873" min="4" max="12" chance="5.23948165718842" /> <!-- Corroded Silver Nugget -->
+				<item id="1868" min="10" max="30" chance="9.9799448111496" /> <!-- Corroded Thread -->
+				<item id="959" min="1" max="1" chance="0.0041871103515625" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<item id="9547" min="1" max="1" chance="0.838305288902283" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
 				<item id="6342" min="1" max="1" chance="50.5968" /> <!-- Sealed Majestic Earring Gemstone -->
-				<item id="5167" min="1" max="1" chance="0.9927" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="5167" min="1" max="1" chance="0.9927" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -603,21 +603,21 @@
 				<item id="57" min="24123" max="49411" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.00855783766317368" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="2.43514223748636" /> <!-- Soul Separator Head -->
-				<item id="1879" min="1" max="1" chance="26.8937770057373" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="13.4469114763184" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="1.26560734436035" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.849282488769531" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.70156320715332" /> <!-- Adamantine -->
-				<item id="960" min="1" max="1" chance="0.0645553936767578" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="1.12055298291016" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.280138245727539" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0280276086425781" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.00560552172851563" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="1879" min="1" max="1" chance="26.8937770057373" /> <!-- Corroded Cokes -->
+				<item id="1885" min="1" max="1" chance="13.4469114763184" /> <!-- Corroded High-grade Suede -->
+				<item id="9628" min="1" max="1" chance="1.26560734436035" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.849282488769531" /> <!-- Corroded Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.70156320715332" /> <!-- Corroded Adamantine -->
+				<item id="960" min="1" max="1" chance="0.0645553936767578" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9573" min="1" max="1" chance="1.12055298291016" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.280138245727539" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9575" min="1" max="1" chance="0.0280276086425781" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.00560552172851563" /> <!-- Top-grade Life Stone - Lv. 80 -->
 				<item id="9547" min="1" max="1" chance="1.29087813903809" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
 				<item id="6344" min="1" max="1" chance="52.8217" /> <!-- Sealed Majestic Necklace Beads -->
-				<item id="5272" min="1" max="1" chance="1.6014" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+				<item id="5272" min="1" max="1" chance="1.6014" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
 				<item id="6346" min="1" max="3" chance="58.6559" /> <!-- Sealed Majestic Ring Gemstone -->
 			</spoil>
 		</dropLists>
@@ -687,12 +687,12 @@
 				<item id="5480" min="1" max="1" chance="0.327489684379578" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
 				<item id="5323" min="1" max="1" chance="0.00221030875396729" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="5481" min="1" max="1" chance="0.327489684379578" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="1879" min="1" max="1" chance="6.95010097792339" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="3.47504472481155" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.327057879095078" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.219475780832291" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.181305578587532" /> <!-- Adamantine -->
-				<item id="6901" min="1" max="1" chance="0.0416978621320725" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="1879" min="1" max="1" chance="6.95010097792339" /> <!-- Corroded Cokes -->
+				<item id="1885" min="1" max="1" chance="3.47504472481155" /> <!-- Corroded High-grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.327057879095078" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.219475780832291" /> <!-- Corroded Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.181305578587532" /> <!-- Corroded Adamantine -->
+				<item id="6901" min="1" max="1" chance="0.0416978621320725" /> <!-- Recipe: Arrow of Light -->
 				<item id="9547" min="1" max="1" chance="0.333617481957436" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
@@ -765,17 +765,17 @@
 				<item id="5480" min="1" max="1" chance="0.449367109310627" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
 				<item id="5323" min="1" max="1" chance="0.00303288959264755" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="5481" min="1" max="1" chance="0.449367109310627" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="1895" min="1" max="1" chance="19.0722706723766" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="1.33505480147553" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="0.523544485216141" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.351327914188385" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.0026619056968689" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="1895" min="1" max="1" chance="19.0722706723766" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="1.33505480147553" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="0.523544485216141" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.351327914188385" /> <!-- Corroded Orichalcum -->
+				<item id="959" min="1" max="1" chance="0.0026619056968689" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<item id="9547" min="1" max="1" chance="0.534039375709534" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
-				<item id="5277" min="1" max="1" chance="0.3614" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+				<item id="5277" min="1" max="1" chance="0.3614" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
 				<item id="8349" min="1" max="1" chance="2.2297" /> <!-- Doom Crusher Head -->
-				<item id="5282" min="1" max="1" chance="0.3614" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				<item id="5282" min="1" max="1" chance="0.3614" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -851,18 +851,18 @@
 				<item id="5487" min="1" max="1" chance="0.423948134904385" /> <!-- Sealed Robe of Nightmare Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00285187768411636" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.423948134904385" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="1895" min="1" max="1" chance="15.3727608363876" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="1.07610737804413" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="0.422000068321228" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.283196768280029" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0215250290908813" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="1895" min="1" max="1" chance="15.3727608363876" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="1.07610737804413" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="0.422000068321228" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.283196768280029" /> <!-- Corroded Orichalcum -->
+				<item id="960" min="1" max="1" chance="0.0215250290908813" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="9547" min="1" max="1" chance="0.430442951217651" /> <!-- Water Stone -->
 				<item id="1344" min="60" max="180" chance="11.2092669564514" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="3.4308" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1876" min="1" max="3" chance="76.4565" /> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="5" chance="72.8157" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="3" chance="76.4565" /> <!-- Corroded Mithril Ore -->
+				<item id="1895" min="1" max="5" chance="72.8157" /> <!-- Corroded Metallic Fiber -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -939,21 +939,21 @@
 				<item id="6342" min="1" max="1" chance="4.92956888322544" /> <!-- Sealed Majestic Earring Gemstone -->
 				<item id="6328" min="1" max="1" chance="0.0435718365783691" /> <!-- Sealed Majestic Ring -->
 				<item id="6346" min="1" max="1" chance="7.0849825757618" /> <!-- Sealed Majestic Ring Gemstone -->
-				<item id="1868" min="15" max="45" chance="7.91423079406738" /> <!-- Thread -->
-				<item id="1873" min="2" max="6" chance="11.8713461911011" /> <!-- Silver Nugget -->
-				<item id="5549" min="1" max="1" chance="11.8713461911011" /> <!-- Metallic Thread -->
-				<item id="1889" min="1" max="1" chance="7.91423079406738" /> <!-- Compound Braid -->
-				<item id="4044" min="1" max="1" chance="3.95711539703369" /> <!-- Thons -->
-				<item id="6901" min="1" max="1" chance="0.11869520111084" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="10483" min="1" max="1" chance="0.82438382371521" /> <!-- Life Stone - Level 82 -->
-				<item id="10484" min="1" max="1" chance="0.206118781929016" /> <!-- Mid-Grade Life Stone - Level 82 -->
-				<item id="10485" min="1" max="1" chance="0.020589052192688" /> <!-- High-Grade Life Stone - Level 82 -->
-				<item id="10486" min="1" max="1" chance="0.00410868003845215" /> <!-- Top-Grade Life Stone - Level 82 -->
+				<item id="1868" min="15" max="45" chance="7.91423079406738" /> <!-- Corroded Thread -->
+				<item id="1873" min="2" max="6" chance="11.8713461911011" /> <!-- Corroded Silver Nugget -->
+				<item id="5549" min="1" max="1" chance="11.8713461911011" /> <!-- Corroded Metallic Thread -->
+				<item id="1889" min="1" max="1" chance="7.91423079406738" /> <!-- Corroded Synthetic Braid -->
+				<item id="4044" min="1" max="1" chance="3.95711539703369" /> <!-- Corroded Thons -->
+				<item id="6901" min="1" max="1" chance="0.11869520111084" /> <!-- Recipe: Arrow of Light -->
+				<item id="10483" min="1" max="1" chance="0.82438382371521" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.206118781929016" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="10485" min="1" max="1" chance="0.020589052192688" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="10486" min="1" max="1" chance="0.00410868003845215" /> <!-- Top-grade Life Stone - Lv. 82 -->
 				<item id="9546" min="1" max="1" chance="0.949835520889282" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="5.7298" /> <!-- Forgotten Blade Edge -->
-				<item id="6901" min="1" max="1" chance="2.6509" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="6901" min="1" max="1" chance="2.6509" /> <!-- Recipe: Arrow of Light -->
 				<item id="6689" min="1" max="1" chance="5.6218" /> <!-- Basalt Battlehammer Head -->
 			</spoil>
 		</dropLists>
@@ -1022,20 +1022,20 @@
 				<item id="5314" min="1" max="1" chance="0.0297528268146515" /> <!-- Sealed Boots of Nightmare -->
 				<item id="5502" min="1" max="1" chance="3.40432229029655" /> <!-- Sealed Boots of Nightmare Lining -->
 				<item id="5318" min="1" max="1" chance="0.0297528268146515" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5515" min="1" max="1" chance="3.40432229029655" /> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="5515" min="1" max="1" chance="3.40432229029655" /> <!-- Sealed Majestic Gauntlet Design -->
 				<item id="5319" min="1" max="1" chance="0.0297528268146515" /> <!-- Sealed Majestic Boots -->
-				<item id="5503" min="1" max="1" chance="3.40432229029655" /> <!-- Sealed Majestic Boots Lining -->
-				<item id="1895" min="1" max="3" chance="38.3952437684135" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="5.37535292009735" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="2.10797668886185" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="1.41458217497253" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.0107315176887512" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="5503" min="1" max="1" chance="3.40432229029655" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="1895" min="1" max="3" chance="38.3952437684135" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.37535292009735" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="2.10797668886185" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="1.41458217497253" /> <!-- Corroded Orichalcum -->
+				<item id="959" min="1" max="1" chance="0.0107315176887512" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<item id="9546" min="1" max="1" chance="2.1501114956398" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="6901" min="1" max="1" chance="3.2736" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="6901" min="1" max="1" chance="3.2736" /> <!-- Recipe: Arrow of Light -->
 				<item id="6690" min="1" max="1" chance="7.0893" /> <!-- Imperial Staff Head -->
-				<item id="960" min="1" max="1" chance="1.3094" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="1.3094" /> <!-- Scroll: Enchant Armor (S-grade) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1110,18 +1110,18 @@
 				<item id="5495" min="1" max="1" chance="1.11738738872457" /> <!-- Sealed Shield of Nightmare Fragment -->
 				<item id="5317" min="1" max="1" chance="0.00724289259338379" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="0.879788011502504" /> <!-- Sealed Majestic Circlet Design -->
-				<item id="1873" min="3" max="9" chance="3.6793365" /> <!-- Silver Nugget -->
-				<item id="1868" min="4" max="12" chance="13.79745675" /> <!-- Thread -->
-				<item id="1876" min="1" max="1" chance="11.03797275" /> <!-- Mithril Ore -->
-				<item id="1895" min="3" max="9" chance="2.25266475" /> <!-- Metallic Fiber -->
-				<item id="4042" min="1" max="1" chance="0.91981575" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.02208675" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="1873" min="3" max="9" chance="3.6793365" /> <!-- Corroded Silver Nugget -->
+				<item id="1868" min="4" max="12" chance="13.79745675" /> <!-- Corroded Thread -->
+				<item id="1876" min="1" max="1" chance="11.03797275" /> <!-- Corroded Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="2.25266475" /> <!-- Corroded Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.91981575" /> <!-- Corroded Enria -->
+				<item id="960" min="1" max="1" chance="0.02208675" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="9546" min="1" max="1" chance="0.4415145" /> <!-- Fire Stone -->
 				<item id="1344" min="150" max="450" chance="4.59915225" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
-				<item id="4042" min="1" max="1" chance="14.9381" /> <!-- Enria -->
-				<item id="1876" min="1" max="3" chance="89.6287" /> <!-- Mithril Ore -->
+				<item id="4042" min="1" max="1" chance="14.9381" /> <!-- Corroded Enria -->
+				<item id="1876" min="1" max="3" chance="89.6287" /> <!-- Corroded Mithril Ore -->
 				<item id="6691" min="1" max="1" chance="1.9373" /> <!-- Angel Slayer Blade -->
 			</spoil>
 		</dropLists>
@@ -1194,17 +1194,17 @@
 				<item id="8342" min="1" max="1" chance="0.148123288371921" /> <!-- Flaming Dragon Skull Piece -->
 				<item id="7902" min="1" max="1" chance="0.000520694390058517" /> <!-- Doom Crusher -->
 				<item id="8349" min="1" max="1" chance="0.148093568372488" /> <!-- Doom Crusher Head -->
-				<item id="1895" min="1" max="1" chance="20.570314803194" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="1.43992227224159" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="0.564673086977005" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.378926913747787" /> <!-- Orichalcum -->
-				<item id="6901" min="1" max="1" chance="0.0719854928016663" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="1895" min="1" max="1" chance="20.570314803194" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="1.43992227224159" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="0.564673086977005" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.378926913747787" /> <!-- Corroded Orichalcum -->
+				<item id="6901" min="1" max="1" chance="0.0719854928016663" /> <!-- Recipe: Arrow of Light -->
 				<item id="9546" min="1" max="1" chance="0.575978349617004" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="6901" min="1" max="1" chance="0.8769" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="6901" min="1" max="1" chance="0.8769" /> <!-- Recipe: Arrow of Light -->
 				<item id="6693" min="1" max="1" chance="1.9298" /> <!-- Dragon Hunter Axe Blade -->
-				<item id="6901" min="1" max="1" chance="0.8769" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="6901" min="1" max="1" chance="0.8769" /> <!-- Recipe: Arrow of Light -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1267,23 +1267,23 @@
 			<drop>
 				<item id="57" min="3052" max="6121" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.00123864994943142" /> <!-- Soul Bow -->
-				<item id="5534" min="1" max="1" chance="0.352661335602403" /> <!-- Soul Bow Stave -->
-				<item id="1895" min="1" max="1" chance="6.67258375744629" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="0.467069012237549" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="0.183168675430298" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.122914847099304" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.000925842475891113" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="10483" min="1" max="1" chance="0.162170568077087" /> <!-- Life Stone - Level 82 -->
-				<item id="10484" min="1" max="1" chance="0.0405519004440308" /> <!-- Mid-Grade Life Stone - Level 82 -->
-				<item id="10485" min="1" max="1" chance="0.00403667319488525" /> <!-- High-Grade Life Stone - Level 82 -->
-				<item id="10486" min="1" max="1" chance="0.00081474137878418" /> <!-- Top-Grade Life Stone - Level 82 -->
+				<item id="5534" min="1" max="1" chance="0.352661335602403" /> <!-- Soul Bow Shaft -->
+				<item id="1895" min="1" max="1" chance="6.67258375744629" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="0.467069012237549" /> <!-- Corroded Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="0.183168675430298" /> <!-- Corroded Leonard -->
+				<item id="9630" min="1" max="1" chance="0.122914847099304" /> <!-- Corroded Orichalcum -->
+				<item id="959" min="1" max="1" chance="0.000925842475891113" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="10483" min="1" max="1" chance="0.162170568077087" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.0405519004440308" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="10485" min="1" max="1" chance="0.00403667319488525" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="10486" min="1" max="1" chance="0.00081474137878418" /> <!-- Top-grade Life Stone - Lv. 82 -->
 				<item id="9546" min="1" max="1" chance="0.186835011634827" /> <!-- Fire Stone -->
 				<item id="1344" min="10" max="30" chance="29.1926280062256" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
 				<item id="6694" min="1" max="1" chance="1.1476" /> <!-- Saint Spear Blade -->
-				<item id="959" min="1" max="1" chance="0.0209" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="4040" min="1" max="1" chance="10.4299" /> <!-- Mold Lubricant -->
+				<item id="959" min="1" max="1" chance="0.0209" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="4040" min="1" max="1" chance="10.4299" /> <!-- Corroded Mold Lubricant -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1346,17 +1346,17 @@
 				<item id="57" min="8835" max="17721" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.00358569791221619" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="1.02031433413124" /> <!-- Soul Separator Head -->
-				<item id="1895" min="1" max="1" chance="35.4163545818138" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="2.47915339630127" /> <!-- Mold Lubricant -->
-				<item id="4042" min="1" max="1" chance="2.06594611871719" /> <!-- Enria -->
+				<item id="1895" min="1" max="1" chance="35.4163545818138" /> <!-- Corroded Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="2.47915339630127" /> <!-- Corroded Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="2.06594611871719" /> <!-- Corroded Enria -->
 				<item id="4043" min="1" max="1" chance="4.13189223743439" /> <!-- Asofe -->
-				<item id="960" min="1" max="1" chance="0.0496029271507263" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0496029271507263" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="9546" min="1" max="1" chance="0.991652331600189" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="4042" min="1" max="1" chance="25.1633" /> <!-- Enria -->
+				<item id="4042" min="1" max="1" chance="25.1633" /> <!-- Corroded Enria -->
 				<item id="6695" min="1" max="1" chance="3.2019" /> <!-- Demon Splinter Blade -->
-				<item id="6901" min="1" max="1" chance="1.5098" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="6901" min="1" max="1" chance="1.5098" /> <!-- Recipe: Arrow of Light -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1441,22 +1441,22 @@
 				<item id="5495" min="1" max="1" chance="0.268468712510169" /> <!-- Sealed Shield of Nightmare Fragment -->
 				<item id="5317" min="1" max="1" chance="0.00174021120071411" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="0.211381976486743" /> <!-- Sealed Majestic Circlet Design -->
-				<item id="1873" min="1" max="1" chance="3.53616258136368" /> <!-- Silver Nugget -->
-				<item id="1868" min="1" max="1" chance="17.6808129068184" /> <!-- Thread -->
-				<item id="1876" min="1" max="1" chance="1.76809972413254" /> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="1" chance="2.52582514855957" /> <!-- Metallic Fiber -->
-				<item id="4042" min="1" max="1" chance="0.147357004886627" /> <!-- Enria -->
-				<item id="6901" min="1" max="1" chance="0.00884805633544922" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="10483" min="1" max="1" chance="0.061383390827179" /> <!-- Life Stone - Level 82 -->
-				<item id="10484" min="1" max="1" chance="0.0153366309814453" /> <!-- Mid-Grade Life Stone - Level 82 -->
-				<item id="10485" min="1" max="1" chance="0.00154840985870361" /> <!-- High-Grade Life Stone - Level 82 -->
-				<item id="10486" min="1" max="1" chance="0.000294935211181641" /> <!-- Top-Grade Life Stone - Level 82 -->
+				<item id="1873" min="1" max="1" chance="3.53616258136368" /> <!-- Corroded Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="17.6808129068184" /> <!-- Corroded Thread -->
+				<item id="1876" min="1" max="1" chance="1.76809972413254" /> <!-- Corroded Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="2.52582514855957" /> <!-- Corroded Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.147357004886627" /> <!-- Corroded Enria -->
+				<item id="6901" min="1" max="1" chance="0.00884805633544922" /> <!-- Recipe: Arrow of Light -->
+				<item id="10483" min="1" max="1" chance="0.061383390827179" /> <!-- Life Stone - Lv. 82 -->
+				<item id="10484" min="1" max="1" chance="0.0153366309814453" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="10485" min="1" max="1" chance="0.00154840985870361" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="10486" min="1" max="1" chance="0.000294935211181641" /> <!-- Top-grade Life Stone - Lv. 82 -->
 				<item id="9546" min="1" max="1" chance="0.0707107168807983" /> <!-- Fire Stone -->
 				<item id="1344" min="10" max="30" chance="11.0505218918495" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
-				<item id="6696" min="1" max="1" chance="0.4729" /> <!-- Heavens Divider Edge -->
-				<item id="6901" min="1" max="1" chance="0.2154" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="6696" min="1" max="1" chance="0.4729" /> <!-- Heaven's Divider Edge -->
+				<item id="6901" min="1" max="1" chance="0.2154" /> <!-- Recipe: Arrow of Light -->
 				<item id="6697" min="1" max="1" chance="0.4567" /> <!-- Arcana Mace Head -->
 			</spoil>
 		</dropLists>

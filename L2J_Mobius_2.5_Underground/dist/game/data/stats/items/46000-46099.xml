@@ -397,7 +397,7 @@
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 	</item>
 	<item id="46036" name="Spellbook: Fate of the Exalted" type="EtcItem">
-		<!-- Needed to learn passive skill, Fate of the Exalted Lv. 1, with the effect of + 3 LUc. Can be obtained in the main class status. -->
+		<!-- Needed to learn passive skill, Fate of the Exalted Lv. 1, with the effect of + 3 LUC. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1161,7 +1161,7 @@
 		<set name="weight" val="1" />
 	</item>
 	<item id="46092" name="Treasure Map - Beora" type="EtcItem">
-		<!-- A map showing the location of some treasure. It says, "The legacy of the great Elf queen Beora is here...". Double-click to receive the quest. -->
+		<!-- A map showing the location of some treasure. It says, "The legacy of the great Elf queen Beora is here?. Double-click to receive the quest. -->
 		<set name="icon" val="icon.etc_map_yellow_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1239,7 +1239,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46098" name="Treasure Map - Beora" type="EtcItem">
-		<!-- A map showing the location of some treasure. It says, "The legacy of the great Elf queen Beora is here...". -->
+		<!-- A map showing the location of some treasure. It says, "The legacy of the great Elf queen Beora is here?.  -->
 		<set name="icon" val="icon.etc_map_yellow_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />

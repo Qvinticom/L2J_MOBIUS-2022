@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
@@ -15,18 +15,15 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6702" levels="1" name="Blessing of Cheers">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6703" levels="1" name="Blessing of Cheers">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6704" levels="1" name="Blessing of Cheers">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -42,7 +39,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6706" levels="1" name="Piercing Attack">
-		<!-- High Five Skill -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -65,19 +61,16 @@
 		</for>
 	</skill>
 	<skill id="6707" levels="1" name="Self-destruction">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6708" levels="1" name="Self-destruction">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6709" levels="1" name="Multi Shot">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
@@ -92,7 +85,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6711" levels="3" name="Etis Power Up">
-		<!-- none -->
 		<set name="abnormalTime" val="30" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="379" />
@@ -100,7 +92,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6714" levels="1" name="Wind Walk of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Speed by 33 for 10 minutes. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -121,7 +113,7 @@
 		</for>
 	</skill>
 	<skill id="6715" levels="1" name="Haste of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Atk. Spd. by 33% for 10 minutes. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -142,7 +134,7 @@
 		</for>
 	</skill>
 	<skill id="6716" levels="1" name="Might of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases P. Atk. by 15% for 10 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -163,7 +155,7 @@
 		</for>
 	</skill>
 	<skill id="6717" levels="1" name="Berserker Spirit of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 minutes, reduces party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -191,7 +183,7 @@
 		</for>
 	</skill>
 	<skill id="6718" levels="1" name="Death Whisper of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases critical attack effect by 35% for 10 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -212,7 +204,7 @@
 		</for>
 	</skill>
 	<skill id="6719" levels="1" name="Guidance of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases accuracy by 4 for 10 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -233,7 +225,7 @@
 		</for>
 	</skill>
 	<skill id="6720" levels="1" name="Focus of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases critical attack rate by 30% for 10 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -254,7 +246,7 @@
 		</for>
 	</skill>
 	<skill id="6721" levels="1" name="Empower of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases M. Atk. by 75% for 10 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -275,7 +267,7 @@
 		</for>
 	</skill>
 	<skill id="6722" levels="1" name="Acumen of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Casting Spd. by 30% for 10 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -296,7 +288,7 @@
 		</for>
 	</skill>
 	<skill id="6723" levels="1" name="Concentration of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Decreases magic cancel damage by 53 for 20 minutes. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
@@ -317,7 +309,7 @@
 		</for>
 	</skill>
 	<skill id="6724" levels="1" name="Greater Heal of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Recovers the target's HP by 450 power and recovers 30 HP per second for 15 seconds. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -342,7 +334,7 @@
 		</for>
 	</skill>
 	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 15 seconds, bestows the blessing of blood upon party members. Recovers HP by a certain rate when being attacked. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLESS_THE_BLOOD" />
@@ -367,7 +359,6 @@
 		</for>
 	</skill>
 	<skill id="6726" levels="1" name="Bless the Blood">
-		<!-- High Five Skill -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -384,7 +375,7 @@
 		</for>
 	</skill>
 	<skill id="6727" levels="1" name="Vampiric Rage of Elcadia">
-		<!-- High Five Skill -->
+		<!-- For 10 minutes, recovers as HP 9% of general physical damage inflicted on the enemy. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -405,7 +396,7 @@
 		</for>
 	</skill>
 	<skill id="6728" levels="1" name="Recharge of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Recovers MP up to 136 power depending on the target's level. -->
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="655" />
 		<set name="effectRange" val="900" />
@@ -423,7 +414,7 @@
 		</for>
 	</skill>
 	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Increases Resistance to Holy by 30 for 10 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
@@ -444,7 +435,7 @@
 		</for>
 	</skill>
 	<skill id="6730" levels="1" name="Greater Battle Heal of Elcadia">
-		<!-- High Five Skill -->
+		<!-- Quickly recovers the target's HP by 858 power. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="468" />
@@ -462,13 +453,10 @@
 		</for>
 	</skill>
 	<skill id="6731" levels="1" name="Etis Shadow">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6732" levels="1" name="Mirage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="300" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
@@ -480,23 +468,21 @@
 		</for>
 	</skill>
 	<skill id="6733" levels="1" name="Antharas's Stigma">
-		<!-- "Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP." -->
+		<!-- Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6734" levels="1" name="Energy of Destruction">
-		<!-- "For 5 seconds, inflicted with poison with 800 HP decrease per second." -->
+		<!-- For 5 seconds, inflicted with poison with 800 HP decrease per second. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6735" levels="1" name="Petrify">
-		<!-- "Inflicted with petrification, the body is rigid like stone." -->
+		<!-- Inflicted with petrification, the body is rigid like stone. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6736" levels="1" name="Fierce Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
@@ -513,8 +499,6 @@
 		</for>
 	</skill>
 	<skill id="6737" levels="1" name="Heal">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="900" />
 		<set name="hitTime" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -535,28 +519,24 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6739" levels="1" name="Presentation - Behemoth Leader Casting Preparation">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6740" levels="1" name="Presentation - Behemoth Leader Casting">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6741" levels="1" name="Presentation - Behemoth Leader Casting Failure">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6742" levels="1" name="Presentation - Behemoth Object Channeling">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6743" levels="1" name="Dark Wind">
-		<!-- Confirmed High Five -->
+		<!-- Dark attribute is weakened -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -594,23 +574,20 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6745" levels="1" name="Dark Space">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6746" levels="1" name="Dark Space">
-		<!-- Darkness attribute is weakened. -->
+		<!-- Dark attribute is weakened. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6747" levels="1" name="Dark Blade">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6748" levels="1" name="Stun Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts stun for 5 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="STUN" />
@@ -639,8 +616,6 @@
 		</for>
 	</skill>
 	<skill id="6749" levels="1" name="Death Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -660,8 +635,6 @@
 		</for>
 	</skill>
 	<skill id="6750" levels="1" name="Power Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -681,13 +654,10 @@
 		</for>
 	</skill>
 	<skill id="6751" levels="1" name="Blow Attack">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6752" levels="1" name="Revival">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalTime" val="60" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2000" />
@@ -705,8 +675,6 @@
 		</for>
 	</skill>
 	<skill id="6753" levels="1" name="Death Blow">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -726,8 +694,7 @@
 		</for>
 	</skill>
 	<skill id="6754" levels="1" name="Bleed">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicted with bleed and 200 HP decreases every second. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -754,8 +721,6 @@
 		</for>
 	</skill>
 	<skill id="6755" levels="1" name="Death Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -775,8 +740,6 @@
 		</for>
 	</skill>
 	<skill id="6756" levels="1" name="Death Talon">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -795,8 +758,7 @@
 		</for>
 	</skill>
 	<skill id="6757" levels="1" name="Slow">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Decreases the enemy's Speed by 30% for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -823,8 +785,6 @@
 		</for>
 	</skill>
 	<skill id="6758" levels="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
@@ -848,14 +808,11 @@
 		</for>
 	</skill>
 	<skill id="6759" levels="1" name="Death Shot">
-		<!-- none -->
 		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6760" levels="1" name="Dragon Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -873,8 +830,6 @@
 		</for>
 	</skill>
 	<skill id="6761" levels="1" name="Dragon Blow Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="20" />
 		<set name="effectPoint" val="-100" />
@@ -891,8 +846,6 @@
 		</for>
 	</skill>
 	<skill id="6762" levels="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
@@ -916,8 +869,6 @@
 		</for>
 	</skill>
 	<skill id="6763" levels="1" name="Dragon Earth Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -937,8 +888,6 @@
 		</for>
 	</skill>
 	<skill id="6764" levels="1" name="Dragon Earth Shot">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
@@ -958,8 +907,6 @@
 		</for>
 	</skill>
 	<skill id="6765" levels="1" name="Complete Recovery">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
@@ -975,8 +922,6 @@
 		</for>
 	</skill>
 	<skill id="6766" levels="1" name="Earth Tremor">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
@@ -997,13 +942,11 @@
 		</for>
 	</skill>
 	<skill id="6767" levels="1" name="Earthquake">
-		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6768" levels="1" name="Stun Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts stun for 5 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
@@ -1030,8 +973,7 @@
 		</for>
 	</skill>
 	<skill id="6769" levels="1" name="Petrify">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicted with petrification, the body is rigid like stone. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
@@ -1056,8 +998,6 @@
 		</for>
 	</skill>
 	<skill id="6770" levels="1" name="Heal">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="900" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
@@ -1074,8 +1014,6 @@
 		</for>
 	</skill>
 	<skill id="6771" levels="1" name="Death Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -1095,8 +1033,6 @@
 		</for>
 	</skill>
 	<skill id="6772" levels="1" name="Power Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -1116,8 +1052,6 @@
 		</for>
 	</skill>
 	<skill id="6773" levels="1" name="Rage">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
@@ -1141,8 +1075,7 @@
 		</for>
 	</skill>
 	<skill id="6774" levels="1" name="Stun Attack">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Inflicts stun for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="STUN" />
@@ -1169,8 +1102,6 @@
 		</for>
 	</skill>
 	<skill id="6775" levels="1" name="Soul Breath">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -1190,8 +1121,7 @@
 		</for>
 	</skill>
 	<skill id="6776" levels="1" name="Paralysis">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 15 seconds. -->
 		<set name="abnormalTime" val="10" />
 		<set name="activateRate" val="80" />
 		<set name="basicProperty" val="MEN" />
@@ -1223,7 +1153,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6777" levels="1" name="Bleeding Gash">
-		<!-- High Five Skill -->
+		<!-- For 20 seconds, slows down Speed and inflicts bleed so that 200 HP is decreased every second. Inflicted with paralysis for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1252,8 +1182,6 @@
 		</for>
 	</skill>
 	<skill id="6778" levels="1" name="Death Strike">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -1273,8 +1201,7 @@
 		</for>
 	</skill>
 	<skill id="6779" levels="1" name="Paralysis">
-		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
+		<!-- Body is rigid and paralyzed. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" /> <!-- FIXME: value unconfirmed -->
 		<set name="abnormalType" val="PARALYZE" />
@@ -1290,121 +1217,101 @@
 		</for>
 	</skill>
 	<skill id="6780" levels="1" name="Presentation - Portal Ray Combined Light Maintenance">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6781" levels="1" name="Presentation - Red Portal Ray">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6782" levels="1" name="Presentation - Blue Portal Ray">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6783" levels="1" name="Presentation - Portal 2_boom_up">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6784" levels="1" name="Presentation - Eris's Suffering">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6785" levels="1" name="Presentation - Dialogue with Etis 1">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6786" levels="1" name="Presentation - Etis Transformation Effect">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6787" levels="1" name="Presentation - Etis Pre-Transformation">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6788" levels="1" name="Presentation - Etis Post-Transformation">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6789" levels="1" name="Presentation - Etis's Defeat">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6790" levels="1" name="Presentation - Etis Kneeling">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6791" levels="1" name="Presentation - Dialogue with Elcadia 1">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6792" levels="1" name="Presentation - Dialogue with Elcadia 2">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6793" levels="1" name="Presentation - Dialogue with Elcadia 3">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6794" levels="1" name="Presentation - Elcadia Casting 1">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6795" levels="1" name="Presentation - Elcadia Casting 2">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6796" levels="1" name="Presentation - Meteor Effect">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6797" levels="1" name="Presentation - Eris Scatter Effect">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6798" levels="1" name="Presentation - Etis Summon Effect">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6799" levels="1" name="Presentation - Portal 2_boom_down">
-		<!-- none -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />

@@ -121,7 +121,7 @@
 		</skills>
 	</item>
 	<item id="6840" name="Circlet of Adena" type="Armor">
-		<!-- Lion Circlet. Can be worn by the lord of Town of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Lion Circlet. Can be worn by the lord of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -151,7 +151,7 @@
 		</skills>
 	</item>
 	<item id="6841" name="Lord's Crown" type="Armor">
-		<!-- Hair Accessory, Lord's Crown. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Lord's Crown. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_crown_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -180,7 +180,7 @@
 		</skills>
 	</item>
 	<item id="6842" name="Wings of Destiny Circlet" type="Armor">
-		<!-- Hair Accessory, only for Heroes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Hair Accessory, only for Heroes. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_hero_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />

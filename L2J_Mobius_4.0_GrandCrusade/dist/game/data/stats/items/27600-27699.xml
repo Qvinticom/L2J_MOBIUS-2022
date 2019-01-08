@@ -27,7 +27,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27602" name="Abundance Box" type="EtcItem">
-		<!-- Get 1 of the following:  1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum x2, Superior Giant's Codex - Discipline Chapter 1, Giant's Energy x10, Orfen's Earring, Elcyum Crystal x8, Tempest Stone, Gemstone (R-grade) x40, 1 of 5 Fortune Pocket - Stage 5. -->
+		<!-- Get 1 of the following: 1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum x2, Superior Giant's Codex - Discipline Chapter 1, Giant's Energy x10, Orfen's Earring, Elcyum Crystal x8, Tempest Stone, Gemstone (R-grade) x40, 1 of 5 Fortune Pocket - Stage 5. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -535,7 +535,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="27659" name="Anniversary Coin" additionalName="Event" type="EtcItem">
-		<!-- An anniversary coin. It might be a good idea to collect these for later� -->
+		<!-- An anniversary coin. It might be a good idea to collect these for later?-1 -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
@@ -571,8 +571,8 @@
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
-			<item id="38941" min="55" max="30" chance="100" />
-			<item id="38943" min="1" max="1" chance="100" />
+			<item id="38941" min="55" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
+			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
 		</capsuled_items>
 	</item>
 	<item id="27663" name="Supply Box" additionalName="Top-grade" type="EtcItem">
@@ -593,8 +593,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="27593" min="5" max="5" chance="95" />
-			<item id="27585" min="1" max="1" chance="5" />
+			<item id="27593" min="5" max="5" chance="95" /> <!-- Daily Coin -->
+			<item id="27585" min="1" max="1" chance="5" /> <!-- Special Supply Box - Standard -->
 		</capsuled_items>
 	</item>
 	<item id="27664" name="Tauti's Ring" additionalName="7-day" type="Armor">

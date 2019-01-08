@@ -20,7 +20,7 @@
 		</stats>
 	</item>
 	<item id="13753" name="Olympiad Warrior's Necklace" type="Armor">
-		<!-- Olympiad Warrior's Necklace. Can be used for 60 days. Provides MP +42 and increases Sleep/Hold/Stun Resistance by 15%, Sleep/Hold/Stun Rate +15%, and decreases skill reuse time. Reflects a part of received damage. Cannot be exchanged or dropped. -->
+		<!-- Olympiad Warrior's Necklace. Can be used for 60 days. Provides MP +42 and increases Sleep/Hold/Stun Resistance by 15%, Sleep/Hold/Stun Rate +15%, and decreases Skill Cooldown. Reflects a part of received damage. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -39,7 +39,7 @@
 		</stats>
 	</item>
 	<item id="13754" name="Olympiad Warrior's Earring" type="Armor">
-		<!-- Olympiad Warrior's Earring. Can be used for 60 days. Provides MP +31, Stun / Mental Attack Resistance and Atk. Rate +20%. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. Cannot be exchanged or dropped. -->
+		<!-- Olympiad Warrior's Earring. Can be used for 60 days. Provides MP +31, Stun/ Mental Attack Resistance and Atk. Rate +20%. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />

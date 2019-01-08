@@ -122,6 +122,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1008" type="EtcItem" name="Harrys's 1st Receipt">
+		<!-- A receipt Harrys received after ordering tools. Take this and go to Blacksmith Alltran. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -136,6 +137,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1009" type="EtcItem" name="Harrys's 2nd Receipt">
+		<!-- The receipt that Harrys has received after placing an order for his tools. Go and gather golem shards needed for creating the tool. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -150,6 +152,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1010" type="EtcItem" name="Golem Shard">
+		<!-- Shards of rock that have fallen from the golem's body. Gather five of these and take them to Blacksmith Alltran. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -164,6 +167,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1011" type="EtcItem" name="Tool Box">
+		<!-- A toolbox containing the tools that Blacksmith Alltran has forged. Take this to Magister Harrys at the temple. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -178,6 +182,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1012" type="EtcItem" name="Delivery List">
+		<!-- Take the heavy wooden box to Trader Jackson. The bolts of cloth to Trader Silvia. Take the clay pot to the warehouse keeper Rant. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -192,6 +197,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1013" type="EtcItem" name="Heavy Wood Box">
+		<!-- The wooden box to be delivered to Trader Jackson of the weapons shop. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -206,6 +212,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1014" type="EtcItem" name="Cloth Bundle">
+		<!-- Bolts of cloth that need to be delivered to Trader Silvia of the grocery store. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -220,6 +227,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1015" type="EtcItem" name="Clay Pot">
+		<!-- The clay pot that must be delivered to the warehouse keeper Rant. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -234,6 +242,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1016" type="EtcItem" name="Jackson's Receipt">
+		<!-- The receipt that Jackson has issued upon receiving his wooden box. Take this to Guard Arnold. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -248,6 +257,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1017" type="EtcItem" name="Silvia's Receipt">
+		<!-- The receipt that Silvia has issued upon receiving her bolts of cloth. Take this to Guard Arnold. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -262,6 +272,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1018" type="EtcItem" name="Rant's Receipt">
+		<!-- The receipt issued by Rant upon his receiving of the clay pot. Take this to Guard Arnold. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -276,6 +287,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1019" type="EtcItem" name="official Letter">
+		<!-- An official letter that the Lord of Gludio has sent to Sir Colin Windawood, calling a meeting. Deliver this to Sir Windawood. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -290,6 +302,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1020" type="EtcItem" name="Flame Shard">
+		<!-- A fragment of soul ore of fire. Can be taken from the fire spirit salamander. Give it to Trader Katerina. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -304,6 +317,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1021" type="EtcItem" name="Ice Shard">
+		<!-- A fragment of elemental stone of water. Can be taken from the water spirit undine. Give to Trader Katerina. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -318,6 +332,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1022" type="EtcItem" name="Lilith's Letter">
+		<!-- A letter written by Lilith in longing for her lover, separated a thousand years ago. Find out news about her lover for her. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -332,6 +347,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1023" type="EtcItem" name="Theon's Diary">
+		<!-- A diary written by Theon in longing for his lover, separated a thousand years ago. Take this to Lilith. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -346,6 +362,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1024" type="EtcItem" name="Adamantite Ore">
+		<!-- Adamantite ore. All of it is imported from Gracia. Gather 20 of these and take them to Warehouse Keeper Wilford. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -360,6 +377,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1025" type="EtcItem" name="Clay Tablet">
+		<!-- A tablet praising Beleth that the devil Nerkas possessed. Deliver this to High Priest Biotin. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -374,6 +392,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1026" type="EtcItem" name="Silvery Spidersilk">
+		<!-- The spider silk of the silver spider. Take this to Trader Unoren of the weapons shop. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -388,6 +407,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1027" type="EtcItem" name="Unoren's Receipt">
+		<!-- The receipt issued by the magic shop. Take this and go to Trader Creamees. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -402,6 +422,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1028" type="EtcItem" name="Creamees's Ticket">
+		<!-- A ticket issued by the warehouse. Take this and go to Warehouse Keeper Julia. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -416,6 +437,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1029" type="EtcItem" name="Nightshade Leaf">
+		<!-- The leaf of the nightshade plant. Take this to Nerupa. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -430,6 +452,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1030" type="EtcItem" name="Cracked Skull">
+		<!-- The cracked skull of the Dark Horror. Take this to Magister Vlasty. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -444,6 +467,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1031" type="EtcItem" name="Perfect Skull">
+		<!-- Skull of the dark horror. Take this to Magister Vlasty. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -458,6 +482,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1032" type="EtcItem" name="Fox Fur">
+		<!-- A mane of keltirs. It is soft and luxurious, and used to spin thread and yarn. Take this to Cristel. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -472,6 +497,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1033" type="EtcItem" name="Fox Fur Yarn">
+		<!-- Yarn spun out of the fur of keltirs. Take this to the former tailor Warehouse Keeper Rolfe, and he will make it into the doll's hair. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -486,6 +512,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1034" type="EtcItem" name="Maiden Doll">
+		<!-- A doll resembling a Human maiden. Take this to Lighthouse Keeper Rockswell. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -500,6 +527,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1035" type="EtcItem" name="Plague Dust">
+		<!-- A powder obtained from the plague zombie. Take this to Hierarch Asterios. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -514,6 +542,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1036" type="EtcItem" name="Andellia's Letter">
+		<!-- A letter from Andellia asking her sister Thalia to send her the fruit of the Mother Tree. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -528,6 +557,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1037" type="EtcItem" name="Fruit of The Mother Tree">
+		<!-- Fruit that the Mother Tree bears once every few years. Take this to Andellia. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -542,6 +572,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1038" type="EtcItem" name="Rumiel's 1st Poem">
+		<!-- The scroll containing Rumiel Moonshine's first poem. Gather all four and take them to Sentinel Starden. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -556,6 +587,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1039" type="EtcItem" name="Rumiel's 2nd Poem">
+		<!-- The scroll containing Rumiel Moonshine's second poem. Gather all four and take them to Sentinel Starden. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -570,6 +602,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1040" type="EtcItem" name="Rumiel's 3rd Poem">
+		<!-- The scroll containing Rumiel Moonshine's third poem. Gather all four and take them to Sentinel Starden. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -584,6 +617,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1041" type="EtcItem" name="Rumiel's 4th Poem">
+		<!-- The scroll containing Rumiel Moonshine's fourth poem. Gather all four and take them to Sentinel Starden. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -598,6 +632,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1042" type="EtcItem" name="Wererat's Fang">
+		<!-- The fang of a dead ratman. Collect these to take to Master Ellenia. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -612,6 +647,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1043" type="EtcItem" name="Varool Foulclaw's Fang">
+		<!-- The fang of Varool Foulclaw, leader of the ratmen. Take this to Master Ellenia. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -626,6 +662,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1044" type="EtcItem" name="Kirunak Skull">
+		<!-- Kirunak's skull obtained after killing Kirunak, the leader of the drevanuls. Take this to Trader Creamees. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -640,6 +677,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1045" type="EtcItem" name="Zombie's Skin">
+		<!-- A skin obtained from marshland zombies. Collect five and go to Trader Minaless. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -654,6 +692,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1046" type="EtcItem" name="Nightmare Crystal">
+		<!-- A crystal used by the succubus Merkenis to cast nightmares. Take this to Tetrarch Vellior. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -668,6 +707,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1047" type="EtcItem" name="Spellbook: Light">
+		<!-- Spellbook needed to learn Light. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -682,6 +722,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1048" type="EtcItem" name="Spellbook: Might">
+		<!-- Spellbook needed to learn Might. Used by Human Mystics, Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -696,6 +737,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1049" type="EtcItem" name="Spellbook: Ice Bolt">
+		<!-- Spellbook needed to learn Ice Bolt. Used by Human Mystics, Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -710,6 +752,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1050" type="EtcItem" name="Spellbook: Battle Heal">
+		<!-- Spellbook needed to learn Battle Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -724,6 +767,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1051" type="EtcItem" name="Spellbook: Vampiric Touch">
+		<!-- Spellbook needed to learn Vampiric Touch. Used by Human Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -738,6 +782,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1052" type="EtcItem" name="Spellbook: Flame Strike">
+		<!-- Spellbook needed to learn Flame Strike. Used by Human Wizards, Elven Wizards and Dark Wizards. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -752,6 +797,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1053" type="EtcItem" name="Spellbook: Cure Poison">
+		<!-- Spellbook needed to learn Cure Poison. Used by Human Mystics, Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -766,6 +812,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1054" type="EtcItem" name="Spellbook: Group Heal">
+		<!-- Spellbook needed to learn Group Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -780,6 +827,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1055" type="EtcItem" name="Spellbook: Curse: Poison">
+		<!-- Spellbook needed to learn Curse: Poison. Used by Human Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -794,6 +842,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1056" type="EtcItem" name="Spellbook: Curse: Weakness">
+		<!-- Spellbook needed to learn Curse: Weakness. Used by Human Mystics and Elven Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -808,6 +857,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1057" type="EtcItem" name="Spellbook: Summon Meal">
+		<!-- Spellbook needed to learn Summon Meal. Used by Human Mystics and Elven Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -822,6 +872,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1058" type="EtcItem" name="Spellbook: Shield">
+		<!-- Spellbook needed to learn Shield. Used by Human Mystics, Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -836,6 +887,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1059" type="EtcItem" name="Spellbook: Know Enemy">
+		<!-- Spellbook needed to learn Know Enemy. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -850,6 +902,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1060" type="EtcItem" name="Lesser Healing Potion">
+		<!-- A magical potion that slowly restores HP. Low endurance. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="5"/>
@@ -864,6 +917,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1061" type="EtcItem" name="Healing Potion">
+		<!-- A magical potion that slowly restores HP. High endurance. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="5"/>
@@ -878,6 +932,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1062" type="EtcItem" name="Haste Potion">
+		<!-- A magical potion that increases speed. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="180"/>
@@ -892,6 +947,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1063" type="EtcItem" name="Tutorial Parchment">
+		<!-- Take the tutorial parchment to Grand Master Roien. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -906,6 +962,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1064" type="EtcItem" name="Tutorial Parchment">
+		<!-- Take the tutorial parchment to Grand Master Roien. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -920,6 +977,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1065" type="EtcItem" name="Tutorial Parchment">
+		<!-- Take the tutorial parchment to Nerupa. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -934,6 +992,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1066" type="EtcItem" name="Tutorial Parchment">
+		<!-- Take the tutorial parchment to Mitraell, the chief of Dark Elves. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -948,6 +1007,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1067" type="EtcItem" name="Recommendation">
+		<!-- Take the recommendation to Grand Master Roien. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -962,6 +1022,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1068" type="EtcItem" name="Recommendation">
+		<!-- Take the recommendation to Grand Magister Gallint. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -976,6 +1037,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1069" type="EtcItem" name="Leaf of the Mother Tree">
+		<!-- Take the leaf of the Mother Tree to Nerupa. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -990,6 +1052,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1070" type="EtcItem" name="Blood of Mitraell">
+		<!-- Take the blood of Mitraell to Hierarch Mitraell. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1004,6 +1067,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1071" type="EtcItem" name="Hyacinth Charm">
+		<!-- A charm given by Hierarch Asterios. Go to the water source to seek those who pollute the waters of the elven village. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1018,6 +1082,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1072" type="EtcItem" name="Hyacinth Charm">
+		<!-- A charm given by Hierarch Asterios. Go to the water source and obtain five handfuls of plague dust from the zombies. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1032,6 +1097,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1073" type="EtcItem" name="Beginner's Potion">
+		<!-- A magical potion that slowly restores HP. Low endurance. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="potion"/>
 		<set name="weight" val="5"/>
@@ -1046,6 +1112,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1074" type="EtcItem" name="Boat Ticket: Talking Island to Gludin">
+		<!-- Boat Ticket: Depart Talking Island - Arrive Gludin Harbor -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -1060,6 +1127,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1075" type="EtcItem" name="Boat Ticket: Gludin to Talking Island">
+		<!-- Boat Ticket: Depart Gludin Harbor - Arrive Talking Island -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="20"/>
@@ -1074,6 +1142,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1076" type="EtcItem" name="Carlon's Letter">
+		<!-- First half year financial summary of the Iron Gate Guild: balance sheet and profit and loss statement of the Dark Elf Village guild. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1088,6 +1157,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1077" type="EtcItem" name="Venom Sac">
+		<!-- A poison sac of poisonous spider. Gather ten of these and take to Astaron. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1102,6 +1172,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1078" type="EtcItem" name="Wind Shard">
+		<!-- A fragment of the elemental stone of wind. You can get them from lirein, the wind spirits. Collect these to take to Rizraell. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1116,6 +1187,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1079" type="EtcItem" name="Darin's Receipt">
+		<!-- A receipt for a magical potion Darin received after paying Baulro. This must be handed to Baulro. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1130,6 +1202,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1080" type="EtcItem" name="Baulro's Potion">
+		<!-- A potion of courage that Baulro has created for the shy Darin, but its effects are unknown. This must be delivered to Darin. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1144,6 +1217,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1081" type="EtcItem" name="Omen Beast's Eye">
+		<!-- The first of three materials Tetrarch Talloth asked you to collect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1158,6 +1232,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1082" type="EtcItem" name="Taint Stone">
+		<!-- The second of three materials Tetrarch Talloth asked you to collect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1172,6 +1247,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1083" type="EtcItem" name="Succubus Blood">
+		<!-- The third of three materials Tetrarch Talloth asked you to collect. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1186,6 +1262,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1084" type="EtcItem" name="Gludio Lord's Mark">
+		<!-- A mark indicating that the bearer is carrying out the orders of the lord. Keep this in your possession and hunt Orcs or werewolves. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1200,6 +1277,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1085" type="EtcItem" name="Orc's Necklace">
+		<!-- A bone necklace that Orc fighters possess on their bodies for magic purposes. Take this to Captain Gilbert. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1214,6 +1292,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1086" type="EtcItem" name="Werewolf's Fang">
+		<!-- Fangs from a dead werewolf. Take this to Captain Gilbert. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1228,6 +1307,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1087" type="EtcItem" name="Giant Spider Leg">
+		<!-- The legs cut off from a giant spider. Collect 8 of these and take them to Alshupes. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1242,6 +1322,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1088" type="EtcItem" name="Undrias's Letter">
+		<!-- Abyssal Celebrant Undrias's letter. Take this letter to Trader Iria, Warehouse Keeper Dorankus, and Master Trudy. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1256,6 +1337,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1089" type="EtcItem" name="Ceremonial Dagger">
+		<!-- A ceremonial dagger used during the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1270,6 +1352,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1090" type="EtcItem" name="Dreviant Wine">
+		<!-- Holy wine used in the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1284,6 +1367,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1091" type="EtcItem" name="Garmiel's Scripture">
+		<!-- The scripture used during the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1298,6 +1382,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1092" type="EtcItem" name="Arujien's Letter">
+		<!-- The letter that Arujien has written in longing for Greenis. Show this to Gatekeeper Mirabel. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1312,6 +1397,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1093" type="EtcItem" name="Arujien's Letter">
+		<!-- The letter that Arujien has written in longing for Greenis. Show this to Trader Herbiel. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1326,6 +1412,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1094" type="EtcItem" name="Arujien's Letter">
+		<!-- Arujien's love letter. Since you have shown this to Mirabel and Herbiel, you must go back to Arujien. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1340,6 +1427,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="1095" type="EtcItem" name="Spellbook: Attack Aura">
+		<!-- Spellbook needed to learn Attack Aura. Used by Elven Fighters and Dark Fighters. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -1354,6 +1442,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1096" type="EtcItem" name="Spellbook: Elemental Heal">
+		<!-- Spellbook needed to learn Elemental Heal. Used by Elven Fighters. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -1368,6 +1457,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1097" type="EtcItem" name="Spellbook: Drain Health">
+		<!-- Spellbook needed to learn Drain Health. Used by Human Knights and Dark Fighters. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -1382,6 +1472,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1098" type="EtcItem" name="Spellbook: Wind Walk">
+		<!-- Spellbook needed to learn Wind Walk. Used by Clerics, Elven Oracles and Shillien Oracles. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>
@@ -1396,6 +1487,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="1099" type="EtcItem" name="Spellbook: Wind Shackle">
+		<!-- Spellbook needed to learn Wind Shackle. Used by Elven Mystics and Dark Mystics. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="spellbook"/>
 		<set name="weight" val="120"/>

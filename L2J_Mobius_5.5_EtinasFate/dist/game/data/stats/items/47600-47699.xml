@@ -92,34 +92,34 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47608" name="Monkey Bait" additionalName="R" type="EtcItem">
-		<!-- Fishing Time: 75 seconds. Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, and Chef Monkey's Treasure Chest. Can be used by characters between Lv. 85-94. Will be deleted when the event ends. -->
+		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey's Treasure Chest. Can be used by characters between Lv. 85-94. Will be deleted after the event. -->
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47609" name="Monkey Bait" additionalName="R95" type="EtcItem">
-		<!-- Fishing Time: 75 seconds. Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, and Chef Monkey's Treasure Chest. Can be used by characters between Lv. 95-98. Will be deleted when the event ends. -->
+		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey's Treasure Chest. Can be used by characters between Lv. 95-98. Will be deleted after the event. -->
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47610" name="Monkey Bait" additionalName="R99" type="EtcItem">
-		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, and Chef Monkey's Treasure Chest. Can be used by characters with Lv. 99 or above. Will be deleted when the event ends. -->
+		<!-- Fishing Time: 75 seconds. Fishing Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, or Chef Monkey's Treasure Chest. Can be used by characters with Lv. 99 or above. Will be deleted after the event. -->
 		<set name="icon" val="Icon.ev_monkey_banana" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47611" name="Chef Monkeys' Banana Herb" type="EtcItem">
-		<!-- Chef Monkeys' Banana Herb. P.Atk./M.Atk./P. Def./M. Def. increase by 50% for 5 minutes, and XP and SP gained increase by 10%. Effect disappears when restarted. -->
+		<!-- Chef Monkeys' Banana Herb. P. Atk./ M.Atk./ P. Def./ M. Def. +50% for 5 min., and Acquired XP/ SP +10%. Effect disappears when restarted. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47612" name="Chef Monkey's Treasure Chest" type="EtcItem">
-		<!-- Chef Monkey's Treasure Chest, caught using the Banana Bait. Use to obtain various items. Will be deleted after the event. -->
+		<!-- Chef Monkey's Treasure Chest caught with Banana Bait. Use it to obtain various items. Will be deleted after the event. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -244,7 +244,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47625" name="Eli T-shirt" type="Armor">
-		<!-- Red Libra-only Item. A shirt widely used in Elysium. However, cannot increase power in Aden. <Item Skill>. Magic Defense Increased by 18. Movement Speed increased by 7. Max HP increased by 552. Max MP increased by 552. Skill MP Consumption reduced by 3%. Damage Reflect Resistance increased by 5. Vampiric Rage increased by 5%. Skill Cooldown reduced by 3%. Damage Received reduced by 3%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance increased by 36. STR+4, DEX+4, CON+4, INT+4, WIT+4, MEN+4. <Active Skill>. Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence/Einhasad's Salvation/Einhasad's Blessing. To be deleted on March 9th, 2016 (Wed) after regular maintenance. -->
+		<!-- Red Libra-only Item. A shirt widely used in Elysium. However, cannot increase power in Aden. <Item Skill>. Magic Defense Increased by 18. Movement Speed increased by 7. Max HP increased by 552. Max MP increased by 552. Skill MP Consumption reduced by 3%. Damage Reflect Resistance increased by 5. Vampiric Rage increased by 5%. Skill Cooldown reduced by 3%. Damage Received reduced by 3%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance increased by 36. STR+4, DEX+4, CON+4, INT+4, WIT+4, MEN+4. <Active Skill>. Einhasad's Wrath/ Einhasad's Protection/ Einhasad's Silence/ Einhasad's Salvation/ Einhasad's Blessing. To be deleted on March 9th, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -317,7 +317,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47632" name="Emerald Lv. 3 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Emerald Lv. 3. -->
+		<!-- Double-click to obtain an Emerald Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -325,7 +325,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47633" name="Aquamarine Lv. 3 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Aquamarine Lv. 3. -->
+		<!-- Double-click to obtain an Aquamarine Lv. 3. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -413,7 +413,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47644" name="Emerald Lv. 4 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Emerald Lv. 4. -->
+		<!-- Double-click to obtain an Emerald Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -421,7 +421,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47645" name="Aquamarine Lv. 4 Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Aquamarine Lv. 4. -->
+		<!-- Double-click to obtain an Aquamarine Lv. 4. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -515,7 +515,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47656" name="Protector's Guardian Earrings" additionalName="30-day" type="Armor">
-		<!-- Earrings bought using Mark of Battle. Max MP +49. Max CP +10%, P. Def/M. Def +3%, Stun/MEN Atk./Def. Success Rate +30%, Vampiric Rage +4%. These effects do not stack with identical earrings. -->
+		<!-- Earring bought using Mark of Battle. Max MP +49, Max CP +10%, P./ M. Def. +3%, Stun/ Mental Resistance and Stun/ Mental Success Rate +30%, Vampiric Rage +4%. These effects do not stack with identical earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -589,7 +589,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47663" name="Freya's Art of Seduction" additionalName="Barrier" type="EtcItem">
-		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%. Additionally, Damage Reduction + 10%, All Attributes Defense + 100. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
+		<!-- Dimensional Item. For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def +30%, Speed +20, Skill MP Consumption -15%. Additionally, Damage Reduction +10%, All Attributes Defense +100. Buff remains in place after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -608,7 +608,7 @@
 		</skills>
 	</item>
 	<item id="47664" name="Freya's Art of Seduction" additionalName="EXP" type="EtcItem">
-		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%. Additionally, XP Gain + 30%, Vitality Bonus + 12. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
+		<!-- Dimensional Item. For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def +30%, Speed +20, Skill MP Consumption -15%. Additionally, Acquired XP +30%, Vitality Bonus +12. Buff remains in place after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -627,7 +627,7 @@
 		</skills>
 	</item>
 	<item id="47665" name="Pa'agrio's Blessing" additionalName="Might" type="EtcItem">
-		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 10%, P. Atk. + 20%, M. Atk. + 30%, P./M. Def + 10%, P. Accuracy+ 4, M. Accuracy + 4, Atk./Casting Spd. + 10%, Speed + 10, Attack Attribute + 100, Skill MP Consumption - 10%. Additionally, Damage + 10%, Skill Power + 10. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
+		<!-- Dimensional Item. For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def +10%, P. Accuracy+ 4, M. Accuracy +4, Atk. Spd./ Casting Spd +10%, Speed +10, Atk. Attribute +100, Skill MP Consumption -10%. Additionally, Damage +10%, Skill Power +10. Buff remains in place after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="1" />
@@ -635,7 +635,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47666" name="Pa'agrio's Blessing" additionalName="EXP" type="EtcItem">
-		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 10%, P. Atk. + 20%, M. Atk. + 30%, P./M. Def + 10%, P. Accuracy+ 4, M. Accuracy + 4, Atk./Casting Spd. + 10%, Speed + 10, Attack Attribute + 100, Skill MP Consumption - 10%. Additionally, XP Gain + 30%, Vitality Bonus + 12. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
+		<!-- For 30 min., Max HP/ MP/ CP +10%, P. Atk. +20%, M. Atk. +30%, P./ M. Def +10%, P./ M. Accuracy+ 4, Atk. Spd./ Casting Spd +10%, Speed +10, Atk. Attribute +100, Skill MP Consumption -10%. Additionally, Acquired XP +30%, Vitality Bonus +12%. Buff remains after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="1" />
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47667" name="MOPP Combat Ration" type="EtcItem">
-		<!-- MOPP Combat Ration. P. Atk./M. Atk./P. Def/M. Def increased by 50%, Obtained XP and SP increased by 10% for 5 minutes. Effect disappears upon restart. -->
+		<!-- MOPP Combat Ration. P. Atk./ M. Atk./ P. Def/ M. Def increased by 50%, Obtained XP and SP increased by 10% for 5 min. Effect disappears upon restart. -->
 		<set name="icon" val="icon.ev_mopp_herb" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -689,7 +689,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47671" name="PC Points Coupon (180)" type="EtcItem">
-		<!-- Double click to receive 180 PC Cafe Points. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
+		<!-- When double clicked, 180 PA Points can be acquired. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -719,7 +719,7 @@
 		</skills>
 	</item>
 	<item id="47673" name="Freya's Art of Seduction - Barrier" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 minutes. Additionally reduces damage taken by 10%, and increases all property Defense by 100. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
+		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/ M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 min. Additionally reduces damage taken by 10%, and increases all property Defense by 100. Buff effect persists through death. Cooldown: 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -742,7 +742,7 @@
 		</skills>
 	</item>
 	<item id="47674" name="Freya's Art of Seduction - EXP" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 minutes. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
+		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/ M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 min. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown: 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -765,7 +765,7 @@
 		</skills>
 	</item>
 	<item id="47675" name="Pa'agrio's Blessing - Might" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Movement Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases Damage by 10%, and grants 10% Skill Power. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
+		<!-- When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/ M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk. Spd./ Casting Spd by 10%, Movement Speed by 10, Atk. Attribute by 100, and reduces Skill MP Consumption by 10% for 30 min. Additionally Increases Damage by 10%, and grants 10% Skill Power. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="47676" name="Pa'agrio's Blessing - EXP" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Movement Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
+		<!-- When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/ M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk. Spd./ Casting Spd by 10%, Movement Speed by 10, Atk. Attribute by 100, and reduces Skill MP Consumption by 10% for 30 min. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -803,7 +803,7 @@
 		</skills>
 	</item>
 	<item id="47677" name="Red Cat's Eye" additionalName="Lv. 1" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 1% and P. Skill Critical Damage + 1%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, P. Critical Damage +1% and P. Skill Critical Damage +1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -820,7 +820,7 @@
 		</skills>
 	</item>
 	<item id="47678" name="Red Cat's Eye" additionalName="Lv. 2" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 2% and P. Skill Critical Damage + 2%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, P. Critical Damage +2% and P. Skill Critical Damage +2%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -837,7 +837,7 @@
 		</skills>
 	</item>
 	<item id="47679" name="Red Cat's Eye" additionalName="Lv. 3" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 4% and P. Skill Critical Damage + 4%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, P. Critical Damage +4% and P. Skill Critical Damage +4%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -854,7 +854,7 @@
 		</skills>
 	</item>
 	<item id="47680" name="Red Cat's Eye" additionalName="Lv. 4" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 7% and P. Skill Critical Damage + 7%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, P. Critical Damage +7% and P. Skill Critical Damage +7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -871,7 +871,7 @@
 		</skills>
 	</item>
 	<item id="47681" name="Red Cat's Eye" additionalName="Lv. 5" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 12% and P. Skill Critical Damage + 12%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, P. Critical Damage +12% and P. Skill Critical Damage +12%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -884,7 +884,7 @@
 		</skills>
 	</item>
 	<item id="47682" name="Blue Cat's Eye" additionalName="Lv. 1" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage + 1%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, M. Skill Critical Damage +1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -900,7 +900,7 @@
 		</skills>
 	</item>
 	<item id="47683" name="Blue Cat's Eye" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage + 2%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, M. Skill Critical Damage +2%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -916,7 +916,7 @@
 		</skills>
 	</item>
 	<item id="47684" name="Blue Cat's Eye" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage + 4%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, M. Skill Critical Damage +4%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -932,7 +932,7 @@
 		</skills>
 	</item>
 	<item id="47685" name="Blue Cat's Eye" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage + 7%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, M. Skill Critical Damage +7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -948,7 +948,7 @@
 		</skills>
 	</item>
 	<item id="47686" name="Blue Cat's Eye" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, M. Skill Critical Damage + 12%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When equipped, M. Skill Critical Damage +12%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="Icon.bm_jewel_blue_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -973,7 +973,7 @@
 		</skills>
 	</item>
 	<item id="47688" name="Greater Ruby" type="Armor">
-		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20% and P. Atk. By 9%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20% and P. Atk. by 9%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -987,7 +987,7 @@
 		</skills>
 	</item>
 	<item id="47689" name="Greater Sapphire" type="Armor">
-		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 20% and M. Atk. By 13%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 20% and M. Atk. by 13%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="47691" name="Greater Opal" type="Armor">
-		<!-- When equipped, increases Attack Attribute by 120 and all Defense Attributes by 70. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- When equipped, increases Atk. Attribute by 120 and all Attribute Resistance by 70. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1025,7 +1025,7 @@
 		</skills>
 	</item>
 	<item id="47692" name="Greater Emerald" type="Armor">
-		<!-- When equipped, all basic stats + 3 and Skill Prominence rate + 30%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- When equipped, all basic stats +3 and Skill Mastery rate +30%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1073,7 +1073,7 @@
 		</skills>
 	</item>
 	<item id="47696" name="Greater Vital Stone" type="Armor">
-		<!-- Increases Vitality Status Bonus XP by 30% and the Vitality Point Consumption Speed decreases by 15%. XP Gain increases by 10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Vitality Bonus +30% and Vitality Consumption -15%. Acquired XP/ SP +10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1085,7 +1085,7 @@
 		</skills>
 	</item>
 	<item id="47697" name="Greater Garnet" type="Armor">
-		<!-- Increases success rate of Resistance to Debuffs by 30%, and when receiving damage to a PC, Stun/Silence are canceled. When used, all debuffs are canceled. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Increases success rate of Debuff Resistance by 30%, and when receiving PvP Damage, Stun/ Silence are canceled. When used, all debuffs are canceled. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1110,7 +1110,7 @@
 		</skills>
 	</item>
 	<item id="47699" name="Greater Red Cat's Eye" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 12%, P. Skill Critical Damage + 12% and P. Skill Power + 5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- When equipped, P. Critical Damage +12%, P. Skill Critical Damage +12% and P. Skill Power +5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />

@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8300" type="EtcItem" name="Recipe: Infernal Master (60%)">
+		<!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -13,6 +14,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8301" type="EtcItem" name="Recipe: Priest Sword (100%)">
+		<!-- This formula for manufacturing a Priest Sword can only be used by Dwarves and Requires Create Item - Skill Level 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -25,6 +27,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8302" type="EtcItem" name="Recipe: Sword of Magic Fog (100%)">
+		<!-- This formula for manufacturing a Sword of Magic Fog can only be used by Dwarves and Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -37,6 +40,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8303" type="EtcItem" name="Recipe: Mysterious Sword (100%)">
+		<!-- This formula for manufacturing a Mysterious Sword can only be used by Dwarves and Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -49,6 +53,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8304" type="EtcItem" name="Recipe: Ecliptic Sword (100%)">
+		<!-- This formula for manufacturing an Ecliptic Sword can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -61,6 +66,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8305" type="EtcItem" name="Recipe: Wizard's Tear (100%)">
+		<!-- This formula for Tears of a Wizard can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -73,6 +79,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8306" type="EtcItem" name="Recipe: Wizard's Tear (60%)">
+		<!-- This formula for Tears of a Wizard can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -85,6 +92,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8307" type="EtcItem" name="Recipe: Priest Mace (100%)">
+		<!-- This formula for manufacturing a Priest Mace can only be used by Dwarves and Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -97,6 +105,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8308" type="EtcItem" name="Recipe: Ecliptic Axe (100%)">
+		<!-- This formula for manufacturing an Ecliptic Axe can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -109,6 +118,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8309" type="EtcItem" name="Recipe: Spell Breaker (100%)">
+		<!-- This formula for manufacturing a Spell Breaker can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -121,6 +131,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8310" type="EtcItem" name="Recipe: Spell Breaker (60%)">
+		<!-- This formula for manufacturing a Spell Breaker can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -133,6 +144,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8311" type="EtcItem" name="Recipe: Kaim Vanul's Bones (100%)">
+		<!-- This formula for manufacturing the weapon known as Kaim Vanul's Bones can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -145,6 +157,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8312" type="EtcItem" name="Recipe: Kaim Vanul's Bones (60%)">
+		<!-- This formula for manufacturing the weapon known as Kaim Vanul's Bones can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -157,6 +170,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8313" type="EtcItem" name="Recipe: Spiritual Eye (100%)">
+		<!-- This formula for the Spiritual Eye can only be used by Dwarves and requires a Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -169,6 +183,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8314" type="EtcItem" name="Recipe: Spiritual Eye (60%)">
+		<!-- This formula for the Spiritual Eye can only be used by Dwarves and requires a Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -181,6 +196,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8315" type="EtcItem" name="Recipe: Flaming Dragon Skull (100%)">
+		<!-- This formula for manufacturing a Flaming Dragon Skull can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -193,6 +209,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8316" type="EtcItem" name="Recipe: Flaming Dragon Skull (60%)">
+		<!-- This formula for manufacturing a Flaming Dragon Skull can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -205,6 +222,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8317" type="EtcItem" name="Recipe: Titan Hammer (100%)">
+		<!-- This formula for manufacturing a Titan Hammer can only be used by Dwarves and Requires Create Item - Skill Level 3. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -217,6 +235,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8318" type="EtcItem" name="Recipe: Dwarven Hammer (100%)">
+		<!-- This formula for manufacturing a Dwarven Hammer can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -229,6 +248,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8319" type="EtcItem" name="Recipe: Karik Horn (100%)">
+		<!-- This formula for manufacturing a Karik Horn can only be used by Dwarves and Requires Create Item - Skill Level 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -241,6 +261,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8320" type="EtcItem" name="Recipe: Destroyer Hammer (100%)">
+		<!-- This formula for manufacturing a Hammer of the Destroyer can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -253,6 +274,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8321" type="EtcItem" name="Recipe: Ice Storm Hammer (100%)">
+		<!-- This formula for manufacturing a Storm Hammer can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -265,6 +287,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8322" type="EtcItem" name="Recipe: Ice Storm Hammer (60%)">
+		<!-- This formula for manufacturing a Storm Hammer can only be used by Dwarves and Requires Create Item - Skill Level 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -277,6 +300,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8323" type="EtcItem" name="Recipe: Star Buster (100%)">
+		<!-- This formula for manufacturing a Star Buster can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -289,6 +313,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8324" type="EtcItem" name="Recipe: Star Buster (60%)">
+		<!-- This formula for manufacturing a Star Buster can only be used by Dwarves and Requires Create Item - Skill Level 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -301,6 +326,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8325" type="EtcItem" name="Recipe: Doom Crusher (100%)">
+		<!-- This formula for manufacturing a Doom Crusher can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -313,6 +339,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8326" type="EtcItem" name="Recipe: Doom Crusher (60%)">
+		<!-- This formula for manufacturing a Doom Crusher can only be used by Dwarves and Requires Create Item - Skill Level 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -325,6 +352,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8327" type="EtcItem" name="Steel Sword Blade">
+		<!-- A vital material used by Dwarves to make Steel Swords. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -334,6 +362,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8328" type="EtcItem" name="Titan Sword Blade">
+		<!-- A vital material used by Dwarves to make Titan Swords. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -343,6 +372,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8329" type="EtcItem" name="Pa'agrian Sword Blade">
+		<!-- A vital material used by Dwarves to make Pa'agrian Swords. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -352,6 +382,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8330" type="EtcItem" name="Guardian Sword Blade">
+		<!-- A vital material used by Dwarves to make Guardian's Swords. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -361,6 +392,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8331" type="EtcItem" name="Infernal Master Blade">
+		<!-- A vital material used by Dwarves to make an Infernal Master. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -370,6 +402,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8332" type="EtcItem" name="Priest Sword Blade">
+		<!-- A vital material used by Dwarves to make Priest Swords. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -379,6 +412,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8333" type="EtcItem" name="Sword of Magic Fog Blade">
+		<!-- A vital material used by Dwarves to make Swords of Magic Fog. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -388,6 +422,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8334" type="EtcItem" name="Mysterious Sword Blade">
+		<!-- A vital material used by Dwarves to make Mysterious Swords. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -397,6 +432,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8335" type="EtcItem" name="Ecliptic Sword Blade">
+		<!-- A vital material used by Dwarves to make Swords of Eclipse. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -406,6 +442,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8336" type="EtcItem" name="Blade of the Wizard's Tear">
+		<!-- A vital material used by Dwarves to make a Wizard's Tear. Available at any shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -415,6 +452,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8337" type="EtcItem" name="Priest Mace Head">
+		<!-- A vital material used by Dwarves to make Priest Maces. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -424,6 +462,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8338" type="EtcItem" name="Axe of Eclipse Head">
+		<!-- A vital material used by Dwarves to make an Ecliptic Axe. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -433,6 +472,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8339" type="EtcItem" name="Spell Breaker Head">
+		<!-- A vital material used by Dwarves to make Spell Breakers. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -442,6 +482,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8340" type="EtcItem" name="Bones Head of Kaim Vanul">
+		<!-- A vital material used by Dwarves to make the weapon known as Kaim Vanul's Bones. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -451,6 +492,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8341" type="EtcItem" name="Spiritual Eye Piece">
+		<!-- A vital material used by Dwarves to make the Spiritual Eye. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -460,6 +502,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8342" type="EtcItem" name="Flaming Dragon Skull Piece">
+		<!-- A vital material used by Dwarves to make a Flaming Dragon Skull. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -469,6 +512,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8343" type="EtcItem" name="Titan Hammer Piece">
+		<!-- A vital material used by Dwarves to make Titan Hammers. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -478,6 +522,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8344" type="EtcItem" name="Dwarven Hammer Piece">
+		<!-- A vital material used by Dwarves to make Dwarven Hammers. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -487,6 +532,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8345" type="EtcItem" name="Karik Horn Piece">
+		<!-- A vital material used by Dwarves to make Karik Horns. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -496,6 +542,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8346" type="EtcItem" name="Hammer Piece of Destroyer">
+		<!-- A vital material used by Dwarves to make Hammers of Destroyer. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -505,6 +552,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8347" type="EtcItem" name="Ice Storm Hammer Head">
+		<!-- A vital material used by Dwarves to make Ice Storm Hammers. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -514,6 +562,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8348" type="EtcItem" name="Star Buster Head">
+		<!-- A vital material used by Dwarves to make Star Busters. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -523,6 +572,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8349" type="EtcItem" name="Doom Crusher Head">
+		<!-- A vital material used by Dwarves to make a Red Doom Crusher. Available at any shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -532,6 +582,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8350" type="Weapon" name="Chrono Maracas">
+		<!-- Chronicle V Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_maracas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -551,6 +602,7 @@
 		</for>
 	</item>
 	<item id="8351" type="EtcItem" name="Black Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_gludio_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -560,6 +612,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8352" type="EtcItem" name="Red Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_dion_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -569,6 +622,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8353" type="EtcItem" name="Green Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_giran_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -578,6 +632,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8354" type="EtcItem" name="Yellow Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_oren_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -587,6 +642,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8355" type="EtcItem" name="Blue Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_aden_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -596,6 +652,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8356" type="EtcItem" name="White Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_innadrile_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -605,6 +662,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8357" type="EtcItem" name="Orange Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_godad_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -614,6 +672,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8358" type="EtcItem" name="Purple Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_rune_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -623,6 +682,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8359" type="EtcItem" name="Jade Colored Fish Scale">
+		<!-- Take this high-grade fish scale to a Fishing Guild Member to exchange it for an item or sell it to a regular store. -->
 		<set name="icon" val="icon.etc_schuttgart_fish_scale_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -632,6 +692,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8360" type="EtcItem" name="Adventurer's Box - C Accessory">
+		<!-- Open the box to obtain C-Grade accessories at a certain rate. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -640,6 +701,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8361" type="EtcItem" name="Adventurer's Box - B Accessory">
+		<!-- Open the box to obtain B-Grade accessories at a certain rate. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -648,6 +710,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8362" type="EtcItem" name="Adventurer's Box - Hair Accessory">
+		<!-- Open the box to obtain Raider Dragon accessories at a certain rate. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -656,6 +719,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8363" type="EtcItem" name="Adventurer's Box - Cradle of Creation">
+		<!-- Open the box to obtain the Cradle of Creation at a certain rate. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -664,6 +728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8364" type="EtcItem" name="Recipe: Party Hat (100%)">
+		<!-- This technique for making a Party Hat can be used by all races. Requires Create Item Common Skill level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -676,6 +741,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8365" type="EtcItem" name="Recipe: Party Hat (70%)">
+		<!-- This technique for making a Party Hat can be used by all races. Requires Create Item Common Skill level 6. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -688,6 +754,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8366" type="EtcItem" name="Recipe: Feathered Hat (100%)">
+		<!-- This formula for making a Feathered Hat can be used by all races. Requires Create Item Common Skill level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -700,6 +767,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8367" type="EtcItem" name="Recipe: Feathered Hat (70%)">
+		<!-- This formula for making a Feathered Hat can be used by all races. Requires Create Item Common Skill level 6. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -712,6 +780,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8368" type="EtcItem" name="Recipe: Artisan's Goggles (100%)">
+		<!-- This formula for making Artisan's Goggles can be used by all races. Requires Create Item Common Skill level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -724,6 +793,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8369" type="EtcItem" name="Recipe: Artisan's Goggles (70%)">
+		<!-- This formula for making Artisan's Goggles can be used by all races. Requires Create Item Common Skill level 6. The success rate is 70%. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -736,6 +806,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8370" type="EtcItem" name="Recipe: Red Horn of Victory (100%)">
+		<!-- For All Tribes. Recipe for making Red Devil Horns. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -748,6 +819,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8371" type="EtcItem" name="Recipe: Little Angel Wings (100%)">
+		<!-- This formula for making a Little Angel Wing can be used by all races. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -760,6 +832,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8372" type="EtcItem" name="Recipe: Fairy Antennae (100%)">
+		<!-- This formula for making Fairy Antennae can be used by all races. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -772,6 +845,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8373" type="EtcItem" name="Party Hat Fabric">
+		<!-- A key material to make a Party Hat. Available at any shop. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -781,6 +855,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8374" type="EtcItem" name="Feathered Hat Fabric">
+		<!-- A key material to make a Feathered Hat. Available at any shop. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -790,6 +865,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8375" type="EtcItem" name="Artisan's Goggles Fabric">
+		<!-- Used to make Artisan's Goggles, it can also be sold at any regular store. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -799,6 +875,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8376" type="EtcItem" name="Red Horn of Victory Fragment">
+		<!-- The main ingredient that is needed to make a horn of a red devil. It can be sold to a regular store. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -808,6 +885,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8377" type="EtcItem" name="Little Angel Wings Piece">
+		<!-- Used by Dwarves to make a Little Angel Wing, it can also be sold at any regular store. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -817,6 +895,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8378" type="EtcItem" name="Fairy Antennae Piece">
+		<!-- Used by Dwarves to make Fairy Antennae, it can also be sold at any regular store. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -826,6 +905,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8379" type="EtcItem" name="Petrification Scroll">
+		<!-- Temporarily petrifies the target. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -833,9 +913,10 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2239-1" />
+		<set name="item_skill" val="2239-1" /> <!-- Petrifaction Scroll -->
 	</item>
 	<item id="8380" type="EtcItem" name="Spellbook: Betray">
+		<!-- Spellbook needed to learn Betray. Used by Warlocks, Elemental Summoners and Phantom Summoners. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -844,6 +925,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8381" type="EtcItem" name="Spellbook: Mass Curse Fear">
+		<!-- Spellbook needed to learn Mass Curse Fear. Used by Necromancers. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -852,6 +934,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8382" type="EtcItem" name="Spellbook: Mass Curse Gloom">
+		<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -860,6 +943,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8383" type="EtcItem" name="Spellbook: Mass Surrender to Fire">
+		<!-- Spellbook needed to learn Mass Surrender to Fire. Used by Warlocks. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -868,6 +952,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8384" type="EtcItem" name="Spellbook: Mass Surrender to Water">
+		<!-- Spellbook needed to learn Mass Surrender to Water. Used by Elemental Summoners. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -876,6 +961,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8385" type="EtcItem" name="Spellbook: Mass Surrender to Wind">
+		<!-- Spellbook needed to learn Mass Surrender to Wind. Used by Phantom Summoners. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -884,6 +970,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8386" type="EtcItem" name="Spellbook - Arcane Disruption">
+		<!-- Spellbook needed to learn Arcane Disruption. Used by Warlocks. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -892,6 +979,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8387" type="EtcItem" name="Spellbook - Summon Cursed Bones">
+		<!-- Spellbook needed to learn Summon Cursed Bones. Used by Necromancers and Phantom Summoners. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -900,6 +988,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8388" type="EtcItem" name="Spellbook: Greater Might">
+		<!-- Spellbook needed to learn Great Might. Used by Prophets. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -908,6 +997,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8389" type="EtcItem" name="Spellbook: Greater Shield">
+		<!-- Spellbook needed to learn Greater Shield. Used by Prophets. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -916,6 +1006,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8390" type="EtcItem" name="Amulet: War Chant">
+		<!-- Amulet needed to learn War Chant. Used by Warcryers. Required level: 58 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -924,6 +1015,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8391" type="EtcItem" name="Amulet: Earth Chant">
+		<!-- Amulet needed to learn Earth Chant. Used by Warcryers. Required level: 58 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -932,6 +1024,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8392" type="EtcItem" name="Spellbook: Holy Resistance">
+		<!-- Spellbook needed to learn Holy Resistance. Used by Prophets and Shillien Elders. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -940,6 +1033,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8393" type="EtcItem" name="Spellbook: Unholy Resistance">
+		<!-- Spellbook needed to learn Unholy Resistance. Used by Prophets and Elven Elders. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -948,6 +1042,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8394" type="EtcItem" name="Spellbook: Trance">
+		<!-- Spellbook needed to learn Trance. Used by Bishops and Elven Elders. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -956,6 +1051,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8395" type="EtcItem" name="Spellbook: Erase">
+		<!-- Spellbook needed to learn Erase. Used by Bishops, Prophets, Elven Elders and Shillien Elders. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -964,6 +1060,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8396" type="EtcItem" name="Spellbook: Magical Backfire">
+		<!-- Spellbook needed to learn Magical Backfire. Used by Bishops. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -972,6 +1069,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8397" type="EtcItem" name="Spellbook: Clarity">
+		<!-- Spellbook needed to learn Clarity. Used by Elven Elders. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -980,6 +1078,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8398" type="EtcItem" name="Spellbook: Mana Burn">
+		<!-- Spellbook needed to learn Mana Burn. Used by Bishops, Prophets, Elven Elders and Shillien Elders. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -988,6 +1087,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8399" type="EtcItem" name="Spellbook: Mana Storm">
+		<!-- Spellbook needed to learn Mana Storm. Used by Bishops. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

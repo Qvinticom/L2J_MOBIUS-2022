@@ -95,7 +95,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47911" name="Angel's Gift Package" additionalName="Lv3" type="EtcItem">
-		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced RedandBlue Cat's Eye (30-day fixed period). -->
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced Red&Blue Cat's Eye (30-day fixed period). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -104,7 +104,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47912" name="Angel's Gift Package" additionalName="Lv4" type="EtcItem">
-		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced RedandBlue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced Red&Blue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -272,7 +272,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
-		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. A character of level 101 or over can receive the request by double-clicking the item. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. Can be performed twice a day. -->
+		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. A character of level 101 or over can receive the request by double-clicking the item. Event items will deleted once the event concludes, visit the Lineage II Official Website for more information. Can be performed twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -285,7 +285,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47926" name="Red Libra Request - Altar of Shilen" type="EtcItem">
-		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. -->
+		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. Event items will deleted once the event concludes, visit the Lineage II Official Website for more information. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -339,7 +339,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47930" name="Elvish Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the �The Power of Gods, Giants and the almighty Exalted which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the ?he Power of Gods, Giants and the almighty Exalted" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_elf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -348,7 +348,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47931" name="Dark Elf Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the �The Power That Brings Everything Together which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the ?he Power That Brings Everything Together" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_darkelf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -357,7 +357,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47932" name="Orc Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Rise of the Exiled People, the Ashen Shadow Revolutionaries which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Rise of the Exiled People, the Ashen Shadow Revolutionaries" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_orc_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47933" name="Dwarvish Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Mystic Tavern of the Continent�s Hidden Stories which is known by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Mystic Tavern of the Continent? Hidden Stories" which is known by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_dwarf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -375,7 +375,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47934" name="Human Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Kain Van Halter and Giselle's (Camille) Tragic Love Story which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Kain Van Halter and Giselle's (Camille) Tragic Love Story" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_human_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -384,7 +384,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47935" name="Kamael Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Kamael, the Race Created by Giants which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Kamael, the Race Created by Giants" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_kamael_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -393,7 +393,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47936" name="Ertheia Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the Pureblood Surr and Half-blood Nann, Reconciliation and Harmony which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "Pureblood Surr and Half-blood Nann, Reconciliation and Harmony" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_ertheia_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -402,7 +402,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47937" name="Lineage 2 Soulstone" type="EtcItem">
-		<!-- Double-click to find out more about the The Seven Signs, Giants and Embryos which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
+		<!-- Double-click to find out more about the "The Seven Signs, Giants and Embryos" which is unknown by adventurers in Aden. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />

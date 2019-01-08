@@ -15,7 +15,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36302" name="Scroll of Blessing: Armor (R-grade)" additionalName="Campaign" type="EtcItem">
-		<!-- The Blacksmith of Mammon can exchange standard Immortal/Hell armor for Blessed equipment for you at a low probability. A small fee is charged. -->
+		<!-- The Blacksmith of Mammon can exchange standard Immortal/ Hell armor for Blessed equipment for you at a low probability. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1_armor" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -99,7 +99,7 @@
 		</skills>
 	</item>
 	<item id="36312" name="Battleground Scroll: Buffs" type="EtcItem">
-		<!-- For 30 min., provides the effects of the Horn Melody, Pipe Organ Melody, Guitar Melody, Lute Melody, Harp Melody, and Drum Melody (Lv. 1). Battleground only. -->
+		<!-- For 30 min., provides the effects of the Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody (Lv. 1). Battleground only. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="weight" val="5" />
 		<set name="is_oly_restricted" val="true" />
@@ -233,7 +233,7 @@
 		</skills>
 	</item>
 	<item id="36324" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive one of the following: Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Istina's Earring/Necklace/Ring, and Octavis' Earring/Necklace/Ring. -->
+		<!-- Double-click to receive one of the following: Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Istina's Earring/ Necklace/ Ring, and Octavis' Earring/ Necklace/ Ring. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -247,7 +247,7 @@
 		</skills>
 	</item>
 	<item id="36325" name="Draco's Gift" additionalName="Event" type="EtcItem">
-		<!-- Gift from a Lyn Draco that hatched from a purified Draco Egg. -->
+		<!-- Gift from a Draco that hatched from a purified Draco Egg. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -273,7 +273,7 @@
 		</skills>
 	</item>
 	<item id="36327" name="Birthday Vitality Potion" additionalName="1-hour" type="EtcItem">
-		<!-- Upon use, for 1 hour, Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
+		<!-- Upon use, for 1 hr., Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
 		<set name="is_stackable" val="true" />
@@ -292,7 +292,7 @@
 		</skills>
 	</item>
 	<item id="36328" name="Freya's Refreshing Breeze" additionalName="1-hour" type="EtcItem">
-		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
@@ -313,7 +313,7 @@
 		</skills>
 	</item>
 	<item id="36329" name="Pa'agrio's Warm Breeze (1-hour)" type="EtcItem">
-		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -332,7 +332,7 @@
 		</skills>
 	</item>
 	<item id="36330" name="Sweet Chocolate (1-hour)" type="EtcItem">
-		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -352,7 +352,7 @@
 		</skills>
 	</item>
 	<item id="36331" name="Returning Hero's Vitality Replenishing Juice" additionalName="1-hour" type="EtcItem">
-		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality recovery effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality recovery effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -372,7 +372,7 @@
 		</skills>
 	</item>
 	<item id="36332" name="Pirate Elixir (1-hour)" type="EtcItem">
-		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36334" name="Adrenaline Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink meant to make one run like the wind. Speed + 15. Formulated for special events, the recipe remains a secret. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
+		<!-- Energy drink meant to make one run like the wind. Speed +15. Formulated for special events, the recipe remains a secret. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -418,7 +418,7 @@
 		</skills>
 	</item>
 	<item id="36335" name="Caffeine Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that boosts dexterity and clears one's mind with a single cup. DEX + 10. Formulated for special events, this energy drink should be used with care as it can raise pulse rate and blood pressure. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
+		<!-- Energy drink that boosts dexterity and clears one's mind with a single cup. DEX +10. Formulated for special events, this energy drink should be used with care as it can raise pulse rate and blood pressure. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -431,7 +431,7 @@
 		</skills>
 	</item>
 	<item id="36336" name="Protein Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that creates monstrous muscle mass. STR + 10. Formulated for special events, this energy drink makes one extremely powerful. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
+		<!-- Energy drink that creates monstrous muscle mass. STR +10. Formulated for special events, this energy drink makes one extremely powerful. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -443,7 +443,7 @@
 		</skills>
 	</item>
 	<item id="36337" name="DHA Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that increases brain power. INT + 10. Formulated for special events, this energy drink sharpens Mental/magical attacks unto one's enemy while strengthening the brain from the resulting whiplash. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
+		<!-- Energy drink that increases brain power. INT +10. Formulated for special events, this energy drink sharpens Mental/ magical attacks unto one's enemy while strengthening the brain from the resulting whiplash. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -455,7 +455,7 @@
 		</skills>
 	</item>
 	<item id="36338" name="Omega3 Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT + 10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
+		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT +10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -489,7 +489,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36342" name="Agathion Bracelet" additionalName="Jr. Cocoring" type="Armor">
-		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hour for 5 hours after being summoned. Your Vitality recovers when stay in a Peaceful Zone wearing this bracelet. -->
+		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hr. for 5 hr. after being summoned. Your Vitality recovers when stay in a Peaceful Zone wearing this bracelet. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -558,7 +558,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="36349" name="Bracelet of Glory: Glory" additionalName="Event" type="Armor">
-		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
+		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP +216, Str +1, Int +1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -573,7 +573,7 @@
 		</stats>
 	</item>
 	<item id="36350" name="Bracelet of Glory: Victory" additionalName="Event" type="Armor">
-		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, Wit + 1. -->
+		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP +216, Dex +1, Wit +1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -588,7 +588,7 @@
 		</stats>
 	</item>
 	<item id="36351" name="Bracelet of Glory: Friendship" additionalName="Event" type="Armor">
-		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Con + 1, Men +1. -->
+		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP +216, Con +1, Men +1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -603,7 +603,7 @@
 		</stats>
 	</item>
 	<item id="36352" name="Red Horns" additionalName="STR (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. STR + 3 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. STR +3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -613,7 +613,7 @@
 		</skills>
 	</item>
 	<item id="36353" name="Red Horns" additionalName="DEX (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. DEX + 3 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. DEX +3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -623,7 +623,7 @@
 		</skills>
 	</item>
 	<item id="36354" name="Red Horns" additionalName="CON (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. CON + 3 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. CON +3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -633,7 +633,7 @@
 		</skills>
 	</item>
 	<item id="36355" name="Red Horns" additionalName="MEN (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. MEN + 3 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. MEN +3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -643,7 +643,7 @@
 		</skills>
 	</item>
 	<item id="36356" name="Red Horns" additionalName="INT (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. INT + 3 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. INT +3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -653,7 +653,7 @@
 		</skills>
 	</item>
 	<item id="36357" name="Red Horns" additionalName="WIT (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. WIT + 3 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. WIT +3 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -663,7 +663,7 @@
 		</skills>
 	</item>
 	<item id="36358" name="Red Horns" additionalName="Critical Rate (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. Critical Rate + 50 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. Critical Rate +50 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -673,7 +673,7 @@
 		</skills>
 	</item>
 	<item id="36359" name="Red Horns" additionalName="Critical Damage (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. P. Critical Damage +90 and M. Critical Damage +68 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -683,7 +683,7 @@
 		</skills>
 	</item>
 	<item id="36360" name="Red Horns" additionalName="P. Def. (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. P. Def. + 5% when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. P. Def. +5% when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -693,7 +693,7 @@
 		</skills>
 	</item>
 	<item id="36361" name="Red Horns" additionalName="M. Def. (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. M. Def. + 5% when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. M. Def. +5% when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -704,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="36362" name="Red Horns" additionalName="Evasion (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. Evasion + 5 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. Evasion +5 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -714,7 +714,7 @@
 		</skills>
 	</item>
 	<item id="36363" name="Red Horns" additionalName="P. Atk. (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. P. Atk. + 5 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. P. Atk. +5 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -724,7 +724,7 @@
 		</skills>
 	</item>
 	<item id="36364" name="Red Horns" additionalName="M. Atk. (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. M. Atk. + 10 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. M. Atk. +10 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -734,7 +734,7 @@
 		</skills>
 	</item>
 	<item id="36365" name="Red Horns" additionalName="Accuracy (Event)" type="Armor">
-		<!-- Hair accessory for the Aden Golden Medal Event. Accuracy + 5 when equipped. -->
+		<!-- Hair accessory for the Aden Golden Medal Event. Accuracy +5 when equipped. -->
 		<set name="icon" val="icon.london_olympic_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -848,7 +848,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36381" name="Hero's Attribute Crystal Pack" additionalName="Aden Reconstruction" type="EtcItem">
-		<!-- Box containing either an attribute crystal or a Super - 60/150 ore. -->
+		<!-- Box containing either an attribute crystal or a Super - 60/ 150 ore. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -869,7 +869,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36384" name="Mysterious Shot Pack" additionalName="Aden Reconstruction" type="EtcItem">
-		<!-- Box containing Mysterious Soulshots/Spiritshots (R-grade). -->
+		<!-- Box containing Mysterious Soulshots/ Spiritshots (R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -883,7 +883,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36386" name="Giant's Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Upon enchantment, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dualsword, and crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When weapons are enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. The increase is greater for blessed weapons than standard weapons. Weapons are randomly enchanted between + 1 and + 3. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -899,7 +899,7 @@
 		</skills>
 	</item>
 	<item id="36387" name="Giant's Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- Upon enchantment, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dualsword, and crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. When weapons are enchanted to +4 or above, P. Atk. and M. Atk. double. Weapons are randomly enchanted between + 1 and + 3. -->
+		<!-- When enchanted, increases P. Atk. by 5 for S-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 6 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 10 for bow weapons. Increases M. Atk. by 4 for all weapons. P. Atk./ M. Atk doubles starting at +4. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_s" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -915,7 +915,7 @@
 		</skills>
 	</item>
 	<item id="36388" name="Giant's Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- Upon enchantment, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dualsword, and crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. When weapons are enchanted to +4 or above, P. Atk. and M. Atk. double. Weapons are randomly enchanted between + 1 and + 3. -->
+		<!-- When enchanted, increases P. Atk. by 4 for A-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 5 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, and fist weapons. Increases P. Atk. by 8 for bow weapons. Increases M. Atk. by 3 for all weapons. P. Atk./ M. Atk doubles starting at +4. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_a" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -931,7 +931,7 @@
 		</skills>
 	</item>
 	<item id="36389" name="Giant's Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- Upon enchantment, P. Def. for R-grade armor and accessories increases by 2, and by a significant amount starting from +4. Armor and accessories can be safely enchanted up to +3. When armor is enchanted to +4 or above, HP also increases according to the enchant value. Armor and accessories are randomly enchanted between + 1 and + 3. -->
+		<!-- Upon enchantment, P. Def. for R-grade armor and accessories increases by 2, and by a significant amount starting from +4. Armor and accessories can be safely enchanted up to +3. When armor is enchanted to +4 or above, HP also increases according to the enchant value. Armor and accessories are randomly enchanted between +1 and +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_r" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1042,15 +1042,15 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="36334" min="3" max="3" chance="20" /> 
-			<item id="36335" min="3" max="3" chance="20" /> 
-			<item id="36336" min="3" max="3" chance="20" /> 
-			<item id="36337" min="3" max="3" chance="20" /> 
-			<item id="36338" min="3" max="3" chance="20" /> 
+			<item id="36334" min="3" max="3" chance="20" /> <!-- Adrenaline Energy Drink - Event -->
+			<item id="36335" min="3" max="3" chance="20" /> <!-- Caffeine Energy Drink - Event -->
+			<item id="36336" min="3" max="3" chance="20" /> <!-- Protein Energy Drink - Event -->
+			<item id="36337" min="3" max="3" chance="20" /> <!-- DHA Energy Drink - Event -->
+			<item id="36338" min="3" max="3" chance="20" /> <!-- Omega 3 Energy Drink - Event -->
 		</capsuled_items>
 	</item>
 	<item id="36397" name="Chest of Glory" type="EtcItem">
-		<!-- Chest of Glory given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
+		<!-- Chest of Glory given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/ Victory/ Friendship at a certain probability. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1062,7 +1062,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36398" name="Chest of Victory" type="EtcItem">
-		<!-- Chest of Victory given by Cocoring to celebrate the winning of the glorious silver medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
+		<!-- Chest of Victory given by Cocoring to celebrate the winning of the glorious silver medal. Double-click to receive a Medal of Glory/ Victory/ Friendship at a certain probability. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1074,7 +1074,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36399" name="Chest of Friendship" type="EtcItem">
-		<!-- Chest of Friendship given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
+		<!-- Chest of Friendship given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/ Victory/ Friendship at a certain probability. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

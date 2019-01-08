@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20500" level="33" type="L2Monster" name="Turek Orc Sentinel">
 		<!-- Confirmed CT2.5 -->
@@ -4786,39 +4786,39 @@
 				<item id="1962" min="1" max="1" chance="0.83576614377141" /> <!-- Karmian Tunic Pattern -->
 				<item id="471" min="1" max="1" chance="0.028686008939743" /> <!-- Karmian Stockings -->
 				<item id="1954" min="1" max="1" chance="1.38849866466403" /> <!-- Karmian Stocking Design -->
-				<item id="1868" min="1" max="1" chance="18.9933659157772" /> <!-- Thread -->
-				<item id="1873" min="1" max="1" chance="3.79866278191566" /> <!-- Silver Nugget -->
-				<item id="5549" min="1" max="1" chance="0.949659194704056" /> <!-- Metallic Thread -->
-				<item id="1889" min="1" max="1" chance="0.633123465202332" /> <!-- Compound Braid -->
-				<item id="4044" min="1" max="1" chance="0.316561732601166" /> <!-- Thons -->
+				<item id="1868" min="1" max="1" chance="18.9933659157772" /> <!-- Corroded Thread -->
+				<item id="1873" min="1" max="1" chance="3.79866278191566" /> <!-- Corroded Silver Nugget -->
+				<item id="5549" min="1" max="1" chance="0.949659194704056" /> <!-- Corroded Metallic Thread -->
+				<item id="1889" min="1" max="1" chance="0.633123465202332" /> <!-- Corroded Synthetic Braid -->
+				<item id="4044" min="1" max="1" chance="0.316561732601166" /> <!-- Corroded Thons -->
 				<item id="3003" min="1" max="1" chance="0.589854307731629" /> <!-- Recipe: Gloves of Seal -->
 				<item id="2214" min="1" max="1" chance="0.23564008713913" /> <!-- Recipe: Dwarven Chain Gaiters -->
-				<item id="8723" min="1" max="1" chance="0.379879279741287" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0949633191604614" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00949113129615784" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00189822625923157" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.379879279741287" /> <!-- Life Stone - Lv. 46 -->
+				<item id="8733" min="1" max="1" chance="0.0949633191604614" /> <!-- Mid-grade Life Stone - Lv. 46 -->
+				<item id="8743" min="1" max="1" chance="0.00949113129615784" /> <!-- High-grade Life Stone - Lv. 46 -->
+				<item id="8753" min="1" max="1" chance="0.00189822625923157" /> <!-- Top-grade Life Stone - Lv. 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="5.5" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1961" min="1" max="1" chance="7.073" /> <!-- Mithril Shirt Fabric -->
+				<item id="1961" min="1" max="1" chance="7.073" /> <!-- Reinforced Mithril Shirt Fabric -->
 				<item id="1962" min="1" max="1" chance="7.073" /> <!-- Karmian Tunic Pattern -->
 				<item id="1908" min="1" max="1" chance="20.9311" /> <!-- Moonstone Earring Wire -->
 			</spoil>
@@ -4886,40 +4886,40 @@
 				<item id="354" min="1" max="1" chance="0.0139069215154648" /> <!-- Chain Mail Shirt -->
 				<item id="1959" min="1" max="1" chance="0.727806033642292" /> <!-- Chain Mail Shirt Material -->
 				<item id="381" min="1" max="1" chance="0.0222474832248688" /> <!-- Chain Gaiters -->
-				<item id="1960" min="1" max="1" chance="1.48053948341608" /> <!-- Chain Gaiters Part -->
-				<item id="1867" min="1" max="1" chance="13.1013652832489" /> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="13.1013652832489" /> <!-- Animal Bone -->
-				<item id="1882" min="1" max="1" chance="2.18357075474167" /> <!-- Leather -->
-				<item id="1894" min="1" max="1" chance="0.344777447864532" /> <!-- Crafted Leather -->
-				<item id="4042" min="1" max="1" chance="0.163753735870361" /> <!-- Enria -->
+				<item id="1960" min="1" max="1" chance="1.48053948341608" /> <!-- Chain Gaiter Fragment -->
+				<item id="1867" min="1" max="1" chance="13.1013652832489" /> <!-- Corroded Animal Skin -->
+				<item id="1872" min="1" max="1" chance="13.1013652832489" /> <!-- Corroded Animal Bone Fragment -->
+				<item id="1882" min="1" max="1" chance="2.18357075474167" /> <!-- Corroded Leather -->
+				<item id="1894" min="1" max="1" chance="0.344777447864532" /> <!-- Corroded Quality Leather -->
+				<item id="4042" min="1" max="1" chance="0.163753735870361" /> <!-- Corroded Enria -->
 				<item id="2230" min="1" max="1" chance="0.190414076370239" /> <!-- Recipe: Theca Leather Gaiters -->
 				<item id="2320" min="1" max="1" chance="0.0342437262420654" /> <!-- Recipe: Cursed Staff -->
-				<item id="8723" min="1" max="1" chance="0.393032664169312" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0982581660423279" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00983470338439942" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00198471423721313" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.393032664169312" /> <!-- Life Stone - Lv. 46 -->
+				<item id="8733" min="1" max="1" chance="0.0982581660423279" /> <!-- Mid-grade Life Stone - Lv. 46 -->
+				<item id="8743" min="1" max="1" chance="0.00983470338439942" /> <!-- High-grade Life Stone - Lv. 46 -->
+				<item id="8753" min="1" max="1" chance="0.00198471423721313" /> <!-- Top-grade Life Stone - Lv. 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="5.5" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="2935" min="1" max="1" chance="12.1583" /> <!-- Reinforced Mithril Gaiters Fragment -->
+				<item id="2935" min="1" max="1" chance="12.1583" /> <!-- Reinforced Mithril Gaiter Fragment -->
 				<item id="2068" min="1" max="1" chance="1.6483" /> <!-- Stick of Faith Shaft -->
 				<item id="2163" min="1" max="1" chance="11.6683" /> <!-- Recipe: Earring of Protection -->
 			</spoil>
@@ -4987,41 +4987,41 @@
 			<drop>
 				<item id="57" min="1058" max="2159" chance="70" /> <!-- Adena -->
 				<item id="94" min="1" max="1" chance="0.00537674064260721" /> <!-- Bec de Corbin -->
-				<item id="2079" min="1" max="1" chance="0.408123270324647" /> <!-- Bec De Corbin Blade -->
-				<item id="1867" min="1" max="1" chance="14.4016561158752" /> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="14.4016561158752" /> <!-- Animal Bone -->
-				<item id="1882" min="1" max="1" chance="2.40028687351227" /> <!-- Leather -->
-				<item id="1894" min="1" max="1" chance="0.378996091880798" /> <!-- Crafted Leather -->
-				<item id="4042" min="1" max="1" chance="0.180006048278809" /> <!-- Enria -->
+				<item id="2079" min="1" max="1" chance="0.408123270324647" /> <!-- Bec de Corbin Blade -->
+				<item id="1867" min="1" max="1" chance="14.4016561158752" /> <!-- Corroded Animal Skin -->
+				<item id="1872" min="1" max="1" chance="14.4016561158752" /> <!-- Corroded Animal Bone Fragment -->
+				<item id="1882" min="1" max="1" chance="2.40028687351227" /> <!-- Corroded Leather -->
+				<item id="1894" min="1" max="1" chance="0.378996091880798" /> <!-- Corroded Quality Leather -->
+				<item id="4042" min="1" max="1" chance="0.180006048278809" /> <!-- Corroded Enria -->
 				<item id="2230" min="1" max="1" chance="0.209312387542725" /> <!-- Recipe: Theca Leather Gaiters -->
 				<item id="2320" min="1" max="1" chance="0.037642364654541" /> <!-- Recipe: Cursed Staff -->
-				<item id="8723" min="1" max="1" chance="0.432040565948486" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.108010141487122" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.0108107829284668" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00218169414520264" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.432040565948486" /> <!-- Life Stone - Lv. 46 -->
+				<item id="8733" min="1" max="1" chance="0.108010141487122" /> <!-- Mid-grade Life Stone - Lv. 46 -->
+				<item id="8743" min="1" max="1" chance="0.0108107829284668" /> <!-- High-grade Life Stone - Lv. 46 -->
+				<item id="8753" min="1" max="1" chance="0.00218169414520264" /> <!-- Top-grade Life Stone - Lv. 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="5.5" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="2947" min="1" max="1" chance="19.154" /> <!-- Dwarven Chain Shield Fragment -->
-				<item id="951" min="1" max="1" chance="0.4876" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.4876" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 				<item id="1911" min="1" max="1" chance="19.9446" /> <!-- Earring of Protection Gemstone -->
 			</spoil>
 		</dropLists>
@@ -5086,22 +5086,22 @@
 				<item id="2082" min="1" max="1" chance="0.287900314390421" /> <!-- Cursed Staff Head -->
 				<item id="2502" min="1" max="1" chance="0.00369714854884148" /> <!-- Dwarven War Hammer -->
 				<item id="2968" min="1" max="1" chance="0.275605411495447" /> <!-- Dwarven War Hammer Head -->
-				<item id="1871" min="1" max="1" chance="14.8529645098534" /> <!-- Charcoal -->
-				<item id="1866" min="1" max="1" chance="9.90198535650253" /> <!-- Suede -->
-				<item id="1877" min="1" max="1" chance="0.594121826370239" /> <!-- Adamantite Nugget -->
-				<item id="4041" min="1" max="1" chance="0.129162799167633" /> <!-- Mold Hardener -->
-				<item id="4040" min="1" max="1" chance="0.29706091318512" /> <!-- Mold Lubricant -->
-				<item id="2340" min="1" max="1" chance="0.0345425957145691" /> <!-- Recipe: Pa'agrian Hammer -->
+				<item id="1871" min="1" max="1" chance="14.8529645098534" /> <!-- Corroded Charcoal -->
+				<item id="1866" min="1" max="1" chance="9.90198535650253" /> <!-- Corroded Suede -->
+				<item id="1877" min="1" max="1" chance="0.594121826370239" /> <!-- Corroded Adamantite Nugget -->
+				<item id="4041" min="1" max="1" chance="0.129162799167633" /> <!-- Corroded Mold Hardener -->
+				<item id="4040" min="1" max="1" chance="0.29706091318512" /> <!-- Corroded Mold Lubricant -->
+				<item id="2340" min="1" max="1" chance="0.0345425957145691" /> <!-- Recipe: Pa'agrio Hammer -->
 				<item id="3006" min="1" max="1" chance="0.606240137161255" /> <!-- Recipe: Demon's Gloves -->
-				<item id="8724" min="1" max="1" chance="0.495092505374908" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.123779888793945" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.0123888087997437" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.00246153187942505" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="8724" min="1" max="1" chance="0.495092505374908" /> <!-- Life Stone - Lv. 49 -->
+				<item id="8734" min="1" max="1" chance="0.123779888793945" /> <!-- Mid-grade Life Stone - Lv. 49 -->
+				<item id="8744" min="1" max="1" chance="0.0123888087997437" /> <!-- High-grade Life Stone - Lv. 49 -->
+				<item id="8754" min="1" max="1" chance="0.00246153187942505" /> <!-- Top-grade Life Stone - Lv. 49 -->
 			</drop>
 			<spoil>
-				<item id="1880" min="1" max="1" chance="36.8745" /> <!-- Steel -->
-				<item id="2951" min="1" max="1" chance="31.0131" /> <!-- Rind Leather Gloves Design -->
-				<item id="2166" min="1" max="1" chance="12.4998" /> <!-- Recipe: Earrings of Binding (100%) -->
+				<item id="1880" min="1" max="1" chance="36.8745" /> <!-- Corroded Steel -->
+				<item id="2951" min="1" max="1" chance="31.0131" /> <!-- Rind Leather Glove Design -->
+				<item id="2166" min="1" max="1" chance="12.4998" /> <!-- Recipe: Earring of Seal -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5162,25 +5162,25 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1563" max="3187" chance="70" /> <!-- Adena -->
-				<item id="398" min="1" max="1" chance="0.0127866227359772" /> <!-- Plated Leather -->
-				<item id="1966" min="1" max="1" chance="0.800583285491467" /> <!-- Plated Leather Fragment -->
+				<item id="398" min="1" max="1" chance="0.0127866227359772" /> <!-- Plated Leather Armor -->
+				<item id="1966" min="1" max="1" chance="0.800583285491467" /> <!-- Plated Leather Armor Fragment -->
 				<item id="399" min="1" max="1" chance="0.0117910105409622" /> <!-- Rind Leather Armor -->
 				<item id="1975" min="1" max="1" chance="0.72024725519371" /> <!-- Rind Leather Armor Design -->
 				<item id="418" min="1" max="1" chance="0.0204470768976212" /> <!-- Plated Leather Gaiters -->
-				<item id="1967" min="1" max="1" chance="1.19596063581181" /> <!-- Plated Leather Gaiters Material -->
+				<item id="1967" min="1" max="1" chance="1.19596063581181" /> <!-- Plated Leather Gaiter Material -->
 				<item id="419" min="1" max="1" chance="0.0188796048054695" /> <!-- Rind Leather Gaiters -->
-				<item id="1976" min="1" max="1" chance="1.33340448792362" /> <!-- Rind Leather Gaiters Material -->
-				<item id="1871" min="1" max="1" chance="15.9483579777451" /> <!-- Charcoal -->
-				<item id="1866" min="1" max="1" chance="10.6322483333969" /> <!-- Suede -->
-				<item id="1877" min="1" max="1" chance="0.637937804473877" /> <!-- Adamantite Nugget -->
-				<item id="4041" min="1" max="1" chance="0.138688445472717" /> <!-- Mold Hardener -->
-				<item id="4040" min="1" max="1" chance="0.318968902236938" /> <!-- Mold Lubricant -->
-				<item id="2340" min="1" max="1" chance="0.0370900826950073" /> <!-- Recipe: Pa'agrian Hammer -->
+				<item id="1976" min="1" max="1" chance="1.33340448792362" /> <!-- Rind Leather Gaiter Material -->
+				<item id="1871" min="1" max="1" chance="15.9483579777451" /> <!-- Corroded Charcoal -->
+				<item id="1866" min="1" max="1" chance="10.6322483333969" /> <!-- Corroded Suede -->
+				<item id="1877" min="1" max="1" chance="0.637937804473877" /> <!-- Corroded Adamantite Nugget -->
+				<item id="4041" min="1" max="1" chance="0.138688445472717" /> <!-- Corroded Mold Hardener -->
+				<item id="4040" min="1" max="1" chance="0.318968902236938" /> <!-- Corroded Mold Lubricant -->
+				<item id="2340" min="1" max="1" chance="0.0370900826950073" /> <!-- Recipe: Pa'agrio Hammer -->
 				<item id="3006" min="1" max="1" chance="0.650949830352783" /> <!-- Recipe: Demon's Gloves -->
-				<item id="8724" min="1" max="1" chance="0.53160515549469" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.132908550048828" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.0133024728851318" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.00264306775665283" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="8724" min="1" max="1" chance="0.53160515549469" /> <!-- Life Stone - Lv. 49 -->
+				<item id="8734" min="1" max="1" chance="0.132908550048828" /> <!-- Mid-grade Life Stone - Lv. 49 -->
+				<item id="8744" min="1" max="1" chance="0.0133024728851318" /> <!-- High-grade Life Stone - Lv. 49 -->
+				<item id="8754" min="1" max="1" chance="0.00264306775665283" /> <!-- Top-grade Life Stone - Lv. 49 -->
 			</drop>
 			<spoil>
 				<item id="2083" min="1" max="1" chance="2.6308" /> <!-- Stiletto Edge -->
@@ -5250,43 +5250,43 @@
 				<item id="2106" min="1" max="1" chance="0.152605172997236" /> <!-- Grace Dagger Edge -->
 				<item id="233" min="1" max="1" chance="0.00169483124661446" /> <!-- Dark Screamer -->
 				<item id="2107" min="1" max="1" chance="0.152605172997236" /> <!-- Dark Screamer Edge -->
-				<item id="1867" min="1" max="1" chance="11.4873237947559" /> <!-- Animal Skin -->
-				<item id="1872" min="1" max="1" chance="11.4873237947559" /> <!-- Animal Bone -->
-				<item id="1882" min="1" max="1" chance="1.91454006249237" /> <!-- Leather -->
-				<item id="1894" min="1" max="1" chance="0.302285554803848" /> <!-- Crafted Leather -->
-				<item id="4042" min="1" max="1" chance="0.143593285346985" /> <!-- Enria -->
+				<item id="1867" min="1" max="1" chance="11.4873237947559" /> <!-- Corroded Animal Skin -->
+				<item id="1872" min="1" max="1" chance="11.4873237947559" /> <!-- Corroded Animal Bone Fragment -->
+				<item id="1882" min="1" max="1" chance="1.91454006249237" /> <!-- Corroded Leather -->
+				<item id="1894" min="1" max="1" chance="0.302285554803848" /> <!-- Corroded Quality Leather -->
+				<item id="4042" min="1" max="1" chance="0.143593285346985" /> <!-- Corroded Enria -->
 				<item id="2234" min="1" max="1" chance="0.128410881435394" /> <!-- Recipe: Divine Stockings -->
-				<item id="4609" min="1" max="1" chance="0.0191587477931976" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+				<item id="4609" min="1" max="1" chance="0.0191587477931976" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
 				<item id="2356" min="1" max="1" chance="0.0140423332881927" /> <!-- Recipe: Demon's Staff -->
 				<item id="6669" min="1" max="1" chance="2.00360460412025" /> <!-- Deluxe Chest Key - Grade 5 -->
-				<item id="8725" min="1" max="1" chance="0.239331411111832" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0598398044281006" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00597841912269592" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00116787722396851" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.239331411111832" /> <!-- Life Stone - Lv. 52 -->
+				<item id="8735" min="1" max="1" chance="0.0598398044281006" /> <!-- Mid-grade Life Stone - Lv. 52 -->
+				<item id="8745" min="1" max="1" chance="0.00597841912269592" /> <!-- High-grade Life Stone - Lv. 52 -->
+				<item id="8755" min="1" max="1" chance="0.00116787722396851" /> <!-- Top-grade Life Stone - Lv. 52 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="5.5" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="1978" min="1" max="1" chance="17.3613" /> <!-- Tower Shield Fragment -->
-				<item id="1871" min="1" max="5" chance="90.2788" /> <!-- Charcoal -->
-				<item id="1895" min="1" max="1" chance="77.3819" /> <!-- Metallic Fiber -->
+				<item id="1871" min="1" max="5" chance="90.2788" /> <!-- Corroded Charcoal -->
+				<item id="1895" min="1" max="1" chance="77.3819" /> <!-- Corroded Metallic Fiber -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5353,41 +5353,41 @@
 				<item id="2106" min="1" max="1" chance="0.158934864644766" /> <!-- Grace Dagger Edge -->
 				<item id="233" min="1" max="1" chance="0.00176512872719765" /> <!-- Dark Screamer -->
 				<item id="2107" min="1" max="1" chance="0.158934864644766" /> <!-- Dark Screamer Edge -->
-				<item id="1870" min="1" max="1" chance="10.6059602987671" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="10.6059602987671" /> <!-- Varnish -->
-				<item id="1874" min="1" max="1" chance="0.70706243519783" /> <!-- Oriharukon Ore -->
+				<item id="1870" min="1" max="1" chance="10.6059602987671" /> <!-- Corroded Coal -->
+				<item id="1865" min="1" max="1" chance="10.6059602987671" /> <!-- Corroded Varnish -->
+				<item id="1874" min="1" max="1" chance="0.70706243519783" /> <!-- Corroded Oriharukon Ore -->
 				<item id="4043" min="1" max="1" chance="0.353543102998734" /> <!-- Asofe -->
-				<item id="4039" min="1" max="1" chance="0.353543102998734" /> <!-- Mold Glue -->
-				<item id="4125" min="1" max="1" chance="0.471374956798553" /> <!-- Recipe: Maestro Mold (100%) -->
+				<item id="4039" min="1" max="1" chance="0.353543102998734" /> <!-- Corroded Mold Glue -->
+				<item id="4125" min="1" max="1" chance="0.471374956798553" /> <!-- Recipe: Corroded Maestro Mold -->
 				<item id="3014" min="1" max="1" chance="0.296255475873947" /> <!-- Recipe: Full Plate Boots -->
-				<item id="8725" min="1" max="1" chance="0.294615290699005" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0736419372749329" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00736894788742065" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00147378957748413" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.294615290699005" /> <!-- Life Stone - Lv. 52 -->
+				<item id="8735" min="1" max="1" chance="0.0736419372749329" /> <!-- Mid-grade Life Stone - Lv. 52 -->
+				<item id="8745" min="1" max="1" chance="0.00736894788742065" /> <!-- High-grade Life Stone - Lv. 52 -->
+				<item id="8755" min="1" max="1" chance="0.00147378957748413" /> <!-- Top-grade Life Stone - Lv. 52 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="5.5" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="2096" min="1" max="1" chance="1.5374" /> <!-- Sword of Whispering Death Blade -->
 				<item id="2354" min="1" max="1" chance="0.4602" /> <!-- Recipe: Deadman's Staff -->
-				<item id="1894" min="1" max="1" chance="9.8988" /> <!-- Crafted Leather -->
+				<item id="1894" min="1" max="1" chance="9.8988" /> <!-- Corroded Quality Leather -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5458,52 +5458,52 @@
 				<item id="2099" min="1" max="1" chance="0.0436170547920764" /> <!-- Stick of Eternity Shaft -->
 				<item id="197" min="1" max="1" chance="0.000468311389178038" /> <!-- Paradia Staff -->
 				<item id="2100" min="1" max="1" chance="0.0436170547920764" /> <!-- Paradia Staff Head -->
-				<item id="199" min="1" max="1" chance="0.000468311389178038" /> <!-- Pa'agrian Hammer -->
-				<item id="2102" min="1" max="1" chance="0.0420525708282292" /> <!-- Pa'agrian Hammer Head -->
+				<item id="199" min="1" max="1" chance="0.000468311389178038" /> <!-- Pa'agrio Hammer -->
+				<item id="2102" min="1" max="1" chance="0.0420525708282292" /> <!-- Pa'agrio Hammer Head -->
 				<item id="200" min="1" max="1" chance="0.000468311389178038" /> <!-- Sage's Staff -->
 				<item id="2103" min="1" max="1" chance="0.0436170547920764" /> <!-- Sage's Staff Head -->
 				<item id="201" min="1" max="1" chance="0.000468311389178038" /> <!-- Club of Nature -->
 				<item id="2104" min="1" max="1" chance="0.0436170547920764" /> <!-- Club of Nature Head -->
 				<item id="202" min="1" max="1" chance="0.000468311389178038" /> <!-- Mace of Underworld -->
 				<item id="2105" min="1" max="1" chance="0.0414440072422922" /> <!-- Mace of Underworld Head -->
-				<item id="1873" min="1" max="1" chance="3.53745165221405" /> <!-- Silver Nugget -->
-				<item id="1868" min="1" max="1" chance="17.6872011210709" /> <!-- Thread -->
-				<item id="1876" min="1" max="1" chance="1.76871154110718" /> <!-- Mithril Ore -->
-				<item id="1895" min="1" max="1" chance="2.52673077301025" /> <!-- Metallic Fiber -->
-				<item id="4042" min="1" max="1" chance="0.147392628425598" /> <!-- Enria -->
-				<item id="4608" min="1" max="1" chance="0.0196561597900391" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+				<item id="1873" min="1" max="1" chance="3.53745165221405" /> <!-- Corroded Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="17.6872011210709" /> <!-- Corroded Thread -->
+				<item id="1876" min="1" max="1" chance="1.76871154110718" /> <!-- Corroded Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="2.52673077301025" /> <!-- Corroded Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.147392628425598" /> <!-- Corroded Enria -->
+				<item id="4608" min="1" max="1" chance="0.0196561597900391" /> <!-- Greater INT Dye <Int + 3 Wit - 3> -->
 				<item id="3017" min="1" max="1" chance="0.24701621736145" /> <!-- Recipe: Divine Gloves -->
-				<item id="5155" min="1" max="1" chance="0.0176848298110962" /> <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
+				<item id="5155" min="1" max="1" chance="0.0176848298110962" /> <!-- Recipe: Soulshot Compressed Package (B-grade) -->
 				<item id="3017" min="1" max="1" chance="0.24701621736145" /> <!-- Recipe: Divine Gloves -->
 				<item id="6669" min="1" max="1" chance="2.05663999803162" /> <!-- Deluxe Chest Key - Grade 5 -->
-				<item id="8725" min="1" max="1" chance="0.245644857376099" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0614254993438721" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00614254993438721" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00128564998626709" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.245644857376099" /> <!-- Life Stone - Lv. 52 -->
+				<item id="8735" min="1" max="1" chance="0.0614254993438721" /> <!-- Mid-grade Life Stone - Lv. 52 -->
+				<item id="8745" min="1" max="1" chance="0.00614254993438721" /> <!-- High-grade Life Stone - Lv. 52 -->
+				<item id="8755" min="1" max="1" chance="0.00128564998626709" /> <!-- Top-grade Life Stone - Lv. 52 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
 				<item id="8603" min="1" max="1" chance="5.5" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
 				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
 				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
 				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
 				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
-				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Mysterious Herb -->
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="1" chance="19.9596" /> <!-- Stone of Purity -->
-				<item id="1539" min="1" max="1" chance="66.5319" /> <!-- Greater Healing Potion -->
-				<item id="4609" min="1" max="1" chance="0.6653" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+				<item id="1875" min="1" max="1" chance="19.9596" /> <!-- Corroded Stone of Purity -->
+				<item id="1539" min="1" max="1" chance="66.5319" /> <!-- Major Healing Potion -->
+				<item id="4609" min="1" max="1" chance="0.6653" /> <!-- Greater MEN Dye <Men + 3 Int - 3> -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5572,21 +5572,21 @@
 				<item id="1988" min="1" max="1" chance="0.884190675274372" /> <!-- Divine Tunic Fabric -->
 				<item id="473" min="1" max="1" chance="0.0178441764836311" /> <!-- Divine Stockings -->
 				<item id="1989" min="1" max="1" chance="1.38690975093412" /> <!-- Divine Stocking Pattern -->
-				<item id="1870" min="1" max="1" chance="15.3390652131958" /> <!-- Coal -->
-				<item id="1865" min="1" max="1" chance="15.3390652131958" /> <!-- Varnish -->
-				<item id="1874" min="1" max="1" chance="1.02261108056641" /> <!-- Oriharukon Ore -->
+				<item id="1870" min="1" max="1" chance="15.3390652131958" /> <!-- Corroded Coal -->
+				<item id="1865" min="1" max="1" chance="15.3390652131958" /> <!-- Corroded Varnish -->
+				<item id="1874" min="1" max="1" chance="1.02261108056641" /> <!-- Corroded Oriharukon Ore -->
 				<item id="4043" min="1" max="1" chance="0.511305540283203" /> <!-- Asofe -->
-				<item id="4039" min="1" max="1" chance="0.511305540283203" /> <!-- Mold Glue -->
-				<item id="4133" min="1" max="1" chance="0.0737602343139648" /> <!-- Recipe: Zubei's Breastplate (100%) -->
+				<item id="4039" min="1" max="1" chance="0.511305540283203" /> <!-- Corroded Mold Glue -->
+				<item id="4133" min="1" max="1" chance="0.0737602343139648" /> <!-- Recipe: Zubei's Breastplate -->
 				<item id="4959" min="1" max="1" chance="0.295545913757324" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
 				<item id="4941" min="1" max="1" chance="0.117996175842285" /> <!-- Recipe: Zubei's Gaiters (60%) -->
-				<item id="8726" min="1" max="1" chance="0.35506581072998" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0887748689575195" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00888758642578125" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00171692010498047" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.35506581072998" /> <!-- Life Stone - Lv. 55 -->
+				<item id="8736" min="1" max="1" chance="0.0887748689575195" /> <!-- Mid-grade Life Stone - Lv. 55 -->
+				<item id="8746" min="1" max="1" chance="0.00888758642578125" /> <!-- High-grade Life Stone - Lv. 55 -->
+				<item id="8756" min="1" max="1" chance="0.00171692010498047" /> <!-- Top-grade Life Stone - Lv. 55 -->
 			</drop>
 			<spoil>
-				<item id="3034" min="1" max="1" chance="0.997" /> <!-- Recipe: Spiritshot B -->
+				<item id="3034" min="1" max="1" chance="0.997" /> <!-- Recipe: Spiritshot (B-grade) -->
 				<item id="2113" min="1" max="1" chance="2.4141" /> <!-- Scorpion Blade -->
 				<item id="1918" min="1" max="1" chance="21.5903" /> <!-- Nassen's Earring Gemstone -->
 			</spoil>
@@ -5652,23 +5652,23 @@
 				<item id="1988" min="1" max="1" chance="0.818186791181088" /> <!-- Divine Tunic Fabric -->
 				<item id="473" min="1" max="1" chance="0.0165121278777123" /> <!-- Divine Stockings -->
 				<item id="1989" min="1" max="1" chance="1.28337842787409" /> <!-- Divine Stocking Pattern -->
-				<item id="1864" min="1" max="3" chance="14.1938695854492" /> <!-- Stem -->
-				<item id="1869" min="1" max="1" chance="14.1938695854492" /> <!-- Iron Ore -->
-				<item id="1878" min="1" max="1" chance="5.67757423352051" /> <!-- Braided Hemp -->
-				<item id="1884" min="1" max="1" chance="8.73470589831543" /> <!-- Cord -->
-				<item id="4039" min="1" max="1" chance="0.473120186401367" /> <!-- Mold Glue -->
-				<item id="4178" min="1" max="1" chance="0.260429497192383" /> <!-- Recipe: Zubei's Shield (100%) -->
-				<item id="4184" min="1" max="1" chance="0.0163675913085937" /> <!-- Recipe: Sprite's Staff (100%) -->
-				<item id="5160" min="1" max="1" chance="0.0283792913818359" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-				<item id="8726" min="1" max="1" chance="0.328583795410156" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0821459488525391" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00822779455566406" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00162795935058594" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="1864" min="1" max="3" chance="14.1938695854492" /> <!-- Corroded Stem -->
+				<item id="1869" min="1" max="1" chance="14.1938695854492" /> <!-- Corroded Iron Ore -->
+				<item id="1878" min="1" max="1" chance="5.67757423352051" /> <!-- Corroded Durable Braid -->
+				<item id="1884" min="1" max="1" chance="8.73470589831543" /> <!-- Corroded Cord -->
+				<item id="4039" min="1" max="1" chance="0.473120186401367" /> <!-- Corroded Mold Glue -->
+				<item id="4178" min="1" max="1" chance="0.260429497192383" /> <!-- Recipe: Zubei's Shield -->
+				<item id="4184" min="1" max="1" chance="0.0163675913085937" /> <!-- Recipe: Spirit's Staff -->
+				<item id="5160" min="1" max="1" chance="0.0283792913818359" /> <!-- Recipe: Spiritshot Compressed Package (B-grade) -->
+				<item id="8726" min="1" max="1" chance="0.328583795410156" /> <!-- Life Stone - Lv. 55 -->
+				<item id="8736" min="1" max="1" chance="0.0821459488525391" /> <!-- Mid-grade Life Stone - Lv. 55 -->
+				<item id="8746" min="1" max="1" chance="0.00822779455566406" /> <!-- High-grade Life Stone - Lv. 55 -->
+				<item id="8756" min="1" max="1" chance="0.00162795935058594" /> <!-- Top-grade Life Stone - Lv. 55 -->
 			</drop>
 			<spoil>
-				<item id="4180" min="1" max="1" chance="51.2556" /> <!-- Recipe: Silver Arrow (100%) -->
+				<item id="4180" min="1" max="1" chance="51.2556" /> <!-- Recipe: Silver Arrow -->
 				<item id="2120" min="1" max="1" chance="2.2159" /> <!-- Great Pata Blade -->
-				<item id="1806" min="1" max="1" chance="0.9226" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="1806" min="1" max="1" chance="0.9226" /> <!-- Recipe: Soulshot (B-grade) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5730,36 +5730,36 @@
 			<drop>
 				<item id="57" min="1893" max="3856" chance="70" /> <!-- Adena -->
 				<item id="2436" min="1" max="1" chance="0.0119397334814072" /> <!-- Theca Leather Boots -->
-				<item id="2954" min="1" max="1" chance="0.799660712242126" /> <!-- Theca Leather Boots Texture -->
+				<item id="2954" min="1" max="1" chance="0.799660712242126" /> <!-- Theca Leather Boot Texture -->
 				<item id="2437" min="1" max="1" chance="0.00918598237037659" /> <!-- Drake Leather Boots -->
-				<item id="2960" min="1" max="1" chance="0.687972858738899" /> <!-- Drake Leather Boots Design -->
+				<item id="2960" min="1" max="1" chance="0.687972858738899" /> <!-- Drake Leather Boot Design -->
 				<item id="2438" min="1" max="1" chance="0.00918598237037659" /> <!-- Full Plate Boots -->
-				<item id="2961" min="1" max="1" chance="0.687972858738899" /> <!-- Full Plate Boots Part -->
+				<item id="2961" min="1" max="1" chance="0.687972858738899" /> <!-- Full Plate Boot Fragment -->
 				<item id="2460" min="1" max="1" chance="0.0119397334814072" /> <!-- Theca Leather Gloves -->
-				<item id="2955" min="1" max="1" chance="0.799660712242126" /> <!-- Theca Leather Gloves Texture -->
+				<item id="2955" min="1" max="1" chance="0.799660712242126" /> <!-- Theca Leather Glove Texture -->
 				<item id="2461" min="1" max="1" chance="0.00918598237037659" /> <!-- Drake Leather Gloves -->
-				<item id="2962" min="1" max="1" chance="0.687972858738899" /> <!-- Drake Leather Gloves Design -->
+				<item id="2962" min="1" max="1" chance="0.687972858738899" /> <!-- Drake Leather Glove Design -->
 				<item id="2462" min="1" max="1" chance="0.00918598237037659" /> <!-- Full Plate Gauntlets -->
-				<item id="2963" min="1" max="1" chance="0.687972858738899" /> <!-- Full Plate Gauntlets Part -->
+				<item id="2963" min="1" max="1" chance="0.687972858738899" /> <!-- Full Plate Gauntlet Fragment -->
 				<item id="2463" min="1" max="1" chance="0.00918598237037659" /> <!-- Divine Gloves -->
-				<item id="2964" min="1" max="1" chance="0.687977967739105" /> <!-- Divine Gloves Pattern -->
-				<item id="1864" min="1" max="3" chance="14.7375722714996" /> <!-- Stem -->
-				<item id="1869" min="1" max="1" chance="14.7375722714996" /> <!-- Iron Ore -->
-				<item id="1878" min="1" max="1" chance="5.89505631917953" /> <!-- Braided Hemp -->
-				<item id="1884" min="1" max="1" chance="9.06929281488419" /> <!-- Cord -->
-				<item id="4039" min="1" max="1" chance="0.491243272190094" /> <!-- Mold Glue -->
-				<item id="4178" min="1" max="1" chance="0.270405368556976" /> <!-- Recipe: Zubei's Shield (100%) -->
-				<item id="4184" min="1" max="1" chance="0.0169945594024658" /> <!-- Recipe: Sprite's Staff (100%) -->
-				<item id="5160" min="1" max="1" chance="0.0294663731575012" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-				<item id="8726" min="1" max="1" chance="0.341170348434448" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0852925871086121" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0085429640007019" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00169031908035278" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="2964" min="1" max="1" chance="0.687977967739105" /> <!-- Divine Glove Pattern -->
+				<item id="1864" min="1" max="3" chance="14.7375722714996" /> <!-- Corroded Stem -->
+				<item id="1869" min="1" max="1" chance="14.7375722714996" /> <!-- Corroded Iron Ore -->
+				<item id="1878" min="1" max="1" chance="5.89505631917953" /> <!-- Corroded Durable Braid -->
+				<item id="1884" min="1" max="1" chance="9.06929281488419" /> <!-- Corroded Cord -->
+				<item id="4039" min="1" max="1" chance="0.491243272190094" /> <!-- Corroded Mold Glue -->
+				<item id="4178" min="1" max="1" chance="0.270405368556976" /> <!-- Recipe: Zubei's Shield -->
+				<item id="4184" min="1" max="1" chance="0.0169945594024658" /> <!-- Recipe: Spirit's Staff -->
+				<item id="5160" min="1" max="1" chance="0.0294663731575012" /> <!-- Recipe: Spiritshot Compressed Package (B-grade) -->
+				<item id="8726" min="1" max="1" chance="0.341170348434448" /> <!-- Life Stone - Lv. 55 -->
+				<item id="8736" min="1" max="1" chance="0.0852925871086121" /> <!-- Mid-grade Life Stone - Lv. 55 -->
+				<item id="8746" min="1" max="1" chance="0.0085429640007019" /> <!-- High-grade Life Stone - Lv. 55 -->
+				<item id="8756" min="1" max="1" chance="0.00169031908035278" /> <!-- Top-grade Life Stone - Lv. 55 -->
 			</drop>
 			<spoil>
 				<item id="2120" min="1" max="1" chance="2.3008" /> <!-- Great Pata Blade -->
-				<item id="4146" min="1" max="1" chance="3.0703" /> <!-- Recipe: Tunic of Zubei (100%) -->
-				<item id="4590" min="1" max="1" chance="1.5966" /> <!-- Greater Dye of STR <Str+2 Dex-2> -->
+				<item id="4146" min="1" max="1" chance="3.0703" /> <!-- Recipe: Tunic of Zubei -->
+				<item id="4590" min="1" max="1" chance="1.5966" /> <!-- Greater STR Dye <STR + 2 DEX - 2> -->
 			</spoil>
 		</dropLists>
 		<collision>

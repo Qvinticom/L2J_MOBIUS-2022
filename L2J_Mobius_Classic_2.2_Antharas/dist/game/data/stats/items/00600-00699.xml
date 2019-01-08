@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="600" name="Sealed Avadon Boots" type="Armor">
+		<!-- Sealed Avadon Boots. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t66_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -18,6 +19,7 @@
 		</stats>
 	</item>
 	<item id="601" name="Sealed Doom Boots" type="Armor">
+		<!-- Sealed Doom Boots. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t71_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -154,6 +156,7 @@
 		</stats>
 	</item>
 	<item id="612" name="Sealed Zubei's Gauntlets" type="Armor">
+		<!-- Sealed Zubei's Gauntlets. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t64_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -386,7 +389,7 @@
 		<set name="price" val="1000" />
 	</item>
 	<item id="687" name="Darin's Letter" type="EtcItem">
-		<!-- The love letter that Darin has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
+		<!-- The love letter that Darin has written to Roxxy. Darin has asked you to deliver this letter to Gatekeeper Roxxy. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="15500" type="EtcItem" name="Sel Mahum Diary">
+		<!-- Diary containing the daily life of the Sel Mahum. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -13,6 +14,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15501" type="EtcItem" name="Sel Mahum Cookbook Page">
+		<!-- Part of the cookbook used by the Sel Mahum Chef. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_hidden_2nd_page_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -25,6 +27,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15502" type="EtcItem" name="Sel Mahum Cookbook">
+		<!-- Cookbook used by the Sel Mahum Chef. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -37,6 +40,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15503" type="EtcItem" name="Shiny Salmon">
+		<!-- Shiny and tantalizing salmon. Take it back to Guard Stan of Oren Village. -->
 		<set name="icon" val="icon.etc_tuna_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -49,6 +53,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15504" type="EtcItem" name="Gray Salmon">
+		<!-- Not so shiny but still OK-looking salmon. If you take it back to Guard Stan of Oren Village, he'll take care of everything else, right? -->
 		<set name="icon" val="icon.etc_tuna_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -61,6 +66,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15505" type="EtcItem" name="Sickly Salmon">
+		<!-- Scales are falling off and it doesn't look good at all. If you take it back to Guard Stan of Oren Village, he'll take care of everything else, right? -->
 		<set name="icon" val="icon.etc_tuna_i08" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -73,6 +79,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15506" type="EtcItem" name="Salmon Lure">
+		<!-- Lure used to catch salmon. You cannot catch salmon without it. -->
 		<set name="icon" val="icon.etc_bait_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -85,6 +92,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15507" type="EtcItem" name="Foul Fruit">
+		<!-- Horrible tasting fruit. If you put it in the salmon porridge, which is cooking on the fire at the Sel Mahum Training Grounds, you could ruin the dish. -->
 		<set name="icon" val="icon.etc_codran_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -95,9 +103,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="9075-1" />
+		<set name="item_skill" val="9075-1" /> <!-- Awful Soup -->
 	</item>
 	<item id="15508" type="EtcItem" name="Sel Mahum Training Diary">
+		<!-- Dairy containing detailed examples of the Sel Mahum training. Take it back to Guard Pinaps of Oren Village. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -110,6 +119,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15509" type="EtcItem" name="Sel Mahum Training Timetable">
+		<!-- Paper containing the training schedule of the Sel Mahum. Take it back to Guard Pinaps of Oren Village. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -122,6 +132,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15510" type="EtcItem" name="Golem Corps Log">
+		<!-- Paper containing some logs for recognizing Golem Corps. Collect all needed logs. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -135,6 +146,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15511" type="EtcItem" name="Golem Corps Collection">
+		<!-- Bundle of papers containing all the logs for recognizing Golem Corps. Take it back to Collector Gutenhagen at Pavel Ruins. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -147,6 +159,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15512" type="EtcItem" name="Seed of Annihilation Orders">
+		<!-- Kucereus' Clan Outpost Commander Kbaldir's written orders. Go to the pier of the Seed of Annihilation and deliver it to his subordinate, Officer Klemis. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -159,6 +172,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15513" type="EtcItem" name="Gracian Soldier Tag">
+		<!-- ID Tag of a Gracian soldier who was killed near the Seed of Annihilation. Let's take it to Officer Jakan who is stationed at the pier near the Seed of Annihilation. -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -171,6 +185,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15514" type="EtcItem" name="Cold Resistance Potion">
+		<!-- A potion especially crafted from the Jinia Guild to protect the body from the cursed cold powers of the Ice Queen. Needed to rescue Kegor, who has fallen into trouble. -->
 		<set name="icon" val="icon.etc_cp_potion_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -183,6 +198,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15515" type="EtcItem" name="Seal Breaker - 5th Floor">
+		<!-- Seal Breaker needed to speak face to face with the Demon Prince on the 5th floor of the Tower of Infinitum in the Steel Citadel. It is destroyed after one use. -->
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i0" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -195,6 +211,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15516" type="EtcItem" name="Seal Breaker - 10th Floor">
+		<!-- Seal Breaker needed to speak face to face with Ranku on the 10th floor of the Tower of Infinitum in the Steel Citadel. It is destroyed after one use. -->
 		<set name="icon" val="icon.etc_crystal_cave_crystal_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -207,6 +224,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15517" type="EtcItem" name="Seal Components Part 1">
+		<!-- A Seal Breaker component. Acquired after defeating the Space Guard in the Tower of Infinitum. You can make a Seal Breaker that negates great power by putting this piece together with others like it. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -219,6 +237,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15518" type="EtcItem" name="Seal Components Part 2">
+		<!-- A Seal Breaker component. Acquired after defeating the Space Gazer in the Tower of Infinitum. You can make a Seal Breaker that negates great power by putting this piece together with others like it. -->
 		<set name="icon" val="icon.etc_stone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -231,6 +250,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15519" type="EtcItem" name="Seal Components Part 3">
+		<!-- A Seal Breaker component. Acquired after defeating the Space Priest in the Tower of Infinitum. You can make a Seal Breaker that negates great power by putting this piece together with others like it. -->
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -243,6 +263,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15520" type="EtcItem" name="Seal Components Part 4">
+		<!-- A Seal Breaker component. Acquired after defeating the Space Ruler in the Tower of Infinitum. You can make a Seal Breaker that negates great power by putting this piece together with others like it. -->
 		<set name="icon" val="icon.event_cubic_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -255,6 +276,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15521" type="EtcItem" name="Broken Golem Shard">
+		<!-- Fragment obtained by hunting golems. -->
 		<set name="icon" val="icon.etc_plate_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -267,6 +289,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15522" type="EtcItem" name="Shabby Necklace">
+		<!-- Shabby necklace that Watcher of Antharas Theodric supposedly gives only to those who are worthy of going after the Earth Dragon Antharas. He says the necklace will transform after you defeat Antharas. -->
 		<set name="icon" val="icon.armor_neck01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -279,6 +302,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15523" type="EtcItem" name="Miracle Necklace">
+		<!-- After you defeated the Earth dragon Antharas, the shabby necklace that you received from Watcher of Antharas Theodric changed into this item. Take this necklace to him. -->
 		<set name="icon" val="icon.accessary_necklace_of_protection_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -291,6 +315,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15524" type="EtcItem" name="Poor Necklace">
+		<!-- Watcher of Valakas Klein gave you this necklace. It is of poor quality and not worth much. However, it is said to transform into something worth much more after killing Valakas. -->
 		<set name="icon" val="icon.armor_neck02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -303,6 +328,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15525" type="EtcItem" name="Valor Necklace">
+		<!-- After killing Valakas the Poor Necklace has transformed into this necklace. Take this necklace to Watcher of Valakas Klein. -->
 		<set name="icon" val="icon.accessary_necklace_of_valor_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -315,6 +341,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15526" type="EtcItem" name="Tattered Monk Clothes">
+		<!-- Tattered clothes are the remains of the monks you battled in the Monastery of Silence. The clothes are nothing more than rags after their years of use. Let's take them to Greymore in the Monastery of Silence. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -327,6 +354,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15527" type="EtcItem" name="Mark of Splendor">
+		<!-- Proof that you successfully defeated the Master of Splendor Anays at Priest Greymore's request. If you take it to Greymore, you will receive a reward. -->
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -339,6 +367,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15528" type="EtcItem" name="Mark of Darkness">
+		<!-- You succeeded in defeating the Master of Splendor Anays at Priest Greymore's request. But you received the Mark of Darkness rather than the Mark of Splendor. If you take this to Greymore, he will laugh at you. -->
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -351,6 +380,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15529" type="EtcItem" name="Priest Dominic's Letter">
+		<!-- A secret letter sent by Priest Dominic of the Rune Village temple to Greymore. Deliver it to Priest Greymore in the Monastery of Silence. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -363,6 +393,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15530" type="EtcItem" name="Monk Scripture">
+		<!-- Sacred text obtained after defeating the monks in the Monastery of Silence. Bring it to Greymore in the Monastery of Silence. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -375,6 +406,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15531" type="EtcItem" name="Sel Mahum Mane">
+		<!-- Mane obtained by defeating the Sel Mahums that were attacking the animals the Beast Farm. Collect them and bring them to Tunatun in the Beast Farm. -->
 		<set name="icon" val="icon.etc_mane_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -387,6 +419,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15532" type="EtcItem" name="Veal">
+		<!-- Meat from a young animal. Smells good but tastes bad. Take it to Beast Herder Tunatun at the Beast Farm. -->
 		<set name="icon" val="icon.etc_meat_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -399,6 +432,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15533" type="EtcItem" name="Innocence Jewel">
+		<!-- A white gem produce by animals. Looking at it reminds you of a time long ago. I wonder what my old friends are doing now -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -411,6 +445,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15534" type="EtcItem" name="Prime Meat">
+		<!-- Top quality meat obtained from an adult animal. Only one piece comes out per animal. Collect these and take them to Beast Herder Tunatun. -->
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -423,6 +458,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15535" type="EtcItem" name="Concentrated Spirit Energy">
+		<!-- Obtained in the Seed of Annihilation. Take this Concentrated Spirit Energy to Special Products Broker Kirklan to exchange them for a reward. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -435,6 +471,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15536" type="EtcItem" name="Spirit Stone Dust">
+		<!-- Obtained through hunting in the Seed of Annihilation. If you take them to Special Products Broker Kirklan you can exchange 5 of these items for a Spirit Stone Fragment. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -447,6 +484,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15537" type="EtcItem" name="Strongbox of Promise">
+		<!-- Small safe obtained by defeating the monks in the Monastery of Silence. You can find out about the quest by clicking on it. Quest start item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -459,6 +497,7 @@
 		<set name="handler" val="Bypass" />
 	</item>
 	<item id="15538" type="EtcItem" name="Book of Silence">
+		<!-- Ancient book contained inside the Strongbox of Promise. Before you can return it to its owner, you must figure out who it belongs to. Go to Library of Sages Director Sophia in the Rune Castle Library and ask for help. -->
 		<set name="icon" val="icon.high_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -471,6 +510,7 @@
 		<set name="handler" val="Bypass" />
 	</item>
 	<item id="15539" type="EtcItem" name="Book of Silence">
+		<!-- You heard about the book's owner from the Library of Sages Director Sophia. Return the book to its owner. -->
 		<set name="icon" val="icon.high_kamael_skill_book_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -483,6 +523,7 @@
 		<set name="handler" val="Bypass" />
 	</item>
 	<item id="15540" type="EtcItem" name="Unlit Torchlight">
+		<!-- Torch that doesn't light. Item needed to obtain the treasure chest in the secret room inside the Monastery of Silence. -->
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -491,6 +532,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15541" type="EtcItem" name="Red Soul Crystal - Stage 17">
+		<!-- Red Crystal that absorbs souls, stage 17. Special abilities can be applied to the weapon when absorbing certain amount of souls. MP 26 is consumed each time of use. This level crystal is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -498,9 +540,10 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2096-1" />
+		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="15542" type="EtcItem" name="Blue Soul Crystal - Stage 17">
+		<!-- Blue Crystal that absorbs souls, stage 17. Special abilities can be applied to the weapon when absorbing certain amount of souls. MP 26 is consumed each time of use. This level crystal is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -508,9 +551,10 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2096-1" />
+		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="15543" type="EtcItem" name="Green Soul Crystal - Stage 17">
+		<!-- Green Crystal that absorbs souls, stage 17. Special abilities can be applied to the weapon when absorbing certain amount of souls. MP 26 is consumed each time of use. This level crystal is said to absorb crystals on its own, so it doesn't seem like you need to use it directly on the monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -518,9 +562,10 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2096-1" />
+		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="15544" type="Weapon" name="Eternal Core Sword">
+		<!-- It can bestow one of the following functions: Health, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_incessantcore_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -549,6 +594,7 @@
 		</for>
 	</item>
 	<item id="15545" type="Weapon" name="Mamba Edge">
+		<!-- It can bestow one of the following functions: HP Drain, Haste, or Critical Damage. -->
 		<set name="icon" val="icon.weapon_mambaedge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -577,6 +623,7 @@
 		</for>
 	</item>
 	<item id="15546" type="Weapon" name="Eversor Mace">
+		<!-- It can bestow one of the following functions: Health, HP Regeneration, or HP Drain. -->
 		<set name="icon" val="icon.weapon_expowder_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -605,6 +652,7 @@
 		</for>
 	</item>
 	<item id="15547" type="Weapon" name="Contristo Hammer">
+		<!-- It can bestow one of the following functions: Health, HP Drain, or HP Regeneration. -->
 		<set name="icon" val="icon.weapon_pereztear_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -633,6 +681,7 @@
 		</for>
 	</item>
 	<item id="15548" type="Weapon" name="Lava Saw">
+		<!-- It can bestow one of the following functions: Health, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_lavamond_saw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -661,6 +710,7 @@
 		</for>
 	</item>
 	<item id="15549" type="Weapon" name="Jade Claw">
+		<!-- It can bestow one of the following functions: Health, Critical Stun, or Focus. -->
 		<set name="icon" val="icon.weapon_jademice_claw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -689,6 +739,7 @@
 		</for>
 	</item>
 	<item id="15550" type="Weapon" name="Demitelum">
+		<!-- It can bestow one of the following functions: Guidance, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -706,7 +757,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="437" />
 			<set stat="mAtk" val="192" />
@@ -718,6 +769,7 @@
 		</for>
 	</item>
 	<item id="15551" type="Weapon" name="Sacredium">
+		<!-- It can bestow one of the following functions: MP Regeneration, Mana Up, or Acumen. -->
 		<set name="icon" val="icon.weapon_sacredumors_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -747,6 +799,7 @@
 		</for>
 	</item>
 	<item id="15552" type="Weapon" name="Cyclic Cane">
+		<!-- It can bestow one of the following functions: MP Regeneration, Magic Hold, or Empower. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -776,6 +829,7 @@
 		</for>
 	</item>
 	<item id="15553" type="Weapon" name="Archangel Sword">
+		<!-- It can bestow one of the following functions: Mana Up, Magic Hold, or Acumen. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -804,6 +858,7 @@
 		</for>
 	</item>
 	<item id="15554" type="Weapon" name="Recurve Thorne Bow">
+		<!-- It can bestow one of the following functions: Focus, Critical Slow, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -835,6 +890,7 @@
 		</for>
 	</item>
 	<item id="15555" type="Weapon" name="Heavenstare Rapier">
+		<!-- Kamael Exclusive Weapon: Eternal Core Sword Conversion. Health, Focus, or Haste can be bestowed. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -869,6 +925,7 @@
 		</for>
 	</item>
 	<item id="15556" type="Weapon" name="Pyseal Blade">
+		<!-- Kamael Exclusive Weapon: Lava Saw conversion. It can bestow one of the following three functions, Health Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -901,6 +958,7 @@
 		</for>
 	</item>
 	<item id="15557" type="Weapon" name="Thorne Crossbow">
+		<!-- Kamael Exclusive Weapon: Recurvethorne Bow conversion. It can bestow one of the following functions, Focus, Critical Slow, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -934,6 +992,7 @@
 		</for>
 	</item>
 	<item id="15558" type="Weapon" name="Periel Sword">
+		<!-- It can bestow one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_periwing_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -962,6 +1021,7 @@
 		</for>
 	</item>
 	<item id="15559" type="Weapon" name="Skull Edge">
+		<!-- It can bestow one of the following functions: Haste, Critical Damage, or HP Drain. -->
 		<set name="icon" val="icon.weapon_skulledge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -990,6 +1050,7 @@
 		</for>
 	</item>
 	<item id="15560" type="Weapon" name="Vigwik Axe">
+		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vigwik_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1018,6 +1079,7 @@
 		</for>
 	</item>
 	<item id="15561" type="Weapon" name="Devilish Maul">
+		<!-- It can bestow one of the following functions: HP Drain, HP Regeneration, or Health. -->
 		<set name="icon" val="icon.weapon_evildeity_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1046,6 +1108,7 @@
 		</for>
 	</item>
 	<item id="15562" type="Weapon" name="Feather Eye Blade">
+		<!-- It can bestow one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_feathereye_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1074,6 +1137,7 @@
 		</for>
 	</item>
 	<item id="15563" type="Weapon" name="Octo Claw">
+		<!-- It can bestow one of the following functions: Critical Stun, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1102,6 +1166,7 @@
 		</for>
 	</item>
 	<item id="15564" type="Weapon" name="Doubletop Spear">
+		<!-- It can bestow one of the following functions: Haste, Health, or Guidance. -->
 		<set name="icon" val="icon.weapon_doubletopa_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1119,7 +1184,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="415" />
 			<set stat="mAtk" val="183" />
@@ -1131,6 +1196,7 @@
 		</for>
 	</item>
 	<item id="15565" type="Weapon" name="Rising Star">
+		<!-- It can bestow one of the following functions: Mana Up, Acumen, or MP Regeneration. -->
 		<set name="icon" val="icon.weapon_cuticle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1160,6 +1226,7 @@
 		</for>
 	</item>
 	<item id="15566" type="Weapon" name="Black Visage">
+		<!-- It can bestow one of the following functions: Magic Hold, Empower, or MP Regeneration. -->
 		<set name="icon" val="icon.weapon_blackvisage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1189,6 +1256,7 @@
 		</for>
 	</item>
 	<item id="15567" type="Weapon" name="Veniplant Sword">
+		<!-- It can bestow one of the following functions: Magic Hold, Mana Up, or Acumen. -->
 		<set name="icon" val="icon.weapon_veniplant_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1217,6 +1285,7 @@
 		</for>
 	</item>
 	<item id="15568" type="Weapon" name="Skull Carnium Bow">
+		<!-- It can bestow one of the following functions: Critical Slow, Cheap Shot, or Focus. -->
 		<set name="icon" val="icon.weapon_skullgrove_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1248,6 +1317,7 @@
 		</for>
 	</item>
 	<item id="15569" type="Weapon" name="Gemtail Rapier">
+		<!-- Kamael Exclusive Weapon: Periel Sword Conversion. Focus, Haste, or Health can be bestowed. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_gemtail_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1281,6 +1351,7 @@
 		</for>
 	</item>
 	<item id="15570" type="Weapon" name="Finale Blade">
+		<!-- Kamael Exclusive Weapon: Feather Eye Blade conversion. It can bestow one of the following three functions, Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_findragon blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1313,6 +1384,7 @@
 		</for>
 	</item>
 	<item id="15571" type="Weapon" name="Dominion Crossbow">
+		<!-- Kamael Exclusive Weapon: Skull Carnium Bow conversion. It can bestow one of the following functions, Critical Slow, Cheap Shot, or Focus. -->
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />

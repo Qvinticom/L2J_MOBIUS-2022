@@ -505,7 +505,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36632" name="Emerald Weapon: One-handed Sword" type="Weapon">
-		<!-- Emerald Weapon. One-handed sword style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. One-handed sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -558,7 +558,7 @@
 		</stats>
 	</item>
 	<item id="36634" name="Emerald Weapon: Two-handed Sword" type="Weapon">
-		<!-- Emerald Weapon. Two-handed sword style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Two-handed sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -749,7 +749,7 @@
 		</stats>
 	</item>
 	<item id="36641" name="Emerald Weapon: One-handed Magic Blunt Weapon" type="Weapon">
-		<!-- Emerald Weapon. One-handed magic blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. One-handed staff type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -775,7 +775,7 @@
 		</stats>
 	</item>
 	<item id="36642" name="Emerald Weapon: Two-handed Magic Blunt Weapon" type="Weapon">
-		<!-- Emerald Weapon. Two-handed magic blunt style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Two-handed staff type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -801,7 +801,7 @@
 		</stats>
 	</item>
 	<item id="36643" name="Emerald Weapon: Dualsword" type="Weapon">
-		<!-- Emerald Weapon. Dualsword style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Dual Sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -827,7 +827,7 @@
 		</stats>
 	</item>
 	<item id="36644" name="Emerald Weapon: Dual Dagger" type="Weapon">
-		<!-- Emerald Weapon. Dual dagger style. Initial Emerald Weapon Appearance Stone. -->
+		<!-- Emerald weapon. Dagger dual sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualdagger" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -921,7 +921,7 @@
 		</stats>
 	</item>
 	<item id="36648" name="Emerald Weapon Appearance Stone: Sword" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of an Emerald one-handed sword. 7-day. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed sword to that of Emerald One-handed Sword. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -957,7 +957,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36650" name="Emerald Weapon Appearance Stone: Two-handed Sword" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of an Emerald two-handed sword. 7-day. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed sword to that of Emerald Two-handed Sword. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1083,7 +1083,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36657" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a one-handed blunt to that of an Emerald magic blunt. 7-day. -->
+		<!-- Dimensional item. Changes the appearance of a one-handed staff to that of Emerald One-handed Staff. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1101,7 +1101,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36658" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed magic blunt. 7-day. -->
+		<!-- Dimensional item. Changes the appearance of a two-handed staff to that of Emerald Two-handed Staff. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1119,7 +1119,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36659" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of an Emerald dualsword. 7-day. -->
+		<!-- Dimensional item. Changes the appearance of a dual sword to that of Emerald Dual Sword. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1137,7 +1137,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36660" name="Emerald Weapon Appearance Stone: Dual Dagger" additionalName="7-day" type="EtcItem">
-		<!-- Changes the appearance of a dual dagger to that of an Emerald dual dagger. 7-day. -->
+		<!-- Dimensional item. Changes the appearance of a dagger dual sword to that of Emerald Dagger Dual Sword. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />

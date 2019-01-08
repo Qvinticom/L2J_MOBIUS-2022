@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23300" toLevel="1" name="Ghost Piercing">
+		<!-- Envelops with a specter to inflict 300 dark damage every second for 10 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -52,7 +53,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23303" toLevel="1" name="Teleport">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -67,7 +67,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23304" toLevel="1" name="Teleport">
-		<!-- none -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -82,7 +81,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23305" toLevel="1" name="Zinyanzi Agathion - Yunbokhwan">
-		<!-- Restores all HP/MP/CP and becomes invincible for 5 seconds. But can only be used when HP is below 30%. -->
+		<!-- Restores all HP/ MP/ CP and becomes invincible for 5 seconds. But can only be used when HP is below 30%. -->
 		<operateType>A2</operateType>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -110,7 +109,7 @@
 		</conditions>
 	</skill>
 	<skill id="23306" toLevel="1" name="Zinyanzi Agathion Cute Trick">
-		<!-- Able to see the summoned Zinenze perform cute tricks. -->
+		<!-- Able to see the summoned Zinyanzi perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -126,7 +125,7 @@
 		</conditions>
 	</skill>
 	<skill id="23307" toLevel="1" name="Yanzi Agathion Cute Trick">
-		<!-- Able to see the summoned Enze perform cute tricks. -->
+		<!-- Able to see the summoned Yanzi perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -277,7 +276,7 @@
 		</effects>
 	</skill>
 	<skill id="23313" toLevel="5" name="Action Prohibit Immunity">
-		<!-- Increases resistance to action-inhibiting attacks by 100%. -->
+		<!-- Increases Resistance to action-inhibiting attacks by $s1. -->
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -306,7 +305,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23314" toLevel="5" name="Control Prohibit Immunity">
-		<!-- Increases resistance to control-inhibiting attacks by 100%. -->
+		<!-- Increases Resistance to control-inhibiting attacks by $s1. -->
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -329,7 +328,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23315" toLevel="5" name="Paralysis Immunity Enhance">
-		<!-- Increases resistance to paralysis attacks by 100%. -->
+		<!-- Increases Paralysis Resistance by $s1. -->
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -345,7 +344,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23316" toLevel="5" name="Enhance Petrification Immunity">
-		<!-- Increases resistance to petrification attacks by 100%. -->
+		<!-- Increases Petrification Resistance by $s1. -->
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -361,7 +360,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23317" toLevel="5" name="Fear Immunity Enhance">
-		<!-- Increases resistance to fear attacks by 100%. -->
+		<!-- Increases Fear Resistance by $s1. -->
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -377,7 +376,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23318" toLevel="1" name="Cat the Ranger Boost">
-		<!-- "Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's resistance to debuff attacks by 80%, resistance to buff canceling attacks by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Reuse delay 10 minutes." -->
+		<!-- Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's Debuff Resistance by 80%, Buff-canceling Attack Resistance by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Cooldown 10 minutes. -->
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -398,7 +397,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23319" toLevel="1" name="Blood Seeker">
-		<!-- High Five Skill -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -438,7 +437,7 @@
 		</effects>
 	</skill>
 	<skill id="23320" toLevel="1" name="Greedy Throat">
-		<!-- High Five Skill -->
+		<!-- HP decreases from bleeding momentarily. -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -475,7 +474,7 @@
 		</effects>
 	</skill>
 	<skill id="23321" toLevel="1" name="Draconic Evolver">
-		<!-- High Five Skill -->
+		<!-- Afflicted with Fear and moving against own will. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -507,8 +506,7 @@
 		</effects>
 	</skill>
 	<skill id="23322" toLevel="10" name="Demonic Desire">
-		<!-- High Five Skill -->
-		<!-- This skill only has one level, 10. -->
+		<!-- P. Def. decreases momentarily. -->
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -540,8 +538,7 @@
 		</effects>
 	</skill>
 	<skill id="23323" toLevel="10" name="Fury of Darkness">
-		<!-- High Five Skill -->
-		<!-- This skill only has one level, 10. -->
+		<!-- State of momentarily decreased defense and immobility due to the Stun effect. -->
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -576,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="23324" toLevel="1" name="Jet Black Typhoon">
-		<!-- High Five Skill -->
+		<!-- Casting Spd. and Wind P. Atk. increases momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -762,7 +759,7 @@
 		</effects>
 	</skill>
 	<skill id="23333" toLevel="1" name="Agathion's New Year's Wish">
-		<!-- Description: Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
+		<!-- Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -788,7 +785,7 @@
 		</conditions>
 	</skill>
 	<skill id="23334" toLevel="1" name="Lantern Agathion Cute Trick">
-		<!-- Description: Able to see the summoned Lantern's perform cute tricks. -->
+		<!-- Able to see the summoned Lantern's perform cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -804,7 +801,7 @@
 		</conditions>
 	</skill>
 	<skill id="23335" toLevel="1" name="Agathion's New Year's Wish">
-		<!-- Description: Vitality is maintained with the power of Juju Agathion. -->
+		<!-- Energy is maintained and not consumed through the Juju Agathion's strength. -->
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -830,7 +827,7 @@
 		</conditions>
 	</skill>
 	<skill id="23336" toLevel="1" name="Juju Agathion Cute Trick">
-		<!-- Description: Summoned Juju performs cute tricks. -->
+		<!-- You can see the summoned Juju's cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -934,7 +931,6 @@
 		</effects>
 	</skill>
 	<skill id="23341" toLevel="1" name="Norhand's Flint">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Temporarily petrified by Norhand's powerful cry. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -962,7 +958,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23342" toLevel="2" name="Norhand's Trace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Norhand is searching for Skooldie. A trace of its voice remains. -->
 		<icon>BranchSys.icon.br_rotten_jack_ghost_i00</icon>
 		<operateType>A2</operateType>
@@ -991,8 +986,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23344" toLevel="5" name="Weakened Shilen's Breath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by 5 and HP recovery by 5%. Poison stage increases when killed while poisoned. -->
+		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by $s1 and HP Recovery Bonus by $s2. Poison stage increases when killed while poisoned. -->
 		<icon>icon.skill5076_c</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
@@ -1018,7 +1012,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23345" toLevel="1" name="Region Banishment">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1034,7 +1027,6 @@
 		</conditions>
 	</skill>
 	<skill id="23346" toLevel="7" name="Valakas Agathion Cute Trick">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can see the summoned Valakas' cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
@@ -1051,7 +1043,6 @@
 		</conditions>
 	</skill>
 	<skill id="23347" toLevel="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>T</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1065,7 +1056,6 @@
 		</conditions>
 	</skill>
 	<skill id="23348" toLevel="1" name="Transform Elpy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into a game Master. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1092,7 +1082,6 @@
 		</conditions>
 	</skill>
 	<skill id="23349" toLevel="1" name="Tree's Blessing - Stage 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases P. Atk. by 1% and M. Atk. by 2% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1111,7 +1100,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23350" toLevel="1" name="Tree's Blessing - Stage 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases P. Atk. by 2% and M. Atk. by 4% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1130,7 +1118,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23351" toLevel="1" name="Tree's Blessing - Stage 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases P. Atk. by 3% and M. Atk. by 6% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1149,7 +1136,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23352" toLevel="1" name="Tree's Blessing - Stage 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases P. Atk. by 4% and M. Atk. by 8% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1168,7 +1154,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23353" toLevel="1" name="Tree's Blessing - Stage 5">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases P. Atk. by 6% and M. Atk. by 12% with the tree's blessing. -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A2</operateType>
@@ -1187,7 +1172,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23354" toLevel="1" name="Lingering Tree's Blessing - Stage 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 1. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1208,7 +1192,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23355" toLevel="1" name="Lingering Tree's Blessing - Stage 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 2. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1229,7 +1212,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23356" toLevel="1" name="Lingering Tree's Blessing - Stage 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 3. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1250,7 +1232,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23357" toLevel="1" name="Lingering Tree's Blessing - Stage 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 4. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1271,7 +1252,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23358" toLevel="1" name="Lingering Tree's Blessing - Stage 5">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 5. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
@@ -1292,7 +1272,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23359" toLevel="1" name="Tree's Blessing - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1309,7 +1288,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23360" toLevel="1" name="Tree's Blessing - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1326,7 +1304,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23361" toLevel="1" name="Tree's Blessing - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1343,7 +1320,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23362" toLevel="1" name="Tree's Blessing - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1360,7 +1336,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23363" toLevel="1" name="Tree's Blessing - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1377,8 +1352,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23364" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 10 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<!-- For 10 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1394,8 +1368,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23365" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 15 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<!-- For 15 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1411,8 +1384,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23366" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 20 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<!-- For 20 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1428,8 +1400,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23367" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 25 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<!-- For 25 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1445,8 +1416,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23368" toLevel="1" name="Tree's Blessing - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 60 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
+		<!-- For 60 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP Recovery Bonus by 20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1462,7 +1432,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23369" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1479,7 +1448,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23370" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1496,7 +1464,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23371" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1513,7 +1480,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23372" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1530,7 +1496,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23373" toLevel="1" name="Tree's Blessing - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1547,7 +1512,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23374" toLevel="1" name="Tree's Blessing - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1564,7 +1528,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23375" toLevel="1" name="Tree's Blessing - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1581,7 +1544,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23376" toLevel="1" name="Tree's Blessing - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1598,7 +1560,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23377" toLevel="1" name="Tree's Blessing - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1615,7 +1576,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23378" toLevel="1" name="Tree's Blessing - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1632,7 +1592,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23379" toLevel="1" name="Elpy Master">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into a game Master. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1659,7 +1618,6 @@
 		</conditions>
 	</skill>
 	<skill id="23380" toLevel="1" name="Jermann - Soul Blackmail">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
@@ -1676,7 +1634,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23381" toLevel="3" name="Jermann - Flow of Destruction">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Magical damage on the enemy. -->
 		<icon>BranchSys3.Icon.g_skill23381</icon>
 		<operateType>A1</operateType>
@@ -1702,7 +1659,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23382" toLevel="1" name="Jermann - Swiftness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleport 300 grids forward. -->
 		<icon>BranchSys3.Icon.g_skill23382</icon>
 		<operateType>DA1</operateType>
@@ -1728,7 +1684,6 @@
 		</conditions>
 	</skill>
 	<skill id="23383" toLevel="1" name="Jermann - Shadow of Darkness">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon your mirror image and Hide. -->
 		<icon>BranchSys3.Icon.g_skill23383</icon>
 		<operateType>A1</operateType>
@@ -1744,8 +1699,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23384" toLevel="3" name="Jermann - Burning Darkness">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Quickly Recover 45000 HP. -->
+		<!-- Quickly Recover $s1 HP. -->
 		<icon>BranchSys3.Icon.g_skill23384</icon>
 		<operateType>A1</operateType>
 		<mpConsume>500</mpConsume>
@@ -1767,7 +1721,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23385" toLevel="3" name="Jermann - Devourer of Nature">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases HP Recovery Bonus. -->
 		<icon>BranchSys3.Icon.g_skill23385</icon>
 		<operateType>A2</operateType>
@@ -1795,7 +1748,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23386" toLevel="3" name="Jermann - Destruction Instinct">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful strike on nearby enemies. -->
 		<icon>BranchSys3.Icon.g_skill23386</icon>
 		<operateType>A1</operateType>
@@ -1818,7 +1770,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23387" toLevel="1" name="Jermann">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Jermann. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1845,7 +1796,6 @@
 		</conditions>
 	</skill>
 	<skill id="23388" toLevel="1" name="Jermann">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Jermann. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1872,7 +1822,6 @@
 		</conditions>
 	</skill>
 	<skill id="23389" toLevel="1" name="Jermann">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Jermann. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1899,7 +1848,6 @@
 		</conditions>
 	</skill>
 	<skill id="23390" toLevel="1" name="Mysterious Power of Ancient Kartia's Labyrinth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Accept this mysterious power to make it yours. Refuse, and you will suffer the consequences. -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A2</operateType>
@@ -1920,7 +1868,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23391" toLevel="1" name="Great Mysterious Power of Ancient Kartia's Labyrinth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Accept this great power to make it yours. Refuse, and you will suffer grave consequences. -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A2</operateType>
@@ -1941,7 +1888,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23392" toLevel="1" name="Stabilized Power of Ancient Kartia's Labyrinth">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Stabilize the Ancient Kartia's Labyrinth to consistently increase your HP. -->
 		<icon>BranchSys3.Icon.g_skill23380</icon>
 		<operateType>A2</operateType>
@@ -1961,8 +1907,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23393" toLevel="1" name="Self-destruction">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- DD + DOT -->
+		<!-- DD +DOT -->
 		<icon>icon.skill23393</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -1980,7 +1925,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23394" toLevel="1" name="Jermann - Grave of the Sword">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon the Grave of the Sword to the designated area. -->
 		<icon>BranchSys3.Icon.g_skill23387</icon>
 		<operateType>A1</operateType>
@@ -1999,7 +1943,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23395" toLevel="1" name="Jermann - Death' Calling">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can summon the Warriors of Death if the Grave of the Sword is nearby. -->
 		<icon>BranchSys3.Icon.g_skill23388</icon>
 		<operateType>A2</operateType>
@@ -2032,7 +1975,6 @@
 		</targetConditions>
 	</skill>
 	<skill id="23396" toLevel="1" name="Jermann - Freezing Cold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Freeze the ground at the designated area. Enemies on the ice will have momentarily decreased Speed and consistently decreasing HP. -->
 		<icon>BranchSys3.Icon.g_skill23389</icon>
 		<operateType>A1</operateType>
@@ -2052,7 +1994,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23397" toLevel="1" name="Jermann - Shard of Ice">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Drop an ice shard at the designated area. Additional damage if the enemy is inflicted with Freezing Cold. -->
 		<icon>BranchSys3.Icon.g_skill23390</icon>
 		<operateType>A1</operateType>
@@ -2072,7 +2013,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23398" toLevel="3" name="Grave of the Sword">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Consistently decreases HP. -->
 		<icon>BranchSys3.Icon.g_skill23387</icon>
 		<operateType>A2</operateType>
@@ -2099,7 +2039,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23399" toLevel="3" name="Freezing Cold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily decreases Speed and consistently decreases HP. -->
 		<icon>BranchSys3.Icon.g_skill23389</icon>
 		<operateType>A2</operateType>

@@ -572,7 +572,7 @@
 		</skills>
 	</item>
 	<item id="10632" name="Wondrous Cubic" type="EtcItem">
-		<!-- Double-click to create a cube fragment that can be exchanged for a weapon/armor enchant scroll. (Can only be used once per day.) -->
+		<!-- Double-click to create a cube fragment that can be exchanged for a weapon/ armor enchant scroll. (Can only be used once per day.) -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -733,7 +733,6 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10648" name="Inventory2" type="EtcItem">
-		<!-- Doesn't exist in client. -->
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1424,7 +1423,7 @@
 		</stats>
 	</item>
 	<item id="10678" name="Behemoth' Tuning Fork {PvP} - Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1501,7 +1500,7 @@
 		</stats>
 	</item>
 	<item id="10680" name="Naga Storm {PvP} - Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1692,7 +1691,7 @@
 		</stats>
 	</item>
 	<item id="10685" name="Shyeed's Bow {PvP} - Cheap Shot" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1732,7 +1731,7 @@
 		</stats>
 	</item>
 	<item id="10686" name="Shyeed's Bow {PvP} - Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1772,7 +1771,7 @@
 		</stats>
 	</item>
 	<item id="10687" name="Shyeed's Bow {PvP} - Quick Recovery" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

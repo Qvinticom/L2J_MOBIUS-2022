@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="16000" type="Weapon" name="Jade Claw {PvP} - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Chance to cancel a target's enhanced status by more than 1 or decreases shield P. Def during an attack. -->
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -20,7 +21,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3651-1;3652-1;3013-3" />
+		<set name="item_skill" val="3552-1;3651-1;3652-1;3013-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="532" />
 			<set stat="mAtk" val="192" />
@@ -32,6 +33,7 @@
 		</for>
 	</item>
 	<item id="16001" type="Weapon" name="Demitelum {PvP} - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. There is a chance to inflict additional damage when attacking. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -51,7 +53,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3601-10" />
+		<set name="item_skill" val="3552-1;3653-1;3601-10" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="437" />
 			<set stat="mAtk" val="192" />
@@ -63,6 +65,7 @@
 		</for>
 	</item>
 	<item id="16002" type="Weapon" name="Demitelum {PvP} - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -82,7 +85,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3013-4" />
+		<set name="item_skill" val="3552-1;3653-1;3013-4" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="437" />
 			<set stat="mAtk" val="192" />
@@ -94,6 +97,7 @@
 		</for>
 	</item>
 	<item id="16003" type="Weapon" name="Demitelum {PvP} - Guidance">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 8. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -113,7 +117,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3602-10" />
+		<set name="item_skill" val="3552-1;3653-1;3602-10" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="437" />
 			<set stat="mAtk" val="192" />
@@ -125,6 +129,7 @@
 		</for>
 	</item>
 	<item id="16004" type="Weapon" name="Sacredium {PvP} - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -145,7 +150,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-3" />
+		<set name="item_skill" val="3552-1;3654-1;3014-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="350" />
 			<set stat="mAtk" val="256" />
@@ -157,6 +162,7 @@
 		</for>
 	</item>
 	<item id="16005" type="Weapon" name="Sacredium {PvP} - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -177,7 +183,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-3" />
+		<set name="item_skill" val="3552-1;3654-1;3047-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="350" />
 			<set stat="mAtk" val="256" />
@@ -189,6 +195,7 @@
 		</for>
 	</item>
 	<item id="16006" type="Weapon" name="Sacredium {PvP} - MP Regeneration">
+		<!-- <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -209,7 +216,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3576-4" />
+		<set name="item_skill" val="3552-1;3654-1;3576-4" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="350" />
 			<set stat="mAtk" val="256" />
@@ -221,6 +228,7 @@
 		</for>
 	</item>
 	<item id="16007" type="Weapon" name="Cyclic Cane {PvP} - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Dryad Root is given a 20% chance when using a magic skill on the target. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -243,7 +251,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="3577-2" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="426" />
 			<set stat="mAtk" val="281" />
@@ -255,6 +263,7 @@
 		</for>
 	</item>
 	<item id="16008" type="Weapon" name="Cyclic Cane {PvP} - Empower">
+		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 177. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -275,7 +284,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3575-4" />
+		<set name="item_skill" val="3552-1;3654-1;3575-4" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="426" />
 			<set stat="mAtk" val="281" />
@@ -287,6 +296,7 @@
 		</for>
 	</item>
 	<item id="16009" type="Weapon" name="Cyclic Cane {PvP} - MP Regeneration">
+		<!-- <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -307,7 +317,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3576-4" />
+		<set name="item_skill" val="3552-1;3654-1;3576-4" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="426" />
 			<set stat="mAtk" val="281" />
@@ -319,6 +329,7 @@
 		</for>
 	</item>
 	<item id="16010" type="Weapon" name="Archangel Sword {PvP} - Magic Hold">
+		<!-- <Soul Crystal Enhancement>. Dryad Root is given a 20% chance when using a magic skill on the target. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -341,7 +352,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="3577-2" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="350" />
 			<set stat="mAtk" val="256" />
@@ -352,6 +363,7 @@
 		</for>
 	</item>
 	<item id="16011" type="Weapon" name="Archangel Sword {PvP} - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. Chance to increase Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -372,7 +384,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-3" />
+		<set name="item_skill" val="3552-1;3654-1;3014-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="350" />
 			<set stat="mAtk" val="256" />
@@ -383,6 +395,7 @@
 		</for>
 	</item>
 	<item id="16012" type="Weapon" name="Archangel Sword {PvP} - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -403,7 +416,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-3" />
+		<set name="item_skill" val="3552-1;3654-1;3047-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="350" />
 			<set stat="mAtk" val="256" />
@@ -414,6 +427,7 @@
 		</for>
 	</item>
 	<item id="16013" type="Weapon" name="Recurve Thorne Bow {PvP} - Critical Slow">
+		<!-- <Soul Crystal Enhancement>. Inflicts Slow with a 44% chance during a critical attack. Increases damage inflicted during PvP. Chance to increase Atk. Spd. of a bow/crossbow during an attack. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -436,7 +450,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="oncrit_skill" val="3574-3" />
-		<set name="item_skill" val="3552-3;3655-1" />
+		<set name="item_skill" val="3552-3;3655-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="794" />
 			<set stat="mAtk" val="192" />
@@ -448,6 +462,7 @@
 		</for>
 	</item>
 	<item id="16014" type="Weapon" name="Recurve Thorne Bow {PvP} - Cheap Shot">
+		<!-- <Soul Crystal Enhancement>. Decreases MP consumption to 1 with a 8% chance during a general attack. Chance to increase bow/crossbow attack speed during an attack. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -469,7 +484,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1;8312-2" />
+		<set name="item_skill" val="3552-3;3655-1;8312-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="794" />
 			<set stat="mAtk" val="192" />
@@ -481,6 +496,7 @@
 		</for>
 	</item>
 	<item id="16015" type="Weapon" name="Recurve Thorne Bow {PvP} - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 139. Increases damage inflicted during PvP. Chance to increase bow/crossbow attack speed during an attack. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -502,7 +518,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3655-1;3567-5;3552-1" />
+		<set name="item_skill" val="3655-1;3567-5;3552-1" /> <!-- PvP Weapon - Rapid Fire -->
 		<for>
 			<set stat="pAtk" val="794" />
 			<set stat="mAtk" val="192" />
@@ -514,6 +530,7 @@
 		</for>
 	</item>
 	<item id="16016" type="Weapon" name="Heavenstare Rapier {PvP} - Focus">
+		<!-- Kamael exclusive weapon Incessantcore Sword Conversion. <Soul Crystal Enhancement>. Increases Critical by 134. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. When enchanted to 4 or more, party members including yourself will get increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -534,7 +551,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;8289-3" />
+		<set name="item_skill" val="3552-1;3650-1;8289-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -549,6 +566,7 @@
 		</for>
 	</item>
 	<item id="16017" type="Weapon" name="Heavenstare Rapier {PvP} - Haste">
+		<!-- Kamael exclusive weapon Incessantcore Sword Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. When enchanted to 4 or more, party members including yourself will get increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -569,7 +587,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3564-3" />
+		<set name="item_skill" val="3552-1;3650-1;3564-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -584,6 +602,7 @@
 		</for>
 	</item>
 	<item id="16018" type="Weapon" name="Heavenstare Rapier {PvP} - Health">
+		<!-- Kamael exclusive weapon Incessantcore Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. When enchanted to 4 or more, party members including yourself will get increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -604,7 +623,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3013-3" />
+		<set name="item_skill" val="3552-1;3650-1;3013-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -619,6 +638,7 @@
 		</for>
 	</item>
 	<item id="16019" type="Weapon" name="Pyseal Blade {PvP} - Focus">
+		<!-- Kamael exclusive weapon Lavamond Saw Conversion. <Soul Crystal Enhancement>. Increases Critical by 134. Increases damage inflicted during PvP. Inflicts additional damage with a fixed rate when attacking. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -638,7 +658,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3566-5" />
+		<set name="item_skill" val="3552-1;3653-1;3566-5" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -653,6 +673,7 @@
 		</for>
 	</item>
 	<item id="16020" type="Weapon" name="Pyseal Blade {PvP} - Haste">
+		<!-- Kamael exclusive weapon Lavamond Saw Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Inflicts additional damage with a fixed rate when attacking. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -672,7 +693,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3564-3" />
+		<set name="item_skill" val="3552-1;3653-1;3564-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -687,6 +708,7 @@
 		</for>
 	</item>
 	<item id="16021" type="Weapon" name="Pyseal Blade {PvP} - Health">
+		<!-- Kamael exclusive weapon Lavamond Saw Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Inflicts additional damage with a fixed rate when attacking. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -706,7 +728,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3013-3" />
+		<set name="item_skill" val="3552-1;3653-1;3013-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -721,6 +743,7 @@
 		</for>
 	</item>
 	<item id="16022" type="Weapon" name="Thorne Crossbow {PvP} - Critical Slow">
+		<!-- Kamael exclusive weapon Recurvethorne Bow Conversion. <Soul Crystal Enhancement>. Inflicts Slow at a 24% rate during a critical attack. Increases damage inflicted during PvP. Increases bow/crossbow attack speed with a fixed rate when attacking. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -742,7 +765,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="oncrit_skill" val="3574-3" />
-		<set name="item_skill" val="3552-3;3655-1" />
+		<set name="item_skill" val="3552-3;3655-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -757,6 +780,7 @@
 		</for>
 	</item>
 	<item id="16023" type="Weapon" name="Thorne Crossbow {PvP} - Cheap Shot">
+		<!-- Kamael exclusive weapon Recurvethorne Bow Conversion. <Soul Crystal Enhancement>. During a general attack, decreases MP consumption to 1 at a 12% rate. Increases bow/crossbow attack speed with a fixed rate when attacking. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -777,7 +801,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1;3360-1" />
+		<set name="item_skill" val="3552-3;3655-1;3360-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -792,6 +816,7 @@
 		</for>
 	</item>
 	<item id="16024" type="Weapon" name="Thorne Crossbow {PvP} - Focus">
+		<!-- Kamael exclusive weapon Recurvethorne Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 139. Increases damage inflicted during PvP. Increases bow/crossbow attack speed with a fixed rate when attacking. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -812,7 +837,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;8289-3" />
+		<set name="item_skill" val="3552-1;3655-1;8289-3" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -827,6 +852,7 @@
 		</for>
 	</item>
 	<item id="16025" type="Armor" name="Necklace of Freya">
+		<!-- Resistance to Water +10, Resistance to Bleed +20%, Resistance to Paralysis/Shock/Sleep +15%, magic skill reuse delay -5%. . Reflect 4% short-range attack damage, Max MP +50, MP Regeneration +0.23, Resistance to mental attacks +10%. -->
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -837,7 +863,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="15192000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8459-1" />
+		<set name="item_skill" val="8459-1" /> <!-- Necklace of Freya -->
 		<for>
 			<add order="0" stat="mDef" val="125" />
 			<add stat="maxMp" val="50" />
@@ -845,6 +871,7 @@
 		</for>
 	</item>
 	<item id="16026" type="Armor" name="Blessed Necklace of Freya">
+		<!-- Resistance to Water +15, Resistance to Bleed+25%, Resistance to Paralysis/Shock/Sleep +20%, magic skill reuse delay -5%. . Reflect 4% short-range attack damage, Max MP +50, MP Regeneration +0.46, Resistance to mental attack +10%, caster heal capacity +15.6, MEN +2, CON +1, STR -1, magic MP consumption -5%. -->
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -855,7 +882,7 @@
 		<set name="weight" val="150" />
 		<set name="price" val="15192000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="8460-1" />
+		<set name="item_skill" val="8460-1" /> <!-- Blessed Necklace of Freya -->
 		<for>
 			<add order="0" stat="mDef" val="132" />
 			<add stat="maxMp" val="50" />
@@ -863,6 +890,7 @@
 		</for>
 	</item>
 	<item id="16027" type="EtcItem" name="Bottle of Freya's Soul">
+		<!-- A bottle containing a little bit of Freya's Soul. Find and speak to Rafforty to find out the purpose behind this little item. -->
 		<set name="icon" val="icon.etc_recovery_set_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -873,6 +901,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="16028" type="EtcItem" name="Vesper Cutter of Chaos">
+		<!-- A rare Vesper Cutter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -895,6 +924,7 @@
 		</for>
 	</item>
 	<item id="16029" type="EtcItem" name="Vesper Slasher of Chaos">
+		<!-- A rare Vesper Slasher that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -917,6 +947,7 @@
 		</for>
 	</item>
 	<item id="16030" type="EtcItem" name="Vesper Buster of Chaos">
+		<!-- A rare Vesper Buster that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -939,6 +970,7 @@
 		</for>
 	</item>
 	<item id="16031" type="EtcItem" name="Vesper Shaper of Chaos">
+		<!-- A rare Vesper Shaper that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -961,6 +993,7 @@
 		</for>
 	</item>
 	<item id="16032" type="EtcItem" name="Vesper Fighter of Chaos">
+		<!-- A rare Vesper Fighter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -983,6 +1016,7 @@
 		</for>
 	</item>
 	<item id="16033" type="EtcItem" name="Vesper Stormer of Chaos">
+		<!-- A rare Vesper Stormer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1005,6 +1039,7 @@
 		</for>
 	</item>
 	<item id="16034" type="EtcItem" name="Vesper Avenger of Chaos">
+		<!-- A rare Vesper Avenger that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1027,6 +1062,7 @@
 		</for>
 	</item>
 	<item id="16035" type="EtcItem" name="Vesper Retributer of Chaos">
+		<!-- A rare Vesper Retributer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1049,6 +1085,7 @@
 		</for>
 	</item>
 	<item id="16036" type="EtcItem" name="Vesper Caster of Chaos">
+		<!-- A rare Vesper Caster that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1071,6 +1108,7 @@
 		</for>
 	</item>
 	<item id="16037" type="EtcItem" name="Vesper Singer of Chaos">
+		<!-- A rare Vesper Singer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1093,6 +1131,7 @@
 		</for>
 	</item>
 	<item id="16038" type="EtcItem" name="Vesper Thrower of Chaos">
+		<!-- A rare Vesper Thrower that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1115,6 +1154,7 @@
 		</for>
 	</item>
 	<item id="16039" type="EtcItem" name="Vesper Pincer of Chaos">
+		<!-- A rare Vesper Pincer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1137,6 +1177,7 @@
 		</for>
 	</item>
 	<item id="16040" type="EtcItem" name="Vesper Shooter of Chaos">
+		<!-- A rare Vesper Shooter that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1159,6 +1200,7 @@
 		</for>
 	</item>
 	<item id="16041" type="EtcItem" name="Vesper Nagan of Chaos">
+		<!-- A rare Vesper Nagan that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="random_damage" val="15" />
@@ -1181,6 +1223,7 @@
 		</for>
 	</item>
 	<item id="16042" type="Weapon" name="Vesper Cutter - Thunder">
+		<!-- Masterwork Item that increases Critical Rate. It can bestow one of the following functions: Haste, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1199,7 +1242,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3828-1" />
+		<set name="item_skill" val="3828-1" /> <!-- Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1210,6 +1253,7 @@
 		</for>
 	</item>
 	<item id="16043" type="Weapon" name="Vesper Slasher - Gale">
+		<!-- Masterwork Item that increases Atk. Spd. It can bestow one of the following three functions, Haste, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1228,7 +1272,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3840-2" />
+		<set name="item_skill" val="3840-2" /> <!-- Two-handed Sword of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1239,6 +1283,7 @@
 		</for>
 	</item>
 	<item id="16044" type="Weapon" name="Vesper Buster - Cleverness">
+		<!-- Masterwork Item that increases MP regeneration. It can bestow one of the following functions: Acumen, Mana Up, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1257,7 +1302,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2" />
+		<set name="item_skill" val="3853-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -1268,6 +1313,7 @@
 		</for>
 	</item>
 	<item id="16045" type="Weapon" name="Vesper Shaper - Gale">
+		<!-- Masterwork Item that increases Atk. Spd. It can bestow one of the following functions: Critical Damage, HP Drain, or Haste. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1285,7 +1331,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3859-2" />
+		<set name="item_skill" val="3859-2" /> <!-- Dagger of Haste -->
 		<for>
 			<set stat="pAtk" val="346" />
 			<set stat="mAtk" val="176" />
@@ -1297,6 +1343,7 @@
 		</for>
 	</item>
 	<item id="16046" type="Weapon" name="Vesper Fighter - Gale">
+		<!-- Masterwork Item that increases Atk. Spd. It can bestow one of the following functions: Focus, Health, or Critical Stun. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1314,7 +1361,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3880-2" />
+		<set name="item_skill" val="3880-2" /> <!-- Fist Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1326,6 +1373,7 @@
 		</for>
 	</item>
 	<item id="16047" type="Weapon" name="Vesper Stormer - Thunder">
+		<!-- Masterwork Item that increases Critical Rate. It can bestow one of the following functions: Health, Guidance, or Haste. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1343,7 +1391,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3874-1;3599-1" />
+		<set name="item_skill" val="3874-1;3599-1" /> <!-- Polearm of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1355,6 +1403,7 @@
 		</for>
 	</item>
 	<item id="16048" type="Weapon" name="Vesper Avenger - Landslide">
+		<!-- Masterwork Item that has a chance to inflict stun during an attack. It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1372,7 +1421,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3885-2" />
+		<set name="item_skill" val="3885-2" /> <!-- Blunt Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1384,6 +1433,7 @@
 		</for>
 	</item>
 	<item id="16049" type="Weapon" name="Vesper Retributer - Gale">
+		<!-- Masterwork Item that increases Atk. Spd. It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1401,7 +1451,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3896-2" />
+		<set name="item_skill" val="3896-2" /> <!-- Two-handed Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1413,6 +1463,7 @@
 		</for>
 	</item>
 	<item id="16050" type="Weapon" name="Vesper Caster - Cleverness">
+		<!-- Masterwork Item that increases MP Regeneration. It can bestow one of the following functions: Acumen, MP Regeneration, or Mana Up. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1431,7 +1482,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2" />
+		<set name="item_skill" val="3853-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -1443,6 +1494,7 @@
 		</for>
 	</item>
 	<item id="16051" type="Weapon" name="Vesper Singer - Hail">
+		<!-- Masterwork Item that increases M. Atk. It can bestow one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1461,7 +1513,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3899-3" />
+		<set name="item_skill" val="3899-3" /> <!-- Staff of Empower -->
 		<for>
 			<set stat="pAtk" val="386" />
 			<set stat="mAtk" val="257" />
@@ -1473,6 +1525,7 @@
 		</for>
 	</item>
 	<item id="16052" type="Weapon" name="Vesper Thrower - Clairvoyance">
+		<!-- Masterwork Item that increases range. It can bestow one of the following three functions, Cheap Shot, Critical Slow, or Focus. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1493,7 +1546,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3865-1" />
+		<set name="item_skill" val="3865-1" /> <!-- Bow of Long Shot -->
 		<for>
 			<set stat="pAtk" val="724" />
 			<set stat="mAtk" val="176" />
@@ -1505,6 +1558,7 @@
 		</for>
 	</item>
 	<item id="16053" type="Weapon" name="Vesper Pincer - Thunder">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1524,7 +1578,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3833-1" />
+		<set name="item_skill" val="3833-1" /> <!-- Rapier of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1539,6 +1593,7 @@
 		</for>
 	</item>
 	<item id="16054" type="Weapon" name="Vesper Shooter - Clairvoyance">
+		<!-- Masterwork Item that increases range. Kamael Exclusive Weapon: Vesper Thrower Conversion. Cheap Shot, Critical Slow, or Focus can be bestowed. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1558,7 +1613,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3870-1" />
+		<set name="item_skill" val="3870-1" /> <!-- Crossbow of Long Shot -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1573,6 +1628,7 @@
 		</for>
 	</item>
 	<item id="16055" type="Weapon" name="Vesper Nagan - Gale">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Vesper Slasher Conversion. Haste, Focus, or Health can be bestowed. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1591,7 +1647,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3846-2" />
+		<set name="item_skill" val="3846-2" /> <!-- Ancient Sword of Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1606,6 +1662,7 @@
 		</for>
 	</item>
 	<item id="16056" type="Weapon" name="Vesper Cutter - Thunder - Haste">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1624,7 +1681,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3828-1;3564-3" />
+		<set name="item_skill" val="3828-1;3564-3" /> <!-- Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1635,6 +1692,7 @@
 		</for>
 	</item>
 	<item id="16057" type="Weapon" name="Vesper Cutter - Thunder - Health">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1653,7 +1711,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3828-1;3013-3" />
+		<set name="item_skill" val="3828-1;3013-3" /> <!-- Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1664,6 +1722,7 @@
 		</for>
 	</item>
 	<item id="16058" type="Weapon" name="Vesper Cutter - Thunder - Focus">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1682,7 +1741,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3828-1;3566-3" />
+		<set name="item_skill" val="3828-1;3566-3" /> <!-- Sword of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -1693,6 +1752,7 @@
 		</for>
 	</item>
 	<item id="16059" type="Weapon" name="Vesper Slasher - Gale - Haste">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1711,7 +1771,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3840-2;3564-3" />
+		<set name="item_skill" val="3840-2;3564-3" /> <!-- Two-handed Sword of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1722,6 +1782,7 @@
 		</for>
 	</item>
 	<item id="16060" type="Weapon" name="Vesper Slasher - Gale - Health">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1740,7 +1801,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3840-2;3013-3" />
+		<set name="item_skill" val="3840-2;3013-3" /> <!-- Two-handed Sword of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1751,6 +1812,7 @@
 		</for>
 	</item>
 	<item id="16061" type="Weapon" name="Vesper Slasher - Gale - Focus">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1769,7 +1831,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3840-2;3566-3" />
+		<set name="item_skill" val="3840-2;3566-3" /> <!-- Two-handed Sword of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1780,6 +1842,7 @@
 		</for>
 	</item>
 	<item id="16062" type="Weapon" name="Vesper Buster - Cleverness - Mana Up">
+		<!-- Masterwork Item that increases MP Regen. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1798,7 +1861,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2;3014-2" />
+		<set name="item_skill" val="3853-2;3014-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -1809,6 +1872,7 @@
 		</for>
 	</item>
 	<item id="16063" type="Weapon" name="Vesper Buster - Cleverness - Acumen">
+		<!-- Masterwork Item that increases MP recovery. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1827,7 +1891,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2;3047-2" />
+		<set name="item_skill" val="3853-2;3047-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -1838,6 +1902,7 @@
 		</for>
 	</item>
 	<item id="16064" type="Weapon" name="Vesper Buster - Cleverness - Magic Hold">
+		<!-- Masterwork Item that increases MP Recovery. <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1858,7 +1923,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="3577-2" />
-		<set name="item_skill" val="3853-2;3552-1" />
+		<set name="item_skill" val="3853-2;3552-1" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -1869,6 +1934,7 @@
 		</for>
 	</item>
 	<item id="16065" type="Weapon" name="Vesper Shaper - Gale - Critical Damage">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases P. Atk. by 906 during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1886,7 +1952,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3859-2;3572-2" />
+		<set name="item_skill" val="3859-2;3572-2" /> <!-- Dagger of Haste -->
 		<for>
 			<set stat="pAtk" val="346" />
 			<set stat="mAtk" val="176" />
@@ -1898,6 +1964,7 @@
 		</for>
 	</item>
 	<item id="16066" type="Weapon" name="Vesper Shaper - Gale - HP Drain">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. HP recovers by 4% of the damage inflicted on the enemy during a short-range ordinary physical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1915,7 +1982,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3859-2;3568-2" />
+		<set name="item_skill" val="3859-2;3568-2" /> <!-- Dagger of Haste -->
 		<for>
 			<set stat="pAtk" val="346" />
 			<set stat="mAtk" val="176" />
@@ -1927,6 +1994,7 @@
 		</for>
 	</item>
 	<item id="16067" type="Weapon" name="Vesper Shaper - Gale - Haste">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1944,7 +2012,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3859-2;3564-3" />
+		<set name="item_skill" val="3859-2;3564-3" /> <!-- Dagger of Haste -->
 		<for>
 			<set stat="pAtk" val="346" />
 			<set stat="mAtk" val="176" />
@@ -1956,6 +2024,7 @@
 		</for>
 	</item>
 	<item id="16068" type="Weapon" name="Vesper Fighter - Gale - Focus">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 123. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1973,7 +2042,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3880-2;3565-3" />
+		<set name="item_skill" val="3880-2;3565-3" /> <!-- Fist Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -1985,6 +2054,7 @@
 		</for>
 	</item>
 	<item id="16069" type="Weapon" name="Vesper Fighter - Gale - Health">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2002,7 +2072,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3880-2;3013-3" />
+		<set name="item_skill" val="3880-2;3013-3" /> <!-- Fist Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -2014,6 +2084,7 @@
 		</for>
 	</item>
 	<item id="16070" type="Weapon" name="Vesper Fighter - Gale - Critical Stun">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Inflicts Stun with a 43% chance during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2033,7 +2104,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="43" />
 		<set name="oncrit_skill" val="3571-2" />
-		<set name="item_skill" val="3880-2;3552-1" />
+		<set name="item_skill" val="3880-2;3552-1" /> <!-- Fist Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -2045,6 +2116,7 @@
 		</for>
 	</item>
 	<item id="16071" type="Weapon" name="Vesper Stormer - Thunder - Health">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2062,7 +2134,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3874-1;3013-4" />
+		<set name="item_skill" val="3874-1;3013-4" /> <!-- Polearm of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -2074,6 +2146,7 @@
 		</for>
 	</item>
 	<item id="16072" type="Weapon" name="Vesper Stormer - Thunder - Guidance">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Accuracy by 7.5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2091,7 +2164,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3874-1;3602-10" />
+		<set name="item_skill" val="3874-1;3602-10" /> <!-- Polearm of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -2103,6 +2176,7 @@
 		</for>
 	</item>
 	<item id="16073" type="Weapon" name="Vesper Stormer - Thunder - Haste">
+		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2120,7 +2194,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3874-1;3601-10" />
+		<set name="item_skill" val="3874-1;3601-10" /> <!-- Polearm of Critical Chance -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -2132,6 +2206,7 @@
 		</for>
 	</item>
 	<item id="16074" type="Weapon" name="Vesper Avenger - Landslide - HP Drain">
+		<!-- Masterwork Item that has a chance to inflict stun during an attack. <Soul Crystal Enhancement>. HP recovers by 4% of the damage inflicted on the enemy during a short-range ordinary physical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2149,7 +2224,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3885-2;3568-2" />
+		<set name="item_skill" val="3885-2;3568-2" /> <!-- Blunt Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -2161,6 +2236,7 @@
 		</for>
 	</item>
 	<item id="16075" type="Weapon" name="Vesper Avenger - Landslide - Health">
+		<!-- Masterwork Item that has a chance to inflict stun during an attack. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2178,7 +2254,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3885-2;3013-3" />
+		<set name="item_skill" val="3885-2;3013-3" /> <!-- Blunt Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -2190,6 +2266,7 @@
 		</for>
 	</item>
 	<item id="16076" type="Weapon" name="Vesper Avenger - Landslide - HP Regeneration">
+		<!-- Masterwork Item that has a chance to inflict stun during an attack. <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2207,7 +2284,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3885-2;3569-2" />
+		<set name="item_skill" val="3885-2;3569-2" /> <!-- Blunt Weapon of Stun -->
 		<for>
 			<set stat="pAtk" val="396" />
 			<set stat="mAtk" val="176" />
@@ -2219,6 +2296,7 @@
 		</for>
 	</item>
 	<item id="16077" type="Weapon" name="Vesper Retributer - Gale - HP Regeneration">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. HP's recovery rate increases. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2236,7 +2314,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3896-2;3569-2" />
+		<set name="item_skill" val="3896-2;3569-2" /> <!-- Two-handed Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -2248,6 +2326,7 @@
 		</for>
 	</item>
 	<item id="16078" type="Weapon" name="Vesper Retributer - Gale - Health">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2265,7 +2344,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3896-2;3013-3" />
+		<set name="item_skill" val="3896-2;3013-3" /> <!-- Two-handed Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -2277,6 +2356,7 @@
 		</for>
 	</item>
 	<item id="16079" type="Weapon" name="Vesper Retributer - Gale - HP Drain">
+		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. HP recovers by 4% of the damage inflicted on the enemy during a short-range ordinary physical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2294,7 +2374,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3896-2;3568-2" />
+		<set name="item_skill" val="3896-2;3568-2" /> <!-- Two-handed Blunt Weapon of Haste -->
 		<for>
 			<set stat="pAtk" val="482" />
 			<set stat="mAtk" val="176" />
@@ -2306,6 +2386,7 @@
 		</for>
 	</item>
 	<item id="16080" type="Weapon" name="Vesper Caster - Cleverness - Acumen">
+		<!-- Masterwork Item that increases MP Regen. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2324,7 +2405,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2;3047-2" />
+		<set name="item_skill" val="3853-2;3047-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -2336,6 +2417,7 @@
 		</for>
 	</item>
 	<item id="16081" type="Weapon" name="Vesper Caster - Cleverness - MP Regeneration">
+		<!-- Masterwork Item that increases MP Regen. <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2354,7 +2436,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2;3576-2" />
+		<set name="item_skill" val="3853-2;3576-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -2366,6 +2448,7 @@
 		</for>
 	</item>
 	<item id="16082" type="Weapon" name="Vesper Caster - Cleverness - Mana Up">
+		<!-- Masterwork Item that increases MP Regen. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2384,7 +2467,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3853-2;3014-2" />
+		<set name="item_skill" val="3853-2;3014-2" /> <!-- Sword of Mana Regeneration -->
 		<for>
 			<set stat="pAtk" val="317" />
 			<set stat="mAtk" val="234" />
@@ -2396,6 +2479,7 @@
 		</for>
 	</item>
 	<item id="16083" type="Weapon" name="Vesper Singer - Hail - Empower">
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases M. Atk. by 151. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2414,7 +2498,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3899-3;3575-2" />
+		<set name="item_skill" val="3899-3;3575-2" /> <!-- Staff of Empower -->
 		<for>
 			<set stat="pAtk" val="386" />
 			<set stat="mAtk" val="257" />
@@ -2426,6 +2510,7 @@
 		</for>
 	</item>
 	<item id="16084" type="Weapon" name="Vesper Singer - Hail - MP Regeneration">
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2444,7 +2529,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3899-3;3576-2" />
+		<set name="item_skill" val="3899-3;3576-2" /> <!-- Staff of Empower -->
 		<for>
 			<set stat="pAtk" val="386" />
 			<set stat="mAtk" val="257" />
@@ -2456,6 +2541,7 @@
 		</for>
 	</item>
 	<item id="16085" type="Weapon" name="Vesper Singer - Hail - Magic Hold">
+		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2476,7 +2562,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="onmagic_chance" val="20" />
 		<set name="onmagic_skill" val="3577-2" />
-		<set name="item_skill" val="3899-3;3552-1" />
+		<set name="item_skill" val="3899-3;3552-1" /> <!-- Staff of Empower -->
 		<for>
 			<set stat="pAtk" val="386" />
 			<set stat="mAtk" val="257" />
@@ -2488,6 +2574,7 @@
 		</for>
 	</item>
 	<item id="16086" type="Weapon" name="Vesper Thrower - Clairvoyance - Cheap Shot">
+		<!-- Masterwork Item that increases the range. <Soul Crystal Enhancement>. MP consumption decreases by 8% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2508,7 +2595,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3865-1;3552-1;8312-2" />
+		<set name="item_skill" val="3865-1;3552-1;8312-2" /> <!-- Bow of Long Shot -->
 		<for>
 			<set stat="pAtk" val="724" />
 			<set stat="mAtk" val="176" />
@@ -2520,6 +2607,7 @@
 		</for>
 	</item>
 	<item id="16087" type="Weapon" name="Vesper Thrower - Clairvoyance - Focus">
+		<!-- Masterwork Item that increases long-range effect. <Soul Crystal Enhancement>. Increases Critical by 133. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2540,7 +2628,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
-		<set name="item_skill" val="3865-1;3567-3" />
+		<set name="item_skill" val="3865-1;3567-3" /> <!-- Bow of Long Shot -->
 		<for>
 			<set stat="pAtk" val="724" />
 			<set stat="mAtk" val="176" />
@@ -2552,6 +2640,7 @@
 		</for>
 	</item>
 	<item id="16088" type="Weapon" name="Vesper Thrower - Clairvoyance - Critical Slow">
+		<!-- Masterwork Item that increases long-range effect. <Soul Crystal Enhancement>. Inflicts slow with 33% chance during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2574,7 +2663,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="oncrit_chance" val="33" />
 		<set name="oncrit_skill" val="3574-3" />
-		<set name="item_skill" val="3865-1;3552-1" />
+		<set name="item_skill" val="3865-1;3552-1" /> <!-- Bow of Long Shot -->
 		<for>
 			<set stat="pAtk" val="724" />
 			<set stat="mAtk" val="176" />
@@ -2586,6 +2675,7 @@
 		</for>
 	</item>
 	<item id="16089" type="Weapon" name="Vesper Pincer - Thunder - Haste">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Vesper Cutter Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2605,7 +2695,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3833-1;3564-3" />
+		<set name="item_skill" val="3833-1;3564-3" /> <!-- Rapier of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2620,6 +2710,7 @@
 		</for>
 	</item>
 	<item id="16090" type="Weapon" name="Vesper Pincer - Thunder - Health">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Vesper Cutter Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2639,7 +2730,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3833-1;3013-3" />
+		<set name="item_skill" val="3833-1;3013-3" /> <!-- Rapier of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2654,6 +2745,7 @@
 		</for>
 	</item>
 	<item id="16091" type="Weapon" name="Vesper Pincer - Thunder - Focus">
+		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Vesper Cutter Conversion. <Soul Crystal Enhancement>. Increases Critical by 131. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2673,7 +2765,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="enchant4_skill" val="3426-1" />
-		<set name="item_skill" val="3833-1;8289-1" />
+		<set name="item_skill" val="3833-1;8289-1" /> <!-- Rapier of Critical Chance -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2688,6 +2780,7 @@
 		</for>
 	</item>
 	<item id="16092" type="Weapon" name="Vesper Shooter - Clairvoyance - Cheap Shot">
+		<!-- Masterwork Item that increases range. Kamael Exclusive Weapon: Vesper Thrower Conversion. <Soul Crystal Enhancement>. MP consumption decreases by 12% during skill use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2707,7 +2800,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3870-1;3552-1;3360-1" />
+		<set name="item_skill" val="3870-1;3552-1;3360-1" /> <!-- Crossbow of Long Shot -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2722,6 +2815,7 @@
 		</for>
 	</item>
 	<item id="16093" type="Weapon" name="Vesper Shooter - Clairvoyance - Focus">
+		<!-- Masterwork Item than increases range. Kamael exclusive weapon: Vesper Thrower Conversion. <Soul Crystal Enhancement>. Increases Critical by 133. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2741,7 +2835,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="400" />
-		<set name="item_skill" val="3870-1;8289-1" />
+		<set name="item_skill" val="3870-1;8289-1" /> <!-- Crossbow of Long Shot -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2756,6 +2850,7 @@
 		</for>
 	</item>
 	<item id="16094" type="Weapon" name="Vesper Shooter - Clairvoyance - Critical Slow">
+		<!-- Masterwork Item that increases range. Kamael Exclusive Weapon: Vesper Thrower Conversion. <Soul Crystal Enhancement>. Casts Slow at a 24% rate during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2777,7 +2872,7 @@
 		<set name="reuse_delay" val="400" />
 		<set name="oncrit_chance" val="24" />
 		<set name="oncrit_skill" val="3574-2" />
-		<set name="item_skill" val="3870-1;3552-1" />
+		<set name="item_skill" val="3870-1;3552-1" /> <!-- Crossbow of Long Shot -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2792,6 +2887,7 @@
 		</for>
 	</item>
 	<item id="16095" type="Weapon" name="Vesper Nagan - Gale - Haste">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Vesper Slasher Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2810,7 +2906,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3846-2;3564-3" />
+		<set name="item_skill" val="3846-2;3564-3" /> <!-- Ancient Sword of Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2825,6 +2921,7 @@
 		</for>
 	</item>
 	<item id="16096" type="Weapon" name="Vesper Nagan - Gale - Health">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Vesper Slasher Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2843,7 +2940,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3846-2;3013-3" />
+		<set name="item_skill" val="3846-2;3013-3" /> <!-- Ancient Sword of Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2858,6 +2955,7 @@
 		</for>
 	</item>
 	<item id="16097" type="Weapon" name="Vesper Nagan - Gale - Focus">
+		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Vesper Slasher Conversion. <Soul Crystal Enhancement>. Increases Critical by 131. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2876,7 +2974,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3846-2;3566-3" />
+		<set name="item_skill" val="3846-2;3566-3" /> <!-- Ancient Sword of Haste -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2891,6 +2989,7 @@
 		</for>
 	</item>
 	<item id="16098" type="Armor" name="Refined Black Skeleton Circlet">
+		<!-- Refined Black Skeleton Circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_animal_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2900,6 +2999,7 @@
 		<set name="price" val="6000000" />
 	</item>
 	<item id="16099" type="Armor" name="Refined Orange Skeleton Circlet">
+		<!-- Refined Orange Skeleton Circlet. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_animal_feather_skeleton_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

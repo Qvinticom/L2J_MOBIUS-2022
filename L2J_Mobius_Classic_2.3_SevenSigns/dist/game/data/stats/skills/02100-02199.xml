@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2100" toLevel="1" name="Escape (1-second)">
-		<!-- Confirmed CT2.5 -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>1000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -21,7 +20,7 @@
 		</effects>
 	</skill>
 	<skill id="2103" toLevel="1" name="Mysterious Potion">
-		<!-- Confirmed CT2.5 -->
+		<!-- The target's head is enlarged. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -44,7 +43,6 @@
 		</conditions>
 	</skill>
 	<skill id="2104" toLevel="1" name="Greater Soulshot Compressed Package (No-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -67,7 +65,6 @@
 		</effects>
 	</skill>
 	<skill id="2105" toLevel="1" name="Greater Soulshot Compressed Package (D-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -90,7 +87,6 @@
 		</effects>
 	</skill>
 	<skill id="2106" toLevel="1" name="Greater Soulshot Compressed Package (C-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -113,7 +109,6 @@
 		</effects>
 	</skill>
 	<skill id="2107" toLevel="1" name="Greater Soulshot Compressed Package (B-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -136,7 +131,6 @@
 		</effects>
 	</skill>
 	<skill id="2108" toLevel="1" name="Greater Soulshot Compressed Package (A-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -159,7 +153,6 @@
 		</effects>
 	</skill>
 	<skill id="2110" toLevel="1" name="Greater Spiritshot Compressed Package (No-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -182,7 +175,6 @@
 		</effects>
 	</skill>
 	<skill id="2111" toLevel="1" name="Greater Spiritshot Compressed Package (D-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -205,7 +197,6 @@
 		</effects>
 	</skill>
 	<skill id="2112" toLevel="1" name="Greater Spiritshot Compressed Package (C-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -228,7 +219,6 @@
 		</effects>
 	</skill>
 	<skill id="2113" toLevel="1" name="Greater Spiritshot Compressed Package (B-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -251,7 +241,6 @@
 		</effects>
 	</skill>
 	<skill id="2114" toLevel="1" name="Greater Spiritshot Compressed Package (A-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -274,7 +263,6 @@
 		</effects>
 	</skill>
 	<skill id="2116" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -297,7 +285,6 @@
 		</effects>
 	</skill>
 	<skill id="2117" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -320,7 +307,6 @@
 		</effects>
 	</skill>
 	<skill id="2118" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -343,7 +329,6 @@
 		</effects>
 	</skill>
 	<skill id="2119" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -366,7 +351,6 @@
 		</effects>
 	</skill>
 	<skill id="2120" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -389,7 +373,6 @@
 		</effects>
 	</skill>
 	<skill id="2122" toLevel="1" name="Facelifting Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -406,7 +389,6 @@
 		</effects>
 	</skill>
 	<skill id="2123" toLevel="1" name="Facelifting Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -425,7 +407,6 @@
 		</effects>
 	</skill>
 	<skill id="2124" toLevel="1" name="Facelifting Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -444,7 +425,6 @@
 		</effects>
 	</skill>
 	<skill id="2125" toLevel="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -461,7 +441,6 @@
 		</effects>
 	</skill>
 	<skill id="2126" toLevel="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -480,7 +459,6 @@
 		</effects>
 	</skill>
 	<skill id="2127" toLevel="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -499,7 +477,6 @@
 		</effects>
 	</skill>
 	<skill id="2128" toLevel="1" name="Dye Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -518,7 +495,6 @@
 		</effects>
 	</skill>
 	<skill id="2129" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -535,7 +511,6 @@
 		</effects>
 	</skill>
 	<skill id="2130" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -554,7 +529,6 @@
 		</effects>
 	</skill>
 	<skill id="2131" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -573,7 +547,6 @@
 		</effects>
 	</skill>
 	<skill id="2132" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -592,7 +565,6 @@
 		</effects>
 	</skill>
 	<skill id="2133" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -611,7 +583,6 @@
 		</effects>
 	</skill>
 	<skill id="2134" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -635,7 +606,6 @@
 		</effects>
 	</skill>
 	<skill id="2135" toLevel="1" name="Hair Style Change Potion">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -659,7 +629,6 @@
 		</effects>
 	</skill>
 	<skill id="2136" toLevel="1" name="Rice Cake">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -898,7 +867,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2165" toLevel="1" name="Momentum Stone">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -933,7 +901,6 @@
 		</effects>
 	</skill>
 	<skill id="2167" toLevel="4" name="SP Scroll">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -963,6 +930,7 @@
 		</effects>
 	</skill>
 	<skill id="2168" toLevel="6" name="Lucky Charm">
+		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/ Raid Monsters. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1025,7 +993,7 @@
 		</effects>
 	</skill>
 	<skill id="2169" toLevel="2" name="Magic Haste Potion">
-		<!-- Lvl 2 is Greater Magic Haste Potion -->
+		<!-- Increases Casting Spd. Effect 2. -->
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1080,7 +1048,6 @@
 		</effects>
 	</skill>
 	<skill id="2171" toLevel="1" name="Spellbook Paper">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1099,26 +1066,25 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="5917" count="1" />
+						<item id="5917" count="1" /> <!-- Kranvel's Spellbook: Chapter of Fire -->
 					</item>
 					<item chance="10">
-						<item id="5918" count="1" />
+						<item id="5918" count="1" /> <!-- Kranvel's Spellbook: Chapter of Water -->
 					</item>
 					<item chance="10">
-						<item id="5919" count="1" />
+						<item id="5919" count="1" /> <!-- Kranvel's Spellbook: Chapter of Wind -->
 					</item>
 					<item chance="10">
-						<item id="5920" count="1" />
+						<item id="5920" count="1" /> <!-- Kranvel's Spellbook: Chapter of Earth -->
 					</item>
 					<item chance="60">
-						<item id="736" count="1" />
+						<item id="736" count="1" /> <!-- Scroll of Escape -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2172" toLevel="1" name="Scroll of Giants">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1137,77 +1103,76 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="2.5">
-						<item id="5922" count="1" />
+						<item id="5922" count="1" /> <!-- Blueprint: Giants Golem 1 -->
 					</item>
 					<item chance="2.5">
-						<item id="5923" count="1" />
+						<item id="5923" count="1" /> <!-- Blueprint: Giants Golem 2 -->
 					</item>
 					<item chance="2.5">
-						<item id="5924" count="1" />
+						<item id="5924" count="1" /> <!-- Blueprint: Giants Golem 3 -->
 					</item>
 					<item chance="2.5">
-						<item id="5925" count="1" />
+						<item id="5925" count="1" /> <!-- Blueprint: Giants Golem 4 -->
 					</item>
 					<item chance="2.5">
-						<item id="5926" count="1" />
+						<item id="5926" count="1" /> <!-- Blueprint: Giants Golem 5 -->
 					</item>
 					<item chance="2.5">
-						<item id="5927" count="1" />
+						<item id="5927" count="1" /> <!-- Book: Basics of Giants Magic, Chapter 1 -->
 					</item>
 					<item chance="2.5">
-						<item id="5928" count="1" />
+						<item id="5928" count="1" /> <!-- Book: Basics of Giants Magic, Chapter 2 -->
 					</item>
 					<item chance="2.5">
-						<item id="5929" count="1" />
+						<item id="5929" count="1" /> <!-- Book: Basics of Giants Magic, Chapter 3 -->
 					</item>
 					<item chance="2.5">
-						<item id="5930" count="1" />
+						<item id="5930" count="1" /> <!-- Book: Basics of Giants Magic, Chapter 4 -->
 					</item>
 					<item chance="2.5">
-						<item id="5931" count="1" />
+						<item id="5931" count="1" /> <!-- Book: Basics of Giants Magic, Chapter 5 -->
 					</item>
 					<item chance="2.5">
-						<item id="5932" count="1" />
+						<item id="5932" count="1" /> <!-- Handbook: Giants Architecture, Chapter 1 -->
 					</item>
 					<item chance="2.5">
-						<item id="5933" count="1" />
+						<item id="5933" count="1" /> <!-- Handbook: Giants Architecture, Chapter 2 -->
 					</item>
 					<item chance="2.5">
-						<item id="5934" count="1" />
+						<item id="5934" count="1" /> <!-- Handbook: Giants Architecture, Chapter 3 -->
 					</item>
 					<item chance="2.5">
-						<item id="5935" count="1" />
+						<item id="5935" count="1" /> <!-- Handbook: Giants Architecture, Chapter 4 -->
 					</item>
 					<item chance="2.5">
-						<item id="5936" count="1" />
+						<item id="5936" count="1" /> <!-- Handbook: Giants Architecture, Chapter 5 -->
 					</item>
 					<item chance="2.5">
-						<item id="5937" count="1" />
+						<item id="5937" count="1" /> <!-- Book: Giants Medical Science, Chapter 1 -->
 					</item>
 					<item chance="2.5">
-						<item id="5938" count="1" />
+						<item id="5938" count="1" /> <!-- Book: Giants Medical Science, Chapter 2 -->
 					</item>
 					<item chance="2.5">
-						<item id="5939" count="1" />
+						<item id="5939" count="1" /> <!-- Book: Giants Medical Science, Chapter 3 -->
 					</item>
 					<item chance="2.5">
-						<item id="5940" count="1" />
+						<item id="5940" count="1" /> <!-- Book: Giants Medical Science, Chapter 4 -->
 					</item>
 					<item chance="2.5">
-						<item id="5941" count="1" />
+						<item id="5941" count="1" /> <!-- Book: Giants Medical Science, Chapter 5 -->
 					</item>
 					<item chance="25">
-						<item id="5942" count="1" />
+						<item id="5942" count="1" /> <!-- Giant's Love Letter -->
 					</item>
 					<item chance="25">
-						<item id="5943" count="1" />
+						<item id="5943" count="1" /> <!-- Giants' Doodle -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2173" toLevel="1" name="Book of Giants">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1226,47 +1191,46 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="5">
-						<item id="5945" count="1" />
+						<item id="5945" count="1" /> <!-- Book: Giants Science & Technology, Chapter 1 -->
 					</item>
 					<item chance="5">
-						<item id="5946" count="1" />
+						<item id="5946" count="1" /> <!-- Book: Giants Science & Technology, Chapter 2 -->
 					</item>
 					<item chance="5">
-						<item id="5947" count="1" />
+						<item id="5947" count="1" /> <!-- Book: Giants Science & Technology, Chapter 3 -->
 					</item>
 					<item chance="5">
-						<item id="5948" count="1" />
+						<item id="5948" count="1" /> <!-- Book: Giants Science & Technology, Chapter 4 -->
 					</item>
 					<item chance="5">
-						<item id="5949" count="1" />
+						<item id="5949" count="1" /> <!-- Book: Giants Science & Technology, Chapter 5 -->
 					</item>
 					<item chance="5">
-						<item id="5950" count="1" />
+						<item id="5950" count="1" /> <!-- Almanac: Lesser Giant Culture, Chapter 1 -->
 					</item>
 					<item chance="5">
-						<item id="5951" count="1" />
+						<item id="5951" count="1" /> <!-- Almanac: Lesser Giant Culture, Chapter 2 -->
 					</item>
 					<item chance="5">
-						<item id="5952" count="1" />
+						<item id="5952" count="1" /> <!-- Almanac: Lesser Giant Culture, Chapter 3 -->
 					</item>
 					<item chance="5">
-						<item id="5953" count="1" />
+						<item id="5953" count="1" /> <!-- Almanac: Lesser Giant Culture, Chapter 4 -->
 					</item>
 					<item chance="5">
-						<item id="5954" count="1" />
+						<item id="5954" count="1" /> <!-- Almanac: Lesser Giant Culture, Chapter 5 -->
 					</item>
 					<item chance="25">
-						<item id="5942" count="1" />
+						<item id="5942" count="1" /> <!-- Giant's Love Letter -->
 					</item>
 					<item chance="25">
-						<item id="5943" count="1" />
+						<item id="5943" count="1" /> <!-- Giants' Doodle -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2177" toLevel="1" name="Blessed Scroll of Escape: Clan Hall">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1291,7 +1255,6 @@
 		</effects>
 	</skill>
 	<skill id="2178" toLevel="1" name="Blessed Scroll of Escape: Castle">
-		<!-- Confirmed CT2.5 -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1316,7 +1279,6 @@
 		</effects>
 	</skill>
 	<skill id="2180" toLevel="1" name="Wyvern Food">
-		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>

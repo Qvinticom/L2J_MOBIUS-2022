@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7900" name="Ice Storm Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -29,7 +29,7 @@
 		</stats>
 	</item>
 	<item id="7901" name="Star Buster" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -57,7 +57,7 @@
 		</stats>
 	</item>
 	<item id="7902" name="Doom Crusher" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -310,7 +310,7 @@
 		</skills>
 	</item>
 	<item id="7918" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Sword/Stationary -->
+		<!-- Schuttgart/ Sword/ Stationary -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -321,7 +321,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7919" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Spear/Stationary -->
+		<!-- Schuttgart/ Spear/ Stationary -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -332,7 +332,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7920" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Bow/Stationary -->
+		<!-- Schuttgart/ Bow/ Stationary -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -343,7 +343,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7921" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Stationary -->
+		<!-- Schuttgart/ Cleric/ Stationary -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -354,7 +354,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7922" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Stationary -->
+		<!-- Schuttgart/ Wizard/ Stationary -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -365,7 +365,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7923" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Sword/Mobile -->
+		<!-- Schuttgart/ Sword/ Mobile -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -376,7 +376,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7924" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Spear/Mobile -->
+		<!-- Schuttgart/ Spear/ Mobile -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -387,7 +387,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7925" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Bow/Mobile -->
+		<!-- Schuttgart/ Bow/ Mobile -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7926" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Mobile -->
+		<!-- Schuttgart/ Cleric/ Mobile -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -409,7 +409,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7927" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Mobile -->
+		<!-- Schuttgart/ Wizard/ Mobile -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -453,7 +453,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7931" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Sword/Stationary. -->
+		<!-- Schuttgart/ Sword/ Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -464,7 +464,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7932" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Spear/Stationary. -->
+		<!-- Schuttgart/ Spear/ Stationary. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -475,7 +475,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7933" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Bow/Stationary. -->
+		<!-- Schuttgart/ Bow/ Stationary. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -486,7 +486,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7934" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Stationary. -->
+		<!-- Schuttgart/ Cleric/ Stationary. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -497,7 +497,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7935" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Stationary. -->
+		<!-- Schuttgart/ Wizard/ Stationary. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7936" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Sword/Mobile. -->
+		<!-- Schuttgart/ Sword/ Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -519,7 +519,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7937" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Spear/Mobile. -->
+		<!-- Schuttgart/ Spear/ Mobile. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -530,7 +530,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7938" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Bow/Mobile. -->
+		<!-- Schuttgart/ Bow/ Mobile. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -541,7 +541,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7939" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Mobile. -->
+		<!-- Schuttgart/ Cleric/ Mobile. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -552,7 +552,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7940" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Mobile. -->
+		<!-- Schuttgart/ Wizard/ Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -563,7 +563,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7941" name="Dawn Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Sword/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -574,7 +574,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7942" name="Dawn Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Spear/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -585,7 +585,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7943" name="Dawn Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Bow/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Bow/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -596,7 +596,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7944" name="Dawn Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Cleric/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -607,7 +607,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7945" name="Dawn Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Wizard/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -618,7 +618,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7946" name="Dawn Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -629,7 +629,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7947" name="Dawn Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Spear/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Spear/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -640,7 +640,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7948" name="Dawn Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Bow/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Bow/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -651,7 +651,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7949" name="Dawn Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Cleric/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -662,7 +662,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7950" name="Dawn Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -673,7 +673,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7951" name="Greater Recruit Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Sword/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -684,7 +684,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7952" name="Greater Recruit Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Spear/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -695,7 +695,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7953" name="Greater Recruit Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Bow/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Bow/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -706,7 +706,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7954" name="Greater Recruit Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Cleric/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -717,7 +717,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7955" name="Greater Recruit Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Wizard/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -728,7 +728,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7956" name="Greater Recruit Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -739,7 +739,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7957" name="Greater Recruit Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Spear/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Spear/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7958" name="Greater Recruit Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Bow/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Bow/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -761,7 +761,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7959" name="Greater Recruit Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Cleric/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -772,7 +772,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7960" name="Greater Recruit Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7961" name="Recruit Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Sword/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -794,7 +794,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7962" name="Recruit Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Spear/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -805,7 +805,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7963" name="Recruit Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Bow/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Bow/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -816,7 +816,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7964" name="Recruit Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Cleric/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -827,7 +827,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7965" name="Recruit Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Wizard/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -838,7 +838,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7966" name="Recruit Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -849,7 +849,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7967" name="Recruit Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Spear/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Spear/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -860,7 +860,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7968" name="Recruit Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Bow/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Bow/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -871,7 +871,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7969" name="Recruit Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Cleric/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Cleric/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -882,7 +882,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7970" name="Recruit Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
+		<!-- Schuttgart/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Revolutionaries of Dusk. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7971" name="Nephilim Warrior Posting Ticket" type="EtcItem">
-		<!-- Schuttgart/Sword/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Sword/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -904,7 +904,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7972" name="Nephilim Shaman Posting Ticket" type="EtcItem">
-		<!-- Schuttgart/Wizard/Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Schuttgart/ Wizard/ Mobile. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -915,7 +915,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7973" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Rune/Sword/Stationary -->
+		<!-- Rune/ Sword/ Stationary -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -926,7 +926,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7974" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Rune/Spear/Stationary -->
+		<!-- Rune/ Spear/ Stationary -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -937,7 +937,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7975" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Rune/Bow/Stationary -->
+		<!-- Rune/ Bow/ Stationary -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -948,7 +948,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7976" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Rune/Cleric/Stationary -->
+		<!-- Rune/ Cleric/ Stationary -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -959,7 +959,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7977" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Rune/Wizard/Stationary -->
+		<!-- Rune/ Wizard/ Stationary -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -970,7 +970,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7978" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Rune/Sword/Mobile -->
+		<!-- Rune/ Sword/ Mobile -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -981,7 +981,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7979" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Rune/Spear/Mobile -->
+		<!-- Rune/ Spear/ Mobile -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -992,7 +992,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7980" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Rune/Bow/Mobile -->
+		<!-- Rune/ Bow/ Mobile -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1003,7 +1003,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7981" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Rune/Cleric/Mobile -->
+		<!-- Rune/ Cleric/ Mobile -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1014,7 +1014,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7982" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Rune/Wizard/Mobile -->
+		<!-- Rune/ Wizard/ Mobile -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1080,7 +1080,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7988" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Rune/Sword/Stationary. -->
+		<!-- Rune/ Sword/ Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1091,7 +1091,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7989" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Rune/Spear/Stationary. -->
+		<!-- Rune/ Spear/ Stationary. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1102,7 +1102,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7990" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Rune/Bow/Stationary. -->
+		<!-- Rune/ Bow/ Stationary. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1113,7 +1113,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7991" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Rune/Cleric/Stationary. -->
+		<!-- Rune/ Cleric/ Stationary. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1124,7 +1124,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7992" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Rune/Wizard/Stationary. -->
+		<!-- Rune/ Wizard/ Stationary. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1135,7 +1135,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7993" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Rune/Sword/Mobile. -->
+		<!-- Rune/ Sword/ Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1146,7 +1146,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7994" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Rune/Spear/Mobile. -->
+		<!-- Rune/ Spear/ Mobile. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1157,7 +1157,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7995" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Rune/Bow/Mobile. -->
+		<!-- Rune/ Bow/ Mobile. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1168,7 +1168,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7996" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Rune/Cleric/Mobile. -->
+		<!-- Rune/ Cleric/ Mobile. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1179,7 +1179,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7997" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Rune/Wizard/Mobile. -->
+		<!-- Rune/ Wizard/ Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1190,7 +1190,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7998" name="Dawn Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Rune/Sword/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Rune/ Sword/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -1201,7 +1201,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="7999" name="Dawn Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Rune/Spear/Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
+		<!-- Rune/ Spear/ Stationary. The Seal of Strife can only be used to place a mercenary when in the possession of the Lords of Dawn. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17200" name="Olympic Athlete's Earring" type="Armor">
-		<!-- Olympic Athlete's Earring. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- Olympic Athlete's Earring. MP +31, Stun/ Mental Attack Resistance +20%, Stun/ Mental Atk. Rate +20% and Vampiric Rage. Only one effect is applied even when the two identical earrings are worn. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -949,7 +949,7 @@
 		</skills>
 	</item>
 	<item id="17255" name="Blessed Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -965,7 +965,7 @@
 		</skills>
 	</item>
 	<item id="17256" name="Blessed Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -981,7 +981,7 @@
 		</skills>
 	</item>
 	<item id="17257" name="Blessed Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Atk. +3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +4 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -997,7 +997,7 @@
 		</skills>
 	</item>
 	<item id="17258" name="Blessed Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="17259" name="Blessed Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Atk. +3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +4 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1029,7 +1029,7 @@
 		</skills>
 	</item>
 	<item id="17260" name="Blessed Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1045,7 +1045,7 @@
 		</skills>
 	</item>
 	<item id="17261" name="Blessed Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bow, which increases by 4. M. Atk. + 2 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Atk. +2 for all D-grade weapons with the exception of bow, which increases by 4. M. Atk. +2 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1061,7 +1061,7 @@
 		</skills>
 	</item>
 	<item id="17262" name="Blessed Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1077,7 +1077,7 @@
 		</skills>
 	</item>
 	<item id="17263" name="Blessed Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus double. Enchanting is safe up to +3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1093,7 +1093,7 @@
 		</skills>
 	</item>
 	<item id="17264" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1464,7 +1464,7 @@
 		</skills>
 	</item>
 	<item id="17285" name="Freya's Refreshing Breeze" type="EtcItem">
-		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Vitality buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1486,7 +1486,7 @@
 		</skills>
 	</item>
 	<item id="17286" name="Freya's Refreshing Breeze" additionalName="Event" type="EtcItem">
-		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1570,7 +1570,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="17290" name="Requiem Shaper" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1601,7 +1601,7 @@
 		</stats>
 	</item>
 	<item id="17291" name="Requiem Cutter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1631,7 +1631,7 @@
 		</stats>
 	</item>
 	<item id="17292" name="Requiem Slasher" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1661,7 +1661,7 @@
 		</stats>
 	</item>
 	<item id="17293" name="Requiem Avenger" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1692,7 +1692,7 @@
 		</stats>
 	</item>
 	<item id="17294" name="Requiem Fighter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1723,7 +1723,7 @@
 		</stats>
 	</item>
 	<item id="17295" name="Requiem Stormer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Multi Attack when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1755,7 +1755,7 @@
 		</stats>
 	</item>
 	<item id="17296" name="Requiem Thrower" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases P. Skill Power when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1787,7 +1787,7 @@
 		</stats>
 	</item>
 	<item id="17297" name="Requiem Shooter" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases Atk. Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1819,7 +1819,7 @@
 		</stats>
 	</item>
 	<item id="17298" name="Requiem Buster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1849,7 +1849,7 @@
 		</stats>
 	</item>
 	<item id="17299" name="Requiem Caster" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

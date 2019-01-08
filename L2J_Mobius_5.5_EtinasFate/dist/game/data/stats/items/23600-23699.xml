@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23600" name="Lucky Enchant Stone: Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate + 15% for armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate +15% for armor (R-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
@@ -14,7 +14,7 @@
 		</skills>
 	</item>
 	<item id="23601" name="Player Commendation - Gift Box" additionalName="Event" type="EtcItem">
-		<!-- Gift given after accumulating 1-hr worth of PC Points. Double-click to use. -->
+		<!-- Gift given after accumulating 1-hr worth of PA Points. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -28,8 +28,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23490" min="1" max="1" chance="100" /> <!-- PC Vitality (1-hour) - Event -->
-			<item id="22280" min="1" max="1" chance="100" /> <!-- Player Commendation - Blessing (1-hour) - Event -->
+			<item id="23490" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hr.) - Event -->
+			<item id="22280" min="1" max="1" chance="100" /> <!-- PA - Blessing (1-hr.) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="23602" name="Hussar's Wing" type="Armor">
@@ -63,7 +63,7 @@
 		</stats>
 	</item>
 	<item id="23603" name="Automatic Appearance: Emerald Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Note: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -77,7 +77,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23604" name="Automatic Appearance: Japanese Weapon" type="EtcItem">
-		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Note: Appearance may reset when the Change Weapon skill is used. -->
+		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23605" name="SP Rune 50% Pack (1-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing SP Rune 50% (1-hour). -->
+		<!-- Double-click to obtain a SP Rune 50% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -103,7 +103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
+			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hr. -->
 		</capsuled_items>
 	</item>
 	<item id="23606" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
@@ -307,7 +307,7 @@
 		</skills>
 	</item>
 	<item id="23617" name="Vitality Maintaining Potion Pack" additionalName="No Weekly Usage Limit" type="EtcItem">
-		<!-- Wrapped Pack containing Vitality Maintaining Potion with no weekly usage limit. -->
+		<!-- Double-click to obtain a Vitality Maintaining Potion with no weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -320,11 +320,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23614" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (10-minute) - No Weekly Usage Limit -->
+			<item id="23614" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (10-min.) - No Weekly Usage Limit -->
 		</capsuled_items>
 	</item>
 	<item id="23618" name="Black Gem Mask Pack (7-day)" additionalName="Vitality (No Weekly Usage Limit)" type="EtcItem">
-		<!-- Wrapped Pack containing Black Gem Mask (7-day). -->
+		<!-- Double-click to obtain a Black Gem Mask (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -341,7 +341,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23619" name="Artisan's Goggles Pack (7-day)" additionalName="Vitality (No Weekly Usage Limit)" type="EtcItem">
-		<!-- Wrapped Pack containing Artisan's Goggles (7-day). -->
+		<!-- Double-click to obtain an Artisan's Goggles (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -405,7 +405,7 @@
 		</skills>
 	</item>
 	<item id="23622" name="Name Change Ticket" type="EtcItem">
-		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your Account. 2. Submit a ticket to Support with Rename Character in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
+		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your Account. 2. Submit a ticket to Support with "Rename Character" in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -420,7 +420,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23623" name="Gender Change Ticket" type="EtcItem">
-		<!-- To change the gender of your character, follow these steps:. 1. Submit a ticket to our Support from this account. 2. Put Change gender in the ticket title. The gender of the character with this item in the inventory will be changed. Note: You cannot change the gender of a Kamael. -->
+		<!-- To change the gender of your character, follow these steps:. 1. Submit a ticket to our Support from this account. 2. Put "Change gender" in the ticket title. The gender of the character with this item in the inventory will be changed. Note: You cannot change the gender of a Kamael. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -635,7 +635,7 @@
 		</skills>
 	</item>
 	<item id="23635" name="Flint" type="EtcItem">
-		<!-- Creates a campfire that lasts for 30 min. The warmth of the bonfire reduces the amount of MP consumption during skill use, and increases HP/MP/CP Recovery Rate. The closer you sit to the fire, the better the effect. All members. -->
+		<!-- Creates a campfire that lasts for 30 min. The warmth of the bonfire reduces the amount of MP consumption during skill use, and increases HP/ MP/ CP Recovery Rate. The closer you sit to the fire, the better the effect. All members. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -683,7 +683,7 @@
 		</stats>
 	</item>
 	<item id="23637" name="Blessed Antharas' Earring" additionalName="3-day" type="Armor">
-		<!-- MP + 59, Bleed Resistance + 50%, Bleed Attack Rate + 50%, Stun/Mental Resistance + 40%, Stun/Mental Attack + 40%, CON + 3, and MEN + 3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance + 100% temporarily. 3-day. Equipping two will only give the effect of one. -->
+		<!-- MP +59, Bleed Resistance +50%, Bleed Attack Rate +50%, Stun/ Mental Resistance +40%, Stun/ Mental Attack +40%, CON +3, and MEN +3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance +100% temporarily. 3-day. Equipping two will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -708,7 +708,7 @@
 		</stats>
 	</item>
 	<item id="23638" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
-		<!-- MP + 59, Bleed Resistance + 50%, Bleed Attack Rate + 50%, Stun/Mental Resistance + 40%, Stun/Mental Attack + 40%, CON + 3, and MEN + 3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance + 100% temporarily. 7-day. Equipping two will only give the effect of one. -->
+		<!-- MP +59, Bleed Resistance +50%, Bleed Attack Rate +50%, Stun/ Mental Resistance +40%, Stun/ Mental Attack +40%, CON +3, and MEN +3. Increases Heal Amount, Vampiric Rage Effect, Earth Resistance, Holy Resistance, P. Def., and M. Def. Decreases P. Skill MP Consumption and M. Skill MP Consumption. Can use Cancel Stun skill, and Stun Resistance +100% temporarily. 7-day. Equipping two will only give the effect of one. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -733,7 +733,7 @@
 		</stats>
 	</item>
 	<item id="23639" name="Blessed Valakas' Necklace" additionalName="3-day" type="Armor">
-		<!-- HP + 625, MP + 79, Sleep Resistance + 50%, Sleep Attack Rate + 50%, Fire Resistance + 30, Dark Resistance + 20, STR + 3, INT + 3, P. Skill Attack + 5%, P. Atk. + 10%, M. Atk. + 20%. Wild Magic Effect, and Damage Shield effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance + 100% momentarily. 3-day. -->
+		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflect effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% momentarily. 3-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -758,7 +758,7 @@
 		</stats>
 	</item>
 	<item id="23640" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
-		<!-- HP + 625, MP + 79, Sleep Resistance + 50%, Sleep Attack Rate + 50%, Fire Resistance + 30, Dark Resistance + 20, STR + 3, INT + 3, P. Skill Attack + 5%, P. Atk. + 10%, M. Atk. + 20%. Wild Magic Effect, and Damage Shield effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance + 100% temporarily. 7-day. -->
+		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflect effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% temporarily. 7-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -871,7 +871,7 @@
 		</skills>
 	</item>
 	<item id="23646" name="High-grade Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +20% for weapons (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -887,7 +887,7 @@
 		</skills>
 	</item>
 	<item id="23647" name="High-grade Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
+		<!-- Enchant success rate +30% for armor (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -903,7 +903,7 @@
 		</skills>
 	</item>
 	<item id="23648" name="Knighthood's Fortune Box" type="EtcItem">
-		<!-- Wrapped Pack containing supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->
+		<!-- Double-click to obtain supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -919,7 +919,7 @@
 		</skills>
 	</item>
 	<item id="23649" name="Royal Guard's Fortune Box" type="EtcItem">
-		<!-- Wrapped Pack containing supplies used by royal guards, such as Blessed Scrolls, Unbind Scrolls, Enchant Scrolls, and Enchant Stones of various levels and types. -->
+		<!-- Double-click to obtain supplies used by royal guards, such as Blessed Scrolls, Unbind Scrolls, Enchant Scrolls, and Enchant Stones of various levels and types. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

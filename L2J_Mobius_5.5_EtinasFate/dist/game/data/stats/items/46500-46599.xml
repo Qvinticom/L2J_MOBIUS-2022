@@ -165,7 +165,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46526" name="Practice Soul Crystal" additionalName="Stage 1" type="EtcItem">
-		<!-- A Soul Crystal received from a blacksmith for practice. Use this to bestow an effect on to the Practice StormBringer you received from the blacksmith. -->
+		<!-- A Soul Crystal received from a blacksmith for practice. Use this to bestow an effect on to the Practice Stormbringer you received from the blacksmith. -->
 		<set name="icon" val="icon.ensoul_big_old" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -180,7 +180,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46527" name="Agathion - Shiny" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Lets you teleport to Town of Aden / Town of Rune / Talking Island Village / Town of Giran / Town of Goddard / Town of Schuttgart. (Cooldown 30 minutes). <Item Skill>. 1. Chase Down: Increases Speed by 66 for 15 seconds. <Item Skill>. 2. Sneak: Protected from preemptive attacks from monsters. -->
+		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Lets you teleport to Town of Aden/ Town of Rune/ Talking Island Village/ Town of Giran/ Town of Goddard/ Town of Schuttgart. (Cooldown 30 min.). <Item Skill>. 1. Chase Down: Increases Speed by 66 for 15 seconds. <Item Skill>. 2. Sneak: Protected from preemptive attacks from monsters. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -194,7 +194,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="46528" name="Server Keeper's Magic Pencil" type="Weapon">
-		<!-- Magic pencil with a sharp tip. Provided to and only used by Server Keepers. -->
+		<!-- A magic pen with a sharp tip that never goes dry. Can mount a Magic Broom when equipped. Provided to and only used by Server Keepers. -->
 		<set name="icon" val="BranchSys2.icon.g_pencil_of_servermaster" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -232,7 +232,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="46530" name="Top-grade Love Potion - Party" type="EtcItem">
-		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. of party members are increased. A strange power changes the appearance of your weapon. Does not stack with Battle Rhapsody Dance. Cannot be used in the Olympiad. -->
+		<!-- For 15 sec., P./ M. Atk. and Atk. Spd./ Casting Spd of party members are increased. A strange power changes the appearance of your weapon. Does not stack with Battle Rhapsody. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.love_potion_party" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -269,7 +269,7 @@
 		</stats>
 	</item>
 	<item id="46533" name="Hansel's Weapon Crafting Potion" additionalName="Event" type="EtcItem">
-		<!-- Changes the appearance of a weapon to that of White Day for 1 hour. Deleted after event. -->
+		<!-- Changes the appearance of a weapon to that of White Day for 1 hr. Deleted after event. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -283,7 +283,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46534" name="Gretel's Friend Summon Candy" additionalName="Event" type="EtcItem">
-		<!-- Item imbued with Gretel's magic. Can summon a friend every 30 minutes. Target a party member and double-click to use the skill. Deleted after event. -->
+		<!-- Item imbued with Gretel's magic. Can summon a friend every 30 min. Target a party member and double-click to use the skill. Deleted after event. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -298,7 +298,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46535" name="Rare Accessory Box" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to get one of the following: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, or Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. Deleted after event. -->
+		<!-- Double-click to get one of the following: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, or Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -338,7 +338,7 @@
 		</skills>
 	</item>
 	<item id="46537" name="Mystic Soul Crystal Fragment" type="EtcItem">
-		<!-- Crystal fragment containing the soul of one of the progatonists of the stories told in the Mystic Tavern. Take 10 of these to Settlen in the Mystic Tavern to exchange for a Mystic Soul Crystal. -->
+		<!-- Crystal fragment containing the soul of one of the protagonists of the stories told in the Mystic Tavern. Take 10 of these to Settlen in the Mystic Tavern to exchange for a Mystic Soul Crystal. -->
 		<set name="icon" val="icon.etc_broken_crystal_green_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -481,13 +481,13 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46553" name="Mystic Soul Crystal" type="EtcItem">
-		<!-- Crystal fragment containing the soul of one of the progatonists of the stories told in the Mystic Tavern. Since it contains the soul of a legend within the stories, it can bestow a special Soul Crystal effect to weapons. -->
+		<!-- Crystal fragment containing the soul of one of the protagonists of the stories told in the Mystic Tavern. Since it contains the soul of a legend within the stories, it can bestow a special Soul Crystal effect to weapons. -->
 		<set name="icon" val="icon.ensoul_big_ep" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46554" name="Flame Flower" type="EtcItem">
-		<!-- Mystic Tavern - Item that can only be used in Tauti's dungeon. Use it near the Sealed Tablet to reduce the defense of the tablet. Deleted 1 hour after acquisition. -->
+		<!-- Mystic Tavern - Item that can only be used in Tauti's dungeon. Use it near the Sealed Tablet to reduce the defense of the tablet. Deleted 1 hr. after acquisition. -->
 		<set name="icon" val="icon.etc_flower_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -836,7 +836,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46587" name="Mystic Armor Piece" type="EtcItem">
-		<!-- Go to Settlen to exchange for a Tauti/Kelbim/Freya Outfit Appearance Stone. -->
+		<!-- Go to Settlen to exchange for a Tauti/ Kelbim/ Freya Outfit Appearance Stone. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="is_stackable" val="true" />
 	</item>

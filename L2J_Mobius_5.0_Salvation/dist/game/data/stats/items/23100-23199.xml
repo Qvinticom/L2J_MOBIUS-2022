@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23100" name="Vesper Retributer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Max HP + 25%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Max HP +25%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -36,7 +36,7 @@
 		</stats>
 	</item>
 	<item id="23101" name="Vesper Caster of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Casting Spd. + 15%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Casting Spd. +15%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="23102" name="Vesper Singer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Critical + 151. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Critical +151. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -106,7 +106,7 @@
 		</stats>
 	</item>
 	<item id="23103" name="Vesper Thrower of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Critical +133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -142,7 +142,7 @@
 		</stats>
 	</item>
 	<item id="23104" name="Vesper Pincer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. Critical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical +131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -178,7 +178,7 @@
 		</stats>
 	</item>
 	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical +133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -214,7 +214,7 @@
 		</stats>
 	</item>
 	<item id="23106" name="Vesper Nagan of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. Critical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical +131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -719,7 +719,7 @@
 			<item id="23104" min="1" max="1" chance="100" /> <!-- Vesper Pincer of Fortune - 90-day -->
 			<item id="23105" min="1" max="1" chance="100" /> <!-- Vesper Shooter of Fortune - 90-day -->
 			<item id="23106" min="1" max="1" chance="100" /> <!-- Vesper Nagan of Fortune - 90-day -->
-			<item id="23138" min="1" max="1" chance="100" /> <!-- Vesper Dualsword of Fortune - 90-day -->
+			<item id="23138" min="1" max="1" chance="100" /> <!-- Vesper Dual Sword of Fortune - 90-day -->
 			<item id="23139" min="1" max="1" chance="100" /> <!-- Vesper Dual Dagger of Fortune - 90-day -->
 		</capsuled_items>
 	</item>
@@ -745,7 +745,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23130" name="Vorpal Ring of Fortune" additionalName="90-day" type="Armor">
-		<!-- MP+ 26. -->
+		<!-- MP+26. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -766,7 +766,7 @@
 		</stats>
 	</item>
 	<item id="23131" name="Vorpal Earring of Fortune" additionalName="90-day" type="Armor">
-		<!-- MP+ 38. -->
+		<!-- MP+38. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -787,7 +787,7 @@
 		</stats>
 	</item>
 	<item id="23132" name="Vorpal Necklace of Fortune" additionalName="90-day" type="Armor">
-		<!-- MP + 51. -->
+		<!-- MP +51. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -892,7 +892,7 @@
 		</skills>
 	</item>
 	<item id="23138" name="Vesper Dualsword of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Dualswords, as with Two-handed Swords, Two-handed Blunts and Fist Weapons, increase in P. Atk. when enchanted compared to standard One-handed Swords. When enchanted to + 4 or above, Critical + 109 and Max HP + 10%. Increases damage inflicted during PvP. -->
+		<!-- dual swords, as with Two-handed Swords, Two-handed Blunts and Fist Weapons, increase in P. Atk. when enchanted compared to standard One-handed Swords. When enchanted to +4 or above, Critical +109 and Max HP +10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -927,7 +927,7 @@
 		</stats>
 	</item>
 	<item id="23139" name="Vesper Dual Dagger of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Dual Daggers increase in P. Atk. when enchanted compared to standard One-handed Swords. When enchanted to + 4 or above, Critical + 109. Increases damage inflicted during PvP. Lv. 81 or above and Dagger Masters only. -->
+		<!-- Dual Daggers increase in P. Atk. when enchanted compared to standard One-handed Swords. When enchanted to +4 or above, Critical +109. Increases damage inflicted during PvP. Lv. 81 or above and Dagger Masters only. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1102,7 +1102,7 @@
 		</skills>
 	</item>
 	<item id="23147" name="Ghost Potion" additionalName="Event" type="EtcItem">
-		<!-- Ghost Potion.  P. Atk. + 20%, M. Atk. + 85%, and Speed + 20. Cooldown is 60 min. -->
+		<!-- P. Atk. +20%, M. Atk. +85%, and Speed +20 for 2 hours. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
@@ -1170,7 +1170,7 @@
 		</skills>
 	</item>
 	<item id="23152" name="Soul Avatar - Lancet" type="Armor">
-		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Def. Cannot be exchanged, dropped, sold or used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1194,7 +1194,7 @@
 		</skills>
 	</item>
 	<item id="23153" name="Soul Avatar - Liposa" type="Armor">
-		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Def. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1218,7 +1218,7 @@
 		</skills>
 	</item>
 	<item id="23154" name="Soul Avatar - Velarin" type="Armor">
-		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1242,7 +1242,7 @@
 		</skills>
 	</item>
 	<item id="23155" name="Soul Avatar - Dulcinel" type="Armor">
-		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_e_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1266,7 +1266,7 @@
 		</skills>
 	</item>
 	<item id="23156" name="Soul Avatar - Chimeros" type="Armor">
-		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Atk. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_d_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1290,7 +1290,7 @@
 		</skills>
 	</item>
 	<item id="23157" name="Soul Avatar - Niveri" type="Armor">
-		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for M. Atk. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1314,7 +1314,7 @@
 		</skills>
 	</item>
 	<item id="23158" name="Soul Avatar - Hamell" type="Armor">
-		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Def. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_h_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1338,7 +1338,7 @@
 		</skills>
 	</item>
 	<item id="23159" name="Soul Avatar - Joriya" type="Armor">
-		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Def. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1362,7 +1362,7 @@
 		</skills>
 	</item>
 	<item id="23160" name="Soul Avatar - Ralmak" type="Armor">
-		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Atk. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_i_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1386,7 +1386,7 @@
 		</skills>
 	</item>
 	<item id="23161" name="Soul Avatar - Goras" type="Armor">
-		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Effective for P. Atk. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_j_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1410,7 +1410,7 @@
 		</skills>
 	</item>
 	<item id="23162" name="Soul Avatar - Vensar" type="Armor">
-		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1434,7 +1434,7 @@
 		</skills>
 	</item>
 	<item id="23163" name="Soul Avatar - Kiela" type="Armor">
-		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
+		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door. Increases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_k_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1477,7 +1477,7 @@
 		</skills>
 	</item>
 	<item id="23165" name="Chocolate for Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Chocolate for Summer Slushie sought by Herina. Tastes sweet. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
+		<!-- Chocolate for Summer Slushie sought by Herina. Tastes sweet. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_icewater_cho" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1485,7 +1485,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23166" name="Cream for Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Cream for Summer Slushie sought by Herina. Tastes smooth. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
+		<!-- Cream for Summer Slushie sought by Herina. Tastes smooth. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_icewater_cream" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1493,7 +1493,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23167" name="Ice for Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Ice for Summer Slushie sought by Herina. Seems finely shaven. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
+		<!-- Ice for Summer Slushie sought by Herina. Seems finely shaven. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1501,7 +1501,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23168" name="Biscuits for Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Basket containing biscuits for Summer Slushie sought by Herina. Includes assorted biscuits, fruits, candy, and the like. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
+		<!-- Basket containing biscuits for Summer Slushie sought by Herina. Includes assorted biscuits, fruits, candy, and the like. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
 		<set name="icon" val="icon.etc_candy_basket_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1509,7 +1509,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23169" name="Sweet Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 hr., Atk. Spd. + 5%, Casting Spd. + 5%, Speed + 5, and Max HP/MP + 5%. Cooldown is 1 hr. -->
+		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 hr., Atk. Spd. +5%, Casting Spd. +5%, Speed +5, and Max HP/ MP +5%. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1524,7 +1524,7 @@
 		</skills>
 	</item>
 	<item id="23170" name="Fantastic Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Summer Slushie made by Herina. Use this top-quality slushie to change into an Alluring Swimsuit. For 1 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Speed. + 10, and Max HP/MP + 10%. Cooldown is 1 hr. -->
+		<!-- Summer Slushie made by Herina. Use this top-quality slushie to change into an Alluring Swimsuit. For 1 hr., Atk. Spd. +10%, Casting Spd. +10%, Speed. +10, and Max HP/ MP +10%. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1930,7 +1930,7 @@
 		</skills>
 	</item>
 	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. Warning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
+		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2050,7 +2050,7 @@
 		</skills>
 	</item>
 	<item id="23199" name="Ninja Outfit Appearance Stone Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Ninja Top/Pants/Gloves/Shoes/Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing Ninja Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

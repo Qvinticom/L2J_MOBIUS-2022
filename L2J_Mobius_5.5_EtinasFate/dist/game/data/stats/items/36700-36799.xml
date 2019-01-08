@@ -109,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36708" name="Experiment Material" type="EtcItem">
-		<!-- Pouch containing unknown experiment material from Workman Chen on Alligator Island. Take it to the Superior he mentioned. -->
+		<!-- Pouch containing unknown experiment material from Workman Chen on Alligator Island. Take it to the "Superior" he mentioned. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -313,7 +313,7 @@
 		</stats>
 	</item>
 	<item id="36721" name="Practice Green Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Green crystal for practice containing the light of absorbed souls. Stage 5. Once saturated, it bestows special abilities on a weapon. -->
+		<!-- Green crystal for practice containing the light of absorbed souls. Once saturated, it bestows special abilities on a weapon. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -454,7 +454,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="36730" name="Used Dimensional Teleport Orb" type="EtcItem">
-		<!-- Mark received upon dimensional teleport. It disappears after 4 hours. -->
+		<!-- Mark received upon dimensional teleport. It disappears after 4 hr. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -467,7 +467,7 @@
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 	</item>
 	<item id="36731" name="Life Stone Instilled with Giants' Power" type="EtcItem">
-		<!-- Mineral with mysterious power. Can be augmented to high-grade and used by characters of level 85 or higher. -->
+		<!-- Mineral with mysterious power. Can get an advanced augmentation effect. Can be used by characters of level 85 or above. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
@@ -654,7 +654,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="36748" name="Recipe: Immortal Shield (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for making an Immortal Shield. Requires Create Item (Lv. 11). Success rate is 60%. A blessed item might come out at a very low probability. -->
+		<!-- For Dwarves only. Recipe for making an Immortal Shield. Requires Create Item Skill Lv. 11. 60% success rate. Has a very low chance of obtaining a Blessed item upon success. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="280571" />
@@ -993,7 +993,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="36779" name="Recipe: Twilight Shield (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for making a Twilight Shield. Requires Create Item (Lv. 12). Success rate is 60%. A blessed item might come out at a very low probability. -->
+		<!-- For Dwarves only. Recipe for making a Twilight Shield. Requires Create Item Skill Lv. 12. 60% success rate. Has a very low chance of obtaining a Blessed item upon success. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="872868" />

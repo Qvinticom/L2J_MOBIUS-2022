@@ -333,7 +333,7 @@
 		</stats>
 	</item>
 	<item id="46917" name="PC Cafe - Paulina's Seraph Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./M. Critical Damage +15%. -->
+		<!-- A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./ M. Critical Damage +15%. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -355,7 +355,7 @@
 		</stats>
 	</item>
 	<item id="46918" name="PC Cafe - Paulina's Seraph Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./M. Critical Rate +40. -->
+		<!-- A Seraph Ring that can be equipped from Lv. 85 onwards, thanks to Paulina's blessing. MP +31, P./ M. Critical Rate +40. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -394,7 +394,7 @@
 		</cond>
 	</item>
 	<item id="46920" name="Paulina's Brigandine Shield" type="Armor">
-		<!-- Brigandine Shield imbued with the energy of Paulina. -->
+		<!-- Brigandine Shield imbued with Paulina's energy. -->
 		<set name="icon" val="icon.shield_brigandine_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -413,7 +413,7 @@
 		</stats>
 	</item>
 	<item id="46921" name="Paulina's Chain Shield" type="Armor">
-		<!-- Chain Shield imbued with the energy of Paulina. -->
+		<!-- Chain Shield imbued with Paulina's energy. -->
 		<set name="icon" val="icon.shield_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -432,7 +432,7 @@
 		</stats>
 	</item>
 	<item id="46922" name="Paulina's Dark Crystal Shield" type="Armor">
-		<!-- Dark Crystal Shield imbued with the energy of Paulina. -->
+		<!-- Dark Crystal Shield imbued with Paulina's energy. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -451,7 +451,7 @@
 		</stats>
 	</item>
 	<item id="46923" name="Paulina's Dynasty Shield" type="Armor">
-		<!-- Dynasty Shield imbued with the energy of Paulina. -->
+		<!-- Dynasty Shield imbued with Paulina's energy. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -484,16 +484,16 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="47021" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Helmet -->
-			<item id="47022" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Breastplate -->
-			<item id="47023" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gaiters -->
-			<item id="47024" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gauntlets -->
-			<item id="47025" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Boots -->
-			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace -->
-			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
-			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
-			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
-			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+			<item id="47021" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Helmet - Heavy Armor -->
+			<item id="47022" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Breastplate - Heavy Armor -->
+			<item id="47023" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gaiters - Heavy Armor -->
+			<item id="47024" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gauntlets - Heavy Armor -->
+			<item id="47025" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Boots - Heavy Armor -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Skill Cooldown -->
+			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring - Vampiric Rage -->
+			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring - MP Consumption -->
+			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring - Critical Damage -->
+			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
 	<item id="46925" name="Paulina's Light Armor Box (R-grade)" type="EtcItem">
@@ -511,16 +511,16 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="47027" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Helmet -->
-			<item id="47028" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Armor -->
-			<item id="47029" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Leggings -->
-			<item id="47030" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Gloves -->
-			<item id="47031" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Boots -->
-			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace -->
-			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
-			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
-			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
-			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+			<item id="47027" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Helmet - Light Armor -->
+			<item id="47028" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Armor - Light Armor -->
+			<item id="47029" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Leggings - Light Armor -->
+			<item id="47030" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Gloves - Light Armor -->
+			<item id="47031" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Boots - Light Armor -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Skill Cooldown -->
+			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring - Vampiric Rage -->
+			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring - MP Consumption -->
+			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring - Critical Damage -->
+			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
 	<item id="46926" name="Paulina's Robe Box (R-grade)" type="EtcItem">
@@ -538,16 +538,16 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="47032" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Circlet -->
-			<item id="47033" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Tunic -->
-			<item id="47034" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Stockings -->
-			<item id="47035" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gloves -->
-			<item id="47036" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Shoes -->
-			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace -->
-			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
-			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
-			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
-			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+			<item id="47032" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Circlet - Robe -->
+			<item id="47033" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Tunic - Robe -->
+			<item id="47034" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Stockings - Robe -->
+			<item id="47035" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gloves - Robe -->
+			<item id="47036" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Shoes - Robe -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace - Skill Cooldown -->
+			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring - Vampiric Rage -->
+			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring - MP Consumption -->
+			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring - Critical Damage -->
+			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
 	<item id="46927" name="Paulina's Brigandine Helmet" additionalName="Heavy Armor" type="Armor">
@@ -847,7 +847,7 @@
 		</stats>
 	</item>
 	<item id="46943" name="Paulina's Elven Earrings" type="Armor">
-		<!-- Elven Earrings imbued with the energy of Paulina. -->
+		<!-- Elven Earring imbued with the energy of Paulina. -->
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1224,7 +1224,7 @@
 		</stats>
 	</item>
 	<item id="46963" name="Paulina's Ring of Protection" additionalName="Critical Damage" type="Armor">
-		<!-- A Ring of Protection imbued with the energy of Paulina. P./M. Critical Damage +5%. -->
+		<!-- A Ring of Protection imbued with the energy of Paulina. P./ M. Critical Damage +5%. -->
 		<set name="icon" val="icon.accessary_ring_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1245,7 +1245,7 @@
 		</stats>
 	</item>
 	<item id="46964" name="Paulina's Ring of Protection" additionalName="Critical Rate" type="Armor">
-		<!-- A Ring of Protection imbued with the energy of Paulina. P./M. Critical Rate +10. -->
+		<!-- A Ring of Protection imbued with the energy of Paulina. P./ M. Critical Rate +10. -->
 		<set name="icon" val="icon.accessary_ring_of_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1266,7 +1266,7 @@
 		</stats>
 	</item>
 	<item id="46965" name="Paulina's Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- A Dynasty Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
+		<!-- A Dark Crystal Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1566,7 +1566,7 @@
 		</stats>
 	</item>
 	<item id="46981" name="Paulina's Majestic Earrings" additionalName="Vampiric Rage" type="Armor">
-		<!-- Majestic Earrings imbued with the energy of Paulina. Vampiric Rage effect. -->
+		<!-- Majestic Earring imbued with the energy of Paulina. Vampiric Rage effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1588,7 +1588,7 @@
 		</stats>
 	</item>
 	<item id="46982" name="Paulina's Majestic Earrings" additionalName="MP Consumption" type="Armor">
-		<!-- Majestic Earrings imbued with the energy of Paulina. MP Consumption -2%. -->
+		<!-- Majestic Earring imbued with the energy of Paulina. MP Consumption -2%. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1610,7 +1610,7 @@
 		</stats>
 	</item>
 	<item id="46983" name="Paulina's Majestic Ring" additionalName="Critical Damage" type="Armor">
-		<!-- A Majestic Ring imbued with the energy of Paulina. P./M. Critical Damage +5%. -->
+		<!-- A Majestic Ring imbued with the energy of Paulina. P./ M. Critical Damage +5%. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1632,7 +1632,7 @@
 		</stats>
 	</item>
 	<item id="46984" name="Paulina's Majestic Ring" additionalName="Critical Rate" type="Armor">
-		<!-- A Majestic Ring imbued with the energy of Paulina. P./M. Critical Rate +10. -->
+		<!-- A Majestic Ring imbued with the energy of Paulina. P./ M. Critical Rate +10. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

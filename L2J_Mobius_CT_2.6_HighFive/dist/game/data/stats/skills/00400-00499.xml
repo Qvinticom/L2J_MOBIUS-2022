@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" levels="10" name="Tribunal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+		<!-- Inflicts holy damage on the enemy with 924 Power added to P. Atk. and greatly provokes the enemy. For 30 seconds, decreases Critical Rate by 30% and Resistance to every type of close range weapon by 12. Requires a sword or blunt weapon to be equipped. Over-hit and critical hit are possible. -->
 		<table name="#abnormalLvls"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
@@ -105,6 +106,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="401" levels="10" name="Judgment" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
+		<!-- Inflicts dark damage on the enemy with 1056 Power added to P. Atk. and greatly provokes the enemy. For 30 seconds, decreases Critical Damage by 25% and Resistance to every type of close range weapon by 12. Requires a sword, blunt weapon, or dualsword. Over-hit and critical hit are possible. -->
 		<table name="#abnormalLvls"> 1 1 1 1 2 2 2 2 2 3 </table>
 		<table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
 		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
@@ -193,6 +195,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="402" levels="10" name="Arrest" enchantGroup1="1" enchantGroup2="1">
+		<!-- Provokes the enemy to attack, then immobilizes them for 10 seconds. -->
 		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
@@ -231,6 +234,7 @@
 		</for>
 	</skill>
 	<skill id="403" levels="10" name="Shackle" enchantGroup1="1" enchantGroup2="1">
+		<!-- Provokes the enemy to attack, then immobilizes them for 10 seconds. -->
 		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
@@ -269,6 +273,7 @@
 		</for>
 	</skill>
 	<skill id="404" levels="5" name="Mass Shackling" enchantGroup1="1" enchantGroup2="1">
+		<!-- Provokes nearby enemies to attack, then immobilizes them for 10 seconds. -->
 		<table name="#effectPoints"> -1098 -1163 -1221 -1270 -1309 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 40 43 46 59 51 </table>
@@ -307,7 +312,7 @@
 		</for>
 	</skill>
 	<skill id="405" levels="10" name="Banish Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fills undead with fear, causing them to flee for 20 seconds. Consumes 6 Soul Ore. Lethal strike is possible. -->
 		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
@@ -326,7 +331,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0405" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="1785" />
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
@@ -374,7 +379,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="406" levels="3" name="Angelic Icon" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Channels the gods' strength to greatly increase user's combat effectiveness. For 1 minute, increases Resistance to de-buff attacks by 40%, P. Def. by 50%, M. Def. by 50%, Accuracy by 6 when a sword/blunt weapon is equipped, Speed by 10, Atk. Spd. by 10% when a sword/blunt weapon is equipped, Critical Rate by 33 when a sword is equipped, Critical Damage by 33% when a blunt weapon is equipped, and Resistance to buff-canceling attacks by 40%. Decreases the effect of recovery magic by 80%. Available when HP is 30% or lower. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
@@ -457,7 +462,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="407" levels="10" name="Psycho Symphony">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks nearby enemies with 687 Power added to P. Atk. and decreases Speed/Atk. Spd./Casting Spd. by 10% for 10 seconds. Over-hit and Critical are possible. -->
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#debuff"> 0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7 </table>
 		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
@@ -495,7 +500,7 @@
 		</for>
 	</skill>
 	<skill id="408" levels="10" name="Demonic Blade Dance">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Attacks nearby enemies with 825 Power added to P. Atk. and decreases P. Atk./M. Atk. by 10% for 10 seconds. Over-hit and Critical are possible. -->
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#debuff"> 0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7 </table>
 		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
@@ -535,8 +540,7 @@
 		</for>
 	</skill>
 	<skill id="409" levels="10" name="Critical Blow" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
+		<!-- Attacks the target's vital points with 1832 Power added to P. Atk. Increases the user's success rate of vital point attacks by 10% for 15 seconds. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#blowRate"> 1.1 1.1 1.1 1.15 1.15 1.2 1.2 1.25 1.25 1.3 </table>
 		<table name="#effectPoints"> -266 -279 -288 -296 -304 -311 -317 -323 -328 -333 </table>
@@ -601,7 +605,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="410" levels="3" name="Mortal Strike" enchantGroup1="2" enchantGroup2="2">
-		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
+		<!-- Increases the user's success rate of vital point attacks by 10% for 2 minutes. Requires a dagger. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#blowRate"> 1.1 1.15 1.2 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
@@ -646,6 +650,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="411" levels="3" name="Stealth" enchantGroup1="1" enchantGroup2="1">
+		<!-- Prevents being pre-emptively attacked by monsters for 2 minutes, and decreases Evasion by 12, P. Def. by 45%, M. Def. by 45%, Accuracy by 12 and P. Atk. by 45%. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#amount"> 0.55 0.7 0.85 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
@@ -680,7 +685,7 @@
 		</for>
 	</skill>
 	<skill id="412" levels="10" name="Sand Bomb" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Detonates a sand bomb to decrease the enemy's Accuracy by 6 for 30 seconds. -->
 		<table name="#abnormalLvls"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<table name="#accCombat"> 6 6 6 6 6 9 9 9 9 12 </table>
 		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
@@ -720,6 +725,7 @@
 		</for>
 	</skill>
 	<skill id="413" levels="8" name="Rapid Fire" enchantGroup1="1" enchantGroup2="1">
+		<!-- For 2 minutes, increases P. Atk. by 62 and Atk. Spd. by 20%. Decreases range by 50%. Requires a bow. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#effectPoints"> 566 582 597 611 624 635 646 655 </table>
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
@@ -771,6 +777,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="414" levels="8" name="Dead Eye" enchantGroup1="1">
+		<!-- For 2 minutes, when using a bow, increases one's own Accuracy by 1, P. Atk. by 124, and Critical Damage by 20%. Decreases Atk. Spd. by 10%. Requires a bow. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#accCombat"> 1 1 2 2 2 3 3 3 </table>
 		<table name="#effectPoints"> 566 582 597 611 624 635 646 655 </table>
@@ -827,6 +834,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="415" levels="3" name="Spirit of Sagittarius">
+		<!-- Decreases physical skill MP consumption by 10% for 20 minutes. -->
 		<table name="#abnormalLvls"> 2 4 6 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
@@ -851,6 +859,7 @@
 		</for>
 	</skill>
 	<skill id="416" levels="3" name="Blessing of Sagittarius">
+		<!-- Decreases physical skill re-use time by 10% for 20 minutes. -->
 		<table name="#abnormalLvls"> 2 4 6 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
@@ -875,6 +884,7 @@
 		</for>
 	</skill>
 	<skill id="417" levels="5" name="Pain of Sagittarius" enchantGroup1="1">
+		<!-- Sacrifices the user's HP to regenerate MP with 36 Power. -->
 		<table name="#amount"> 36 39 41 43 46 </table>
 		<table name="#effectPoints"> 549 582 611 635 655 </table>
 		<table name="#hpConsume"> 318 343 366 387 407 </table>
@@ -901,6 +911,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="418" levels="3" name="Quiver of Holding">
+		<!-- Weight limit is increased by 30%. -->
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#weightLimit"> 1.3 1.4 1.5 </table>
 		<set name="icon" val="icon.skill0418" />
@@ -914,7 +925,7 @@
 		</for>
 	</skill>
 	<skill id="419" levels="4" name="Summon Treasure Key">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Creates 1 Maestro's Key. Consumes 2 Thief Keys. -->
 		<table name="#extractableItems">
 			21746,1,100
 			21746,1,50;21746,2,50
@@ -945,6 +956,7 @@
 		</for>
 	</skill>
 	<skill id="420" levels="3" name="Zealot" enchantGroup1="1" enchantGroup2="1">
+		<!-- Channels the power of the user's guardian deity for 1 minute, increasing Resistance to de-buff attacks by 80%, Resistance to buff-canceling attacks by 40%, Speed by 10, Accuracy by 6 when using a sword, blunt weapon or spear/hand-to-hand weapon, Atk. Spd. by 10%, Critical Rate by 33 when using a sword/spear, and Critical Damage by 33% when using a blunt/hand-to-hand weapon. Decreases physical skill MP consumption by 50% and the power of received HP recovery magic by 50%. Available when HP is 30% or lower. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
 		<table name="#effectPoints"> 549 611 655 </table>
@@ -999,6 +1011,7 @@
 		</for>
 	</skill>
 	<skill id="421" levels="5" name="Fell Swoop" enchantGroup1="1" enchantGroup2="1">
+		<!-- For 2 minutes, increases the number of simultaneous targets by 1. Requires a polearm. -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<table name="#atkCountMax"> 1 2 3 4 5 </table>
 		<table name="#effectPoints"> 549 582 611 635 655 </table>
@@ -1034,6 +1047,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="422" levels="3" name="Polearm Accuracy" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases Accuracy by 2 when using a spear. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#accCombat"> 2 3 4 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 11 13 14 </table>
@@ -1072,6 +1086,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="423" levels="3" name="Dark Form">
+		<!-- For 5 minutes, increases the user's Fire P. Atk. by 10 and Resistance to Fire by 3. -->
 		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#firePower"> 10 15 20 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
@@ -1098,6 +1113,7 @@
 		</for>
 	</skill>
 	<skill id="424" levels="3" name="War Frenzy" enchantGroup1="1" enchantGroup2="1">
+		<!-- Increases Resistance to Stun attacks by 5 and Resistance to Sleep attacks by 10. Continuously consumes MP proportionately to the user's level. -->
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 13 14 15 </table>
 		<table name="#trait_shock"> 5 10 15 </table>
@@ -1141,6 +1157,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="425" levels="1" name="Hawk Spirit Totem">
+		<!-- Becomes possessed by a Hawk's soul. For 5 minutes, when using a hand-to-hand combat weapon, increases Accuracy by 6, Critical Rate by 100, and Critical Damage by 30%. Requires a hand-to-hand combat weapon. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
@@ -1171,7 +1188,7 @@
 		</for>
 	</skill>
 	<skill id="426" levels="1" name="Battle Force">
-		<!-- Not Used Anymore -->
+		<!-- Transfers your strength to a party member. The effect can be canceled if you incur damage. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5104" />
@@ -1188,7 +1205,7 @@
 		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
-		<!-- Not Used Anymore -->
+		<!-- Transfers your M. Atk.s to a party member. The effect can be canceled if you incur damage. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5105" />
@@ -1206,6 +1223,7 @@
 		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
 	<skill id="428" levels="1" name="Inner Rhythm" enchantGroup1="5">
+		<!-- MP consumption for song and dance is decreased by 10%. -->
 		<table name="#ench1DanceMpConsumeRate"> 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.88 0.88 0.88 0.88 0.88 0.88 0.88 0.87 </table>
 		<set name="icon" val="icon.skill0428" />
 		<set name="magicLvl" val="78" />
@@ -1223,6 +1241,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="429" levels="1" name="Knighthood" enchantGroup1="5">
+		<!-- Increases P. Def. by 87.1 and Shield Defense by 10 when equipped with heavy armor. -->
 		<table name="#ench1pDef"> 93 94 94 95 95 96 96 97 97 98 99 99 100 100 101 </table>
 		<table name="#ench1sDef"> 1.1 1.1 1.1 1.1 1.1 1.11 1.11 1.11 1.11 1.11 1.11 1.12 1.12 1.12 1.12 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -1249,7 +1268,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="430" levels="1" name="Master of Combat" enchantGroup1="5" enchantGroup2="5">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Max CP by 5%, and when using a sword/blunt weapon/spear/dualsword/hand-to-hand combat weapon, increases P. Atk. by 80. -->
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchPAtk"> 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 </table>
 		<set name="icon" val="icon.skill0430" />
@@ -1290,6 +1309,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="431" levels="1" name="Archery" enchantGroup1="5">
+		<!-- When using a bow, increases P. Atk. by 200 and maximum range by 50. -->
 		<table name="#ench1pAtk"> 203 206 210 213 216 220 223 226 230 233 236 240 243 246 250 </table>
 		<set name="icon" val="icon.skill0431" />
 		<set name="magicLvl" val="78" />
@@ -1317,7 +1337,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="432" levels="1" name="Assassination" enchantGroup1="5" enchantGroup2="5">
-		<!-- NOTE: Description says critical attack rate, but is client typo -->
+		<!-- When using a dagger, increases P. Atk. by 70 and Critical Rate by 3%. -->
 		<table name="#ench1pAtk"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench2blowRate"> 1.032 1.034 1.036 1.038 1.04 1.042 1.044 1.046 1.048 1.05 1.052 1.054 1.056 1.058 1.06 </table>
 		<set name="icon" val="icon.skill0432" />
@@ -1350,6 +1370,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="433" levels="1" name="Arcane Roar" enchantGroup1="5" enchantGroup2="5">
+		<!-- Increases Resistance to Fire, Water, Wind or Earth damage by 5 and M. Atk. by 3%. -->
 		<table name="#ench1mAtk"> 1.031 1.032 1.034 1.035 1.036 1.038 1.039 1.04 1.042 1.043 1.044 1.046 1.047 1.048 1.05 </table>
 		<table name="#ench2Res"> 6 6 6 7 7 7 8 8 8 9 9 9 9 10 10 </table>
 		<set name="icon" val="icon.skill0433" />
@@ -1385,6 +1406,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="434" levels="1" name="Necromancy" enchantGroup1="5" enchantGroup2="5">
+		<!-- Increases Resistance to dark damage by 10 and M. Atk. by 3%. -->
 		<table name="#ench1mAtk"> 1.031 1.032 1.034 1.035 1.036 1.038 1.039 1.04 1.042 1.043 1.044 1.046 1.047 1.048 1.05 </table>
 		<table name="#ench2Res"> 11 11 11 12 12 12 13 13 13 14 14 14 14 15 15 </table>
 		<set name="icon" val="icon.skill0434" />
@@ -1411,6 +1433,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="435" levels="1" name="Summon Lore" enchantGroup1="5" enchantGroup2="5">
+		<!-- When equipped with light armor, increases P. Def. by 80 and Casting Spd. by 5%. When equipped with a robe, increases P. Def. by 60 and Casting Spd. by 7%, and decreases MP consumption for magic skills by 3%. -->
 		<table name="#ench1mAtkSpd"> 1.051 1.052 1.054 1.055 1.056 1.058 1.059 1.06 1.062 1.063 1.064 1.066 1.067 1.068 1.07 </table>
 		<table name="#ench1pDef"> 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 </table>
 		<table name="#ench2mAtkSpd"> 1.08 1.081 1.082 1.082 1.083 1.084 1.084 1.085 1.086 1.086 1.087 1.088 1.088 1.089 1.09 </table>
@@ -1478,6 +1501,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="436" levels="1" name="Divine Lore" enchantGroup1="5">
+		<!-- MP consumption for magical skills is decreased by 5%. -->
 		<table name="#ench2mpConsume"> 0.94 0.94 0.94 0.94 0.94 0.94 0.94 0.93 0.93 0.93 0.93 0.93 0.93 0.93 0.92 </table>
 		<set name="icon" val="icon.skill0436" />
 		<set name="magicLvl" val="78" />
@@ -1495,7 +1519,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="437" levels="1" name="Song of Silence" enchantGroup1="5" enchantGroup2="5">
-		<!-- Confirmed CT2.5 -->
+		<!-- Weaves a mystical song that blocks all the enemy's physical and magical skills for 2 minutes. -->
 		<table name="#ench1ActivateRates"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 </table>
 		<table name="#ench1EffectPoints"> -154 -159 -165 -171 -177 -183 -189 -196 -202 -209 -215 -222 -229 -236 -243 </table>
 		<table name="#ench2AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
@@ -1534,6 +1558,7 @@
 		</for>
 	</skill>
 	<skill id="438" levels="1" name="Soul of the Phoenix">
+		<!-- Maintains buffs and de-buffs even after death. The Blessing of Noblesse and the Amulet of Luck disappear, however. Consumes 1 Blood of the Phoenix. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
@@ -1558,6 +1583,7 @@
 		</for>
 	</skill>
 	<skill id="439" levels="1" name="Shield of Revenge">
+		<!-- For 5 minutes, returns damage from close range physical attacks and skills back to the opponent at a fixed rate. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
@@ -1577,6 +1603,7 @@
 		</for>
 	</skill>
 	<skill id="440" levels="1" name="Braveheart" enchantGroup1="5">
+		<!-- Increases combat spirit to recover CP by 1000. -->
 		<table name="#ench1amount"> 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 1110 1120 1130 1140 1150 </table>
 		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="1500" />
@@ -1599,7 +1626,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="441" levels="1" name="Force Meditation">
-		<!-- Confirmed CT2.5 -->
+		<!-- Uses chi energy to recover 60 HP and 10 MP per second for 1 minute. While skill is in effect, user is unable to move, and P. Def. is decreased by 80%. The effect is canceled if user is stunned. Must recharge 3rd energy stage. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
@@ -1629,6 +1656,7 @@
 		</for>
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
+		<!-- Uses sword energy make user invincible against standard targets, skills and de-buffs for 10 seconds. Requires a dualsword. Requires 5th stage Sword Energy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1659,6 +1687,7 @@
 		</for>
 	</skill>
 	<skill id="443" levels="1" name="Force Barrier">
+		<!-- Makes user invincible against standard targets, skills and de-buffs for 10 seconds. Requires a hand-to-hand weapon. Requires 4th stage Energy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1689,7 +1718,7 @@
 		</for>
 	</skill>
 	<skill id="444" levels="1" name="Sweeper Festival">
-		<!-- High Five Skill -->
+		<!-- When used on nearby corpses that are in a Spoil state, extra items may be obtained. -->
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
@@ -1706,7 +1735,7 @@
 		</for>
 	</skill>
 	<skill id="445" levels="1" name="Mirage">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 1 minute, provides a chance to cancel the target of an attacking enemy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MIRAGE" />
@@ -1730,6 +1759,7 @@
 		</for>
 	</skill>
 	<skill id="446" levels="1" name="Dodge">
+		<!-- Allows user to evade short-range and long-range physical attack skills for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="AVOID_SKILL" />
@@ -1749,6 +1779,7 @@
 		</for>
 	</skill>
 	<skill id="447" levels="1" name="Counterattack">
+		<!-- For 10 seconds, transfers damage from close range physical attacks and skills back to the opponent. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
@@ -1768,6 +1799,7 @@
 		</for>
 	</skill>
 	<skill id="448" levels="1" name="Summon Swoop Cannon" enchantGroup1="1">
+		<!-- Summons a Swoop Cannon. Requires 27 Crystals: A-Grade. Consumes 13 Gemstones: B-Grade per minute. -->
 		<table name="#ench1npcId"> 14840 14841 14842 14843 14844 14845 14846 14847 14848 14849 14850 14851 14852 14853 14854 14855 14856 14857 14858 14859 14860 14861 14862 14863 14864 14865 14866 14867 14868 14869 </table>
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill0448" />
@@ -1803,7 +1835,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="449" levels="4" name="Summon Attractive Cubic" enchantGroup1="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Summons Attractive Cubic. Attractive Cubic can continuously use hate and hold magic on the enemy. Requires 8 Spirit Ore. -->
 		<table name="#cubicPower"> 1026 1264 1530 1822 </table>
 		<table name="#itemConsumeCount"> 8 9 10 11 </table>
 		<table name="#magicLvl"> 62 66 70 74 </table>
@@ -1814,7 +1846,7 @@
 		<set name="icon" val="icon.skill0449" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" />
+		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
@@ -1836,7 +1868,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="450" levels="10" name="Banish Seraph" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 20 seconds, frightens an angel into fleeing. Consumes 5 Soul Ore. Lethal Strike is possible. -->
 		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
@@ -1855,7 +1887,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0450" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="1785" />
+		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
@@ -1903,6 +1935,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="451" levels="2" name="Sonic Move">
+		<!-- Uses sword energy to increase Speed by 40 for 15 seconds. Need to recharge 2nd stage of Sword Energy. Requires a dualsword. -->
 		<table name="#chargeConsume"> 2 3 </table>
 		<table name="#effectPoints"> 582 624 </table>
 		<table name="#magicLvl"> 62 68 </table>
@@ -1934,7 +1967,7 @@
 		</for>
 	</skill>
 	<skill id="452" levels="5" name="Shock Stomp" enchantGroup1="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Performs a mighty foot stomp that stuns nearby enemies for 9 seconds. Requires a polearm. Target cancel is possible. -->
 		<table name="#chance"> 40 50 60 70 80 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
 		<table name="#ench1Chance"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
@@ -1978,7 +2011,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="453" levels="1" name="Escape Shackle">
-		<!-- Confirmed CT2.5 -->
+		<!-- Allows you to escape from a captured state. -->
 		<set name="effectPoint" val="597" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0453" />
@@ -1995,6 +2028,7 @@
 		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
+		<!-- Creates a seal that maximizes the defensives abilities of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0454" />
@@ -2016,6 +2050,7 @@
 		</for>
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
+		<!-- Creates a seal that cancels the song or dance of nearby enemies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="5000" />
@@ -2038,6 +2073,7 @@
 		</for>
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
+		<!-- Creates a seal that maximizes Resistance to altered state abilities of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0456" />
@@ -2059,6 +2095,7 @@
 		</for>
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
+		<!-- Creates a seal that maximizes HP/CP regeneration of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0457" />
@@ -2080,6 +2117,7 @@
 		</for>
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
+		<!-- Creates a seal that increases P. Atk. and spiritual energy of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0458" />
@@ -2101,6 +2139,7 @@
 		</for>
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
+		<!-- Creates a seal that maximizes the bow/crossbow using abilities of nearby allies. The seal's effect disappears upon escape from the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0459" />
@@ -2122,6 +2161,7 @@
 		</for>
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
+		<!-- Creates a seal that maximizes Evasion and Critical Rate of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0460" />
@@ -2143,6 +2183,7 @@
 		</for>
 	</skill>
 	<skill id="461" levels="2" name="Break Duress">
+		<!-- Use your spirit to escape from an immobile state. Level 2 Focused Force charge required. -->
 		<table name="#chargeConsume"> 2 3 </table>
 		<table name="#dispelAbnormals"> ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 </table>
 		<table name="#magicLvl"> 60 66 </table>
@@ -2167,7 +2208,7 @@
 		</for>
 	</skill>
 	<skill id="462" levels="1" name="Guilted Body">
-		<!-- Confirmed CT2.5 -->
+		<!-- Body of original sin. Only light armor types can equip it. -->
 		<set name="icon" val="icon.skill0462" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -2180,7 +2221,7 @@
 		</for>
 	</skill>
 	<skill id="463" levels="3" name="Weapon Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by 8.5% and additionally by 2. -->
 		<table name="#magicLvl"> 5 10 15 </table>
 		<table name="#pAtk"> 2 3 4 </table>
 		<set name="icon" val="icon.skill0141" />
@@ -2195,7 +2236,7 @@
 		</for>
 	</skill>
 	<skill id="464" levels="5" name="Armor Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Def. by 9 and MP Recovery Bonus by 10%. -->
 		<table name="#magicLvl"> 5 8 10 13 15 </table>
 		<table name="#pDef"> 9 11 12 13 14 </table>
 		<table name="#rEvas"> 0 0 0 3 3 </table>
@@ -2212,6 +2253,7 @@
 		</for>
 	</skill>
 	<skill id="465" levels="50" name="Light Armor Mastery" enchantGroup1="1" enchantGroup2="1">
+		<!-- When equipped with light armor, increases P. Def. by 0.9 and Evasion by 3, and decreases the opponent's Critical Rate/Damage by 5%. -->
 		<table name="#magicLvl"> 18 20 22 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pDef"> 0.9 2.2 3.2 4.2 5.3 6 6.8 8.4 9.2 10.1 11.9 12.8 13.7 15.7 16.7 17.8 18.8 19.9 21.1 22.2 23.4 24.5 25.8 27 28.2 29.5 30.8 32.1 33.5 34.8 36.2 37.6 39.1 40.5 42 43.5 44.9 46.5 48 49.5 51.1 52.7 54.2 55.8 57.4 59.1 60.7 62.3 63.9 65.6 </table>
 		<table name="#rEvas"> 3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 </table>
@@ -2274,7 +2316,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="466" levels="55" name="Magic Immunity" enchantGroup1="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases M. Def. by 11. -->
 		<table name="#magicLvl"> 5 8 10 13 15 18 20 22 24 26 27 28 30 31 32 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#magicSuccRes"> 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 1.25 1.25 1.25 1.25 1.25 1.25 </table>
 		<table name="#mDef"> 11 12 13 15 17 19 20 22 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
@@ -2299,7 +2341,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="467" levels="23" name="Soul Mastery">
-		<!-- Confirmed CT2.5 -->
+		<!-- Absorbs a soul. 73 or more Exp is needed to absorb a soul. Maximum of 5 souls can be absorbed. -->
 		<table name="#activationChance"> 0 0 0 15 15 15 15 15 20 20 20 20 20 20 25 25 25 25 25 25 30 30 30 </table>
 		<table name="#expNeeded"> 73 147 220 294 385 486 614 777 960 1109 1269 1440 1622 1815 2018 2160 2306 2457 2613 2774 2940 3110 3285 </table>
 		<table name="#magicLvl"> 5 10 15 20 24 28 32 36 40 43 46 49 52 55 58 60 62 64 66 68 70 72 74 </table>
@@ -2326,7 +2368,7 @@
 		</for>
 	</skill>
 	<skill id="468" levels="9" name="Fallen Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's P. Atk. with 30 Power. Requires a sword, blunt weapon or short sword. Over-hit is possible. -->
 		<table name="#effectPoints"> -52 -54 -57 -64 -67 -70 -79 -83 -86 </table>
 		<table name="#magicLvl"> 3 4 5 8 9 10 13 14 15 </table>
 		<table name="#mpConsume"> 9 9 10 11 12 13 16 16 17 </table>
@@ -2354,7 +2396,7 @@
 		</for>
 	</skill>
 	<skill id="469" levels="1" name="Rapid Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases the user's Atk. Spd. by 15% for 20 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -2376,7 +2418,7 @@
 		</for>
 	</skill>
 	<skill id="470" levels="7" name="Detect Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Detects traps below Level 18. -->
 		<table name="#magicLvl"> 15 24 36 46 55 66 74 </table>
 		<table name="#mpConsume"> 14 18 27 36 44 54 60 </table>
 		<table name="#power"> 18 28 38 48 58 68 78 </table>
@@ -2396,7 +2438,7 @@
 		</for>
 	</skill>
 	<skill id="471" levels="7" name="Defuse Trap">
-		<!-- Confirmed CT2.5 -->
+		<!-- Disarm traps below Level 18. -->
 		<table name="#magicLvl"> 15 24 36 46 55 66 74 </table>
 		<table name="#mpConsume"> 4 5 7 9 11 14 15 </table>
 		<table name="#power"> 18 28 38 48 58 68 78 </table>
@@ -2418,7 +2460,7 @@
 		</effect>
 	</skill>
 	<skill id="472" levels="45" name="Ancient Sword Mastery" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by 5.2 when using an ancient sword. -->
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pAtk"> 5.2 8.1 9.9 11.9 14.1 16.6 19.4 22.5 25.9 27.7 29.6 31.6 33.7 35.9 38.1 40.5 42.9 45.4 48.1 50.8 53.6 56.5 59.4 62.5 65.6 68.9 72.2 75.6 79 82.5 86.1 89.8 93.5 97.3 101.1 104.9 108.8 112.7 116.7 120.6 124.6 128.5 132.5 136.4 140.3 </table>
 		<table name="#ench1pAtk"> 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 177 178 179 </table>
@@ -2456,7 +2498,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="473" levels="45" name="Crossbow Mastery" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases P. Atk. by 12.64 when using a crossbow. -->
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pAtk"> 12.64 18 21.28 24.88 29.04 33.6 38.72 44.32 50.56 53.92 86.72 92.16 97.84 103.76 109.92 116.32 122.96 129.84 136.96 144.4 152 159.92 168 176.32 184.96 193.76 202.8 212 221.44 231.04 240.88 250.8 260.96 271.2 281.6 292.16 302.72 313.44 324.16 334.96 345.76 356.56 367.28 378 388.72 </table>
 		<table name="#ench1pAtk"> 412 415 418 420 423 426 429 432 435 437 440 443 446 449 452 454 457 460 463 466 469 471 474 477 480 483 486 488 491 494 </table>
@@ -2494,7 +2536,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="474" levels="45" name="Rapier Mastery" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Increases P. Atk. by 3.2 when using a short sword. -->
 		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mAtkSpd"> 1 1 1 1 1 1 1 1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
 		<table name="#pAtk"> 3.2 5.28 6.48 7.84 9.36 11.12 13.04 15.2 17.52 18.8 20.08 21.44 22.88 24.4 25.92 27.6 29.28 30.96 32.8 34.64 36.56 38.56 40.64 42.72 44.88 47.12 49.44 51.76 54.16 56.56 59.04 61.52 64.08 66.72 69.36 72 74.64 77.36 80.08 82.8 85.52 88.24 90.96 93.68 96.4 </table>
@@ -2542,7 +2584,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="475" levels="1" name="Strike Back">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transfers damage received from close range physical attacks and skills back to the opponent. Continuously consumes MP proportionately to the user's level. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0475" />
 		<set name="magicLvl" val="20" />
@@ -2557,7 +2599,7 @@
 		</for>
 	</skill>
 	<skill id="476" levels="15" name="Dark Strike">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with 108 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires a sword, blunt weapon, or ancient sword. Over-hit is possible. -->
 		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 16 16 16 17 18 18 20 21 21 23 23 24 25 26 27 </table>
@@ -2586,7 +2628,7 @@
 		</for>
 	</skill>
 	<skill id="477" levels="37" name="Dark Smash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with 738 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. -->
 		<table name="#effectPoints"> -183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 29 30 31 31 32 33 34 35 36 37 38 39 40 40 41 42 43 44 45 46 47 48 49 49 50 51 52 53 54 54 55 56 57 58 59 59 60 </table>
@@ -2633,7 +2675,7 @@
 		</for>
 	</skill>
 	<skill id="478" levels="15" name="Double Thrust">
-		<!-- Confirmed CT2.5 -->
+		<!-- Attacks the enemy with 108 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires a short sword. Over-hit is possible. -->
 		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 16 16 16 18 18 19 20 21 21 23 23 24 25 26 27 </table>
@@ -2662,7 +2704,7 @@
 		</for>
 	</skill>
 	<skill id="479" levels="1" name="Hard March">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Speed by 20. Continuously consumes MP proportionately to the user's level. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0479" />
 		<set name="magicLvl" val="24" />
@@ -2677,7 +2719,7 @@
 		</for>
 	</skill>
 	<skill id="480" levels="1" name="Dark Blade">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Dark attacks by 10. -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0480" />
 		<set name="magicLvl" val="36" />
@@ -2691,7 +2733,7 @@
 		</for>
 	</skill>
 	<skill id="481" levels="2" name="Dark Armor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Resistance to Dark by 7. -->
 		<table name="#darkRes"> 7 10 </table>
 		<table name="#magicLvl"> 32 43 </table>
 		<set name="abnormalVisualEffect" val="NONE" />
@@ -2707,7 +2749,7 @@
 		</for>
 	</skill>
 	<skill id="482" levels="2" name="Furious Soul">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- For 1 minute 30 seconds, increases the user's Critical Rate by 20% and Critical Damage by 25%. Decreases P. Def. by 5%. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#cAtk"> 1.25 1.3 </table>
 		<table name="#effectPoints"> 235 523 </table>
@@ -2735,7 +2777,7 @@
 		</for>
 	</skill>
 	<skill id="483" levels="2" name="Sword Shield" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- For 30 seconds, increases P. Def. by 1600 and decreases Speed by 40%. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 204 438 </table>
 		<table name="#magicLvl"> 36 52 </table>
@@ -2778,7 +2820,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="484" levels="1" name="Rush">
-		<!-- Confirmed CT2.5 -->
+		<!-- Charges the enemy. Requires an ancient sword or short sword. -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-303" />
@@ -2803,7 +2845,7 @@
 		</for>
 	</skill>
 	<skill id="485" levels="7" name="Disarm" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 seconds. -->
 		<table name="#effectPoints"> -341 -408 -467 -523 -582 -624 -655 </table>
 		<table name="#magicLvl"> 36 43 49 55 62 68 74 </table>
 		<table name="#mpConsume"> 25 30 35 40 46 51 55 </table>
@@ -2840,7 +2882,7 @@
 		</for>
 	</skill>
 	<skill id="486" levels="2" name="Increase Range">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases a crossbow's range by 200. -->
 		<table name="#magicLvl"> 24 40 </table>
 		<table name="#pAtkRange"> 200 400 </table>
 		<set name="icon" val="icon.skill0486" />
@@ -2856,7 +2898,7 @@
 		</for>
 	</skill>
 	<skill id="487" levels="15" name="Penetrating Shot">
-		<!-- Confirmed CT2.5 -->
+		<!-- Fires a powerful bolt to attack the enemy with 179 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Requires a crossbow. Over-hit is possible. -->
 		<table name="#effectPoints"> -192 -199 -207 -222 -230 -238 -255 -264 -272 -290 -299 -308 -327 -337 -346 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 69 70 71 74 78 81 88 91 95 101 101 104 112 116 120 </table>
@@ -2885,7 +2927,7 @@
 		</for>
 	</skill>
 	<skill id="489" levels="1" name="Shift Target">
-		<!-- Confirmed CT2.5 -->
+		<!-- Transfers the Aggression of nearby enemies to a selected party members only. Requires a crossbow. -->
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1" />
@@ -2912,7 +2954,7 @@
 		</for>
 	</skill>
 	<skill id="490" levels="2" name="Fast Shot" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases the user's crossbow Atk. Spd. by 8% for 20 minutes. -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#effectPoints"> 303 549 </table>
 		<table name="#magicLvl"> 32 55 </table>
@@ -2946,7 +2988,6 @@
 		</for>
 	</skill>
 	<skill id="491" levels="1" name="Not In Use">
-		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0491" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2965,7 +3006,7 @@
 		</cond>
 	</skill>
 	<skill id="492" levels="25" name="Spread Wing" enchantGroup1="2" enchantGroup2="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Spreads wings to attack nearby enemies with 866 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Over-hit is possible. -->
 		<table name="#effectPoints"> -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
@@ -3003,7 +3044,7 @@
 		</for>
 	</skill>
 	<skill id="493" levels="28" name="Storm Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's P. Atk. with 742 Power in a hurricane-like assault. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. -->
 		<table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
 		<table name="#effectPoints"> -114 -117 -119 -121 -124 -126 -129 -131 -133 -136 -138 -140 -142 -144 -146 -148 -150 -152 -154 -156 -157 -159 -160 -162 -163 -164 -166 -167 </table>
 		<table name="#effectRange"> 600 600 600 600 600 600 600 600 600 600 700 700 700 700 700 700 700 700 700 700 800 800 800 800 800 800 800 800 </table>
@@ -3064,7 +3105,7 @@
 		</for>
 	</skill>
 	<skill id="494" levels="37" name="Shoulder Charge" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Disrupts the enemy with a sudden and powerful shoulder charge, stunning them for 9 seconds. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. -->
 		<table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
 		<table name="#effectPoints"> -183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#effectRange"> 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 700 700 700 700 700 700 700 700 700 700 800 800 800 800 800 800 800 800 </table>
@@ -3137,7 +3178,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="495" levels="10" name="Blade Rush" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for 20 seconds. Makes them consume 107 HP every second. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword to be equipped. Over-hit is possible. -->
 		<table name="#abnormalLvls"> 6 6 7 7 7 7 8 8 8 8 </table>
 		<table name="#castRange"> 400 500 500 500 500 500 600 600 600 600 </table>
 		<table name="#dot"> 107 107 123 123 123 123 123 134 134 134 </table>
@@ -3212,7 +3253,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's P. Atk. by 787 Power in a mighty sword swing. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. -->
 		<table name="#effectPoints"> -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
@@ -3265,7 +3306,7 @@
 		</for>
 	</skill>
 	<skill id="497" levels="16" name="Crushing Pain" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's P. Atk. by 4558 Power in a crushing blow. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. Ignores Shield Defense. -->
 		<table name="#effectPoints"> -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 </table>
 		<table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
@@ -3320,7 +3361,7 @@
 		</for>
 	</skill>
 	<skill id="498" levels="12" name="Contagion" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
-		<!-- Confirmed CT2.5 -->
+		<!-- Supplements the user's P. Atk. by 5342 Power in a deadly vital strike. Increases Power upon the consumption of up to 5 souls. Requires an ancient sword. Over-hit is possible. Ignores Shield Defense. -->
 		<table name="#effectPoints"> -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 </table>
 		<table name="#magicLvl"> 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 63 65 66 67 68 69 70 71 72 73 74 75 </table>
@@ -3364,7 +3405,7 @@
 		</for>
 	</skill>
 	<skill id="499" levels="3" name="Courage">
-		<!-- Confirmed CT2.5 -->
+		<!-- Increases Resistance to Mental attacks by 40 for 1 minute. -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#effectPoints"> 341 467 582 </table>
 		<table name="#magicLvl"> 36 49 62 </table>

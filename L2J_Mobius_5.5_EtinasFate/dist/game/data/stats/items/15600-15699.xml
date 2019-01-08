@@ -978,7 +978,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15669" name="Sealed Vesper Shield Fragment" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make a Sealed Vesper Shield. It can be sold at ordinary stores. -->
+		<!-- Key material for Dwarves to make a Sealed Vesper Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sealed_vesper_verteidiger_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1417,7 +1417,7 @@
 		</stats>
 	</item>
 	<item id="15686" name="Triumph Bow" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 78.9. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases Critical by 78.9. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/ crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tysandy_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1599,7 +1599,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="15693" name="Sealed Moirai Shield Fragment" type="EtcItem">
-		<!-- Essential ingredient that a Dwarf needs to make a Sealed Moirai Shield. It can be sold at ordinary stores. -->
+		<!-- Key material for Dwarves to make a Sealed Moirai Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_sealed_bluelycan_shield_piece_I01" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

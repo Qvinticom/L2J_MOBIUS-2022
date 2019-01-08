@@ -12,7 +12,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6003" name="Ancient Porcelain: Excellent" type="EtcItem">
-		<!-- Porcelain from the era of an ancient empire. Judged to be of the highest grade excellent porcelain.\0 -->
+		<!-- Porcelain from the era of an ancient empire. Judged to be of the highest grade "excellent" porcelain. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -23,7 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6004" name="Ancient Porcelain: High Quality" type="EtcItem">
-		<!-- Porcelain from the era of an ancient empire. Judged to be of high grade porcelain.\0 -->
+		<!-- Porcelain from the era of an ancient empire. Judged to be of "high grade" porcelain. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -34,7 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6005" name="Ancient Porcelain: Low Quality" type="EtcItem">
-		<!-- Porcelain from the era of an ancient empire. Judged to be of low grade porcelain.\0 -->
+		<!-- Porcelain from the era of an ancient empire. Judged to be of "low grade" porcelain. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6006" name="Ancient Porcelain: Lowest Quality" type="EtcItem">
-		<!-- Porcelain from the era of an ancient empire. Judged to be of the lowest grade porcelain.\0 -->
+		<!-- Porcelain from the era of an ancient empire. Judged to be of the "lowest grade" porcelain. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -113,7 +113,7 @@
 		</skills>
 	</item>
 	<item id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -124,7 +124,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6039" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -135,7 +135,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -146,7 +146,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6041" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +157,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -168,7 +168,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6043" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -179,7 +179,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6044" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -190,7 +190,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6045" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -201,7 +201,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6046" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -212,7 +212,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC�s store. -->
+		<!-- Cannot be used. Can be sold at an NPC? store. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

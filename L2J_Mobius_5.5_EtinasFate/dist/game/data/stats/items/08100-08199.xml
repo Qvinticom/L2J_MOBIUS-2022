@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="8109" name="Infernal Master" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 270 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +270 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1088,7 +1088,7 @@
 		</stats>
 	</item>
 	<item id="8136" name="Doom Crusher" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1922,7 +1922,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8181" name="Academy Circlet" type="Armor">
-		<!-- It can be equipped by Academy characters. When the Academy's protection skill is used, the XP penalty upon death is decreased by 50% and the XP acquired through hunting is increased by 10%. -->
+		<!-- When the Academy Benefaction skill is used, the XP penalty upon death is decreased by 50% and the XP acquired through hunting is increased by 10%. -->
 		<set name="icon" val="icon.accessory_academy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -2113,7 +2113,7 @@
 		</stats>
 	</item>
 	<item id="8191" name="Frintezza's Necklace" type="Armor">
-		<!-- MP + 42, Sleep/Paralysis/Stun Resistance + 15%, Sleep/Paralysis/Stun Attack Rate + 15%, Poison/Bleed Resistance + 25%, Poison /Bleed Attack Rate + 25%. Decreases skill cooldown. Damage Shield effect. Increases Dark Resistance. -->
+		<!-- MP +42, Sleep/ Paralysis/ Stun Resistance +15%, Sleep/ Paralysis/ Stun Attack Rate +15%, Poison/ Bleed Resistance +25%, Poison / Bleed Attack Rate +25%. Decreases skill cooldown. Damage Reflect effect. Increases Dark Resistance. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

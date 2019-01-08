@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20400" level="12" type="L2Monster" name="Blood Fungus">
 		<parameters>
@@ -438,22 +438,22 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="503" min="1" max="1" chance="0.3" /> <!-- Sealed Zubei's Helmet -->
-				<item id="2415" min="1" max="1" chance="0.3" /> <!-- Sealed Avadon Circlet -->
+				<item id="503" min="1" max="1" chance="0.3" /> <!-- Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.3" /> <!-- Avadon Circlet -->
 				<item id="57" min="2539" max="5931" chance="70" /> <!-- Adena -->
 				<item id="4180" min="1" max="1" chance="9.825" /> <!-- Recipe: Silver Arrow -->
-				<item id="4072" min="1" max="3" chance="8.782" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="3" chance="5.885" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4952" min="1" max="1" chance="1.177" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="1.105" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+				<item id="4072" min="1" max="3" chance="8.782" /> <!-- Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="3" chance="5.885" /> <!-- Zubei's Helmet Design -->
+				<item id="4952" min="1" max="1" chance="1.177" /> <!-- Recipe: Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="1.105" /> <!-- Recipe: Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Doom Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="4952" min="1" max="1" chance="11.53" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="11.28" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="7.464" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="7.418" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+				<item id="4952" min="1" max="1" chance="11.53" /> <!-- Recipe: Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="11.28" /> <!-- Recipe: Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="7.464" /> <!-- Recipe: Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="7.418" /> <!-- Recipe: Doom Helmet (60%) -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -496,21 +496,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="2416" min="1" max="1" chance="0.075" /> <!-- Sealed Blue Wolf Helmet -->
-				<item id="2417" min="1" max="1" chance="0.075" /> <!-- Sealed Doom Helmet -->
+				<item id="2416" min="1" max="1" chance="0.075" /> <!-- Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.075" /> <!-- Doom Helmet -->
 				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
 				<item id="57" min="3052" max="7121" chance="70" /> <!-- Adena -->
-				<item id="4089" min="1" max="1" chance="11.45" /> <!-- Sealed Doom Helmet Design -->
-				<item id="4088" min="1" max="3" chance="5.854" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="4089" min="1" max="1" chance="11.45" /> <!-- Doom Helmet Pattern -->
+				<item id="4088" min="1" max="3" chance="5.854" /> <!-- Blue Wolf Helmet Design -->
 				<item id="4121" min="1" max="1" chance="1.426" /> <!-- Bow of Peril Shaft -->
-				<item id="4952" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+				<item id="4952" min="1" max="1" chance="0.75" /> <!-- Recipe: Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="0.75" /> <!-- Recipe: Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Doom Helmet (60%) -->
 				<item id="5004" min="1" max="1" chance="0.075" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
 				<item id="5000" min="1" max="1" chance="0.075" /> <!-- Recipe: Damascus Sword (60%) -->
 				<item id="4965" min="1" max="1" chance="0.075" /> <!-- Recipe: Spirit's Staff (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
+				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Low-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4180" min="1" max="11" chance="79.05" /> <!-- Recipe: Silver Arrow -->
@@ -720,8 +720,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -785,8 +785,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1416,8 +1416,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1547,8 +1547,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1917,7 +1917,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="167" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="9.732" /> <!-- Thread -->
@@ -4405,8 +4405,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4628,8 +4628,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4649,7 +4649,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="1.995" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="1.995" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="1.952" /> <!-- Leather Shoes -->
 				<item id="57" min="36" max="84" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="8.276" /> <!-- Leather Shoe Texture -->
@@ -4792,7 +4792,7 @@
 		<dropLists>
 			<drop>
 				<item id="68" min="1" max="1" chance="0.075" /> <!-- Falchion -->
-				<item id="5284" min="1" max="1" chance="0.075" /> <!-- Zweihander -->
+				<item id="5284" min="1" max="1" chance="0.075" /> <!-- Zweinhander -->
 				<item id="57" min="193" max="454" chance="70" /> <!-- Adena -->
 				<item id="1867" min="1" max="1" chance="18.63" /> <!-- Animal Skin -->
 				<item id="1868" min="1" max="3" chance="13.59" /> <!-- Thread -->

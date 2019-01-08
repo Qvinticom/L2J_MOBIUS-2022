@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15100" toLevel="1" name="Noblesse Blessing">
-		<!-- Glory Days confirmed -->
-		<!-- For 6 hours, buffs and debuffs do not disappear but remain upon death. -->
+		<!-- For 6 hr., buffs and debuffs do not disappear but remain upon death. -->
 		<icon>icon.skill1323</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -24,7 +23,6 @@
 		</effects>
 	</skill>
 	<skill id="15101" toLevel="1" name="Elise' Radiant Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -46,7 +44,6 @@
 		</effects>
 	</skill>
 	<skill id="15102" toLevel="1" name="Elise' Radiant Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Heals the target with 1519 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -68,7 +65,6 @@
 		</effects>
 	</skill>
 	<skill id="15103" toLevel="1" name="Elise' Radiant Heal">
-		<!-- Glory Days confirmed -->
 		<!-- Heals the target with 1557 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -90,8 +86,7 @@
 		</effects>
 	</skill>
 	<skill id="15104" toLevel="1" name="Dimensional Trap">
-		<!-- Glory Days confirmed -->
-		<!-- Immobilizes the enemy for 15 seconds. -->
+		<!-- Immobilizes the enemy for 15 sec. -->
 		<icon>icon.skill11561</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -121,7 +116,6 @@
 		</effects>
 	</skill>
 	<skill id="15105" toLevel="1" name="Mysterious Shadow">
-		<!-- Glory Days confirmed -->
 		<!-- Becomes invisible and decreases speed by 30%. -->
 		<icon>icon.skill10784</icon>
 		<operateType>A2</operateType>
@@ -151,7 +145,6 @@
 		</effects>
 	</skill>
 	<skill id="15106" toLevel="1" name="Mysterious Power">
-		<!-- Glory Days confirmed -->
 		<!-- Sacrifice yourself to attempt a Lethal Strike on the enemy. -->
 		<icon>icon.skill10784</icon>
 		<operateType>A1</operateType>
@@ -172,7 +165,6 @@
 		</effects>
 	</skill>
 	<skill id="15107" toLevel="1" name="Mysterious Sacrifice">
-		<!-- Glory Days confirmed -->
 		<!-- Sacrifice. A state in which HP cannot be recovered. -->
 		<icon>icon.skill4036</icon>
 		<operateType>A2</operateType>
@@ -199,7 +191,6 @@
 		</effects>
 	</skill>
 	<skill id="15108" toLevel="1" name="Ruler's Authority">
-		<!-- Glory Days confirmed -->
 		<!-- Increases your battle abilities. -->
 		<icon>icon.skill10292</icon>
 		<operateType>A2</operateType>
@@ -217,8 +208,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15109" toLevel="1" name="Ruler's Blessing">
-		<!-- Glory Days confirmed -->
-		<!-- Increases sleep, bleed, shock, poison, and hold attack bonus by 30. -->
+		<!-- Increases Sleep, Bleed, Stun, Poison, and Hold attack bonus by 30. -->
 		<icon>icon.skill0335</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -248,7 +238,6 @@
 		</effects>
 	</skill>
 	<skill id="15110" toLevel="1" name="Mandra's Spell">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts damage around you. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
@@ -270,7 +259,6 @@
 		</effects>
 	</skill>
 	<skill id="15111" toLevel="1" name="Mace of Punishment">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts damage and hurls one person for a certain distance. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
@@ -304,7 +292,6 @@
 		</effects>
 	</skill>
 	<skill id="15112" toLevel="1" name="Threat">
-		<!-- Glory Days confirmed -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -357,7 +344,6 @@
 		</effects>
 	</skill>
 	<skill id="15113" toLevel="1" name="Imposing Axe">
-		<!-- Glory Days confirmed -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -415,7 +401,6 @@
 		</effects>
 	</skill>
 	<skill id="15114" toLevel="1" name="Massive Blade">
-		<!-- Glory Days confirmed -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -468,7 +453,6 @@
 		</effects>
 	</skill>
 	<skill id="15115" toLevel="1" name="Black Kiss">
-		<!-- Glory Days confirmed -->
 		<!-- Inflicts damage around you. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
@@ -491,8 +475,7 @@
 		</effects>
 	</skill>
 	<skill id="15116" toLevel="1" name="Dreaming Romantic Pig">
-		<!-- Glory Days confirmed -->
-		<!-- For 15 seconds, change one party member's silhouette into that of a pig. -->
+		<!-- For 15 sec., change one party member's silhouette into that of a pig. -->
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -531,7 +514,6 @@
 		</effects>
 	</skill>
 	<skill id="15117" toLevel="1" name="Massacre Execution">
-		<!-- Glory Days confirmed -->
 		<!-- Chooses 3 party members and kills them on the spot. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
@@ -558,8 +540,7 @@
 		</effects>
 	</skill>
 	<skill id="15118" toLevel="1" name="Induce Mental Illness">
-		<!-- Glory Days confirmed -->
-		<!-- Stuns all party members for 5 seconds. -->
+		<!-- Stuns all party members for 5 sec. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -594,7 +575,6 @@
 		</effects>
 	</skill>
 	<skill id="15119" toLevel="1" name="Whole Body Recovery">
-		<!-- Glory Days confirmed -->
 		<!-- Fully recovers your HP. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
@@ -615,8 +595,7 @@
 		</effects>
 	</skill>
 	<skill id="15120" toLevel="1" name="Death by Execution">
-		<!-- Glory Days confirmed -->
-		<!-- Selects one party member at random and kills him/her on the spot. -->
+		<!-- Selects one party member at random and kills him/ her on the spot. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -639,7 +618,6 @@
 		</effects>
 	</skill>
 	<skill id="15121" toLevel="1" name="Rage Explosion">
-		<!-- Glory Days confirmed -->
 		<!-- Rage explodes at the death of your child. Uses Petra to greatly decrease HP and greatly increases HP Recovery Rate and P. Atk. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -671,7 +649,6 @@
 		</effects>
 	</skill>
 	<skill id="15122" toLevel="1" name="Vernier Calipers Hurl">
-		<!-- Glory Days confirmed -->
 		<!-- Hurls the opponent with a Vernier Calipers in your hands. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -715,7 +692,6 @@
 		</effects>
 	</skill>
 	<skill id="15123" toLevel="1" name="Sword Cleave">
-		<!-- Glory Days confirmed -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -767,7 +743,6 @@
 		</effects>
 	</skill>
 	<skill id="15124" toLevel="1" name="Axe Strike">
-		<!-- Glory Days confirmed -->
 		<!-- Armor is destroyed. P. Def. and M. Def. are decreased by 10%. Additional 500 decease and evasion is decreased by 4. Accumulates as you receive continuous attacks. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A2</operateType>
@@ -819,7 +794,6 @@
 		</effects>
 	</skill>
 	<skill id="15125" toLevel="1" name="Tauti Final Attack">
-		<!-- Glory Days confirmed -->
 		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
@@ -868,7 +842,6 @@
 		</effects>
 	</skill>
 	<skill id="15126" toLevel="1" name="Tauti Final Attack">
-		<!-- Glory Days confirmed -->
 		<!-- Tauti's final attack skill when he has lost almost all of his power. -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
@@ -917,7 +890,6 @@
 		</effects>
 	</skill>
 	<skill id="15127" toLevel="1" name="Equip Weapon">
-		<!-- Glory Days confirmed -->
 		<!-- Continuously receives new weapons from the weapon stand to increase P. Atk. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
@@ -945,7 +917,6 @@
 		</effects>
 	</skill>
 	<skill id="15128" toLevel="1" name="Equip Armor">
-		<!-- Glory Days confirmed -->
 		<!-- Continuously receives new armor from the armor stand to increase P. Def. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
@@ -973,7 +944,6 @@
 		</effects>
 	</skill>
 	<skill id="15129" toLevel="1" name="Full Buff Knight Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -991,7 +961,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15130" toLevel="1" name="Full Buff Knight Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1009,7 +978,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15131" toLevel="1" name="Full Buff Knight Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1027,7 +995,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15132" toLevel="1" name="Full Buff Knight Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Knight Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1045,7 +1012,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15133" toLevel="1" name="Full Buff Warrior Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1063,7 +1029,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15134" toLevel="1" name="Full Buff Warrior Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1081,7 +1046,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15135" toLevel="1" name="Full Buff Warrior Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1099,7 +1063,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15136" toLevel="1" name="Full Buff Warrior Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Warrior Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1117,7 +1080,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15137" toLevel="1" name="Full Buff Wizard Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1135,7 +1097,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15138" toLevel="1" name="Full Buff Wizard Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1153,7 +1114,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15139" toLevel="1" name="Full Buff Wizard Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1171,7 +1131,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15140" toLevel="1" name="Full Buff Wizard Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1189,7 +1148,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15141" toLevel="1" name="Super CP Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1207,7 +1165,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15142" toLevel="1" name="Super CP Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1225,7 +1182,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15143" toLevel="1" name="Super CP Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1243,7 +1199,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15144" toLevel="1" name="Super CP Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
@@ -1261,7 +1216,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15145" toLevel="1" name="Ruler's Authority">
-		<!-- Max CP/HP/MP + 1000, Weight + 25600, Damage + 8%, Received Damage - 9%, Damage Reflect Resistance + 5%, Inventory Slot + 36, and all Attribute Resistance + 15. -->
+		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, damage received -$s4, Damage Reflect Resistance +$s5, inventory slot +$s6, and all attribute resistance +$s7. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1329,7 +1284,7 @@
 		</effects>
 	</skill>
 	<skill id="15146" toLevel="1" name="Mysterious Belt">
-		<!-- Max CP/HP/MP + 500, PvP Damage + 6%, Damage Reflect Resistance + 5%, and Received PvP Damage - 7%. -->
+		<!-- Max HP/ MP/ CP +500, PvP Damage +6%, Damage Reflect Resistance +5%, and Received PvP Damage -7%. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1406,7 +1361,7 @@
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
-				<skillId>15151</skillId>
+				<skillId>15151</skillId> <!-- Overheat -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -1441,7 +1396,7 @@
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
-				<skillId>15152</skillId>
+				<skillId>15152</skillId> <!-- Coolant Leak -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -1565,7 +1520,6 @@
 		</effects>
 	</skill>
 	<skill id="15153" toLevel="1" name="Attention to Draco Incubation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
@@ -1585,7 +1539,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15154" toLevel="1" name="Attention to Draco Incubation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You are concentrating on incubating the summoned Draco Egg. Other Draco Eggs cannot be summoned. -->
 		<icon>icon.skill11507</icon>
 		<operateType>A2</operateType>
@@ -1607,7 +1560,6 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15155" toLevel="1" name="Petrify">
-		<!-- Glory Days confirmed -->
 		<!-- Petrify status. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
@@ -1636,7 +1588,6 @@
 		</effects>
 	</skill>
 	<skill id="15156" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1647,7 +1598,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15157" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1658,7 +1608,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15158" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1669,7 +1618,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15159" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1680,7 +1628,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15160" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1691,7 +1638,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15161" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1702,7 +1648,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15162" toLevel="1" name="Flower Planting">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2090,7 +2035,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15175</channelingSkillId>
+		<channelingSkillId>15175</channelingSkillId> <!-- Petra Injection - Enhance HP Recovery -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -2136,7 +2081,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15177</channelingSkillId>
+		<channelingSkillId>15177</channelingSkillId> <!-- Petra Injection - Enhance P. Def. -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -2182,7 +2127,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15179</channelingSkillId>
+		<channelingSkillId>15179</channelingSkillId> <!-- Petra Injection - Enhance M. Def. -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -2228,7 +2173,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>3000</effectRange>
 		<magicLvl>99</magicLvl>
-		<channelingSkillId>15181</channelingSkillId>
+		<channelingSkillId>15181</channelingSkillId> <!-- Petra Injection - Enhance P. Atk. -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
 		<isMagic>2</isMagic>
@@ -2262,7 +2207,6 @@
 		</effects>
 	</skill>
 	<skill id="15182" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -2287,7 +2231,6 @@
 		</effects>
 	</skill>
 	<skill id="15183" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -2312,7 +2255,6 @@
 		</effects>
 	</skill>
 	<skill id="15184" toLevel="1" name="Adolph's Superior Aggression Aura">
-		<!-- Glory Days confirmed -->
 		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
@@ -2337,8 +2279,7 @@
 		</effects>
 	</skill>
 	<skill id="15185" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2374,8 +2315,7 @@
 		</effects>
 	</skill>
 	<skill id="15186" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2411,8 +2351,7 @@
 		</effects>
 	</skill>
 	<skill id="15187" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks targets at the front and inflicts Stun for 9 second(s). -->
+		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2448,7 +2387,6 @@
 		</effects>
 	</skill>
 	<skill id="15188" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 23391 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -2474,7 +2412,6 @@
 		</effects>
 	</skill>
 	<skill id="15189" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 27459 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -2500,7 +2437,6 @@
 		</effects>
 	</skill>
 	<skill id="15190" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Glory Days confirmed -->
 		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 31527 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -2526,7 +2462,6 @@
 		</effects>
 	</skill>
 	<skill id="15191" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Glory Days confirmed -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 22526 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -2551,7 +2486,6 @@
 		</effects>
 	</skill>
 	<skill id="15192" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Glory Days confirmed -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 26448 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -2576,7 +2510,6 @@
 		</effects>
 	</skill>
 	<skill id="15193" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Glory Days confirmed -->
 		<!-- Rains down arrows like rain on the target and its surrounding area with 30371 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -2601,8 +2534,7 @@
 		</effects>
 	</skill>
 	<skill id="15194" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Glory Days confirmed -->
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2648,8 +2580,7 @@
 		</effects>
 	</skill>
 	<skill id="15195" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Glory Days confirmed -->
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2695,8 +2626,7 @@
 		</effects>
 	</skill>
 	<skill id="15196" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Glory Days confirmed -->
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per sec. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>

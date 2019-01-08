@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14300" type="EtcItem" name="Yaksa Mace">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
@@ -91,7 +91,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3043-4" />
+		<set name="item_skill" val="3043-4" /> <!-- Special Ability: Critical Damage -->
 		<for>
 			<set stat="pAtk" val="136" />
 			<set stat="mAtk" val="83" />
@@ -303,7 +303,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="194" />
 			<set stat="mAtk" val="99" />
@@ -507,7 +507,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3043-6" />
+		<set name="item_skill" val="3043-6" /> <!-- Special Ability: Critical Damage -->
 		<for>
 			<set stat="pAtk" val="170" />
 			<set stat="mAtk" val="99" />
@@ -842,7 +842,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<for>
 			<set stat="pAtk" val="251" />
 			<set stat="mAtk" val="121" />
@@ -1230,6 +1230,7 @@
 		</for>
 	</item>
 	<item id="14351" type="EtcItem" name="Gracian Anniversary Coins">
+		<!-- Gracian Anniversary Coins can be used at an Item Merchant in order to receive a reward. Cannot be exchanged, dropped, destroyed nor stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1240,6 +1241,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14352" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1251,6 +1253,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14353" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1262,6 +1265,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14354" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1273,6 +1277,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14355" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1284,6 +1289,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14356" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1295,6 +1301,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14357" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1306,6 +1313,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14358" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1317,6 +1325,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14359" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1328,6 +1337,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14360" type="EtcItem" name="Sculpture of Doubt">
+		<!-- The Sculpture of Doubt possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1339,6 +1349,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14361" type="EtcItem" name="Blood Stained Cloth">
+		<!-- A piece of cloth soaked in the blood of angels and Platinum race that Magister Kaspar asked for. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1349,6 +1360,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14362" type="EtcItem" name="White Cloth">
+		<!-- A large piece of white cloth given by Magister Kaspar. Stain the cloth with the blood of angels and the Platinum race in the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1359,6 +1371,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14363" type="Weapon" name="Icarus Sawsword {PvP}">
+		<!-- It can bestow one of the following three functions, Focus, Health or Light. Increases damage inflicted during PvP, during an attack, cancels a target's enhanced status by more than 1 occasionally. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1378,7 +1391,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3651-1" />
+		<set name="item_skill" val="3552-3;3651-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1389,6 +1402,7 @@
 		</for>
 	</item>
 	<item id="14364" type="Weapon" name="Icarus Disperser {PvP}">
+		<!-- It can bestow one of the following three functions, Focus, Evasion or Crit. Damage. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1408,7 +1422,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3650-1" />
+		<set name="item_skill" val="3552-3;3650-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -1420,6 +1434,7 @@
 		</for>
 	</item>
 	<item id="14365" type="Weapon" name="Icarus Spirit {PvP}">
+		<!-- It can bestow one of the following three functions, Acumen, Mana Up or Conversion. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1440,7 +1455,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-3;3651-1;3652-1" />
+		<set name="item_skill" val="3552-3;3651-1;3652-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1451,6 +1466,7 @@
 		</for>
 	</item>
 	<item id="14366" type="Weapon" name="Icarus Heavy Arms {PvP}">
+		<!-- It can bestow one of the following three functions, Focus, Health or Light. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1470,7 +1486,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1481,6 +1497,7 @@
 		</for>
 	</item>
 	<item id="14367" type="Weapon" name="Icarus Trident {PvP}">
+		<!-- It can bestow one of the following three functions, Anger, Critical Stun or Light. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1500,7 +1517,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3653-1;3599-1" />
+		<set name="item_skill" val="3552-3;3653-1;3599-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1512,6 +1529,7 @@
 		</for>
 	</item>
 	<item id="14368" type="Weapon" name="Icarus Hammer {PvP}">
+		<!-- It can bestow one of the following three functions, Anger, Health or Rsk. Focus. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1531,7 +1549,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-4;3653-1" />
+		<set name="item_skill" val="3552-4;3653-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1543,6 +1561,7 @@
 		</for>
 	</item>
 	<item id="14369" type="Weapon" name="Icarus Hand {PvP}">
+		<!-- One ability amongst either Rsk. Evasion, Focus or Haste can be granted. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1562,7 +1581,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3650-1" />
+		<set name="item_skill" val="3552-3;3650-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1574,6 +1593,7 @@
 		</for>
 	</item>
 	<item id="14370" type="Weapon" name="Icarus Hall {PvP}">
+		<!-- It can bestow one of the follow three functions, Mana Up, Conversion or Acumen. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1594,7 +1614,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-3;3651-1;3652-1" />
+		<set name="item_skill" val="3552-3;3651-1;3652-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1606,6 +1626,7 @@
 		</for>
 	</item>
 	<item id="14371" type="Weapon" name="Icarus Spitter {PvP}">
+		<!-- One ability amongst either Cheap Shot, Guidance or Focus can be granted. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1627,7 +1648,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -1639,6 +1660,7 @@
 		</for>
 	</item>
 	<item id="14372" type="Weapon" name="Icarus Stinger {PvP}">
+		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. Focus, Health, or Light can be bestowed. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal and decreased MP consumption per skill during a critical attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1659,7 +1681,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1" />
+		<set name="item_skill" val="3552-3;3655-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1674,6 +1696,7 @@
 		</for>
 	</item>
 	<item id="14373" type="Weapon" name="Icarus Wingblade {PvP}">
+		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms conversion. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases Resistance to attributes. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1693,7 +1716,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3656-1;3657-1" />
+		<set name="item_skill" val="3552-3;3656-1;3657-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1708,6 +1731,7 @@
 		</for>
 	</item>
 	<item id="14374" type="Weapon" name="Icarus Shooter {PvP}">
+		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1728,7 +1752,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3653-1" />
+		<set name="item_skill" val="3552-3;3653-1" /> <!-- Special Ability: PvP Damage -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1743,6 +1767,7 @@
 		</for>
 	</item>
 	<item id="14375" type="Weapon" name="Icarus Dual Sword {PvP}">
+		<!-- P. Atk. of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1763,7 +1788,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3656-1" />
+		<set name="item_skill" val="3552-3;3656-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1774,6 +1799,7 @@
 		</for>
 	</item>
 	<item id="14376" type="Weapon" name="Icarus Sawsword {PvP} - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1793,7 +1819,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3566-2" />
+		<set name="item_skill" val="3552-1;3650-1;3566-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1804,6 +1830,7 @@
 		</for>
 	</item>
 	<item id="14377" type="Weapon" name="Icarus Sawsword {PvP} - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1823,7 +1850,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3013-3" />
+		<set name="item_skill" val="3552-1;3650-1;3013-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1834,6 +1861,7 @@
 		</for>
 	</item>
 	<item id="14378" type="Weapon" name="Icarus Sawsword {PvP} - Light">
+		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1853,7 +1881,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3650-1" />
+		<set name="item_skill" val="3498-1;3552-3;3650-1" /> <!-- Special Ability: Light -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1864,6 +1892,7 @@
 		</for>
 	</item>
 	<item id="14379" type="Weapon" name="Icarus Heavy Arms {PvP} - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1883,7 +1912,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3566-2" />
+		<set name="item_skill" val="3552-1;3653-1;3566-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1894,6 +1923,7 @@
 		</for>
 	</item>
 	<item id="14380" type="Weapon" name="Icarus Heavy Arms {PvP} - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1913,7 +1943,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3013-3" />
+		<set name="item_skill" val="3552-1;3653-1;3013-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1924,6 +1954,7 @@
 		</for>
 	</item>
 	<item id="14381" type="Weapon" name="Icarus Heavy Arms {PvP} - Light">
+		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1943,7 +1974,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3653-1" />
+		<set name="item_skill" val="3498-1;3552-3;3653-1" /> <!-- Special Ability: Light -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1954,6 +1985,7 @@
 		</for>
 	</item>
 	<item id="14382" type="Weapon" name="Icarus Spirit {PvP} - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1974,7 +2006,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-2" />
+		<set name="item_skill" val="3552-1;3654-1;3047-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -1985,6 +2017,7 @@
 		</for>
 	</item>
 	<item id="14383" type="Weapon" name="Icarus Spirit {PvP} - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2005,7 +2038,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-2" />
+		<set name="item_skill" val="3552-1;3654-1;3014-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -2016,6 +2049,7 @@
 		</for>
 	</item>
 	<item id="14384" type="Weapon" name="Icarus Spirit {PvP} - Conversion">
+		<!-- <Soul Crystal Enhancement>. Max MP increases by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2036,7 +2070,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3048-2" />
+		<set name="item_skill" val="3552-1;3654-1;3048-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -2047,6 +2081,7 @@
 		</for>
 	</item>
 	<item id="14385" type="Weapon" name="Icarus Spitter {PvP} - Cheap Shot">
+		<!-- <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2068,7 +2103,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1;8312-1" />
+		<set name="item_skill" val="3552-3;3655-1;8312-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -2080,6 +2115,7 @@
 		</for>
 	</item>
 	<item id="14386" type="Weapon" name="Icarus Spitter {PvP} - Guidance">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2101,7 +2137,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;3573-2" />
+		<set name="item_skill" val="3552-1;3655-1;3573-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -2113,6 +2149,7 @@
 		</for>
 	</item>
 	<item id="14387" type="Weapon" name="Icarus Spitter {PvP} - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2134,7 +2171,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;3567-2" />
+		<set name="item_skill" val="3552-1;3655-1;3567-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="689" />
 			<set stat="mAtk" val="163" />
@@ -2146,6 +2183,7 @@
 		</for>
 	</item>
 	<item id="14388" type="Weapon" name="Icarus Disperser {PvP} - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2165,7 +2203,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3651-1;3652-1;3567-2" />
+		<set name="item_skill" val="3552-1;3651-1;3652-1;3567-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -2177,6 +2215,7 @@
 		</for>
 	</item>
 	<item id="14389" type="Weapon" name="Icarus Disperser {PvP} - Evasion">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2196,7 +2235,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3009-8;3552-3;3651-1;3652-1" />
+		<set name="item_skill" val="3009-8;3552-3;3651-1;3652-1" /> <!-- Special Ability: Evasion -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -2208,6 +2247,7 @@
 		</for>
 	</item>
 	<item id="14390" type="Weapon" name="Icarus Disperser {PvP} - Critical Damage">
+		<!-- <Soul Crystal Enhancement>. P. Atk. by 559 during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2227,7 +2267,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3651-1;3652-1;3066-4" />
+		<set name="item_skill" val="3552-1;3651-1;3652-1;3066-4" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="318" />
 			<set stat="mAtk" val="163" />
@@ -2239,6 +2279,7 @@
 		</for>
 	</item>
 	<item id="14391" type="Weapon" name="Icarus Trident {PvP} - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2258,7 +2299,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3600-10" />
+		<set name="item_skill" val="3552-1;3653-1;3600-10" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2270,6 +2311,7 @@
 		</for>
 	</item>
 	<item id="14392" type="Weapon" name="Icarus Trident {PvP} - Critical Stun">
+		<!-- <Soul Crystal Enhancement>. There is a 48% chance to Stun target during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2291,7 +2333,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="oncrit_chance" val="48" />
 		<set name="oncrit_skill" val="3070-4" />
-		<set name="item_skill" val="3552-4;3653-1" />
+		<set name="item_skill" val="3552-4;3653-1" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2303,6 +2345,7 @@
 		</for>
 	</item>
 	<item id="14393" type="Weapon" name="Icarus Trident {PvP} - Light">
+		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2322,7 +2365,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-4;3653-1" />
+		<set name="item_skill" val="3498-1;3552-4;3653-1" /> <!-- Special Ability: Light -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2334,6 +2377,7 @@
 		</for>
 	</item>
 	<item id="14394" type="Weapon" name="Icarus Hammer {PvP} - Anger">
+		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2353,7 +2397,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3057-4" />
+		<set name="item_skill" val="3552-1;3650-1;3057-4" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2365,6 +2409,7 @@
 		</for>
 	</item>
 	<item id="14395" type="Weapon" name="Icarus Hammer {PvP} - Health">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2384,7 +2429,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3013-3" />
+		<set name="item_skill" val="3552-1;3650-1;3013-3" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2396,6 +2441,7 @@
 		</for>
 	</item>
 	<item id="14396" type="Weapon" name="Icarus Hammer {PvP} - Rsk. Focus">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or lower. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2415,7 +2461,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3027-7" />
+		<set name="item_skill" val="3552-1;3650-1;3027-7" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2427,6 +2473,7 @@
 		</for>
 	</item>
 	<item id="14397" type="Weapon" name="Icarus Hall {PvP} - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2447,7 +2494,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-2" />
+		<set name="item_skill" val="3552-1;3654-1;3014-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -2459,6 +2506,7 @@
 		</for>
 	</item>
 	<item id="14398" type="Weapon" name="Icarus Hall {PvP} - Conversion">
+		<!-- <Soul Crystal Enhancement>. Max MP increases by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2479,7 +2527,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3048-2" />
+		<set name="item_skill" val="3552-1;3654-1;3048-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />
@@ -2491,6 +2539,7 @@
 		</for>
 	</item>
 	<item id="14399" type="Weapon" name="Icarus Hall {PvP} - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2511,7 +2560,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-2" />
+		<set name="item_skill" val="3552-1;3654-1;3047-2" /> <!-- Special Ability: PvP Damage -->
 		<for>
 			<set stat="pAtk" val="290" />
 			<set stat="mAtk" val="217" />

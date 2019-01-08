@@ -47,7 +47,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49705" name="Forbidden Limit Chest" type="EtcItem">
-		<!-- A chest containing the power of Forbidden Limit. Double-click to receive Talisman of Border�s Fragment and, at a low probability, Talisman of Darkness Box. Cannot be dropped. -->
+		<!-- A chest containing the power of Forbidden Limit. Double-click to receive Talisman of Border? Fragment and, at a low probability, Talisman of Darkness Box. Cannot be dropped. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -250,7 +250,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49707" min="1" max="1" chance="100" />
+			<item id="49707" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - P. Atk. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49718" name="Talisman of Darkness Box - M. Atk." additionalName="1 hour" type="EtcItem">
@@ -265,7 +265,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49708" min="1" max="1" chance="100" />
+			<item id="49708" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - M. Atk. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49719" name="Talisman of Darkness Box - P. Def." additionalName="1 hour" type="EtcItem">
@@ -280,7 +280,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49709" min="1" max="1" chance="100" />
+			<item id="49709" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - P. Def. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49720" name="Talisman of Darkness Box - M. Def." additionalName="1 hour" type="EtcItem">
@@ -295,7 +295,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49710" min="1" max="1" chance="100" />
+			<item id="49710" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - M. Def. - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49721" name="Talisman of Darkness Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
@@ -310,7 +310,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49711" min="1" max="1" chance="100" />
+			<item id="49711" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - P. Skills Evasion - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49722" name="Talisman of Darkness Box - M. Skills Evasion" additionalName="1 hour" type="EtcItem">
@@ -325,7 +325,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49712" min="1" max="1" chance="100" />
+			<item id="49712" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - M. Skills Evasion - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49723" name="Talisman of Darkness Box - HP" additionalName="1 hour" type="EtcItem">
@@ -340,7 +340,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49713" min="1" max="1" chance="100" />
+			<item id="49713" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - HP - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49724" name="Talisman of Darkness Box - MP" additionalName="1 hour" type="EtcItem">
@@ -355,7 +355,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49714" min="1" max="1" chance="100" />
+			<item id="49714" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - MP - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49725" name="Talisman of Darkness Box - Healing Power" additionalName="1 hour" type="EtcItem">
@@ -370,7 +370,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49715" min="1" max="1" chance="100" />
+			<item id="49715" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - Healing Power - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49726" name="Talisman of Darkness Box - Power of Healing Magic" additionalName="1 hour" type="EtcItem">
@@ -385,7 +385,7 @@
 		<set name="time" val="60" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="49716" min="1" max="1" chance="100" />
+			<item id="49716" min="1" max="1" chance="100" /> <!-- Talisman of Darkness - Power of Healing Magic - 1 hour -->
 		</capsuled_items>
 	</item>
 	<item id="49727" name="Limited Talisman of Border - Lv. 1" type="Armor">
@@ -832,7 +832,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="49755" name="Talisman of Baium Box" type="EtcItem">
-		<!-- Double-click to receive one of the following items: Talisman of Baium, Baium�s Soul, Talisman of Insolence I, Talisman of Insolence II, Energy of Insolence, Talisman Crystal, or Elemental Stone. Cannot be dropped. -->
+		<!-- Double-click to receive one of the following items: Talisman of Baium, Baium? Soul, Talisman of Insolence I, Talisman of Insolence II, Energy of Insolence, Talisman Crystal, or Elemental Stone. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -895,7 +895,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39152" level="1"/> <!--Ornament Supply Box (A-grade)-->
+			<skill id="39152" level="1"/> <!-- Ornament Supply Box (A-grade) -->
 		</skills>
 	</item>
 	<item id="49762" name="Armor Ingredient Box - A-grade" type="EtcItem">
@@ -972,7 +972,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49771" name="Emperor Baium's Secret Treasures" type="EtcItem">
-		<!-- Double-click to receive Scroll Box: Emperor Baium's Enchant. In addition, with a certain probability, you might get Sayha�s Energy (5 pcs.). Cannot be sold in the grocery store. -->
+		<!-- Double-click to receive Scroll Box: Emperor Baium's Enchant. In addition, with a certain probability, you might get Sayha? Energy (5 pcs.). Cannot be sold in the grocery store. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1137,7 +1137,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39172" level="1"/> <!--Weapon Supply Box (A-grade)-->
+			<skill id="39172" level="1"/> <!-- Weapon Supply Box (A-grade) -->
 		</skills>
 	</item>
 	<item id="49786" name="A-grade Armor Supply Box" type="EtcItem">
@@ -1148,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39173" level="1"/> <!--Armor Supply Box (A-grade)-->
+			<skill id="39173" level="1"/> <!-- Armor Supply Box (A-grade) -->
 		</skills>
 	</item>
 	<item id="49787" name="Solid Scroll: Enchant (A-grade) Box" type="EtcItem">
@@ -1272,7 +1272,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49798" name="Cheer Stamen" additionalName="Event" type="Weapon">
-		<!-- An item commemorating the game�s 12th anniversary. Helps materializing your dreams. Allows using the Firecracker and Fan Strike skills. Can be transferred between characters on one account and stored in a private warehouse. -->
+		<!-- An item commemorating the game? 12th anniversary. Helps materializing your dreams. Allows using the Firecracker and Fan Strike skills. Can be transferred between characters on one account and stored in a private warehouse. -->
 		<set name="icon" val="icon.ev_12th_weapon" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

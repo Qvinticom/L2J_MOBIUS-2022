@@ -19,7 +19,7 @@
 		</stats>
 	</item>
 	<item id="70101" name="Refined Romantic Chapeau: Gold" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Requires 2 hair accessory slots. Cannot be exchanged, dropped, destroyed, or sold. <Active Skills> 1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Reuse Time: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
+		<!-- A 7-day item. Requires 2 hair accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Active Skills>. 1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 min. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Reuse Time: 60 min. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 min. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -32,9 +32,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="39043" level="1" /> 	<!-- 	Side Effect	-->
-			<skill id="39044" level="1" /> 	<!-- 	Ability of Resurrection	-->
-			<skill id="39045" level="1" /> 	<!-- 	Holiday Hat	-->
+			<skill id="39043" level="1" /> 	<!-- 	Side Effect	 -->
+			<skill id="39044" level="1" /> 	<!-- 	Ability of Resurrection	 -->
+			<skill id="39045" level="1" /> 	<!-- 	Holiday Hat	 -->
 		</skills>
 	</item>
 	<item id="70102" name="Adventurer’s Potion - Atk. Spd." type="EtcItem">
@@ -59,7 +59,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="55235" level="1" /> 	<!-- 	Adventurer Potion Atk. Spd. lvl 1	-->
+			<skill id="55235" level="1" /> 	<!-- 	Adventurer Potion Atk. Spd. lvl 1	 -->
 		</skills>
 	</item>
 	<item id="70103" name="Adventurer’s Potion - Casting Spd." type="EtcItem">
@@ -84,7 +84,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="55236" level="1" /> 	<!-- 	Adventurer Potion Casting Speed lvl 1	-->
+			<skill id="55236" level="1" /> 	<!-- 	Adventurer Potion Casting Speed lvl 1	 -->
 		</skills>
 	</item>
 	<item id="70104" name="Scroll: Vampiric Rage" type="EtcItem">
@@ -103,7 +103,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
-			<skill id="55237" level="1" /> <!-- Vampiric Rage	-->
+			<skill id="55237" level="1" /> <!-- Vampiric Rage	 -->
 		</skills>
 	</item>
 	<item id="70105" name="Scroll of Mana" type="EtcItem">
@@ -122,7 +122,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
-			<skill id="55241" level="1" /> <!-- Mana Regeneration	-->
+			<skill id="55241" level="1" /> <!-- Mana Regeneration	 -->
 		</skills>
 	</item>
 	<item id="70106" name="Rune of Boost" additionalName="7-day" type="EtcItem">
@@ -140,7 +140,7 @@
 		<set name="time" val="10080" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55246" level="1" /> <!-- Rune of Boost	-->
+			<skill id="55246" level="1" /> <!-- Rune of Boost	 -->
 		</skills>
 	</item>
 	<item id="70107" name="Scroll: Berserker Spirit" type="EtcItem">
@@ -160,11 +160,11 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
-			<skill id="55242" level="1" /> <!-- Scroll: Berserker Spirit	-->
+			<skill id="55242" level="1" /> <!-- Scroll: Berserker Spirit	 -->
 		</skills>
 	</item>
 	<item id="70108" name="Fire Dragon Pendant - Lv. 3" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Provides the effect of Fire Dragon Pendant enchanted to Lv. 3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. Provides the effect of Fire Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -178,14 +178,14 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="55094" level="1" /> <!-- Fire Dragon Pendant - Lv. 3	-->
+			<skill id="55094" level="1" /> <!-- Fire Dragon Pendant - Lv. 3	 -->
 		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
 	<item id="70109" name="Water Dragon Pendant - Lv. 3" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Provides the effect of Water Dragon Pendant enchanted to Lv. 3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- A 7-day item. Provides the effect of Water Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -200,7 +200,7 @@
 		<set name="time" val="10080" />
 		<!-- Todo: Skill need be fix -->
 		<skills>
-			<skill id="55104" level="3" /> <!-- Scroll: Berserker Spirit	-->
+			<skill id="55104" level="3" /> <!-- Scroll: Berserker Spirit	 -->
 		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
@@ -277,7 +277,6 @@
 		</skills>
 	</item>
 	<item id="70113" name="Scroll of Escape: Town of Aden" type="EtcItem">
-		<!-- Todo: Need proper skill -->
 		<!-- A magical scroll that relocates you to the Town of Aden. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -296,7 +295,7 @@
 		</skills>
 	</item>
 	<item id="70114" name="Agathion - Singer and Dancer" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Summons Singer and Dancer Agathion when equipped. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Reuse Time: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
+		<!-- A 7-day item. Summons Agathion Singer & Dancer when equipped. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Reuse Time: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -327,7 +326,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="70116" name="Mermaid's Elite Golden Fishing Rod" additionalName="1-day" type="Weapon">
-		<!-- A 1-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+		<!-- A 1-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -350,7 +349,7 @@
 		</stats>
 	</item>
 	<item id="70117" name="Mermaid's Elite Golden Fishing Rod" additionalName="3 days" type="Weapon">
-		<!-- A 3-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+		<!-- A 3-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -372,7 +371,7 @@
 		</stats>
 	</item>
 	<item id="70118" name="Mermaid's Elite Golden Fishing Rod" additionalName="7-day" type="Weapon">
-		<!-- A 7-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+		<!-- A 7-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -395,7 +394,7 @@
 		</stats>
 	</item>
 	<item id="70119" name="Mermaid's Elite Golden Fishing Rod" additionalName="30-day" type="Weapon">
-		<!-- A 30-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+		<!-- A 30-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -418,7 +417,7 @@
 		</stats>
 	</item>
 	<item id="70120" name="Mermaid's Elite Golden Fishing Rod" type="Weapon">
-		<!-- Cannot be dropped. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+		<!-- Cannot be dropped. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
 		<set name="icon" val="icon.bm_gold_fishing_pole" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -835,14 +834,14 @@
 		</skills>
 	</item>
 	<item id="70160" name="1st Anniversary Coin" type="EtcItem">
-		<!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen� Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on one account using Dimensional Merchant. -->
+		<!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen?Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="70161" name="My Teleport Pack" type="EtcItem">
-		<!-- Double-click to get 1 My Teleport Book, 3 My Teleports, or 10 My Teleport Scrolls. -->
+		<!-- Double-click to obtain 1 My Teleport Book, 3 My Teleports, or 10 My Teleport Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -851,7 +850,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="70162" name="Valakas Treasure Chest" type="EtcItem">
-		<!-- Double-click the chest to get one of many valuable items collected by Fire Dragon Valakas. -->
+		<!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1108,7 +1107,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="70182" name="Devi’s Ring (15-day)" type="Armor">
-		<!-- A 15-day item. When equipped, increases Max HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- 15-day item. When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ev_11th_rare_acc_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1129,7 +1128,7 @@
 		</stats>
 	</item>
 	<item id="70183" name="Devi’s Ring" type="Armor">
-		<!-- HP +20, M. Atk. +3, P. Atk. +5. The effect does not stack if two identical rings are equipped. -->
+		<!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. -->
 		<set name="icon" val="icon.ev_11th_rare_acc_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1145,7 +1144,7 @@
 		</stats>
 	</item>
 	<item id="70184" name="Devi’s Earring (15-day)" type="Armor">
-		<!-- A 15-day item. MP Recovery Rate +0.2, Healing Power +2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- 15-day item. When equipped, increases MP recovery rate by 0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. MP +10. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ev_11th_rare_acc_earing" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1163,7 +1162,7 @@
 		</stats>
 	</item>
 	<item id="70185" name="Devi’s Earring" type="Armor">
-		<!-- MP Recovery Rate +0.2, Healing Power +2%. The effect does not stack if two identical earrings are equipped. Additionally increases MP by 10. -->
+		<!-- When equipped, increases MP recovery rate by +0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
 		<set name="icon" val="icon.ev_11th_rare_acc_earing" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1180,7 +1179,7 @@
 		</stats>
 	</item>
 	<item id="70186" name="Devi’s Necklace (15-day)" type="Armor">
-		<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- 15-day item. When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ev_11th_rare_acc_necklace" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1202,7 +1201,7 @@
 		</stats>
 	</item>
 	<item id="70187" name="Devi’s Necklace" type="Armor">
-		<!-- MP +20, M. Def. +3, P. Def. +5. -->
+		<!-- When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. -->
 		<set name="icon" val="icon.ev_11th_rare_acc_necklace" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1219,7 +1218,7 @@
 		</stats>
 	</item>
 	<item id="70188" name="1 Weapon Slot" additionalName="Test Item" type="Weapon">
-		<!-- A test item. -->
+		<!-- Test Item -->
 		<set name="icon" val="icon.weapon_mace_of_judgment_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1242,7 +1241,7 @@
 		</stats>
 	</item>
 	<item id="70189" name="2 Weapon Slots" additionalName="Test Item" type="Weapon">
-		<!-- A test item. -->
+		<!-- Test Item -->
 		<set name="icon" val="icon.weapon_mace_of_judgment_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1265,7 +1264,7 @@
 		</stats>
 	</item>
 	<item id="70190" name="3 Weapon Slots" additionalName="Test Item" type="Weapon">
-		<!-- A test item. -->
+		<!-- Test Item -->
 		<set name="icon" val="icon.weapon_mace_of_judgment_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1288,7 +1287,7 @@
 		</stats>
 	</item>
 	<item id="70191" name="4 Weapon Slots" additionalName="Test Item" type="Weapon">
-		<!-- A test item. -->
+		<!-- Test Item -->
 		<set name="icon" val="icon.weapon_mace_of_judgment_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1311,7 +1310,7 @@
 		</stats>
 	</item>
 	<item id="70192" name="Earring of Chronicle Heir" additionalName="Lv. 1" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 1%, Max. MP +1%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 1%, Max. MP +1%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1328,7 +1327,7 @@
 		</stats>
 	</item>
 	<item id="70193" name="Earring of Chronicle Heir" additionalName="Lv. 2" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 2%, Max. MP +2%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 2%, Max. MP +2%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1345,7 +1344,7 @@
 		</stats>
 	</item>
 	<item id="70194" name="Earring of Chronicle Heir" additionalName="Lv. 3" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 3%, Max. MP +3%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 3%, Max. MP +3%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1362,7 +1361,7 @@
 		</stats>
 	</item>
 	<item id="70195" name="Earring of Chronicle Heir" additionalName="Lv. 4" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 4%, Max. MP +4%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 4%, Max. MP +4%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1379,7 +1378,7 @@
 		</stats>
 	</item>
 	<item id="70196" name="Earring of Chronicle Heir" additionalName="Lv. 5" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 5%, Max. MP +5%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 5%, Max. MP +5%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1396,7 +1395,7 @@
 		</stats>
 	</item>
 	<item id="70197" name="Earring of Chronicle Heir" additionalName="Lv. 6" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 6%, Max. MP +6%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 6%, Max. MP +6%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1413,7 +1412,7 @@
 		</stats>
 	</item>
 	<item id="70198" name="Earring of Chronicle Heir" additionalName="Lv. 7" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 7%, Max. MP +7%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 7%, Max. MP +7%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1430,7 +1429,7 @@
 		</stats>
 	</item>
 	<item id="70199" name="Earring of Chronicle Heir" additionalName="Lv. 8" type="Armor">
-		<!-- When equipped, increases MP recovery rate by 8%, Max. MP +8%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
+		<!-- When equipped, increases MP recovery rate by 8%, Max. MP +8%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />

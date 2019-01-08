@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37000" name="9th Anniversary Cube (20-day) (Event)" type="EtcItem">
-		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -15,7 +15,7 @@
 		<set name="time" val="28800" />
 	</item>
 	<item id="37001" name="9th Anniversary Cube (10-day) (Event)" type="EtcItem">
-		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -29,7 +29,7 @@
 		<set name="time" val="14400" />
 	</item>
 	<item id="37002" name="9th Anniversary Cube (5-day) (Event)" type="EtcItem">
-		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -54,11 +54,11 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="3877" min="1" max="1" chance="28.571" />
-			<item id="3879" min="1" max="1" chance="14.286" />
-			<item id="3880" min="1" max="1" chance="14.286" />
-			<item id="3884" min="1" max="1" chance="14.286" />
-			<item id="3887" min="1" max="1" chance="28.571" />
+			<item id="3877" min="1" max="1" chance="28.571" /> <!-- Letter - E - Event -->
+			<item id="3879" min="1" max="1" chance="14.286" /> <!-- Letter - G - Event -->
+			<item id="3880" min="1" max="1" chance="14.286" /> <!-- Letter - H - Event -->
+			<item id="3884" min="1" max="1" chance="14.286" /> <!-- Letter - O - Event -->
+			<item id="3887" min="1" max="1" chance="28.571" /> <!-- Letter - T - Event -->
 		</capsuled_items>
 	</item>
 	<item id="37004" name="Letter Collector's Pouch: LINEAGE II" type="EtcItem">
@@ -73,12 +73,12 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="3875" min="1" max="1" chance="14.286" />
-			<item id="3877" min="1" max="1" chance="28.571" />
-			<item id="3879" min="1" max="1" chance="14.285" />
-			<item id="3881" min="1" max="1" chance="14.286" />
-			<item id="3882" min="1" max="1" chance="14.286" />
-			<item id="3883" min="1" max="1" chance="14.286" />
+			<item id="3875" min="1" max="1" chance="14.286" /> <!-- Letter - A - Event -->
+			<item id="3877" min="1" max="1" chance="28.571" /> <!-- Letter - E - Event -->
+			<item id="3879" min="1" max="1" chance="14.285" /> <!-- Letter - G - Event -->
+			<item id="3881" min="1" max="1" chance="14.286" /> <!-- Letter - I - Event -->
+			<item id="3882" min="1" max="1" chance="14.286" /> <!-- Letter - L - Event -->
+			<item id="3883" min="1" max="1" chance="14.286" /> <!-- Letter - N - Event -->
 		</capsuled_items>
 	</item>
 	<item id="37005" name="Letter Collector's Pouch: NCSOFT" type="EtcItem">
@@ -93,15 +93,15 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="3876" min="1" max="1" chance="20" />
-			<item id="3878" min="1" max="1" chance="20" />
-			<item id="3883" min="1" max="1" chance="20" />
-			<item id="3884" min="1" max="1" chance="20" />
-			<item id="3887" min="1" max="1" chance="20" />
+			<item id="3876" min="1" max="1" chance="20" /> <!-- Letter - C - Event -->
+			<item id="3878" min="1" max="1" chance="20" /> <!-- Letter - F - Event -->
+			<item id="3883" min="1" max="1" chance="20" /> <!-- Letter - N - Event -->
+			<item id="3884" min="1" max="1" chance="20" /> <!-- Letter - O - Event -->
+			<item id="3887" min="1" max="1" chance="20" /> <!-- Letter - T - Event -->
 		</capsuled_items>
 	</item>
 	<item id="37006" name="Letter Collector's Pouch: RIIS" type="EtcItem">
-		<!-- Magic pouch that contains the letters of RIIS. Double-click to get one of the following letters: R, II and S. -->
+		<!-- Magic pouch that contains the letters of HIIS. Double-click to get one of the following letters: H, II and S. -->
 		<set name="icon" val="icon.etc_crystal_spice_s_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -112,13 +112,13 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="3888" min="1" max="1" chance="33.333" />
-			<item id="3885" min="1" max="1" chance="33.333" />
-			<item id="3886" min="1" max="1" chance="33.334" />
+			<item id="3888" min="1" max="1" chance="33.333" /> <!-- Letter - II - Event -->
+			<item id="3885" min="1" max="1" chance="33.333" /> <!-- Letter - R - Event -->
+			<item id="3886" min="1" max="1" chance="33.334" /> <!-- Letter - S - Event -->
 		</capsuled_items>
 	</item>
 	<item id="37007" name="Letter Collector's Lucky Pouch" type="EtcItem">
-		<!-- Chance to test your luck! You can get Letter Collector's Pouch: RIIS at a certain probability. If you fail, you won't get anything. -->
+		<!-- Chance to test your luck! You can get Letter Collector's Pouch: HIIS at a certain probability. If you fail, you won't get anything. -->
 		<set name="icon" val="icon.etc_crystal_spice_blessed_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -127,7 +127,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="37006" min="1" max="1" chance="75" />
+			<item id="37006" min="1" max="1" chance="75" /> <!-- Letter Collector's Pouch: HIIS -->
 		</capsuled_items>
 	</item>
 	<item id="37008" name="Strawberry Cake (HP)" type="EtcItem">
@@ -169,7 +169,7 @@
 		</skills>
 	</item>
 	<item id="37011" name="9th Anniversary Buff Scroll (P. Atk.)" type="EtcItem">
-		<!-- For 30 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Warrior's Harmony Lv. 1. -->
+		<!-- For 30 min., provides the effects of Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody, and Warrior's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -178,7 +178,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37012" name="9th Anniversary Buff Scroll (M. Atk.)" type="EtcItem">
-		<!-- For 30 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Wizard's Harmony Lv. 1. -->
+		<!-- For 30 min., provides the effects of Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody, and Wizard's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -187,7 +187,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37013" name="9th Anniversary Buff Scroll (P. Def.)" type="EtcItem">
-		<!-- For 30 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Knight's Harmony Lv. 1. -->
+		<!-- For 30 min., provides the effects of Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody, and Knight's Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -643,7 +643,7 @@
 		</skills>
 	</item>
 	<item id="37041" name="Divine Protection Elixir" type="EtcItem">
-		<!-- Double-click to increase Max HP/MP/CP, Defense and M. Def. by 30% for 30 min. If you receive the 'Cannibalistic Stakato Captain' from Improved Rose Spirit while this is in effect, the effect will disappear. Can be used by characters of level 85 or higher. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. Cooldown is 5 min. -->
+		<!-- Double-click to increase Max HP/ MP/ CP, Defense and M. Def. by 30% for 30 min. If you receive the 'Cannibalistic Stakato Captain' from Improved Rose Spirit while this is in effect, the effect will disappear. Can be used by characters of level 85 or higher. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_evil_soul_core_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
@@ -708,7 +708,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37046" name="9th Anniversary Cube (1-time use)" type="EtcItem">
-		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -722,7 +722,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37047" name="Theor's Sword" type="Weapon">
-		<!-- Monster Weapon. One-handed sword style. Initial Monster Weapon Appearance Stone. -->
+		<!-- Monster weapon. One-handed sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.Summon_orc_1hs_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -749,7 +749,7 @@
 		</stats>
 	</item>
 	<item id="37048" name="Sword of Corruption" type="Weapon">
-		<!-- Monster Weapon. One-handed sword style. Initial Monster Weapon Appearance Stone. -->
+		<!-- Monster weapon. One-handed sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.embryo_dark_knight_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -776,7 +776,7 @@
 		</stats>
 	</item>
 	<item id="37049" name="Octavis' Sword" type="Weapon">
-		<!-- Monster Weapon. One-handed sword style. Initial Monster Weapon Appearance Stone. -->
+		<!-- Monster weapon. One-handed sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.octabis_a_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -803,7 +803,7 @@
 		</stats>
 	</item>
 	<item id="37050" name="Tegaffe's Dualsword" type="Weapon">
-		<!-- Monster Weapon. Dualsword style. Initial Monster Weapon Appearance Stone. -->
+		<!-- Monster weapon. Dual Sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.Summon_orc_dual_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -830,7 +830,7 @@
 		</stats>
 	</item>
 	<item id="37051" name="Seknus' One-handed Magic Sword" type="Weapon">
-		<!-- Monster Weapon. One-handed magic sword style. Initial Monster Weapon Appearance Stone. -->
+		<!-- Monster weapon. Magic sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.seknus_1hs_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -993,7 +993,7 @@
 		</stats>
 	</item>
 	<item id="37057" name="Guillotine's Greatsword" type="Weapon">
-		<!-- Monster Weapon. Two-handed sword. Initial Monster Weapon Appearance Stone. -->
+		<!-- Monster weapon. Two-handed Sword. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.undead_killer_2hs_wp_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1263,7 +1263,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37068" name="Monster Weapon Appearance Stone: Sword of Corruption" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of a Sword of Corruption. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a one-handed sword to that of the Sword of Corruption. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1274,7 +1274,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37069" name="Monster Weapon Appearance Stone: Octavis' Sword" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of Octavis's Sword. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a one-handed sword to that of Octavis' Sword. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1285,7 +1285,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dualsword" type="EtcItem">
-		<!-- Changes the appearance of a dualsword to that of Tegaffe's Dualsword. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a dual sword to that of Tegaffe's Dual Sword. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1296,7 +1296,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37071" name="Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword" type="EtcItem">
-		<!-- Changes the appearance of a one-handed magic sword to that of Seknus's Sword. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a magic sword to that of Seknus' Sword. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1384,7 +1384,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37079" name="Monster Weapon Appearance Stone: Mimilead's Staff" type="EtcItem">
-		<!-- Changes the appearance of a two-handed blunt to that of Mimilead's Staff. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a two-handed staff to that of Mimilead's Staff. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1395,7 +1395,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37080" name="Monster Weapon Appearance Stone: Satyr's Staff" type="EtcItem">
-		<!-- Changes the appearance of a two-handed blunt to that of Satyr's Staff. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a two-handed staff to that of Satyr's Staff. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1534,7 +1534,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37092" name="Dimensional Cloak of Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense +50, M. Def. +40 and STR/ MEN/ DEX/ WIT/ INT/ CON +2. Damage received during PvP decreases by 5%. Can use Escape:Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1562,7 +1562,7 @@
 		</stats>
 	</item>
 	<item id="37093" name="Dimensional Cloak of Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
+		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense +50, M. Def. +40 and STR/ MEN/ DEX/ WIT/ INT/ CON +2. Damage received during PvP decreases by 5%. Can use Escape:Castle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />

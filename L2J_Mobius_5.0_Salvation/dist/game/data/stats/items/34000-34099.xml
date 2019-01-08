@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="34000" name="Lv. 5 Legendary MEN Dye" additionalName="MEN + 5 / INT + 1 / Holy Resistance + 25 (Event)" type="EtcItem">
-		<!-- Lv. 5 Legendary MEN Dye (Men + 5 Int + 1 Holy Resistance + 25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
+		<!-- Lv. 5 Legendary MEN Dye (Men +5 Int +1 Holy Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_men" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -15,7 +15,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34001" name="High-grade Life Stone (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- A high-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon crafting at level 85 or above. Cannot be exchanged or dropped. -->
+		<!-- A high-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -173,7 +173,7 @@
 		</skills>
 	</item>
 	<item id="34011" name="Horn Melody Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 30 minutes, P. Atk. + 17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30%. -->
+		<!-- For 30 minutes, P. Atk. +17%, P. Def. by 15%, M. Atk. by 79%, and M. Def. by 30%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
@@ -950,7 +950,7 @@
 			<item id="18043" min="1" max="1" chance="100" /> <!-- Blessed Specter Buster -->
 			<item id="18044" min="1" max="1" chance="100" /> <!-- Blessed Specter Caster -->
 			<item id="18045" min="1" max="1" chance="100" /> <!-- Blessed Specter Retributer -->
-			<item id="18046" min="1" max="1" chance="100" /> <!-- Blessed Specter Dualsword -->
+			<item id="18046" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Sword -->
 			<item id="18047" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Dagger -->
 			<item id="18048" min="1" max="1" chance="100" /> <!-- Blessed Specter Dual Blunt Weapon -->
 		</capsuled_items>
@@ -1055,7 +1055,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34059" name="Putrefied Extract" type="EtcItem">
-		<!-- Putrefied Extract that Trade Vollodos in the Bloody Swampland asks you to collect. -->
+		<!-- Putrefied Extract that Grocer Vollodos in the Bloody Swampland asks you to collect. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1070,7 +1070,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34060" name="Rotten Blood" type="EtcItem">
-		<!-- Rotten Blood that Trade Vollodos in the Bloody Swampland asks you to collect. -->
+		<!-- Rotten Blood that Grocer Vollodos in the Bloody Swampland asks you to collect. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1152,7 +1152,7 @@
 		</skills>
 	</item>
 	<item id="34065" name="Echo Crystal - To the Brilliant You" type="EtcItem">
-		<!-- Echo Crystal that plays Gi-sung Bae's To the Brilliant You. Disappears after 1 use. -->
+		<!-- Echo Crystal that plays Gi-sung Bae's "To the Brilliant You." Disappears after 1 use. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -1168,7 +1168,7 @@
 		</skills>
 	</item>
 	<item id="34066" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. + 5 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. +5 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1189,7 +1189,7 @@
 		</skills>
 	</item>
 	<item id="34067" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (A-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1210,7 +1210,7 @@
 		</skills>
 	</item>
 	<item id="34068" name="Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for one-handed swords/ blunts, daggers, spears, etc. (B-grade). P. Atk. + 4 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +3 for one-handed swords/ blunts, daggers, spears, etc. (B-grade). P. Atk. +4 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bows. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1231,7 +1231,7 @@
 		</skills>
 	</item>
 	<item id="34069" name="Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (B-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (B-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1252,7 +1252,7 @@
 		</skills>
 	</item>
 	<item id="34070" name="Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for one-handed swords/ blunts, daggers, spears, etc. (C-grade). P. Atk. + 4 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +3 for one-handed swords/ blunts, daggers, spears, etc. (C-grade). P. Atk. +4 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +6 for bows. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1273,7 +1273,7 @@
 		</skills>
 	</item>
 	<item id="34071" name="Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (C-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (C-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1294,7 +1294,7 @@
 		</skills>
 	</item>
 	<item id="34072" name="Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 2 for all weapons (D-grade) except bows, and P. Atk. + 4 for bows. M. Atk. + 2 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +2 for all weapons (D-grade) except bows, and P. Atk. +4 for bows. M. Atk. +2 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1315,7 +1315,7 @@
 		</skills>
 	</item>
 	<item id="34073" name="Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (D-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (D-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1336,7 +1336,7 @@
 		</skills>
 	</item>
 	<item id="34074" name="Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. + 6 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
+		<!-- When enchanted, P. Atk. +5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. +6 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1357,7 +1357,7 @@
 		</skills>
 	</item>
 	<item id="34075" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. + 1 for armor and accessories (S-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1378,7 +1378,7 @@
 		</skills>
 	</item>
 	<item id="34076" name="Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons and crossbows. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases starting at +4. All stats will increase more for blessed weapons. -->
+		<!-- When enchanted, P. Atk. +6 for R-grade one-handed swords, one-handed blunts, daggers, spears and other weapons. P. Atk. +7 for two-handed swords, two-handed blunts, dual swords, two-handed fist weapons and crossbows. P. Atk. +12 for bow weapons. M. Atk. +5 for all weapons. P. Atk./ M. Atk. greatly increases starting at +4. All stats will increase more for blessed weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1399,7 +1399,7 @@
 		</skills>
 	</item>
 	<item id="34077" name="Scroll: Enchant Armor (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. -->
+		<!-- When enchanted, P. Def. +2 for R-grade armor and accessories. It is greatly increased starting at +4. Can be safely enchanted to +3. When enchanted to +4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1456,7 +1456,7 @@
 		</skills>
 	</item>
 	<item id="34080" name="Improved Box of Destruction" additionalName="Event" type="EtcItem">
-		<!-- Has a chance of obtaining Scroll: Enchant Destruction (R-grade), Soul Crystal Change Stone (R-grade), Attribute Change Crystal (R-grade), and Scroll: Enchant Weapon/Armor (R-grade). Double-click to use. -->
+		<!-- Has a chance of obtaining Scroll: Enchant Destruction (R-grade), Soul Crystal Change Stone (R-grade), Attribute Change Crystal (R-grade), and Scroll: Enchant Weapon/ Armor (R-grade). Double-click to use. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1492,7 +1492,7 @@
 		</skills>
 	</item>
 	<item id="34082" name="Heavenly Cocktail" type="EtcItem">
-		<!-- For 60 minutes, receives the following Lv. 2 effects: Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, and Drum Melody. Cooldown is 60 min. -->
+		<!-- For 60 minutes, receives the following Lv. 2 effects: Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1516,7 +1516,7 @@
 		</skills>
 	</item>
 	<item id="34083" name="Player Commendation - Grand Épée (Earth)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand Épée (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1553,7 +1553,7 @@
 		</stats>
 	</item>
 	<item id="34084" name="Player Commendation - Grand Épée (Water)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand Épée (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1590,7 +1590,7 @@
 		</stats>
 	</item>
 	<item id="34085" name="Player Commendation - Grand Épée (Wind)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand Épée (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1627,7 +1627,7 @@
 		</stats>
 	</item>
 	<item id="34086" name="Player Commendation - Grand Épée (Fire)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand Épée (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1664,7 +1664,7 @@
 		</stats>
 	</item>
 	<item id="34087" name="Player Commendation - Grand Épée (Holy)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand Épée (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1701,7 +1701,7 @@
 		</stats>
 	</item>
 	<item id="34088" name="Player Commendation - Grand Épée (Dark)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand Épée (Dark) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Grand ?p?e (Dark) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

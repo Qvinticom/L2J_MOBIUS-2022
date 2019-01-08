@@ -137,7 +137,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47214" name="Ring of Creation" type="Armor">
-		<!-- MP +42, Stun/Paralysis/Knock Back Atk. Rate +15%, Stun/Paralysis/Knock Back Resistance +15%, Additional Damage to the Giants +5%, P./M. Critical Damage +15%, P./M. Atk. +3%. Effect does not stack with identical ones. -->
+		<!-- MP +42, Stun/ Paralysis/ Knock Back Atk. Rate +15%, Stun/ Paralysis/ Knock Back Resistance +15%, Additional Damage to the Giants +5%, P./ M. Critical Damage +15%, P./ M. Atk. +3%. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_Black" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -156,7 +156,7 @@
 		</stats>
 	</item>
 	<item id="47215" name="Ring of Authority" type="Armor">
-		<!-- MP +43, Stun/Paralysis/Knock Back Atk. Rate +25%, Stun/Paralysis/Knock Back Resistance +25%, Additional Damage to the Giants +5%, P. Critical Damage +15%, P. Atk. +4%. Effect does not stack with identical ones. -->
+		<!-- MP +43, Stun/ Paralysis/ Knock Back Atk. Rate +25%, Stun/ Paralysis/ Knock Back Resistance +25%, Additional Damage to the Giants +5%, P. Critical Damage +15%, P. Atk. +4%. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -174,7 +174,7 @@
 		</stats>
 	</item>
 	<item id="47216" name="Ruler's Ring of Authority" type="Armor">
-		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/CHA +2, Stun/Paralysis/Knock Back Atk./Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Paralysis when single P. Atk. skill is used. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +46, P. Atk. +5%, P. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Paralysis when single P. skill is used. is used. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -192,7 +192,7 @@
 		</stats>
 	</item>
 	<item id="47217" name="Ring of the Truth" type="Armor">
-		<!-- MP +43, Stun/Paralysis/Knock Back Atk. Rate +25%, Stun/Paralysis/Knock Back Resistance +25%, Additional Damage to the Giants +5%, M. Critical Damage +15%, M. Atk. +4%. Effect does not stack with identical ones. -->
+		<!-- MP +43, Stun/ Paralysis/ Knock Back Atk. Rate +25%, Stun/ Paralysis/ Knock Back Resistance +25%, Additional Damage to the Giants +5%, M. Critical Damage +15%, M. Atk. +4%. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessory_ring_of_helios" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -210,7 +210,7 @@
 		</stats>
 	</item>
 	<item id="47218" name="Ring of the Truth-Seeker" type="Armor">
-		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/CHA +2, Stun/Paralysis/Knock Back Atk./Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Knock Down when single M. Atk. skill is used. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +46, M. Atk. +5%, M. Critical Damage +20%, LUC/ CHA +2, Stun/ Paralysis/ Knock Back Atk./ Def. Success Rate +30%, Additional Damage to the Giants +5%, 3-second Knock Down when single M. skill is used. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessory_ring_of_helios_enchant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1200,7 +1200,7 @@
 		</skills>
 	</item>
 	<item id="47288" name="Kingdom's Royal Guard Talisman Stage 8" type="Armor">
-		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -8%, P. Atk. against Embryo +3%, P./M. Def +1%. -->
+		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -8%, P. Atk. against Embryo +3%, P./ M. Def +1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1219,7 +1219,7 @@
 		</skills>
 	</item>
 	<item id="47289" name="Kingdom's Royal Guard Talisman Stage 9" type="Armor">
-		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -9%, P. Atk. against Embryo +4%, P./M. Def +2%. -->
+		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -9%, P. Atk. against Embryo +4%, P./ M. Def +2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1238,7 +1238,7 @@
 		</skills>
 	</item>
 	<item id="47290" name="Kingdom's Royal Guard Talisman Stage 10" type="Armor">
-		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -10%, P. Atk. against Embryo +5%, P./M. Def +3%. -->
+		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -10%, P. Atk. against Embryo +5%, P./ M. Def +3%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />

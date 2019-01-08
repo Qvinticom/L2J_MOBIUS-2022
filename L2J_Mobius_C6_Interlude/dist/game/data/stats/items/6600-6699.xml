@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6600" type="Weapon" name="Saint Spear - Guidance">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1800"/>
@@ -25,7 +26,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3602"/>
+		<set name="item_skill_id" val="3602"/> <!-- Special Ability: Guidance -->
 		<set name="item_skill_lvl" val="5"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -50,6 +51,7 @@
 		</for>
 	</item>
 	<item id="6601" type="Weapon" name="Saint Spear - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1800"/>
@@ -74,7 +76,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3068"/>
+		<set name="item_skill_id" val="3068"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -101,6 +103,7 @@
 		</for>
 	</item>
 	<item id="6602" type="Weapon" name="Demon Splinter - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical chance by 80. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -125,7 +128,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3565"/>
+		<set name="item_skill_id" val="3565"/> <!-- Special Ability: Focus -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -151,6 +154,7 @@
 		</for>
 	</item>
 	<item id="6603" type="Weapon" name="Demon Splinter - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -175,7 +179,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="4"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -199,6 +203,7 @@
 		</for>
 	</item>
 	<item id="6604" type="Weapon" name="Demon Splinter - Crt. Stun">
+		<!-- <Soul Crystal Enhancement>. Produces a stun effect at a rate of about 25% during a critical attack. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1350"/>
@@ -230,7 +235,7 @@
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3070"/>
+		<set name="onCrit_skill_id" val="3070"/> <!-- Special Ability: Critical Stun -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="16"/>
 		<for>
@@ -247,6 +252,7 @@
 		</for>
 	</item>
 	<item id="6605" type="Weapon" name="Heavens Divider - Haste">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -271,7 +277,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3601"/>
+		<set name="item_skill_id" val="3601"/> <!-- Special Ability: Haste -->
 		<set name="item_skill_lvl" val="9"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -297,6 +303,7 @@
 		</for>
 	</item>
 	<item id="6606" type="Weapon" name="Heavens Divider - Health">
+		<!-- <Soul Crystal Enhancement>. Increases maximum HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -321,7 +328,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_id" val="3013"/> <!-- Special Ability: Health -->
 		<set name="item_skill_lvl" val="4"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -345,6 +352,7 @@
 		</for>
 	</item>
 	<item id="6607" type="Weapon" name="Heavens Divider - Focus">
+		<!-- <Soul Crystal Enhancement>. Increases critical chance by 84. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1380"/>
@@ -369,7 +377,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3566"/>
+		<set name="item_skill_id" val="3566"/> <!-- Special Ability: Focus -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -395,6 +403,7 @@
 		</for>
 	</item>
 	<item id="6608" type="Weapon" name="Arcana Mace - Acumen">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1300"/>
@@ -419,7 +428,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_id" val="3047"/> <!-- Special Ability: Acumen -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -441,6 +450,7 @@
 		</for>
 	</item>
 	<item id="6609" type="Weapon" name="Arcana Mace - MP Regeneration">
+		<!-- <Soul Crystal Enhancement>. Increases MP regeneration rate. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1300"/>
@@ -465,7 +475,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3576"/>
+		<set name="item_skill_id" val="3576"/> <!-- Special Ability: MP Regeneration -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -489,6 +499,7 @@
 		</for>
 	</item>
 	<item id="6610" type="Weapon" name="Arcana Mace - Mana Up">
+		<!-- <Soul Crystal Enhancement>. Increases maximum MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1300"/>
@@ -513,7 +524,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3014"/>
+		<set name="item_skill_id" val="3014"/> <!-- Special Ability: Mana Up -->
 		<set name="item_skill_lvl" val="2"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -534,6 +545,7 @@
 		</for>
 	</item>
 	<item id="6611" type="Weapon" name="Infinity Blade">
+		<!-- During a critical attack, decreases one's P. Def and increases de-buff casting ability, damage shield effect, Max HP, Max MP, Max CP, and shield defense power. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -558,14 +570,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3578"/>
+		<set name="item_skill_id" val="3578"/> <!-- Special Ability: Infinity Blade -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3579"/>
+		<set name="onCrit_skill_id" val="3579"/> <!-- Decrease P. Def. -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="4"/>
 		<for>
@@ -581,6 +593,7 @@
 		</for>
 	</item>
 	<item id="6612" type="Weapon" name="Infinity Cleaver">
+		<!-- Increases critical attack success rate/power, MaxHP, MaxCP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -605,7 +618,7 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3582"/>
+		<set name="item_skill_id" val="3582"/> <!-- Special Ability: Infinity Cleaver -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -626,6 +639,7 @@
 		</for>
 	</item>
 	<item id="6613" type="Weapon" name="Infinity Axe">
+		<!-- During a critical attack, it bestows one the ability to cause internal conflict to one's opponent. Damage shield function, Max HP, Max MP, Max CP as well as one's shield defense rate are increased. It also enhances damage to target during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -650,14 +664,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3580"/>
+		<set name="item_skill_id" val="3580"/> <!-- Special Ability: Infinity Axe -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3581"/>
+		<set name="onCrit_skill_id" val="3581"/> <!-- Discord -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="5"/>
 		<for>
@@ -673,6 +687,7 @@
 		</for>
 	</item>
 	<item id="6614" type="Weapon" name="Infinity Rod">
+		<!-- When good magic is cast upon a target, increases Max MP, Max CP, Casting Spd, and MP regeneration rate. During PvP, HP regeneration is increased to 100% and enhances damage to target. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -697,7 +712,7 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3597"/>
+		<set name="item_skill_id" val="3597"/> <!-- Special Ability: Infinity Rod -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -718,6 +733,7 @@
 		</for>
 	</item>
 	<item id="6615" type="Weapon" name="Infinity Crusher">
+		<!-- Increases Max HP, Max CP, and Atk. Spd. Stuns a target when a critical attack occurs and has possibility of reflecting the skill back on the player. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -742,14 +758,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3583"/>
+		<set name="item_skill_id" val="3583"/> <!-- Special Ability: Infinity Crusher -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3584"/>
+		<set name="onCrit_skill_id" val="3584"/> <!-- Shock -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="25"/>
 		<for>
@@ -765,6 +781,7 @@
 		</for>
 	</item>
 	<item id="6616" type="Weapon" name="Infinity Scepter">
+		<!-- When casting good magic, HP regeneration increases 100%, raises MAX MP, Max CP, M. Atk., lowers MP Consumption, increases the Magic Critical rate, and reduces the Magic Cancel. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -789,7 +806,7 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3595"/>
+		<set name="item_skill_id" val="3595"/> <!-- Special Ability: Infinity Scepter -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
@@ -810,6 +827,7 @@
 		</for>
 	</item>
 	<item id="6617" type="Weapon" name="Infinity Stinger">
+		<!-- Increases Max MP, Max CP, Atk. Spd., MP regen rate, and the success rate of Mortal and Deadly Blow from the back of the target. Silences the target when a critical attack occurs and has Vampiric Rage effect. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="rhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -834,14 +852,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3589"/>
+		<set name="item_skill_id" val="3589"/> <!-- Special Ability: Infinity Stinger -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3590"/>
+		<set name="onCrit_skill_id" val="3590"/> <!-- Silence -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="5"/>
 		<for>
@@ -857,6 +875,7 @@
 		</for>
 	</item>
 	<item id="6618" type="Weapon" name="Infinity Fang">
+		<!-- Increases Max HP, Max MP, Max CP and evasion. Stuns a target when a critical attack occurs and has possibility of reflecting the skill back on the player at a certain probability rate. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -881,14 +900,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3587"/>
+		<set name="item_skill_id" val="3587"/> <!-- Special Ability: Infinity Fang -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3588"/>
+		<set name="onCrit_skill_id" val="3588"/> <!-- Shock -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="25"/>
 		<for>
@@ -904,6 +923,7 @@
 		</for>
 	</item>
 	<item id="6619" type="Weapon" name="Infinity Bow">
+		<!-- Increases Max MP/Max CP and decreases re-use delay of a bow. Slows target when a critical attack occurs and has Cheap Shot effect. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -928,14 +948,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3593"/>
+		<set name="item_skill_id" val="3593"/> <!-- Special Ability: Infinity Bow -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3594"/>
+		<set name="onCrit_skill_id" val="3594"/> <!-- Slow -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="7"/>
 		<for>
@@ -951,6 +971,7 @@
 		</for>
 	</item>
 	<item id="6620" type="Weapon" name="Infinity Wing">
+		<!-- When a critical attack occurs, increases Max HP, Max MP, Max CP and critical chance. Silences the target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -975,14 +996,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3585"/>
+		<set name="item_skill_id" val="3585"/> <!-- Infinity Wing -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3586"/>
+		<set name="onCrit_skill_id" val="3586"/> <!-- Physical Skill Restraint -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="10"/>
 		<for>
@@ -998,6 +1019,7 @@
 		</for>
 	</item>
 	<item id="6621" type="Weapon" name="Infinity Spear">
+		<!-- During a critical attack, increases Max HP, Max CP, Atk. Spd. and Accuracy. Casts dispel on a target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
 		<set name="bodypart" val="lrhand"/>
 		<set name="crystallizable" val="false"/>
 		<set name="weight" val="1300"/>
@@ -1022,14 +1044,14 @@
 		<set name="dropable" val="false"/>
 		<set name="destroyable" val="false"/>
 		<set name="tradeable" val="false"/>
-		<set name="item_skill_id" val="3591"/>
+		<set name="item_skill_id" val="3591"/> <!-- Special Ability: Infinity Spear -->
 		<set name="item_skill_lvl" val="1"/>
 		<set name="enchant4_skill_id" val="0"/>
 		<set name="enchant4_skill_lvl" val="0"/>
 		<set name="onCast_skill_id" val="0"/>
 		<set name="onCast_skill_lvl" val="0"/>
 		<set name="onCast_skill_chance" val="0"/>
-		<set name="onCrit_skill_id" val="3592"/>
+		<set name="onCrit_skill_id" val="3592"/> <!-- Dispell -->
 		<set name="onCrit_skill_lvl" val="1"/>
 		<set name="onCrit_skill_chance" val="20"/>
 		<for>
@@ -1046,6 +1068,7 @@
 		</for>
 	</item>
 	<item id="6622" type="EtcItem" name="Secret Book of Giants">
+		<!-- Giants' Scroll. Take it to a certain NPC to enchant skills. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1060,6 +1083,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6623" type="EtcItem" name="Dummy - Quest Item 1">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1074,6 +1098,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6624" type="EtcItem" name="Dummy - Quest Item 2">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1088,6 +1113,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6625" type="EtcItem" name="Dummy - Quest Item 3">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1102,6 +1128,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6626" type="EtcItem" name="Dummy - Quest Item 4">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1116,6 +1143,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6627" type="EtcItem" name="Dummy - Quest Item 5">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1130,6 +1158,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6628" type="EtcItem" name="Dummy - Quest Item 6">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1144,6 +1173,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6629" type="EtcItem" name="Dummy - Quest Item 7">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1158,6 +1188,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6630" type="EtcItem" name="Dummy - Quest Item 8">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1172,6 +1203,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6631" type="EtcItem" name="Dummy - Quest Item 9">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1186,6 +1218,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6632" type="EtcItem" name="Dummy - Quest Item 10">
+		<!-- Testing purpose - Quest Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="quest"/>
 		<set name="weight" val="0"/>
@@ -1200,6 +1233,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6633" type="EtcItem" name="Dummy - General Item 1">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1214,6 +1248,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6634" type="EtcItem" name="Dummy - General Item 2">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1228,6 +1263,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6635" type="EtcItem" name="Dummy - General Item 3">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1242,6 +1278,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6636" type="EtcItem" name="Dummy - General Item 4">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1256,6 +1293,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6637" type="EtcItem" name="Dummy - General Item 5">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1270,6 +1308,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6638" type="EtcItem" name="Dummy - General Item 6">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1284,6 +1323,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6639" type="EtcItem" name="Dummy - General Item 7">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1298,6 +1338,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6640" type="EtcItem" name="Dummy - General Item 8">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1312,6 +1353,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6641" type="EtcItem" name="Dummy - General Item 9">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1326,6 +1368,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6642" type="EtcItem" name="Dummy - General Item 10">
+		<!-- Testing purpose - General Item -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1340,6 +1383,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6643" type="EtcItem" name="Golden Spice">
+		<!-- Food for creatures on the Beast Farm. - When this food is fed to monsters that are capable of evolving, they will do so at various rates. Once a monster reaches a certain level of growth, it can then become a pet. This food also causes monsters to only drop adena. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="40"/>
@@ -1354,6 +1398,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6644" type="EtcItem" name="Crystal Spice">
+		<!-- Food for creatures on the Beast Farm. - When this food is fed to monsters that are capable of evolving, they will do so at various rates. Once a monster reaches a certain level of growth, it can then become a pet. This food also causes monsters to only drop materials. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="40"/>
@@ -1368,6 +1413,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6645" type="EtcItem" name="Beast Soulshot">
+		<!-- The light of a spirit is bestowed upon a pet/servitor and temporarily increases the power of attack. The number of soulshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="shot"/>
 		<set name="weight" val="1"/>
@@ -1382,6 +1428,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6646" type="EtcItem" name="Beast Spiritshot">
+		<!-- The light of a spirit is bestowed upon a pet/servitor and temporarily increases the power of M. Atk. The number of spiritshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="shot"/>
 		<set name="weight" val="2"/>
@@ -1396,6 +1443,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6647" type="EtcItem" name="Blessed Beast Spiritshot">
+		<!-- The light of a higher-level spirit is bestowed upon a pet/servitor and temporarily increases the power of M. Atk. The number of blessed spiritshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="shot"/>
 		<set name="weight" val="2"/>
@@ -1410,6 +1458,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6648" type="EtcItem" name="Baby Buffalo Panpipe">
+		<!-- A panpipe that is used to call a baby buffalo. The baby buffalo will take away 10% of the Exp its master acquires. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="pet_collar"/>
 		<set name="weight" val="20"/>
@@ -1424,6 +1473,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6649" type="EtcItem" name="Baby Cougar Chime">
+		<!-- A chime that is used to call a baby cougar. The baby cougar will take away 10% of the Exp its master acquires. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="pet_collar"/>
 		<set name="weight" val="20"/>
@@ -1438,6 +1488,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6650" type="EtcItem" name="Baby Kookaburra Ocarina">
+		<!-- A ocarina that is used to call a baby Kookaburra. The baby Kookaburra will take away 10% of the Exp its master acquires. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="pet_collar"/>
 		<set name="weight" val="20"/>
@@ -1466,6 +1517,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6652" type="EtcItem" name="Scroll: Protection of Valakas">
+		<!-- Increases your resistance to an attack made with Valakas' front claws. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="scroll"/>
 		<set name="weight" val="10"/>
@@ -1494,6 +1546,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6654" type="EtcItem" name="Scroll: Flames of Valakas">
+		<!-- Removes the abnormal state resulting from the fiery breath attack of Valakas. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="scroll"/>
 		<set name="weight" val="10"/>
@@ -1508,6 +1561,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6655" type="EtcItem" name="Scroll: Slay Valakas">
+		<!-- Increases your P. Atk. when fighting against Valakas. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="scroll"/>
 		<set name="weight" val="10"/>
@@ -1522,6 +1576,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6656" type="Armor" name="Earring of Antharas">
+		<!-- Produces the following effects: MP +31, 80% increase in resistance to bleeding, increase in the amount of heal, vampiric rage effect, 60% increase in resistance to stun/silence, decrease in MP consumption, and increase in resistance to earthen attack. If a character wears two identical earrings, the effect of only one earring will be applied. -->
 		<set name="bodypart" val="rear,lear"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1538,7 +1593,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3558"/>
+		<set name="item_skill_id" val="3558"/> <!-- Earring of Antharas -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="71" order="0x10" stat="mDef"/>
@@ -1547,6 +1602,7 @@
 		</for> 
 	</item>
 	<item id="6657" type="Armor" name="Necklace of Valakas">
+		<!-- Produces the following effects: MP+42, 80% increase in sleep resistance, HP +445, decrease in reuse delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack. -->
 		<set name="bodypart" val="neck"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1563,7 +1619,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3557"/>
+		<set name="item_skill_id" val="3557"/> <!-- Necklace of Valakas -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="95" order="0x10" stat="mDef"/>
@@ -1572,6 +1628,7 @@
 		</for>
 	</item>
 	<item id="6658" type="Armor" name="Ring of Baium">
+		<!-- Produces the following effects: MP +21, 80% increase in resistance to poisoning, increase in Accuracy, increase in critical damage, 60% increase in resistance to hold, and increase in Atk. Spd. and Casting Spd. If a character wears two identical rings, only the effect of one ring will be applied. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1588,7 +1645,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3561"/>
+		<set name="item_skill_id" val="3561"/> <!-- Ring of Baium -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="48" order="0x10" stat="mDef"/>
@@ -1597,6 +1654,7 @@
 		</for>
 	</item>
 	<item id="6659" type="Armor" name="Zaken's Earring">
+		<!-- Produces the following effects: MP +31, +60% resistance to bleeding, increased heal, vampiric rage and +40% resistance to shock/abnormal mental state. If a character wears two identical earrings, only one earring's effects will apply. -->
 		<set name="bodypart" val="rear,lear"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1613,7 +1671,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3559"/>
+		<set name="item_skill_id" val="3559"/> <!-- Earring of Zaken -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="71" order="0x10" stat="mDef"/>
@@ -1622,6 +1680,7 @@
 		</for>
 	</item>
 	<item id="6660" type="Armor" name="Ring of Queen Ant">
+		<!-- Produces the following effects: MP +21, 60% increase in resistance to poisoning, increase in accuracy, increase in critical damage, and 40% increase in resistance to hold. If a character wears two identical rings, only the effect of one ring will be applied. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1638,7 +1697,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3562"/>
+		<set name="item_skill_id" val="3562"/> <!-- Ring of Ant Queen -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="48" order="0x10" stat="mDef"/>
@@ -1647,6 +1706,7 @@
 		</for>
 	</item>
 	<item id="6661" type="Armor" name="Earring of Orfen">
+		<!-- Produces the following effects: MP+31, 40% increase in resistance to bleeding and increase in the amount of heal. If a character wears two identical earrings, the effect of only one earring will be applied. -->
 		<set name="bodypart" val="rear,lear"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1663,7 +1723,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3560"/>
+		<set name="item_skill_id" val="3560"/> <!-- Earring of Orfen -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="71" order="0x10" stat="mDef"/>
@@ -1672,6 +1732,7 @@
 		</for>
 	</item>
 	<item id="6662" type="Armor" name="Ring of Core">
+		<!-- Produces the following effects: MP+21, 40% increase in resistance to poisoning and increase in accuracy. If a character wears two identical rings, only the effect of one ring will be applied. -->
 		<set name="bodypart" val="rfinger,lfinger"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1688,7 +1749,7 @@
 		<set name="dropable" val="true"/>
 		<set name="destroyable" val="true"/>
 		<set name="tradeable" val="true"/>
-		<set name="item_skill_id" val="3563"/>
+		<set name="item_skill_id" val="3563"/> <!-- Ring of Core -->
 		<set name="item_skill_lvl" val="1"/>
 		<for>
 			<add val="48" order="0x10" stat="mDef"/>
@@ -1725,6 +1786,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6665" type="EtcItem" name="Deluxe Chest Key - Grade 1">
+		<!-- Opens a level 1~19 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1739,6 +1801,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6666" type="EtcItem" name="Deluxe Chest Key - Grade 2">
+		<!-- Opens a level 20~29 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1753,6 +1816,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6667" type="EtcItem" name="Deluxe Chest Key - Grade 3">
+		<!-- Opens a level 30~39 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1767,6 +1831,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6668" type="EtcItem" name="Deluxe Chest Key - Grade 4">
+		<!-- Opens a level 40~49 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1781,6 +1846,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6669" type="EtcItem" name="Deluxe Chest Key - Grade 5">
+		<!-- Opens a level 50~59 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1795,6 +1861,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6670" type="EtcItem" name="Deluxe Chest Key - Grade 6">
+		<!-- Opens a level 60~69 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1809,6 +1876,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6671" type="EtcItem" name="Deluxe Chest Key - Grade 7">
+		<!-- Opens a level 70~79 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1823,6 +1891,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6672" type="EtcItem" name="Deluxe Chest Key - Grade 8">
+		<!-- Opens a level 80~89 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="10"/>
@@ -1837,6 +1906,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6673" type="EtcItem" name="Festival Adena">
+		<!-- Currency used in the "2005 Lineage II Live" event. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="none"/>
 		<set name="weight" val="0"/>
@@ -1851,6 +1921,7 @@
 		<set name="tradeable" val="false"/>
 	</item>
 	<item id="6674" type="Armor" name="Sealed Imperial Crusader Breastplate">
+		<!-- Sealed Imperial Crusader Breastplate. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="chest"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="heavy"/>
@@ -1874,6 +1945,7 @@
 		</for>
 	</item>
 	<item id="6675" type="Armor" name="Sealed Imperial Crusader Gaiters">
+		<!-- Sealed Imperial Crusader Gaiters. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="legs"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="heavy"/>
@@ -1897,6 +1969,7 @@
 		</for>
 	</item>
 	<item id="6676" type="Armor" name="Sealed Imperial Crusader Gauntlet">
+		<!-- Sealed Imperial Crusader Gauntlets. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1920,6 +1993,7 @@
 		</for>
 	</item>
 	<item id="6677" type="Armor" name="Sealed Imperial Crusader Boots">
+		<!-- Sealed Imperial Crusader Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -1943,6 +2017,7 @@
 		</for>
 	</item>
 	<item id="6678" type="Weapon" name="Sealed Imperial Crusader Shield">
+		<!-- Sealed Imperial Crusader Shield. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="lhand"/>
 		<set name="crystallizable" val="true"/>
 		<set name="weight" val="1170"/>
@@ -1985,6 +2060,7 @@
 		</for>
 	</item>
 	<item id="6679" type="Armor" name="Sealed Imperial Crusader Helmet">
+		<!-- Sealed Imperial Crusader Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="head"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2008,6 +2084,7 @@
 		</for>
 	</item>
 	<item id="6680" type="Armor" name="Sealed Draconic Leather Armor">
+		<!-- Sealed Draconic Leather Armor. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="light"/>
@@ -2031,6 +2108,7 @@
 		</for>
 	</item>
 	<item id="6681" type="Armor" name="Sealed Draconic Leather Glove">
+		<!-- Sealed Draconic Leather Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2054,6 +2132,7 @@
 		</for>
 	</item>
 	<item id="6682" type="Armor" name="Sealed Draconic Leather Boots">
+		<!-- Sealed Draconic Leather Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2077,6 +2156,7 @@
 		</for>
 	</item>
 	<item id="6683" type="Armor" name="Sealed Draconic Leather Helmet">
+		<!-- Sealed Draconic Leather Helmet. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="head"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2100,6 +2180,7 @@
 		</for>
 	</item>
 	<item id="6684" type="Armor" name="Sealed Major Arcana Robe">
+		<!-- Sealed Major Arcana Robe. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="fullarmor"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="magic"/>
@@ -2123,6 +2204,7 @@
 		</for>
 	</item>
 	<item id="6685" type="Armor" name="Sealed Major Arcana Glove">
+		<!-- Sealed Major Arcana Gloves. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="gloves"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2146,6 +2228,7 @@
 		</for>
 	</item>
 	<item id="6686" type="Armor" name="Sealed Major Arcana Boots">
+		<!-- Sealed Major Arcana Boots. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="feet"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2169,6 +2252,7 @@
 		</for>
 	</item>
 	<item id="6687" type="Armor" name="Sealed Major Arcana Circlet">
+		<!-- Sealed Major Arcana Circlets. Its seal can be broken with the help of the Blacksmith of Mammon. -->
 		<set name="bodypart" val="head"/>
 		<set name="crystallizable" val="true"/>
 		<set name="armor_type" val="none"/>
@@ -2192,6 +2276,7 @@
 		</for>
 	</item>
 	<item id="6688" type="EtcItem" name="Forgotten Blade Edge">
+		<!-- Main ingredient required for a Dwarf to make a Forgotten Blade. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2206,6 +2291,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6689" type="EtcItem" name="Basalt Battlehammer Head">
+		<!-- Main ingredient required for a Dwarf to make a Basalt Battlehammer. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2220,6 +2306,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6690" type="EtcItem" name="Imperial Staff Head">
+		<!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2234,6 +2321,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6691" type="EtcItem" name="Angel Slayer Blade">
+		<!-- Main ingredient required for a Dwarf to make a Angel Slayer. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2262,6 +2350,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6693" type="EtcItem" name="Dragon Hunter Axe Blade">
+		<!-- Main ingredient required for a Dwarf to make a hunter axe. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2276,6 +2365,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6694" type="EtcItem" name="Saint Spear Blade">
+		<!-- Main ingredient required for a Dwarf to make a Saint Spear. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2290,6 +2380,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6695" type="EtcItem" name="Demon Splinter Blade">
+		<!-- Main ingredient required for a Dwarf to make a Demon Splinter. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2304,6 +2395,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6696" type="EtcItem" name="Heavens Divider Edge">
+		<!-- Main ingredient required for a Dwarf to make a Heaven's Divider. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2318,6 +2410,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6697" type="EtcItem" name="Arcana Mace Head">
+		<!-- Main ingredient required for a Dwarf to make the sealed Arcana Mace. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2332,6 +2425,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6698" type="EtcItem" name="Sealed Tateossian Earring Part">
+		<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Earrings. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>
@@ -2346,6 +2440,7 @@
 		<set name="tradeable" val="true"/>
 	</item>
 	<item id="6699" type="EtcItem" name="Sealed Tateossian Ring Gem">
+		<!-- Main ingredient required for a Dwarf to make the Sealed Tateossian Ring. Can also be sold at ordinary shops. -->
 		<set name="crystallizable" val="false"/>
 		<set name="item_type" val="material"/>
 		<set name="weight" val="60"/>

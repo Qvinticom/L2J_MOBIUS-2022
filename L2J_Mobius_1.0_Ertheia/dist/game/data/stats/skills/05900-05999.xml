@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" toLevel="1" name="Burst of Oblivion">
+		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -36,12 +37,13 @@
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>5902</skillId>
+				<skillId>5902</skillId> <!-- Cancel NPC Trigger Target -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5901" toLevel="2" name="Mist of Oblivion">
+		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -78,14 +80,12 @@
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>5902</skillId>
+				<skillId>5902</skillId> <!-- Cancel NPC Trigger Target -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5902" toLevel="1" name="Cancel NPC Trigger Target">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -99,6 +99,7 @@
 		</effects>
 	</skill>
 	<skill id="5903" toLevel="1" name="Burst of Misplace">
+		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -176,6 +177,7 @@
 		</effects>
 	</skill>
 	<skill id="5905" toLevel="1" name="Confusing Nuph">
+		<!-- Physical and magic skills are all blocked. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -212,6 +214,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5907" toLevel="2" name="Ritual of Entombment">
+		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -244,6 +247,7 @@
 		</effects>
 	</skill>
 	<skill id="5908" toLevel="2" name="Ritual of Entombment">
+		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -319,6 +323,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5912" toLevel="1" name="Pestilence Cleanse">
+		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are increased. Skill Cooldown is increased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_D</abnormalType>
@@ -353,12 +358,13 @@
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>5914</skillId>
+				<skillId>5914</skillId> <!-- Putrefaction Cleanse -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5914" toLevel="1" name="Putrefaction Cleanse">
+		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_E</abnormalType>
@@ -459,6 +465,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5918" toLevel="10" name="Physical Root Vulnerability">
+		<!-- Physical Root Vulnerability -->
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -491,8 +498,7 @@
 		</effects>
 	</skill>
 	<skill id="5919" toLevel="1" name="Obey">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- Immortal Lord's command. Cannot resurrect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>
@@ -519,8 +525,6 @@
 		</effects>
 	</skill>
 	<skill id="5920" toLevel="1" name="Tentacle of Agony">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<affectRange>300</affectRange>
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -544,8 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="5921" toLevel="1" name="Inhale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- P. Atk., Atk. Spd., M. Atk., Accuracy, critical attack rate and Critical Damage are decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_F</abnormalType>
@@ -604,8 +607,7 @@
 		</effects>
 	</skill>
 	<skill id="5922" toLevel="1" name="Exhale">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- Evasion, P. Def., M. Def. and speed are decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_G</abnormalType>
@@ -654,7 +656,6 @@
 		</effects>
 	</skill>
 	<skill id="5923" toLevel="1" name="Soul Retain">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -797,7 +798,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5930" toLevel="1" name="Shielding of the Lost">
-		<!-- TODO: Implement me! -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
@@ -819,8 +819,6 @@
 		</effects>
 	</skill>
 	<skill id="5931" toLevel="1" name="Ultimate Shield">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>1</mpConsume>
 		<operateType>T</operateType>
@@ -842,8 +840,6 @@
 		</effects>
 	</skill>
 	<skill id="5932" toLevel="1" name="Dark Blade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<affectLimit>5-15</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -869,8 +865,6 @@
 		</effects>
 	</skill>
 	<skill id="5933" toLevel="1" name="Dark Blade">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<affectLimit>5-15</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -896,6 +890,7 @@
 		</effects>
 	</skill>
 	<skill id="5934" toLevel="1" name="Meet the soul of darkness and fight against it.">
+		<!-- Earth/Dark Attack Resistance is greatly raised. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_EARTH</abnormalType>
@@ -915,8 +910,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5935" toLevel="1" name="Dark Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<affectLimit>5-15</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -941,8 +934,6 @@
 		</effects>
 	</skill>
 	<skill id="5936" toLevel="1" name="Earth Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
 		<affectLimit>5-15</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -983,6 +974,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5938" toLevel="5" name="P. Atk. Up">
+		<!-- Attack abilities are enhanced. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -999,6 +991,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5939" toLevel="5" name="Defense Ability Up">
+		<!-- Defense abilities are enhanced. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -1015,6 +1008,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5940" toLevel="12" name="Energy of Generation">
+		<!-- HP recovery bonus and MP recovery bonus are increased. -->
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1058,6 +1052,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5941" toLevel="1" name="Energy of Erosion">
+		<!-- Max HP and Max MP are decreased. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAX_HP_DOWN</abnormalType>
@@ -1075,6 +1070,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5942" toLevel="1" name="Energy of Pollution">
+		<!-- HP/MP recovery magic effect decreases temporarily. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -1092,6 +1088,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5943" toLevel="1" name="Energy of Contamination">
+		<!-- P. Def. is decreased and MP consumption for skills is increased. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
@@ -1109,6 +1106,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5944" toLevel="1" name="Energy of Oblivion">
+		<!-- Accuracy is decreased. -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
@@ -1126,6 +1124,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5945" toLevel="1" name="Region2 Rotation5">
+		<!-- Resurrection is decreased. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -1194,8 +1193,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5950" toLevel="1" name="Birthday Gift">
-		<!-- Confirmed CT2.5 -->
-		<!-- Birthday Skill -->
+		<!-- Birthday cake received once a year. Recovers Vitality through the acquisition of XP. -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
@@ -1223,6 +1221,7 @@
 		</effects>
 	</skill>
 	<skill id="5951" toLevel="1" name="Agathion's Blessing">
+		<!-- The summoned spirit uses a blessing. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1238,6 +1237,7 @@
 		</conditions>
 	</skill>
 	<skill id="5952" toLevel="1" name="Agathion's Blessing">
+		<!-- The summoned spirit uses a blessing. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1253,6 +1253,7 @@
 		</conditions>
 	</skill>
 	<skill id="5953" toLevel="1" name="Agathion's Blessing">
+		<!-- The summoned spirit uses a blessing. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1268,6 +1269,7 @@
 		</conditions>
 	</skill>
 	<skill id="5954" toLevel="1" name="Agathion Cute Trick - Tinplate Golem">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1283,6 +1285,7 @@
 		</conditions>
 	</skill>
 	<skill id="5955" toLevel="1" name="Agathion Cute Trick - Joy">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1298,6 +1301,7 @@
 		</conditions>
 	</skill>
 	<skill id="5956" toLevel="1" name="Agathion Cute Trick - Angry Devil">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1313,6 +1317,7 @@
 		</conditions>
 	</skill>
 	<skill id="5957" toLevel="1" name="Agathion Cute Trick - Sorrow">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1328,6 +1333,7 @@
 		</conditions>
 	</skill>
 	<skill id="5958" toLevel="1" name="Agathion Cute Trick - Teddy Boy">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1343,6 +1349,7 @@
 		</conditions>
 	</skill>
 	<skill id="5959" toLevel="1" name="Agathion Cute Trick - Teddy Girl">
+		<!-- See the summoned spirit perform cute tricks. -->
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1358,6 +1365,7 @@
 		</conditions>
 	</skill>
 	<skill id="5960" toLevel="1" name="Stronghold Reactivate">
+		<!-- Wrapped in flames and HP is decreased. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -1379,6 +1387,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5961" toLevel="1" name="Barrier Thunder Storm">
+		<!-- Stunned and unable to move momentarily. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1491,6 +1500,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5968" toLevel="2" name="Rapid Shot">
+		<!-- Momentarily increases your own bow Atk. Spd. Effect 1. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1517,6 +1527,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5969" toLevel="2" name="Punch of Doom">
+		<!-- Becomes shocked momentarily while propelling a powerful iron-fist to enemy that gives significant damage. Requires a fist weapon. Ignores shield defense. Over-hit is possible. Power 10331. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1557,6 +1568,7 @@
 		</effects>
 	</skill>
 	<skill id="5970" toLevel="1" name="Seduced Knight's Help">
+		<!-- Increases Max HP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1577,6 +1589,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5971" toLevel="1" name="Seduced Ranger's Help">
+		<!-- Seduced Ranger's help. HP recovery bonus increases. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1597,6 +1610,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5972" toLevel="1" name="Seduced Wizard's Help">
+		<!-- Increases Max MP. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1617,6 +1631,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5973" toLevel="1" name="Seduced Warrior's Help">
+		<!-- Seduced Warrior's help. MP recovery bonus increases. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -1637,6 +1652,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5974" toLevel="1" name="Tiat Transformation">
+		<!-- Tiat's Transformation -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1771,7 +1787,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5980" toLevel="3" name="Seal Isolation">
-		<!-- Confirmed CT2.5 -->
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<effectPoint>
@@ -1808,6 +1823,7 @@
 		</effects>
 	</skill>
 	<skill id="5981" toLevel="3" name="Lilith' Curse">
+		<!-- Max HP and Speed are decreased. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1828,6 +1844,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5982" toLevel="1" name="Aura Bird - Falcon">
+		<!-- Mounts the Aura Bird - Falcon. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>-1</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1876,6 +1893,7 @@
 		</effects>
 	</skill>
 	<skill id="5983" toLevel="1" name="Aura Bird - Owl">
+		<!-- Mounts the Aura Bird - Owl. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>-1</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1924,6 +1942,7 @@
 		</effects>
 	</skill>
 	<skill id="5984" toLevel="1" name="Hand of Death">
+		<!-- P. Def., M. Def., and speed are greatly decreased. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
@@ -1993,7 +2012,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5987" toLevel="1" name="Weapon Maintenance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maintains the weapon in optimal condition to increase P. Atk. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
@@ -2058,7 +2077,7 @@
 		</effects>
 	</skill>
 	<skill id="5988" toLevel="1" name="Armor Maintenance">
-		<!-- Confirmed CT2.5 -->
+		<!-- Maintains the armor to increase defense ability. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
@@ -2116,6 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="5989" toLevel="1" name="Invincibility">
+		<!-- Invincible against standard attacks, skills and buffs/debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -2133,6 +2153,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5990" toLevel="3" name="Lesser Heal">
+		<!-- Quickly restores HP. Power 817. -->
 		<effectPoint>
 			<value level="1">595</value>
 			<value level="2">610</value>
@@ -2210,8 +2231,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5993" toLevel="1" name="Command of Anchor">
-		<!-- Confirmed CT2.5 -->
-		<!-- Ekimus Skills -->
+		<!-- When a blow is incurred, an opponent loses their target and cannot use skills and magic. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -2243,7 +2263,7 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- NPC Trigger Target Cancel -->
 				<minDamage>1</minDamage>
-				<skillId>5902</skillId>
+				<skillId>5902</skillId> <!-- Cancel NPC Trigger Target -->
 				<skillLevel>1</skillLevel>
 				<attackerType>L2Attackable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -2256,6 +2276,7 @@
 		</effects>
 	</skill>
 	<skill id="5994" toLevel="1" name="Mysterious Effect">
+		<!-- The target's head is enlarged. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>

@@ -235,7 +235,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33512" name="Returning Hero's Vitality Replenishing Juice" type="EtcItem">
-		<!-- Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the Birthday Vitality buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
+		<!-- Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -2471,7 +2471,6 @@
 		</stats>
 	</item>
 	<item id="33591" name="Bound Dynasty Breastplate" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2494,7 +2493,6 @@
 		</stats>
 	</item>
 	<item id="33592" name="Bound Dynasty Gaiters" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2517,7 +2515,6 @@
 		</stats>
 	</item>
 	<item id="33593" name="Bound Dynasty Helmet" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -2538,7 +2535,6 @@
 		</stats>
 	</item>
 	<item id="33594" name="Bound Dynasty Gauntlets" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2560,7 +2556,6 @@
 		</stats>
 	</item>
 	<item id="33595" name="Bound Dynasty Boots" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2582,7 +2577,6 @@
 		</stats>
 	</item>
 	<item id="33596" name="Bound Dynasty Shield" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -2606,7 +2600,6 @@
 		</stats>
 	</item>
 	<item id="33597" name="Bound Dynasty Leather Armor" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2629,7 +2622,6 @@
 		</stats>
 	</item>
 	<item id="33598" name="Bound Dynasty Leather Leggings" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2652,7 +2644,6 @@
 		</stats>
 	</item>
 	<item id="33599" name="Bound Dynasty Leather Helmet" additionalName="Event" type="Armor">
-		<!-- Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

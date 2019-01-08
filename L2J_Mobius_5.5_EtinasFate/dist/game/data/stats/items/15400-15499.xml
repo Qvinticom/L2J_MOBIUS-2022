@@ -59,7 +59,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15403" name="Player Commendation - Berserker Blade" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Berserker Blade with limited ability enhancement. <Special Option>. Critical increases by 73. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade with limited ability enhancement. <Special Option>. Critical +73. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -410,7 +410,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15418" name="6th Anniversary Party Cube (Event)" additionalName="30-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -429,7 +429,7 @@
 		</skills>
 	</item>
 	<item id="15419" name="6th Anniversary Party Cube (Event)" additionalName="25-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -448,7 +448,7 @@
 		</skills>
 	</item>
 	<item id="15420" name="6th Anniversary Party Cube (Event)" additionalName="20-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -467,7 +467,7 @@
 		</skills>
 	</item>
 	<item id="15421" name="6th Anniversary Party Cube (Event)" additionalName="15-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -486,7 +486,7 @@
 		</skills>
 	</item>
 	<item id="15422" name="6th Anniversary Party Cube (Event)" additionalName="10-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -505,7 +505,7 @@
 		</skills>
 	</item>
 	<item id="15423" name="6th Anniversary Party Cube (Event)" additionalName="5-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -524,7 +524,7 @@
 		</skills>
 	</item>
 	<item id="15424" name="6th Anniversary Party Cube (Event)" additionalName="3-day" type="EtcItem">
-		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hour. -->
+		<!-- When you Double-click, the reward is created. What reward will you receive? That depends on how lucky you are. One use per day. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -558,12 +558,12 @@
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
-			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
+			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hr.) -->
 			<item id="15426" min="1" max="1" chance="100" /> <!-- Hero's Escape Point - Event -->
 		</capsuled_items>
 	</item>
 	<item id="15426" name="Hero's Escape Point" additionalName="Event" type="EtcItem">
-		<!-- When Double-clicked, 10000 Player Commendation Points can be acquired. Cooldown is 7 days. -->
+		<!-- When Double-clicked, 10000 PA Points can be acquired. Cooldown is 7 days. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -582,7 +582,7 @@
 		</skills>
 	</item>
 	<item id="15427" name="6th Anniversary Party Cake" additionalName="Event" type="EtcItem">
-		<!-- For 1 hour, Vitality is recovered when acquiring XP. Cooldown is 12 hours. Vitality item with limited usage. -->
+		<!-- For 1 hr., Vitality is recovered when acquiring XP. Cooldown is 12 hr. Vitality item with limited usage. -->
 		<set name="icon" val="icon.event_six_party_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -601,7 +601,7 @@
 		</skills>
 	</item>
 	<item id="15428" name="6th Anniversary Party Earring (Event)" additionalName="30-day" type="Armor">
-		<!-- 30-day. Increases MP by 31 and Stun/Mental Attack Resistance by 20%. Increases Stun/Mental Atk. Rate by 20%. Has the Vampiric Rage Effect. Only one effect is applied even when the two identical earrings are worn. -->
+		<!-- 30-day. Increases MP by 31 and Stun/ Mental Attack Resistance by 20%. Increases Stun/ Mental Atk. Rate by 20%. Has the Vampiric Rage Effect. Only one effect is applied even when the two identical earrings are worn. -->
 		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -628,7 +628,7 @@
 		</stats>
 	</item>
 	<item id="15429" name="6th Anniversary Party Belt (Event)" additionalName="7-day" type="Armor">
-		<!-- Vitality is maintained for 30 min. 7-day. Cooldown is 23 hours. Vitality item with limited usage. -->
+		<!-- Vitality is maintained for 30 min. 7-day. Cooldown is 23 hr. Vitality item with limited usage. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -752,7 +752,7 @@
 		</skills>
 	</item>
 	<item id="15436" name="Halloween Transformation Stick" additionalName="7-day" type="Weapon">
-		<!-- You can transform to Halloween Pumpkin. 7-day accessory. -->
+		<!-- You can transform to Halloween Pumpkin. Requires a weapon slot. It is a Halloween event reward item that 7-day. -->
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -903,7 +903,7 @@
 		</skills>
 	</item>
 	<item id="15443" name="Super Strong Giant's Mask" type="Armor">
-		<!-- Super Strong Giant's Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Super Strong Giant's Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.br_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -926,7 +926,7 @@
 		</skills>
 	</item>
 	<item id="15444" name="Shriek Mask" type="Armor">
-		<!-- Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -949,7 +949,7 @@
 		</skills>
 	</item>
 	<item id="15445" name="Red Devil Mask" type="Armor">
-		<!-- Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -972,7 +972,7 @@
 		</skills>
 	</item>
 	<item id="15446" name="Mummy Mask" type="Armor">
-		<!-- Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -995,7 +995,7 @@
 		</skills>
 	</item>
 	<item id="15447" name="Alien Mask" type="Armor">
-		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1037,7 +1037,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15449" name="Shiny Alien Mask" type="Armor">
-		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1060,7 +1060,7 @@
 		</skills>
 	</item>
 	<item id="15450" name="Shiny Reanimated Corpse Mask" type="Armor">
-		<!-- Shiny Reanimated Corpse Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 2 hours. -->
+		<!-- Shiny Reanimated Corpse Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 2 hr. -->
 		<set name="icon" val="icon.ev_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1083,7 +1083,7 @@
 		</skills>
 	</item>
 	<item id="15451" name="Shiny Shriek Mask" type="Armor">
-		<!-- Shiny Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shiny Shriek Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1106,7 +1106,7 @@
 		</skills>
 	</item>
 	<item id="15452" name="Shiny Red Devil Mask" type="Armor">
-		<!-- Shiny Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shiny Red Devil Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1129,7 +1129,7 @@
 		</skills>
 	</item>
 	<item id="15453" name="Shiny Mummy Mask" type="Armor">
-		<!-- Shiny Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hour. Cooldown is 1 hour. -->
+		<!-- Shiny Mummy Mask. You can use the card skill necessary for playing Jack's game when equipped. 4-hr. Cooldown is 1 hr. -->
 		<set name="icon" val="icon.ev_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1152,7 +1152,7 @@
 		</skills>
 	</item>
 	<item id="15454" name="Shiny Alien Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Alien Mask. -->
+		<!-- Double-click to obtain a Shiny Alien Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1172,7 +1172,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15455" name="Shiny Reanimated Corpse Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Reanimated Corpse Mask. -->
+		<!-- Double-click to obtain a Shiny Reanimated Corpse Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1192,7 +1192,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15456" name="Shiny Shriek Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Shriek Mask. -->
+		<!-- Double-click to obtain a Shiny Shriek Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1212,7 +1212,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15457" name="Shiny Red Devil Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Red Devil Mask. -->
+		<!-- Double-click to obtain a Shiny Red Devil Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1232,7 +1232,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15458" name="Shiny Mummy Mask Pack" additionalName="Event" type="EtcItem">
-		<!-- Wrapped Pack containing Shiny Mummy Mask. -->
+		<!-- Double-click to obtain a Shiny Mummy Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1347,7 +1347,7 @@
 		</skills>
 	</item>
 	<item id="15464" name="Golden Jack O'Lantern Mask" additionalName="7-day" type="Armor">
-		<!-- Golden Jack O'Lantern Mask. Shines brightly. Cooldown is 23 hour. -->
+		<!-- Golden Jack O'Lantern Mask. Shines brightly. Cooldown is 23 hr. -->
 		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1533,7 +1533,7 @@
 		</skills>
 	</item>
 	<item id="15474" name="Golden Spice" type="EtcItem">
-		<!-- Feed used to tame baby animals on the Beast Farm. Using this feed will allow the monster to drop Adena and/or items, but will give less XP -->
+		<!-- Feed used to tame baby animals on the Beast Farm. Using this feed will allow the monster to drop Adena and/ or items, but will give less XP -->
 		<set name="icon" val="icon.etc_golden_spice_new_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1609,7 +1609,7 @@
 		</skills>
 	</item>
 	<item id="15478" name="Golden Spice (S-grade)" type="EtcItem">
-		<!-- Better quality feed that has a chance to turn Beast Farm babies into a fully grown pets with just one application. Using this feed will allow the monster to drop Adena and/or items, but will give less XP -->
+		<!-- Better quality feed that has a chance to turn Beast Farm babies into a fully grown pets with just one application. Using this feed will allow the monster to drop Adena and/ or items, but will give less XP -->
 		<set name="icon" val="icon.etc_golden_spice_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="CRYSTAL" />
@@ -1837,7 +1837,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15491" name="Elite Maguen Collection Box" type="EtcItem">
-		<!-- Its contents are a mystery.�The only way to find out what is inside is to open it. -->
+		<!-- Its contents are a mystery.The only way to find out what is inside is to open it. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1852,7 +1852,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15492" name="Sel Mahum Salmon Porridge" type="EtcItem">
-		<!-- Sel Mahum salmon porridge. Smells better than expected... but not by much. -->
+		<!-- Sel Mahum salmon porridge. Smells better than expected?but not by much. -->
 		<set name="icon" val="icon.etc_salmon_soup_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

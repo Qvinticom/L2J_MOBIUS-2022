@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25200" level="71" type="L2Monster" name="Sheshark's Family" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -2129,9 +2129,9 @@
 				<item id="2376" min="1" max="1" chance="2.793" /> <!-- Avadon Breastplate -->
 				<item id="383" min="1" max="1" chance="1.817" /> <!-- Zubei's Gaiters -->
 				<item id="2379" min="1" max="1" chance="1.012" /> <!-- Avadon Gaiters -->
-				<item id="4620" min="1" max="1" chance="15.54" /> <!-- Greater INT Dye (Int  4 Wit - 4) -->
-				<item id="4621" min="1" max="1" chance="14.96" /> <!-- Greater MEN Dye (Men  4 Int - 4) -->
-				<item id="4619" min="1" max="3" chance="7.603" /> <!-- Greater INT Dye (Int  4 Men - 4) -->
+				<item id="4620" min="1" max="1" chance="15.54" /> <!-- Greater INT Dye <Int +4 Wit -4> -->
+				<item id="4621" min="1" max="1" chance="14.96" /> <!-- Greater MEN Dye <Men +4 Int -4> -->
+				<item id="4619" min="1" max="3" chance="7.603" /> <!-- Greater INT Dye <Int +4 Men -4> -->
 				<item id="947" min="1" max="1" chance="4.492" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="46504" min="1" max="1" chance="1.134" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="1.096" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -3079,9 +3079,9 @@
 				<item id="2406" min="1" max="1" chance="3.366" /> <!-- Avadon Robe -->
 				<item id="97" min="1" max="1" chance="3.248" /> <!-- Lance -->
 				<item id="2397" min="1" max="1" chance="1.553" /> <!-- Tunic of Zubei -->
-				<item id="4624" min="1" max="1" chance="20.92" /> <!-- Greater WIT Dye (Wit  4 Men - 4) -->
-				<item id="4622" min="1" max="3" chance="9.78" /> <!-- Greater MEN Dye (Men  4 Wit - 4) -->
-				<item id="4623" min="1" max="3" chance="6.766" /> <!-- Greater WIT Dye (Wit  4 Int - 4) -->
+				<item id="4624" min="1" max="1" chance="20.92" /> <!-- Greater WIT Dye <Wit +4 Men -4> -->
+				<item id="4622" min="1" max="3" chance="9.78" /> <!-- Greater MEN Dye <Men +4 Wit -4> -->
+				<item id="4623" min="1" max="3" chance="6.766" /> <!-- Greater WIT Dye <Wit +4 Int -4> -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3159,10 +3159,10 @@
 				<item id="107" min="1" max="1" chance="2.24" /> <!-- Compound Shield -->
 				<item id="517" min="1" max="1" chance="1.01" /> <!-- Compound Helmet -->
 				<item id="1149" min="1" max="1" chance="0.75" /> <!-- Shining Circlet -->
-				<item id="4603" min="1" max="1" chance="16.78" /> <!-- Greater CON Dye (Con  3 Str - 3) -->
+				<item id="4603" min="1" max="1" chance="16.78" /> <!-- Greater CON Dye <Con +3 Str -3> -->
 				<item id="951" min="1" max="1" chance="14.02" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="4601" min="1" max="3" chance="8.717" /> <!-- Greater STR Dye (STR  3 CON - 3) -->
-				<item id="4602" min="1" max="3" chance="5.857" /> <!-- Greater STR Dye (STR  3 DEX - 3) -->
+				<item id="4601" min="1" max="3" chance="8.717" /> <!-- Greater STR Dye <STR +3 CON -3> -->
+				<item id="4602" min="1" max="3" chance="5.857" /> <!-- Greater STR Dye <STR +3 DEX -3> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -3689,10 +3689,10 @@
 				<item id="4078" min="9" max="27" chance="51.46" /> <!-- Blue Wolf Breastplate Part -->
 				<item id="4121" min="3" max="9" chance="31.62" /> <!-- Bow of Peril Shaft -->
 				<item id="4080" min="32" max="96" chance="21.29" /> <!-- Blue Wolf Gaiter Material -->
-				<item id="4621" min="1" max="1" chance="13.08" /> <!-- Greater MEN Dye (Men  4 Int - 4) -->
+				<item id="4621" min="1" max="1" chance="13.08" /> <!-- Greater MEN Dye <Men +4 Int -4> -->
 				<item id="4081" min="22" max="66" chance="12.28" /> <!-- Doom Plate Armor Temper -->
-				<item id="4619" min="1" max="1" chance="12.25" /> <!-- Greater INT Dye (Int  4 Men - 4) -->
-				<item id="4620" min="1" max="1" chance="12.24" /> <!-- Greater INT Dye (Int  4 Wit - 4) -->
+				<item id="4619" min="1" max="1" chance="12.25" /> <!-- Greater INT Dye <Int +4 Men -4> -->
+				<item id="4620" min="1" max="1" chance="12.24" /> <!-- Greater INT Dye <Int +4 Wit -4> -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
@@ -4143,23 +4143,23 @@
 		<dropLists>
 			<drop>
 				<item id="37714" min="1" max="1" chance="41.11" /> <!-- Talisman - Lilith -->
-				<item id="17345" min="2" max="2" chance="20.86" /> <!-- Twilight Leather Armor -->
-				<item id="17344" min="2" max="2" chance="20.58" /> <!-- Twilight Leather Helmet -->
-				<item id="17347" min="2" max="2" chance="20.49" /> <!-- Twilight Leather Gloves -->
-				<item id="17346" min="2" max="2" chance="20.21" /> <!-- Twilight Leather Leggings -->
-				<item id="17348" min="2" max="2" chance="20.01" /> <!-- Twilight Leather Boots -->
-				<item id="17340" min="2" max="2" chance="17.43" /> <!-- Twilight Gaiters -->
-				<item id="17352" min="2" max="2" chance="17.33" /> <!-- Twilight Gloves -->
-				<item id="17343" min="2" max="2" chance="17.3" /> <!-- Twilight Shield -->
-				<item id="17349" min="2" max="2" chance="17.16" /> <!-- Twilight Circlet -->
-				<item id="17354" min="2" max="2" chance="16.985" /> <!-- Twilight Sigil -->
-				<item id="17338" min="2" max="2" chance="16.93" /> <!-- Twilight Helmet -->
-				<item id="17341" min="2" max="2" chance="16.8" /> <!-- Twilight Gauntlets -->
-				<item id="17342" min="2" max="2" chance="16.58" /> <!-- Twilight Boots -->
-				<item id="17351" min="2" max="2" chance="16.39" /> <!-- Twilight Stockings -->
-				<item id="17353" min="2" max="2" chance="16.37" /> <!-- Twilight Shoes -->
-				<item id="17350" min="2" max="2" chance="16.34" /> <!-- Twilight Tunic -->
-				<item id="17339" min="2" max="2" chance="16.14" /> <!-- Twilight Breastplate -->
+				<item id="17345" min="2" max="2" chance="20.86" /> <!-- Twilight Leather Armor - Light Armor -->
+				<item id="17344" min="2" max="2" chance="20.58" /> <!-- Twilight Leather Helmet - Light Armor -->
+				<item id="17347" min="2" max="2" chance="20.49" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17346" min="2" max="2" chance="20.21" /> <!-- Twilight Leather Leggings - Light Armor -->
+				<item id="17348" min="2" max="2" chance="20.01" /> <!-- Twilight Leather Boots - Light Armor -->
+				<item id="17340" min="2" max="2" chance="17.43" /> <!-- Twilight Gaiters - Heavy Armor -->
+				<item id="17352" min="2" max="2" chance="17.33" /> <!-- Twilight Gloves - Robe -->
+				<item id="17343" min="2" max="2" chance="17.3" /> <!-- Twilight Shield - Heavy Armor -->
+				<item id="17349" min="2" max="2" chance="17.16" /> <!-- Twilight Circlet - Robe -->
+				<item id="17354" min="2" max="2" chance="16.985" /> <!-- Twilight Sigil - Robe -->
+				<item id="17338" min="2" max="2" chance="16.93" /> <!-- Twilight Helmet - Heavy Armor -->
+				<item id="17341" min="2" max="2" chance="16.8" /> <!-- Twilight Gauntlets - Heavy Armor -->
+				<item id="17342" min="2" max="2" chance="16.58" /> <!-- Twilight Boots - Heavy Armor -->
+				<item id="17351" min="2" max="2" chance="16.39" /> <!-- Twilight Stockings - Robe -->
+				<item id="17353" min="2" max="2" chance="16.37" /> <!-- Twilight Shoes - Robe -->
+				<item id="17350" min="2" max="2" chance="16.34" /> <!-- Twilight Tunic - Robe -->
+				<item id="17339" min="2" max="2" chance="16.14" /> <!-- Twilight Breastplate - Heavy Armor -->
 				<item id="36257" min="1" max="1" chance="15.13" /> <!-- Lilith's Soul Necklace -->
 				<item id="17333" min="1" max="1" chance="9.157" /> <!-- Apocalypse Caster -->
 				<item id="17329" min="1" max="1" chance="9.136" /> <!-- Apocalypse Stormer -->
@@ -4185,17 +4185,17 @@
 				<item id="46489" min="1" max="3" chance="22.31" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="2" chance="22.27" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46492" min="1" max="1" chance="17.54" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="17698" min="1" max="1" chance="17.43" /> <!-- Lv. 5 Giant DEX Dye -->
+				<item id="17698" min="1" max="1" chance="17.43" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
 				<item id="46507" min="1" max="1" chance="17.42" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46477" min="1" max="1" chance="17.36" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="17697" min="1" max="1" chance="17.33" /> <!-- Lv. 5 Giant STR Dye -->
-				<item id="17699" min="1" max="1" chance="16.94" /> <!-- Lv. 5 Giant CON Dye -->
-				<item id="17702" min="1" max="1" chance="16.55" /> <!-- Lv. 5 Giant MEN Dye -->
-				<item id="17700" min="1" max="1" chance="16.51" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17697" min="1" max="1" chance="17.33" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
+				<item id="17699" min="1" max="1" chance="16.94" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
+				<item id="17702" min="1" max="1" chance="16.55" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
+				<item id="17700" min="1" max="1" chance="16.51" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
 				<item id="46460" min="1" max="2" chance="16.11" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
 				<item id="46445" min="1" max="2" chance="16.1" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="3" chance="15.9" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="17701" min="1" max="1" chance="15.98" /> <!-- Lv. 5 Giant WIT Dye -->
+				<item id="17701" min="1" max="1" chance="15.98" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
 				<item id="37770" min="1" max="1" chance="15.46" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
 				<item id="46459" min="1" max="3" chance="15.48" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
 				<item id="46461" min="1" max="2" chance="15.16" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
@@ -4364,23 +4364,23 @@
 		<dropLists>
 			<drop>
 				<item id="37715" min="1" max="1" chance="39.88" /> <!-- Talisman - Anakim -->
-				<item id="17405" min="2" max="2" chance="19.78" /> <!-- Seraph Leather Gloves -->
-				<item id="17402" min="2" max="2" chance="19.71" /> <!-- Seraph Leather Helmet -->
-				<item id="17403" min="2" max="2" chance="19.62" /> <!-- Seraph Leather Armor -->
-				<item id="17404" min="2" max="2" chance="19.46" /> <!-- Seraph Leather Leggings -->
-				<item id="17406" min="2" max="2" chance="19.15" /> <!-- Seraph Leather Boots -->
-				<item id="17409" min="2" max="2" chance="17.43" /> <!-- Seraph Stockings -->
-				<item id="17398" min="2" max="2" chance="17.43" /> <!-- Seraph Gaiters -->
-				<item id="17411" min="2" max="2" chance="17.42" /> <!-- Seraph Shoes -->
-				<item id="17400" min="2" max="2" chance="17.42" /> <!-- Seraph Boots -->
-				<item id="17396" min="2" max="2" chance="17.41" /> <!-- Seraph Helmet -->
-				<item id="17401" min="2" max="2" chance="17.375" /> <!-- Seraph Shield -->
-				<item id="17399" min="2" max="2" chance="17.16" /> <!-- Seraph Gauntlets -->
-				<item id="17412" min="2" max="2" chance="17.075" /> <!-- Seraph Sigil -->
-				<item id="17407" min="2" max="2" chance="17.05" /> <!-- Seraph Circlet -->
-				<item id="17408" min="2" max="2" chance="16.92" /> <!-- Seraph Tunic -->
-				<item id="17410" min="2" max="2" chance="16.47" /> <!-- Seraph Gloves -->
-				<item id="17397" min="2" max="2" chance="16.01" /> <!-- Seraph Breastplate -->
+				<item id="17405" min="2" max="2" chance="19.78" /> <!-- Seraph Leather Gloves - Light Armor -->
+				<item id="17402" min="2" max="2" chance="19.71" /> <!-- Seraph Leather Helmet - Light Armor -->
+				<item id="17403" min="2" max="2" chance="19.62" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17404" min="2" max="2" chance="19.46" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17406" min="2" max="2" chance="19.15" /> <!-- Seraph Leather Boots - Light Armor -->
+				<item id="17409" min="2" max="2" chance="17.43" /> <!-- Seraph Stockings - Robe -->
+				<item id="17398" min="2" max="2" chance="17.43" /> <!-- Seraph Gaiters - Heavy Armor -->
+				<item id="17411" min="2" max="2" chance="17.42" /> <!-- Seraph Shoes - Robe -->
+				<item id="17400" min="2" max="2" chance="17.42" /> <!-- Seraph Boots - Heavy Armor -->
+				<item id="17396" min="2" max="2" chance="17.41" /> <!-- Seraph Helmet - Heavy Armor -->
+				<item id="17401" min="2" max="2" chance="17.375" /> <!-- Seraph Shield - Heavy Armor -->
+				<item id="17399" min="2" max="2" chance="17.16" /> <!-- Seraph Gauntlets - Heavy Armor -->
+				<item id="17412" min="2" max="2" chance="17.075" /> <!-- Seraph Sigil - Robe -->
+				<item id="17407" min="2" max="2" chance="17.05" /> <!-- Seraph Circlet - Robe -->
+				<item id="17408" min="2" max="2" chance="16.92" /> <!-- Seraph Tunic - Robe -->
+				<item id="17410" min="2" max="2" chance="16.47" /> <!-- Seraph Gloves - Robe -->
+				<item id="17397" min="2" max="2" chance="16.01" /> <!-- Seraph Breastplate - Heavy Armor -->
 				<item id="17384" min="1" max="1" chance="9.159" /> <!-- Specter Slasher -->
 				<item id="17385" min="1" max="1" chance="9.152" /> <!-- Specter Avenger -->
 				<item id="17390" min="1" max="1" chance="9.109" /> <!-- Specter Buster -->
@@ -4405,18 +4405,18 @@
 				<item id="46489" min="1" max="3" chance="22.07" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="2" chance="21.91" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46507" min="1" max="1" chance="17.23" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="17698" min="1" max="1" chance="17.11" /> <!-- Lv. 5 Giant DEX Dye -->
-				<item id="17701" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Giant WIT Dye -->
-				<item id="17697" min="1" max="1" chance="16.8" /> <!-- Lv. 5 Giant STR Dye -->
+				<item id="17698" min="1" max="1" chance="17.11" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
+				<item id="17701" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
+				<item id="17697" min="1" max="1" chance="16.8" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
 				<item id="46492" min="1" max="1" chance="16.62" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="17702" min="1" max="1" chance="16.57" /> <!-- Lv. 5 Giant MEN Dye -->
-				<item id="17700" min="1" max="1" chance="16.55" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17702" min="1" max="1" chance="16.57" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
+				<item id="17700" min="1" max="1" chance="16.55" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
 				<item id="46477" min="1" max="1" chance="16.47" /> <!-- Leona's Soul Crystal - Stage 4 -->
 				<item id="46445" min="1" max="2" chance="16.04" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46446" min="1" max="2" chance="15.99" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46459" min="1" max="3" chance="15.92" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
 				<item id="46444" min="1" max="3" chance="15.82" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="17699" min="1" max="1" chance="15.85" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17699" min="1" max="1" chance="15.85" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
 				<item id="46461" min="1" max="2" chance="15.61" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="37771" min="1" max="1" chance="14.8" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
 				<item id="46460" min="1" max="2" chance="14.79" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
