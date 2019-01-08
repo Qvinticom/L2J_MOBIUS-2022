@@ -357,7 +357,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						case PC_CAFE_POINTS:
 						{
 							player.setPcCafePoints((int) (player.getPcCafePoints() - totalCount));
-							player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) totalCount, 1));
+							player.sendPacket(new ExPCCafePointInfo(player.getPcCafePoints(), (int) -totalCount, 1));
 							break;
 						}
 						default:
