@@ -1041,14 +1041,8 @@ public class Olympiad extends ListenersContainer
 			return 0;
 		}
 		
-		int points = 0;
-		
 		// Hero point bonus
-		if (Hero.getInstance().isHero(player.getObjectId()) || Hero.getInstance().isUnclaimedHero(player.getObjectId()))
-		{
-			points += Config.ALT_OLY_HERO_POINTS;
-		}
-		
+		int points = player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()) ? Config.ALT_OLY_HERO_POINTS : 0;
 		// Rank point bonus
 		switch (_noblesRank.get(objId))
 		{
