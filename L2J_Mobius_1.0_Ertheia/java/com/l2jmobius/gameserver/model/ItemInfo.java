@@ -145,6 +145,7 @@ public class ItemInfo
 		}
 		_option = item.getEnchantOptions();
 		_visualId = item.getVisualId();
+		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
 	}
 	
 	public ItemInfo(L2ItemInstance item, int change)

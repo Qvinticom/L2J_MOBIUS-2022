@@ -196,6 +196,7 @@ public final class L2ItemInstance extends L2Object
 		_mana = _item.getDuration();
 		_time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
 		scheduleLifeTimeTask();
+		scheduleVisualLifeTime();
 	}
 	
 	/**
@@ -218,6 +219,7 @@ public final class L2ItemInstance extends L2Object
 		_mana = _item.getDuration();
 		_time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
 		scheduleLifeTimeTask();
+		scheduleVisualLifeTime();
 	}
 	
 	/**
