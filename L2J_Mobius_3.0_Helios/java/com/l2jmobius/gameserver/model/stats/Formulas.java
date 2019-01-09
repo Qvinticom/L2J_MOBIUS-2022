@@ -1255,8 +1255,7 @@ public final class Formulas
 	
 	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
 	{
-		double result = target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()) - 1.0;
-		return 1.0 - result;
+		return Math.max(0, 2.0 - target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()));
 	}
 	
 	public static double calcAttackTraitBonus(L2Character attacker, L2Character target)
