@@ -133,6 +133,7 @@ public class DBSpawnManager
 					}
 					else
 					{
+						spawn.stopRespawn();
 						LOGGER.warning(getClass().getSimpleName() + ": Found database spawns without respawn for npc: " + template.getId() + " - " + template.getName() + " " + spawnTemplate);
 						continue;
 					}

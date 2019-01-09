@@ -464,7 +464,6 @@ public class AutoSpawnHandler
 				if (spawnInst._spawnCount == 1)
 				{
 					npcInst = newSpawn.doSpawn();
-					newSpawn.stopRespawn(); // Just in case...
 					npcInst.setXYZ(npcInst.getX(), npcInst.getY(), npcInst.getZ());
 					spawnInst.addNpcInstance(npcInst);
 				}
@@ -481,12 +480,13 @@ public class AutoSpawnHandler
 						spawnInst.addNpcInstance(npcInst);
 					}
 				}
+				newSpawn.stopRespawn();
 				
 				if (npcInst != null)
 				{
 					if (spawnInst.isRandomSpawn())
 					{
-						while (!L2World.getInstance().getVisibleObjectsInRange(npcInst, L2Npc.class, 10).isEmpty())
+						while (!L2World.getInstance().getVisibleObjectsInRange(npcInst, L2Npc.class, 5).isEmpty())
 						{
 							// LOGGER.log(Level.INFO, "AutoSpawnHandler: Random spawn location " + npcInst.getLocation() + " for " + npcInst + " is occupied. Teleporting...");
 							npcInst.teleToLocation(locationList[Rnd.get(locationList.length)]);

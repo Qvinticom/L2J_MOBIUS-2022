@@ -332,7 +332,7 @@ public final class SiegeGuardManager
 				if (spawn != null)
 				{
 					spawn.init();
-					if (isHired)
+					if (isHired || (spawn.getRespawnDelay() == 0))
 					{
 						spawn.stopRespawn();
 					}

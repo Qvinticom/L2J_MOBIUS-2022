@@ -495,7 +495,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			SpawnTable.getInstance().addNewSpawn(spawn, permanent);
 			spawn.init();
 			
-			if (!permanent)
+			if (!permanent || (respawnTime <= 0))
 			{
 				spawn.stopRespawn();
 			}

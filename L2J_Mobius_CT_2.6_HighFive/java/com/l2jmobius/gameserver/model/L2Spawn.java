@@ -286,7 +286,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable
 		{
 			doSpawn();
 		}
-		_doRespawn = _respawnMinDelay != 0;
+		_doRespawn = _respawnMinDelay > 0;
 		
 		return _currentCount;
 	}

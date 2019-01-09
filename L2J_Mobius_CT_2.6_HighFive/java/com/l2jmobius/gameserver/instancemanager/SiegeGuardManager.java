@@ -160,6 +160,10 @@ public final class SiegeGuardManager
 							return;
 						}
 					}
+					else if (spawn.getRespawnDelay() == 0)
+					{
+						spawn.stopRespawn();
+					}
 				}
 			}
 		}

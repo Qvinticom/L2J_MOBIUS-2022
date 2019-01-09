@@ -174,6 +174,10 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		for (L2Spawn guard : _guards)
 		{
 			guard.init();
+			if (guard.getRespawnDelay() == 0)
+			{
+				guard.stopRespawn();
+			}
 		}
 	}
 	

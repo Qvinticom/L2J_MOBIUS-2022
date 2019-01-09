@@ -228,8 +228,8 @@ public class TarBeetleSpawn implements IGameXmlReader
 						final L2Spawn spawn = new L2Spawn(18804);
 						spawn.setHeading(Rnd.get(65535));
 						spawn.setXYZ(location.getX(), location.getY(), GeoEngine.getInstance().getHeight(location.getX(), location.getY(), location.getZ()));
-						
 						final L2Npc npc = spawn.doSpawn();
+						spawn.stopRespawn();
 						npc.setRandomWalking(false);
 						npc.setIsImmobilized(true);
 						npc.setIsInvul(true);
