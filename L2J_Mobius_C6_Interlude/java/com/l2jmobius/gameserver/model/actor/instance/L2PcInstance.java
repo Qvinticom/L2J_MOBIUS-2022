@@ -12331,18 +12331,6 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	/**
-	 * Recharge auto soul shot.
-	 * @param physical the physical
-	 * @param magic the magic
-	 * @param summon the summon
-	 * @param atkTime TODO
-	 */
-	public void rechargeAutoSoulShot(boolean physical, boolean magic, boolean summon, int atkTime)
-	{
-		ThreadPool.schedule(() -> rechargeAutoSoulShot(physical, magic, summon), atkTime);
-	}
-	
 	class WarnUserTakeBreak implements Runnable
 	{
 		@Override

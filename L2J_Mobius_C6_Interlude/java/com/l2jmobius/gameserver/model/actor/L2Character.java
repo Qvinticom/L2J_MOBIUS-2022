@@ -1085,16 +1085,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			setCurrentCp(getStatus().getCurrentCp() - 10);
 		}
 		
-		final int timeAtk = calculateTimeBetweenAttacks(target, weaponItem);
-		
 		// Recharge any active auto soulshot tasks for player (or player's summon if one exists).
 		if (this instanceof L2PcInstance)
 		{
-			((L2PcInstance) this).rechargeAutoSoulShot(true, false, false, timeAtk);
+			((L2PcInstance) this).rechargeAutoSoulShot(true, false, false);
 		}
 		else if (this instanceof L2Summon)
 		{
-			((L2Summon) this).getOwner().rechargeAutoSoulShot(true, false, true, timeAtk);
+			((L2Summon) this).getOwner().rechargeAutoSoulShot(true, false, true);
 		}
 		
 		// Verify if soulshots are charged.
@@ -1111,6 +1109,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		
 		// Get the Attack Speed of the L2Character (delay (in milliseconds) before next attack)
 		// the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
+		final int timeAtk = calculateTimeBetweenAttacks(target, weaponItem);
 		final int timeToHit = timeAtk / 2;
 		_attackEndTime = GameTimeController.getGameTicks();
 		_attackEndTime += (timeAtk / GameTimeController.MILLIS_IN_TICK);
@@ -1646,16 +1645,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// Recharge AutoSoulShot
-		final int atkTime = Formulas.getInstance().calcMAtkSpd(activeChar, skill, skill.getHitTime());
 		if (skill.useSoulShot())
 		{
 			if (activeChar instanceof L2PcInstance)
 			{
-				((L2PcInstance) activeChar).rechargeAutoSoulShot(true, false, false, atkTime);
+				((L2PcInstance) activeChar).rechargeAutoSoulShot(true, false, false);
 			}
 			else if (this instanceof L2Summon)
 			{
-				((L2Summon) activeChar).getOwner().rechargeAutoSoulShot(true, false, true, atkTime);
+				((L2Summon) activeChar).getOwner().rechargeAutoSoulShot(true, false, true);
 			}
 		}
 		
