@@ -8306,7 +8306,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return;
 		}
 		
-		_disabledSkills.remove(new Integer(_skill.getReuseHashCode()));
+		_disabledSkills.remove(_skill.getReuseHashCode());
 		
 		if (this instanceof L2PcInstance)
 		{
