@@ -22,11 +22,15 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.StringJoiner;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
@@ -957,5 +961,27 @@ public final class Util
 		{
 			return defaultVal;
 		}
+	}
+	
+	/**
+	 * This will sort a Map according to the values. Default sort direction is ascending.
+	 * @param <K> keyType
+	 * @param <V> valueType
+	 * @param map Map to be sorted.
+	 * @param descending If you want to sort descending.
+	 * @return A new Map sorted by the values.
+	 */
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map, boolean descending)
+	{
+		if (descending)
+		{
+			return map.entrySet().stream().sorted(Map.Entry.comparingByValue(Collections.reverseOrder())).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+		}
+		return map.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+	}
+	
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map)
+	{
+		return map.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 	}
 }

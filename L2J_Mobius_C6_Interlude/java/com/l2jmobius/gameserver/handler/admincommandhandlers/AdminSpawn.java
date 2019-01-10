@@ -16,6 +16,9 @@
  */
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
@@ -31,6 +34,7 @@ import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.model.spawn.L2Spawn;
@@ -38,6 +42,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jmobius.gameserver.util.BuilderUtil;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: - show_spawns = shows menu - spawn_index lvl = shows menu for monsters with respective level - spawn_monster id = spawns monster id on target
@@ -59,7 +64,9 @@ public class AdminSpawn implements IAdminCommandHandler
 		"admin_show_npcs",
 		"admin_teleport_reload",
 		"admin_spawnnight",
-		"admin_spawnday"
+		"admin_spawnday",
+		"admin_topspawncount",
+		"admin_top_spawn_count"
 	};
 	
 	public static Logger LOGGER = Logger.getLogger(AdminSpawn.class.getName());
@@ -198,6 +205,52 @@ public class AdminSpawn implements IAdminCommandHandler
 		{
 			TeleportLocationTable.getInstance().reloadAll();
 			GmListTable.broadcastMessageToGMs("Teleport List Table reloaded.");
+		}
+		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))
+		{
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			st.nextToken();
+			int count = 5;
+			if (st.hasMoreTokens())
+			{
+				final String nextToken = st.nextToken();
+				if (Util.isDigit(nextToken))
+				{
+					count = Integer.parseInt(nextToken);
+				}
+				if (count <= 0)
+				{
+					return true;
+				}
+			}
+			final Map<Integer, Integer> npcsFound = new HashMap<>();
+			for (L2Object obj : L2World.getInstance().getAllVisibleObjects())
+			{
+				if (!(obj instanceof L2NpcInstance))
+				{
+					continue;
+				}
+				final int npcId = ((L2NpcInstance) obj).getNpcId();
+				if (npcsFound.containsKey(npcId))
+				{
+					npcsFound.put(npcId, npcsFound.get(npcId) + 1);
+				}
+				else
+				{
+					npcsFound.put(npcId, 1);
+				}
+			}
+			BuilderUtil.sendSysMessage(activeChar, "Top " + count + " spawn count.");
+			for (Entry<Integer, Integer> entry : Util.sortByValue(npcsFound, true).entrySet())
+			{
+				count--;
+				if (count < 0)
+				{
+					break;
+				}
+				final int npcId = entry.getKey();
+				BuilderUtil.sendSysMessage(activeChar, NpcTable.getInstance().getTemplate(npcId).getName() + " (" + npcId + "): " + entry.getValue());
+			}
 		}
 		
 		return true;

@@ -19,6 +19,10 @@ package com.l2jmobius.gameserver.util;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -541,5 +545,27 @@ public final class Util
 	public static int countPagesNumber(int objectsSize, int pageSize)
 	{
 		return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
+	}
+	
+	/**
+	 * This will sort a Map according to the values. Default sort direction is ascending.
+	 * @param <K> keyType
+	 * @param <V> valueType
+	 * @param map Map to be sorted.
+	 * @param descending If you want to sort descending.
+	 * @return A new Map sorted by the values.
+	 */
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map, boolean descending)
+	{
+		if (descending)
+		{
+			return map.entrySet().stream().sorted(Map.Entry.comparingByValue(Collections.reverseOrder())).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+		}
+		return map.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+	}
+	
+	public static <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map)
+	{
+		return map.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 	}
 }

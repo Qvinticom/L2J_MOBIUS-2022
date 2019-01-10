@@ -528,6 +528,8 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_teleport_reload','3'),
 ('admin_spawnnight','3'),
 ('admin_spawnday','3'),
+('admin_topspawncount','3'),
+('admin_top_spawn_count','3'),
 
 -- Section: Target 
 ('admin_target','3'),
