@@ -461,7 +461,10 @@
 		</collision>
 	</npc>
 	<npc id="19556" level="99" type="L2Npc" name="Dimensional Trap">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="trap_skill_type" value="1" />
+			<skill name="trap_skill" id="10806" level="2" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -473,7 +476,12 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
+		<skillList>
+			<skill id="10806" level="2" /> <!-- Frost Trap -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="100" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -492,7 +500,7 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -511,7 +519,7 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -530,7 +538,7 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -549,7 +557,7 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -568,7 +576,7 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -587,7 +595,7 @@
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -606,7 +614,7 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="1" />
 			<height normal="1" />
@@ -625,7 +633,7 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" canMove="false" talkable="false" />
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />

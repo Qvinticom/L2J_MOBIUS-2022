@@ -56,6 +56,7 @@ Ertheia:
 -Brooch system
 -Luck system
 -Auto fishing
+-Dimensional Warp
 
 Events:
 -Birth of Draco

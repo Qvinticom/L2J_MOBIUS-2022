@@ -54,6 +54,7 @@ Ertheia:
 -Brooch system
 -Luck system
 -Auto fishing
+-Dimensional Warp
 
 Infinite Odyssey:
 -Garden of Spirits

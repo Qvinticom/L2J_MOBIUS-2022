@@ -676,6 +676,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7276" sp="1" />
+		<equipment rhand="78" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1183" hpRegen="4.5" mp="610" mpRegen="1.8" />
 			<speed>
@@ -703,6 +704,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7276" sp="1" />
+		<equipment rhand="78" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1183" hpRegen="4.5" mp="610" mpRegen="1.8" />
 			<speed>
@@ -820,6 +822,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
+		<equipment rhand="13978" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="8923" hpRegen="8.5" mp="1607" mpRegen="3" />
@@ -913,6 +916,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
+		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
@@ -960,6 +964,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
+		<equipment rhand="13979" lhand="13980" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
@@ -1189,6 +1194,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
+		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="11506" hpRegen="8.5" mp="1777" mpRegen="3" />
@@ -1329,6 +1335,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="269969" sp="64" />
+		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="8570" hpRegen="8.5" mp="1574" mpRegen="3" />
@@ -1420,6 +1427,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
+		<equipment rhand="221" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="8923" hpRegen="8.5" mp="1607" mpRegen="3" />
@@ -1606,6 +1614,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="449407" sp="107" />
+		<equipment rhand="78" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="10930" hpRegen="8.5" mp="1743" mpRegen="3" />
@@ -2461,10 +2470,13 @@
 		</collision>
 	</npc>
 	<npc id="23462" level="99" type="L2Monster" name="Dimensional Orc Butcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="83739744" sp="301463" />
+		<equipment rhand="38425" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="376398" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2489,6 +2501,11 @@
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="34.1799999999999" /> <!-- Warp Crystal -->
@@ -2504,10 +2521,13 @@
 		</collision>
 	</npc>
 	<npc id="23463" level="99" type="L2Monster" name="Dimensional Orc Hunter" title="Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
+		<equipment rhand="38426" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2531,6 +2551,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16380" level="1" /> <!-- Dimensional Recoil Shot -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="98.00558631842" /> <!-- Warp Crystal -->
@@ -2546,7 +2571,9 @@
 		</collision>
 	</npc>
 	<npc id="23464" level="99" type="L2Monster" name="Dimensional Shaman" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -2577,6 +2604,11 @@
 			<skill id="16372" level="1" /> <!-- Dimensional Spike -->
 			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="98.075753712167" /> <!-- Warp Crystal -->
@@ -2592,10 +2624,13 @@
 		</collision>
 	</npc>
 	<npc id="23465" level="99" type="L2Monster" name="Dimensional Bugbear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
+		<equipment rhand="160" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2621,6 +2656,11 @@
 			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="98.049789683201" /> <!-- Warp Crystal -->
@@ -2636,7 +2676,9 @@
 		</collision>
 	</npc>
 	<npc id="23466" level="99" type="L2Monster" name="Dimensional Salamander" title="Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2673,7 +2715,9 @@
 		</collision>
 	</npc>
 	<npc id="23467" level="99" type="L2Monster" name="Dimensional Binder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
@@ -2703,6 +2747,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="98.072868141029" /> <!-- Warp Crystal -->
@@ -2718,7 +2767,9 @@
 		</collision>
 	</npc>
 	<npc id="23468" level="99" type="L2Monster" name="Dimensional Demon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="83739744" sp="301463" />
@@ -2749,6 +2800,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="33.3200000000001" /> <!-- Warp Crystal -->
@@ -2764,7 +2820,9 @@
 		</collision>
 	</npc>
 	<npc id="23469" level="99" type="L2Monster" name="Dimensional Archon" title="Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
@@ -2797,6 +2855,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="2" max="2" chance="96.195469193401" /> <!-- Warp Crystal -->
@@ -3346,6 +3409,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
+		<equipment rhand="39719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1355033" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>

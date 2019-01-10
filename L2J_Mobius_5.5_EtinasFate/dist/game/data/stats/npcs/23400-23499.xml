@@ -2265,7 +2265,9 @@
 		</collision>
 	</npc>
 	<npc id="23462" level="102" type="L2Monster" name="Dimensional Orc Butcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="336298896" sp="336361" />
@@ -2294,6 +2296,11 @@
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="19.74" /> <!-- Warp Crystal -->
@@ -2308,7 +2315,9 @@
 		</collision>
 	</npc>
 	<npc id="23463" level="102" type="L2Monster" name="Dimensional Orc Hunter" title="Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="504448344" sp="504489" />
@@ -2336,6 +2345,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16380" level="1" /> <!-- Dimensional Recoil Shot -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="48.99" /> <!-- Warp Crystal -->
@@ -2350,7 +2364,9 @@
 		</collision>
 	</npc>
 	<npc id="23464" level="102" type="L2Monster" name="Dimensional Shaman" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="504448344" sp="504489" />
@@ -2381,6 +2397,11 @@
 			<skill id="16372" level="1" /> <!-- Dimensional Spike -->
 			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="50.04" /> <!-- Warp Crystal -->
@@ -2395,7 +2416,9 @@
 		</collision>
 	</npc>
 	<npc id="23465" level="102" type="L2Monster" name="Dimensional Bugbear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="504448344" sp="504489" />
@@ -2425,6 +2448,11 @@
 			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="49.28" /> <!-- Warp Crystal -->
@@ -2439,7 +2467,9 @@
 		</collision>
 	</npc>
 	<npc id="23466" level="102" type="L2Monster" name="Dimensional Salamander" title="Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2476,7 +2506,9 @@
 		</collision>
 	</npc>
 	<npc id="23467" level="102" type="L2Monster" name="Dimensional Binder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="504448344" sp="504489" />
@@ -2506,6 +2538,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="50.98" /> <!-- Warp Crystal -->
@@ -2520,7 +2557,9 @@
 		</collision>
 	</npc>
 	<npc id="23468" level="102" type="L2Monster" name="Dimensional Demon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="336298896" sp="336361" />
@@ -2551,6 +2590,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="1" max="1" chance="19.69" /> <!-- Warp Crystal -->
@@ -2565,7 +2609,9 @@
 		</collision>
 	</npc>
 	<npc id="23469" level="102" type="L2Monster" name="Dimensional Archon" title="Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1008896688" sp="1008979" />
@@ -2598,6 +2644,11 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skillList>
+		<ai clanHelpRange="400" aggroRange="600">
+			<clanList>
+				<clan>WRAP_MOB</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="39597" min="2" max="2" chance="49.87" /> <!-- Warp Crystal -->
@@ -2743,7 +2794,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="23473" level="103" type="L2Monster" name="Unworldly Salamander" title="Hunter">
+	<npc id="23473" level="99" type="L2Monster" name="Unworldly Salamander" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>

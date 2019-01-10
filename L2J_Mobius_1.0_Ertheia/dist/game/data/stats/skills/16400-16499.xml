@@ -91,55 +91,237 @@
 	<skill id="16409" toLevel="3" name="Trap Hold">
 		<!-- Immobilized. -->
 		<icon>icon.skill4047</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">8</value>
+			<value level="3">10</value>
+		</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectRange>150</affectRange>
+		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<activateRate>80</activateRate>
+		<trait>HOLD</trait>
+		<isDebuff>1</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16410" toLevel="3" name="Trap Aerial Yoke">
 		<!-- Immobilized. -->
 		<icon>icon.skill11050</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">8</value>
+			<value level="3">10</value>
+		</abnormalTime>
+		<abnormalType>AIRBIND</abnormalType>
+		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
+		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<activateRate>80</activateRate>
+		<isDebuff>1</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SHOCK>100</SHOCK>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SLEEP>100</SLEEP>
+				<AIRBIND>100</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16411" toLevel="3" name="Trap Stun">
 		<!-- Immobilized. -->
 		<icon>icon.skill0100</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">8</value>
+			<value level="3">10</value>
+		</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<affectRange>150</affectRange>
+		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<activateRate>100</activateRate>
+		<trait>SHOCK</trait>
+		<isDebuff>1</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="16412" toLevel="3" name="Trap Petrify">
 		<!-- Immobilized. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<activateRate>100</activateRate>
+		<isDebuff>1</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="16413" toLevel="3" name="Trap Poison">
 		<!-- Poisoned and losing 1,000 HP/second. -->
 		<icon>icon.skill4035</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">8</value>
+			<value level="3">10</value>
+		</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<affectRange>150</affectRange>
+		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<activateRate>100</activateRate>
+		<trait>POISON</trait>
+		<isDebuff>1</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>1000</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16414" toLevel="1" name="Peace Zone Cure">
 		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>200</affectRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>10</power>
+			</effect>
+		</effects>
+		<effect name="ManaHealPercent">
+				<power>30</power>
+			</effect>
 	</skill>
 	<skill id="16415" toLevel="4" name="Dimensional Dark Forces">
 		<!-- P./M./ Atk. - 10%, and P./M. Critical Rate - 30. -->
 		<icon>icon.skill1298</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">5</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+			<value level="4">10</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<isDebuff>1</isDebuff>
+		<affectScope>SINGLE</affectScope>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-6</value>
+					<value level="3">-8</value>
+					<value level="3">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">-4</value>
+					<value level="2">-6</value>
+					<value level="3">-8</value>
+					<value level="3">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-20</value>
+					<value level="3">-30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+					<value level="3">-20</value>
+					<value level="3">-30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16416" toLevel="10" name="Bluff Resistance">
 		<!-- Resistance to Bluff. -->
