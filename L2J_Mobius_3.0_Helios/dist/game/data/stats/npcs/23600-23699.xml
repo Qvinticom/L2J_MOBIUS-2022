@@ -400,40 +400,47 @@
 	</npc>
 	<npc id="23616" level="100" type="L2Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23449" level="1" />
-			<skill name="Skill_TYPE2" id="23450" level="1" />
-			<skill name="Skill_TYPE3" id="23452" level="1" />
+			<skill name="PhysicalSpecial" id="23730" level="1" />
+			<skill name="DeBuff" id="23729" level="1" />
+			<skill name="Skill_TYPE3" id="23728" level="1" />
+			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<acquire exp="616164100" sp="1232400" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="906703.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="28866.3" magical="12845.4" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218.2" magical="1877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="23452" level="1" /> <!-- (Protection of Faith) -->
-			<skill id="23449" level="1" /> <!-- (Gust Blade) -->
-			<skill id="23450" level="1" /> <!-- (Chain Galaxy) -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>			
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="23730" level="1" /> <!-- Chain Galaxy -->
+			<skill id="23729" level="1" /> <!-- Mass Lightning Strike -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+			<skill id="23732" level="1" /> <!-- Shield Wave -->					
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -452,41 +459,46 @@
 	</npc>
 	<npc id="23617" level="100" type="L2Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23736" level="1" />
+			<skill name="DeBuff" id="23735" level="1" />
+			<skill name="Skill_TYPE3" id="23733" level="1" />
+			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>MALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="28866.3" magical="12845.4" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="9218.2" magical="7877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
-			<skill id="4415" level="17" /> <!-- Fist Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->		
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="28" />
@@ -505,38 +517,46 @@
 	</npc>
 	<npc id="23618" level="100" type="L2Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23467" level="1" />
-			<skill name="Skill_TYPE2" id="23468" level="1" />
-			<skill name="Skill_TYPE3" id="23469" level="1" />
+			<skill name="Skill_TYPE1" id="23739" level="1" />
+			<skill name="Skill_TYPE2" id="23741" level="1" />
+			<skill name="Skill_TYPE3" id="23740" level="1" />
+			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="28866.3" magical="12845.4" critical="8" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="4218.2" magical="1877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
-			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
-			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23740" level="1" /> <!-- Final Ultimate Evasion -->
+			<skill id="23741" level="1" /> <!-- Razor Rain -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+			<skill id="23742" level="1" /> <!-- Mass Trick -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4411" level="5" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="5" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -555,40 +575,46 @@
 	</npc>
 	<npc id="23619" level="100" type="L2Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23463" level="1" />
-			<skill name="Skill_TYPE2" id="23464" level="1" />
-			<skill name="Skill_TYPE3" id="23465" level="1" />
-			<skill name="Skill_TYPE4" id="23466" level="1" />
+			<skill name="Skill_TYPE1" id="23745" level="1" />
+			<skill name="Skill_TYPE2" id="23744" level="1" />
+			<skill name="Skill_TYPE3" id="23747" level="1" />
+			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="28866.3" magical="12845.4" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="5218.2" magical="877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
-			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
-			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
-			<skill id="23466" level="1" /> <!-- (Heavy Arrow Rain) -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23745" level="1" /> <!-- Impact Shot -->
+			<skill id="23744" level="1" /> <!-- Multiple Arrow -->
+			<skill id="23747" level="1" /> <!-- Tornado Shot -->
+			<skill id="23743" level="1" /> <!-- Mass Bullseye -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4411" level="5" /> <!-- Weak M. Atk. -->
+			<skill id="4410" level="5" /> <!-- Weak P. Atk. -->			
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -607,41 +633,47 @@
 	</npc>
 	<npc id="23620" level="100" type="L2Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23470" level="2" />
-			<skill name="Skill_TYPE2" id="23471" level="2" />
-			<skill name="Skill_TYPE3" id="23472" level="2" />
-			<skill name="Skill_TYPE4" id="23473" level="2" />
+			<skill name="Skill_TYPE1" id="23748" level="1" />
+			<skill name="Skill_TYPE2" id="23749" level="1" />
+			<skill name="Skill_TYPE3" id="23750" level="1" />
+			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="1218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-			<skill id="23471" level="2" /> <!-- (Elemental Destruction) -->
-			<skill id="23472" level="2" /> <!-- (Mass Devil's Curse) -->
-			<skill id="23473" level="2" /> <!-- (Unleash Hell) -->
-			<skill id="23470" level="2" /> <!-- (Death Howl) -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
+			<skill id="23749" level="1" /> <!-- Elemental Storm -->
+			<skill id="23750" level="1" /> <!-- Mass Hell Binding -->
+			<skill id="23752" level="1" /> <!-- Magical Charge -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -660,46 +692,49 @@
 	</npc>
 	<npc id="23621" level="100" type="L2Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23474" level="1" />
-			<skill name="Skill_TYPE2" id="23475" level="1" />
-			<skill name="Skill_TYPE3" id="23475" level="1" />
-			<skill name="Skill_TYPE4" id="23477" level="1" />
+			<skill name="Skill_TYPE1" id="23754" level="1" />
+			<skill name="Skill_TYPE2" id="23753" level="1" />
+			<skill name="Skill_TYPE3" id="23755" level="1" />
+			<skill name="Skill_TYPE4" id="23756" level="1" />
+			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>MALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="4218.2" magical="1877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
-			<skill id="23477" level="1" /> <!-- (Assault Rush) -->
-			<skill id="23501" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23495" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23499" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23503" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23497" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23493" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23474" level="1" /> <!-- (Death Strike) -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4415" level="19" /> <!-- Dualsword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23754" level="1" /> <!-- Mass Crippling Attack -->
+			<skill id="23753" level="1" /> <!-- Battle Rhapsody -->
+			<skill id="23755" level="1" /> <!-- Polymorph -->
+			<skill id="23756" level="1" /> <!-- Assault Rush -->
+			<skill id="23757" level="1" /> <!-- Ultimate Suspension -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
@@ -717,27 +752,46 @@
 		</dropLists>
 	</npc>
 	<npc id="23622" level="100" type="L2Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
-		<race>ETC</race>
+		<parameters>
+			<skill name="Skill_TYPE1" id="23758" level="1" />
+			<skill name="Skill_TYPE2" id="23759" level="1" />
+			<skill name="Skill_TYPE3" id="23760" level="1" />
+			<param name="npc_class" value="3" />
+		</parameters>	
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="5218.2" magical="3877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="7" />
-			<height normal="23.5" />
-		</collision>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->			
+			<skill id="23758" level="1" /> <!-- Summon Demonic Crucifix -->
+			<skill id="23759" level="1" /> <!-- Mass Exile -->
+			<skill id="23760" level="1" /> <!-- Spectral Rage -->					
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<dropLists>
 			<drop>
 				<item id="46337" min="1" max="1" chance="18.4" /> <!-- Scroll: Enchant Shadow Weapon -->
@@ -749,48 +803,54 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
+		<collision>
+			<radius normal="7" />
+			<height normal="23.5" />
+		</collision>
 	</npc>
 	<npc id="23623" level="100" type="L2Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23449" level="1" />
-			<skill name="Skill_TYPE2" id="23450" level="1" />
-			<skill name="Skill_TYPE3" id="23452" level="1" />
+			<skill name="Skill_TYPE1" id="23761" level="1" />
+			<skill name="Skill_TYPE2" id="23763" level="1" />
+			<skill name="Skill_TYPE3" id="23764" level="1" />
+			<skill name="Skill_TYPE4" id="23762" level="1" />
+			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>FEMALE</sex>
 		<acquire exp="616164100" sp="1232400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="8866.3" magical="12845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="5218.2" magical="3877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23494" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23498" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23502" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23496" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23492" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23455" level="1" /> <!-- (Radiant Heal) -->
-			<skill id="23457" level="1" /> <!-- (Sustain) -->
-			<skill id="23454" level="1" /> <!-- (Dark Blast) -->
-			<skill id="23456" level="1" /> <!-- (Fairy of Life) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23761" level="1" /> <!-- Invoke -->
+			<skill id="23762" level="1" /> <!-- Mark of Weakness -->
+			<skill id="23763" level="1" /> <!-- Mark of Lumi -->
+			<skill id="23764" level="1" /> <!-- Brilliant Heal -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
@@ -809,40 +869,47 @@
 	</npc>
 	<npc id="23624" level="100" type="L2Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23449" level="1" />
-			<skill name="Skill_TYPE2" id="23450" level="1" />
-			<skill name="Skill_TYPE3" id="23452" level="1" />
+			<skill name="PhysicalSpecial" id="23730" level="1" />
+			<skill name="DeBuff" id="23729" level="1" />
+			<skill name="Skill_TYPE3" id="23728" level="1" />
+			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="693184600" sp="1386399" />
+		<stats str="89" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="906703.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="28866.3" magical="12845.4" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="23452" level="1" /> <!-- (Protection of Faith) -->
-			<skill id="23449" level="1" /> <!-- (Gust Blade) -->
-			<skill id="23450" level="1" /> <!-- (Chain Galaxy) -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>			
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="23730" level="1" /> <!-- Chain Galaxy -->
+			<skill id="23729" level="1" /> <!-- Mass Lightning Strike -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+			<skill id="23732" level="1" /> <!-- Shield Wave -->					
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -861,41 +928,46 @@
 	</npc>
 	<npc id="23625" level="100" type="L2Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23736" level="1" />
+			<skill name="DeBuff" id="23735" level="1" />
+			<skill name="Skill_TYPE3" id="23733" level="1" />
+			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<acquire exp="693184600" sp="1386399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="10218.2" magical="8877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
-			<skill id="4415" level="17" /> <!-- Fist Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->		
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="28" />
@@ -914,38 +986,46 @@
 	</npc>
 	<npc id="23626" level="100" type="L2Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23467" level="1" />
-			<skill name="Skill_TYPE2" id="23468" level="1" />
-			<skill name="Skill_TYPE3" id="23469" level="1" />
+			<skill name="Skill_TYPE1" id="23739" level="1" />
+			<skill name="Skill_TYPE2" id="23741" level="1" />
+			<skill name="Skill_TYPE3" id="23740" level="1" />
+			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="693184600" sp="1386399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" critical="8" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="5218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
-			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
-			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23740" level="1" /> <!-- Final Ultimate Evasion -->
+			<skill id="23741" level="1" /> <!-- Razor Rain -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+			<skill id="23742" level="1" /> <!-- Mass Trick -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="11" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="11" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -964,40 +1044,46 @@
 	</npc>
 	<npc id="23627" level="100" type="L2Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23463" level="1" />
-			<skill name="Skill_TYPE2" id="23464" level="1" />
-			<skill name="Skill_TYPE3" id="23465" level="1" />
-			<skill name="Skill_TYPE4" id="23466" level="1" />
+			<skill name="Skill_TYPE1" id="23745" level="1" />
+			<skill name="Skill_TYPE2" id="23744" level="1" />
+			<skill name="Skill_TYPE3" id="23747" level="1" />
+			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="693184600" sp="186399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="6218.2" magical="1877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
-			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
-			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
-			<skill id="23466" level="1" /> <!-- (Heavy Arrow Rain) -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23745" level="1" /> <!-- Impact Shot -->
+			<skill id="23744" level="1" /> <!-- Multiple Arrow -->
+			<skill id="23747" level="1" /> <!-- Tornado Shot -->
+			<skill id="23743" level="1" /> <!-- Mass Bullseye -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4411" level="6" /> <!-- Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Weak P. Atk. -->			
+			<skill id="4413" level="11" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="11" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -1016,41 +1102,47 @@
 	</npc>
 	<npc id="23628" level="100" type="L2Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23470" level="2" />
-			<skill name="Skill_TYPE2" id="23471" level="2" />
-			<skill name="Skill_TYPE3" id="23472" level="2" />
-			<skill name="Skill_TYPE4" id="23473" level="2" />
+			<skill name="Skill_TYPE1" id="23748" level="1" />
+			<skill name="Skill_TYPE2" id="23749" level="1" />
+			<skill name="Skill_TYPE3" id="23750" level="1" />
+			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="693184600 " sp="1386399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="2218.2" magical="3877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-			<skill id="23471" level="2" /> <!-- (Elemental Destruction) -->
-			<skill id="23472" level="2" /> <!-- (Mass Devil's Curse) -->
-			<skill id="23473" level="2" /> <!-- (Unleash Hell) -->
-			<skill id="23470" level="2" /> <!-- (Death Howl) -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
+			<skill id="23749" level="1" /> <!-- Elemental Storm -->
+			<skill id="23750" level="1" /> <!-- Mass Hell Binding -->
+			<skill id="23752" level="1" /> <!-- Magical Charge -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4411" level="7" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="7" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="11" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="11" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -1069,46 +1161,49 @@
 	</npc>
 	<npc id="23629" level="100" type="L2Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23474" level="1" />
-			<skill name="Skill_TYPE2" id="23475" level="1" />
-			<skill name="Skill_TYPE3" id="23475" level="1" />
-			<skill name="Skill_TYPE4" id="23477" level="1" />
+			<skill name="Skill_TYPE1" id="23754" level="1" />
+			<skill name="Skill_TYPE2" id="23753" level="1" />
+			<skill name="Skill_TYPE3" id="23755" level="1" />
+			<skill name="Skill_TYPE4" id="23756" level="1" />
+			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<acquire exp="693184600" sp="1386399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="5218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
-			<skill id="23477" level="1" /> <!-- (Assault Rush) -->
-			<skill id="23501" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23495" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23499" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23503" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23497" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23493" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23474" level="1" /> <!-- (Death Strike) -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4415" level="19" /> <!-- Dualsword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="500" aggroRange="400" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23754" level="1" /> <!-- Mass Crippling Attack -->
+			<skill id="23753" level="1" /> <!-- Battle Rhapsody -->
+			<skill id="23755" level="1" /> <!-- Polymorph -->
+			<skill id="23756" level="1" /> <!-- Assault Rush -->
+			<skill id="23757" level="1" /> <!-- Ultimate Suspension -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
@@ -1126,27 +1221,46 @@
 		</dropLists>
 	</npc>
 	<npc id="23630" level="100" type="L2Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<parameters>
+			<skill name="Skill_TYPE1" id="23758" level="1" />
+			<skill name="Skill_TYPE2" id="23759" level="1" />
+			<skill name="Skill_TYPE3" id="23760" level="1" />
+			<param name="npc_class" value="3" />
+		</parameters>	
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="693184600" sp="1386399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="6218.2" magical="4877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="7" />
-			<height normal="23.5" />
-		</collision>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->			
+			<skill id="23758" level="1" /> <!-- Summon Demonic Crucifix -->
+			<skill id="23759" level="1" /> <!-- Mass Exile -->
+			<skill id="23760" level="1" /> <!-- Spectral Rage -->		
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<dropLists>
 			<drop>
 				<item id="46337" min="1" max="1" chance="18.4" /> <!-- Scroll: Enchant Shadow Weapon -->
@@ -1158,50 +1272,54 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
+		<collision>
+			<radius normal="7" />
+			<height normal="23.5" />
+		</collision>
 	</npc>
 	<npc id="23631" level="100" type="L2Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23454" level="1" />
-			<skill name="Skill_TYPE2" id="23455" level="1" />
-			<skill name="Skill_TYPE3" id="23456" level="1" />
-			<skill name="Skill_TYPE4" id="23457" level="1" />
+			<skill name="Skill_TYPE1" id="23761" level="1" />
+			<skill name="Skill_TYPE2" id="23763" level="1" />
+			<skill name="Skill_TYPE3" id="23764" level="1" />
+			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="693184600" sp="1386399" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="6218.2" magical="4877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23494" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23498" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23502" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23496" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23492" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23455" level="1" /> <!-- (Radiant Heal) -->
-			<skill id="23457" level="1" /> <!-- (Sustain) -->
-			<skill id="23454" level="1" /> <!-- (Dark Blast) -->
-			<skill id="23456" level="1" /> <!-- (Fairy of Life) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23761" level="1" /> <!-- Invoke -->
+			<skill id="23762" level="1" /> <!-- Mark of Weakness -->
+			<skill id="23763" level="1" /> <!-- Mark of Lumi -->
+			<skill id="23764" level="1" /> <!-- Brilliant Heal -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
@@ -1220,40 +1338,47 @@
 	</npc>
 	<npc id="23632" level="100" type="L2Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23449" level="1" />
-			<skill name="Skill_TYPE2" id="23450" level="1" />
-			<skill name="Skill_TYPE3" id="23452" level="1" />
+			<skill name="PhysicalSpecial" id="23730" level="1" />
+			<skill name="DeBuff" id="23729" level="1" />
+			<skill name="Skill_TYPE3" id="23728" level="1" />
+			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6218.2" magical="3877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="23452" level="1" /> <!-- (Protection of Faith) -->
-			<skill id="23449" level="1" /> <!-- (Gust Blade) -->
-			<skill id="23450" level="1" /> <!-- (Chain Galaxy) -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>			
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="23730" level="1" /> <!-- Chain Galaxy -->
+			<skill id="23729" level="1" /> <!-- Mass Lightning Strike -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+			<skill id="23732" level="1" /> <!-- Shield Wave -->					
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -1272,41 +1397,46 @@
 	</npc>
 	<npc id="23633" level="100" type="L2Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23736" level="1" />
+			<skill name="DeBuff" id="23735" level="1" />
+			<skill name="Skill_TYPE3" id="23733" level="1" />
+			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="11218.2" magical="9877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
-			<skill id="4415" level="17" /> <!-- Fist Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->		
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="28" />
@@ -1325,38 +1455,46 @@
 	</npc>
 	<npc id="23634" level="100" type="L2Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23467" level="1" />
-			<skill name="Skill_TYPE2" id="23468" level="1" />
-			<skill name="Skill_TYPE3" id="23469" level="1" />
+			<skill name="Skill_TYPE1" id="23739" level="1" />
+			<skill name="Skill_TYPE2" id="23741" level="1" />
+			<skill name="Skill_TYPE3" id="23740" level="1" />
+			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" critical="8" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="6218.2" magical="3877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
-			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
-			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23740" level="1" /> <!-- Final Ultimate Evasion -->
+			<skill id="23741" level="1" /> <!-- Razor Rain -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+			<skill id="23742" level="1" /> <!-- Mass Trick -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4411" level="7" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="7" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -1375,40 +1513,46 @@
 	</npc>
 	<npc id="23635" level="100" type="L2Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23463" level="1" />
-			<skill name="Skill_TYPE2" id="23464" level="1" />
-			<skill name="Skill_TYPE3" id="23465" level="1" />
-			<skill name="Skill_TYPE4" id="23466" level="1" />
+			<skill name="Skill_TYPE1" id="23745" level="1" />
+			<skill name="Skill_TYPE2" id="23744" level="1" />
+			<skill name="Skill_TYPE3" id="23747" level="1" />
+			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="28866.3" magical="12845.4" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="7218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
-			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
-			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
-			<skill id="23466" level="1" /> <!-- (Heavy Arrow Rain) -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23745" level="1" /> <!-- Impact Shot -->
+			<skill id="23744" level="1" /> <!-- Multiple Arrow -->
+			<skill id="23747" level="1" /> <!-- Tornado Shot -->
+			<skill id="23743" level="1" /> <!-- Mass Bullseye -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->			
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -1427,41 +1571,47 @@
 	</npc>
 	<npc id="23636" level="100" type="L2Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23470" level="2" />
-			<skill name="Skill_TYPE2" id="23471" level="2" />
-			<skill name="Skill_TYPE3" id="23472" level="2" />
-			<skill name="Skill_TYPE4" id="23473" level="2" />
+			<skill name="Skill_TYPE1" id="23748" level="1" />
+			<skill name="Skill_TYPE2" id="23749" level="1" />
+			<skill name="Skill_TYPE3" id="23750" level="1" />
+			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3218.2" magical="4877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-			<skill id="23471" level="2" /> <!-- (Elemental Destruction) -->
-			<skill id="23472" level="2" /> <!-- (Mass Devil's Curse) -->
-			<skill id="23473" level="2" /> <!-- (Unleash Hell) -->
-			<skill id="23470" level="2" /> <!-- (Death Howl) -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
+			<skill id="23749" level="1" /> <!-- Elemental Storm -->
+			<skill id="23750" level="1" /> <!-- Mass Hell Binding -->
+			<skill id="23752" level="1" /> <!-- Magical Charge -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4411" level="7" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="7" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="11" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="11" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -1480,46 +1630,49 @@
 	</npc>
 	<npc id="23637" level="100" type="L2Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23474" level="1" />
-			<skill name="Skill_TYPE2" id="23475" level="1" />
-			<skill name="Skill_TYPE3" id="23475" level="1" />
-			<skill name="Skill_TYPE4" id="23477" level="1" />
+			<skill name="Skill_TYPE1" id="23754" level="1" />
+			<skill name="Skill_TYPE2" id="23753" level="1" />
+			<skill name="Skill_TYPE3" id="23755" level="1" />
+			<skill name="Skill_TYPE4" id="23756" level="1" />
+			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="6218.2" magical="3877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
-			<skill id="23477" level="1" /> <!-- (Assault Rush) -->
-			<skill id="23501" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23495" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23499" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23503" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23497" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23493" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23474" level="1" /> <!-- (Death Strike) -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4415" level="19" /> <!-- Dualsword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23754" level="1" /> <!-- Mass Crippling Attack -->
+			<skill id="23753" level="1" /> <!-- Battle Rhapsody -->
+			<skill id="23755" level="1" /> <!-- Polymorph -->
+			<skill id="23756" level="1" /> <!-- Assault Rush -->
+			<skill id="23757" level="1" /> <!-- Ultimate Suspension -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
@@ -1537,27 +1690,46 @@
 		</dropLists>
 	</npc>
 	<npc id="23638" level="100" type="L2Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+		<parameters>
+			<skill name="Skill_TYPE1" id="23758" level="1" />
+			<skill name="Skill_TYPE2" id="23759" level="1" />
+			<skill name="Skill_TYPE3" id="23760" level="1" />
+			<param name="npc_class" value="3" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="847225600" sp="1694500" />
+		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="7218.2" magical="5877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="7" />
-			<height normal="23.5" />
-		</collision>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->			
+			<skill id="23758" level="1" /> <!-- Summon Demonic Crucifix -->
+			<skill id="23759" level="1" /> <!-- Mass Exile -->
+			<skill id="23760" level="1" /> <!-- Spectral Rage -->			
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<dropLists>
 			<drop>
 				<item id="46337" min="1" max="1" chance="18.4" /> <!-- Scroll: Enchant Shadow Weapon -->
@@ -1569,50 +1741,54 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
+		<collision>
+			<radius normal="7" />
+			<height normal="23.5" />
+		</collision>
 	</npc>
 	<npc id="23639" level="100" type="L2Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23454" level="1" />
-			<skill name="Skill_TYPE2" id="23455" level="1" />
-			<skill name="Skill_TYPE3" id="23456" level="1" />
-			<skill name="Skill_TYPE4" id="23457" level="1" />
+			<skill name="Skill_TYPE1" id="23761" level="1" />
+			<skill name="Skill_TYPE2" id="23763" level="1" />
+			<skill name="Skill_TYPE3" id="23764" level="1" />
+			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="7218.2" magical="5877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23494" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23498" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23502" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23496" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23492" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23455" level="1" /> <!-- (Radiant Heal) -->
-			<skill id="23457" level="1" /> <!-- (Sustain) -->
-			<skill id="23454" level="1" /> <!-- (Dark Blast) -->
-			<skill id="23456" level="1" /> <!-- (Fairy of Life) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23761" level="1" /> <!-- Invoke -->
+			<skill id="23762" level="1" /> <!-- Mark of Weakness -->
+			<skill id="23763" level="1" /> <!-- Mark of Lumi -->
+			<skill id="23764" level="1" /> <!-- Brilliant Heal -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
@@ -1631,40 +1807,47 @@
 	</npc>
 	<npc id="23640" level="100" type="L2Monster" name="Unit 1 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23449" level="1" />
-			<skill name="Skill_TYPE2" id="23450" level="1" />
-			<skill name="Skill_TYPE3" id="23452" level="1" />
+			<skill name="PhysicalSpecial" id="23730" level="1" />
+			<skill name="DeBuff" id="23729" level="1" />
+			<skill name="Skill_TYPE3" id="23728" level="1" />
+			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="924246100 " sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="250" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="23452" level="1" /> <!-- (Protection of Faith) -->
-			<skill id="23449" level="1" /> <!-- (Gust Blade) -->
-			<skill id="23450" level="1" /> <!-- (Chain Galaxy) -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>			
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="23730" level="1" /> <!-- Chain Galaxy -->
+			<skill id="23729" level="1" /> <!-- Mass Lightning Strike -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+			<skill id="23732" level="1" /> <!-- Shield Wave -->					
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -1683,41 +1866,46 @@
 	</npc>
 	<npc id="23641" level="100" type="L2Monster" name="Unit 2 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23736" level="1" />
+			<skill name="DeBuff" id="23735" level="1" />
+			<skill name="Skill_TYPE3" id="23733" level="1" />
+			<skill name="Skill_TYPE4" id="23734" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<acquire exp="924246100" sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="12218.2" magical="10877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
-			<skill id="4415" level="17" /> <!-- Fist Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->		
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="17" /> <!-- Fist Weapon -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="28" />
@@ -1736,38 +1924,46 @@
 	</npc>
 	<npc id="23642" level="100" type="L2Monster" name="Unit 3 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23467" level="1" />
-			<skill name="Skill_TYPE2" id="23468" level="1" />
-			<skill name="Skill_TYPE3" id="23469" level="1" />
+			<skill name="Skill_TYPE1" id="23739" level="1" />
+			<skill name="Skill_TYPE2" id="23741" level="1" />
+			<skill name="Skill_TYPE3" id="23740" level="1" />
+			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="847225600" sp="1694500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="28866.3" magical="12845.4" critical="8" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="7218.2" magical="4877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
-			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
-			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23740" level="1" /> <!-- Final Ultimate Evasion -->
+			<skill id="23741" level="1" /> <!-- Razor Rain -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+			<skill id="23742" level="1" /> <!-- Mass Trick -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4411" level="8" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="8" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -1786,40 +1982,46 @@
 	</npc>
 	<npc id="23643" level="100" type="L2Monster" name="Unit 4 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23463" level="1" />
-			<skill name="Skill_TYPE2" id="23464" level="1" />
-			<skill name="Skill_TYPE3" id="23465" level="1" />
-			<skill name="Skill_TYPE4" id="23466" level="1" />
+			<skill name="Skill_TYPE1" id="23745" level="1" />
+			<skill name="Skill_TYPE2" id="23744" level="1" />
+			<skill name="Skill_TYPE3" id="23747" level="1" />
+			<skill name="Skill_TYPE4" id="23743" level="1" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="924246100" sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="28866.3" magical="12845.4" critical="4" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="7218.2" magical="2877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
-			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
-			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
-			<skill id="23466" level="1" /> <!-- (Heavy Arrow Rain) -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23745" level="1" /> <!-- Impact Shot -->
+			<skill id="23744" level="1" /> <!-- Multiple Arrow -->
+			<skill id="23747" level="1" /> <!-- Tornado Shot -->
+			<skill id="23743" level="1" /> <!-- Mass Bullseye -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -1838,41 +2040,47 @@
 	</npc>
 	<npc id="23644" level="100" type="L2Monster" name="Unit 5 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23470" level="2" />
-			<skill name="Skill_TYPE2" id="23471" level="2" />
-			<skill name="Skill_TYPE3" id="23472" level="2" />
-			<skill name="Skill_TYPE4" id="23473" level="2" />
+			<skill name="Skill_TYPE1" id="23748" level="1" />
+			<skill name="Skill_TYPE2" id="23749" level="1" />
+			<skill name="Skill_TYPE3" id="23750" level="1" />
+			<skill name="Skill_TYPE4" id="23752" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="924246100" sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="4218.2" magical="6877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-			<skill id="23471" level="2" /> <!-- (Elemental Destruction) -->
-			<skill id="23472" level="2" /> <!-- (Mass Devil's Curse) -->
-			<skill id="23473" level="2" /> <!-- (Unleash Hell) -->
-			<skill id="23470" level="2" /> <!-- (Death Howl) -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
+			<skill id="23749" level="1" /> <!-- Elemental Storm -->
+			<skill id="23750" level="1" /> <!-- Mass Hell Binding -->
+			<skill id="23752" level="1" /> <!-- Magical Charge -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="4411" level="7" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="7" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="11" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="11" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="23.5" />
@@ -1891,46 +2099,49 @@
 	</npc>
 	<npc id="23645" level="100" type="L2Monster" name="Unit 6 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23474" level="1" />
-			<skill name="Skill_TYPE2" id="23475" level="1" />
-			<skill name="Skill_TYPE3" id="23475" level="1" />
-			<skill name="Skill_TYPE4" id="23477" level="1" />
+			<skill name="Skill_TYPE1" id="23754" level="1" />
+			<skill name="Skill_TYPE2" id="23753" level="1" />
+			<skill name="Skill_TYPE3" id="23755" level="1" />
+			<skill name="Skill_TYPE4" id="23756" level="1" />
+			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<acquire exp="924246100" sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="8866.3" magical="12845.4" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="7218.2" magical="4877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
-			<skill id="23477" level="1" /> <!-- (Assault Rush) -->
-			<skill id="23501" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23495" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23499" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23503" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23497" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23493" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23474" level="1" /> <!-- (Death Strike) -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4415" level="19" /> <!-- Dualsword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23754" level="1" /> <!-- Mass Crippling Attack -->
+			<skill id="23753" level="1" /> <!-- Battle Rhapsody -->
+			<skill id="23755" level="1" /> <!-- Polymorph -->
+			<skill id="23756" level="1" /> <!-- Assault Rush -->
+			<skill id="23757" level="1" /> <!-- Ultimate Suspension -->
+			<skill id="4415" level="19" /> <!-- Dualsword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
@@ -1948,27 +2159,46 @@
 		</dropLists>
 	</npc>
 	<npc id="23646" level="100" type="L2Monster" name="Unit 7 Elite Soldier" title="Ashen Shadow">
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<parameters>
+			<skill name="Skill_TYPE1" id="23758" level="1" />
+			<skill name="Skill_TYPE2" id="23759" level="1" />
+			<skill name="Skill_TYPE3" id="23760" level="1" />
+			<param name="npc_class" value="3" />
+		</parameters>	
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<acquire exp="924246100" sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.9" />
+			<attack physical="9866.3" magical="13845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="8218.2" magical="6877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
 		</stats>
-		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="7" />
-			<height normal="23.5" />
-		</collision>
+		<skillList>
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->			
+			<skill id="23758" level="1" /> <!-- Summon Demonic Crucifix -->
+			<skill id="23759" level="1" /> <!-- Mass Exile -->
+			<skill id="23760" level="1" /> <!-- Spectral Rage -->		
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<dropLists>
 			<drop>
 				<item id="46337" min="1" max="1" chance="18.4" /> <!-- Scroll: Enchant Shadow Weapon -->
@@ -1980,50 +2210,54 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
+		<collision>
+			<radius normal="7" />
+			<height normal="23.5" />
+		</collision>
 	</npc>
 	<npc id="23647" level="100" type="L2Monster" name="Unit 8 Elite Soldier" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23454" level="1" />
-			<skill name="Skill_TYPE2" id="23455" level="1" />
-			<skill name="Skill_TYPE3" id="23456" level="1" />
-			<skill name="Skill_TYPE4" id="23457" level="1" />
+			<skill name="Skill_TYPE1" id="23761" level="1" />
+			<skill name="Skill_TYPE2" id="23763" level="1" />
+			<skill name="Skill_TYPE3" id="23764" level="1" />
+			<skill name="Skill_TYPE4" id="23762" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ETC</race>
-		<acquire exp="616164100" sp="1232400" />
+		<race>ORC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="924246100" sp="1848500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="105" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="105" mp="24308" mpRegen="3.6" />
+			<attack physical="9866.3" magical="13845.4" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="8218.2" magical="6877.8" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<skillList>
-			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23494" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23498" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23502" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23496" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23492" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23455" level="1" /> <!-- (Radiant Heal) -->
-			<skill id="23457" level="1" /> <!-- (Sustain) -->
-			<skill id="23454" level="1" /> <!-- (Dark Blast) -->
-			<skill id="23456" level="1" /> <!-- (Fairy of Life) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
 		</ai>
+		<skillList>
+			<skill id="4416" level="17" /> <!-- Orc -->
+			<skill id="23761" level="1" /> <!-- Invoke -->
+			<skill id="23762" level="1" /> <!-- Mark of Weakness -->
+			<skill id="23763" level="1" /> <!-- Mark of Lumi -->
+			<skill id="23764" level="1" /> <!-- Brilliant Heal -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
@@ -2041,17 +2275,42 @@
 		</dropLists>
 	</npc>
 	<npc id="23648" level="100" type="L2Monster" name="Dark Crusader">
-		<race>ETC</race>
+		<parameters>
+			<skill name="DDMagic1" id="11383" level="1" />
+			<skill name="DDMagic2" id="11384" level="1" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="13890.0" hpRegen="10.5" mp="1255.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
-				<run ground="200" />
+				<run ground="198" />
 			</speed>
-			<attack physical="317346.4" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="136005.6" magical="12154" />
+			<attack physical="6308.467755549595" magical="2817.4731199773663" random="10" critical="12" accuracy="4.75" attackSpeed="415" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5305.247245096869" magical="3863.043447201863" evasion="5" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="18" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>		
+		<ai clanHelpRange="400" aggroRange="600" isAggressive="true">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
@@ -2062,18 +2321,43 @@
 		</collision>
 	</npc>
 	<npc id="23649" level="100" type="L2Monster" name="Banshee Queen">
-		<race>ETC</race>
-		<equipment rhand="37016" />
+		<parameters>
+			<skill name="DDMagic1" id="11385" level="1" />
+			<skill name="DDMagic2" id="11386" level="1" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="37016" /> <!-- Spectral Reaper -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="9921.0" hpRegen="10.5" mp="897.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
-				<run ground="180" />
+				<run ground="198" />
 			</speed>
-			<attack physical="317346.4" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="136005.6" magical="12154" />
+			<attack physical="4307.456887382453" magical="7817.4731199773663" random="10" critical="12" accuracy="4.75" attackSpeed="290" type="BOW" range="1000" distance="80" width="120" />
+			<defence physical="9978.6370688626328" magical="5330.926743467998" evasion="4" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<status randomWalk="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="18" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.331</sNpcPropHpRate>
+		<ai type="MAGE" clanHelpRange="400" aggroRange="600" >
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
@@ -2086,15 +2370,28 @@
 	<npc id="23650" level="100" type="L2Monster" name="Dwarf Spy" title="Spy">
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
+			<vitals hp="906703.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="134692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="272010.9" magical="12154" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
+		<status attackable="false" />
+		<ai aggroRange="600" isAggressive="true" />
+		<skillList>
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="18" /> <!-- Undead -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
@@ -2112,20 +2409,34 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="906703.0" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<attack physical="54692.1" magical="71877.2" critical="1" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="9" />
+			<defence physical="24010.9" magical="13154" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="150" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="272010.9" magical="12154" />
 		</stats>
+		<status randomWalk="false" />
+		<skillList>			
+			<skill id="4416" level="17" /> <!-- Orc -->				
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4411" level="6" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="6" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="10" /> <!-- Slightly Strong P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23652" level="100" type="L2Monster" name="Unit Guard" title="Ashen Shadow">
+	<npc id="23652" level="100" type="L2Npc" name="Unit Guard" title="Ashen Shadow">
 		<race>ETC</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
@@ -2136,12 +2447,7 @@
 			<attack physical="634692.1" magical="21877.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="272010.9" magical="12154" />
 		</stats>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
-			<clanList>
-				<clan>REVOLUTIONARIES</clan>
-			</clanList>
-		</ai>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" canMove="false" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
@@ -2149,33 +2455,37 @@
 	</npc>
 	<npc id="23653" level="101" type="L2Monster" name="Unit 1 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23449" level="1" />
-			<skill name="Skill_TYPE2" id="23450" level="1" />
-			<skill name="Skill_TYPE3" id="23452" level="1" />
+			<skill name="PhysicalSpecial" id="23730" level="1" />
+			<skill name="DeBuff" id="23729" level="1" />
+			<skill name="Skill_TYPE3" id="23728" level="1" />
+			<skill name="Skill_TYPE4" id="23732" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<equipment rhand="46328" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="46960.5" magical="14442" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>			
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="16" /> <!-- Dark Elves -->
-			<skill id="23452" level="1" /> <!-- (Protection of Faith) -->
-			<skill id="23449" level="1" /> <!-- (Gust Blade) -->
-			<skill id="23450" level="1" /> <!-- (Chain Galaxy) -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="23730" level="1" /> <!-- Chain Galaxy -->
+			<skill id="23729" level="1" /> <!-- Mass Lightning Strike -->
+			<skill id="23728" level="1" /> <!-- Superior Aggression Aura -->
+			<skill id="23732" level="1" /> <!-- Shield Wave -->	
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->			
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2191,6 +2501,7 @@
 		<dropLists>
 			<drop>
 				<item id="46318" min="1" max="2" chance="100" /> <!-- Shadow Cutter -->
+				<item id="46395" min="1" max="1" chance="1.951" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2199,34 +2510,36 @@
 	</npc>
 	<npc id="23654" level="101" type="L2Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23735" level="1" />
+			<skill name="Skill_TYPE2" id="23733" level="1" />
+			<skill name="Skill_TYPE3" id="23734" level="1" />
+			<skill name="Skill_TYPE4" id="23736" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>MALE</sex>
 		<equipment rhand="46329" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="446960.5" magical="44442" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="91554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
-			<skill id="4415" level="17" /> <!-- Fist Weapon -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->			
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2241,7 +2554,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="46320" min="1" max="2" chance="100" /> <!-- Shadow Fighter -->
+				<item id="46329" min="1" max="3" chance="100" /> <!-- Shadow Slasher -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2250,34 +2564,41 @@
 	</npc>
 	<npc id="23655" level="101" type="L2Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23735" level="1" />
+			<skill name="Skill_TYPE2" id="23733" level="1" />
+			<skill name="Skill_TYPE3" id="23734" level="1" />
+			<skill name="Skill_TYPE4" id="23736" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>MALE</sex>
 		<equipment rhand="46330" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="446960.5" magical="44442" random="10" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="91554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
+		<ai clanHelpRange="400" aggroRange="800">
+			<clanList>
+				<clan>REVOLUTIONARIES</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->
 			<skill id="4415" level="17" /> <!-- Fist Weapon -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2288,6 +2609,7 @@
 		<dropLists>
 			<drop>
 				<item id="46320" min="1" max="2" chance="100" /> <!-- Shadow Fighter -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2296,34 +2618,36 @@
 	</npc>
 	<npc id="23656" level="101" type="L2Monster" name="Unit 2 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23458" level="1" />
-			<skill name="Skill_TYPE2" id="23459" level="1" />
-			<skill name="Skill_TYPE3" id="23460" level="1" />
-			<skill name="Skill_TYPE4" id="23461" level="1" />
+			<skill name="Skill_TYPE1" id="23735" level="1" />
+			<skill name="Skill_TYPE2" id="23733" level="1" />
+			<skill name="Skill_TYPE3" id="23734" level="1" />
+			<skill name="Skill_TYPE4" id="23736" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>MALE</sex>
 		<equipment rhand="46331" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="446960.5" magical="44442" random="10" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="91554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>			
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
-			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
-			<skill id="23458" level="1" /> <!-- (Second Wind) -->
-			<skill id="23461" level="1" /> <!-- (Armor Destruction) -->
-			<skill id="23459" level="1" /> <!-- (Sonic Star) -->
-			<skill id="23460" level="1" /> <!-- (Hurricane Storm) -->
-			<skill id="4415" level="17" /> <!-- Fist Weapon -->
+			<skill id="23734" level="1" /> <!-- Lightning Disarm -->
+			<skill id="23735" level="1" /> <!-- Sonic Star -->
+			<skill id="23736" level="1" /> <!-- Jump Attack -->
+			<skill id="23733" level="1" /> <!-- Armor Destruction -->
+			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2338,7 +2662,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="46320" min="1" max="2" chance="100" /> <!-- Shadow Fighter -->
+				<item id="46321" min="1" max="2" chance="100" /> <!-- Shadow Stormer -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2347,31 +2672,35 @@
 	</npc>
 	<npc id="23657" level="101" type="L2Monster" name="Unit 3 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23467" level="1" />
-			<skill name="Skill_TYPE2" id="23468" level="1" />
-			<skill name="Skill_TYPE3" id="23469" level="1" />
+			<skill name="Skill_TYPE1" id="23739" level="1" />
+			<skill name="Skill_TYPE2" id="23741" level="1" />
+			<skill name="Skill_TYPE3" id="23740" level="1" />
+			<skill name="Skill_TYPE4" id="23742" level="1" />
 		</parameters>
 		<race>ETC</race>
 		<equipment rhand="46327" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="246960.5" magical="34442" critical="8" attackSpeed="253" range="40" type="DAGGER" distance="80" width="120" random="5" accuracy="0" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>			
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
-			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
-			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23740" level="1" /> <!-- Final Ultimate Evasion -->
+			<skill id="23741" level="1" /> <!-- Razor Rain -->
+			<skill id="23739" level="1" /> <!-- Heart Breaker -->
+			<skill id="23742" level="1" /> <!-- Mass Trick -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4415" level="7" /> <!-- Dagger -->
+			<skill id="4411" level="8" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="8" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2387,6 +2716,7 @@
 		<dropLists>
 			<drop>
 				<item id="46317" min="1" max="2" chance="100" /> <!-- Shadow Shaper -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2395,37 +2725,37 @@
 	</npc>
 	<npc id="23658" level="101" type="L2Monster" name="Unit 4 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23463" level="1" />
-			<skill name="Skill_TYPE2" id="23464" level="1" />
-			<skill name="Skill_TYPE3" id="23465" level="1" />
-			<skill name="Skill_TYPE4" id="23466" level="1" />
+			<skill name="Skill_TYPE1" id="23745" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<equipment rhand="46332" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="166960.5" magical="24442" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />	
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>			
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
-			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
-			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
-			<skill id="23466" level="1" /> <!-- (Heavy Arrow Rain) -->
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23745" level="1" /> <!-- Impact Shot -->
+			<skill id="23744" level="1" /> <!-- Multiple Arrow -->
+			<skill id="23747" level="1" /> <!-- Tornado Shot -->
+			<skill id="23743" level="1" /> <!-- Mass Bullseye -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->			
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<ai clanHelpRange="400" aggroRange="800">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
@@ -2437,6 +2767,7 @@
 		<dropLists>
 			<drop>
 				<item id="46322" min="1" max="2" chance="100" /> <!-- Shadow Thrower -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2445,33 +2776,33 @@
 	</npc>
 	<npc id="23659" level="101" type="L2Monster" name="Unit 4 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23463" level="1" />
-			<skill name="Skill_TYPE2" id="23464" level="1" />
-			<skill name="Skill_TYPE3" id="23465" level="1" />
-			<skill name="Skill_TYPE4" id="23466" level="1" />
+			<skill name="Skill_TYPE1" id="23745" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<equipment rhand="46333" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="166960.5" magical="24442" attackSpeed="378" range="900" type="BOW" distance="80" width="120" random="10" accuracy="5" />	
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
-			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
-			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
-			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
-			<skill id="23466" level="1" /> <!-- (Heavy Arrow Rain) -->
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
+			<skill id="23745" level="1" /> <!-- Impact Shot -->
+			<skill id="23744" level="1" /> <!-- Multiple Arrow -->
+			<skill id="23747" level="1" /> <!-- Tornado Shot -->
+			<skill id="23743" level="1" /> <!-- Mass Bullseye -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->			
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2486,7 +2817,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="46322" min="1" max="2" chance="100" /> <!-- Shadow Thrower -->
+				<item id="46323" min="1" max="2" chance="100" /> <!-- Shadow Shooter -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2495,34 +2827,39 @@
 	</npc>
 	<npc id="23660" level="101" type="L2Monster" name="Unit 5 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23470" level="2" />
-			<skill name="Skill_TYPE2" id="23471" level="2" />
-			<skill name="Skill_TYPE3" id="23472" level="2" />
-			<skill name="Skill_TYPE4" id="23473" level="2" />
+			<skill name="Skill_TYPE1" id="23748" level="1" />
+			<skill name="Skill_TYPE2" id="23749" level="1" />
+			<skill name="Skill_TYPE3" id="23750" level="1" />
+			<skill name="Skill_TYPE4" id="23752" level="1" />
+			<skill name="Skill_TYPE5" id="23751" level="1" />
 			<param name="npc_class" value="4" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<equipment rhand="46334" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="36960.5" magical="64442" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="81554.5" magical="84690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="16" /> <!-- Dark Elfs -->
-			<skill id="23471" level="2" /> <!-- (Elemental Destruction) -->
-			<skill id="23472" level="2" /> <!-- (Mass Devil's Curse) -->
-			<skill id="23473" level="2" /> <!-- (Unleash Hell) -->
-			<skill id="23470" level="2" /> <!-- (Death Howl) -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="23748" level="1" /> <!-- Elemental Destruction -->
+			<skill id="23749" level="1" /> <!-- Elemental Storm -->
+			<skill id="23750" level="1" /> <!-- Mass Hell Binding -->
+			<skill id="23751" level="1" /> <!-- Magical Charge -->
+			<skill id="23752" level="1" /> <!-- Mass Death Fear -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2538,6 +2875,8 @@
 		<dropLists>
 			<drop>
 				<item id="46324" min="1" max="2" chance="100" /> <!-- Shadow Buster -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
+					
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2546,39 +2885,39 @@
 	</npc>
 	<npc id="23661" level="101" type="L2Monster" name="Unit 6 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23474" level="1" />
-			<skill name="Skill_TYPE2" id="23475" level="1" />
-			<skill name="Skill_TYPE3" id="23475" level="1" />
-			<skill name="Skill_TYPE4" id="23477" level="1" />
+			<skill name="Skill_TYPE1" id="23754" level="1" />
+			<skill name="Skill_TYPE2" id="23753" level="1" />
+			<skill name="Skill_TYPE3" id="23755" level="1" />
+			<skill name="Skill_TYPE4" id="23756" level="1" />
+			<skill name="Skill_TYPE5" id="23757" level="1" />
 			<param name="npc_class" value="3" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>MALE</sex>
 		<equipment rhand="46336" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="146960.5" magical="54442" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>		
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
-			<skill id="23477" level="1" /> <!-- (Assault Rush) -->
-			<skill id="23501" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23495" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23499" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23503" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23497" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23493" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23474" level="1" /> <!-- (Death Strike) -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="23754" level="1" /> <!-- Mass Crippling Attack -->
+			<skill id="23753" level="1" /> <!-- Battle Rhapsody -->
+			<skill id="23755" level="1" /> <!-- Polymorph -->
+			<skill id="23756" level="1" /> <!-- Assault Rush -->
+			<skill id="23757" level="1" /> <!-- Ultimate Suspension -->	
 			<skill id="4415" level="19" /> <!-- Dualsword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2594,6 +2933,7 @@
 		<dropLists>
 			<drop>
 				<item id="46326" min="1" max="2" chance="100" /> <!-- Shadow Dualsword -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2601,20 +2941,42 @@
 		</dropLists>
 	</npc>
 	<npc id="23662" level="101" type="L2Monster" name="Unit 7 Commander" title="Ashen Shadow">
-		<race>ETC</race>
+		<parameters>
+			<minions name="Privates">
+				<npc id="23648" count="1" respawnTime="0" weightPoint="1" /> <!-- Dark Crusader -->
+				<npc id="23649" count="1" respawnTime="0" weightPoint="1" /> <!-- Banshee Queen -->
+			</minions>
+			<skill name="Skill_TYPE1" id="23758" level="1" />
+			<skill name="Skill_TYPE2" id="23759" level="1" />
+			<skill name="Skill_TYPE3" id="23760" level="1" />
+			<param name="npc_class" value="3" />
+		</parameters>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<equipment rhand="46335" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="116960.5" magical="94442" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>			
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elfs -->
+			<skill id="4416" level="16" /> <!-- Dark Elfs -->			
+			<skill id="23758" level="1" /> <!-- Summon Demonic Crucifix -->
+			<skill id="23759" level="1" /> <!-- Mass Exile -->
+			<skill id="23760" level="1" /> <!-- Spectral Rage -->					
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
 		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
 			<clanList>
@@ -2628,6 +2990,7 @@
 		<dropLists>
 			<drop>
 				<item id="46325" min="1" max="2" chance="100" /> <!-- Shadow Retributer -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2636,40 +2999,41 @@
 	</npc>
 	<npc id="23663" level="101" type="L2Monster" name="Unit 8 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23454" level="1" />
-			<skill name="Skill_TYPE2" id="23455" level="1" />
-			<skill name="Skill_TYPE3" id="23456" level="1" />
-			<skill name="Skill_TYPE4" id="23457" level="1" />
+			<skill name="Skill_TYPE1" id="23761" level="1" />
+			<skill name="Skill_TYPE2" id="23763" level="1" />
+			<skill name="Skill_TYPE3" id="23764" level="1" />
+			<skill name="Skill_TYPE4" id="23762" level="1" />
+			<skill name="Skill_TYPE5" id="23767" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>FEMALE</sex>
 		<equipment rhand="46335" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="116960.5" magical="94442" critical="4" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23494" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23498" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23502" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23496" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23492" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23455" level="1" /> <!-- (Radiant Heal) -->
-			<skill id="23457" level="1" /> <!-- (Sustain) -->
-			<skill id="23454" level="1" /> <!-- (Dark Blast) -->
-			<skill id="23456" level="1" /> <!-- (Fairy of Life) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="23761" level="1" /> <!-- Invoke -->
+			<skill id="23762" level="1" /> <!-- Mark of Weakness -->
+			<skill id="23763" level="1" /> <!-- Mark of Lumi -->
+			<skill id="23764" level="1" /> <!-- Brilliant Heal -->
+			<skill id="23765" level="1" /> <!-- Celestial Party Protection -->
+			<skill id="23766" level="1" /> <!-- Mass Dark Veil -->
+			<skill id="23767" level="1" /> <!-- Dark Force -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2684,7 +3048,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="46325" min="1" max="2" chance="100" /> <!-- Shadow Retributer -->
+				<item id="46325" min="1" max="2" chance="50" /> <!-- Shadow Retributer -->
+				<item id="46324" min="1" max="2" chance="50" /> <!-- Shadow Buster -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2693,40 +3059,41 @@
 	</npc>
 	<npc id="23664" level="101" type="L2Monster" name="Unit 8 Commander" title="Ashen Shadow">
 		<parameters>
-			<skill name="Skill_TYPE1" id="23454" level="1" />
-			<skill name="Skill_TYPE2" id="23455" level="1" />
-			<skill name="Skill_TYPE3" id="23456" level="1" />
-			<skill name="Skill_TYPE4" id="23457" level="1" />
+			<skill name="Skill_TYPE1" id="23761" level="1" />
+			<skill name="Skill_TYPE2" id="23763" level="1" />
+			<skill name="Skill_TYPE3" id="23764" level="1" />
+			<skill name="Skill_TYPE4" id="23762" level="1" />
+			<skill name="Skill_TYPE5" id="23767" level="1" />
 			<param name="npc_class" value="2" />
 		</parameters>
-		<race>ETC</race>
+		<race>ORC</race>
+		<sex>FEMALE</sex>
 		<equipment rhand="46334" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="116960.5" magical="94442" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orc -->
-			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
-			<skill id="23494" level="1" /> <!-- (Drum Melody) -->
-			<skill id="23498" level="1" /> <!-- (Guitar Melody) -->
-			<skill id="23502" level="1" /> <!-- (Lute Melody) -->
-			<skill id="23496" level="1" /> <!-- (Pipe Organ Melody) -->
-			<skill id="23492" level="1" /> <!-- (Horn Melody) -->
-			<skill id="23455" level="1" /> <!-- (Radiant Heal) -->
-			<skill id="23457" level="1" /> <!-- (Sustain) -->
-			<skill id="23454" level="1" /> <!-- (Dark Blast) -->
-			<skill id="23456" level="1" /> <!-- (Fairy of Life) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="23761" level="1" /> <!-- Invoke -->
+			<skill id="23762" level="1" /> <!-- Mark of Weakness -->
+			<skill id="23763" level="1" /> <!-- Mark of Lumi -->
+			<skill id="23764" level="1" /> <!-- Brilliant Heal -->
+			<skill id="23765" level="1" /> <!-- Celestial Party Protection -->
+			<skill id="23766" level="1" /> <!-- Mass Dark Veil -->
+			<skill id="23767" level="1" /> <!-- Dark Force -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->			
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
@@ -2741,7 +3108,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="46325" min="1" max="2" chance="100" /> <!-- Shadow Retributer -->
+				<item id="46325" min="1" max="3" chance="50" /> <!-- Shadow Retributer -->
+				<item id="46324" min="1" max="3" chance="50" /> <!-- Shadow Buster -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2754,28 +3123,30 @@
 			<skill name="Skill_TYPE2" id="23450" level="1" />
 			<skill name="Skill_TYPE3" id="23452" level="1" />
 		</parameters>
-		<race>ETC</race>
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
 		<equipment rhand="46328" />
 		<acquire exp="4194161041" sp="8388384" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<attack physical="46960.5" magical="14442" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191554.5" magical="24690" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
-			</speed>
-			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
-			<defence physical="191554.5" magical="24690" />
+			</speed>			
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="16" /> <!-- Dark Elves -->
 			<skill id="23452" level="1" /> <!-- (Protection of Faith) -->
 			<skill id="23449" level="1" /> <!-- (Gust Blade) -->
 			<skill id="23450" level="1" /> <!-- (Chain Galaxy) -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2792,6 +3163,7 @@
 		<dropLists>
 			<drop>
 				<item id="46318" min="1" max="2" chance="100" /> <!-- Shadow Cutter -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2817,6 +3189,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
@@ -2828,10 +3201,11 @@
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="14765" level="5" /> <!-- Blood Siphon Resistance -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<ai clanHelpRange="400" aggroRange="800">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
@@ -2843,6 +3217,7 @@
 		<dropLists>
 			<drop>
 				<item id="46320" min="1" max="2" chance="100" /> <!-- Shadow Fighter -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2868,6 +3243,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
@@ -2894,6 +3270,7 @@
 		<dropLists>
 			<drop>
 				<item id="46320" min="1" max="2" chance="100" /> <!-- Shadow Fighter -->
+				<item id="46395" min="1" max="1" chance="2.003" /> <!-- Shadow Ingot -->
 			</drop>
 			<lucky>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2919,6 +3296,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orcs -->
 			<skill id="23462" level="1" /> <!-- (Power Bomber) -->
@@ -2969,8 +3347,9 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
 			<skill id="23469" level="1" /> <!-- (Razor Rain) -->
 			<skill id="23467" level="1" /> <!-- (Blood Stab) -->
 			<skill id="23468" level="1" /> <!-- (Chain Blow) -->
@@ -3018,8 +3397,9 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -3068,8 +3448,9 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
-			<skill id="4416" level="16" /> <!-- Dark Elf -->
+			<skill id="4416" level="16" /> <!-- Dark Elf-->
 			<skill id="23464" level="1" /> <!-- (Tornado Shot) -->
 			<skill id="23465" level="1" /> <!-- (Impact Shot) -->
 			<skill id="23463" level="1" /> <!-- (Recoil Shot) -->
@@ -3119,6 +3500,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="16" /> <!-- Dark Elfs -->
 			<skill id="23471" level="2" /> <!-- (Elemental Destruction) -->
@@ -3170,6 +3552,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orc -->
 			<skill id="23475" level="1" /> <!-- (Crippling Attack) -->
@@ -3219,6 +3602,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="16" /> <!-- Dark Elfs -->
 		</skillList>
@@ -3260,6 +3644,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orc -->
 			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
@@ -3317,6 +3702,7 @@
 			<attack physical="446960.5" magical="44442" critical="4" attackSpeed="253" range="40" />
 			<defence physical="191554.5" magical="24690" />
 		</stats>
+		<status randomWalk="false" />
 		<skillList>
 			<skill id="4416" level="17" /> <!-- Orc -->
 			<skill id="23500" level="1" /> <!-- (Harp Melody) -->
@@ -3336,7 +3722,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skillList>
-		<ai clanHelpRange="400" aggroRange="800" isAggressive="true">
+		<ai clanHelpRange="400" aggroRange="800">
 			<clanList>
 				<clan>REVOLUTIONARIES</clan>
 			</clanList>
@@ -3345,14 +3731,6 @@
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="46325" min="1" max="2" chance="100" /> <!-- Shadow Retributer -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
 	<npc id="23677" level="101" type="L2Monster" name="Fortress Raider" title="Army Recruit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
