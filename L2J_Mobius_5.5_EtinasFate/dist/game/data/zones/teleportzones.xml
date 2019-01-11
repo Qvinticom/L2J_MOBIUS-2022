@@ -279,44 +279,43 @@
 		<node X="-46341" Y="-150683" />
 	</zone>
 	<zone name="22_22_superion_telezone_left_in" type="TeleportZone" shape="NPoly" minZ="300" maxZ="800"> <!-- 22_22 -->
-		<stat name="oustX" val="88712" />
-		<stat name="oustY" val="194152 " />
-		<stat name="oustZ" val="-10184" />
+		<stat name="oustX" val="87646" />
+		<stat name="oustY" val="194070" />
+		<stat name="oustZ" val="-10230" />
 		<stat name="targetClass" val="L2PcInstance" />
 		<node X="82374" Y="155836" />
 		<node X="82244" Y="156029" />
 		<node X="82715" Y="156346" />
 		<node X="82867" Y="156169" />
 	</zone>
-	<zone name="22_22_superion_telezone_left_out" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="-10000"> <!-- 22_22 -->
-		<stat name="oustX" val="82824" />
-		<stat name="oustY" val="154248" />
+	<zone name="22_23_superion_telezone_left_out" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="-10000"> <!-- 22_22 -->
+		<stat name="oustX" val="81728" />
+		<stat name="oustY" val="155557" />
 		<stat name="oustZ" val="480" />
 		<stat name="targetClass" val="L2PcInstance" />
-		<node X="79953" Y="193986" />
-		<node X="79953" Y="194644" />
-		<node X="80558" Y="194634" />
-		<node X="80681" Y="193989" />
+		<node X="88268" Y="193823" />
+		<node X="88268" Y="194481" />
+		<node X="88873" Y="194471" />
+		<node X="88996" Y="193826" />
 	</zone>
 	<zone name="22_22_superion_telezone_right_in" type="TeleportZone" shape="NPoly" minZ="300" maxZ="800"> <!-- 22_22 -->
-		<stat name="oustX" val="83496" />
-		<stat name="oustY" val="194136" />
-		<stat name="oustZ" val="-10201" />
+		<stat name="oustX" val="84493" />
+		<stat name="oustY" val="194070" />
+		<stat name="oustZ" val="-10246" />
 		<stat name="targetClass" val="L2PcInstance" />
 		<node X="83177" Y="154630" />
 		<node X="83311" Y="154436" />
 		<node X="83788" Y="154755" />
 		<node X="83662" Y="154948" />
 	</zone>
-	<zone name="22_22_superion_telezone_right_out" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="-10000"> <!-- 22_22 -->
+	<zone name="22_23_superion_telezone_right_out" type="TeleportZone" shape="NPoly" minZ="-10400" maxZ="-10000"> <!-- 22_22 -->
 		<stat name="oustX" val="82702" />
 		<stat name="oustY" val="154180" />
 		<stat name="oustZ" val="480" />
 		<stat name="targetClass" val="L2PcInstance" />
-		<node X="75612" Y="194645" />
-		<node X="75601" Y="193953" />
-		<node X="74892" Y="193954" />
-		<node X="74957" Y="194641" />
+		<node X="83927" Y="194482" />
+		<node X="83916" Y="193790" />
+		<node X="83207" Y="193791" />
+		<node X="83272" Y="194478" />
 	</zone>
-
 </list>

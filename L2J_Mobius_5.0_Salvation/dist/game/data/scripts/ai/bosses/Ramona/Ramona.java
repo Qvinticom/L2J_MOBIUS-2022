@@ -88,8 +88,8 @@ public class Ramona extends AbstractNpcAI
 		ULTRA_MEGA_TELEKINESS
 	};
 	// Locations
-	private static final Location RAMONA_SPAWN_LOC_1 = new Location(78023, 172262, -10604, 16383);
-	private static final Location RAMONA_SPAWN_LOC_2 = new Location(78012, 169922, -10467, 16383);
+	private static final Location RAMONA_SPAWN_LOC_1 = new Location(86338, 172099, -10602, 16383);
+	private static final Location RAMONA_SPAWN_LOC_2 = new Location(86327, 169759, -10465, 16383);
 	// Other
 	private static final int ROOM_CONTROL_DOOR = 22230711;
 	private static final L2NoSummonFriendZone ZONE = ZoneManager.getInstance().getZoneById(210108, L2NoSummonFriendZone.class);

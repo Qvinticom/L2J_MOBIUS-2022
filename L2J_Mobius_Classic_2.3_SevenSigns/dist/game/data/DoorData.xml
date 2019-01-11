@@ -18722,13 +18722,13 @@
 		<openStatus default="close" />
 	</door>
     <door id="22230711" name="Superion_Du_S.superion_boss_door">
-        <nodes nodeZ="-9870">
-			<node x="78010" y="176317" />
-			<node x="78010" y="176317" />
-			<node x="78010" y="176317" />
-			<node x="78010" y="176317" />
+        <nodes nodeZ="-9868">
+			<node x="86325" y="176154" />
+			<node x="86325" y="176154" />
+			<node x="86325" y="176154" />
+			<node x="86325" y="176154" />
 		</nodes>
-		<location x="78010" y="176317" z="-9866" height="150" />
+		<location x="86325" y="176154" z="-9864" height="150" />
 		<stats basePDef="1" baseMDef="1" baseHpMax="1" />
 		<status showHp="false" />
 		<openStatus openMethod="BY_ITEM" default="close" />
