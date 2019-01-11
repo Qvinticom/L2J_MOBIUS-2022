@@ -449,6 +449,7 @@ import quests.Q10797_CrossingFate.Q10797_CrossingFate;
 import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTheValley;
 import quests.Q10800_ReconnaissanceAtDragonValley.Q10800_ReconnaissanceAtDragonValley;
+import quests.Q10801_TheDimensionalWarpPart1.Q10801_TheDimensionalWarpPart1;
 
 /**
  * @author NosBit
@@ -888,7 +889,8 @@ public class QuestMasterHandler
 		Q10797_CrossingFate.class,
 		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10799_StrangeThingsAfootInTheValley.class,
-		Q10800_ReconnaissanceAtDragonValley.class
+		Q10800_ReconnaissanceAtDragonValley.class,
+		Q10801_TheDimensionalWarpPart1.class
 	};
 	
 	public static void main(String[] args)
