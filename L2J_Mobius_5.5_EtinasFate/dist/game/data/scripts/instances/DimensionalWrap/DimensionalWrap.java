@@ -55,7 +55,7 @@ public class DimensionalWrap extends AbstractInstance
 	// Monsters
 	private static final int DEMINSIONAL_INVISIBLE_FRAGMENT = 19564;
 	private static final int SALAMANDRA_GENERATOR = 19563;
-	private static final int SALAMANDRA_GENERATOR_DUMMY = 900112;
+	private static final int SALAMANDRA_GENERATOR_DUMMY = 19480;
 	private static final int DIMENSIONAL_SALAMANDRA = 23466;
 	private static final int UNWORDLY_SALAMANDER = 23473;
 	private static final int DIMENSIONAL_IMP = 19553;
