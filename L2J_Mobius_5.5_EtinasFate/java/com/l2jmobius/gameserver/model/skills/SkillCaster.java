@@ -740,8 +740,23 @@ public class SkillCaster implements Runnable
 			caster.sendPacket(ActionFailed.get(_castingType)); // send an "action failed" packet to the caster
 		}
 		
-		// Attack target after skill use
-		// TODO: This shouldnt be here. If skill condition fail, you still go autoattack. This doesn't happen if skill is in cooldown though.
+		// If there is a queued skill, launch it and wipe the queue.
+		if (caster.isPlayer())
+		{
+			final L2PcInstance currPlayer = caster.getActingPlayer();
+			final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
+			if (queuedSkill != null)
+			{
+				ThreadPool.execute(() ->
+				{
+					currPlayer.setQueuedSkill(null, null, false, false);
+					currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
+				});
+				return;
+			}
+		}
+		
+		// Attack target after skill use.
 		if ((_skill.getNextAction() != NextActionType.NONE) && (caster.getAI().getNextIntention() == null))
 		{
 			if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
@@ -760,26 +775,6 @@ public class SkillCaster implements Runnable
 		else
 		{
 			caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
-		}
-		
-		// Notify the AI of the L2Character with EVT_FINISH_CASTING
-		
-		// If there is a queued skill, launch it and wipe the queue.
-		if (caster.isPlayer())
-		{
-			final L2PcInstance currPlayer = caster.getActingPlayer();
-			final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
-			
-			if (queuedSkill != null)
-			{
-				ThreadPool.execute(() ->
-				{
-					currPlayer.setQueuedSkill(null, null, false, false);
-					currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
-				});
-				
-				return;
-			}
 		}
 	}
 	
