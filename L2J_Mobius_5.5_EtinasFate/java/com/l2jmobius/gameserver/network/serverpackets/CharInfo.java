@@ -210,7 +210,7 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_activeChar.getClanCrestLargeId());
 		packet.writeC(_activeChar.getNobleLevel()); // Confirmed
-		packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Confirmed
+		packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 2 : 0); // 152 - Value for enabled changed to 2?
 		
 		packet.writeC(_activeChar.isFishing() ? 1 : 0); // Confirmed
 		
