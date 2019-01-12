@@ -595,10 +595,7 @@ public final class Formulas
 		{
 			if (target.getAbnormalShieldBlocks() > 0)
 			{
-				if (target.decrementAbnormalShieldBlocks() == 0)
-				{
-					target.stopEffects(EffectFlag.ABNORMAL_SHIELD);
-				}
+				target.decrementAbnormalShieldBlocks();
 				return false;
 			}
 		}
@@ -637,18 +634,18 @@ public final class Formulas
 			{
 				if (target.getAbnormalShieldBlocks() > 0)
 				{
-					if (target.decrementAbnormalShieldBlocks() == 0)
-					{
-						target.stopEffects(EffectFlag.ABNORMAL_SHIELD);
-					}
+					target.decrementAbnormalShieldBlocks();
 					resisted = true;
 				}
 			}
 			
-			final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
-			if (!resisted && (sphericBarrierRange > 0))
+			if (!resisted)
 			{
-				resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
+				final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
+				if (sphericBarrierRange > 0)
+				{
+					resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
+				}
 			}
 			
 			if (resisted)
@@ -704,10 +701,7 @@ public final class Formulas
 			
 			if (target.getAbnormalShieldBlocks() > 0)
 			{
-				if (target.decrementAbnormalShieldBlocks() == 0)
-				{
-					target.stopEffects(EffectFlag.ABNORMAL_SHIELD);
-				}
+				target.decrementAbnormalShieldBlocks();
 				return false;
 			}
 		}
