@@ -2715,10 +2715,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="ResistAbnormalByCategory">
-				<amount>-100</amount>
-				<slot>DEBUFF</slot>
-				<max>5</max>
+			<effect name="AbnormalShield">
+				<times>5</times>
 			</effect>
 		</effects>
 	</skill>
@@ -2879,10 +2877,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="ResistAbnormalByCategory">
-				<amount>-100</amount>
-				<slot>DEBUFF</slot>
-				<max>5</max>
+			<effect name="AbnormalShield">
+				<times>5</times>
 			</effect>
 		</effects>
 	</skill>
