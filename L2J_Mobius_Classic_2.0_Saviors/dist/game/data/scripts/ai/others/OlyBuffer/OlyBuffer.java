@@ -19,6 +19,7 @@ package ai.others.OlyBuffer;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 import ai.AbstractNpcAI;
 
@@ -38,7 +39,7 @@ public final class OlyBuffer extends AbstractNpcAI
 		new SkillHolder(4342, 2), // Wind Walk Lv2
 		new SkillHolder(4345, 3), // Might Lv3
 		new SkillHolder(4344, 3), // Shield Lv3
-		new SkillHolder(4349, 2), // Magic Barrier lv.2		
+		new SkillHolder(4349, 2), // Magic Barrier lv.2
 		new SkillHolder(4347, 4), // Blessed Body lv.4
 		new SkillHolder(4348, 4), // Blessed Soul lv.4
 		new SkillHolder(4352, 2), // Berserker Spirit Lv2
@@ -72,7 +73,7 @@ public final class OlyBuffer extends AbstractNpcAI
 			if (ALLOWED_BUFFS[buffId] != null)
 			{
 				npc.setScriptValue(npc.getScriptValue() + 1);
-				addSkillCastDesire(npc, player, ALLOWED_BUFFS[buffId], 23);
+				SkillCaster.triggerCast(npc, player, ALLOWED_BUFFS[buffId].getSkill());
 				htmltext = "OlyBuffer-afterBuff.html";
 			}
 			if (npc.getScriptValue() >= 5)
