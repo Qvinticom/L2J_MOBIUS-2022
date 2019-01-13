@@ -4363,6 +4363,18 @@
 			<skill id="14465" level="1" /> <!-- Apherus' Binding -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="800" />
+		<dropLists>
+			<drop>
+				<item id="17347" min="1" max="1" chance="5.395" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17352" min="1" max="1" chance="5.314" /> <!-- Twilight Gloves - Robe -->
+				<item id="17330" min="1" max="1" chance="0.3" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="0.3" /> <!-- Apocalypse Retributer -->
+				<item id="17526" min="1" max="1" chance="4.975" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<lucky>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="35" />

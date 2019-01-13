@@ -4365,6 +4365,38 @@
 			<skill id="14465" level="1" /> <!-- Apherus' Binding -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="800" />
+		<dropLists>
+			<drop>
+				<item id="17347" min="1" max="1" chance="5.395" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17352" min="1" max="1" chance="5.314" /> <!-- Twilight Gloves - Robe -->
+				<item id="17330" min="1" max="1" chance="0.3" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="0.3" /> <!-- Apocalypse Retributer -->
+				<item id="17526" min="1" max="1" chance="4.975" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46489" min="1" max="1" chance="1.063" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.041" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="0.989" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46491" min="1" max="1" chance="0.500" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46505" min="1" max="1" chance="0.500" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.500" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="0.500" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.500" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46490" min="1" max="1" chance="0.500" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46461" min="1" max="1" chance="0.500" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46444" min="1" max="1" chance="0.500" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46460" min="1" max="1" chance="0.500" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.500" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="0.500" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46446" min="1" max="1" chance="0.500" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.100" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="0.100" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="0.100" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="1" chance="0.100" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.100" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+			</drop>
+			<lucky>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky>
+		</dropLists>
 		<status undying="false" />
 		<collision>
 			<radius normal="35" />
